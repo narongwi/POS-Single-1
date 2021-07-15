@@ -1,0 +1,7 @@
+﻿FormName,ControlName,Text
+frmLogin,lbLogin,เข้าสู่ระบบ
+frmMainMenu,lbTextHeaderMain,เมนูหลัก
+frmMainMenu,lbHeadMenu1,เปิดวัน
+frmMainMenu,lbHeadMenu2,การขาย
+frmMainMenu,lbHeadMenu3,ปิดวัน
+frmMainMenu,lbHeadMenu4,เครื่องมือ

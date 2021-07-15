@@ -1,0 +1,44 @@
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Process.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Process.pdb
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Data.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Model.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BCOPOSEPSON.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPRNFFTI.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BCOPOSHP.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BCOPOSWIN.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BCOPOSTOSHIBA.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BouncyCastle.Crypto.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\Microsoft.PointOfService.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\MKTPOSDLL.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Data.pdb
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Model.pdb
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\obj\x86\Debug\BJCBCPOS_Process.csprojResolveAssemblyReference.cache
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\obj\x86\Debug\BJCBCPOS_Process.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\obj\x86\Debug\BJCBCPOS_Process.pdb
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\MMFSAPI.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\RestSharp.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\Newtonsoft.Json.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\ApiServices.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Process.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Process.pdb
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\ApiServices.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Data.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Model.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\MMFSAPI.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BCOPOSEPSON.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPRNFFTI.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BCOPOSHP.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BCOPOSWIN.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BCOPOSTOSHIBA.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BouncyCastle.Crypto.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\RestSharp.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\Newtonsoft.Json.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\Microsoft.PointOfService.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\MKTPOSDLL.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Data.pdb
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\bin\x86\Debug\BJCBCPOS_Model.pdb
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\obj\x86\Debug\BJCBCPOS_Process.csprojAssemblyReference.cache
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\obj\x86\Debug\BJCBCPOS_Process.csproj.CoreCompileInputs.cache
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\obj\x86\Debug\BJCBCPOS_Process.csproj.CopyComplete
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\obj\x86\Debug\BJCBCPOS_Process.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Process\obj\x86\Debug\BJCBCPOS_Process.pdb
