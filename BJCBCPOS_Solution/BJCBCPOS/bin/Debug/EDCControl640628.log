@@ -1,0 +1,29 @@
+00:24.29 - Start SendSale
+00:24.29 SendSale #1
+00:24.30 SendSale OK
+00:24.30 - Start RCV : 
+00:24.36 RCV : 1
+00:25.31 - Start SendRefund
+00:25.31 SendRefund #1
+00:25.40 SendRefund OK
+12:13.49 - Start SendSale
+12:13.49 SendSale #1
+12:13.49 SendSale OK
+12:13.49 - Start RCV : 
+12:13.59 RCV : 1
+12:14.54 - Start SendRefund
+12:14.54 SendRefund #1
+12:15.04 SendRefund OK
+15:27.55 - Start SendRefund
+15:27.55 SendRefund #1
+15:28.11 SendRefund OK
+16:25.05 - Start SendSale
+16:25.05 SendSale #1
+16:25.06 SendSale OK
+16:25.06 - Start RCV : 
+16:25.14 RCV : 1
+16:28.37 - Start SendSale
+16:28.37 SendSale #1
+16:28.38 SendSale OK
+16:28.43 - Start RCV : 
+16:28.43 RCV : 1

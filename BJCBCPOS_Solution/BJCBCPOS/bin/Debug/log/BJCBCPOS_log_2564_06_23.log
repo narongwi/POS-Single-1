@@ -1,0 +1,1180 @@
+09:20:45.8010  key section = setting, name = printername
+09:20:45.8044  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+09:20:46.3720  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+09:20:46.6384  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+09:20:46.6930  Initial Hardware with BCOPOSTOSHIBA.dll
+09:20:48.2999  frmMonitorCustomer is Activate.
+09:20:48.4239  frmMonitorCustomerFooter is Activate.
+09:20:48.4768  frmMonitor2Detail is Activate.
+09:20:49.7950  frmLogin is Activate.
+09:22:27.4896  frmLogin is Activate.
+09:22:28.1398  ExecuteToDataTable Error message : Update or insert of view or function 'POSTERMINAL' failed because it contains a derived or constant field.
+09:22:28.1440  Current SQLState not in connectionLost and queryTimeount. SQLState = 42000
+09:22:28.2220  Update or insert of view or function 'POSTERMINAL' failed because it contains a derived or constant field.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.checkTerminal() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 412
+   at BJCBCPOS_Process.StartProcess.checkTerminal() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\StartProcess.cs:line 322
+
+09:22:30.0855  frmLogin is Activate.
+09:23:37.6016  frmMonitor2Detail is Activate.
+09:23:38.2478  frmLogin is Activate.
+09:23:41.8425  frmLogin is Activate.
+09:23:42.2326  ExecuteToDataTable Error message : Update or insert of view or function 'POSTERMINAL' failed because it contains a derived or constant field.
+09:23:42.2357  Current SQLState not in connectionLost and queryTimeount. SQLState = 42000
+09:23:42.2598  Update or insert of view or function 'POSTERMINAL' failed because it contains a derived or constant field.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.checkTerminal() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 412
+   at BJCBCPOS_Process.StartProcess.checkTerminal() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\StartProcess.cs:line 322
+
+09:23:43.5541  frmLogin is Activate.
+09:24:34.0834  frmLogin is Activate.
+09:24:34.5865  ExecuteToDataTable Error message : Update or insert of view or function 'POSTERMINAL' failed because it contains a derived or constant field.
+09:24:34.5897  Current SQLState not in connectionLost and queryTimeount. SQLState = 42000
+09:24:34.6266  Update or insert of view or function 'POSTERMINAL' failed because it contains a derived or constant field.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.checkTerminal() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 412
+   at BJCBCPOS_Process.StartProcess.checkTerminal() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\StartProcess.cs:line 322
+
+09:24:35.3373  frmLogin is Activate.
+09:25:52.7204  frmLogin is Activate.
+09:25:57.7813  frmLogin is Activate.
+09:26:16.1448  frmLogin is Activate.
+09:26:17.2526  frmLogin is Activate.
+09:26:17.8224  frmLogin is Activate.
+09:27:48.3775  frmLogin is Activate.
+09:27:50.8438  frmLogin is Activate.
+09:27:51.3641  ExecuteToDataTable Error message : Update or insert of view or function 'POSTERMINAL' failed because it contains a derived or constant field.
+09:27:51.3682  Current SQLState not in connectionLost and queryTimeount. SQLState = 42000
+09:27:51.4438  Update or insert of view or function 'POSTERMINAL' failed because it contains a derived or constant field.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.checkTerminal() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 412
+   at BJCBCPOS_Process.StartProcess.checkTerminal() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\StartProcess.cs:line 322
+
+09:27:51.9884  frmLogin is Activate.
+10:17:39.3587  key section = setting, name = printername
+10:17:39.3622  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+10:17:40.5281  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+10:17:40.7619  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+10:17:40.7927  Initial Hardware with BCOPOSTOSHIBA.dll
+10:17:41.6792  frmMonitorCustomer is Activate.
+10:17:41.7476  frmMonitorCustomerFooter is Activate.
+10:17:41.8146  frmMonitor2Detail is Activate.
+10:17:42.6197  frmLogin is Activate.
+10:52:34.2549  frmMonitor2Detail is Activate.
+10:52:36.0718  frmMonitor2Detail is Activate.
+10:52:38.5297  frmMonitor2Detail is Activate.
+10:52:40.3625  frmMonitor2Detail is Activate.
+10:52:41.1555  frmLogin is Activate.
+10:52:46.8944  frmLogin is Activate.
+10:52:47.7467  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+10:52:47.8981  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+10:52:48.8021  frmLogin is Activate.
+10:52:49.3191  frmMainMenu is Activate.
+10:52:56.4052  store procedure return error (ResponseCode = "300")
+Response Message = ไม่พบการเปิดงานประจำวัน
+Help Message = กรุณาเปิดงานก่อนทำการขาย
+Application Desc = pos_CheckOpenDay#2
+
+10:52:57.2523  frmMainMenu is Activate.
+10:53:00.4072  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+10:53:01.9465  frmMainMenu is Activate.
+10:53:04.3290  Call afterNotify False
+10:53:05.1004  frmSale is Activate.
+10:53:10.8309  store procedure return error (ResponseCode = "300")
+Response Message = รหัสผ่านไม่ถูกต้อง
+Help Message = ป้อน Password ใหม่อีกครั้ง หรือ ติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_CheckUser#6
+
+10:53:17.7837  frmReceivePaymentPOD is Activate.
+10:53:26.6905  frmMainMenu is Activate.
+10:53:26.9548  Call afterNotify False
+10:53:27.3195  frmSale is Activate.
+10:53:28.7268  frmReceivePaymentPOD is Activate.
+10:53:29.9364  frmMainMenu is Activate.
+10:53:34.2994  frmMainMenu is Activate.
+10:53:34.8533  Call afterNotify False
+10:53:35.3164  frmSale is Activate.
+10:53:58.5641  store procedure return error (ResponseCode = "300")
+Response Message = คุณพยายาม Login ด้วยรหัสผ่านที่ไม่ถูกต้อง
+เกินจำนวนครั้งที่กำหนด,
+รหัสผู้ใช้งานถูกถอนออกจากระบบ
+Help Message = ติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_CheckUser#5
+
+10:54:06.1322  store procedure return error (ResponseCode = "300")
+Response Message = รหัสผู้ใช้งานถูกถอนออกจากระบบ
+Help Message = ติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_CheckUser#3
+
+10:54:21.1905  store procedure return error (ResponseCode = "300")
+Response Message = รหัสผู้ใช้งานถูกถอนออกจากระบบ
+Help Message = ติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_CheckUser#3
+
+10:54:42.3723  frmReceivePaymentPOD is Activate.
+10:54:45.9999  frmReceivePaymentPOD is Activate.
+10:55:02.4043  frmReceivePaymentPOD is Activate.
+10:55:05.7278  frmMainMenu is Activate.
+10:55:06.0184  Call afterNotify False
+10:55:06.4810  frmSale is Activate.
+10:55:09.0765  frmReceivePaymentPOD is Activate.
+10:55:10.6871  frmMainMenu is Activate.
+10:55:13.1642  Call afterNotify False
+10:55:13.6105  frmSale is Activate.
+10:55:49.6883  SubOtherService1 is Activate.
+10:55:52.4728  SubOtherService1 is Activate.
+10:57:07.4685  SubOtherService1 is Activate.
+10:57:18.6107  SubOtherService1 is Activate.
+10:57:27.4094  SubOtherService1 is Activate.
+10:58:23.8353  SubOtherService1 is Activate.
+10:59:06.9451  SubOtherService1 is Activate.
+10:59:07.8517  frmMainMenu is Activate.
+11:13:27.4622  key section = setting, name = printername
+11:13:27.4645  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+11:13:28.6987  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+11:13:29.0307  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+11:13:29.0789  Initial Hardware with BCOPOSTOSHIBA.dll
+11:13:29.8720  frmMonitorCustomer is Activate.
+11:13:29.9214  frmMonitorCustomerFooter is Activate.
+11:13:29.9601  frmMonitor2Detail is Activate.
+11:13:30.4458  frmLogin is Activate.
+11:26:42.7610  key section = setting, name = printername
+11:26:42.7650  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+11:26:45.3164  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+11:26:45.6094  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+11:26:45.6704  Initial Hardware with BCOPOSTOSHIBA.dll
+11:26:46.5185  frmMonitorCustomer is Activate.
+11:26:46.5662  frmMonitorCustomerFooter is Activate.
+11:26:46.5998  frmMonitor2Detail is Activate.
+11:26:47.0538  frmLogin is Activate.
+11:26:54.5021  frmLogin is Activate.
+11:26:55.2043  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+11:26:55.2883  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+11:26:55.9583  frmLogin is Activate.
+11:26:56.5663  frmMainMenu is Activate.
+11:26:57.2588  Call afterNotify False
+11:26:58.2506  frmSale is Activate.
+11:27:10.0797  SubOtherService1 is Activate.
+11:27:10.8967  SubOtherService1 is Activate.
+11:28:25.1100  SubOtherService1 is Activate.
+11:28:44.2424  SubOtherService1 is Activate.
+11:28:49.4743  SubOtherService1 is Activate.
+11:28:51.2929  SubOtherService1 is Activate.
+11:29:26.1929  frmMainMenu is Activate.
+11:29:26.5032  Call afterNotify False
+11:29:26.9601  frmSale is Activate.
+11:29:41.1081  SubOtherService1 is Activate.
+11:34:48.8249  key section = setting, name = printername
+11:34:48.8269  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+11:34:49.8822  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+11:34:50.1444  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+11:34:50.2008  Initial Hardware with BCOPOSTOSHIBA.dll
+11:34:51.1699  frmMonitorCustomer is Activate.
+11:34:51.2426  frmMonitorCustomerFooter is Activate.
+11:34:51.2961  frmMonitor2Detail is Activate.
+11:34:52.0849  frmLogin is Activate.
+11:35:09.7385  frmLogin is Activate.
+11:35:10.4585  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+11:35:10.6031  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+11:35:11.2873  frmLogin is Activate.
+11:35:11.8335  frmMainMenu is Activate.
+11:35:13.1490  Call afterNotify False
+11:35:13.7060  frmSale is Activate.
+11:35:18.4076  frmSale is Activate.
+11:35:22.4876  frmSale is Activate.
+11:35:35.6813  SubOtherService1 is Activate.
+11:35:57.6694  frmMainMenu is Activate.
+11:35:57.9430  Call afterNotify False
+11:35:58.3678  frmSale is Activate.
+11:36:31.5496  SubOtherService1 is Activate.
+11:36:32.5459  SubOtherService1 is Activate.
+11:36:35.4998  SubOtherService1 is Activate.
+11:36:37.5202  frmMainMenu is Activate.
+11:36:37.8241  Call afterNotify False
+11:36:38.2923  frmSale is Activate.
+11:37:34.8385  SubOtherService1 is Activate.
+11:37:35.7951  SubOtherService1 is Activate.
+11:37:43.6905  SubOtherService1 is Activate.
+11:38:15.6620  SubOtherService1 is Activate.
+11:38:54.0275  SubOtherService1 is Activate.
+11:39:22.2041  SubOtherService1 is Activate.
+11:44:42.4438  SubOtherService1 is Activate.
+11:47:48.1560  key section = setting, name = printername
+11:47:48.1603  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+11:47:49.4398  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+11:47:49.8040  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+11:47:49.8989  Initial Hardware with BCOPOSTOSHIBA.dll
+11:47:50.6039  frmMonitorCustomer is Activate.
+11:47:50.6505  frmMonitorCustomerFooter is Activate.
+11:47:50.6850  frmMonitor2Detail is Activate.
+11:47:51.1591  frmLogin is Activate.
+11:48:16.7037  frmLogin is Activate.
+11:48:18.0872  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+11:48:18.2243  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+11:48:18.8413  frmLogin is Activate.
+11:48:19.3195  frmMainMenu is Activate.
+11:48:20.6966  Call afterNotify False
+11:48:21.2181  frmSale is Activate.
+11:48:29.9007  SubOtherService1 is Activate.
+11:48:30.9255  SubOtherService1 is Activate.
+11:48:35.1075  SubOtherService1 is Activate.
+11:48:36.5676  SubOtherService1 is Activate.
+11:49:38.7205  SubOtherService1 is Activate.
+11:50:18.3223  SubOtherService1 is Activate.
+11:50:32.4642  SubOtherService1 is Activate.
+11:50:43.5722  SubOtherService1 is Activate.
+12:11:06.8864  key section = setting, name = printername
+12:11:06.8894  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+12:11:08.1961  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+12:11:08.6115  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+12:11:08.6913  Initial Hardware with BCOPOSTOSHIBA.dll
+12:11:09.4559  frmMonitorCustomer is Activate.
+12:11:09.5097  frmMonitorCustomerFooter is Activate.
+12:11:09.5855  frmMonitor2Detail is Activate.
+12:11:10.1958  frmLogin is Activate.
+12:11:37.4125  frmLogin is Activate.
+13:34:52.4661  key section = setting, name = printername
+13:34:52.4681  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+13:34:53.1575  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+13:34:53.6548  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+13:34:53.6678  Initial Hardware with BCOPOSTOSHIBA.dll
+13:34:54.1625  frmMonitorCustomer is Activate.
+13:34:54.2203  frmMonitorCustomerFooter is Activate.
+13:34:54.2493  frmMonitor2Detail is Activate.
+13:34:54.6392  frmLogin is Activate.
+13:35:37.4622  frmLogin is Activate.
+13:35:38.5143  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+13:35:38.5394  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+13:35:39.2382  frmLogin is Activate.
+13:35:39.5920  frmMainMenu is Activate.
+13:35:40.5079  Call afterNotify False
+13:35:40.9913  frmSale is Activate.
+13:35:46.1635  frmSale is Activate.
+13:35:48.1094  frmSale is Activate.
+13:35:58.3148  frmMainMenu is Activate.
+13:35:58.3167  frmMainMenu is Activate.
+13:36:07.2897  Call afterNotify False
+13:36:07.5582  frmSale is Activate.
+13:36:16.5260  SubOtherService1 is Activate.
+13:36:20.2171  SubOtherService1 is Activate.
+13:36:21.7465  SubOtherService1 is Activate.
+13:36:31.6790  SubOtherService1 is Activate.
+13:38:04.4498  SubOtherService1 is Activate.
+13:39:02.7939  SubOtherService1 is Activate.
+13:39:04.7895  SubOtherService1 is Activate.
+13:39:12.3958  SubOtherService1 is Activate.
+13:39:15.8055  SubOtherService1 is Activate.
+13:39:40.2611  SubOtherService1 is Activate.
+13:40:09.4321  SubOtherService1 is Activate.
+13:40:20.4036  SubOtherService1 is Activate.
+13:41:16.3251  SubOtherService1 is Activate.
+13:41:37.7462  SubOtherService1 is Activate.
+13:41:43.5534  SubOtherService1 is Activate.
+13:42:07.5216  SubOtherService1 is Activate.
+13:43:12.1455  SubOtherService1 is Activate.
+13:43:19.5529  SubOtherService1 is Activate.
+13:43:23.5584  SubOtherService1 is Activate.
+13:44:01.8230  SubOtherService1 is Activate.
+13:44:57.0038  SubOtherService1 is Activate.
+14:26:01.0326  key section = setting, name = printername
+14:26:01.1034  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+14:26:02.2902  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+14:26:02.6994  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+14:26:02.8171  Initial Hardware with BCOPOSTOSHIBA.dll
+14:26:03.4928  frmMonitorCustomer is Activate.
+14:26:03.5192  frmMonitorCustomerFooter is Activate.
+14:26:03.5451  frmMonitor2Detail is Activate.
+14:26:04.0677  frmLogin is Activate.
+14:26:10.9421  frmLogin is Activate.
+14:26:12.3430  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+14:26:12.3939  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+14:26:13.0229  frmLogin is Activate.
+14:26:13.4233  frmMainMenu is Activate.
+14:26:14.0935  Call afterNotify False
+14:26:14.4525  frmSale is Activate.
+14:26:21.3634  SubOtherService1 is Activate.
+14:26:25.2909  SubOtherService1 is Activate.
+14:26:26.6188  SubOtherService1 is Activate.
+14:26:43.7226  SubOtherService1 is Activate.
+14:26:48.2790  frmMainMenu is Activate.
+14:26:48.4844  Call afterNotify False
+14:26:48.7415  frmSale is Activate.
+14:26:54.8322  frmSale is Activate.
+14:27:08.0676  frmSale is Activate.
+14:27:10.5265  frmSale is Activate.
+14:27:24.9704  SubOtherService1 is Activate.
+14:27:28.6770  SubOtherService1 is Activate.
+14:27:44.6037  SubOtherService1 is Activate.
+14:27:50.6829  SubOtherService1 is Activate.
+14:27:52.6055  SubOtherService1 is Activate.
+14:27:58.6487  SubOtherService1 is Activate.
+14:29:17.8315  key section = setting, name = printername
+14:29:17.8345  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+14:29:18.5097  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+14:29:18.6603  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+14:29:18.6733  Initial Hardware with BCOPOSTOSHIBA.dll
+14:29:19.0824  frmMonitorCustomer is Activate.
+14:29:19.1116  frmMonitorCustomerFooter is Activate.
+14:29:19.1365  frmMonitor2Detail is Activate.
+14:29:19.4916  frmLogin is Activate.
+14:29:38.5249  frmLogin is Activate.
+14:29:38.9010  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+14:29:38.9269  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+14:29:39.5058  frmLogin is Activate.
+14:29:39.8226  frmMainMenu is Activate.
+14:29:40.5304  Call afterNotify False
+14:29:40.7927  frmSale is Activate.
+14:29:44.8390  frmSale is Activate.
+14:29:50.1190  SubOtherService1 is Activate.
+14:29:52.1019  SubOtherService1 is Activate.
+14:29:56.5876  SubOtherService1 is Activate.
+14:30:01.5383  SubOtherService1 is Activate.
+14:30:14.2629  Current SQLState not in connectionLost and queryTimeount. SQLState = 01000
+14:30:14.2659  Current SQLState not in connectionLost and queryTimeount. SQLState = 22001
+14:30:14.2809  The statement has been terminated.
+String or binary data would be truncated.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteNonQuery() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 354
+   at BJCBCPOS_Data.SqlCommand.saveTempDlyptrans(String refNo, String rec, String sty, String vty, String pcd, String qnt, String amt, String fds, String usr, String egp, String stt, String pdisc, String discid, String upc, String dty, String discamt, String reason, String stv) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 2074
+
+14:30:14.2938  ไม่สามารถบันทึกข้อมูลสมาชิกใน TEMPDLYPTRANS
+   at BJCBCPOS_Process.SaleProcess.SaveMember() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 6625
+
+14:30:14.7332  frmPayment_Load
+14:30:14.8748  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:30:14.9426  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:30:14.9446  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:30:14.9496  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:30:15.2049  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:30:15.2308  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:30:15.2328  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:30:15.2378  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:30:15.2408  after ucTxtAmountCash.Text
+14:30:15.2428  after ucTxtAmountCash.Focus
+14:30:15.2957  frmPayment is Activate.
+14:30:23.8834  SubOtherService1 is Activate.
+14:30:26.9677  Current SQLState not in connectionLost and queryTimeount. SQLState = 01000
+14:30:26.9697  Current SQLState not in connectionLost and queryTimeount. SQLState = 22001
+14:30:26.9837  The statement has been terminated.
+String or binary data would be truncated.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteNonQuery() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 354
+   at BJCBCPOS_Data.SqlCommand.saveTempDlyptrans(String refNo, String rec, String sty, String vty, String pcd, String qnt, String amt, String fds, String usr, String egp, String stt, String pdisc, String discid, String upc, String dty, String discamt, String reason, String stv) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 2074
+
+14:30:26.9966  ไม่สามารถบันทึกข้อมูลสมาชิกใน TEMPDLYPTRANS
+   at BJCBCPOS_Process.SaleProcess.SaveMember() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 6625
+
+14:30:27.1951  frmPayment_Load
+14:30:27.3278  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:30:27.3707  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:30:27.3727  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:30:27.3747  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:30:27.5851  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:30:27.6110  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:30:27.6130  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:30:27.6170  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:30:27.6200  after ucTxtAmountCash.Text
+14:30:27.6220  after ucTxtAmountCash.Focus
+14:30:27.6300  frmPayment is Activate.
+16:18:38.7079  key section = setting, name = printername
+16:18:38.7109  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+16:18:39.3122  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+16:18:39.5367  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+16:18:39.7163  Initial Hardware with BCOPOSTOSHIBA.dll
+16:18:40.3105  frmMonitorCustomer is Activate.
+16:18:40.3344  frmMonitorCustomerFooter is Activate.
+16:18:40.3604  frmMonitor2Detail is Activate.
+16:18:41.0347  frmLogin is Activate.
+16:19:03.9338  frmLogin is Activate.
+16:19:04.3615  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+16:19:04.3855  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+16:19:04.9353  frmLogin is Activate.
+16:19:05.2821  frmMainMenu is Activate.
+16:19:06.0450  Call afterNotify False
+16:19:06.3499  frmSale is Activate.
+16:19:10.8960  ExecuteToDataTable Error message : Conversion failed when converting the nvarchar value 'N/A' to data type int.
+16:19:10.8990  Current SQLState not in connectionLost and queryTimeount. SQLState = 22018
+16:19:10.9210  Conversion failed when converting the nvarchar value 'N/A' to data type int.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.GetSaleOrderType(String type, String menuID, String relateFlag, String level, String value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 5499
+   at BJCBCPOS_Process.SaleProcess.GetSaleOrderType(String type, String menuID, String relateFlag, String level, String value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 5919
+
+16:19:15.0429  frmSale is Activate.
+16:19:26.8700  ExecuteToDataTable Error message : Conversion failed when converting the nvarchar value 'N/A' to data type int.
+16:19:26.8720  Current SQLState not in connectionLost and queryTimeount. SQLState = 22018
+16:19:26.8929  Conversion failed when converting the nvarchar value 'N/A' to data type int.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.GetSaleOrderType(String type, String menuID, String relateFlag, String level, String value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 5499
+   at BJCBCPOS_Process.SaleProcess.GetSaleOrderType(String type, String menuID, String relateFlag, String level, String value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 5919
+
+16:19:29.3283  ExecuteToDataTable Error message : Conversion failed when converting the nvarchar value 'N/A' to data type int.
+16:19:29.3303  Current SQLState not in connectionLost and queryTimeount. SQLState = 22018
+16:19:29.3513  Conversion failed when converting the nvarchar value 'N/A' to data type int.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.GetSaleOrderType(String type, String menuID, String relateFlag, String level, String value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 5499
+   at BJCBCPOS_Process.SaleProcess.GetSaleOrderType(String type, String menuID, String relateFlag, String level, String value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 5919
+
+16:20:13.9812  ExecuteToDataTable Error message : Conversion failed when converting the nvarchar value 'N/A' to data type int.
+16:20:13.9832  Current SQLState not in connectionLost and queryTimeount. SQLState = 22018
+16:20:14.0062  Conversion failed when converting the nvarchar value 'N/A' to data type int.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.GetSaleOrderType(String type, String menuID, String relateFlag, String level, String value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 5499
+   at BJCBCPOS_Process.SaleProcess.GetSaleOrderType(String type, String menuID, String relateFlag, String level, String value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 5919
+
+16:25:08.0818  ExecuteToDataTable Error message : Conversion failed when converting the nvarchar value 'N/A' to data type int.
+16:25:08.0848  Current SQLState not in connectionLost and queryTimeount. SQLState = 22018
+16:25:08.1476  Conversion failed when converting the nvarchar value 'N/A' to data type int.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.GetSaleOrderType(String type, String menuID, String relateFlag, String level, String value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 5499
+   at BJCBCPOS_Process.SaleProcess.GetSaleOrderType(String type, String menuID, String relateFlag, String level, String value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 5919
+
+17:25:21.8786  key section = setting, name = printername
+17:25:21.8806  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+17:25:23.8492  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+17:25:24.1921  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+17:25:24.2061  Initial Hardware with BCOPOSTOSHIBA.dll
+17:25:24.6512  frmMonitorCustomer is Activate.
+17:25:24.6761  frmMonitorCustomerFooter is Activate.
+17:25:24.7000  frmMonitor2Detail is Activate.
+17:25:25.0334  frmLogin is Activate.
+17:25:30.3834  frmLogin is Activate.
+17:25:31.2854  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+17:25:31.3101  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+17:25:31.8332  frmLogin is Activate.
+17:25:32.1450  frmMainMenu is Activate.
+17:25:32.7610  Call afterNotify False
+17:25:33.0332  frmSale is Activate.
+17:25:39.1634  frmSale is Activate.
+17:25:40.4251  frmSale is Activate.
+17:25:45.5820  frmSale is Activate.
+17:25:48.2992  frmSale is Activate.
+17:27:41.0205  frmSale is Activate.
+17:27:46.7450  frmSale is Activate.
+17:42:43.6820  key section = setting, name = printername
+17:42:43.6860  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+17:42:45.4366  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+17:42:45.5629  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+17:42:45.5749  Initial Hardware with BCOPOSTOSHIBA.dll
+17:42:45.9704  frmMonitorCustomer is Activate.
+17:42:45.9943  frmMonitorCustomerFooter is Activate.
+17:42:46.0183  frmMonitor2Detail is Activate.
+17:42:46.2926  frmLogin is Activate.
+17:42:52.3915  frmLogin is Activate.
+17:42:52.8296  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+17:42:52.8543  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+17:42:53.3649  frmLogin is Activate.
+17:42:53.6173  frmMainMenu is Activate.
+17:42:54.2578  Call afterNotify False
+17:42:54.5004  frmSale is Activate.
+17:43:00.7664  frmSale is Activate.
+17:43:42.4240  frmSale is Activate.
+17:48:04.8670  key section = setting, name = printername
+17:48:04.8700  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+17:48:06.2816  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+17:48:06.4012  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+17:48:06.8116  Initial Hardware with BCOPOSTOSHIBA.dll
+17:48:07.2516  frmMonitorCustomer is Activate.
+17:48:07.2795  frmMonitorCustomerFooter is Activate.
+17:48:07.3025  frmMonitor2Detail is Activate.
+17:48:07.6141  frmLogin is Activate.
+17:48:22.2580  frmLogin is Activate.
+17:48:22.6236  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+17:48:22.6481  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+17:48:23.2531  frmLogin is Activate.
+17:48:23.5185  frmMainMenu is Activate.
+17:48:24.3412  Call afterNotify False
+17:48:24.5968  frmSale is Activate.
+17:48:27.9106  frmSale is Activate.
+17:49:08.1827  frmSale is Activate.
+17:49:15.2734  frmSale is Activate.
+17:49:34.0054  frmSale is Activate.
+17:53:06.1551  frmSale is Activate.
+17:53:11.3384  frmSale is Activate.
+18:45:42.6802  key section = setting, name = printername
+18:45:42.6832  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+18:45:44.6694  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+18:45:44.7930  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+18:45:44.8388  Initial Hardware with BCOPOSTOSHIBA.dll
+18:45:45.3168  frmMonitorCustomer is Activate.
+18:45:45.3408  frmMonitorCustomerFooter is Activate.
+18:45:45.3647  frmMonitor2Detail is Activate.
+18:45:45.6410  frmLogin is Activate.
+18:45:52.9659  frmLogin is Activate.
+18:45:53.3829  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+18:45:53.4068  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+18:45:54.0284  frmLogin is Activate.
+18:45:54.2655  frmMainMenu is Activate.
+18:45:54.9254  Call afterNotify False
+18:45:55.1696  frmSale is Activate.
+18:45:58.1188  frmSale is Activate.
+18:46:18.9350  frmSale is Activate.
+18:46:40.7727  frmSale is Activate.
+18:46:42.1591  frmMainMenu is Activate.
+18:46:42.1616  frmMainMenu is Activate.
+18:46:44.3034  frmMainMenu is Activate.
+18:46:44.3054  frmMainMenu is Activate.
+18:46:44.4629  frmLogin is Activate.
+18:46:52.6421  frmLogin is Activate.
+18:46:52.9795  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+18:46:53.0014  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+18:46:53.5490  frmLogin is Activate.
+18:46:53.7193  frmMainMenu is Activate.
+18:46:54.2153  Call afterNotify False
+18:46:54.4213  frmSale is Activate.
+18:47:01.9678  frmSale is Activate.
+18:47:16.4869  frmSale is Activate.
+18:52:42.4582  key section = setting, name = printername
+18:52:42.4612  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+18:52:44.9566  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+18:52:45.0978  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+18:52:45.1088  Initial Hardware with BCOPOSTOSHIBA.dll
+18:52:45.4724  frmMonitorCustomer is Activate.
+18:52:45.4956  frmMonitorCustomerFooter is Activate.
+18:52:45.5176  frmMonitor2Detail is Activate.
+18:52:45.7943  frmLogin is Activate.
+18:53:16.6585  frmMonitor2Detail is Activate.
+18:53:18.4937  frmMonitor2Detail is Activate.
+18:53:20.7102  frmMonitor2Detail is Activate.
+18:53:21.3598  frmLogin is Activate.
+18:53:27.3972  frmLogin is Activate.
+18:53:27.7634  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+18:53:27.7882  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+18:53:28.3006  frmLogin is Activate.
+18:53:28.5982  frmMainMenu is Activate.
+18:53:30.5639  Call afterNotify False
+18:53:30.8152  frmSale is Activate.
+18:53:34.1597  frmReceivePaymentPOD is Activate.
+18:53:35.1016  frmMainMenu is Activate.
+18:53:35.9844  Call afterNotify False
+18:53:36.2098  frmSale is Activate.
+18:53:39.8568  frmSale is Activate.
+18:53:42.8360  frmSale is Activate.
+18:53:44.1438  frmSale is Activate.
+18:53:49.7892  frmSale is Activate.
+18:53:51.1334  start keyProduct()
+18:53:51.3190  before DisableControl();
+18:53:51.3220  before Properties.Resources.multi_disable;
+18:53:51.3250  after Properties.Resources.multi_disable;
+18:53:51.3280  after Properties.Resources.change_disable;
+18:53:51.3310  after Properties.Resources.remove_disable;
+18:53:51.3386  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+18:53:51.3820  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+18:53:51.3901  after setFocus();
+18:53:52.9506  start keyProduct()
+18:53:53.0779  before DisableControl();
+18:53:53.0799  before Properties.Resources.multi_disable;
+18:53:53.0819  after Properties.Resources.multi_disable;
+18:53:53.0848  after Properties.Resources.change_disable;
+18:53:53.0868  after Properties.Resources.remove_disable;
+18:53:53.0898  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+18:53:53.1142  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+18:53:53.1221  after setFocus();
+18:53:53.7396  before Properties.Resources.multi_disable;
+18:53:53.7435  after Properties.Resources.multi_disable;
+18:53:53.7455  after Properties.Resources.change_disable;
+18:53:53.7485  after Properties.Resources.remove_disable;
+18:53:54.2987  frmCustRedeem is Activate.
+18:53:54.3636  Can not find FunctionId 121131010010001 in profileCollections.
+
+18:53:54.3666  Can not find FunctionId 121131010010002 in profileCollections.
+
+18:53:54.3755  frmSale is Activate.
+18:53:54.4294  Can not find FunctionId 121131020010001 in profileCollections.
+
+18:53:54.4354  Can not find FunctionId 121131020010002 in profileCollections.
+
+18:53:54.4822  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+18:53:54.4872  Can not find FunctionId 121131030010001 in profileCollections.
+
+18:53:54.4932  Can not find FunctionId 121131030010002 in profileCollections.
+
+18:53:54.8585  frmPayment_Load
+18:53:54.9608  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:53:55.0031  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+18:53:55.0061  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+18:53:55.0101  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+18:53:55.2031  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:53:55.2297  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+18:53:55.2317  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+18:53:55.2346  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+18:53:55.2386  after ucTxtAmountCash.Text
+18:53:55.2406  after ucTxtAmountCash.Focus
+18:53:55.2496  frmPayment is Activate.
+18:53:57.5456  frmPayment is Activate.
+18:53:58.4471  frmSale is Activate.
+18:54:02.7677  frmSale is Activate.
+18:54:04.3185  before Properties.Resources.multi_disable;
+18:54:04.3215  after Properties.Resources.multi_disable;
+18:54:04.3255  after Properties.Resources.change_disable;
+18:54:04.3284  after Properties.Resources.remove_disable;
+18:54:04.8464  frmCustRedeem is Activate.
+18:54:04.9102  Can not find FunctionId 121131010010001 in profileCollections.
+
+18:54:04.9132  Can not find FunctionId 121131010010002 in profileCollections.
+
+18:54:04.9242  frmSale is Activate.
+18:54:04.9760  Can not find FunctionId 121131020010001 in profileCollections.
+
+18:54:04.9790  Can not find FunctionId 121131020010002 in profileCollections.
+
+18:54:05.0329  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+18:54:05.0399  Can not find FunctionId 121131030010001 in profileCollections.
+
+18:54:05.0438  Can not find FunctionId 121131030010002 in profileCollections.
+
+18:54:05.3039  frmPayment_Load
+18:54:05.3670  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:54:05.4030  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+18:54:05.4060  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+18:54:05.4080  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+18:54:05.5537  frmPayment is Activate.
+18:54:07.3783  frmPayment is Activate.
+18:54:07.4562  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:54:15.0427  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+18:54:15.0457  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+18:54:15.0507  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+18:54:15.1461  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:54:15.3241  frmPayment is Activate.
+18:54:15.9585  ABBNo from SaveSaleTrans 003000089F
+18:54:34.7407  frmConfirmPayment ProcessCashDrawerClose Hardware.isDrawerOpenFalse
+18:54:34.7621  frmConfirmPayment: call method closeForm >> tranSuccess : True, chkSwClose : True, statusCloseDrawer : True, finishReceipt False
+18:54:34.9412  frmCustRedeem is Activate.
+18:54:35.0353  Can not find FunctionId 121285101010002 in profileCollections.
+
+18:54:35.0371  Can not find FunctionId 121285101010002 in profileCollections.
+
+18:54:35.0860  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = 
+Application Desc = pos_CheckRedeemPoint_Coupon
+
+18:54:35.1369  frmConfirmPayment: salePageState in closeFormPayment = 2
+18:54:35.1548  Call afterNotify False
+18:54:35.2321  before Properties.Resources.multi_disable;
+18:54:35.2351  after Properties.Resources.multi_disable;
+18:54:35.2371  after Properties.Resources.change_disable;
+18:54:35.2411  after Properties.Resources.remove_disable;
+18:54:35.2800  frmSale is Activate.
+18:54:35.2830  frmSale is Activate.
+18:55:01.3325  frmSale is Activate.
+18:55:01.3355  frmSale is Activate.
+18:55:06.3949  frmReceivePaymentPOD is Activate.
+18:55:08.5313  frmPayment_Load
+18:55:08.5996  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:55:08.6482  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+18:55:08.6502  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+18:55:08.6531  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+18:55:08.7808  frmPayment is Activate.
+18:55:10.7437  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:55:10.7723  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+18:55:10.7753  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+18:55:10.7803  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+18:55:10.7843  after ucTxtAmountCash.Text
+18:55:10.7903  after ucTxtAmountCash.Focus
+18:55:12.0559  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+18:55:12.0579  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+18:55:12.0629  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+18:55:12.0659  before saleProcess.getAmountExchangeRate enterChangebalance
+18:55:12.0689  before CalBalanceDiff
+18:55:12.1342  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:55:12.3055  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:55:12.3334  frmPayment is Activate.
+18:55:14.0148  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+18:55:14.4484  frmConfirmPayment ProcessCashDrawerClose Hardware.isDrawerOpenFalse
+18:55:14.4704  frmConfirmPayment: call method closeForm >> tranSuccess : True, chkSwClose : True, statusCloseDrawer : True, finishReceipt False
+18:55:14.5060  frmConfirmPayment: salePageState in closeFormPayment = 2
+18:55:14.5631  frmReceivePaymentPOD is Activate.
+18:55:14.5651  frmReceivePaymentPOD is Activate.
+18:55:48.5179  frmReceivePaymentPOD is Activate.
+18:55:48.5199  frmReceivePaymentPOD is Activate.
+18:55:51.2211  frmMainMenu is Activate.
+18:55:57.2965  frmMainMenu is Activate.
+18:55:57.3808  frmVoid is Activate.
+18:56:03.0783  store procedure return error (ResponseCode = "300")
+Response Message = ไม่พบข้อมูลของใบเสร็จเลขที่ 2117001POD003000091!!!
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = 
+
+18:56:07.0996  frmVoid is Activate.
+18:57:02.4570  frmVoid is Activate.
+18:57:14.0409  frmVoid is Activate.
+18:57:16.2266  frmVoid is Activate.
+18:57:19.3545  frmMainMenu is Activate.
+18:57:21.4565  Call afterNotify False
+18:57:21.6759  frmSale is Activate.
+18:57:31.5928  frmDeposit is Activate.
+18:57:33.2205  frmDeposit is Activate.
+18:57:56.9706  frmDeposit is Activate.
+18:57:58.4376  frmDeposit is Activate.
+18:58:01.1715  start keyProduct()
+18:58:01.9211  frmPayment_Load
+18:58:02.0069  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:58:02.0580  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+18:58:02.0610  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+18:58:02.0660  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+18:58:02.2944  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:58:02.3315  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+18:58:02.3374  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+18:58:02.3444  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+18:58:02.3494  after ucTxtAmountCash.Text
+18:58:02.3524  after ucTxtAmountCash.Focus
+18:58:02.3633  frmPayment is Activate.
+18:58:03.4475  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+18:58:03.4495  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+18:58:03.4555  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+18:58:03.4585  before saleProcess.getAmountExchangeRate enterChangebalance
+18:58:03.4615  before CalBalanceDiff
+18:58:03.5222  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:58:03.7223  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+18:58:03.7505  frmPayment is Activate.
+18:58:04.5060  ABBNo from SaveSaleTrans 003000090F
+18:58:06.3083  frmConfirmPayment ProcessCashDrawerClose Hardware.isDrawerOpenFalse
+18:58:06.3304  frmConfirmPayment: call method closeForm >> tranSuccess : True, chkSwClose : True, statusCloseDrawer : True, finishReceipt False
+18:58:06.4123  frmConfirmPayment: salePageState in closeFormPayment = 2
+18:58:20.4622  frmDeposit is Activate.
+18:58:20.4642  frmDeposit is Activate.
+18:58:20.4742  frmDeposit is Activate.
+18:58:20.4772  frmDeposit is Activate.
+18:58:22.0010  frmMainMenu is Activate.
+18:58:22.0029  frmMainMenu is Activate.
+18:58:27.6443  frmMainMenu is Activate.
+18:58:27.6472  frmMainMenu is Activate.
+18:58:27.7360  frmVoid is Activate.
+18:58:32.7310  store procedure return error (ResponseCode = "300")
+Response Message = ไม่พบข้อมูลของใบเสร็จเลขที่ 17001003000378!!!
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = 
+
+18:58:35.4659  frmVoid is Activate.
+19:05:22.5726  frmVoid is Activate.
+19:05:23.6622  frmMainMenu is Activate.
+19:05:23.6662  frmMainMenu is Activate.
+19:05:49.5752  frmMainMenu is Activate.
+19:05:49.5772  frmMainMenu is Activate.
+19:05:49.7654  frmLogin is Activate.
+19:05:58.2472  frmLogin is Activate.
+19:24:44.6738  key section = setting, name = printername
+19:24:44.6768  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+19:24:45.3824  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+19:24:45.5240  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+19:24:45.6726  Initial Hardware with BCOPOSTOSHIBA.dll
+19:24:46.2152  frmMonitorCustomer is Activate.
+19:24:46.2472  frmMonitorCustomerFooter is Activate.
+19:24:46.2781  frmMonitor2Detail is Activate.
+19:24:47.2465  frmLogin is Activate.
+19:24:52.7421  frmLogin is Activate.
+19:24:53.1206  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+19:24:53.1465  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+19:24:53.6506  frmLogin is Activate.
+19:24:53.9342  frmMainMenu is Activate.
+19:24:54.6606  Call afterNotify False
+19:24:54.9132  frmSale is Activate.
+19:24:58.2092  frmSale is Activate.
+19:25:02.4339  frmMainMenu is Activate.
+19:25:02.4359  frmMainMenu is Activate.
+19:25:19.0704  frmMainMenu is Activate.
+19:25:19.0743  frmMainMenu is Activate.
+19:25:19.1661  frmVoid is Activate.
+19:25:24.9753  frmVoid is Activate.
+19:27:07.8575  frmVoid is Activate.
+19:27:30.1548  frmVoid is Activate.
+19:27:35.3900  frmVoid is Activate.
+19:27:39.4419  frmVoid is Activate.
+19:27:44.7461  1 chkSwOpen = False
+19:27:44.9420  Can not find parameterCode PrintDepositCreditNote in posConfig.
+
+19:28:01.5011  1 chkSwOpen = False
+19:28:31.0584  Can not find parameterCode PrintDepositCreditNote in posConfig.
+
+19:29:10.2687  frmVoid is Activate.
+19:32:31.6335  frmVoid is Activate.
+19:33:46.6497  frmVoid is Activate.
+19:33:58.6687  frmVoid is Activate.
+19:34:02.9199  frmVoid is Activate.
+19:35:02.0129  frmVoid is Activate.
+19:35:02.9490  frmMainMenu is Activate.
+19:35:02.9520  frmMainMenu is Activate.
+19:35:04.6510  frmMainMenu is Activate.
+19:35:04.6540  frmMainMenu is Activate.
+19:35:04.8279  frmLogin is Activate.
+19:35:06.5433  frmLogin is Activate.
+20:15:57.7114  key section = setting, name = printername
+20:15:57.7143  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+20:15:57.9363  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+20:15:58.1106  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+20:15:58.1563  Initial Hardware with BCOPOSTOSHIBA.dll
+20:15:58.5672  frmMonitorCustomer is Activate.
+20:15:58.5961  frmMonitorCustomerFooter is Activate.
+20:15:58.6220  frmMonitor2Detail is Activate.
+20:15:58.8961  frmLogin is Activate.
+20:16:05.2633  frmLogin is Activate.
+20:16:05.6248  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+20:16:05.6516  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+20:16:06.1518  frmLogin is Activate.
+20:16:06.4627  frmMainMenu is Activate.
+20:16:07.1566  Call afterNotify False
+20:16:07.4343  frmSale is Activate.
+20:16:10.7201  frmSale is Activate.
+20:16:18.5058  SubOtherService1 is Activate.
+20:16:21.9864  SubOtherService1 is Activate.
+20:29:20.1514  key section = setting, name = printername
+20:29:20.1544  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+20:29:20.3140  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+20:29:20.4543  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+20:29:20.4679  Initial Hardware with BCOPOSTOSHIBA.dll
+20:29:20.8420  frmMonitorCustomer is Activate.
+20:29:20.8690  frmMonitorCustomerFooter is Activate.
+20:29:20.8920  frmMonitor2Detail is Activate.
+20:29:21.1729  frmLogin is Activate.
+20:29:29.8555  frmLogin is Activate.
+20:29:30.2399  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+20:29:30.2649  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+20:29:30.8342  frmLogin is Activate.
+20:29:31.1286  frmMainMenu is Activate.
+20:29:31.7091  Call afterNotify False
+20:29:31.9908  frmSale is Activate.
+20:29:33.7593  frmSale is Activate.
+20:29:35.0519  frmSale is Activate.
+20:29:40.0761  frmSale is Activate.
+20:29:42.6885  frmReceivePaymentPOD is Activate.
+20:29:48.3393  frmReceivePaymentPOD is Activate.
+20:29:48.9922  frmMainMenu is Activate.
+20:29:49.1783  Call afterNotify False
+20:29:49.4293  frmSale is Activate.
+20:29:54.4189  SubOtherService1 is Activate.
+20:29:56.9543  SubOtherService1 is Activate.
+20:29:58.2967  SubOtherService1 is Activate.
+22:41:03.1623  key section = setting, name = printername
+22:41:03.1683  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+22:42:58.6812  key section = setting, name = printername
+22:42:58.6872  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+22:42:59.1251  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+22:42:59.7192  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+22:42:59.7729  Initial Hardware with BCOPOSTOSHIBA.dll
+22:43:01.9521  frmMonitorCustomer is Activate.
+22:43:02.0576  frmMonitorCustomerFooter is Activate.
+22:43:02.1453  frmMonitor2Detail is Activate.
+22:43:02.8579  frmLogin is Activate.
+22:43:10.2128  frmLogin is Activate.
+22:43:11.4650  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+22:43:11.5501  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+22:43:12.2306  frmLogin is Activate.
+22:43:12.8695  frmMainMenu is Activate.
+22:43:13.2533  store procedure return error (ResponseCode = "300")
+Response Message = ไม่พบการเปิดงานประจำวัน
+Help Message = กรุณาเปิดงานก่อนทำการขาย
+Application Desc = pos_CheckOpenDay#2
+
+22:43:14.1179  frmMainMenu is Activate.
+22:43:15.7901  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+22:43:16.5014  frmMainMenu is Activate.
+22:43:18.1131  Call afterNotify False
+22:43:18.9073  frmSale is Activate.
+22:43:21.3996  frmReceivePaymentPOD is Activate.
+22:43:23.2786  frmMainMenu is Activate.
+22:43:24.6151  Call afterNotify False
+22:43:25.3065  frmSale is Activate.
+22:43:33.3500  SubOtherService1 is Activate.
+22:43:36.1817  SubOtherService1 is Activate.
+22:43:37.5992  SubOtherService1 is Activate.
+22:48:06.2549  SubOtherService1 is Activate.
+22:48:22.4204  SubOtherService1 is Activate.
+22:48:23.4097  frmMainMenu is Activate.
+22:48:23.8116  Call afterNotify False
+22:48:24.3996  frmSale is Activate.
+22:48:27.4331  frmReceivePaymentPOD is Activate.
+22:48:31.9744  frmReceivePaymentPOD is Activate.
+22:48:36.9702  frmMainMenu is Activate.
+22:48:37.2986  Call afterNotify False
+22:48:37.9671  frmSale is Activate.
+22:48:46.0614  SubOtherService1 is Activate.
+22:48:49.3226  SubOtherService1 is Activate.
+22:48:52.0810  SubOtherService1 is Activate.
+22:48:55.9018  SubOtherService1 is Activate.
+22:48:56.7871  frmMainMenu is Activate.
+22:48:57.0544  Call afterNotify False
+22:48:57.5497  frmSale is Activate.
+22:49:05.7015  SubOtherService1 is Activate.
+22:49:10.3231  SubOtherService1 is Activate.
+22:49:20.8978  SubOtherService1 is Activate.
+22:49:33.8582  SubOtherService1 is Activate.
+22:49:44.8248  frmMainMenu is Activate.
+22:49:45.1588  Call afterNotify False
+22:49:45.7364  frmSale is Activate.
+22:49:52.3566  SubOtherService1 is Activate.
+22:50:07.2432  SubOtherService1 is Activate.
+22:50:11.4576  SubOtherService1 is Activate.
+22:50:13.3826  SubOtherService1 is Activate.
+22:51:12.0401  SubOtherService1 is Activate.
+22:51:31.7434  frmMainMenu is Activate.
+22:51:32.0775  Call afterNotify False
+22:51:32.6645  frmSale is Activate.
+22:51:40.0620  SubOtherService1 is Activate.
+22:51:43.4200  SubOtherService1 is Activate.
+22:51:45.5522  SubOtherService1 is Activate.
+22:51:54.6468  SubOtherService1 is Activate.
+22:51:58.6509  SubOtherService1 is Activate.
+22:52:14.3204  SubOtherService1 is Activate.
+22:52:31.8048  SubOtherService1 is Activate.
+22:52:33.8432  frmMainMenu is Activate.
+22:52:34.1279  Call afterNotify False
+22:52:34.6746  frmSale is Activate.
+22:52:43.0042  SubOtherService1 is Activate.
+22:53:06.2771  SubOtherService1 is Activate.
+22:53:07.6995  SubOtherService1 is Activate.
+22:53:18.8809  SubOtherService1 is Activate.
+22:53:45.8677  SubOtherService1 is Activate.
+22:54:10.5039  SubOtherService1 is Activate.
+22:54:11.3028  frmMainMenu is Activate.
+22:54:11.5491  Call afterNotify False
+22:54:12.0755  frmSale is Activate.
+22:54:20.0926  SubOtherService1 is Activate.
+22:54:23.2644  SubOtherService1 is Activate.
+22:54:25.1083  SubOtherService1 is Activate.
+22:55:16.0569  SubOtherService1 is Activate.
