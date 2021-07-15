@@ -1,0 +1,1789 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5904EED3-5744-4181-B997-9B7B17D605A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BJCBCPOS</RootNamespace>
+    <AssemblyName>BJCBCPOS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BJCBCPOS.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\BJCBCPOS.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>NoPath.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ApiServices, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BJCBCPOS_Model\lib\ApiServices.dll</HintPath>
+    </Reference>
+    <Reference Include="BJCBCPRNFFTI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BJCBCPOS_Model\lib\BJCBCPRNFFTI.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EDCControl, Version=2.0.7457.27567, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\EDCControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.PointOfService">
+      <HintPath>lib\Microsoft.PointOfService.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MMFSAPI">
+      <HintPath>..\BJCBCPOS_Model\lib\MMFSAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="control\Class1.cs" />
+    <Compile Include="control\UCEmployeeDiscount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCEmployeeDiscount.Designer.cs">
+      <DependentUpon>UCEmployeeDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCGeneralListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCGeneralListItem.Designer.cs">
+      <DependentUpon>UCGeneralListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCHambergerSubMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCHambergerSubMenu.Designer.cs">
+      <DependentUpon>UCHambergerSubMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCButtonPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCButtonPayment.Designer.cs">
+      <DependentUpon>UCButtonPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCHamberger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCHamberger.Designer.cs">
+      <DependentUpon>UCHamberger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCHambergerItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCHambergerItem.Designer.cs">
+      <DependentUpon>UCHambergerItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCHirePurchase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCHirePurchase.Designer.cs">
+      <DependentUpon>UCHirePurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemDropDownListExtraProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemDropDownListExtraProduct.Designer.cs">
+      <DependentUpon>UCItemDropDownListExtraProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCDropDownListCustom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCDropDownListCustom.Designer.cs">
+      <DependentUpon>UCDropDownListCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCListItemPOD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCListItemPOD.Designer.cs">
+      <DependentUpon>UCListItemPOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmPOD_QR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmPOD_QR.Designer.cs">
+      <DependentUpon>frmPOD_QR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interface\IDropdownListItem.cs" />
+    <Compile Include="control\UCConfirmPaymentFXUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCConfirmPaymentFXUC.Designer.cs">
+      <DependentUpon>UCConfirmPaymentFXUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCDropDownLanguage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCDropDownLanguage.Designer.cs">
+      <DependentUpon>UCDropDownLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemDisplayDiscount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemDisplayDiscount.Designer.cs">
+      <DependentUpon>UCItemDisplayDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemDepositCustomerType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemDepositCustomerType.Designer.cs">
+      <DependentUpon>UCItemDepositCustomerType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemRedeemCoupon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemRedeemCoupon.Designer.cs">
+      <DependentUpon>UCItemRedeemCoupon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemRedeemCash.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemRedeemCash.Designer.cs">
+      <DependentUpon>UCItemRedeemCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemRedeemCashCust.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemRedeemCashCust.Designer.cs">
+      <DependentUpon>UCItemRedeemCashCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemRedeemDiscount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemRedeemDiscount.Designer.cs">
+      <DependentUpon>UCItemRedeemDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemRedeemProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemRedeemProduct.Designer.cs">
+      <DependentUpon>UCItemRedeemProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemRedeemDiscountCust.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemRedeemDiscountCust.Designer.cs">
+      <DependentUpon>UCItemRedeemDiscountCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemRedeemProductAndCouponCust.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemRedeemProductAndCouponCust.Designer.cs">
+      <DependentUpon>UCItemRedeemProductAndCouponCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCHeader.Designer.cs">
+      <DependentUpon>UCHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemCurrency2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemCurrency2.Designer.cs">
+      <DependentUpon>UCItemCurrency2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemCancelCashOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemCancelCashOut.Designer.cs">
+      <DependentUpon>UCItemCancelCashOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemCurrency.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemCurrency.Designer.cs">
+      <DependentUpon>UCItemCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemDaySales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemDaySales.designer.cs">
+      <DependentUpon>UCItemDaySales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interface\IBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="control\UCCashierMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCCashierMessage.Designer.cs">
+      <DependentUpon>UCCashierMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCCurrencyDropDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCCurrencyDropDown.Designer.cs">
+      <DependentUpon>UCCurrencyDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemCurrencyDropDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemCurrencyDropDown.Designer.cs">
+      <DependentUpon>UCItemCurrencyDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemSell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemSell.Designer.cs">
+      <DependentUpon>UCItemSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCListCheckProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCListCheckProduct.Designer.cs">
+      <DependentUpon>UCListCheckProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCListItemSaveTempSale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCListItemSaveTempSale.Designer.cs">
+      <DependentUpon>UCListItemSaveTempSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCListOtherService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCListOtherService.Designer.cs">
+      <DependentUpon>UCListOtherService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCListSuggest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCListSuggest.Designer.cs">
+      <DependentUpon>UCListSuggest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemInvoiceDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemInvoiceDetail.designer.cs">
+      <DependentUpon>UCItemInvoiceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCFooterTran.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCFooterTran.Designer.cs">
+      <DependentUpon>UCFooterTran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItem.Designer.cs">
+      <DependentUpon>UCItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemInvoice.designer.cs">
+      <DependentUpon>UCItemInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemReturn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemReturn.designer.cs">
+      <DependentUpon>UCItemReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemVoid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemVoid.designer.cs">
+      <DependentUpon>UCItemVoid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCMember.Designer.cs">
+      <DependentUpon>UCMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCPCMan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCPCMan.Designer.cs">
+      <DependentUpon>UCPCMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCSuggest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCSuggest.Designer.cs">
+      <DependentUpon>UCSuggest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCTextBoxSmall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCTextBoxSmall.designer.cs">
+      <DependentUpon>UCTextBoxSmall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interface\IRedeem.cs" />
+    <Compile Include="control\UCAdjustCash.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCAdjustCash.Designer.cs">
+      <DependentUpon>UCAdjustCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCCoupon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCCoupon.Designer.cs">
+      <DependentUpon>UCCoupon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCDropDownList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCDropDownList.Designer.cs">
+      <DependentUpon>UCDropDownList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCFooter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCFooter.designer.cs">
+      <DependentUpon>UCFooter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCGridViewSearchCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCGridViewSearchCustomer.designer.cs">
+      <DependentUpon>UCGridViewSearchCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemCashIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemCashIn.Designer.cs">
+      <DependentUpon>UCItemCashIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCItemDropDownList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCItemDropDownList.Designer.cs">
+      <DependentUpon>UCItemDropDownList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCKeyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCKeyboard.Designer.cs">
+      <DependentUpon>UCKeyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCKeypad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCKeypad.Designer.cs">
+      <DependentUpon>UCKeypad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCListDiscount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCListDiscount.Designer.cs">
+      <DependentUpon>UCListDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCListPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCListPayment.Designer.cs">
+      <DependentUpon>UCListPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCMonitor2Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCMonitor2Item.Designer.cs">
+      <DependentUpon>UCMonitor2Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCSaveTemp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCSaveTemp.Designer.cs">
+      <DependentUpon>UCSaveTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\UCTextBoxWithIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\UCTextBoxWithIcon.Designer.cs">
+      <DependentUpon>UCTextBoxWithIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmConsentCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmConsentCustomer.Designer.cs">
+      <DependentUpon>frmConsentCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmCashireMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmCashireMessage.Designer.cs">
+      <DependentUpon>frmCashireMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmConfirmIDCardPassport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmConfirmIDCardPassport.Designer.cs">
+      <DependentUpon>frmConfirmIDCardPassport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmConnectionLost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmConnectionLost.Designer.cs">
+      <DependentUpon>frmConnectionLost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmConsentCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmConsentCashier.Designer.cs">
+      <DependentUpon>frmConsentCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmDisplayContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmDisplayContent.Designer.cs">
+      <DependentUpon>frmDisplayContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmEDCProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmEDCProcess.Designer.cs">
+      <DependentUpon>frmEDCProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmLockScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmLockScreen.Designer.cs">
+      <DependentUpon>frmLockScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmMoneyBagInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmMoneyBagInput.Designer.cs">
+      <DependentUpon>frmMoneyBagInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmPopupQRPaymentSubMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmPopupQRPaymentSubMenu.Designer.cs">
+      <DependentUpon>frmPopupQRPaymentSubMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmPopUpSelectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmPopUpSelectList.Designer.cs">
+      <DependentUpon>frmPopUpSelectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmQRPaymentOnlineBscanC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmQRPaymentOnlineBscanC.Designer.cs">
+      <DependentUpon>frmQRPaymentOnlineBscanC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmSaleOrderType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmSaleOrderType.Designer.cs">
+      <DependentUpon>frmSaleOrderType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmSetupIni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmSetupIni.Designer.cs">
+      <DependentUpon>frmSetupIni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmShowInfoCustFullTax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmShowInfoCustFullTax.Designer.cs">
+      <DependentUpon>frmShowInfoCustFullTax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmSignature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmSignature.Designer.cs">
+      <DependentUpon>frmSignature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\FrmUserAuthorize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\FrmUserAuthorize.Designer.cs">
+      <DependentUpon>FrmUserAuthorize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmQRPaymentOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmQRPaymentOnline.Designer.cs">
+      <DependentUpon>frmQRPaymentOnline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmPopupInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmPopupInput.Designer.cs">
+      <DependentUpon>frmPopupInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\CcosServices.cs" />
+    <Compile Include="page\frmDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmDeposit.Designer.cs">
+      <DependentUpon>frmDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmParcelKerry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmParcelKerry.Designer.cs">
+      <DependentUpon>frmParcelKerry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmParcelService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmParcelService.Designer.cs">
+      <DependentUpon>frmParcelService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\FrmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\FrmPayment.Designer.cs">
+      <DependentUpon>FrmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmReceivePaymentPOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmReceivePaymentPOD.Designer.cs">
+      <DependentUpon>frmReceivePaymentPOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\CalculatorFormatEventArgs.cs" />
+    <Compile Include="page\CalculatorParseEventArgs.cs" />
+    <Compile Include="page\frmConfirmCancelCashOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmConfirmCancelCashOut.Designer.cs">
+      <DependentUpon>frmConfirmCancelCashOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\FrmConfirmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\FrmConfirmPayment.Designer.cs">
+      <DependentUpon>FrmConfirmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmCustRedeem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmCustRedeem.Designer.cs">
+      <DependentUpon>frmCustRedeem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmRedeem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmRedeem.Designer.cs">
+      <DependentUpon>frmRedeem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmReturnFromInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmReturnFromInvoice.Designer.cs">
+      <DependentUpon>frmReturnFromInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmReturnFromScanProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmReturnFromScanProduct.Designer.cs">
+      <DependentUpon>frmReturnFromScanProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmReturnSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmReturnSuccess.Designer.cs">
+      <DependentUpon>frmReturnSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSale.Designer.cs">
+      <DependentUpon>frmSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSubMenuDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSubMenuDeposit.Designer.cs">
+      <DependentUpon>frmSubMenuDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSubMenuReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSubMenuReturn.Designer.cs">
+      <DependentUpon>frmSubMenuReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmCancelCashOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmCancelCashOut.Designer.cs">
+      <DependentUpon>frmCancelCashOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\FrmCashbalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\FrmCashbalance.Designer.cs">
+      <DependentUpon>FrmCashbalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\FrmCashout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\FrmCashout.Designer.cs">
+      <DependentUpon>FrmCashout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmCheckProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmCheckProduct.Designer.cs">
+      <DependentUpon>frmCheckProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmDaySaleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmDaySaleReport.Designer.cs">
+      <DependentUpon>frmDaySaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmDeleteReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmDeleteReason.Designer.cs">
+      <DependentUpon>frmDeleteReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmEditItemReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmEditItemReason.Designer.cs">
+      <DependentUpon>frmEditItemReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmInvoiceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmInvoiceReport.Designer.cs">
+      <DependentUpon>frmInvoiceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\FrmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\FrmMainMenu.Designer.cs">
+      <DependentUpon>FrmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmMonitor2Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmMonitor2Detail.Designer.cs">
+      <DependentUpon>frmMonitor2Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\FrmSearchMember.Designer.cs">
+      <DependentUpon>frmSearchMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSubMenuReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSubMenuReport.Designer.cs">
+      <DependentUpon>frmSubMenuReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmCalculator.Designer.cs">
+      <DependentUpon>frmCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmAllDisplayReason.Designer.cs">
+      <DependentUpon>frmAllDisplayReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmAllDisplayReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSearchMemberAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSearchMemberAuto.Designer.cs">
+      <DependentUpon>frmSearchMemberAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmConfirmCashIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmConfirmCashIn.Designer.cs">
+      <DependentUpon>frmConfirmCashIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmAddCoupon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmAddCoupon.Designer.cs">
+      <DependentUpon>frmAddCoupon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmConfirmCashout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmConfirmCashout.Designer.cs">
+      <DependentUpon>frmConfirmCashout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmDeleteEditItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmDeleteEditItem.Designer.cs">
+      <DependentUpon>frmDeleteEditItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmDeleteItemReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmDeleteItemReason.Designer.cs">
+      <DependentUpon>frmDeleteItemReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmFavoriteSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmFavoriteSale.Designer.cs">
+      <DependentUpon>frmFavoriteSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmMonitorCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmMonitorCustomer.Designer.cs">
+      <DependentUpon>frmMonitorCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmMonitorCustomerFooter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmMonitorCustomerFooter.Designer.cs">
+      <DependentUpon>frmMonitorCustomerFooter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmNotify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmNotify.Designer.cs">
+      <DependentUpon>frmNotify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmOtherPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmOtherPayment.Designer.cs">
+      <DependentUpon>frmOtherPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSearchMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmProductAndService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmProductAndService.Designer.cs">
+      <DependentUpon>frmProductAndService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSubMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSubMenu.Designer.cs">
+      <DependentUpon>frmSubMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSubMenuTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSubMenuTools.Designer.cs">
+      <DependentUpon>frmSubMenuTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmVDO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmVDO.Designer.cs">
+      <DependentUpon>frmVDO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmVoid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmVoid.Designer.cs">
+      <DependentUpon>frmVoid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\FrmVoidSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\FrmVoidSuccess.Designer.cs">
+      <DependentUpon>FrmVoidSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\SubOtherService1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\SubOtherService1.Designer.cs">
+      <DependentUpon>SubOtherService1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="processForm\frmBaseProcess.cs" />
+    <Compile Include="processForm\frmSaleProcess.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppControl.cs" />
+    <EmbeddedResource Include="control\UCEmployeeDiscount.resx">
+      <DependentUpon>UCEmployeeDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCGeneralListItem.resx">
+      <DependentUpon>UCGeneralListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCHambergerSubMenu.resx">
+      <DependentUpon>UCHambergerSubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCButtonPayment.resx">
+      <DependentUpon>UCButtonPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCHamberger.resx">
+      <DependentUpon>UCHamberger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCHambergerItem.resx">
+      <DependentUpon>UCHambergerItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCHirePurchase.resx">
+      <DependentUpon>UCHirePurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemDropDownListExtraProduct.resx">
+      <DependentUpon>UCItemDropDownListExtraProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCDropDownListCustom.resx">
+      <DependentUpon>UCDropDownListCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCConfirmPaymentFXUC.resx">
+      <DependentUpon>UCConfirmPaymentFXUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCDropDownLanguage.resx">
+      <DependentUpon>UCDropDownLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemDisplayDiscount.resx">
+      <DependentUpon>UCItemDisplayDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemDepositCustomerType.resx">
+      <DependentUpon>UCItemDepositCustomerType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemRedeemCash.resx">
+      <DependentUpon>UCItemRedeemCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemRedeemCashCust.resx">
+      <DependentUpon>UCItemRedeemCashCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemRedeemCoupon.resx">
+      <DependentUpon>UCItemRedeemCoupon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemRedeemDiscount.resx">
+      <DependentUpon>UCItemRedeemDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemRedeemProduct.resx">
+      <DependentUpon>UCItemRedeemProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemRedeemDiscountCust.resx">
+      <DependentUpon>UCItemRedeemDiscountCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemRedeemProductAndCouponCust.resx">
+      <DependentUpon>UCItemRedeemProductAndCouponCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCHeader.resx">
+      <DependentUpon>UCHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemCurrency2.resx">
+      <DependentUpon>UCItemCurrency2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemCancelCashOut.resx">
+      <DependentUpon>UCItemCancelCashOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemCurrency.resx">
+      <DependentUpon>UCItemCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemDaySales.resx">
+      <DependentUpon>UCItemDaySales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCCashierMessage.resx">
+      <DependentUpon>UCCashierMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCCurrencyDropDown.resx">
+      <DependentUpon>UCCurrencyDropDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemCurrencyDropDown.resx">
+      <DependentUpon>UCItemCurrencyDropDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemSell.resx">
+      <DependentUpon>UCItemSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCListCheckProduct.resx">
+      <DependentUpon>UCListCheckProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCListItemPOD.resx">
+      <DependentUpon>UCListItemPOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCListItemSaveTempSale.resx">
+      <DependentUpon>UCListItemSaveTempSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCListOtherService.resx">
+      <DependentUpon>UCListOtherService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCListSuggest.resx">
+      <DependentUpon>UCListSuggest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemInvoiceDetail.resx">
+      <DependentUpon>UCItemInvoiceDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCFooterTran.resx">
+      <DependentUpon>UCFooterTran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItem.resx">
+      <DependentUpon>UCItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemInvoice.resx">
+      <DependentUpon>UCItemInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemReturn.resx">
+      <DependentUpon>UCItemReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemVoid.resx">
+      <DependentUpon>UCItemVoid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCMember.resx">
+      <DependentUpon>UCMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCPCMan.resx">
+      <DependentUpon>UCPCMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCSuggest.resx">
+      <DependentUpon>UCSuggest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCTextBoxSmall.resx">
+      <DependentUpon>UCTextBoxSmall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCAdjustCash.resx">
+      <DependentUpon>UCAdjustCash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCCoupon.resx">
+      <DependentUpon>UCCoupon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCDropDownList.resx">
+      <DependentUpon>UCDropDownList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCFooter.resx">
+      <DependentUpon>UCFooter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCGridViewSearchCustomer.resx">
+      <DependentUpon>UCGridViewSearchCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemCashIn.resx">
+      <DependentUpon>UCItemCashIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCItemDropDownList.resx">
+      <DependentUpon>UCItemDropDownList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCKeyboard.resx">
+      <DependentUpon>UCKeyboard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCKeypad.resx">
+      <DependentUpon>UCKeypad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCListDiscount.resx">
+      <DependentUpon>UCListDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCListPayment.resx">
+      <DependentUpon>UCListPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCMonitor2Item.resx">
+      <DependentUpon>UCMonitor2Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCSaveTemp.resx">
+      <DependentUpon>UCSaveTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\UCTextBoxWithIcon.resx">
+      <DependentUpon>UCTextBoxWithIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmConsentCustomer.resx">
+      <DependentUpon>frmConsentCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmCashireMessage.resx">
+      <DependentUpon>frmCashireMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmConfirmIDCardPassport.resx">
+      <DependentUpon>frmConfirmIDCardPassport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmConnectionLost.resx">
+      <DependentUpon>frmConnectionLost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmConsentCashier.resx">
+      <DependentUpon>frmConsentCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmDisplayContent.resx">
+      <DependentUpon>frmDisplayContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmEDCProcess.resx">
+      <DependentUpon>frmEDCProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmLockScreen.resx">
+      <DependentUpon>frmLockScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmMoneyBagInput.resx">
+      <DependentUpon>frmMoneyBagInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmPOD_QR.resx">
+      <DependentUpon>frmPOD_QR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmPopupQRPaymentSubMenu.resx">
+      <DependentUpon>frmPopupQRPaymentSubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmPopUpSelectList.resx">
+      <DependentUpon>frmPopUpSelectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmQRPaymentOnlineBscanC.resx">
+      <DependentUpon>frmQRPaymentOnlineBscanC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmSaleOrderType.resx">
+      <DependentUpon>frmSaleOrderType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmSetupIni.resx">
+      <DependentUpon>frmSetupIni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmShowInfoCustFullTax.resx">
+      <DependentUpon>frmShowInfoCustFullTax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmSignature.resx">
+      <DependentUpon>frmSignature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\FrmUserAuthorize.resx">
+      <DependentUpon>FrmUserAuthorize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmQRPaymentOnline.resx">
+      <DependentUpon>frmQRPaymentOnline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmPopupInput.resx">
+      <DependentUpon>frmPopupInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmDeposit.resx">
+      <DependentUpon>frmDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmParcelKerry.resx">
+      <DependentUpon>frmParcelKerry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmParcelService.resx">
+      <DependentUpon>frmParcelService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\FrmPayment.resx">
+      <DependentUpon>FrmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmReceivePaymentPOD.resx">
+      <DependentUpon>frmReceivePaymentPOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmConfirmCancelCashOut.resx">
+      <DependentUpon>frmConfirmCancelCashOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\FrmConfirmPayment.resx">
+      <DependentUpon>FrmConfirmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmCustRedeem.resx">
+      <DependentUpon>frmCustRedeem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmRedeem.resx">
+      <DependentUpon>frmRedeem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmReturnFromInvoice.resx">
+      <DependentUpon>frmReturnFromInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmReturnFromScanProduct.resx">
+      <DependentUpon>frmReturnFromScanProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmReturnSuccess.resx">
+      <DependentUpon>frmReturnSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSale.resx">
+      <DependentUpon>frmSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSubMenuDeposit.resx">
+      <DependentUpon>frmSubMenuDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSubMenuReturn.resx">
+      <DependentUpon>frmSubMenuReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmCancelCashOut.resx">
+      <DependentUpon>frmCancelCashOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\FrmCashbalance.resx">
+      <DependentUpon>FrmCashbalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\FrmCashout.resx">
+      <DependentUpon>FrmCashout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmCheckProduct.resx">
+      <DependentUpon>frmCheckProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmDaySaleReport.resx">
+      <DependentUpon>frmDaySaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmDeleteReason.resx">
+      <DependentUpon>frmDeleteReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmEditItemReason.resx">
+      <DependentUpon>frmEditItemReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmInvoiceReport.resx">
+      <DependentUpon>frmInvoiceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\FrmMainMenu.resx">
+      <DependentUpon>FrmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmMonitor2Detail.resx">
+      <DependentUpon>frmMonitor2Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\FrmSearchMember.resx">
+      <DependentUpon>frmSearchMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSubMenuReport.resx">
+      <DependentUpon>frmSubMenuReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmCalculator.resx">
+      <DependentUpon>frmCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmAllDisplayReason.resx">
+      <DependentUpon>frmAllDisplayReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSearchMemberAuto.resx">
+      <DependentUpon>frmSearchMemberAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmConfirmCashIn.resx">
+      <DependentUpon>frmConfirmCashIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\FrmAddCoupon.resx">
+      <DependentUpon>FrmAddCoupon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmConfirmCashout.resx">
+      <DependentUpon>frmConfirmCashout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmDeleteEditItem.resx">
+      <DependentUpon>frmDeleteEditItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmDeleteItemReason.resx">
+      <DependentUpon>frmDeleteItemReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmFavoriteSale.resx">
+      <DependentUpon>frmFavoriteSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmMonitorCustomer.resx">
+      <DependentUpon>frmMonitorCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmMonitorCustomerFooter.resx">
+      <DependentUpon>frmMonitorCustomerFooter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmNotify.resx">
+      <DependentUpon>frmNotify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmOtherPayment.resx">
+      <DependentUpon>frmOtherPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmProductAndService.resx">
+      <DependentUpon>frmProductAndService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSubMenu.resx">
+      <DependentUpon>frmSubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSubMenuTools.resx">
+      <DependentUpon>frmSubMenuTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmVDO.resx">
+      <DependentUpon>frmVDO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmVoid.resx">
+      <DependentUpon>frmVoid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\FrmVoidSuccess.resx">
+      <DependentUpon>FrmVoidSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\SubOtherService1.resx">
+      <DependentUpon>SubOtherService1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="config\AlertMessage.xlsx" />
+    <None Include="config\English.csv" />
+    <None Include="config\Form_Language.xlsx" />
+    <None Include="config\Laos.csv" />
+    <None Include="config\Thai.csv" />
+    <None Include="config\~%24Form_Language.xlsx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 646.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 648.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image 43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoPath - Copy %282%29%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoPath - Copy %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoPath - Copy %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment_enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radio_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 224.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 244.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_scan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\English.txt" />
+    <Content Include="config\Laos.txt" />
+    <Content Include="config\Thai.txt" />
+    <Content Include="NoPath.ico" />
+    <None Include="Resources\SCGExpress.jpg" />
+    <None Include="Resources\DHLExpress.jpeg" />
+    <None Include="Resources\ThailandPost.png" />
+    <None Include="Resources\DHLExpress.png" />
+    <None Include="Resources\JnTExpress.png" />
+    <None Include="Resources\FlashExpress.jpg" />
+    <None Include="Resources\KerryExpress.png" />
+    <None Include="Resources\panel_item_credisale_disable.png" />
+    <None Include="Resources\panel_item_credisale_enable.png" />
+    <None Include="Resources\5cf6020c-2633-485b-9e90-1326561dbd44.png" />
+    <None Include="Resources\QRPayment_BscanC.png" />
+    <None Include="Resources\QRPayment_CscanB.png" />
+    <None Include="Resources\QRPayment_Cashier.png" />
+    <None Include="Resources\QRPayment_icon_QRKbank.gif" />
+    <None Include="Resources\QRPayment_welcome-all-bank-logo.png" />
+    <None Include="Resources\background_QRPaymentOnline.png" />
+    <None Include="Resources\consent_btn_enableconfirm.png" />
+    <None Include="Resources\consent_btn_cancel.png" />
+    <None Include="Resources\consent_btn_disableconfirm.png" />
+    <None Include="Resources\panel_consent.png" />
+    <None Include="Resources\background_consent.png" />
+    <None Include="Resources\non-check-box.png" />
+    <None Include="Resources\check-box.png" />
+    <None Include="Resources\scroll-3.png" />
+    <None Include="Resources\scroll-2.png" />
+    <None Include="Resources\scroll-1.png" />
+    <None Include="Resources\MenuHamberger_Order.png" />
+    <None Include="Resources\cashier_message.png" />
+    <None Include="Resources\MenuHamberger_dot_subitem.png" />
+    <None Include="Resources\MenuHamberger_arrow_down.png" />
+    <None Include="Resources\MenuHamberger_arrow_right.png" />
+    <None Include="Resources\Sale_CancelReceipt.png" />
+    <None Include="Resources\Sale_btnOtherPayment.png" />
+    <None Include="Resources\Sale_btnConfirm.png" />
+    <None Include="Resources\BigC_AEON.png" />
+    <None Include="Resources\lock_screen3.png" />
+    <None Include="Resources\lock_screen2.png" />
+    <None Include="Resources\lock_screen.png" />
+    <None Include="Resources\lock_header.png" />
+    <None Include="Resources\panel_message_cashier.png" />
+    <None Include="Resources\uc_btn_payment1.png" />
+    <None Include="Resources\alert_caisher_bell_.png" />
+    <None Include="Resources\background_btn_other_payment.png" />
+    <None Include="Resources\btnPayment_HirePurchase.png" />
+    <None Include="Resources\btnPaymentHirePerchase.png" />
+    <None Include="Resources\uc_btn_payment_36x36.png" />
+    <None Include="Resources\uc_btn_payment.png" />
+    <None Include="Resources\btn_clean.png" />
+    <None Include="Resources\btn_edit_creditcard.png" />
+    <None Include="Resources\btn_edit_credit.png" />
+    <None Include="Resources\btn_Credit_Enable.png" />
+    <None Include="Resources\pn_Credit_Button.png" />
+    <None Include="Resources\pn_Credit_Detail.png" />
+    <None Include="Resources\btn_Credit_Disable.png" />
+    <None Include="Resources\ListBox_Enable.png" />
+    <None Include="Resources\ListBox_Disable.png" />
+    <None Include="Resources\payment_icon_giftvoucher2.png" />
+    <None Include="Resources\picBoxCash_InOut.png" />
+    <None Include="Resources\pn_ListCouponCannotUse.png" />
+    <None Include="Resources\icon_star_special.png" />
+    <None Include="Resources\icon_NoBarcode.png" />
+    <None Include="Resources\icon_CannotScan.png" />
+    <None Include="Resources\icons8-star-filled-96.png" />
+    <None Include="Resources\picBoxPayment.png" />
+    <None Include="Resources\icon_SellItem_PrintExport.png" />
+    <None Include="Resources\btn_PrintExportProduct.png" />
+    <None Include="Resources\btn_PrintNoExportProduct.png" />
+    <None Include="Resources\Path 499.png" />
+    <None Include="Resources\btn_Cancel_Reason.png" />
+    <None Include="Resources\btn_OK_Reason.png" />
+    <None Include="Resources\btn_Cancel_ConfirmVoid.png" />
+    <None Include="Resources\btn_OK_ConfirmVoid.png" />
+    <None Include="Resources\btn_Search_ReturnFromInvoice.png" />
+    <None Include="Resources\btn_OK_Confirmpayment.png" />
+    <None Include="Resources\btn_Cancel_Confirmpayment.png" />
+    <None Include="Resources\btn_ProductAndOtherService.png" />
+    <None Include="Resources\pn_Language_3R.png" />
+    <None Include="Resources\pn_Language_2R.png" />
+    <None Include="Resources\pn_Language_1R.png" />
+    <None Include="Resources\confirmPaymentChange.png" />
+    <None Include="Resources\confirmIDCardPanel.png" />
+    <None Include="Resources\confirmIDCard_panel.png" />
+    <None Include="Resources\textboxLarge_disable.png" />
+    <None Include="Resources\textboxLarge_enable.png" />
+    <None Include="Resources\textboxLarge.png" />
+    <None Include="Resources\confirmIDCardOk.png" />
+    <None Include="Resources\confirmIDcardCancel.png" />
+    <None Include="Resources\pn_Language_4R.png" />
+    <None Include="Resources\keypad1.png" />
+    <None Include="Resources\keypad.png" />
+    <None Include="Resources\keyboard_remove.png" />
+    <None Include="Resources\keyboard.png" />
+    <None Include="Resources\keyboardpad.png" />
+    <None Include="Resources\Cambodia.png" />
+    <None Include="Resources\frame_Redeem_Red.png" />
+    <None Include="Resources\Group 884.png" />
+    <None Include="Resources\frame_Redeem.png" />
+    <None Include="Resources\redeemDiscountDisable.png" />
+    <None Include="Resources\redeemDiscount_disable.png" />
+    <None Include="Resources\redeemDiscountEnable.png" />
+    <None Include="Resources\redeem_btnOK.png" />
+    <None Include="Resources\redeem_btnCancel.png" />
+    <None Include="Resources\minus.jpg" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\DropDownListLarge_enable.png" />
+    <None Include="Resources\DropDownListLarge_disable1.png" />
+    <None Include="Resources\DropDownListLarge_disable.png" />
+    <None Include="Resources\DropDownListLarge1.png" />
+    <None Include="Resources\DropDownListLarge.png" />
+    <None Include="Resources\member non activate.png" />
+    <None Include="Resources\member activate.png" />
+    <None Include="Resources\beep-07.wav" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\Spinner-0.8s-341px.gif" />
+    <None Include="Resources\Spin-0.8s-197px.gif" />
+    <None Include="Resources\favorit_btn.png" />
+    <None Include="Resources\btn_next.png" />
+    <None Include="Resources\btn_previous.png" />
+    <None Include="Resources\alarm %282%29.png" />
+    <None Include="Resources\alarm %281%29.png" />
+    <None Include="Resources\Spinner-1s-250px.gif" />
+    <None Include="Resources\btn_payment_disable.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\item.png" />
+    <None Include="Resources\payment_icon_giftvoucher1.png" />
+    <None Include="Resources\payment_icon_giftvoucher.png" />
+    <None Include="Resources\payment_icon_giftvoucher_white.png" />
+    <None Include="Resources\v4.png" />
+    <None Include="Resources\giftvoucherV3.png" />
+    <None Include="Resources\giftvoucherzzzzz.png" />
+    <None Include="Resources\giftvoucher1.png" />
+    <None Include="Resources\gift.png" />
+    <None Include="Resources\cashin_btm_left_disable1.png" />
+    <None Include="Resources\cashin_btm_right_white.png" />
+    <None Include="Resources\cashin_btm_left.png" />
+    <None Include="Resources\cashin_btm_right.png" />
+    <None Include="Resources\cashin_btm_left_white.png" />
+    <None Include="Resources\cashin_top_right_white.png" />
+    <None Include="Resources\cashin_top_right.png" />
+    <None Include="Resources\cashin_top_left_white.png" />
+    <None Include="Resources\cashin_top_left.png" />
+    <None Include="Resources\cashin_btm_right_disable.png" />
+    <None Include="Resources\cashin_btm_left_disable.png" />
+    <None Include="Resources\payment_btm_right_disable.png" />
+    <None Include="Resources\payment_icon_other_white.png" />
+    <None Include="Resources\payment_icon_coupon_white.png" />
+    <None Include="Resources\payment_icon_credit_white.png" />
+    <None Include="Resources\payment_icon_cash1.png" />
+    <None Include="Resources\payment_icon_other.png" />
+    <None Include="Resources\payment_icon_coupon.png" />
+    <None Include="Resources\payment_icon_credit.png" />
+    <None Include="Resources\payment_icon_cash_white.png" />
+    <None Include="Resources\payment_icon_cash.png" />
+    <None Include="Resources\payment_btm_right_white.png" />
+    <None Include="Resources\payment_btm_right1.png" />
+    <None Include="Resources\payment_btm_left_white.png" />
+    <None Include="Resources\payment_btm_left.png" />
+    <None Include="Resources\payment_top_right_white.png" />
+    <None Include="Resources\payment_top_right2.png" />
+    <None Include="Resources\payment_middle_white.png" />
+    <None Include="Resources\payment_middle.png" />
+    <None Include="Resources\payment_top_left1.png" />
+    <None Include="Resources\payment_top_left_white.png" />
+    <None Include="Resources\payment_top_left.png" />
+    <None Include="Resources\payment_top_right1.png" />
+    <None Include="Resources\NoPath - Copy %2815%29.png" />
+    <None Include="Resources\icons8-ticket-100.png" />
+    <None Include="Resources\payment_btm_right.png" />
+    <None Include="Resources\payment_top_right.png" />
+    <None Include="Resources\keyboard_bottomline2.png" />
+    <None Include="Resources\keyboard_number.png" />
+    <None Include="Resources\payment_giftvoucher.png" />
+    <None Include="Resources\keyboard_del.png" />
+    <None Include="Resources\keyboard_enter.png" />
+    <None Include="Resources\keyboard_shift_left.png" />
+    <None Include="Resources\keyboard_capslock.png" />
+    <None Include="Resources\keyboard_tab.png" />
+    <None Include="Resources\keyboard_spacebar.png" />
+    <None Include="Resources\keyboard_bottomline1.png" />
+    <None Include="Resources\keyboard_bottomline.png" />
+    <None Include="Resources\keyboard_arrow_left.png" />
+    <None Include="Resources\keyboard_arrow_down.png" />
+    <None Include="Resources\keyboard_arrow_right.png" />
+    <None Include="Resources\keyboard_shift_right.png" />
+    <None Include="Resources\right_shift1.png" />
+    <None Include="Resources\keyboard_arrow_up.png" />
+    <None Include="Resources\button_char1.png" />
+    <None Include="Resources\right_shift.png" />
+    <None Include="Resources\hide_keyboard.png" />
+    <None Include="Resources\remove_btn1.png" />
+    <None Include="Resources\remove_btn.png" />
+    <None Include="Resources\button_remove.png" />
+    <None Include="Resources\button_char.png" />
+    <None Include="Resources\icon_banknote_enable1.png" />
+    <None Include="Resources\icon_banknote_enable.png" />
+    <None Include="Resources\icon_banknote_disable.png" />
+    <None Include="Resources\txtSmall_disable.png" />
+    <None Include="Resources\txtSmall_enable.png" />
+    <None Include="Resources\Scan_Image2.png" />
+    <None Include="Resources\Scan_Image1.png" />
+    <None Include="Resources\icon_header_scan.png" />
+    <None Include="Resources\icon_header_cal.png" />
+    <None Include="Resources\background_lockno_asdate.png" />
+    <None Include="Resources\txtboxWIC_disable.png" />
+    <None Include="Resources\txtboxWIC_enable.png" />
+    <None Include="Resources\sale.png" />
+    <None Include="Resources\icon_payment_disable.png" />
+    <None Include="Resources\icons8_info_disable.png" />
+    <None Include="Resources\icons8_info_enable.png" />
+    <None Include="Resources\icon_alert_ok1.png" />
+    <None Include="Resources\icon_alert_cancel1.png" />
+    <None Include="Resources\icon_alert_ok.png" />
+    <None Include="Resources\icon_alert_cancel.png" />
+    <None Include="Resources\icons8_info_126px_11.png" />
+    <None Include="Resources\icons8_info_126px_1.png" />
+    <None Include="Resources\icons8_info_126px.png" />
+    <None Include="Resources\icons8_error_126px_3.png" />
+    <None Include="Resources\icons8_error_126px_2.png" />
+    <None Include="Resources\icons8_error_126px_1.png" />
+    <None Include="Resources\icons8_error_126px.png" />
+    <None Include="Resources\icons8_checked_126px_2.png" />
+    <None Include="Resources\icons8_checked_126px_1.png" />
+    <None Include="Resources\icons8_cancel_126px_2.png" />
+    <None Include="Resources\icons8_cancel_126px.png" />
+    <None Include="Resources\icons8_box_important_126px_3.png" />
+    <None Include="Resources\icons8_box_important_126px_2.png" />
+    <None Include="Resources\icons8_box_important_126px_1.png" />
+    <None Include="Resources\icons8_box_important_126px.png" />
+    <None Include="Resources\left_arrow.png" />
+    <None Include="Resources\continue.png" />
+    <None Include="Resources\text_small_disable.png" />
+    <None Include="Resources\text_small_enable.png" />
+    <None Include="Resources\Rectangle 353.png" />
+    <None Include="Resources\total_right.png" />
+    <None Include="Resources\ยอดเงินรวมตรงระบุเงิน.png" />
+    <None Include="Resources\green_total1.png" />
+    <None Include="Resources\confirm_enable.png" />
+    <None Include="Resources\confirm_disable.png" />
+    <None Include="Resources\icons8-checked-1001.png" />
+    <None Include="Resources\green_total.png" />
+    <None Include="Resources\green_button_productandother.png" />
+    <None Include="Resources\green_button_panel_right.png" />
+    <None Include="Resources\popup_ok.png" />
+    <None Include="Resources\Scan_Image.png" />
+    <None Include="Resources\usa_enable.png" />
+    <None Include="Resources\Thai.png" />
+    <None Include="Resources\Laos.png" />
+    <None Include="Resources\Receive_Supplies.png" />
+    <None Include="Resources\Flight_Ticket.png" />
+    <None Include="Resources\Deposit_Money.png" />
+    <None Include="Resources\SimCard.png" />
+    <None Include="Resources\TopUp_Service.png" />
+    <None Include="Resources\Group 668.png" />
+    <None Include="Resources\WeChat.png" />
+    <None Include="Resources\Rabbit.png" />
+    <None Include="Resources\QR_Code.png" />
+    <None Include="Resources\GiftVoucher.png" />
+    <None Include="Resources\BigWallet.png" />
+    <None Include="Resources\Alipay.png" />
+    <None Include="Resources\arrow_white_left.png" />
+    <None Include="Resources\normal_change_enable.png" />
+    <None Include="Resources\normal_change_disable.png" />
+    <None Include="Resources\adjust_change_enable.png" />
+    <None Include="Resources\adjust_change_disable.png" />
+    <None Include="Resources\icon_payment.png" />
+    <None Include="Resources\remove_enable.png" />
+    <None Include="Resources\remove_disable.png" />
+    <None Include="Resources\multi_enable.png" />
+    <None Include="Resources\multi_disable.png" />
+    <None Include="Resources\change_enable.png" />
+    <None Include="Resources\change_disable.png" />
+    <None Include="Resources\Image 18.png" />
+    <None Include="Resources\other_enable.png" />
+    <None Include="Resources\other_disable.png" />
+    <None Include="Resources\credit_enable.png" />
+    <None Include="Resources\credit_disable.png" />
+    <None Include="Resources\coupon_enable.png" />
+    <None Include="Resources\coupon_disable.png" />
+    <None Include="Resources\cash_disable1.png" />
+    <None Include="Resources\cash_disable.png" />
+    <None Include="Resources\cash_enable.png" />
+    <None Include="Resources\icon_textbox_search.png" />
+    <None Include="Resources\dropdown disable.png" />
+    <None Include="Resources\icons8-search-100.png" />
+    <None Include="Resources\icon_textbox_scan.png" />
+    <None Include="Resources\icon_textbox_delete.png" />
+    <None Include="Resources\icon_textbox_none.png" />
+    <None Include="Resources\dropdown disable2.png" />
+    <None Include="Resources\dropdown disable1.png" />
+    <None Include="Resources\dropdown_disable1.png" />
+    <None Include="Resources\Rectangle 257.png" />
+    <None Include="Resources\icons8-checked-100.png" />
+    <None Include="Resources\NoPath cashin.png" />
+    <None Include="Resources\icons8-internal-100.png" />
+    <None Include="Resources\icons8-cash-register-100.png" />
+    <None Include="Resources\icons8-services-100.png" />
+    <None Include="Resources\Rectangle 260.png" />
+    <None Include="Resources\icons8-external-100.png" />
+    <None Include="Resources\Rectangle 319.png" />
+    <None Include="Resources\Cash1.png" />
+    <None Include="Resources\buttonvoid.png" />
+    <None Include="Resources\icons8-delete-view-250.png" />
+    <None Include="Resources\dropdown_disable.png" />
+    <None Include="Resources\textbox_unit_price_enable.png" />
+    <None Include="Resources\textbox_cal.png" />
+    <None Include="Resources\NoPath_bigc.png" />
+    <None Include="Resources\Mask Group 12.png" />
+    <None Include="Resources\Mask Group 11.png" />
+    <None Include="Resources\Image 44.png" />
+    <None Include="Resources\icons8_qr_code_48px.png" />
+    <None Include="Resources\Group 587.png" />
+    <None Include="Resources\icons8-trash-can-100.png" />
+    <None Include="Resources\icon-debit-credit.png" />
+    <None Include="Resources\usa.png" />
+    <None Include="Resources\Mask Group 6.png" />
+    <None Include="Resources\china.png" />
+    <None Include="Resources\arrow down.png" />
+    <None Include="Resources\dropdown enable.png" />
+    <None Include="Resources\Group 29.png" />
+    <None Include="Resources\icons8-save-filled-1002.png" />
+    <None Include="Resources\NoPath - Cash.png" />
+    <None Include="Resources\icon_other_inactive.png" />
+    <None Include="Resources\icon_credit_inactive.png" />
+    <None Include="Resources\icon_coupon_inactive.png" />
+    <None Include="Resources\NoPath_Copy %286%29%403x.png" />
+    <None Include="Resources\NoPath_Copy %286%29%402x.png" />
+    <None Include="Resources\NoPath_Copy %286%29.png" />
+    <None Include="Resources\NoPath%402x.png" />
+    <None Include="Resources\NoPath.png" />
+    <None Include="Resources\NoPath - Copy.png" />
+    <None Include="Resources\NoPath - Copy %286%29%402x.png" />
+    <None Include="Resources\NoPath - Copy %286%29.png" />
+    <None Include="Resources\NoPath - Copy %285%29.png" />
+    <None Include="Resources\NoPath - Copy %283%29.png" />
+    <None Include="Resources\NoPath - Copy %282%29.png" />
+    <None Include="Resources\NoPath - Back%284%29.png" />
+    <None Include="Resources\Mask Group 2%402x.png" />
+    <None Include="Resources\Mask Group 2.png" />
+    <None Include="Resources\icons8-save-filled-100.png" />
+    <None Include="Resources\icons8-print-filled-100 %281%29.png" />
+    <None Include="Resources\icons8-multiply-100.png" />
+    <None Include="Resources\icons8-high-priority-100.png" />
+    <None Include="Resources\icons8-barcode-reader-filled-100%402x.png" />
+    <None Include="Resources\icons8-barcode-reader-filled-100.png" />
+    <None Include="Resources\Group 643.png" />
+    <None Include="Resources\Group 642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BJCBCPOS_Model\BJCBCPOS_Model.csproj">
+      <Project>{66346CA8-B7C5-498D-8C61-B3602EDF2B8E}</Project>
+      <Name>BJCBCPOS_Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BJCBCPOS_Process\BJCBCPOS_Process.csproj">
+      <Project>{1C434BAC-2A90-40DE-9B57-2773E917E5F7}</Project>
+      <Name>BJCBCPOS_Process</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)\config\*.txt" "$(ProjectDir)$(OutDir)" /Y /D
+xcopy "$(SolutionDir)BJCBCPOS_Model\lib\BCOPOS*.dll" "$(ProjectDir)$(OutDir)" /Y /D
+xcopy "$(SolutionDir)BJCBCPOS_Model\lib\BCOPOS.ini" "$(ProjectDir)$(OutDir)" /Y /D</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

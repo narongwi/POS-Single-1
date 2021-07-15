@@ -1,0 +1,295 @@
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BJCBCPOS.exe.config
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BJCBCPOS.exe
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BJCBCPOS.pdb
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BJCBCPOS_Model.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BJCBCPOS_Process.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BJCBCPRNFFTI.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BCOPOSEPSON.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BCOPOSHP.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BCOPOSWIN.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BCOPOSTOSHIBA.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BouncyCastle.Crypto.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BJCBCPOS_Data.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\MKTPOSDLL.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BJCBCPOS_Model.pdb
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BJCBCPOS_Process.pdb
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.xml
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\BJCBCPOS_Data.pdb
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\Interop.WMPLib.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\AxInterop.WMPLib.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.csprojResolveAssemblyReference.cache
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\Interop.WMPLib.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\AxInterop.WMPLib.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.csproj.ResolveComReference.cache
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCEmployeeDiscount.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCGeneralListItem.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCHambergerSubMenu.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCButtonPayment.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCHamberger.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCHambergerItem.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCHirePurchase.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemDropDownListExtraProduct.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCDropDownListCustom.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCConfirmPaymentFXCU.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCDropDownLanguage.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemDisplayDiscount.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemDepositCustomerType.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemCash.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemCashCust.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemCoupon.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemDiscount.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemProduct.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemDiscountCust.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemProductAndCouponCust.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCHeader.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemCurrency2.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemCancelCashOut.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemCurrency.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemDaySales.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCCashierMessage.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCCurrencyDropDown.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemCurrencyDropDown.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemSell.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListCheckProduct.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListItemPOD.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListItemSaveTempSale.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListOtherService.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListSuggest.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemInvoiceDetail.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCFooterTran.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItem.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemInvoice.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemReturn.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemVoid.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCMember.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCPCMan.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCSuggest.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCTextBoxSmall.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCAdjustCash.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCCoupon.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCDropDownList.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCFooter.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCGridViewSearchCustomer.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemCashIn.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemDropDownList.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCKeyboard.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCKeypad.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListDiscount.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListPayment.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCMonitor2Item.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCSaveTemp.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCTextBoxWithIcon.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.dialog.frmConsentCustomer.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCashireMessage.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmChangePassword.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConfirmIDCardPassport.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConnectionLost.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.dialog.frmConsentCashier.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDisplayContent.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmEDCProcess.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmLoading.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmLockScreen.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmMoneyBagInput.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmPOD_QR.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmPopupQRPaymentSubMenu.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmPopUpSelectList.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmQRPaymentOnlineBscanC.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSaleOrderType.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSetupIni.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmShowInfoCustFullTax.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.dialog.frmSignature.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmUserAuthorize.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmQRPaymentOnline.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmPopupInput.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDeposit.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmReceivePaymentPOD.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConfirmCancelCashOut.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConfirmPayment.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCustRedeem.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmLogin.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmPayment.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmRedeem.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmReturnFromInvoice.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmReturnFromScanProduct.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmReturnSuccess.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSale.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.page.frmSubMenuDeposit.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSubMenuReturn.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCancelCashOut.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCashbalance.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCashout.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCheckProduct.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDaySaleReport.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDeleteReason.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmEditItemReason.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmInvoiceReport.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmMainMenu.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmMonitor2Detail.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSearchMember.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSubMenuReport.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCalculator.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmAllDisplayReason.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSearchMemberAuto.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConfirmCashIn.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmAddCoupon.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConfirmCashout.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDeleteEditItem.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDeleteItemReason.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmFavoriteSale.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmMonitorCustomer.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmMonitorCustomerFooter.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmNotify.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmOtherPayment.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmProductAndService.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSubMenu.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSubMenuTools.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmVDO.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmVoid.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmVoidSuccess.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.SubOtherService1.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.Properties.Resources.resources
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.csproj.GenerateResource.Cache
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.exe
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.pdb
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\MMFSAPI.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\ApiServices.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\RestSharp.dll
+D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\Newtonsoft.Json.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.csprojAssemblyReference.cache
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\Interop.WMPLib.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\AxInterop.WMPLib.dll
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.csproj.ResolveComReference.cache
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCEmployeeDiscount.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCGeneralListItem.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCHambergerSubMenu.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCButtonPayment.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCHamberger.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCHambergerItem.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCHirePurchase.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemDropDownListExtraProduct.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCDropDownListCustom.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCConfirmPaymentFXCU.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCDropDownLanguage.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemDisplayDiscount.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemDepositCustomerType.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemCash.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemCashCust.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemCoupon.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemDiscount.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemProduct.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemDiscountCust.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemRedeemProductAndCouponCust.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCHeader.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemCurrency2.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemCancelCashOut.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemCurrency.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemDaySales.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCCashierMessage.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCCurrencyDropDown.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemCurrencyDropDown.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemSell.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListCheckProduct.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListItemPOD.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListItemSaveTempSale.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListOtherService.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListSuggest.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemInvoiceDetail.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCFooterTran.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItem.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemInvoice.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemReturn.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemVoid.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCMember.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCPCMan.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCSuggest.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCTextBoxSmall.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCAdjustCash.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCCoupon.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCDropDownList.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCFooter.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCGridViewSearchCustomer.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemCashIn.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCItemDropDownList.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCKeyboard.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCKeypad.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListDiscount.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCListPayment.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCMonitor2Item.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCSaveTemp.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.UCTextBoxWithIcon.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.dialog.frmConsentCustomer.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCashireMessage.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmChangePassword.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConfirmIDCardPassport.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConnectionLost.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.dialog.frmConsentCashier.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDisplayContent.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmEDCProcess.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmLoading.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmLockScreen.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmMoneyBagInput.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmPOD_QR.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmPopupQRPaymentSubMenu.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmPopUpSelectList.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmQRPaymentOnlineBscanC.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSaleOrderType.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSetupIni.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmShowInfoCustFullTax.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.dialog.frmSignature.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmUserAuthorize.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmQRPaymentOnline.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmPopupInput.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDeposit.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.page.frmParcelKerry.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.page.frmParcelService.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmReceivePaymentPOD.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConfirmCancelCashOut.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConfirmPayment.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCustRedeem.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmLogin.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmPayment.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmRedeem.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmReturnFromInvoice.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmReturnFromScanProduct.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmReturnSuccess.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSale.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.page.frmSubMenuDeposit.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSubMenuReturn.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCancelCashOut.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCashbalance.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCashout.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCheckProduct.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDaySaleReport.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDeleteReason.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmEditItemReason.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmInvoiceReport.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmMainMenu.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmMonitor2Detail.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSearchMember.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSubMenuReport.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmCalculator.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmAllDisplayReason.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSearchMemberAuto.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConfirmCashIn.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmAddCoupon.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmConfirmCashout.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDeleteEditItem.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmDeleteItemReason.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmFavoriteSale.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmMonitorCustomer.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmMonitorCustomerFooter.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmNotify.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmOtherPayment.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmProductAndService.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSubMenu.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmSubMenuTools.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmVDO.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmVoid.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.frmVoidSuccess.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.SubOtherService1.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.Properties.Resources.resources
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.csproj.GenerateResource.cache
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.csproj.CoreCompileInputs.cache
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.exe
+D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.pdb

@@ -1,0 +1,3182 @@
+09:51:26.7797  key section = setting, name = printername
+09:51:26.7857  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+09:51:30.4966  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+09:51:30.9831  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+09:51:31.1999  Initial Hardware with BCOPOSTOSHIBA.dll
+09:51:32.4388  frmMonitorCustomer is Activate.
+09:51:32.5891  frmMonitorCustomerFooter is Activate.
+09:51:32.6911  frmMonitor2Detail is Activate.
+09:51:33.6138  frmLogin is Activate.
+09:51:41.1089  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+09:51:41.1652  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+09:51:42.7468  frmLogin is Activate.
+09:51:43.3714  frmMainMenu is Activate.
+09:51:45.4883  store procedure return error (ResponseCode = "300")
+Response Message = ไม่พบการเปิดงานประจำวัน
+Help Message = กรุณาเปิดงานก่อนทำการขาย
+Application Desc = pos_CheckOpenDay#2
+
+09:51:46.3197  frmMainMenu is Activate.
+09:51:47.6579  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+09:51:48.9605  frmMainMenu is Activate.
+09:51:50.7614  Call afterNotify False
+09:51:51.2269  frmSale is Activate.
+09:52:11.3016  frmSale is Activate.
+09:52:19.2961  frmSale is Activate.
+09:52:24.8841  frmSale is Activate.
+09:52:31.1449  frmSale is Activate.
+09:52:31.8640  start keyProduct()
+09:52:32.1624  before DisableControl();
+09:52:32.1635  before Properties.Resources.multi_disable;
+09:52:32.1635  after Properties.Resources.multi_disable;
+09:52:32.1804  after Properties.Resources.change_disable;
+09:52:32.1804  after Properties.Resources.remove_disable;
+09:52:32.2119  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+09:52:32.2959  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+09:52:32.3230  after setFocus();
+09:52:32.6999  start keyProduct()
+09:52:32.8551  before DisableControl();
+09:52:32.8551  before Properties.Resources.multi_disable;
+09:52:32.8551  after Properties.Resources.multi_disable;
+09:52:32.8688  after Properties.Resources.change_disable;
+09:52:32.8708  after Properties.Resources.remove_disable;
+09:52:32.8708  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+09:52:32.9057  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+09:52:32.9205  after setFocus();
+09:52:34.3363  before Properties.Resources.multi_disable;
+09:52:34.3451  after Properties.Resources.multi_disable;
+09:52:34.3536  after Properties.Resources.change_disable;
+09:52:34.3613  after Properties.Resources.remove_disable;
+09:52:36.4673  frmCustRedeem is Activate.
+09:52:36.6066  Can not find FunctionId 121131010010001 in profileCollections.
+
+09:52:36.6203  Can not find FunctionId 121131010010002 in profileCollections.
+
+09:52:36.6382  frmSale is Activate.
+09:52:36.7238  Can not find FunctionId 121131020010001 in profileCollections.
+
+09:52:36.7275  Can not find FunctionId 121131020010002 in profileCollections.
+
+09:52:36.7769  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+09:52:36.7983  Can not find FunctionId 121131030010001 in profileCollections.
+
+09:52:36.8016  Can not find FunctionId 121131030010002 in profileCollections.
+
+09:52:37.9918  frmPayment_Load
+09:52:38.1702  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+09:52:38.2457  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+09:52:38.2528  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+09:52:38.2622  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+09:52:38.6894  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+09:52:38.7378  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+09:52:38.7378  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+09:52:38.7577  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+09:52:38.7905  after ucTxtAmountCash.Text
+09:52:38.7915  after ucTxtAmountCash.Focus
+09:52:38.8125  frmPayment is Activate.
+09:52:49.8734  frmSale is Activate.
+09:52:54.8274  frmSale is Activate.
+09:52:58.3237  frmSale is Activate.
+09:52:59.3174  frmSale is Activate.
+09:55:58.9542  key section = setting, name = printername
+09:55:58.9556  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+09:56:00.9967  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+09:56:01.2997  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+09:56:01.5332  Initial Hardware with BCOPOSTOSHIBA.dll
+09:56:02.7125  frmMonitorCustomer is Activate.
+09:56:02.7587  frmMonitorCustomerFooter is Activate.
+09:56:02.8138  frmMonitor2Detail is Activate.
+09:56:03.3663  frmLogin is Activate.
+09:56:10.3109  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+09:56:10.3635  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+09:56:12.2390  frmLogin is Activate.
+09:56:12.6854  frmMainMenu is Activate.
+09:56:14.1173  Call afterNotify False
+09:56:14.6502  frmSale is Activate.
+09:56:18.6049  frmSale is Activate.
+09:56:37.1866  frmSale is Activate.
+09:56:39.7717  frmSale is Activate.
+09:56:40.5238  start keyProduct()
+09:56:40.7981  before DisableControl();
+09:56:40.7992  before Properties.Resources.multi_disable;
+09:56:40.8102  after Properties.Resources.multi_disable;
+09:56:40.8102  after Properties.Resources.change_disable;
+09:56:40.8272  after Properties.Resources.remove_disable;
+09:56:40.8495  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+09:56:40.8932  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+09:56:40.9206  after setFocus();
+09:56:41.5383  start keyProduct()
+09:56:41.7304  before DisableControl();
+09:56:41.7304  before Properties.Resources.multi_disable;
+09:56:41.7423  after Properties.Resources.multi_disable;
+09:56:41.7433  after Properties.Resources.change_disable;
+09:56:41.7433  after Properties.Resources.remove_disable;
+09:56:41.7433  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+09:56:41.7921  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+09:56:41.8006  after setFocus();
+09:56:43.6392  before Properties.Resources.multi_disable;
+09:56:43.6482  after Properties.Resources.multi_disable;
+09:56:43.6561  after Properties.Resources.change_disable;
+09:56:43.6666  after Properties.Resources.remove_disable;
+09:56:44.6521  frmCustRedeem is Activate.
+09:56:44.7602  Can not find FunctionId 121131010010001 in profileCollections.
+
+09:56:44.7628  Can not find FunctionId 121131010010002 in profileCollections.
+
+09:56:44.7827  frmSale is Activate.
+09:56:44.8764  Can not find FunctionId 121131020010001 in profileCollections.
+
+09:56:44.8841  Can not find FunctionId 121131020010002 in profileCollections.
+
+09:56:44.9299  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+09:56:44.9441  Can not find FunctionId 121131030010001 in profileCollections.
+
+09:56:44.9486  Can not find FunctionId 121131030010002 in profileCollections.
+
+09:56:45.7626  frmPayment_Load
+09:56:45.8811  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+09:56:45.9477  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+09:56:45.9477  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+09:56:45.9630  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+09:56:46.2881  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+09:56:46.3985  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+09:56:46.3985  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+09:56:46.4260  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+09:56:46.4673  after ucTxtAmountCash.Text
+09:56:46.4693  after ucTxtAmountCash.Focus
+09:56:46.5066  frmPayment is Activate.
+09:56:54.5149  frmSale is Activate.
+09:56:58.6325  frmSale is Activate.
+09:56:59.1666  frmSale is Activate.
+09:56:59.6938  frmSale is Activate.
+09:57:00.3008  frmSale is Activate.
+09:57:00.9295  frmSale is Activate.
+09:57:03.0458  frmSale is Activate.
+09:57:03.9615  frmSale is Activate.
+09:57:04.7269  frmSale is Activate.
+09:57:05.3380  frmSale is Activate.
+09:57:05.9540  frmSale is Activate.
+09:57:06.7567  frmSale is Activate.
+09:57:07.3780  frmSale is Activate.
+09:57:09.0415  frmSale is Activate.
+09:57:10.6167  frmSale is Activate.
+10:06:14.5104  key section = setting, name = printername
+10:06:14.5143  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+10:06:16.2126  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+10:06:16.5640  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+10:06:16.6402  Initial Hardware with BCOPOSTOSHIBA.dll
+10:06:17.5034  frmMonitorCustomer is Activate.
+10:06:17.5475  frmMonitorCustomerFooter is Activate.
+10:06:17.5892  frmMonitor2Detail is Activate.
+10:06:18.1234  frmLogin is Activate.
+10:06:26.4879  frmLogin is Activate.
+10:06:31.7578  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+10:06:31.8858  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+10:06:32.6876  frmLogin is Activate.
+10:06:33.3772  frmMainMenu is Activate.
+10:06:33.9380  Call afterNotify False
+10:06:34.7077  frmSale is Activate.
+10:06:42.3466  frmSale is Activate.
+10:06:46.2987  frmSale is Activate.
+10:07:30.3766  frmSale is Activate.
+10:07:31.2882  frmReceivePaymentPOD is Activate.
+10:07:33.2957  store procedure return error (ResponseCode = "300")
+Response Message = ไม่พบเลขที่ใบเสร็จหมายเลข 2221000035860013
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_PODGetOrder
+
+10:07:33.9755  frmReceivePaymentPOD is Activate.
+10:07:37.7044  frmReceivePaymentPOD is Activate.
+10:07:41.5533  frmPayment_Load
+10:07:41.7320  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+10:07:41.8209  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+10:07:41.8289  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+10:07:41.8448  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+10:07:42.3374  frmPayment is Activate.
+10:07:48.3018  frmPayment is Activate.
+10:07:49.5604  frmPayment is Activate.
+10:07:51.4643  frmPayment is Activate.
+10:07:51.5971  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+10:07:51.6302  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+10:07:51.6302  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+10:07:51.6482  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+10:07:51.6759  after ucTxtAmountCash.Text
+10:07:51.6859  after ucTxtAmountCash.Focus
+10:07:53.7490  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+10:07:53.7490  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+10:07:53.7801  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+10:07:53.7916  before saleProcess.getAmountExchangeRate enterChangebalance
+10:07:53.7967  before CalBalanceDiff
+10:07:53.9282  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+10:07:58.9713  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+10:10:20.5706  frmPayment is Activate.
+10:39:26.4567  key section = setting, name = printername
+10:39:26.4600  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+10:39:28.7661  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+10:39:31.1262  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+10:39:31.1705  Initial Hardware with BCOPOSTOSHIBA.dll
+10:39:35.9877  frmMonitorCustomer is Activate.
+10:39:36.1125  frmMonitorCustomerFooter is Activate.
+10:39:36.2194  frmMonitor2Detail is Activate.
+10:39:36.9754  frmLogin is Activate.
+10:41:18.2211  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+10:41:18.3266  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+10:41:31.5330  frmLogin is Activate.
+10:41:37.4434  frmMainMenu is Activate.
+10:41:43.8699  Call afterNotify False
+10:41:50.5411  frmSale is Activate.
+10:42:04.9284  frmSale is Activate.
+10:42:09.1089  frmSale is Activate.
+10:42:17.5753  frmSale is Activate.
+10:42:18.4080  start keyProduct()
+10:42:39.3473  before DisableControl();
+10:42:39.3552  before Properties.Resources.multi_disable;
+10:42:39.3667  after Properties.Resources.multi_disable;
+10:42:39.3777  after Properties.Resources.change_disable;
+10:42:39.3890  after Properties.Resources.remove_disable;
+10:42:39.4049  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+10:42:40.4796  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+10:42:40.5037  frmSale is Activate.
+10:42:40.5104  after setFocus();
+10:55:13.8200  key section = setting, name = printername
+10:55:13.8332  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+10:55:14.2465  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+10:55:14.7764  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+10:55:14.8406  Initial Hardware with BCOPOSTOSHIBA.dll
+10:55:16.1400  frmMonitorCustomer is Activate.
+10:55:16.3164  frmMonitorCustomerFooter is Activate.
+10:55:16.6191  frmMonitor2Detail is Activate.
+10:55:17.6180  frmLogin is Activate.
+10:55:26.5825  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+10:55:26.6376  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+10:55:27.3200  frmLogin is Activate.
+10:55:27.8864  frmMainMenu is Activate.
+10:55:28.7105  Call afterNotify False
+10:55:29.4904  frmSale is Activate.
+11:19:10.8813  frmSale is Activate.
+11:19:14.6976  frmSale is Activate.
+11:20:26.7771  frmSale is Activate.
+11:20:38.7557  frmSale is Activate.
+11:28:40.2337  frmSale is Activate.
+11:28:47.7926  frmSale is Activate.
+11:36:00.4860  key section = setting, name = printername
+11:36:00.4906  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+11:36:00.8076  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+11:36:01.0389  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+11:36:01.1017  Initial Hardware with BCOPOSTOSHIBA.dll
+11:36:01.9557  frmMonitorCustomer is Activate.
+11:36:02.0099  frmMonitorCustomerFooter is Activate.
+11:36:02.0542  frmMonitor2Detail is Activate.
+11:36:02.5473  frmLogin is Activate.
+11:36:53.2515  frmMonitor2Detail is Activate.
+11:36:55.3408  frmMonitor2Detail is Activate.
+11:36:56.0493  frmLogin is Activate.
+11:37:01.8931  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+11:37:01.9487  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+11:37:02.6806  frmLogin is Activate.
+11:37:03.0764  frmMainMenu is Activate.
+11:37:03.9220  Call afterNotify False
+11:37:04.3796  frmSale is Activate.
+11:37:06.0047  frmReceivePaymentPOD is Activate.
+11:37:09.0189  store procedure return error (ResponseCode = "300")
+Response Message = ใบเสร็จนี้ทำการชำระเงินเรียบร้อยแล้ว
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_PODGetOrder
+
+11:37:09.9756  frmReceivePaymentPOD is Activate.
+11:37:22.4957  frmReceivePaymentPOD is Activate.
+11:37:23.5908  store procedure return error (ResponseCode = "300")
+Response Message = ใบเสร็จนี้ทำการชำระเงินเรียบร้อยแล้ว
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_PODGetOrder
+
+11:37:24.6155  frmReceivePaymentPOD is Activate.
+11:37:40.6577  frmReceivePaymentPOD is Activate.
+11:37:43.8005  frmPayment_Load
+11:37:43.9393  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:37:44.0480  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:37:44.0480  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:37:44.0743  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:37:44.4442  frmPayment is Activate.
+11:39:07.6524  frmPayment is Activate.
+11:39:07.7423  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:39:07.8283  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:39:07.8283  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:39:07.8427  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:39:32.8969  frmPayment is Activate.
+11:39:32.9607  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:39:33.0481  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:39:33.0491  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:39:33.0578  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:39:35.4169  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:39:35.4633  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:39:35.4696  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:39:35.4831  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:39:35.5181  after ucTxtAmountCash.Text
+11:39:35.5320  after ucTxtAmountCash.Focus
+11:39:50.0354  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:39:50.0935  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:39:50.0935  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:39:50.1076  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:39:51.9601  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:39:52.0277  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:39:52.0288  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:39:52.0479  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:39:52.0781  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:39:52.0960  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:39:52.1028  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:39:52.1075  before saleProcess.getAmountExchangeRate enterChangebalance
+11:39:52.1110  before CalBalanceDiff
+11:39:52.1790  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:39:52.1943  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:39:52.2104  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:39:52.2599  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:39:52.3618  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:39:52.3618  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:39:52.3906  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:39:52.9372  frmPayment is Activate.
+11:40:13.3812  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:40:13.4367  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:40:13.4443  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:40:13.4680  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:40:13.5109  after ucTxtAmountCash.Text
+11:40:13.5311  after ucTxtAmountCash.Focus
+11:40:14.8569  frmPayment is Activate.
+11:40:18.4015  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:40:18.4789  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:40:18.4823  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:40:18.4930  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:40:18.5135  frmPayment is Activate.
+11:40:25.8689  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:40:25.8720  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:40:25.8906  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:40:25.9016  before saleProcess.getAmountExchangeRate enterChangebalance
+11:40:25.9038  before CalBalanceDiff
+11:40:26.0805  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:40:26.0838  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:40:26.1100  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:40:26.1769  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:40:26.2517  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:40:26.2517  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:40:26.2705  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:40:30.0544  frmPayment is Activate.
+11:40:30.2144  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:40:30.2738  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:40:30.2790  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:40:30.2847  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:40:30.3534  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:40:34.5949  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:40:34.5983  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:40:34.6014  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:40:34.6957  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:40:34.7716  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:40:34.7768  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:40:34.7815  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:40:34.9968  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:40:35.0818  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:40:35.0818  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:40:35.0951  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:40:37.2775  frmPayment is Activate.
+11:40:40.1957  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:40:40.2721  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:40:40.2762  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:40:40.2804  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:40:40.3235  frmPayment is Activate.
+11:40:42.2768  frmPayment is Activate.
+11:40:44.2884  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:40:44.3363  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:40:44.3411  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:40:44.3533  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:40:44.3768  frmPayment is Activate.
+11:41:02.6841  frmPayment is Activate.
+11:41:02.7404  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:41:02.8151  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:41:02.8234  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:41:02.8347  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:41:52.2034  frmPayment is Activate.
+11:42:01.1520  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:42:01.2342  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:01.2403  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:01.2610  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:01.3018  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:01.3018  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:01.3289  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:01.3397  before saleProcess.getAmountExchangeRate enterChangebalance
+11:42:01.3484  before CalBalanceDiff
+11:42:01.4406  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:01.4481  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:01.4607  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:01.4968  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:42:01.5745  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:01.5807  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:01.5945  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:02.1366  frmPayment is Activate.
+11:42:05.9555  frmPayment is Activate.
+11:42:22.6353  frmPayment is Activate.
+11:42:22.6858  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:42:22.7742  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:22.7753  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:22.7869  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:26.4973  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:42:26.5647  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:26.5647  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:26.5854  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:26.6742  after ucTxtAmountCash.Text
+11:42:26.6949  after ucTxtAmountCash.Focus
+11:42:31.1231  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:42:31.2429  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:31.2525  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:31.2749  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:33.1345  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:42:33.2077  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:33.2150  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:33.2401  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:33.2829  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:33.2829  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:33.3063  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:33.3212  before saleProcess.getAmountExchangeRate enterChangebalance
+11:42:33.3222  before CalBalanceDiff
+11:42:33.4253  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:33.4317  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:33.4566  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:33.5074  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:42:33.6258  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:33.6427  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:33.6606  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:34.1346  frmPayment is Activate.
+11:42:44.7419  frmPayment is Activate.
+11:42:45.4789  frmPayment is Activate.
+11:42:47.5289  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:42:47.5756  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:42:47.5781  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:42:47.5900  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:42:47.6125  frmPayment is Activate.
+11:43:47.0008  key section = setting, name = printername
+11:43:47.0008  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+11:43:47.4217  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+11:43:47.6685  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+11:43:47.6970  Initial Hardware with BCOPOSTOSHIBA.dll
+11:43:48.4884  frmMonitorCustomer is Activate.
+11:43:48.6093  frmMonitorCustomerFooter is Activate.
+11:43:48.7084  frmMonitor2Detail is Activate.
+11:43:49.4062  frmLogin is Activate.
+11:44:04.8403  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+11:44:04.8975  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+11:44:10.7453  frmLogin is Activate.
+11:44:11.1594  frmMainMenu is Activate.
+11:44:11.9495  Call afterNotify False
+11:44:12.3692  frmSale is Activate.
+11:44:22.5767  frmSale is Activate.
+11:44:24.9647  frmSale is Activate.
+11:44:30.4954  frmSale is Activate.
+11:44:31.1860  start keyProduct()
+11:44:31.4440  before DisableControl();
+11:44:31.4508  before Properties.Resources.multi_disable;
+11:44:31.4584  after Properties.Resources.multi_disable;
+11:44:31.4617  after Properties.Resources.change_disable;
+11:44:31.4713  after Properties.Resources.remove_disable;
+11:44:31.4863  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+11:44:31.5217  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+11:44:31.5405  after setFocus();
+11:44:32.3772  before Properties.Resources.multi_disable;
+11:44:32.3839  after Properties.Resources.multi_disable;
+11:44:32.3895  after Properties.Resources.change_disable;
+11:44:32.3905  after Properties.Resources.remove_disable;
+11:44:33.6193  frmCustRedeem is Activate.
+11:44:33.7403  Can not find FunctionId 121131010010001 in profileCollections.
+
+11:44:33.7480  Can not find FunctionId 121131010010002 in profileCollections.
+
+11:44:33.7656  frmSale is Activate.
+11:44:33.8582  Can not find FunctionId 121131020010001 in profileCollections.
+
+11:44:33.8597  Can not find FunctionId 121131020010002 in profileCollections.
+
+11:44:33.9188  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+11:44:33.9300  Can not find FunctionId 121131030010001 in profileCollections.
+
+11:44:33.9351  Can not find FunctionId 121131030010002 in profileCollections.
+
+11:44:35.0619  frmPayment_Load
+11:44:35.2028  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:44:35.2862  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:44:35.2872  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:44:35.3028  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:44:35.7693  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:44:35.8174  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:44:35.8174  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:44:35.8457  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:44:35.8884  after ucTxtAmountCash.Text
+11:44:35.8916  after ucTxtAmountCash.Focus
+11:44:35.9186  frmPayment is Activate.
+11:44:37.1049  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:44:37.1088  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:44:37.1279  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:44:37.1396  before saleProcess.getAmountExchangeRate enterChangebalance
+11:44:37.1478  before CalBalanceDiff
+11:44:37.2533  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:44:37.8717  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:44:37.9210  frmPayment is Activate.
+11:44:38.6893  ABBNo from SaveSaleTrans 003000108F
+11:44:39.1265  An OleDbParameter with ParameterName 'ReferenceNo' is not contained by this OleDbParameterCollection.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.AddInputParameter(String parameterName, SqlDbType type, Object value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 317
+   at BJCBCPOS_Data.SqlCommand.validateFFTI(String fftiNo) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 7933
+   at BJCBCPOS_Process.SaleProcess.saveConfirmPayment(String openTime, Double posChg, Double cashierChg, AlertMessage AlertMessage) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 4949
+
+11:45:15.3289  ABBNo from SaveSaleTrans 003000108F
+11:45:19.2125  An OleDbParameter with ParameterName 'ReferenceNo' is not contained by this OleDbParameterCollection.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.AddInputParameter(String parameterName, SqlDbType type, Object value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 317
+   at BJCBCPOS_Data.SqlCommand.validateFFTI(String fftiNo) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 7933
+   at BJCBCPOS_Process.SaleProcess.saveConfirmPayment(String openTime, Double posChg, Double cashierChg, AlertMessage AlertMessage) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 4949
+
+11:45:32.4563  ABBNo from SaveSaleTrans 003000108F
+11:45:43.4278  An OleDbParameter with ParameterName 'ReferenceNo' is not contained by this OleDbParameterCollection.
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.AddInputParameter(String parameterName, SqlDbType type, Object value) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 317
+   at BJCBCPOS_Data.SqlCommand.validateFFTI(String fftiNo) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 7933
+   at BJCBCPOS_Process.SaleProcess.saveConfirmPayment(String openTime, Double posChg, Double cashierChg, AlertMessage AlertMessage) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 4949
+
+11:47:37.4440  ABBNo from SaveSaleTrans 003000108F
+11:47:41.1000  store procedure return error (ResponseCode = "300")
+Response Message = สร้าง Transaction Net Vat หรือ FFORMTAX ไม่สมบูรณ์
+Help Message = กรุณายืนยันการชำระเงินอีกครั้ง
+Application Desc = pos_ValidateFFTI#1
+
+11:48:23.3151  frmConfirmPayment ProcessCashDrawerClose Hardware.isDrawerOpenFalse
+11:48:23.4497  frmConfirmPayment: call method closeForm >> tranSuccess : True, chkSwClose : True, statusCloseDrawer : True, finishReceipt False
+11:48:23.7696  frmCustRedeem is Activate.
+11:48:23.9265  Can not find FunctionId 121285101010002 in profileCollections.
+
+11:48:23.9265  Can not find FunctionId 121285101010002 in profileCollections.
+
+11:48:24.0829  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = 
+Application Desc = pos_CheckRedeemPoint_Coupon
+
+11:48:24.1775  frmConfirmPayment: salePageState in closeFormPayment = 2
+11:48:24.2101  Call afterNotify False
+11:48:24.3454  before Properties.Resources.multi_disable;
+11:48:24.3475  after Properties.Resources.multi_disable;
+11:48:24.3475  after Properties.Resources.change_disable;
+11:48:24.3564  after Properties.Resources.remove_disable;
+11:48:24.4442  frmSale is Activate.
+11:48:24.4574  frmSale is Activate.
+11:48:30.1772  frmSale is Activate.
+11:48:30.1821  frmSale is Activate.
+11:48:34.2524  frmReceivePaymentPOD is Activate.
+11:48:44.7373  frmReceivePaymentPOD is Activate.
+11:48:46.9479  store procedure return error (ResponseCode = "300")
+Response Message = ใบเสร็จนี้ทำการชำระเงินเรียบร้อยแล้ว
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_PODGetOrder
+
+11:48:47.9011  frmReceivePaymentPOD is Activate.
+11:50:13.1122  frmReceivePaymentPOD is Activate.
+11:50:14.2281  store procedure return error (ResponseCode = "300")
+Response Message = ใบเสร็จนี้ทำการชำระเงินเรียบร้อยแล้ว
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_PODGetOrder
+
+11:50:15.0544  frmReceivePaymentPOD is Activate.
+11:50:20.5479  frmReceivePaymentPOD is Activate.
+11:50:23.2959  frmPayment_Load
+11:50:23.7785  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:50:23.8523  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:50:23.8523  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:50:23.8665  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:50:24.0996  frmPayment is Activate.
+11:50:34.6617  frmPayment is Activate.
+11:50:34.7530  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:50:34.8525  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:50:34.8525  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:50:34.8693  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:51:15.1612  frmPayment is Activate.
+11:51:17.5003  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+11:51:17.5756  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+11:51:17.5756  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+11:51:17.6116  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+11:51:17.6656  after ucTxtAmountCash.Text
+11:51:17.6845  after ucTxtAmountCash.Focus
+11:52:29.8293  frmPayment is Activate.
+11:53:04.6038  frmPayment is Activate.
+12:14:55.9890  key section = setting, name = printername
+12:14:55.9909  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+12:15:02.3352  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+12:15:02.5736  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+12:15:02.6207  Initial Hardware with BCOPOSTOSHIBA.dll
+12:15:03.4276  frmMonitorCustomer is Activate.
+12:15:03.4936  frmMonitorCustomerFooter is Activate.
+12:15:03.5521  frmMonitor2Detail is Activate.
+12:15:04.2373  frmLogin is Activate.
+12:15:14.8833  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+12:15:14.9628  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+12:15:16.6328  frmLogin is Activate.
+12:15:17.2948  frmMainMenu is Activate.
+12:16:18.4250  Call afterNotify False
+12:16:18.6750  frmSale is Activate.
+12:16:22.7716  frmMainMenu is Activate.
+12:16:22.7716  frmMainMenu is Activate.
+12:16:23.3808  Call afterNotify False
+12:16:23.6151  frmSale is Activate.
+12:16:24.5658  frmReceivePaymentPOD is Activate.
+12:16:34.0756  frmReceivePaymentPOD is Activate.
+12:16:37.9096  frmReceivePaymentPOD is Activate.
+12:17:00.0029  frmReceivePaymentPOD is Activate.
+12:17:03.5213  frmPayment_Load
+12:17:03.5994  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:17:03.6463  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:17:03.6463  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:17:03.6463  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:17:03.7868  frmPayment is Activate.
+12:17:25.1496  frmPayment is Activate.
+12:18:52.3683  frmPayment is Activate.
+12:18:52.3996  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:18:52.4467  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:18:52.4467  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:18:52.4621  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:18:53.3681  frmPayment is Activate.
+12:19:01.0828  frmPayment is Activate.
+12:19:02.9301  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:19:02.9770  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:19:02.9770  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:19:02.9770  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:19:02.9926  frmPayment is Activate.
+12:19:07.4266  frmPayment is Activate.
+12:19:08.8071  frmPayment is Activate.
+12:19:10.0841  frmPayment is Activate.
+12:19:12.4152  frmPayment is Activate.
+12:19:13.6151  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:19:13.6307  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:19:13.6463  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:19:13.6463  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:19:13.6619  after ucTxtAmountCash.Text
+12:19:13.6619  after ucTxtAmountCash.Focus
+12:19:15.3967  frmPayment is Activate.
+12:19:16.4597  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:19:16.4912  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:19:16.4912  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:19:16.4912  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:19:16.5222  after ucTxtAmountCash.Text
+12:19:16.5222  after ucTxtAmountCash.Focus
+12:19:53.0313  frmPayment is Activate.
+12:19:53.0625  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:19:53.0938  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:19:53.1094  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:19:53.1094  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:19:54.0192  frmPayment is Activate.
+12:20:20.7343  frmPayment is Activate.
+12:20:21.3494  frmPayment is Activate.
+12:20:22.7075  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:20:23.6138  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:20:23.6138  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:20:23.6138  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:20:23.6294  frmPayment is Activate.
+12:20:36.8598  frmPayment is Activate.
+12:20:36.9101  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:22:03.8737  key section = setting, name = printername
+12:22:03.8737  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+12:22:05.6233  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+12:22:05.7639  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+12:22:05.7795  Initial Hardware with BCOPOSTOSHIBA.dll
+12:22:06.1441  frmMonitorCustomer is Activate.
+12:22:06.1754  frmMonitorCustomerFooter is Activate.
+12:22:06.2066  frmMonitor2Detail is Activate.
+12:22:06.8158  frmLogin is Activate.
+12:22:16.3933  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+12:22:16.4090  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+12:22:17.3308  frmLogin is Activate.
+12:22:17.5337  frmMainMenu is Activate.
+12:22:19.2208  Call afterNotify False
+12:22:19.4551  frmSale is Activate.
+12:23:15.0618  frmSale is Activate.
+12:23:26.6528  frmSale is Activate.
+12:23:27.2431  frmReceivePaymentPOD is Activate.
+12:23:46.5142  frmReceivePaymentPOD is Activate.
+12:23:48.8260  frmPayment_Load
+12:23:48.9041  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:23:52.0742  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:23:52.0742  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:23:52.0742  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:23:52.2145  frmPayment is Activate.
+12:24:03.6871  frmPayment is Activate.
+12:24:03.7181  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:24:15.9611  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:24:15.9611  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:24:15.9611  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:24:16.9415  frmPayment is Activate.
+12:24:33.6648  frmPayment is Activate.
+12:24:33.6960  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:24:37.9526  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:24:37.9526  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:24:37.9682  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:24:38.9496  frmPayment is Activate.
+12:24:43.4485  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:24:43.4798  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:24:43.4798  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:24:43.4798  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:24:43.4953  after ucTxtAmountCash.Text
+12:24:43.5110  after ucTxtAmountCash.Focus
+12:25:02.3491  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:25:02.3491  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:25:02.3648  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:25:02.3648  before saleProcess.getAmountExchangeRate enterChangebalance
+12:25:02.3648  before CalBalanceDiff
+12:25:03.2865  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:25:03.2865  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:25:03.2865  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:25:03.3177  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:25:09.1853  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:25:09.1853  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:25:09.2009  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:25:10.1838  frmPayment is Activate.
+12:25:15.4412  frmPayment is Activate.
+12:25:17.1585  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:25:17.9795  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:25:17.9795  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:25:17.9951  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:25:18.0107  frmPayment is Activate.
+12:25:20.7988  frmPayment is Activate.
+12:25:22.2434  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:25:22.6897  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:25:22.6897  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:25:22.6897  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:25:22.7051  frmPayment is Activate.
+12:25:51.6880  frmPayment is Activate.
+12:25:51.7179  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:25:52.8699  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:25:52.8699  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:25:52.8699  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:25:53.8382  frmPayment is Activate.
+12:26:17.4167  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:26:17.4322  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:26:17.4322  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:26:17.4322  before saleProcess.getAmountExchangeRate enterChangebalance
+12:26:17.4479  before CalBalanceDiff
+12:26:18.3196  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:26:19.3095  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:26:21.8557  frmPayment is Activate.
+12:26:22.8294  frmPayment is Activate.
+12:26:34.1180  store procedure return error (ResponseCode = "300")
+Response Message = ไม่สามารถรับชำระได้ เนื่องจาก QR Code ซ้ำ
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_PODSaveSale#6
+
+12:29:37.6296  store procedure return error (ResponseCode = "300")
+Response Message = ไม่สามารถรับชำระได้ เนื่องจาก QR Code ซ้ำ
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_PODSaveSale#6
+
+12:29:39.9986  frmPayment is Activate.
+12:29:41.8174  frmReceivePaymentPOD is Activate.
+12:29:42.7857  frmPayment_Load
+12:29:42.8483  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:29:42.8797  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:29:42.8797  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:29:42.8797  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:29:43.0044  frmPayment is Activate.
+12:30:52.4236  frmPayment is Activate.
+12:30:54.3295  frmReceivePaymentPOD is Activate.
+12:30:56.0320  frmPayment is Activate.
+12:30:57.1723  frmReceivePaymentPOD is Activate.
+12:31:01.5468  frmReceivePaymentPOD is Activate.
+12:31:02.0936  frmPayment_Load
+12:31:02.1717  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:31:02.2185  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:31:02.2185  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:31:02.2185  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:31:02.3591  frmPayment is Activate.
+12:31:14.9573  frmPayment is Activate.
+12:31:14.9885  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:31:15.0508  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:31:15.0508  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:31:15.0508  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:31:15.9680  frmPayment is Activate.
+12:31:27.9577  frmPayment is Activate.
+12:31:34.1098  frmPayment is Activate.
+12:31:34.1466  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:31:34.1935  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:31:34.1935  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:31:34.2091  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:31:36.3915  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:31:36.4045  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:31:36.4201  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:31:36.4201  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:31:36.4357  after ucTxtAmountCash.Text
+12:31:36.4357  after ucTxtAmountCash.Focus
+12:31:43.7466  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:31:43.7466  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:31:43.7466  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:31:43.7622  before saleProcess.getAmountExchangeRate enterChangebalance
+12:31:43.7622  before CalBalanceDiff
+12:31:43.8091  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:31:44.0434  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:31:44.0902  frmPayment is Activate.
+12:31:44.7307  frmPayment is Activate.
+12:31:57.2012  ExecuteToDataTable Error message : The statement has been terminated.
+Cannot insert duplicate key row in object 'dbo.QRPAYTRANS' with unique index 'CUIDX_QRPAYTRANS'. The duplicate key value is (20210702, 2117001POD003000187, 0000117001096000080F, ).
+12:31:57.2012  Current SQLState not in connectionLost and queryTimeount. SQLState = 01000
+12:31:57.2012  Current SQLState not in connectionLost and queryTimeount. SQLState = 23000
+12:32:07.8704  The statement has been terminated.
+Cannot insert duplicate key row in object 'dbo.QRPAYTRANS' with unique index 'CUIDX_QRPAYTRANS'. The duplicate key value is (20210702, 2117001POD003000187, 0000117001096000080F, ).
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.savePODSaveSale(String refFFTI, String amt, String qrCode, String refID, String openDrawerTime) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 7017
+   at BJCBCPOS_Process.SaleProcess.saveConfirmPayment(String openTime, Double posChg, Double cashierChg, AlertMessage AlertMessage) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 4818
+
+12:33:09.0574  ExecuteToDataTable Error message : The statement has been terminated.
+Cannot insert duplicate key row in object 'dbo.QRPAYTRANS' with unique index 'CUIDX_QRPAYTRANS'. The duplicate key value is (20210702, 2117001POD003000187, 0000117001096000080F, ).
+12:33:09.0574  Current SQLState not in connectionLost and queryTimeount. SQLState = 01000
+12:33:09.0574  Current SQLState not in connectionLost and queryTimeount. SQLState = 23000
+12:35:47.8833  The statement has been terminated.
+Cannot insert duplicate key row in object 'dbo.QRPAYTRANS' with unique index 'CUIDX_QRPAYTRANS'. The duplicate key value is (20210702, 2117001POD003000187, 0000117001096000080F, ).
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.savePODSaveSale(String refFFTI, String amt, String qrCode, String refID, String openDrawerTime) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 7017
+   at BJCBCPOS_Process.SaleProcess.saveConfirmPayment(String openTime, Double posChg, Double cashierChg, AlertMessage AlertMessage) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 4818
+
+12:36:26.2028  ExecuteToDataTable Error message : The statement has been terminated.
+Cannot insert duplicate key row in object 'dbo.QRPAYTRANS' with unique index 'CUIDX_QRPAYTRANS'. The duplicate key value is (20210702, 2117001POD003000187, 0000117001096000080F, ).
+12:36:26.2028  Current SQLState not in connectionLost and queryTimeount. SQLState = 01000
+12:36:26.2028  Current SQLState not in connectionLost and queryTimeount. SQLState = 23000
+12:37:31.4488  The statement has been terminated.
+Cannot insert duplicate key row in object 'dbo.QRPAYTRANS' with unique index 'CUIDX_QRPAYTRANS'. The duplicate key value is (20210702, 2117001POD003000187, 0000117001096000080F, ).
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.savePODSaveSale(String refFFTI, String amt, String qrCode, String refID, String openDrawerTime) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 7017
+   at BJCBCPOS_Process.SaleProcess.saveConfirmPayment(String openTime, Double posChg, Double cashierChg, AlertMessage AlertMessage) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 4818
+
+12:38:32.3507  ExecuteToDataTable Error message : The statement has been terminated.
+Cannot insert duplicate key row in object 'dbo.QRPAYTRANS' with unique index 'CUIDX_QRPAYTRANS'. The duplicate key value is (20210702, 2117001POD003000187, 0000117001096000080F, ).
+12:38:32.3507  Current SQLState not in connectionLost and queryTimeount. SQLState = 01000
+12:38:32.3507  Current SQLState not in connectionLost and queryTimeount. SQLState = 23000
+12:38:32.3663  The statement has been terminated.
+Cannot insert duplicate key row in object 'dbo.QRPAYTRANS' with unique index 'CUIDX_QRPAYTRANS'. The duplicate key value is (20210702, 2117001POD003000187, 0000117001096000080F, ).
+   at BJCBCPOS_Data.DBConnect.checkConnectionLostError(Exception ex) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 503
+   at BJCBCPOS_Data.DBConnect.ExecuteToDataTable() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\DBConnect.cs:line 399
+   at BJCBCPOS_Data.SqlCommand.savePODSaveSale(String refFFTI, String amt, String qrCode, String refID, String openDrawerTime) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Data\SqlCommand.cs:line 7017
+   at BJCBCPOS_Process.SaleProcess.saveConfirmPayment(String openTime, Double posChg, Double cashierChg, AlertMessage AlertMessage) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Process\SaleProcess.cs:line 4818
+
+12:40:00.4260  frmPayment is Activate.
+12:43:08.4626  key section = setting, name = printername
+12:43:08.4626  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+12:43:10.7433  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+12:43:10.8839  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+12:43:10.8995  Initial Hardware with BCOPOSTOSHIBA.dll
+12:43:11.5088  frmMonitorCustomer is Activate.
+12:43:11.5400  frmMonitorCustomerFooter is Activate.
+12:43:11.5556  frmMonitor2Detail is Activate.
+12:43:11.8681  frmLogin is Activate.
+12:43:17.6026  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+12:43:17.6326  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+12:43:19.2397  frmLogin is Activate.
+12:43:19.5296  frmMainMenu is Activate.
+12:43:20.3098  Call afterNotify False
+12:43:20.5896  frmSale is Activate.
+12:43:28.3591  frmSale is Activate.
+12:43:29.5894  frmSale is Activate.
+12:43:32.7292  frmSale is Activate.
+12:43:33.4791  start keyProduct()
+12:43:33.5259  store procedure return error (ResponseCode = "300")
+Response Message = รหัสสินค้า 2221000035860013 ผิดปกติ
+Help Message = ป้อน Product Code ใหม่อีกครั้ง หรือ ติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_GetProductDesc#1
+
+12:43:34.4968  frmSale is Activate.
+12:43:34.5593  before DisableControl();
+12:43:34.5749  before Properties.Resources.multi_disable;
+12:43:34.5749  after Properties.Resources.multi_disable;
+12:43:34.5749  after Properties.Resources.change_disable;
+12:43:34.5749  after Properties.Resources.remove_disable;
+12:43:34.5905  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+12:43:34.6062  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+12:43:34.6218  after setFocus();
+12:43:36.8134  frmSale is Activate.
+12:43:37.5946  start keyProduct()
+12:43:37.7194  before DisableControl();
+12:43:37.7194  before Properties.Resources.multi_disable;
+12:43:37.7351  after Properties.Resources.multi_disable;
+12:43:37.7351  after Properties.Resources.change_disable;
+12:43:37.7351  after Properties.Resources.remove_disable;
+12:43:37.7351  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+12:43:37.7665  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+12:43:37.7665  after setFocus();
+12:43:38.5693  before Properties.Resources.multi_disable;
+12:43:38.5693  after Properties.Resources.multi_disable;
+12:43:38.5693  after Properties.Resources.change_disable;
+12:43:38.5693  after Properties.Resources.remove_disable;
+12:43:39.0993  frmCustRedeem is Activate.
+12:43:39.1796  Can not find FunctionId 121131010010001 in profileCollections.
+
+12:43:39.1796  Can not find FunctionId 121131010010002 in profileCollections.
+
+12:43:39.1895  frmSale is Activate.
+12:43:39.2497  Can not find FunctionId 121131020010001 in profileCollections.
+
+12:43:39.2497  Can not find FunctionId 121131020010002 in profileCollections.
+
+12:43:39.2894  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+12:43:39.2997  Can not find FunctionId 121131030010001 in profileCollections.
+
+12:43:39.2997  Can not find FunctionId 121131030010002 in profileCollections.
+
+12:43:39.6996  frmPayment_Load
+12:43:39.7997  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:43:39.8395  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:43:39.8395  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:43:39.8492  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:43:40.0596  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:43:40.0795  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:43:40.0795  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:43:40.0894  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:43:40.1096  after ucTxtAmountCash.Text
+12:43:40.1116  after ucTxtAmountCash.Focus
+12:43:40.1247  frmPayment is Activate.
+12:43:44.0831  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+12:43:44.0987  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+12:43:44.0987  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+12:43:44.0987  before saleProcess.getAmountExchangeRate enterChangebalance
+12:43:44.0987  before CalBalanceDiff
+12:43:44.1768  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:43:44.4580  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+12:43:44.4892  frmPayment is Activate.
+12:43:45.0672  frmPayment is Activate.
+12:43:45.8014  ABBNo from SaveSaleTrans 003000109F
+12:43:50.0432  store procedure return error (ResponseCode = "300")
+Response Message = สร้าง Transaction Net Vat หรือ FFORMTAX ไม่สมบูรณ์
+Help Message = กรุณายืนยันการชำระเงินอีกครั้ง
+Application Desc = pos_ValidateFFTI#1
+
+12:44:10.2696  frmConfirmPayment ProcessCashDrawerClose Hardware.isDrawerOpenFalse
+12:44:10.3321  frmConfirmPayment: call method closeForm >> tranSuccess : True, chkSwClose : True, statusCloseDrawer : True, finishReceipt False
+12:44:10.5352  frmCustRedeem is Activate.
+12:44:10.6446  Can not find FunctionId 121285101010002 in profileCollections.
+
+12:44:10.6602  Can not find FunctionId 121285101010002 in profileCollections.
+
+12:44:10.7070  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = 
+Application Desc = pos_CheckRedeemPoint_Coupon
+
+12:44:10.7695  frmConfirmPayment: salePageState in closeFormPayment = 2
+12:44:10.7852  Call afterNotify False
+12:44:10.8789  before Properties.Resources.multi_disable;
+12:44:10.8789  after Properties.Resources.multi_disable;
+12:44:10.8789  after Properties.Resources.change_disable;
+12:44:10.8789  after Properties.Resources.remove_disable;
+12:44:10.9101  frmSale is Activate.
+12:44:10.9258  frmSale is Activate.
+12:45:12.5607  frmSale is Activate.
+12:45:12.5607  frmSale is Activate.
+12:45:13.6074  frmMonitor2Detail is Activate.
+12:45:15.7162  frmSale is Activate.
+12:45:15.7162  frmSale is Activate.
+12:45:16.6848  frmMainMenu is Activate.
+12:45:16.6848  frmMainMenu is Activate.
+12:45:20.1527  frmMainMenu is Activate.
+12:45:20.1683  frmMainMenu is Activate.
+12:45:20.8401  frmReturnFromInvoice is Activate.
+12:45:23.0114  store procedure return data no record.
+12:45:23.0429  store procedure return data no record.
+12:45:33.9776  frmReturnFromInvoice is Activate.
+12:45:35.8034  1 chkSwOpen = False
+12:45:53.1676  frmMainMenu is Activate.
+12:45:53.1676  frmMainMenu is Activate.
+12:46:35.0628  key section = setting, name = printername
+12:46:35.0628  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+12:46:35.2189  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+12:46:35.3439  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+12:46:35.3595  Initial Hardware with BCOPOSTOSHIBA.dll
+12:46:35.7657  frmMonitorCustomer is Activate.
+12:46:35.7969  frmMonitorCustomerFooter is Activate.
+12:46:35.8282  frmMonitor2Detail is Activate.
+12:46:36.1250  frmLogin is Activate.
+12:46:43.8548  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+12:46:43.8750  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+12:46:45.3292  frmLogin is Activate.
+12:46:45.6491  frmMainMenu is Activate.
+12:46:46.2687  Call afterNotify False
+12:46:46.5586  frmSale is Activate.
+12:46:53.0697  frmSale is Activate.
+12:46:54.3174  frmSale is Activate.
+12:47:16.9721  start keyProduct()
+12:47:17.1283  before DisableControl();
+12:47:17.1439  before Properties.Resources.multi_disable;
+12:47:17.1439  after Properties.Resources.multi_disable;
+12:47:17.1596  after Properties.Resources.change_disable;
+12:47:17.1596  after Properties.Resources.remove_disable;
+12:47:17.1752  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+12:47:17.2065  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+12:47:17.2065  after setFocus();
+12:47:26.9477  start keyProduct()
+12:47:27.0882  before DisableControl();
+12:47:27.0882  before Properties.Resources.multi_disable;
+12:47:27.0882  after Properties.Resources.multi_disable;
+12:47:27.0882  after Properties.Resources.change_disable;
+12:47:27.0882  after Properties.Resources.remove_disable;
+12:47:27.1036  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+12:47:27.1192  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+12:47:27.1349  after setFocus();
+12:47:38.4593  start keyProduct()
+12:47:38.6155  before DisableControl();
+12:47:38.6155  before Properties.Resources.multi_disable;
+12:47:38.6155  after Properties.Resources.multi_disable;
+12:47:38.6155  after Properties.Resources.change_disable;
+12:47:38.6311  after Properties.Resources.remove_disable;
+12:47:38.6311  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+12:47:38.6467  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+12:47:38.6624  after setFocus();
+12:47:45.5586  start keyProduct()
+12:47:45.7148  before DisableControl();
+12:47:45.7148  before Properties.Resources.multi_disable;
+12:47:45.7148  after Properties.Resources.multi_disable;
+12:47:45.7148  after Properties.Resources.change_disable;
+12:47:45.7148  after Properties.Resources.remove_disable;
+12:47:45.7148  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+12:47:45.7461  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+12:47:45.7619  after setFocus();
+12:47:52.8513  start keyProduct()
+12:47:53.0856  before DisableControl();
+12:47:53.0856  before Properties.Resources.multi_disable;
+12:47:53.0856  after Properties.Resources.multi_disable;
+12:47:53.1011  after Properties.Resources.change_disable;
+12:47:53.1011  after Properties.Resources.remove_disable;
+12:47:53.1011  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+12:47:53.1324  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+12:47:53.1324  after setFocus();
+12:47:58.3610  before Properties.Resources.multi_disable;
+12:47:58.3610  after Properties.Resources.multi_disable;
+12:47:58.3610  after Properties.Resources.change_disable;
+12:47:58.3922  after Properties.Resources.remove_disable;
+12:48:00.4079  frmSale is Activate.
+12:48:04.8851  frmSale is Activate.
+12:48:07.2513  frmSale is Activate.
+12:48:07.5231  before Properties.Resources.multi_disable;
+12:48:07.5231  after Properties.Resources.multi_disable;
+12:48:07.5231  after Properties.Resources.change_disable;
+12:48:07.5231  after Properties.Resources.remove_disable;
+12:48:13.4102  frmSale is Activate.
+12:48:15.4603  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+12:48:16.1359  before Properties.Resources.multi_disable;
+12:48:16.1359  after Properties.Resources.multi_disable;
+12:48:16.1359  after Properties.Resources.change_disable;
+12:48:16.1515  after Properties.Resources.remove_disable;
+12:48:16.1671  frmSale is Activate.
+12:48:48.1448  frmSale is Activate.
+13:34:25.5746  key section = setting, name = printername
+13:34:25.5746  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+13:34:28.4114  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+13:34:28.6457  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+13:34:28.7082  Initial Hardware with BCOPOSTOSHIBA.dll
+13:34:29.3336  frmMonitorCustomer is Activate.
+13:34:29.3679  frmMonitorCustomerFooter is Activate.
+13:34:29.3946  frmMonitor2Detail is Activate.
+13:34:29.8551  frmLogin is Activate.
+13:35:34.3557  frmLogin is Activate.
+13:35:35.0284  frmLogin is Activate.
+13:45:17.4873  key section = setting, name = printername
+13:45:17.6435  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+13:45:17.9771  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+13:45:18.1177  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+13:45:18.1332  Initial Hardware with BCOPOSTOSHIBA.dll
+13:45:18.6617  frmMonitorCustomer is Activate.
+13:45:18.7082  frmMonitorCustomerFooter is Activate.
+13:45:18.8140  frmMonitor2Detail is Activate.
+13:45:19.1834  frmLogin is Activate.
+13:49:02.6770  frmMonitor2Detail is Activate.
+13:49:05.6720  frmMonitor2Detail is Activate.
+13:49:07.1787  frmMonitor2Detail is Activate.
+13:49:07.7879  frmMonitor2Detail is Activate.
+13:49:08.4875  frmLogin is Activate.
+13:49:13.7534  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+13:49:13.7732  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+13:49:14.6092  frmLogin is Activate.
+13:49:14.9192  frmMainMenu is Activate.
+13:49:15.5190  Call afterNotify False
+13:49:15.8440  frmSale is Activate.
+13:49:21.5069  frmSale is Activate.
+13:49:22.8622  frmSale is Activate.
+13:49:26.3739  frmSale is Activate.
+13:49:27.0757  start keyProduct()
+13:49:27.2379  before DisableControl();
+13:49:27.2379  before Properties.Resources.multi_disable;
+13:49:27.2535  after Properties.Resources.multi_disable;
+13:49:27.2535  after Properties.Resources.change_disable;
+13:49:27.2535  after Properties.Resources.remove_disable;
+13:49:27.2535  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+13:49:27.2898  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+13:49:27.2992  after setFocus();
+13:49:30.0895  before Properties.Resources.multi_disable;
+13:49:30.0992  after Properties.Resources.multi_disable;
+13:49:30.0992  after Properties.Resources.change_disable;
+13:49:30.0992  after Properties.Resources.remove_disable;
+13:49:30.9092  frmCustRedeem is Activate.
+13:49:30.9892  Can not find FunctionId 121131010010001 in profileCollections.
+
+13:49:30.9892  Can not find FunctionId 121131010010002 in profileCollections.
+
+13:49:30.9996  frmSale is Activate.
+13:49:31.0754  Can not find FunctionId 121131020010001 in profileCollections.
+
+13:49:31.0774  Can not find FunctionId 121131020010002 in profileCollections.
+
+13:49:31.1194  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+13:49:31.1293  Can not find FunctionId 121131030010001 in profileCollections.
+
+13:49:31.1293  Can not find FunctionId 121131030010002 in profileCollections.
+
+13:49:31.5992  frmPayment_Load
+13:49:31.6893  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:49:31.7697  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:49:31.7697  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:49:31.7794  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:49:32.0443  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:49:32.0693  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:49:32.0693  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:49:32.0693  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:49:32.0893  after ucTxtAmountCash.Text
+13:49:32.0893  after ucTxtAmountCash.Focus
+13:49:32.0992  frmPayment is Activate.
+13:49:33.5640  frmPayment is Activate.
+13:49:33.6794  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:49:41.4105  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:49:41.4105  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:49:41.4105  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:49:41.5421  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:49:41.6272  store procedure return error (ResponseCode = "300")
+Response Message = ยอดชำระเงินไม่ถูกต้อง
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_GetChange#1
+
+13:49:41.7116  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:49:41.7428  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:49:41.7428  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:49:41.7584  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:49:41.8118  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:49:41.8274  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:49:41.8274  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:49:41.8431  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:49:41.8587  after ucTxtAmountCash.Text
+13:49:41.8587  after ucTxtAmountCash.Focus
+13:49:43.1451  frmPayment is Activate.
+13:49:45.5553  frmPayment is Activate.
+13:49:45.6453  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:50:06.5602  frmPayment is Activate.
+13:51:35.3858  frmPayment is Activate.
+13:53:37.5159  frmPayment is Activate.
+13:53:39.7029  frmPayment is Activate.
+13:53:40.5780  frmPayment is Activate.
+13:53:51.5579  frmPayment is Activate.
+13:53:52.4014  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:53:52.4170  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:53:52.4170  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:54:08.8996  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:54:08.9776  store procedure return error (ResponseCode = "300")
+Response Message = ยอดชำระเงินไม่ถูกต้อง
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_GetChange#1
+
+13:54:09.0401  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:54:09.0870  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:54:09.1026  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:54:09.1026  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:54:09.1651  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:54:09.1807  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:54:09.1964  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:54:09.1964  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:54:09.2120  after ucTxtAmountCash.Text
+13:54:09.2120  after ucTxtAmountCash.Focus
+13:54:11.1385  frmPayment is Activate.
+13:55:52.1557  frmPayment is Activate.
+13:55:54.7925  frmPayment is Activate.
+13:55:54.8706  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:55:58.4011  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:55:58.4011  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:55:58.4011  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:56:00.0877  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:56:00.1658  store procedure return error (ResponseCode = "300")
+Response Message = ยอดชำระเงินไม่ถูกต้อง
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_GetChange#1
+
+13:56:00.2281  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:56:00.2749  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:56:00.2749  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:56:00.2749  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:56:00.2906  frmPayment is Activate.
+13:56:00.3375  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:56:00.3689  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:56:00.3689  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:56:00.3689  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:56:00.3843  after ucTxtAmountCash.Text
+13:56:00.3999  after ucTxtAmountCash.Focus
+13:56:01.7117  frmPayment is Activate.
+13:56:11.2260  frmPayment is Activate.
+13:56:11.9920  frmPayment is Activate.
+13:56:12.0857  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:56:15.3193  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:56:15.3193  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:56:15.3193  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:56:16.9067  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:56:21.0733  store procedure return error (ResponseCode = "300")
+Response Message = ยอดชำระเงินไม่ถูกต้อง
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_GetChange#1
+
+13:56:34.9950  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:56:35.0419  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:56:35.0419  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:56:35.0575  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:56:35.1043  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:56:35.1358  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:56:35.1358  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:56:35.1512  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:56:35.1668  after ucTxtAmountCash.Text
+13:56:35.1668  after ucTxtAmountCash.Focus
+13:56:36.4572  frmPayment is Activate.
+13:56:52.4152  frmPayment is Activate.
+13:58:21.1080  frmPayment is Activate.
+13:58:28.0710  frmPayment is Activate.
+13:58:31.6005  frmPayment is Activate.
+13:58:31.6786  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:58:34.6154  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+13:58:34.6154  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+13:58:34.6154  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+13:58:39.3997  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+13:58:46.7162  store procedure return error (ResponseCode = "300")
+Response Message = ยอดชำระเงินไม่ถูกต้อง
+Help Message = กรุณาติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_GetChange#1
+
+14:02:15.7571  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:02:15.8039  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:02:15.8039  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:02:15.8039  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:02:15.8665  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:02:15.8977  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:02:15.8977  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:02:15.8977  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:02:15.9133  after ucTxtAmountCash.Text
+14:02:15.9133  after ucTxtAmountCash.Focus
+14:02:16.0405  frmPayment is Activate.
+14:02:16.5873  frmPayment is Activate.
+14:02:19.4217  frmPayment is Activate.
+14:02:21.3275  frmPayment is Activate.
+14:02:21.4056  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:02:26.7169  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:02:26.7169  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:02:26.7169  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:02:28.4074  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:02:28.4544  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:02:28.4544  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:02:28.4544  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:02:28.4698  frmPayment is Activate.
+14:02:28.5167  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:02:28.5479  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:02:28.5479  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:02:28.5479  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:02:28.5636  after ucTxtAmountCash.Text
+14:02:28.5792  after ucTxtAmountCash.Focus
+14:02:31.3839  frmPayment is Activate.
+14:02:31.4933  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:02:31.5401  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:02:31.5401  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:02:31.5401  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:02:34.3051  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:02:34.3365  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:02:34.3365  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:02:34.3365  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:02:34.3520  after ucTxtAmountCash.Text
+14:02:34.3676  after ucTxtAmountCash.Focus
+14:02:35.3986  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:02:35.4298  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:02:35.4298  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:02:35.4298  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:02:35.4455  after ucTxtAmountCash.Text
+14:02:35.4611  after ucTxtAmountCash.Focus
+14:02:37.7395  frmPayment is Activate.
+14:02:39.1759  frmPayment is Activate.
+14:04:44.9245  frmPayment is Activate.
+14:04:46.5024  frmSale is Activate.
+14:04:48.7207  frmPayment is Activate.
+14:04:53.0164  frmSale is Activate.
+14:04:53.1569  frmCustRedeem is Activate.
+14:04:53.2351  Can not find FunctionId 121131010010001 in profileCollections.
+
+14:04:53.2351  Can not find FunctionId 121131010010002 in profileCollections.
+
+14:04:53.2507  frmSale is Activate.
+14:04:53.2975  Can not find FunctionId 121131020010001 in profileCollections.
+
+14:04:53.2975  Can not find FunctionId 121131020010002 in profileCollections.
+
+14:04:53.3757  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+14:04:53.3913  Can not find FunctionId 121131030010001 in profileCollections.
+
+14:04:53.3913  Can not find FunctionId 121131030010002 in profileCollections.
+
+14:04:53.7037  frmPayment_Load
+14:04:53.8131  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:04:53.8756  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:04:53.8756  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:04:53.8756  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:04:54.0943  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:04:54.1255  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:04:54.1255  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:04:54.1411  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:04:54.1567  after ucTxtAmountCash.Text
+14:04:54.1567  after ucTxtAmountCash.Focus
+14:04:54.1879  frmPayment is Activate.
+14:04:57.7436  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:04:57.7436  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:04:57.7592  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:04:57.7592  before saleProcess.getAmountExchangeRate enterChangebalance
+14:04:57.7592  before CalBalanceDiff
+14:04:57.8217  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:05:00.9347  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:05:00.9503  frmPayment is Activate.
+14:05:01.7470  frmPayment is Activate.
+14:05:02.0138  ABBNo from SaveSaleTrans 003000110F
+14:05:02.1229  store procedure return error (ResponseCode = "300")
+Response Message = สร้าง Transaction Net Vat หรือ FFORMTAX ไม่สมบูรณ์
+Help Message = กรุณายืนยันการชำระเงินอีกครั้ง
+Application Desc = pos_ValidateFFTI#1
+
+14:05:21.3340  frmConfirmPayment ProcessCashDrawerClose Hardware.isDrawerOpenFalse
+14:05:21.3652  frmConfirmPayment: call method closeForm >> tranSuccess : True, chkSwClose : True, statusCloseDrawer : True, finishReceipt False
+14:05:21.5574  frmCustRedeem is Activate.
+14:05:21.6983  Can not find FunctionId 121285101010002 in profileCollections.
+
+14:05:21.6983  Can not find FunctionId 121285101010002 in profileCollections.
+
+14:05:21.7761  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = 
+Application Desc = pos_CheckRedeemPoint_Coupon
+
+14:05:21.8371  frmConfirmPayment: salePageState in closeFormPayment = 2
+14:05:21.8527  Call afterNotify False
+14:05:22.8468  before Properties.Resources.multi_disable;
+14:05:22.8468  after Properties.Resources.multi_disable;
+14:05:22.8468  after Properties.Resources.change_disable;
+14:05:22.8468  after Properties.Resources.remove_disable;
+14:05:22.8765  frmSale is Activate.
+14:05:22.8765  frmSale is Activate.
+14:05:25.7767  frmMainMenu is Activate.
+14:05:25.7767  frmMainMenu is Activate.
+14:05:27.5067  Call afterNotify False
+14:05:27.7767  frmSale is Activate.
+14:05:29.0669  frmReceivePaymentPOD is Activate.
+14:05:33.3971  frmReceivePaymentPOD is Activate.
+14:30:49.5429  key section = setting, name = printername
+14:30:49.5459  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+14:30:51.7239  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+14:30:51.8651  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+14:30:51.8830  Initial Hardware with BCOPOSTOSHIBA.dll
+14:30:53.0827  frmMonitorCustomer is Activate.
+14:30:53.1166  frmMonitorCustomerFooter is Activate.
+14:30:53.1445  frmMonitor2Detail is Activate.
+14:30:53.7389  frmLogin is Activate.
+14:30:59.5641  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+14:30:59.5913  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+14:31:00.6074  frmLogin is Activate.
+14:31:01.0525  frmMainMenu is Activate.
+14:31:02.7615  Call afterNotify False
+14:31:03.2171  frmSale is Activate.
+14:31:23.6770  frmSale is Activate.
+14:31:31.0258  frmSale is Activate.
+14:31:33.2657  frmSale is Activate.
+14:32:01.7062  frmSale is Activate.
+14:32:03.9253  frmSale is Activate.
+14:32:06.1509  frmSale is Activate.
+14:32:25.1832  frmSale is Activate.
+14:32:48.3809  frmSale is Activate.
+14:32:51.7891  frmSale is Activate.
+14:32:56.4804  frmSale is Activate.
+14:32:57.6030  start keyProduct()
+14:32:57.7673  before DisableControl();
+14:32:57.7693  before Properties.Resources.multi_disable;
+14:32:57.7732  after Properties.Resources.multi_disable;
+14:32:57.7972  after Properties.Resources.change_disable;
+14:32:57.8002  after Properties.Resources.remove_disable;
+14:32:57.8072  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:32:57.8322  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:32:57.8411  after setFocus();
+14:32:58.3637  start keyProduct()
+14:32:58.4942  before DisableControl();
+14:32:58.4962  before Properties.Resources.multi_disable;
+14:32:58.4992  after Properties.Resources.multi_disable;
+14:32:58.5022  after Properties.Resources.change_disable;
+14:32:58.5052  after Properties.Resources.remove_disable;
+14:32:58.5092  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:32:58.5333  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:32:58.5423  after setFocus();
+14:32:58.8432  start keyProduct()
+14:32:58.9824  before DisableControl();
+14:32:58.9843  before Properties.Resources.multi_disable;
+14:32:58.9873  after Properties.Resources.multi_disable;
+14:32:58.9903  after Properties.Resources.change_disable;
+14:32:58.9953  after Properties.Resources.remove_disable;
+14:32:58.9983  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:32:59.0240  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:32:59.0325  after setFocus();
+14:32:59.2778  start keyProduct()
+14:32:59.4299  before DisableControl();
+14:32:59.4319  before Properties.Resources.multi_disable;
+14:32:59.4348  after Properties.Resources.multi_disable;
+14:32:59.4368  after Properties.Resources.change_disable;
+14:32:59.4408  after Properties.Resources.remove_disable;
+14:32:59.4448  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:32:59.4711  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:32:59.4801  after setFocus();
+14:32:59.7116  start keyProduct()
+14:32:59.8678  before DisableControl();
+14:32:59.8698  before Properties.Resources.multi_disable;
+14:32:59.8728  after Properties.Resources.multi_disable;
+14:32:59.8758  after Properties.Resources.change_disable;
+14:32:59.8778  after Properties.Resources.remove_disable;
+14:32:59.8808  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:32:59.9092  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:32:59.9179  after setFocus();
+14:33:00.1345  start keyProduct()
+14:33:00.3189  before DisableControl();
+14:33:00.3219  before Properties.Resources.multi_disable;
+14:33:00.3239  after Properties.Resources.multi_disable;
+14:33:00.3269  after Properties.Resources.change_disable;
+14:33:00.3289  after Properties.Resources.remove_disable;
+14:33:00.3318  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:33:00.3617  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:33:00.3694  after setFocus();
+14:33:00.5791  start keyProduct()
+14:33:00.8048  before DisableControl();
+14:33:00.8077  before Properties.Resources.multi_disable;
+14:33:00.8097  after Properties.Resources.multi_disable;
+14:33:00.8127  after Properties.Resources.change_disable;
+14:33:00.8147  after Properties.Resources.remove_disable;
+14:33:00.8177  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:33:00.8428  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:33:00.8518  after setFocus();
+14:33:01.0712  start keyProduct()
+14:33:01.2561  before DisableControl();
+14:33:01.2581  before Properties.Resources.multi_disable;
+14:33:01.2610  after Properties.Resources.multi_disable;
+14:33:01.2631  after Properties.Resources.change_disable;
+14:33:01.2660  after Properties.Resources.remove_disable;
+14:33:01.2680  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:33:01.2925  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:33:01.3014  after setFocus();
+14:33:01.5450  start keyProduct()
+14:33:01.7525  before DisableControl();
+14:33:01.7544  before Properties.Resources.multi_disable;
+14:33:01.7574  after Properties.Resources.multi_disable;
+14:33:01.7594  after Properties.Resources.change_disable;
+14:33:01.7624  after Properties.Resources.remove_disable;
+14:33:01.7654  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:33:01.7975  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:33:01.8115  after setFocus();
+14:33:02.0319  start keyProduct()
+14:33:02.2440  before DisableControl();
+14:33:02.2460  before Properties.Resources.multi_disable;
+14:33:02.2480  after Properties.Resources.multi_disable;
+14:33:02.2510  after Properties.Resources.change_disable;
+14:33:02.2530  after Properties.Resources.remove_disable;
+14:33:02.2560  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:33:02.2821  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:33:02.2910  after setFocus();
+14:33:02.8332  start keyProduct()
+14:33:03.0561  before DisableControl();
+14:33:03.0581  before Properties.Resources.multi_disable;
+14:33:03.0601  after Properties.Resources.multi_disable;
+14:33:03.0631  after Properties.Resources.change_disable;
+14:33:03.0651  after Properties.Resources.remove_disable;
+14:33:03.0681  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:33:03.0917  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:33:03.1005  after setFocus();
+14:33:04.0453  start keyProduct()
+14:33:04.2793  before DisableControl();
+14:33:04.2813  before Properties.Resources.multi_disable;
+14:33:04.2843  after Properties.Resources.multi_disable;
+14:33:04.2863  after Properties.Resources.change_disable;
+14:33:04.2893  after Properties.Resources.remove_disable;
+14:33:04.2923  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:33:04.3154  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:33:04.3254  after setFocus();
+14:33:16.8291  frmSale is Activate.
+14:33:22.5098  before Properties.Resources.multi_disable;
+14:33:22.5128  after Properties.Resources.multi_disable;
+14:33:22.5148  after Properties.Resources.change_disable;
+14:33:22.5178  after Properties.Resources.remove_disable;
+14:33:23.9248  frmCustRedeem is Activate.
+14:33:24.0625  Can not find FunctionId 121131010010001 in profileCollections.
+
+14:33:24.0654  Can not find FunctionId 121131010010002 in profileCollections.
+
+14:33:24.0764  frmSale is Activate.
+14:33:24.2964  Can not find FunctionId 121131020010001 in profileCollections.
+
+14:33:24.2994  Can not find FunctionId 121131020010002 in profileCollections.
+
+14:33:24.3383  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+14:33:24.3632  Can not find FunctionId 121131030010001 in profileCollections.
+
+14:33:24.3662  Can not find FunctionId 121131030010002 in profileCollections.
+
+14:33:25.0696  frmPayment_Load
+14:33:25.2206  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:33:25.3085  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:33:25.3115  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:33:25.3155  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:33:25.5371  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:33:25.5608  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:33:25.5629  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:33:25.5668  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:33:25.5908  after ucTxtAmountCash.Text
+14:33:25.5947  after ucTxtAmountCash.Focus
+14:33:25.6057  frmPayment is Activate.
+14:33:30.9446  frmPayment is Activate.
+14:33:31.3441  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:33:31.8080  Start GenQR
+14:33:44.4427  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:33:49.2062  frmPayment is Activate.
+14:33:51.5254  frmPayment is Activate.
+14:33:51.8141  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:33:52.0273  Start GenQR
+14:34:02.7124  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:34:13.0010  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:34:22.7084  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:34:32.7669  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:34:42.7371  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:34:52.7183  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:35:02.8348  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:35:12.9663  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:35:22.7011  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:35:32.7224  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:35:42.7174  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:46:41.8027  frmPayment is Activate.
+14:46:51.0210  frmPayment is Activate.
+14:46:51.2565  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:46:51.7402  Start GenQR
+14:47:02.4142  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:47:12.3943  store procedure return error (ResponseCode = "300")
+Response Message = Time Out : REQUESTED
+Help Message = N/A
+Application Desc = N/A
+
+14:47:20.6737  frmPayment is Activate.
+14:47:21.5418  frmPayment is Activate.
+14:47:21.7847  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:47:22.0029  Start GenQR
+14:47:23.1731  frmPayment is Activate.
+14:47:25.4669  frmPayment is Activate.
+14:47:25.6970  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:47:25.9345  Start GenQR
+14:47:36.2851  frmPayment is Activate.
+14:47:39.7212  frmSale is Activate.
+14:47:45.3484  frmSale is Activate.
+14:47:48.0627  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+14:47:49.1375  before Properties.Resources.multi_disable;
+14:47:49.1395  after Properties.Resources.multi_disable;
+14:47:49.1425  after Properties.Resources.change_disable;
+14:47:49.1445  after Properties.Resources.remove_disable;
+14:47:49.1705  frmSale is Activate.
+14:48:04.5606  frmSale is Activate.
+14:48:10.1554  frmSale is Activate.
+14:48:16.8286  frmSale is Activate.
+14:48:18.0994  start keyProduct()
+14:48:18.1416  store procedure return error (ResponseCode = "300")
+Response Message = รหัสสินค้า 2221000035860013 ผิดปกติ
+Help Message = ป้อน Product Code ใหม่อีกครั้ง หรือ ติดต่อ IT Service Desk Tel.xxx-xxxx
+Application Desc = pos_GetProductDesc#1
+
+14:48:19.3233  frmSale is Activate.
+14:48:19.3502  before DisableControl();
+14:48:19.3532  before Properties.Resources.multi_disable;
+14:48:19.3582  after Properties.Resources.multi_disable;
+14:48:19.3612  after Properties.Resources.change_disable;
+14:48:19.3632  after Properties.Resources.remove_disable;
+14:48:19.3682  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:48:19.3931  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:48:19.4041  after setFocus();
+14:48:24.3099  frmSale is Activate.
+14:48:25.5123  start keyProduct()
+14:48:25.6238  before DisableControl();
+14:48:25.6268  before Properties.Resources.multi_disable;
+14:48:25.6287  after Properties.Resources.multi_disable;
+14:48:25.6317  after Properties.Resources.change_disable;
+14:48:25.6347  after Properties.Resources.remove_disable;
+14:48:25.6407  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:48:25.6641  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:48:25.6751  after setFocus();
+14:48:27.2573  start keyProduct()
+14:48:27.4020  before DisableControl();
+14:48:27.4040  before Properties.Resources.multi_disable;
+14:48:27.4070  after Properties.Resources.multi_disable;
+14:48:27.4090  after Properties.Resources.change_disable;
+14:48:27.4120  after Properties.Resources.remove_disable;
+14:48:27.4150  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:48:27.4389  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:48:27.4491  after setFocus();
+14:48:28.1657  start keyProduct()
+14:48:28.3252  before DisableControl();
+14:48:28.3272  before Properties.Resources.multi_disable;
+14:48:28.3312  after Properties.Resources.multi_disable;
+14:48:28.3342  after Properties.Resources.change_disable;
+14:48:28.3372  after Properties.Resources.remove_disable;
+14:48:28.3401  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:48:28.3635  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:48:28.3735  after setFocus();
+14:48:30.3495  before Properties.Resources.multi_disable;
+14:48:30.3545  after Properties.Resources.multi_disable;
+14:48:30.3575  after Properties.Resources.change_disable;
+14:48:30.3595  after Properties.Resources.remove_disable;
+14:48:31.3305  frmCustRedeem is Activate.
+14:48:31.4113  Can not find FunctionId 121131010010001 in profileCollections.
+
+14:48:31.4143  Can not find FunctionId 121131010010002 in profileCollections.
+
+14:48:31.4253  frmSale is Activate.
+14:48:31.4772  Can not find FunctionId 121131020010001 in profileCollections.
+
+14:48:31.4811  Can not find FunctionId 121131020010002 in profileCollections.
+
+14:48:31.5200  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+14:48:31.5310  Can not find FunctionId 121131030010001 in profileCollections.
+
+14:48:31.5340  Can not find FunctionId 121131030010002 in profileCollections.
+
+14:48:31.8716  frmPayment_Load
+14:48:31.9607  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:48:32.0010  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:48:32.0040  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:48:32.0060  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:48:32.2161  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:48:32.2397  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:48:32.2417  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:48:32.2457  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:48:32.2653  after ucTxtAmountCash.Text
+14:48:32.2673  after ucTxtAmountCash.Focus
+14:48:32.2792  frmPayment is Activate.
+14:48:42.4895  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:48:42.4915  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:48:42.4975  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:48:42.5014  before saleProcess.getAmountExchangeRate enterChangebalance
+14:48:42.5035  before CalBalanceDiff
+14:48:42.5643  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:49:02.4403  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:49:02.5102  frmPayment is Activate.
+14:49:03.2108  frmPayment is Activate.
+14:49:04.4052  frmPayment is Activate.
+14:49:05.7394  frmSale is Activate.
+14:49:06.5162  before Properties.Resources.multi_disable;
+14:49:06.5232  after Properties.Resources.multi_disable;
+14:49:06.5292  after Properties.Resources.change_disable;
+14:49:06.5392  after Properties.Resources.remove_disable;
+14:49:09.0984  frmSale is Activate.
+14:49:10.3457  frmSale is Activate.
+14:49:11.0810  frmCustRedeem is Activate.
+14:49:11.1534  Can not find FunctionId 121131010010001 in profileCollections.
+
+14:49:11.1554  Can not find FunctionId 121131010010002 in profileCollections.
+
+14:49:11.1704  frmSale is Activate.
+14:49:11.2242  Can not find FunctionId 121131020010001 in profileCollections.
+
+14:49:11.2272  Can not find FunctionId 121131020010002 in profileCollections.
+
+14:49:11.2651  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+14:49:11.2741  Can not find FunctionId 121131030010001 in profileCollections.
+
+14:49:11.2771  Can not find FunctionId 121131030010002 in profileCollections.
+
+14:49:11.6075  frmPayment_Load
+14:49:11.7031  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:49:11.7404  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:49:11.7423  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:49:11.7453  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:49:12.0077  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:49:12.0390  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:49:12.0410  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:49:12.0449  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:49:12.0629  after ucTxtAmountCash.Text
+14:49:12.0650  after ucTxtAmountCash.Focus
+14:49:12.0779  frmPayment is Activate.
+14:49:28.4832  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:49:28.4872  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:49:28.4942  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:49:28.4992  before saleProcess.getAmountExchangeRate enterChangebalance
+14:49:28.5022  before CalBalanceDiff
+14:49:28.5610  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:50:12.1790  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:50:12.2149  frmPayment is Activate.
+14:50:13.1121  frmPayment is Activate.
+14:50:13.9885  ABBNo from SaveSaleTrans 003000111F
+14:50:14.1078  store procedure return error (ResponseCode = "300")
+Response Message = สร้าง Transaction Net Vat หรือ FFORMTAX ไม่สมบูรณ์
+Help Message = กรุณายืนยันการชำระเงินอีกครั้ง
+Application Desc = pos_ValidateFFTI#1
+
+14:50:36.8650  frmConfirmPayment ProcessCashDrawerClose Hardware.isDrawerOpenFalse
+14:50:36.8982  frmConfirmPayment: call method closeForm >> tranSuccess : True, chkSwClose : True, statusCloseDrawer : True, finishReceipt False
+14:50:37.1473  frmCustRedeem is Activate.
+14:50:37.2825  Can not find FunctionId 121285101010002 in profileCollections.
+
+14:50:37.2855  Can not find FunctionId 121285101010002 in profileCollections.
+
+14:50:37.3468  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = 
+Application Desc = pos_CheckRedeemPoint_Coupon
+
+14:50:37.4123  frmConfirmPayment: salePageState in closeFormPayment = 2
+14:50:37.4352  Call afterNotify False
+14:50:37.5513  before Properties.Resources.multi_disable;
+14:50:37.5553  after Properties.Resources.multi_disable;
+14:50:37.5583  after Properties.Resources.change_disable;
+14:50:37.5603  after Properties.Resources.remove_disable;
+14:50:37.5882  frmSale is Activate.
+14:50:37.5912  frmSale is Activate.
+14:50:41.8335  frmSale is Activate.
+14:50:41.8365  frmSale is Activate.
+14:50:51.0479  frmSale is Activate.
+14:50:51.0519  frmSale is Activate.
+14:50:51.6650  start keyProduct()
+14:50:51.7827  before DisableControl();
+14:50:51.7857  before Properties.Resources.multi_disable;
+14:50:51.7887  after Properties.Resources.multi_disable;
+14:50:51.7917  after Properties.Resources.change_disable;
+14:50:51.7937  after Properties.Resources.remove_disable;
+14:50:51.7997  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:50:51.8252  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:50:51.8342  after setFocus();
+14:50:53.1354  before Properties.Resources.multi_disable;
+14:50:53.1414  after Properties.Resources.multi_disable;
+14:50:53.1444  after Properties.Resources.change_disable;
+14:50:53.1474  after Properties.Resources.remove_disable;
+14:50:53.7650  frmCustRedeem is Activate.
+14:50:53.8568  Can not find FunctionId 121131010010001 in profileCollections.
+
+14:50:53.8598  Can not find FunctionId 121131010010002 in profileCollections.
+
+14:50:53.8747  frmSale is Activate.
+14:50:53.8777  frmSale is Activate.
+14:50:53.9425  Can not find FunctionId 121131020010001 in profileCollections.
+
+14:50:53.9465  Can not find FunctionId 121131020010002 in profileCollections.
+
+14:50:53.9874  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+14:50:54.0014  Can not find FunctionId 121131030010001 in profileCollections.
+
+14:50:54.0044  Can not find FunctionId 121131030010002 in profileCollections.
+
+14:50:54.3660  frmPayment_Load
+14:50:54.4481  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:50:54.4953  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:50:54.4973  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:50:54.4993  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:50:54.7003  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:50:54.7251  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:50:54.7271  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:50:54.7321  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:50:54.7500  after ucTxtAmountCash.Text
+14:50:54.7540  after ucTxtAmountCash.Focus
+14:50:54.7650  frmPayment is Activate.
+14:51:19.3639  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:51:19.3669  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:51:19.3758  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:51:19.3808  before saleProcess.getAmountExchangeRate enterChangebalance
+14:51:19.3838  before CalBalanceDiff
+14:51:19.4460  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:52:32.6687  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:52:32.7017  frmPayment is Activate.
+14:52:32.7256  frmSale is Activate.
+14:52:32.7276  frmSale is Activate.
+14:52:32.7490  frmMainMenu is Activate.
+14:52:32.7529  frmMonitor2Detail is Activate.
+14:52:33.5784  frmPayment is Activate.
+14:52:35.7281  frmPayment is Activate.
+14:52:49.5710  key section = setting, name = printername
+14:52:49.5750  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+14:52:49.7387  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+14:52:49.8763  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+14:52:49.9016  Initial Hardware with BCOPOSTOSHIBA.dll
+14:52:50.5204  frmMonitorCustomer is Activate.
+14:52:50.5593  frmMonitorCustomerFooter is Activate.
+14:52:50.6002  frmMonitor2Detail is Activate.
+14:52:50.9459  frmLogin is Activate.
+14:52:56.1795  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+14:52:56.2084  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+14:53:19.1749  frmLogin is Activate.
+14:53:19.4571  frmMainMenu is Activate.
+14:53:42.6078  frmMainMenu is Activate.
+14:53:43.3512  Call afterNotify False
+14:53:43.6572  frmSale is Activate.
+14:53:45.0184  SubOtherService1 is Activate.
+14:53:47.5362  SubOtherService1 is Activate.
+14:53:47.7186  Before ListInvoiceAR
+14:53:55.6407  frmPayment_Load
+14:53:55.7255  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:53:55.7697  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:53:55.7727  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:53:55.7767  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:53:55.9821  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:53:56.0115  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:53:56.0135  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:53:56.0175  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:53:56.0374  after ucTxtAmountCash.Text
+14:53:56.0404  after ucTxtAmountCash.Focus
+14:53:56.0514  frmPayment is Activate.
+14:53:59.3492  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:53:59.3512  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:53:59.3592  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:53:59.3652  before saleProcess.getAmountExchangeRate enterChangebalance
+14:53:59.3682  before CalBalanceDiff
+14:53:59.4260  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:53:59.4779  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:53:59.4799  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:53:59.4869  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:00.7119  ExecuteToDataTable Error message : Divide by zero error encountered.
+14:54:00.7149  Current SQLState not in connectionLost and queryTimeount. SQLState = 22012
+14:54:00.8204  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:00.8588  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:00.8608  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:00.8668  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:00.9256  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:00.9533  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:00.9553  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:00.9663  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:00.9855  after ucTxtAmountCash.Text
+14:54:00.9915  after ucTxtAmountCash.Focus
+14:54:02.7315  frmPayment is Activate.
+14:54:02.7564  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:02.7959  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:02.7979  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:02.8049  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:04.6349  frmPayment is Activate.
+14:54:07.8092  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:07.8132  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:07.8211  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:07.8278  before saleProcess.getAmountExchangeRate enterChangebalance
+14:54:07.8298  before CalBalanceDiff
+14:54:07.8907  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:07.9406  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:07.9436  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:07.9516  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:08.6235  ExecuteToDataTable Error message : Divide by zero error encountered.
+14:54:08.6255  Current SQLState not in connectionLost and queryTimeount. SQLState = 22012
+14:54:10.6045  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:10.6425  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:10.6454  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:10.6514  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:11.7535  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:11.7827  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:11.7847  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:11.7927  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:11.8125  after ucTxtAmountCash.Text
+14:54:11.8185  after ucTxtAmountCash.Focus
+14:54:14.5423  frmPayment is Activate.
+14:54:39.7067  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:39.8112  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:39.8132  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:39.8202  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:40.5362  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:40.5392  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:40.5452  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:40.5492  before saleProcess.getAmountExchangeRate enterChangebalance
+14:54:40.5522  before CalBalanceDiff
+14:54:40.5861  frmPayment is Activate.
+14:54:40.6081  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:40.6521  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:40.6541  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:40.6621  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:41.5581  ExecuteToDataTable Error message : Divide by zero error encountered.
+14:54:41.5601  Current SQLState not in connectionLost and queryTimeount. SQLState = 22012
+14:54:41.6505  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:41.6894  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:41.6914  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:41.6994  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:41.7602  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:41.7892  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:41.7921  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:41.7981  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:41.8181  after ucTxtAmountCash.Text
+14:54:41.8221  after ucTxtAmountCash.Focus
+14:54:43.3054  frmPayment is Activate.
+14:54:43.3314  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:43.3673  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:43.3693  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:43.3782  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:45.8073  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:45.8094  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:45.8193  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:45.8243  before saleProcess.getAmountExchangeRate enterChangebalance
+14:54:45.8283  before CalBalanceDiff
+14:54:45.8846  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:54:45.9385  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:54:45.9405  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:54:45.9474  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:54:47.5471  ExecuteToDataTable Error message : Divide by zero error encountered.
+14:54:47.5501  Current SQLState not in connectionLost and queryTimeount. SQLState = 22012
+14:57:03.4429  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:57:03.4838  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:57:03.4858  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:57:03.4941  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:57:03.5688  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:57:03.5981  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:57:03.6001  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:57:03.6090  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:57:03.6309  after ucTxtAmountCash.Text
+14:57:03.6359  after ucTxtAmountCash.Focus
+14:57:05.2061  frmPayment is Activate.
+14:57:05.2350  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:57:05.2759  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:57:05.2779  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:57:05.2858  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:57:29.3078  frmPayment is Activate.
+14:57:42.0708  frmPayment is Activate.
+14:57:45.5279  frmPayment is Activate.
+14:57:49.6585  frmPayment is Activate.
+14:57:51.2260  frmPayment is Activate.
+14:57:53.5758  frmPayment is Activate.
+14:57:55.5435  frmPayment is Activate.
+14:58:01.3993  SubOtherService1 is Activate.
+14:58:02.2511  frmMainMenu is Activate.
+14:58:02.5905  Call afterNotify False
+14:58:03.0654  frmSale is Activate.
+14:58:11.6445  frmSale is Activate.
+14:58:12.9795  frmSale is Activate.
+14:58:21.5400  frmSale is Activate.
+14:58:23.1960  start keyProduct()
+14:58:23.4601  before DisableControl();
+14:58:23.4631  before Properties.Resources.multi_disable;
+14:58:23.4650  after Properties.Resources.multi_disable;
+14:58:23.4691  after Properties.Resources.change_disable;
+14:58:23.4710  after Properties.Resources.remove_disable;
+14:58:23.4790  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+14:58:23.5029  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+14:58:23.5119  after setFocus();
+14:58:24.4554  before Properties.Resources.multi_disable;
+14:58:24.4595  after Properties.Resources.multi_disable;
+14:58:24.4634  after Properties.Resources.change_disable;
+14:58:24.4664  after Properties.Resources.remove_disable;
+14:58:25.1735  frmCustRedeem is Activate.
+14:58:25.2434  Can not find FunctionId 121131010010001 in profileCollections.
+
+14:58:25.2483  Can not find FunctionId 121131010010002 in profileCollections.
+
+14:58:25.2623  frmSale is Activate.
+14:58:25.3341  Can not find FunctionId 121131020010001 in profileCollections.
+
+14:58:25.3401  Can not find FunctionId 121131020010002 in profileCollections.
+
+14:58:25.3880  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+14:58:25.3969  Can not find FunctionId 121131030010001 in profileCollections.
+
+14:58:25.4039  Can not find FunctionId 121131030010002 in profileCollections.
+
+14:58:25.7320  frmPayment_Load
+14:58:25.8347  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:58:25.8777  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:58:25.8807  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:58:25.8847  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:58:26.1061  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:58:26.1313  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:58:26.1333  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:58:26.1372  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:58:26.1532  after ucTxtAmountCash.Text
+14:58:26.1552  after ucTxtAmountCash.Focus
+14:58:26.1672  frmPayment is Activate.
+14:58:29.5408  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+14:58:29.5437  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+14:58:29.5517  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+14:58:29.5547  before saleProcess.getAmountExchangeRate enterChangebalance
+14:58:29.5577  before CalBalanceDiff
+14:58:29.6216  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:58:34.0797  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+14:58:34.1149  frmPayment is Activate.
+14:58:35.5622  frmSale is Activate.
+15:07:40.4827  frmSale is Activate.
+15:08:08.6721  frmSale is Activate.
+15:08:11.1160  frmSale is Activate.
+15:12:25.1046  frmSale is Activate.
+15:20:12.8984  frmSale is Activate.
+15:20:14.4091  frmCustRedeem is Activate.
+15:20:14.5028  Can not find FunctionId 121131010010001 in profileCollections.
+
+15:20:14.5028  Can not find FunctionId 121131010010002 in profileCollections.
+
+15:20:14.5028  frmSale is Activate.
+15:20:14.5966  Can not find FunctionId 121131020010001 in profileCollections.
+
+15:20:14.5966  Can not find FunctionId 121131020010002 in profileCollections.
+
+15:20:14.6434  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+15:20:14.6590  Can not find FunctionId 121131030010001 in profileCollections.
+
+15:20:14.6746  Can not find FunctionId 121131030010002 in profileCollections.
+
+15:20:15.0183  frmPayment_Load
+15:20:15.1120  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+15:20:15.1589  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+15:20:15.1589  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+15:20:15.1589  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+15:20:15.3932  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+15:20:15.4088  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+15:20:15.4244  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+15:20:15.4244  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+15:20:15.4401  after ucTxtAmountCash.Text
+15:20:15.4557  after ucTxtAmountCash.Focus
+15:20:15.4557  frmPayment is Activate.
+15:20:25.5238  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+15:20:25.5249  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+15:20:25.5249  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+15:20:25.5249  before saleProcess.getAmountExchangeRate enterChangebalance
+15:20:25.5249  before CalBalanceDiff
+15:20:25.5874  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+15:20:27.5642  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+15:20:27.5954  frmPayment is Activate.
+15:20:28.5046  frmPayment is Activate.
+15:28:17.6124  key section = setting, name = printername
+15:28:17.6280  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+15:28:17.7843  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+15:28:17.9311  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+15:28:17.9778  Initial Hardware with BCOPOSTOSHIBA.dll
+15:28:18.4751  frmMonitorCustomer is Activate.
+15:28:18.5064  frmMonitorCustomerFooter is Activate.
+15:28:18.5376  frmMonitor2Detail is Activate.
+15:28:18.9125  frmLogin is Activate.
+15:28:26.4354  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+15:28:26.4565  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+15:28:28.4440  frmLogin is Activate.
+15:28:28.8139  frmMainMenu is Activate.
+15:28:29.6440  Call afterNotify False
+15:28:29.9408  frmSale is Activate.
+15:29:40.5741  frmSale is Activate.
+15:29:43.1047  frmSale is Activate.
+15:29:46.3228  frmSale is Activate.
+15:29:47.0774  start keyProduct()
+15:29:47.2182  before DisableControl();
+15:29:47.2182  before Properties.Resources.multi_disable;
+15:29:47.2182  after Properties.Resources.multi_disable;
+15:29:47.2182  after Properties.Resources.change_disable;
+15:29:47.2336  after Properties.Resources.remove_disable;
+15:29:47.2336  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+15:29:47.2651  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+15:29:47.2651  after setFocus();
+15:29:48.0489  before Properties.Resources.multi_disable;
+15:29:48.0489  after Properties.Resources.multi_disable;
+15:29:48.0590  after Properties.Resources.change_disable;
+15:29:48.0590  after Properties.Resources.remove_disable;
+15:29:48.6093  frmCustRedeem is Activate.
+15:29:48.6791  Can not find FunctionId 121131010010001 in profileCollections.
+
+15:29:48.6791  Can not find FunctionId 121131010010002 in profileCollections.
+
+15:29:48.6992  frmSale is Activate.
+15:29:48.7590  Can not find FunctionId 121131020010001 in profileCollections.
+
+15:29:48.7692  Can not find FunctionId 121131020010002 in profileCollections.
+
+15:29:48.8191  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+15:29:48.8291  Can not find FunctionId 121131030010001 in profileCollections.
+
+15:29:48.8291  Can not find FunctionId 121131030010002 in profileCollections.
+
+15:29:49.3292  frmPayment_Load
+15:29:49.4391  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+15:29:49.5009  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+15:29:49.5009  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+15:29:49.5090  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+15:29:49.7291  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+15:29:49.7493  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+15:29:49.7493  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+15:29:49.7592  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+15:29:49.7789  after ucTxtAmountCash.Text
+15:29:49.7789  after ucTxtAmountCash.Focus
+15:29:49.7890  frmPayment is Activate.
+15:29:53.5336  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+15:29:53.5336  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+15:29:53.5491  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+15:29:53.5491  before saleProcess.getAmountExchangeRate enterChangebalance
+15:29:53.5491  before CalBalanceDiff
+15:29:53.6273  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+15:29:53.8616  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+15:29:53.8929  frmPayment is Activate.
+15:29:54.5022  frmPayment is Activate.
+15:29:55.5548  ABBNo from SaveSaleTrans 003000199
+15:29:55.9609  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+15:29:56.4921  frmConfirmPayment ProcessCashDrawerClose Hardware.isDrawerOpenFalse
+15:29:56.5233  frmConfirmPayment: call method closeForm >> tranSuccess : True, chkSwClose : True, statusCloseDrawer : True, finishReceipt False
+15:29:56.7889  frmCustRedeem is Activate.
+15:29:56.8826  Can not find FunctionId 121285101010002 in profileCollections.
+
+15:29:56.8826  Can not find FunctionId 121285101010002 in profileCollections.
+
+15:29:56.9763  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = 
+Application Desc = pos_CheckRedeemPoint_Coupon
+
+15:29:57.0857  frmConfirmPayment: salePageState in closeFormPayment = 2
+15:29:57.1013  Call afterNotify False
+15:29:57.2263  before Properties.Resources.multi_disable;
+15:29:57.2263  after Properties.Resources.multi_disable;
+15:29:57.2419  after Properties.Resources.change_disable;
+15:29:57.2419  after Properties.Resources.remove_disable;
+15:29:57.3044  frmSale is Activate.
+15:29:57.3044  frmSale is Activate.
+15:37:14.6618  frmSale is Activate.
+15:37:14.6648  frmSale is Activate.
+15:37:21.3043  frmSale is Activate.
+15:37:21.3073  frmSale is Activate.
+15:38:40.9839  frmSale is Activate.
+15:38:40.9839  frmSale is Activate.
+16:08:58.8712  key section = setting, name = printername
+16:08:58.8712  The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at BJCBCPOS_Model.INIConfig.getValue(ConfigKey key) in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\util\INIConfig.cs:line 73
+
+16:08:59.0274  [Change connection string] Current connection string: Provider=SQLOLEDB;Server=172.28.4.36;Database=ESTORE;User Id=BIGAPP;Password=kzyyQ1_E@2sTW;Application Name=BJCBCPOS_Till003
+16:08:59.1368  Store Return DevicePrinterABB = 2 (1 = HP, 2 = Toshiba)
+
+16:08:59.1524  Initial Hardware with BCOPOSTOSHIBA.dll
+16:08:59.7929  frmMonitorCustomer is Activate.
+16:08:59.8085  frmMonitorCustomerFooter is Activate.
+16:08:59.8397  frmMonitor2Detail is Activate.
+16:09:00.1230  frmLogin is Activate.
+16:09:07.3442  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkCashDrawer() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 78
+
+16:09:07.3742  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+16:09:08.7195  frmLogin is Activate.
+16:09:09.0094  frmMainMenu is Activate.
+16:09:10.0394  Call afterNotify False
+16:09:10.8301   salePageState = 1
+16:09:10.8457  frmSale is Activate.
+16:09:23.7282   salePageState = 1
+16:09:23.7437  frmSale is Activate.
+16:09:30.5077   salePageState = 1
+16:09:30.5077  frmSale is Activate.
+16:09:35.6630   salePageState = 1
+16:09:35.6784  frmSale is Activate.
+16:09:38.3652  start keyProduct()
+16:09:38.4904  before DisableControl();
+16:09:38.5058  before Properties.Resources.multi_disable;
+16:09:38.5058  after Properties.Resources.multi_disable;
+16:09:38.5058  after Properties.Resources.change_disable;
+16:09:38.5058  after Properties.Resources.remove_disable;
+16:09:38.5215  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+16:09:38.5530  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+16:09:38.5530  after setFocus();
+16:09:39.1138  start keyProduct()
+16:09:39.2809  before DisableControl();
+16:09:39.2809  before Properties.Resources.multi_disable;
+16:09:39.2908  after Properties.Resources.multi_disable;
+16:09:39.2908  after Properties.Resources.change_disable;
+16:09:39.2908  after Properties.Resources.remove_disable;
+16:09:39.2908  after Properties.Resources.btn_payment_disable; ProgramConfig.flagDiscount = false;
+16:09:39.3206  after saleProcess.getAmountExchangeRate keyProduct res.response.next = true
+16:09:39.3305  after setFocus();
+16:09:41.1960  before Properties.Resources.multi_disable;
+16:09:41.1960  after Properties.Resources.multi_disable;
+16:09:41.1960  after Properties.Resources.change_disable;
+16:09:41.1960  after Properties.Resources.remove_disable;
+16:09:47.2712  frmCustRedeem is Activate.
+16:09:47.3494  Can not find FunctionId 121131010010001 in profileCollections.
+
+16:09:47.3494  Can not find FunctionId 121131010010002 in profileCollections.
+
+16:09:47.3494   salePageState = 1
+16:09:47.3649  frmSale is Activate.
+16:09:47.4118  Can not find FunctionId 121131020010001 in profileCollections.
+
+16:09:47.4118  Can not find FunctionId 121131020010002 in profileCollections.
+
+16:09:47.4587  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+16:09:47.4743  Can not find FunctionId 121131030010001 in profileCollections.
+
+16:09:47.4743  Can not find FunctionId 121131030010002 in profileCollections.
+
+16:09:47.8648  frmPayment_Load
+16:09:47.9742  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+16:09:48.0210  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+16:09:48.0210  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+16:09:48.0210  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+16:09:48.2241  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+16:09:48.2554  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+16:09:48.2554  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+16:09:48.2554  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+16:09:48.2710  after ucTxtAmountCash.Text
+16:09:48.2710  after ucTxtAmountCash.Focus
+16:09:48.2866  frmPayment is Activate.
+16:10:12.3903   salePageState = 1
+16:10:12.3903  frmSale is Activate.
+16:10:13.8275  frmCustRedeem is Activate.
+16:10:13.8900  Can not find FunctionId 121131010010001 in profileCollections.
+
+16:10:13.8900  Can not find FunctionId 121131010010002 in profileCollections.
+
+16:10:13.8900   salePageState = 1
+16:10:13.9056  frmSale is Activate.
+16:10:13.9525  Can not find FunctionId 121131020010001 in profileCollections.
+
+16:10:13.9525  Can not find FunctionId 121131020010002 in profileCollections.
+
+16:10:13.9993  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = N/A
+Application Desc = pos_CheckRedeemPointPercentDiscount
+
+16:10:13.9993  Can not find FunctionId 121131030010001 in profileCollections.
+
+16:10:13.9993  Can not find FunctionId 121131030010002 in profileCollections.
+
+16:10:14.2961  frmPayment_Load
+16:10:14.3743  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+16:10:14.4214  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+16:10:14.4214  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+16:10:14.4214  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+16:10:14.6086  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+16:10:14.6242  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+16:10:14.6399  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+16:10:14.6399  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+16:10:14.6554  after ucTxtAmountCash.Text
+16:10:14.6554  after ucTxtAmountCash.Focus
+16:10:14.6711  frmPayment is Activate.
+16:10:17.6707  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+16:10:17.6863  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+16:10:17.6863  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+16:10:17.6863  before saleProcess.getAmountExchangeRate enterChangebalance
+16:10:17.6863  before CalBalanceDiff
+16:10:17.7644  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+16:10:18.0143  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+16:10:18.0456  frmPayment is Activate.
+16:10:18.6392  frmPayment is Activate.
+16:10:19.8422  ABBNo from SaveSaleTrans 003000200
+16:10:20.1857  error Object reference not set to an instance of an object.
+   at BJCBCPOS_Model.PrinterToshiba.checkPrinter() in D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\hardware\PrinterToshiba.cs:line 153
+
+16:10:20.6231  frmConfirmPayment ProcessCashDrawerClose Hardware.isDrawerOpenFalse
+16:10:20.6543  frmConfirmPayment: call method closeForm >> tranSuccess : True, chkSwClose : True, statusCloseDrawer : True, finishReceipt False
+16:10:20.8418  frmCustRedeem is Activate.
+16:10:20.9199  Can not find FunctionId 121285101010002 in profileCollections.
+
+16:10:20.9199  Can not find FunctionId 121285101010002 in profileCollections.
+
+16:10:21.0136  store procedure return error (ResponseCode = "300")
+Response Message = 
+Help Message = 
+Application Desc = pos_CheckRedeemPoint_Coupon
+
+16:10:21.0761  frmConfirmPayment: salePageState in closeFormPayment = 2
+16:10:21.1074  Call afterNotify False
+16:10:21.1074   salePageState = 2
+16:10:21.2639  before Properties.Resources.multi_disable;
+16:10:21.2792  after Properties.Resources.multi_disable;
+16:10:21.2792  after Properties.Resources.change_disable;
+16:10:21.2792  after Properties.Resources.remove_disable;
+16:10:21.2948  frmSale is Activate.
+16:10:21.3105  frmSale is Activate.
+16:10:23.7161  frmMainMenu is Activate.
+16:10:23.7161  frmMainMenu is Activate.
+16:10:48.7697  Call afterNotify False
+16:10:49.0509   salePageState = 1
+16:10:49.0509  frmSale is Activate.
+16:10:50.3319  frmReceivePaymentPOD is Activate.
+16:11:42.0055  frmReceivePaymentPOD is Activate.
+16:11:44.2706  frmPayment_Load
+16:11:44.3488  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+16:11:44.3802  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+16:11:44.3802  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+16:11:44.3802  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+16:11:44.5206  frmPayment is Activate.
+16:12:30.8872  frmPayment is Activate.
+16:12:30.9340  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+16:12:31.0904  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+16:12:31.0904  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+16:12:31.0904  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
+16:13:10.0739  frmPayment is Activate.
+16:13:10.1051  store procedure return error (ResponseCode = "300")
+Response Message = N/A
+Help Message = 
+Application Desc = 
+
+16:13:10.1520  after saleProcess.getAmountExchangeRate Method SummaryCashIn
+16:13:10.1520  after saleProcess.getAmountExchangeRate Method SummaryCashIn res.response.next = true Start
+16:13:10.1520  after saleProcess.getAmoSuntExchangeRate Method SummaryCashIn res.response.next = true End
