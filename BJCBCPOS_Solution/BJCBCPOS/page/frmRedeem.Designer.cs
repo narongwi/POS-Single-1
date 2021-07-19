@@ -147,7 +147,7 @@
             // lbExpireDateVal
             // 
             this.lbExpireDateVal.BackColor = System.Drawing.Color.Transparent;
-            this.lbExpireDateVal.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbExpireDateVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbExpireDateVal.ForeColor = System.Drawing.Color.Red;
             this.lbExpireDateVal.Location = new System.Drawing.Point(43, 347);
             this.lbExpireDateVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -161,7 +161,7 @@
             // lbNameVal
             // 
             this.lbNameVal.BackColor = System.Drawing.Color.Transparent;
-            this.lbNameVal.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbNameVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbNameVal.ForeColor = System.Drawing.Color.Black;
             this.lbNameVal.Location = new System.Drawing.Point(43, 186);
             this.lbNameVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -175,7 +175,7 @@
             // lbMemberIDVal
             // 
             this.lbMemberIDVal.BackColor = System.Drawing.Color.Transparent;
-            this.lbMemberIDVal.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbMemberIDVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbMemberIDVal.ForeColor = System.Drawing.Color.Black;
             this.lbMemberIDVal.Location = new System.Drawing.Point(43, 106);
             this.lbMemberIDVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -189,7 +189,7 @@
             // lbExpireDate
             // 
             this.lbExpireDate.BackColor = System.Drawing.Color.Transparent;
-            this.lbExpireDate.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbExpireDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbExpireDate.ForeColor = System.Drawing.Color.Gray;
             this.lbExpireDate.Location = new System.Drawing.Point(14, 311);
             this.lbExpireDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -201,7 +201,7 @@
             // lbPoint
             // 
             this.lbPoint.BackColor = System.Drawing.Color.Transparent;
-            this.lbPoint.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbPoint.ForeColor = System.Drawing.Color.Gray;
             this.lbPoint.Location = new System.Drawing.Point(14, 231);
             this.lbPoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -213,7 +213,7 @@
             // lbHearderName
             // 
             this.lbHearderName.BackColor = System.Drawing.Color.Transparent;
-            this.lbHearderName.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHearderName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHearderName.ForeColor = System.Drawing.Color.Gray;
             this.lbHearderName.Location = new System.Drawing.Point(14, 150);
             this.lbHearderName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -225,7 +225,7 @@
             // lbMemberID
             // 
             this.lbMemberID.BackColor = System.Drawing.Color.Transparent;
-            this.lbMemberID.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbMemberID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbMemberID.ForeColor = System.Drawing.Color.Gray;
             this.lbMemberID.Location = new System.Drawing.Point(14, 70);
             this.lbMemberID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -237,7 +237,7 @@
             // lbHeader
             // 
             this.lbHeader.BackColor = System.Drawing.Color.Transparent;
-            this.lbHeader.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeader.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbHeader.Location = new System.Drawing.Point(2, 18);
             this.lbHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -261,12 +261,12 @@
             this.lbPointTxt3.AutoSize = true;
             this.lbPointTxt3.BackColor = System.Drawing.Color.Transparent;
             this.lbPointTxt3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbPointTxt3.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPointTxt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPointTxt3.ForeColor = System.Drawing.Color.Black;
-            this.lbPointTxt3.Location = new System.Drawing.Point(129, 0);
+            this.lbPointTxt3.Location = new System.Drawing.Point(120, 0);
             this.lbPointTxt3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPointTxt3.Name = "lbPointTxt3";
-            this.lbPointTxt3.Size = new System.Drawing.Size(73, 32);
+            this.lbPointTxt3.Size = new System.Drawing.Size(71, 25);
             this.lbPointTxt3.TabIndex = 122;
             this.lbPointTxt3.Text = "คะแนน";
             this.lbPointTxt3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -276,12 +276,12 @@
             this.lbPointVal.AutoSize = true;
             this.lbPointVal.BackColor = System.Drawing.Color.Transparent;
             this.lbPointVal.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbPointVal.Font = new System.Drawing.Font("Prompt", 15.75F);
+            this.lbPointVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.lbPointVal.ForeColor = System.Drawing.Color.Black;
             this.lbPointVal.Location = new System.Drawing.Point(0, 0);
             this.lbPointVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPointVal.Name = "lbPointVal";
-            this.lbPointVal.Size = new System.Drawing.Size(129, 32);
+            this.lbPointVal.Size = new System.Drawing.Size(120, 25);
             this.lbPointVal.TabIndex = 109;
             this.lbPointVal.Text = "10,000,000";
             this.lbPointVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -290,7 +290,7 @@
             // lbSumPointUseVal
             // 
             this.lbSumPointUseVal.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumPointUseVal.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumPointUseVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSumPointUseVal.ForeColor = System.Drawing.Color.Black;
             this.lbSumPointUseVal.Location = new System.Drawing.Point(335, 59);
             this.lbSumPointUseVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -304,7 +304,7 @@
             // lbSumPayAmtVal
             // 
             this.lbSumPayAmtVal.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumPayAmtVal.Font = new System.Drawing.Font("Prompt", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumPayAmtVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSumPayAmtVal.ForeColor = System.Drawing.Color.Black;
             this.lbSumPayAmtVal.Location = new System.Drawing.Point(192, 110);
             this.lbSumPayAmtVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -318,7 +318,7 @@
             // lbSumDiscountVal
             // 
             this.lbSumDiscountVal.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumDiscountVal.Font = new System.Drawing.Font("Prompt", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumDiscountVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSumDiscountVal.ForeColor = System.Drawing.Color.Red;
             this.lbSumDiscountVal.Location = new System.Drawing.Point(192, 54);
             this.lbSumDiscountVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -332,7 +332,7 @@
             // lbSumAmtVal
             // 
             this.lbSumAmtVal.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumAmtVal.Font = new System.Drawing.Font("Prompt", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumAmtVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSumAmtVal.ForeColor = System.Drawing.Color.Black;
             this.lbSumAmtVal.Location = new System.Drawing.Point(192, 3);
             this.lbSumAmtVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -347,19 +347,19 @@
             // 
             this.lbSumPointUse.AutoSize = true;
             this.lbSumPointUse.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumPointUse.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumPointUse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSumPointUse.ForeColor = System.Drawing.Color.Black;
             this.lbSumPointUse.Location = new System.Drawing.Point(335, 35);
             this.lbSumPointUse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSumPointUse.Name = "lbSumPointUse";
-            this.lbSumPointUse.Size = new System.Drawing.Size(189, 29);
+            this.lbSumPointUse.Size = new System.Drawing.Size(177, 24);
             this.lbSumPointUse.TabIndex = 105;
             this.lbSumPointUse.Text = "คะแนนที่ใช้รวมทั้งหมด";
             // 
             // lbSumAmt
             // 
             this.lbSumAmt.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumAmt.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSumAmt.ForeColor = System.Drawing.Color.Black;
             this.lbSumAmt.Location = new System.Drawing.Point(6, 111);
             this.lbSumAmt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -371,7 +371,7 @@
             // lbSumDiscount
             // 
             this.lbSumDiscount.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumDiscount.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSumDiscount.ForeColor = System.Drawing.Color.Black;
             this.lbSumDiscount.Location = new System.Drawing.Point(6, 55);
             this.lbSumDiscount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -383,7 +383,7 @@
             // lbSumReceipt
             // 
             this.lbSumReceipt.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumReceipt.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSumReceipt.ForeColor = System.Drawing.Color.Black;
             this.lbSumReceipt.Location = new System.Drawing.Point(6, 4);
             this.lbSumReceipt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -395,7 +395,7 @@
             // lb_HeaderRedeemPoint
             // 
             this.lb_HeaderRedeemPoint.BackColor = System.Drawing.Color.Transparent;
-            this.lb_HeaderRedeemPoint.Font = new System.Drawing.Font("Prompt", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_HeaderRedeemPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_HeaderRedeemPoint.ForeColor = System.Drawing.Color.ForestGreen;
             this.lb_HeaderRedeemPoint.Location = new System.Drawing.Point(4, 45);
             this.lb_HeaderRedeemPoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -435,7 +435,7 @@
             // lbSumRemainPointVal
             // 
             this.lbSumRemainPointVal.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumRemainPointVal.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumRemainPointVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSumRemainPointVal.ForeColor = System.Drawing.Color.Black;
             this.lbSumRemainPointVal.Location = new System.Drawing.Point(336, 113);
             this.lbSumRemainPointVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -450,12 +450,12 @@
             // 
             this.lbRemainPoint.AutoSize = true;
             this.lbRemainPoint.BackColor = System.Drawing.Color.Transparent;
-            this.lbRemainPoint.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRemainPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRemainPoint.ForeColor = System.Drawing.Color.Black;
             this.lbRemainPoint.Location = new System.Drawing.Point(335, 90);
             this.lbRemainPoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbRemainPoint.Name = "lbRemainPoint";
-            this.lbRemainPoint.Size = new System.Drawing.Size(144, 29);
+            this.lbRemainPoint.Size = new System.Drawing.Size(131, 24);
             this.lbRemainPoint.TabIndex = 118;
             this.lbRemainPoint.Text = "คะแนนที่คงเหลือ";
             // 
@@ -485,7 +485,7 @@
             // lbSumRDCount
             // 
             this.lbSumRDCount.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumRDCount.Font = new System.Drawing.Font("Prompt", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumRDCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSumRDCount.ForeColor = System.Drawing.Color.Black;
             this.lbSumRDCount.Location = new System.Drawing.Point(542, 3);
             this.lbSumRDCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -498,7 +498,7 @@
             // lbPrivileage
             // 
             this.lbPrivileage.BackColor = System.Drawing.Color.Transparent;
-            this.lbPrivileage.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrivileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrivileage.ForeColor = System.Drawing.Color.Black;
             this.lbPrivileage.Location = new System.Drawing.Point(600, 3);
             this.lbPrivileage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -511,7 +511,7 @@
             // lbSumRedeemed
             // 
             this.lbSumRedeemed.BackColor = System.Drawing.Color.Transparent;
-            this.lbSumRedeemed.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSumRedeemed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSumRedeemed.ForeColor = System.Drawing.Color.Black;
             this.lbSumRedeemed.Location = new System.Drawing.Point(334, 4);
             this.lbSumRedeemed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -523,7 +523,7 @@
             // lbPointTxt
             // 
             this.lbPointTxt.BackColor = System.Drawing.Color.Transparent;
-            this.lbPointTxt.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPointTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPointTxt.ForeColor = System.Drawing.Color.Black;
             this.lbPointTxt.Location = new System.Drawing.Point(595, 60);
             this.lbPointTxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -536,7 +536,7 @@
             // lbPointTxt2
             // 
             this.lbPointTxt2.BackColor = System.Drawing.Color.Transparent;
-            this.lbPointTxt2.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPointTxt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPointTxt2.ForeColor = System.Drawing.Color.Black;
             this.lbPointTxt2.Location = new System.Drawing.Point(595, 113);
             this.lbPointTxt2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -548,7 +548,7 @@
             // 
             // lbHProduct_No
             // 
-            this.lbHProduct_No.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHProduct_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHProduct_No.Location = new System.Drawing.Point(4, 1);
             this.lbHProduct_No.Name = "lbHProduct_No";
             this.lbHProduct_No.Size = new System.Drawing.Size(45, 46);
@@ -558,7 +558,7 @@
             // 
             // lbHProduct_Desc
             // 
-            this.lbHProduct_Desc.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHProduct_Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHProduct_Desc.Location = new System.Drawing.Point(50, 1);
             this.lbHProduct_Desc.Name = "lbHProduct_Desc";
             this.lbHProduct_Desc.Size = new System.Drawing.Size(100, 46);
@@ -568,7 +568,7 @@
             // 
             // lbHProduct_UsePoint
             // 
-            this.lbHProduct_UsePoint.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHProduct_UsePoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHProduct_UsePoint.Location = new System.Drawing.Point(163, 1);
             this.lbHProduct_UsePoint.Name = "lbHProduct_UsePoint";
             this.lbHProduct_UsePoint.Size = new System.Drawing.Size(67, 46);
@@ -578,7 +578,7 @@
             // 
             // lbHProduct_UseCash
             // 
-            this.lbHProduct_UseCash.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHProduct_UseCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHProduct_UseCash.Location = new System.Drawing.Point(243, 1);
             this.lbHProduct_UseCash.Name = "lbHProduct_UseCash";
             this.lbHProduct_UseCash.Size = new System.Drawing.Size(82, 46);
@@ -588,7 +588,7 @@
             // 
             // lbHProduct_RedeemCount
             // 
-            this.lbHProduct_RedeemCount.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHProduct_RedeemCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHProduct_RedeemCount.Location = new System.Drawing.Point(332, 1);
             this.lbHProduct_RedeemCount.Name = "lbHProduct_RedeemCount";
             this.lbHProduct_RedeemCount.Size = new System.Drawing.Size(52, 46);
@@ -598,7 +598,7 @@
             // 
             // lbHProduct_SumPoint
             // 
-            this.lbHProduct_SumPoint.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHProduct_SumPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHProduct_SumPoint.Location = new System.Drawing.Point(392, 1);
             this.lbHProduct_SumPoint.Name = "lbHProduct_SumPoint";
             this.lbHProduct_SumPoint.Size = new System.Drawing.Size(84, 46);
@@ -608,7 +608,7 @@
             // 
             // lbHProduct_SumCash
             // 
-            this.lbHProduct_SumCash.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHProduct_SumCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHProduct_SumCash.Location = new System.Drawing.Point(490, 1);
             this.lbHProduct_SumCash.Name = "lbHProduct_SumCash";
             this.lbHProduct_SumCash.Size = new System.Drawing.Size(66, 46);
@@ -618,7 +618,7 @@
             // 
             // lbHProduct_Discount
             // 
-            this.lbHProduct_Discount.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHProduct_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHProduct_Discount.Location = new System.Drawing.Point(567, 1);
             this.lbHProduct_Discount.Name = "lbHProduct_Discount";
             this.lbHProduct_Discount.Size = new System.Drawing.Size(110, 46);
@@ -657,7 +657,7 @@
             // 
             // lbHDiscount_RedeemPoint
             // 
-            this.lbHDiscount_RedeemPoint.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHDiscount_RedeemPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHDiscount_RedeemPoint.Location = new System.Drawing.Point(565, 1);
             this.lbHDiscount_RedeemPoint.Name = "lbHDiscount_RedeemPoint";
             this.lbHDiscount_RedeemPoint.Size = new System.Drawing.Size(112, 46);
@@ -667,7 +667,7 @@
             // 
             // lbHDiscount_Discount
             // 
-            this.lbHDiscount_Discount.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHDiscount_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHDiscount_Discount.Location = new System.Drawing.Point(503, 3);
             this.lbHDiscount_Discount.Name = "lbHDiscount_Discount";
             this.lbHDiscount_Discount.Size = new System.Drawing.Size(58, 46);
@@ -677,7 +677,7 @@
             // 
             // lbHDiscount_DiscountAmt
             // 
-            this.lbHDiscount_DiscountAmt.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHDiscount_DiscountAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHDiscount_DiscountAmt.Location = new System.Drawing.Point(402, 3);
             this.lbHDiscount_DiscountAmt.Name = "lbHDiscount_DiscountAmt";
             this.lbHDiscount_DiscountAmt.Size = new System.Drawing.Size(96, 41);
@@ -687,7 +687,7 @@
             // 
             // lbHDiscount_UsePoint
             // 
-            this.lbHDiscount_UsePoint.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHDiscount_UsePoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHDiscount_UsePoint.Location = new System.Drawing.Point(322, 3);
             this.lbHDiscount_UsePoint.Name = "lbHDiscount_UsePoint";
             this.lbHDiscount_UsePoint.Size = new System.Drawing.Size(73, 41);
@@ -697,7 +697,7 @@
             // 
             // lbHDiscount_Price
             // 
-            this.lbHDiscount_Price.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHDiscount_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHDiscount_Price.Location = new System.Drawing.Point(221, 3);
             this.lbHDiscount_Price.Name = "lbHDiscount_Price";
             this.lbHDiscount_Price.Size = new System.Drawing.Size(87, 41);
@@ -707,7 +707,7 @@
             // 
             // lbHDiscount_DiscountPercent
             // 
-            this.lbHDiscount_DiscountPercent.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHDiscount_DiscountPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHDiscount_DiscountPercent.Location = new System.Drawing.Point(51, 3);
             this.lbHDiscount_DiscountPercent.Name = "lbHDiscount_DiscountPercent";
             this.lbHDiscount_DiscountPercent.Size = new System.Drawing.Size(164, 41);
@@ -717,7 +717,7 @@
             // 
             // lbHDiscount_No
             // 
-            this.lbHDiscount_No.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHDiscount_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHDiscount_No.Location = new System.Drawing.Point(4, 3);
             this.lbHDiscount_No.Name = "lbHDiscount_No";
             this.lbHDiscount_No.Size = new System.Drawing.Size(45, 41);
@@ -741,7 +741,7 @@
             // 
             // lbHCash_Type
             // 
-            this.lbHCash_Type.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHCash_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHCash_Type.Location = new System.Drawing.Point(575, 1);
             this.lbHCash_Type.Name = "lbHCash_Type";
             this.lbHCash_Type.Size = new System.Drawing.Size(104, 46);
@@ -751,7 +751,7 @@
             // 
             // lbHCash_DiscountAmt
             // 
-            this.lbHCash_DiscountAmt.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHCash_DiscountAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHCash_DiscountAmt.Location = new System.Drawing.Point(446, 1);
             this.lbHCash_DiscountAmt.Name = "lbHCash_DiscountAmt";
             this.lbHCash_DiscountAmt.Size = new System.Drawing.Size(123, 46);
@@ -761,7 +761,7 @@
             // 
             // lbHCash_UsePoint
             // 
-            this.lbHCash_UsePoint.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHCash_UsePoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHCash_UsePoint.Location = new System.Drawing.Point(359, 1);
             this.lbHCash_UsePoint.Name = "lbHCash_UsePoint";
             this.lbHCash_UsePoint.Size = new System.Drawing.Size(81, 46);
@@ -771,7 +771,7 @@
             // 
             // lbHCash_RedeemCount
             // 
-            this.lbHCash_RedeemCount.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHCash_RedeemCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHCash_RedeemCount.Location = new System.Drawing.Point(214, 1);
             this.lbHCash_RedeemCount.Name = "lbHCash_RedeemCount";
             this.lbHCash_RedeemCount.Size = new System.Drawing.Size(139, 46);
@@ -781,7 +781,7 @@
             // 
             // lbHCash_RedeemDiscount
             // 
-            this.lbHCash_RedeemDiscount.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHCash_RedeemDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHCash_RedeemDiscount.Location = new System.Drawing.Point(129, 1);
             this.lbHCash_RedeemDiscount.Name = "lbHCash_RedeemDiscount";
             this.lbHCash_RedeemDiscount.Size = new System.Drawing.Size(86, 46);
@@ -791,7 +791,7 @@
             // 
             // lbHCash_RedeemPoint
             // 
-            this.lbHCash_RedeemPoint.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHCash_RedeemPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHCash_RedeemPoint.Location = new System.Drawing.Point(42, 1);
             this.lbHCash_RedeemPoint.Name = "lbHCash_RedeemPoint";
             this.lbHCash_RedeemPoint.Size = new System.Drawing.Size(81, 46);
@@ -801,7 +801,7 @@
             // 
             // lbHCash_No
             // 
-            this.lbHCash_No.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHCash_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHCash_No.Location = new System.Drawing.Point(1, 1);
             this.lbHCash_No.Name = "lbHCash_No";
             this.lbHCash_No.Size = new System.Drawing.Size(43, 46);
@@ -825,7 +825,7 @@
             // 
             // lbHCoupon_SumValue
             // 
-            this.lbHCoupon_SumValue.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHCoupon_SumValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHCoupon_SumValue.Location = new System.Drawing.Point(571, 1);
             this.lbHCoupon_SumValue.Name = "lbHCoupon_SumValue";
             this.lbHCoupon_SumValue.Size = new System.Drawing.Size(106, 46);
@@ -835,7 +835,7 @@
             // 
             // lbHCoupon_SumPoint
             // 
-            this.lbHCoupon_SumPoint.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHCoupon_SumPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHCoupon_SumPoint.Location = new System.Drawing.Point(492, 1);
             this.lbHCoupon_SumPoint.Name = "lbHCoupon_SumPoint";
             this.lbHCoupon_SumPoint.Size = new System.Drawing.Size(73, 46);
@@ -845,7 +845,7 @@
             // 
             // lbHCoupon_RedeemCount
             // 
-            this.lbHCoupon_RedeemCount.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHCoupon_RedeemCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHCoupon_RedeemCount.Location = new System.Drawing.Point(382, 1);
             this.lbHCoupon_RedeemCount.Name = "lbHCoupon_RedeemCount";
             this.lbHCoupon_RedeemCount.Size = new System.Drawing.Size(104, 46);
@@ -855,7 +855,7 @@
             // 
             // lbHCoupon_UsePoint
             // 
-            this.lbHCoupon_UsePoint.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHCoupon_UsePoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHCoupon_UsePoint.Location = new System.Drawing.Point(303, 1);
             this.lbHCoupon_UsePoint.Name = "lbHCoupon_UsePoint";
             this.lbHCoupon_UsePoint.Size = new System.Drawing.Size(83, 46);
@@ -865,7 +865,7 @@
             // 
             // lbHCoupon_CouponAmt
             // 
-            this.lbHCoupon_CouponAmt.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHCoupon_CouponAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHCoupon_CouponAmt.Location = new System.Drawing.Point(204, 1);
             this.lbHCoupon_CouponAmt.Name = "lbHCoupon_CouponAmt";
             this.lbHCoupon_CouponAmt.Size = new System.Drawing.Size(93, 46);
@@ -875,7 +875,7 @@
             // 
             // lbHCoupon_Desc
             // 
-            this.lbHCoupon_Desc.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHCoupon_Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHCoupon_Desc.Location = new System.Drawing.Point(41, 1);
             this.lbHCoupon_Desc.Name = "lbHCoupon_Desc";
             this.lbHCoupon_Desc.Size = new System.Drawing.Size(157, 46);
@@ -885,7 +885,7 @@
             // 
             // lbHCoupon_No
             // 
-            this.lbHCoupon_No.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHCoupon_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbHCoupon_No.Location = new System.Drawing.Point(1, 1);
             this.lbHCoupon_No.Name = "lbHCoupon_No";
             this.lbHCoupon_No.Size = new System.Drawing.Size(43, 46);
@@ -930,7 +930,7 @@
             this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOK.FlatAppearance.BorderSize = 0;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnOK.ForeColor = System.Drawing.Color.White;
             this.btnOK.Location = new System.Drawing.Point(385, 653);
             this.btnOK.Name = "btnOK";
@@ -947,7 +947,7 @@
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
             this.btnCancel.Location = new System.Drawing.Point(116, 653);
             this.btnCancel.Name = "btnCancel";
@@ -987,12 +987,14 @@
             this.ucHeader1.showAlert = true;
             this.ucHeader1.showCalculator = true;
             this.ucHeader1.showCurrentMenuText = true;
+            this.ucHeader1.showHamberGetItm = true;
             this.ucHeader1.showLanguage = true;
             this.ucHeader1.showLine = true;
             this.ucHeader1.showLockScreen = true;
             this.ucHeader1.showLogout = false;
             this.ucHeader1.showMainMenu = true;
             this.ucHeader1.showMember = true;
+            this.ucHeader1.showMember_ButtonBack = true;
             this.ucHeader1.showScanner = true;
             this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
             this.ucHeader1.TabIndex = 94;

@@ -609,6 +609,36 @@
       <DependentUpon>frmPopupInput.cs</DependentUpon>
     </Compile>
     <Compile Include="page\CcosServices.cs" />
+    <Compile Include="page\frmMemberService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmMemberService.Designer.cs">
+      <DependentUpon>frmMemberService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmMemberServiceTerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmMemberServiceTerm.Designer.cs">
+      <DependentUpon>frmMemberServiceTerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmPaymentCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmPaymentCancel.Designer.cs">
+      <DependentUpon>frmPaymentCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSIMRegisterConf1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSIMRegisterConf1.Designer.cs">
+      <DependentUpon>frmSIMRegisterConf1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSIMRegisterConf2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSIMRegisterConf2.Designer.cs">
+      <DependentUpon>frmSIMRegisterConf2.cs</DependentUpon>
+    </Compile>
     <Compile Include="page\frmDeposit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -632,6 +662,30 @@
     </Compile>
     <Compile Include="page\FrmPayment.Designer.cs">
       <DependentUpon>FrmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmPaymentDetailConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmPaymentDetailConfirm.Designer.cs">
+      <DependentUpon>frmPaymentDetailConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmPaymentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmPaymentReport.Designer.cs">
+      <DependentUpon>frmPaymentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmPaymentService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmPaymentService.Designer.cs">
+      <DependentUpon>frmPaymentService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmPaymentTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmPaymentTransaction.Designer.cs">
+      <DependentUpon>frmPaymentTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="page\frmReceivePaymentPOD.cs">
       <SubType>Form</SubType>
@@ -694,6 +748,24 @@
     </Compile>
     <Compile Include="page\frmSale.Designer.cs">
       <DependentUpon>frmSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSIMPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSIMPromotion.Designer.cs">
+      <DependentUpon>frmSIMPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSIMRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSIMRegister.Designer.cs">
+      <DependentUpon>frmSIMRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmSIMService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmSIMService.Designer.cs">
+      <DependentUpon>frmSIMService.cs</DependentUpon>
     </Compile>
     <Compile Include="page\frmSubMenuDeposit.cs">
       <SubType>Form</SubType>
@@ -874,6 +946,48 @@
     </Compile>
     <Compile Include="page\frmSubMenuTools.Designer.cs">
       <DependentUpon>frmSubMenuTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmTopupService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmTopupService.Designer.cs">
+      <DependentUpon>frmTopupService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmTopupService2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmTopupService2.Designer.cs">
+      <DependentUpon>frmTopupService2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmTopupServiceCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmTopupServiceCancel.Designer.cs">
+      <DependentUpon>frmTopupServiceCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmTopupServicePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmTopupServicePrint.Designer.cs">
+      <DependentUpon>frmTopupServicePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmTopupSIMPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmTopupSIMPromotion.Designer.cs">
+      <DependentUpon>frmTopupSIMPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmTopupSIMPromotion2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmTopupSIMPromotion2.Designer.cs">
+      <DependentUpon>frmTopupSIMPromotion2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="page\frmTopupSIMPromotionPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\frmTopupSIMPromotionPayment.Designer.cs">
+      <DependentUpon>frmTopupSIMPromotionPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="page\frmVDO.cs">
       <SubType>Form</SubType>
@@ -1146,6 +1260,21 @@
     <EmbeddedResource Include="dialog\frmPopupInput.resx">
       <DependentUpon>frmPopupInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="page\frmMemberService.resx">
+      <DependentUpon>frmMemberService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmMemberServiceTerm.resx">
+      <DependentUpon>frmMemberServiceTerm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmPaymentCancel.resx">
+      <DependentUpon>frmPaymentCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSIMRegisterConf1.resx">
+      <DependentUpon>frmSIMRegisterConf1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSIMRegisterConf2.resx">
+      <DependentUpon>frmSIMRegisterConf2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="page\frmDeposit.resx">
       <DependentUpon>frmDeposit.cs</DependentUpon>
     </EmbeddedResource>
@@ -1157,6 +1286,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="page\FrmPayment.resx">
       <DependentUpon>FrmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmPaymentDetailConfirm.resx">
+      <DependentUpon>frmPaymentDetailConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmPaymentReport.resx">
+      <DependentUpon>frmPaymentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmPaymentService.resx">
+      <DependentUpon>frmPaymentService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmPaymentTransaction.resx">
+      <DependentUpon>frmPaymentTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="page\frmReceivePaymentPOD.resx">
       <DependentUpon>frmReceivePaymentPOD.cs</DependentUpon>
@@ -1187,6 +1328,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="page\frmSale.resx">
       <DependentUpon>frmSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSIMPromotion.resx">
+      <DependentUpon>frmSIMPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSIMRegister.resx">
+      <DependentUpon>frmSIMRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmSIMService.resx">
+      <DependentUpon>frmSIMService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="page\frmSubMenuDeposit.resx">
       <DependentUpon>frmSubMenuDeposit.cs</DependentUpon>
@@ -1278,6 +1428,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="page\frmSubMenuTools.resx">
       <DependentUpon>frmSubMenuTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmTopupService.resx">
+      <DependentUpon>frmTopupService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmTopupService2.resx">
+      <DependentUpon>frmTopupService2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmTopupServiceCancel.resx">
+      <DependentUpon>frmTopupServiceCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmTopupServicePrint.resx">
+      <DependentUpon>frmTopupServicePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmTopupSIMPromotion.resx">
+      <DependentUpon>frmTopupSIMPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmTopupSIMPromotion2.resx">
+      <DependentUpon>frmTopupSIMPromotion2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="page\frmTopupSIMPromotionPayment.resx">
+      <DependentUpon>frmTopupSIMPromotionPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="page\frmVDO.resx">
       <DependentUpon>frmVDO.cs</DependentUpon>
@@ -1397,6 +1568,7 @@
     <Content Include="config\Laos.txt" />
     <Content Include="config\Thai.txt" />
     <Content Include="NoPath.ico" />
+    <None Include="Resources\MemberServiceTerm.jpg" />
     <None Include="Resources\SCGExpress.jpg" />
     <None Include="Resources\DHLExpress.jpeg" />
     <None Include="Resources\ThailandPost.png" />
