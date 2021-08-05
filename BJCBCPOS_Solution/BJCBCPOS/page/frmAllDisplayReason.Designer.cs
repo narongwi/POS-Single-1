@@ -37,6 +37,7 @@
             this.lbMenuNameVoid = new System.Windows.Forms.Label();
             this.lbMenuName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Cancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.Cancel);
             this.panel1.Controls.Add(this.ucDDReasonToEdit);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnOk);
@@ -144,6 +146,19 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
+            // Cancel
+            // 
+            this.Cancel.BackgroundImage = global::BJCBCPOS.Properties.Resources.icons8_multiply_100;
+            this.Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Cancel.FlatAppearance.BorderSize = 0;
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.Location = new System.Drawing.Point(509, 5);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(40, 40);
+            this.Cancel.TabIndex = 122;
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmAllDisplayReason
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,5 +191,6 @@
         private System.Windows.Forms.Label lbMenuName;
         private System.Windows.Forms.Label lbMenuNameVoid;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Cancel;
     }
 }

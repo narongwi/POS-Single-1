@@ -17,7 +17,7 @@ namespace BJCBCPOS
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void MainBackup()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -25,9 +25,6 @@ namespace BJCBCPOS
             //Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
-            Application.Run(new frmProductAndService());
-
-            
             try
             {
                 string processName = Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly().Location);
@@ -56,9 +53,7 @@ namespace BJCBCPOS
                 frmNotify dialog = new frmNotify(log.respone, log.message, log.helpMessage);
                 dialog.Show();
             }
-            
         }
-           
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {

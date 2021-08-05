@@ -10,13 +10,17 @@ using BJCBCPOS_Model;
 using System.Reflection;
 using System.Diagnostics;
 using System.IO;
+using BJCBCPOS_Process;
 
 namespace BJCBCPOS
 {
     public partial class frmSetupIni : Form
     {
+       
         private Point defaultConfigPanelLocation = new Point(200, 286);
         private Point newConfigPanelLocation = new Point(200, 50);
+        private bool _hasConfigINI;
+        private bool _hasRunningINI;
 
         private string storeCode;
         private string tillNo;
@@ -26,31 +30,53 @@ namespace BJCBCPOS
         private string dbServerBk;
         private string ipServerTrain;
         private string dbServerTrain;
+        private string printerName;
+        private string comPort;
 
-        public frmSetupIni()
+        public frmSetupIni(bool hasConfigINI, bool hasRunningINI)
         {
             InitializeComponent();
+            _hasConfigINI = hasConfigINI;
+            _hasRunningINI = hasRunningINI;
+        }
+
+        private void frmSetupIni_Load(object sender, EventArgs e)
+        {
+            ProgramConfig.language = new Language(0);
+
+            if (!_hasConfigINI)
+            {
+                
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (valid())
             {
-                if (!INIConfig.createConfigIni(storeCode, tillNo, ipServer, dbServer, ipServerBk, dbServerBk, ipServerTrain, dbServerTrain) || !INIConfig.createRunningIni(storeCode, tillNo))
+
+                if (_hasConfigINI || INIConfig.createConfigIni(storeCode, tillNo, ipServer, dbServer, ipServerBk, dbServerBk, ipServerTrain, dbServerTrain, printerName, comPort))
                 {
-                    //string responseMessage = ProgramConfig.message.get("frmSetupIni", "BuildINIIncomplete").message;
-                    //string helpMessage = ProgramConfig.message.get("frmSetupIni", "BuildINIIncomplete").help;
-                    //frmNotify dialog = new frmNotify(ResponseCode.Error, responseMessage, helpMessage);
+                    ProgramConfig.config = new INIConfig(FixedData.config_name);
+                    StartProcess process = new StartProcess();
+                    process.getDatabaseLogin();
+                    //TO DO
+                    //process.getRunningINI
+                    if (INIConfig.createRunningIni(storeCode, tillNo))
+                    {
+                        //string responseMessage = ProgramConfig.message.get("frmSetupIni", "BuildINIIncomplete").message;
+                        //string helpMessage = ProgramConfig.message.get("frmSetupIni", "BuildINIIncomplete").help;
+                        //frmNotify dialog = new frmNotify(ResponseCode.Error, responseMessage, helpMessage);
 
-                    //frmNotify dialog = new frmNotify(ResponseCode.Error, "ระบบผิดพลาด ไม่สามารถสร้าง .ini ได้");
-
-                    frmNotify dialog = new frmNotify(ResponseCode.Error, "Cannot create file .ini");
-                    dialog.ShowDialog(this);
+                        //frmNotify dialog = new frmNotify(ResponseCode.Error, "ระบบผิดพลาด ไม่สามารถสร้าง .ini ได้");
+                        this.DialogResult = DialogResult.OK;
+                        this.Dispose();
+                    }
                 }
                 else
                 {
-                    this.DialogResult = DialogResult.OK;
-                    this.Dispose();
+                    frmNotify dialog = new frmNotify(ResponseCode.Error, "Cannot create file .ini");
+                    dialog.ShowDialog(this);
                 }
             }
         }
@@ -180,7 +206,6 @@ namespace BJCBCPOS
 
         private void uctw_Enter(object sender, EventArgs e)
         {
-            picLogo.Visible = false;
             pnfrmConfig.Location = newConfigPanelLocation;
             splitContainer1.SplitterDistance = 500;
 
@@ -191,7 +216,6 @@ namespace BJCBCPOS
 
         private void uctw_Leave(object sender, EventArgs e)
         {
-            picLogo.Visible = true;
             pnfrmConfig.Location = defaultConfigPanelLocation;
             splitContainer1.SplitterDistance = 768;
 
@@ -234,13 +258,16 @@ namespace BJCBCPOS
             }
             else if (current == uctwDBServerTrainning)
             {
+                uctwPrinterName.Focus();
+            }
+            else if (current == uctwPrinterName)
+            {
+                uctwCOMPort.Focus();
+            }
+            else if (current == uctwCOMPort)
+            {
                 btnSave.PerformClick();
             }
-        }
-
-        private void frmSetupIni_Load(object sender, EventArgs e)
-        {
-            ProgramConfig.language = new Language(0);
         }
     }
 }

@@ -382,5 +382,22 @@ namespace BJCBCPOS_Process
                 return Math.Round((balance / fxRate), 2);
             }
         }
+
+        public StoreResult SaveDrawerTrans(FunctionID function)
+        {
+            try
+            {
+                return command.saveDrawerTrans(ProgramConfig.cashInRefNo, function);
+            }
+            catch (NetworkConnectionException)
+            {
+                AppLog.writeLog("connection to server lost at SaleProcess.CheckValuePayment");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new StoreResult(ResponseCode.Error, ex.Message, "", "");
+            }
+        }
     }
 }

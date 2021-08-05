@@ -103,8 +103,11 @@ namespace BJCBCPOS
                 return;
             }
 
+
+
             int cnt = 1;
             frmPopUpSelectList frmLst = new frmPopUpSelectList();
+            FunctionID fn = FunctionID.NoFunctionID;
             foreach (DataRow dr in result.otherData.Rows)
             {
                 UCItemDepositCustomerType ucDC = new UCItemDepositCustomerType();
@@ -115,11 +118,34 @@ namespace BJCBCPOS
                 ucDC.Name = ucDC.placeHolderName + cnt;
                 frmLst.lstUC.Add(ucDC);
                 cnt++;
+
+                fn = new FunctionID(dr["Function_ID"].ToString());
             }
 
-            if (frmLst.lstUC.Count > 0)
+            if (frmLst.lstUC.Count > 1)
             {
                 frmLst.ShowDialog(this);
+            }
+            else
+            {
+                functionSearch = fn;
+            }
+
+            result = process.posDisplayContent();
+            if (result.response.next)
+            {
+                if (result.otherData.Rows.Count > 0)
+                {
+                    if (result.otherData.Columns.Contains("Content_Default"))
+                    {
+                        ucFooterTran1.mainContent = result.otherData.Rows[0]["Content_Default"].ToString();
+                    }
+                    if (result.otherData.Columns.Contains("Content_Detail"))
+                    {
+                        ucFooterTran1.fullContent = result.otherData.Rows[0]["Content_Detail"].ToString();
+                    }
+                    ucFooterTran1.functionId = FunctionID.Sale_PopupSaleProcessScreen_ContentonPOSScreen_StroeCode.formatValue;
+                }
             }
 
             ucHeader1.showMember_ButtonBack = false;
@@ -374,20 +400,21 @@ namespace BJCBCPOS
             btnEdit.Visible = true;
             ucTextBoxWithIcon1.EnabledUC = true;
             UCItemSell ucGV = (UCItemSell)sender;
-
-            ucTextBoxWithIcon1.InpTxt = ucGV.lbTotalPriceText;
-            ucTextBoxWithIcon1.FocusTxt();
             if (lastUCIS != ucGV)
                 UCItemSell.LostFocusItem(lastUCIS);
 
             lastUCIS = ucGV;
+
+
+            ucTextBoxWithIcon1.InpTxt = ucGV.lbTotalPriceText;
+            ucTextBoxWithIcon1.FocusTxt();
+            ucTextBoxWithIcon1.SetSelection = true;
         }
 
         private void CheckItemSell()
         {
             if (pn_item_sell.Controls.Count > 0)
             {
-                
                 ucTextBoxWithIcon1.Text = "";
                 ucTextBoxWithIcon1.EnabledUC = false;
                 ucKeypad.ucTBWI = null;
@@ -518,6 +545,10 @@ namespace BJCBCPOS
             {
                 keyProduct(false, ProgramConfig.getPosConfig("DepositProductCode").ToString());
             }
+            else
+            {
+                btnEdit_Click(null, null);
+            }
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
@@ -541,13 +572,15 @@ namespace BJCBCPOS
             frm2Detail.panel_payment.BringToFront();
             frm2Detail.lbTxtTotalCash.Text = lbTxtTotal.Text;
 
+            ProgramConfig.paymentOpenCashDrawer = FunctionID.Deposit_OpenDrawerAndRecordTime;
+            ProgramConfig.paymentCloseCashDrawer = FunctionID.Deposit_CloseDrawerAndRecordTime;
             ProgramConfig.paymentFunction = FunctionID.Deposit_Payment;
             ProgramConfig.pageBackFromPayment = PageBackFormPayment.Deposit;
             Program.control.CloseForm("frmPayment");
             Program.control.ShowForm("frmPayment");
         }
 
-        private void frmDeposit_Activated(object sender, EventArgs e)
+        public void frmDeposit_Activated(object sender, EventArgs e)
         {
             if (ProgramConfig.salePageState == 2)
             {
@@ -578,7 +611,9 @@ namespace BJCBCPOS
             frmMoCus.pn_Item.Controls.Clear();
             //setVisibleButtonConfirm(false);
             ClearMember();
+            ucTextBoxWithIcon1.InpTxt = "";
             ucTextBoxWithIcon1.EnabledUC = true;
+            btnEdit.Visible = false;
         }
 
         private void ClearMember()
@@ -594,8 +629,6 @@ namespace BJCBCPOS
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            btnEdit.Visible = false;
-
             double inp = 0.0;
             double.TryParse(ucTextBoxWithIcon1.InpTxt, out inp);
             if (!(ucTextBoxWithIcon1.InpTxt != "" || inp > 0))
@@ -603,6 +636,8 @@ namespace BJCBCPOS
                 Utility.AlertMessage(ResponseCode.Error, "กรุณาระบุจำนวนเงิน");
                 return;
             }
+
+            btnEdit.Visible = false;
 
             string amt = Convert.ToDouble(ucTextBoxWithIcon1.InpTxt).ToString(displayAmt);
             var res = process.Deposit_EditPrice(lastUCIS.lbProductCodeText, lastUCIS.lbQtyText, amt, lastUCIS.lbRecDB.Text);
@@ -721,7 +756,7 @@ namespace BJCBCPOS
 
         private void ucHeader1_HambergerItemClick(object sender, EventArgs e)
         {
-            var hamItem = (UCHambergerItem)sender;
+            var hamItem = (UCHamburgerItem)sender;
             if (hamItem.MenuID == MenuIdHamberger.CancelReceipt)
             {
                 if (pn_item_sell.Controls.Count == 0)
@@ -865,6 +900,7 @@ namespace BJCBCPOS
                 }
                 else
                 {
+                    pn_item_sell.Controls.Clear();
                     ProgramConfig.salePageState = 2;
                     frmDeposit_Activated(null, null);
                 }
@@ -891,6 +927,7 @@ namespace BJCBCPOS
                 }
                 else
                 {
+                    pn_item_sell.Controls.Clear();
                     ProgramConfig.salePageState = 2;
                     frmDeposit_Activated(null, null);
                 }

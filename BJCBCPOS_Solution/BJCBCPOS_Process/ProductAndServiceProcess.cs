@@ -222,7 +222,8 @@ namespace BJCBCPOS_Process
                 foreach (var item in data.ListCreditSaleDetail)
                 {
                     _ObjPayInvoiceAR.ListInvoice[cnt].invoice_no = item.Credit_InvoiceNo;
-                    _ObjPayInvoiceAR.ListInvoice[cnt].invoice_amount = Convert.ToDouble(item.Credit_Amount);
+                    //_ObjPayInvoiceAR.ListInvoice[cnt].invoice_amount = Convert.ToDouble(item.Credit_Amount);
+                    _ObjPayInvoiceAR.ListInvoice[cnt].invoice_amount = Convert.ToDouble(item.Credit_AmountAPI);
                    res = command.saveTempCREDPAY_TRANS_Detail(item);
                    if (!res.response.next)
                    {
@@ -245,5 +246,22 @@ namespace BJCBCPOS_Process
                 return new StoreResult(ResponseCode.Error, ex.Message, "", "");
             }
         }
+        public StoreResult posDisplayContent()
+        {
+            try
+            {
+                return command.posDisplayContent();
+            }
+            catch (NetworkConnectionException)
+            {
+                AppLog.writeLog("connection to server lost at SaleProcess.posDisplayContent");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new StoreResult(ResponseCode.Error, ex.Message, "", "");
+            }
+        }
+
     }
 }

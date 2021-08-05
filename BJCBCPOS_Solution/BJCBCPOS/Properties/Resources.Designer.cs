@@ -3042,6 +3042,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap rsz_mm_food_service_logobo {
+            get {
+                object obj = ResourceManager.GetObject("rsz_mm_food_service_logobo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap sale {
             get {
                 object obj = ResourceManager.GetObject("sale", resourceCulture);

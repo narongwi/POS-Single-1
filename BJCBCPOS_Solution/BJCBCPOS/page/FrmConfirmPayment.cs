@@ -23,6 +23,7 @@ namespace BJCBCPOS
         public frmMonitorCustomer frmMonitor;
         public frmMonitorCustomerFooter frmMoniterFooter;
         public frmMonitor2Detail frm2Detail;
+        public string lastPMCode;
         private bool IsPaint = false;
         private bool tranSuccess = false;
         private bool chkSwOpen = false;
@@ -261,8 +262,9 @@ namespace BJCBCPOS
                 panel_button2.BringToFront();
                 btnOk.Select();
                 btnOkCurrency.Select();
-
+                
                 chkSwOpen = Hardware.openDrawer();
+                process.SaveDrawerTrans(ProgramConfig.paymentOpenCashDrawer);
             }
             catch (NetworkConnectionException net)
             {
@@ -274,6 +276,8 @@ namespace BJCBCPOS
         {
             try
             {
+
+
                 if (txtConfirmChange != null && Convert.ToDouble(txtConfirmChange) < Convert.ToDouble(lbConfirmBalance))
                 {
                     Utility.AlertMessage(ResponseCode.Error, "ไม่สามารถแก้ไขเงินทอนน้อยกว่าเงินทอนปัจจุบันได้");
@@ -304,7 +308,7 @@ namespace BJCBCPOS
                             StoreResult result = process.saveConfirmPayment(openTime, Convert.ToDouble(lbConfirmBalance), Convert.ToDouble(txtConfirmChange),
                                                                             AlertMessage: (resCode, resMsg, resHelpMsg) => Utility.AlertMessage(this, resCode, resMsg, resHelpMsg));
                             frmLoading.closeLoading();
-                            if (result.response.next)
+                            if (result.response == ResponseCode.Success)
                             {
                                 try
                                 {
@@ -325,6 +329,18 @@ namespace BJCBCPOS
                                             }
                                         }
                                     }
+
+                                    AppLog.writeLog("frmConfirmPayment btnOk_Click Hardware.isDrawerOpen" + Hardware.isDrawerOpen);
+                                    if (Hardware.isDrawerOpen)
+                                    {
+                                        panel_message.BringToFront();
+                                        panel_message2.BringToFront();
+                                        TimerProcess();
+                                    }
+                                    tranSuccess = true;
+                                    AppLog.writeLog("btnOk1 tranSuccess = " + tranSuccess + " chkSwClose = " + chkSwClose + " statusClose = " + statusCloseDrawer);
+                                    closeForm();
+
                                 }
                                 catch (NetworkConnectionException net)
                                 {
@@ -333,33 +349,20 @@ namespace BJCBCPOS
                                     //frmNotify dialog = new frmNotify(ResponseCode.Error, net.Message, "");
                                     //dialog.ShowDialog(this);
                                 }
-
-                                //RedeemCoupon();
-                                AppLog.writeLog("frmConfirmPayment btnOk_Click Hardware.isDrawerOpen" + Hardware.isDrawerOpen);
-                                if (Hardware.isDrawerOpen)
+                                catch (Exception ex)
                                 {
-                                    panel_message.BringToFront();
-                                    panel_message2.BringToFront();
-                                    TimerProcess();
+                                    Utility.AlertMessage(ResponseCode.Error, ex.Message);
+                                    Utility.AutoVoidEDC(this, (vty, dty) => process.selectDLYPTRANS(ProgramConfig.abbNo, vty, dty));
+                                    return;
                                 }
-                                tranSuccess = true;
-                                AppLog.writeLog("btnOk1 tranSuccess = " + tranSuccess + " chkSwClose = " + chkSwClose + " statusClose = " + statusCloseDrawer);
-                                closeForm();
-                                //else
-                                //{
-                                //    chkSwClose = true;
-                                //    tranSuccess = true;
-                                //    AppLog.writeLog("btnOK1 HasDrawer chkSwClose = " + chkSwClose + " tranSuccess = " + tranSuccess + " seqOfProcess = " + seqOfProcess + " statusCloseDrawer = " + statusCloseDrawer);
-                                //    //closeForm();
-                                //}
                             }
                             else
                             {
+                                tranSuccess = false;
                                 if (result.response == ResponseCode.Ignore)
                                 {
                                     return;
                                 }
-                                tranSuccess = false;
                                 frmNotify dialog = new frmNotify(result);
                                 dialog.ShowDialog(this);
                                 return;
@@ -460,6 +463,7 @@ namespace BJCBCPOS
                     }
                     else
                     {
+                        openTime = DateTime.Now.ToString("HHmmss", cultureinfo);
                         ProcessCashDrawerClose();
                     }
                 }
@@ -473,12 +477,11 @@ namespace BJCBCPOS
             {
                 ProcessCheckNetWorkLost(net);
             }
-            //catch (NetworkConnectionException net)
-            //{
-            //    statusConnect = "1";
-            //    frmLoading.closeLoading();
-            //    throw;
-            //}
+            catch (Exception ex)
+            {
+                Utility.AlertMessage(ResponseCode.Error, ex.Message);
+                Utility.AutoVoidEDC(this, (vty, dty) => process.selectDLYPTRANS(ProgramConfig.saleRefNo, vty, dty));
+            }
         }
 
         private void ProcessCashDrawerClose()
@@ -511,6 +514,19 @@ namespace BJCBCPOS
                             }
                         }
                     }
+
+                    AppLog.writeLog("frmConfirmPayment ProcessCashDrawerClose Hardware.isDrawerOpen" + Hardware.isDrawerOpen);
+
+                    if (Hardware.isDrawerOpen)
+                    {
+                        panel_message.BringToFront();
+                        panel_message2.BringToFront();
+                        TimerProcess();
+                    }
+                    chkSwClose = true;
+                    tranSuccess = true;
+                    statusCloseDrawer = true;
+                    closeForm();
                 }
                 catch (NetworkConnectionException net)
                 {
@@ -519,32 +535,20 @@ namespace BJCBCPOS
                     //frmNotify dialog = new frmNotify(ResponseCode.Error, net.Message, "");
                     //dialog.ShowDialog(this);
                 }
-
-                //RedeemCoupon();
-
-                AppLog.writeLog("frmConfirmPayment ProcessCashDrawerClose Hardware.isDrawerOpen" + Hardware.isDrawerOpen);
-
-                if (Hardware.isDrawerOpen)
+                catch (Exception ex)
                 {
-                    panel_message.BringToFront();
-                    panel_message2.BringToFront();
-                    TimerProcess();
-                }
-                else
-                {
-                    chkSwClose = true;
-                    tranSuccess = true;
-                    statusCloseDrawer = true;
-                    closeForm();
+                    Utility.AlertMessage(ResponseCode.Error, ex.Message);
+                    Utility.AutoVoidEDC(this, (vty, dty) => process.selectDLYPTRANS(ProgramConfig.abbNo, vty, dty));
+                    return;
                 }
             }
             else
             {
+                tranSuccess = false;
                 if (result.response == ResponseCode.Ignore)
                 {
                     return;
                 }
-                tranSuccess = false;
                 frmNotify dialog = new frmNotify(result);
                 dialog.ShowDialog(this);
                 return;
@@ -586,6 +590,7 @@ namespace BJCBCPOS
         {
             try
             {
+                #region Old Code
                 //#region Remove CHGD
                 //string maxRecCHGD = process.selectMaxRecTempDlyptransForTypeP_FormPMCODE("CHGD").ToString();
                 //DataTable paymentTypeCHGD = process.selectTypeFromMaxRec(maxRecCHGD);
@@ -707,36 +712,20 @@ namespace BJCBCPOS
                 //        StoreResult resDel = process.delCoupon(dr["CouponNo"].ToString(), Convert.ToInt32(dr["CouponQnt"].ToString()), Convert.ToInt32(dr["ROW"].ToString()));
                 //    }
                 //}
+                #endregion
 
+                Utility.AutoVoidEDC(this, (vty, dty) => process.selectDLYPTRANS(ProgramConfig.saleRefNo, vty, dty));
                 foreach (Form item in Application.OpenForms)
                 {
                     if (item is frmPayment)
                     {
                         frmPay = (frmPayment)item;
-                        //frmPay.BringToFront();
-                        ////frmPay.pn_payment_cash.BringToFront();
-                        ////frmPay.ucTxtAmountCash.Text = frmPay.lbTxtBalance.Text;
-
-
-                        //frmPay.loadTempDLYForPayment();
-                        //if (frmPay.pn_payment_cash.Visible)
-                        //{
-                        //    if (double.Parse(frmPay.lbTxtBalance.Text) > 0)
-                        //    {
-                        //        frmPay.ucTxtAmountCash.Text = frmPay.lbTxtBalance.Text;
-                        //    }
-                        //    frmPay.lbTxtBalance.Text = "0";
-                        //}
                         frmPay.BackProcess();
-
                         this.Dispose();
                         break;
                     }
                 }
 
-                //double def = 0;
-                //frm2Detail.lbTxtReceive.Text = def.ToString(ProgramConfig.amountFormatString);
-                //frm2Detail.lbTxtbalance.Text = def.ToString(ProgramConfig.amountFormatString);
                 frm2Detail.lbChangeCurrency1.Text = "";
                 frm2Detail.lbChangeCurrency2.Text = "";
                 frm2Detail.lbChangeCurrency3.Text = "";
@@ -1004,6 +993,8 @@ namespace BJCBCPOS
                                     }
                                 }
                             }
+
+                            process.SaveDrawerTrans(ProgramConfig.paymentCloseCashDrawer);
                         }
 
 
@@ -1031,7 +1022,9 @@ namespace BJCBCPOS
                                 nextAbb = ProgramConfig.tillNo + "1".PadLeft(6, '0') + (oldAbb.IndexOf("F") > 0 ? "F" : "");
                             }
 
-                            res = process.saleAutoVoid(ProgramConfig.saleRefNo, oldAbb, nextAbb, openTime, CheckAuth: (p, h) => Utility.CheckAuthPass(this, p, h));
+                            res = process.saleAutoVoid(ProgramConfig.saleRefNo, oldAbb, nextAbb, openTime, 
+                                                        CheckAuth: (p, h) => Utility.CheckAuthPass(this, p, h),
+                                                        AutoVoidEDC: () => Utility.AutoVoidEDC(this, (vty, dty) => process.selectDLYPTRANS(ProgramConfig.abbNo, vty, dty)));
                             if (!res.response.next)
                             {
                                 frmNotify dialog = new frmNotify(res);
@@ -1077,7 +1070,9 @@ namespace BJCBCPOS
                                 nextAbb = ProgramConfig.tillNo + "1".PadLeft(6, '0');
                             }
 
-                            res = process.saleAutoVoid(ProgramConfig.saleRefNo, oldAbb, nextAbb, openTime, CheckAuth: (p, h) => Utility.CheckAuthPass(this, p, h));
+                            res = process.saleAutoVoid(ProgramConfig.saleRefNo, oldAbb, nextAbb, openTime,
+                                                        CheckAuth: (p, h) => Utility.CheckAuthPass(this, p, h),
+                                                        AutoVoidEDC : () => Utility.AutoVoidEDC(this, (vty, dty) => process.selectDLYPTRANS(ProgramConfig.saleRefNo, vty, dty)));
                             if (!res.response.next)
                             {
                                 frmNotify dialog = new frmNotify(res);
@@ -1151,12 +1146,12 @@ namespace BJCBCPOS
                 //ProcessCheckNetWorkLost(net);
                
             }
-            catch (Exception ex)
-            {
-                frmLoading.closeLoading();
-                frmNotify dialog = new frmNotify(ResponseCode.Error, ex.Message, "");
-                dialog.ShowDialog(this);
-            }
+            //catch (Exception ex)
+            //{
+            //    frmLoading.closeLoading();
+            //    frmNotify dialog = new frmNotify(ResponseCode.Error, ex.Message, "");
+            //    dialog.ShowDialog(this);
+            //}
         }
 
         private void ClosePayment(string nextAbb)
@@ -1167,14 +1162,7 @@ namespace BJCBCPOS
                 ProgramConfig.running.updateValue();
             }
 
-            ProgramConfig.qntValue = "";
-            ProgramConfig.amtValue = "";
-            ProgramConfig.disValue = "";
-            ProgramConfig.redeemLTYD = "";
-            ProgramConfig.memberId = "";
-            ProgramConfig.memberName = "";
-            ProgramConfig.memberCardNo = "";
-            ProgramConfig.memberProfileMMFormat.Clear();
+            Utility.GlobalClear();
             ProgramConfig.salePageState = 2;
 
             if (frmPay == null)
@@ -1318,9 +1306,16 @@ namespace BJCBCPOS
         {
             var uc = (UCTextBoxWithIcon)sender;
 
-            if (uc.Text != "" && Convert.ToDouble(uc.Text) < Convert.ToDouble(lbConfirmBalance))
+            if (uc.Text != "" && Convert.ToDouble(uc.Text) < Convert.ToDouble(_oldChange))
             {
                 Utility.AlertMessage(ResponseCode.Error, "ไม่สามารถแก้ไขเงินทอนน้อยกว่าเงินทอนปัจจุบันได้");
+                return;
+            }
+
+            double limChange = ProgramConfig.payment.getUserChangeLimit(lastPMCode);
+            if (uc.Text != "" && (Convert.ToDouble(uc.Text) - Convert.ToDouble(_oldChange)) > limChange)
+            {
+                Utility.AlertMessage(ResponseCode.Error, "ไม่สามารถแก้ไขเงินทอนมากกว่า " + limChange.ToString(ProgramConfig.amountFormatString) + " " + ProgramConfig.currencyDefault + " \nจากเงินทอนปัจุบัน");
                 return;
             }
 
@@ -1370,7 +1365,7 @@ namespace BJCBCPOS
             ucTxtChange.Visible = false;
         }
 
-
+        
 
 
         //private void backgroundSetDrawer_Work(object sender, DoWorkEventArgs e)

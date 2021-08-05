@@ -16,14 +16,14 @@ namespace BJCBCPOS
         private static string pathIconLanguage = @"\iconLanguage\";
         private delegate bool ProcessCheckNetWorkLost(NetworkConnectionException net);
 
-        public static void InitialTextBoxIcon(UCTextBoxWithIcon UCtbwi, Image pic, UCTextBoxIconType textBoxType, IconType iconType, string placeHolder = "", bool isShowLine = true, bool isEnabelBtn = true, int maxlength = 20)
+        public static void InitialTextBoxIcon(UCTextBoxWithIcon UCtbwi, Image pic, UCTextBoxIconType textBoxType, IconType iconType, string placeHolder = "", bool isShowLine = true, bool isEnabelBtn = true, int maxlength = 32767)
         {
             UCtbwi.Tag = textBoxType;
             UCtbwi.label1.Text = placeHolder;
             InitialTextBoxIcon(UCtbwi, pic, iconType, isShowLine, isEnabelBtn, maxlength);
         }
 
-        public static void InitialTextBoxIcon(UCTextBoxWithIcon UCtbwi, Image pic, IconType iconType, bool isShowLine = true, bool isEnabelBtn = true, int maxlength = 20)
+        public static void InitialTextBoxIcon(UCTextBoxWithIcon UCtbwi, Image pic, IconType iconType, bool isShowLine = true, bool isEnabelBtn = true, int maxlength = 32767)
         {
             if (iconType == IconType.None || iconType == IconType.Scan)
             {
@@ -509,6 +509,64 @@ namespace BJCBCPOS
             {
                 p.ScrollControlIntoView(c);
                 c.Parent = null;
+            }
+        }
+
+        public static void GlobalClear()
+        {
+            ProgramConfig.qntValue = "";
+            ProgramConfig.amtValue = "";
+            ProgramConfig.disValue = "";
+            ProgramConfig.redeemLTYD = "";
+            ProgramConfig.memberId = "";
+            ProgramConfig.memberName = "";
+            ProgramConfig.memberCardNo = "";
+            ProgramConfig.memberProfileMMFormat.Clear();
+        }
+
+
+        public static void AutoVoidEDC(Form Owner, Func<string, string , StoreResult> SelectDlypTrans)
+        {
+            int cnt = 0;
+        Retry:
+            try
+            {
+                var res = SelectDlypTrans("P", "O");//process.selectDLYPTRANS(ProgramConfig.saleRefNo, vty: "P", dty: "O");
+                if (res.response.next)
+                {
+                    frmLoading.closeLoading();
+                    frmEDCProcess fEDC = new frmEDCProcess(EventEDC.Void, "", "", ""
+                                            , invoiceNo: res.otherData.Rows[0]["TRACE_NO"].ToString()
+                                            , approveCode: res.otherData.Rows[0]["APPROVE_CODE"].ToString());
+                    fEDC.ShowDialog(Owner);
+
+                    var EDCResult = fEDC.edcResult;
+                    if (EDCResult.dialogRes == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        fEDC.Dispose();
+                    }
+                    else if (EDCResult.dialogRes == System.Windows.Forms.DialogResult.No)
+                    {
+                        if (cnt > 2)
+                        {
+                            return;
+                        }
+                        cnt++;
+                        Utility.AlertMessage(EDCResult.res);
+                        frmLoading.showLoading();
+                        goto Retry;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                if (cnt > 2)
+                {
+                    return;
+                }
+                cnt++;
+                Utility.AlertMessage(ResponseCode.Error, ex.Message);
+                goto Retry;
             }
         }
 

@@ -17,7 +17,8 @@ namespace BJCBCPOS
         private bool chkOpenDrawer = false;
         private ReturnProcess process = new ReturnProcess();
         private UCItemReturn ucGV;
-        private UCItemReturn ucGVs;
+        private UCItemReturn lastUCIS = new UCItemReturn();
+
         string qty = "";
         string r = "";
         int faq = 0;
@@ -48,20 +49,30 @@ namespace BJCBCPOS
         public UCTextBoxWithIcon ucTBWI { get; set; }
         public UCTextBoxSmall ucTBS { get; set; }
 
+        public DataTable TEMPDLYPTRANSPARTIAL = new DataTable();
+
+        string displayAmt = ProgramConfig.amountFormatString;
+        string _reasonId;
+        string _reasonTxt;
 
         public frmReturnFromScanProduct()
         {
             InitializeComponent();
+            InitalDatatable();
         }
 
         private void frmReturnFromScanProduct_Load(object sender, EventArgs e)
         {
             try
             {
-                Utility.InitialTextBoxIcon(ucTBScanBarcode, BJCBCPOS.Properties.Resources.icon_textbox_scan, UCTextBoxIconType.ScanAndDelete, IconType.Scan, "ຫຼືຕື່ມໃສ່ບັນຊີລາຍຊື່ສິນຄ້າ");
+                Utility.InitialTextBoxIcon(ucTBScanBarcodeRet, BJCBCPOS.Properties.Resources.icon_textbox_scan, UCTextBoxIconType.ScanAndDelete, IconType.Scan, "กรุณาระบุรหัสสินค้า");
                 StoreResult result = null;
-                panelScanBarcode.BringToFront();
-                ucTBScanBarcode.Focus();
+                //panelScanBarcode.BringToFront();
+                //ucTBScanBarcode.Focus();
+
+                Utility.GlobalClear();
+                ClearMember();
+                DisableControl();
 
                 result = process.getRunning(FunctionID.Return_GetRunningNo, RunningReceiptID.ReturnRef);
                 string refNo = result.otherData.Rows[0]["ReferenceNo"].ToString();
@@ -111,6 +122,18 @@ namespace BJCBCPOS
                         break;
                     }
                 }
+
+                CheckItemSell();
+
+                btnReturn.Enabled = false;
+                btnReturn.BackgroundImage = Properties.Resources.payment_disable;
+
+                lbPointReceive.Visible = ProgramConfig.memberFormat != MemberFormat.MegaMaket;
+                ucTxtPointReceive.Visible = ProgramConfig.memberFormat != MemberFormat.MegaMaket;
+
+                ucHeader1.btnMember_Click(sender, e);
+                ucKeypad.ucTBWI.Text = "";
+                ucKeypad.ucTBWI.FocusTxt();
             }
             catch (NetworkConnectionException net)
             {
@@ -131,16 +154,19 @@ namespace BJCBCPOS
 
         public void keyProduct()
         {
-            if (ucTBScanBarcode.Text.Length < 13 && ucTBScanBarcode.Text.Length != 0)
+            if (ucTBScanBarcodeRet.Text.Length < 13 && ucTBScanBarcodeRet.Text.Length != 0)
             {
-                ucTBScanBarcode.Text = ucTBScanBarcode.Text.PadLeft(13, '0');
+                ucTBScanBarcodeRet.Text = ucTBScanBarcodeRet.Text.PadLeft(13, '0');
             }
 
-            if (pn_Item_Return.Controls.Count > 0 && ucTBScanBarcode.Text == "")
+            if (pn_Item_Return.Controls.Count > 0 && ucTBScanBarcodeRet.Text == "")
             {
                 //CalDiscount
-                btnReturn.Enabled = true;
-                btnReturn.BackgroundImage = Properties.Resources.payment_enable;
+                if (Convert.ToDouble(lbTxtTotal.Text) > 0)
+                {
+                    btnReturn.Enabled = true;
+                    btnReturn.BackgroundImage = Properties.Resources.payment_enable;
+                }
             }
             else
             {
@@ -184,7 +210,7 @@ namespace BJCBCPOS
                     }
                 }
 
-                StoreResult result = process.getProductDesc(ucTBScanBarcode.Text);
+                StoreResult result = process.getProductDesc(ucTBScanBarcodeRet.Text);
 
                 if (result.response == ResponseCode.Success)
                 {
@@ -192,10 +218,12 @@ namespace BJCBCPOS
                     {
                         for (int i = 0; i < result.otherData.Rows.Count; i++)
                         {
+                            string isFFNRTC = "N";
                             string code = result.otherData.Rows[i]["PR_CODE"].ToString();
                             string name = result.otherData.Rows[i]["PR_NAME"].ToString();
                             string price = result.otherData.Rows[i]["PR_PRICE"].ToString();
-                            string amt = (double.Parse(qty) * double.Parse(price)).ToString("0.0000");
+                            string dbPrice = result.otherData.Rows[i]["PR_PRICE"].ToString();
+                            string amt = (double.Parse(qty) * double.Parse(price)).ToString(displayAmt);
                             string vat = result.otherData.Rows[i]["PR_VAT"].ToString();
                             string vty = "";
                             if (vat == "V")
@@ -216,9 +244,31 @@ namespace BJCBCPOS
                             string stv = result.otherData.Rows[i]["PR_Type"].ToString();
                             //qty = 1; 
 
+                            bool chkWeight = Convert.ToDouble(result.otherData.Rows[i]["WEIGHT"].ToString()) > 0;
+                            if (result.otherData.Rows[i]["PRODUCT_TYPE"].ToString() == "FF")
+                            {
+                                isFFNRTC = chkWeight ? "Y" : "N";
+                            }
+                            else
+                            {
+                                isFFNRTC = result.otherData.Rows[i]["PRODUCT_TYPE"].ToString() == "RTC" ? "Y" : "N";
+                            }
+
+                            if (isFFNRTC == "Y")
+                            {
+                                qty = double.Parse(result.otherData.Rows[i]["WEIGHT"].ToString()).ToString();
+                                amt = double.Parse(result.otherData.Rows[i]["AMT"].ToString()).ToString(displayAmt);
+                                price = (Convert.ToDouble(amt) /  Convert.ToDouble(qty)).ToString(displayAmt);
+                            }
+
+
                             //SaveTemp
-                            StoreResult res = process.saveTempDlyptrans(ProgramConfig.returnRefNo, cnt.ToString(), "3", vty, barcode, qty, amt, "0.00", ProgramConfig.userId
-                                , "0", "", "0.00", "0", price, "1", "0.00", "0", "");
+                            //StoreResult res = process.saveTempDlyptrans(ProgramConfig.returnRefNo, cnt.ToString(), "3", vty, barcode, qty, amt, "0.00", ProgramConfig.userId
+                            //    , "0", "", "0.00", "0", price, "1", "0.00", "0", "");
+                            TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, cnt.ToString(), "3", vty, barcode
+                                                , qty, amt, "0", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff", cultureinfo), ProgramConfig.userId, "0"
+                                                , "", "", "0", "0.00", "0", "0.00", price, dty, check, name, "", "");
+
 
                             UCMonitor2Item ucitm = new UCMonitor2Item(cnt);
                             ucitm.lbNo.Text = cnt.ToString();
@@ -229,14 +279,16 @@ namespace BJCBCPOS
 
                             UCItemReturn ucitmReturn = new UCItemReturn(cnt);
                             ucitmReturn.UCGridViewItemSellClick += UCGridViewItemSellClick;
+                            ucitmReturn.Rec = cnt.ToString();
                             ucitmReturn.lbNo.Text = cnt.ToString();
                             ucitmReturn.lbProductCode.Text = code;
                             ucitmReturn.lbQty.Text = qty;
-                            ucitmReturn.lbPrice.Text = price;
-                            ucitmReturn.lbReturnPrice.Text = price;
+                            ucitmReturn.lbPrice.Text = Convert.ToDouble(dbPrice).ToString(displayAmt);
+                            ucitmReturn.lbReturnPrice.Text = Convert.ToDouble(price).ToString(displayAmt);
                             ucitmReturn.lbTotalPrice.Text = amt;
                             ucitmReturn.lbProductName.Text = name;
                             pn_Item_Return.Controls.Add(ucitmReturn);
+
                             cnt++;
 
                             amtPrice += double.Parse(ucitmReturn.lbTotalPrice.Text);
@@ -255,9 +307,9 @@ namespace BJCBCPOS
                     {
                         frmNotify dialog = new frmNotify(ResponseCode.Error, result.responseMessage, result.helpMessage);
                         dialog.ShowDialog(this);
-                        ucTBScanBarcode.Text = "";
+                        ucTBScanBarcodeRet.Text = "";
                         ucTxtQty.Text = "";
-                        ucTBScanBarcode.Focus();
+                        ucTBScanBarcodeRet.Focus();
                         return;
                     }
                 }
@@ -265,24 +317,28 @@ namespace BJCBCPOS
                 {
                     frmNotify dialog = new frmNotify(ResponseCode.Error, result.responseMessage, result.helpMessage);
                     dialog.ShowDialog(this);
-                    ucTBScanBarcode.Text = "";
+                    ucTBScanBarcodeRet.Text = "";
                     ucTxtQty.Text = "";
-                    ucTBScanBarcode.Focus();
+                    ucTBScanBarcodeRet.Focus();
                     return;
                 }
 
-                ucTBScanBarcode.Text = "";
-                ucTxtQty.Text = "";
-                ucTBScanBarcode.Focus();
-            }
+                CheckItemSell();
 
+                ucTBScanBarcodeRet.Text = "";
+                ucTxtQty.Text = "";
+                ucTBScanBarcodeRet.Focus();
+            }
+            DisableControl();
         }
 
         public void UCGridViewItemSellClick(object sender, EventArgs e)
         {
+            btnReturn.Enabled = false;
+            btnReturn.BackgroundImage = Properties.Resources.payment_disable;
+            btnConfirm.BringToFront();
             panelEditPrice.BringToFront();
             ucGV = (UCItemReturn)sender;
-            //ucGV = (UCItemSell)sender;
 
             lbNo.Text = ucGV.lbNo.Text;
             lbTxtNo = ucGV.lbNo.Text;
@@ -294,8 +350,13 @@ namespace BJCBCPOS
             ucReturnPrice.Text = ucGV.lbReturnPrice.Text;
             ucReturnPrice.Focus();
             lbCurrentPrice.Text = "ราคาเดิม " + ucGV.lbReturnPrice.Text + " บาท";
-            currentPrice = ucGV.lbPrice.Text;
+            currentPrice = ucGV.lbReturnPrice.Text;
             currentAmt = ucGV.lbTotalPrice.Text;
+
+            if (lastUCIS != ucGV)
+                UCItemReturn.LostFocusItem(lastUCIS);
+
+            lastUCIS = ucGV;
         }
 
         private void RefreshGrid()
@@ -316,6 +377,11 @@ namespace BJCBCPOS
                 {
                     item.BackColor = Color.White;
                 }
+
+                TEMPDLYPTRANSPARTIAL.Rows[num - 1]["REC"] = num;
+                TEMPDLYPTRANSPARTIAL.AcceptChanges();
+
+                item.Rec = num.ToString();
                 item.lbNoText = num.ToString();
                 a += double.Parse(item.lbQtyText);
                 pn_Item_Return.Controls.Add(item);
@@ -344,6 +410,8 @@ namespace BJCBCPOS
                 number--;
             }
             ScrollToBottom(frmMoCus.pn_Item);
+
+            CheckItemSell();
         }
 
         public void ScrollToBottom(Panel p)
@@ -357,17 +425,31 @@ namespace BJCBCPOS
 
         private void ucTBScanBarcode_EnterFromButton(object sender, EventArgs e)
         {
-            DataTable selectCount = process.selectMaxRecReturnTempDlyptrans();
-            r = selectCount.Rows[0]["REC"].ToString();
+            //DataTable selectCount = process.selectMaxRecReturnTempDlyptrans();
+
+            if (TEMPDLYPTRANSPARTIAL.Rows.Count > 0)
+            {
+                r = (TEMPDLYPTRANSPARTIAL.Rows[TEMPDLYPTRANSPARTIAL.Rows.Count - 1]["REC"]).ToString();
+            }
+            else
+            {
+                r = "0";
+            }
             cnt = int.Parse(r) + 1;
             keyProduct();
         }
 
         private void ucTBScanBarcode_TextBoxKeydown(object sender, EventArgs e)
         {
-
-            DataTable selectCount = process.selectMaxRecReturnTempDlyptrans();
-            r = selectCount.Rows[0]["REC"].ToString();
+            //DataTable selectCount = process.selectMaxRecReturnTempDlyptrans();
+            if (TEMPDLYPTRANSPARTIAL.Rows.Count > 0)
+            {
+                r = (TEMPDLYPTRANSPARTIAL.Rows[TEMPDLYPTRANSPARTIAL.Rows.Count - 1]["REC"]).ToString();
+            }
+            else
+            {
+                r = "0";
+            }
             cnt = int.Parse(r) + 1;
             keyProduct();
         }
@@ -414,7 +496,7 @@ namespace BJCBCPOS
             }
             else
             {
-                ucTBScanBarcode.Focus();
+                ucTBScanBarcodeRet.Focus();
             }
         }
 
@@ -426,14 +508,14 @@ namespace BJCBCPOS
                 lbQty.Visible = true;
                 ucTxtQty.Visible = true;
                 ucTxtQty.Focus();
-                btnMultiplyItem.BackgroundImage = Properties.Resources.multi_enable;
+                btnMultiplyItem.BackgroundImage = Properties.Resources.btn_Search_ReturnFromInvoice;
                 btnMultiplyItem.ForeColor = Color.White;
                 btnMultiplyItem.Tag = "enable";
             }
             else
             {
                 btnMultiplyItem.Tag = "disable";
-                ucTBScanBarcode.Focus();
+                ucTBScanBarcodeRet.Focus();
             }
         }
 
@@ -444,9 +526,10 @@ namespace BJCBCPOS
             btnMultiplyItem.ForeColor
                 = Color.Gray;
             ucTxtQty.Visible = false;
+            lbQty.Visible = false;
             ucTxtQty.Text = "";
             ucReturnPrice.Text = "";
-            ucTBScanBarcode.Text = "";
+            ucTBScanBarcodeRet.Text = "";
             if (pn_Item_Return.Controls.Count == 0)
             {
                 //CalDiscount
@@ -459,51 +542,90 @@ namespace BJCBCPOS
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             panelScanBarcode.BringToFront();
-            ucTBScanBarcode.Focus();
+            ucTBScanBarcodeRet.Focus();
         }
 
         private void ucReturnPrice_EnterFromButton(object sender, EventArgs e)
         {
             if (ucReturnPrice.Text != currentPrice)
             {
-                DataTable selectCount = process.selectMaxRecReturnTempDlyptrans();
+                //DataTable selectCount = process.selectMaxRecReturnTempDlyptrans();
                 //r = selectCount.Rows[0]["REC"].ToString();
                 //cnt = int.Parse(r) + 1;
-                DataTable selectDeleteItem = process.selectReturnItemTempDlyptrans(ProgramConfig.returnRefNo, code, qty, currentAmt);
-                string stcode = selectDeleteItem.Rows[0]["STCODE"].ToString();
-                string refNo = selectDeleteItem.Rows[0]["REF"].ToString();
-                string rec = selectDeleteItem.Rows[0]["REC"].ToString();
-                string sty = selectDeleteItem.Rows[0]["STY"].ToString();
-                string vty = selectDeleteItem.Rows[0]["VTY"].ToString();
-                string pcd = selectDeleteItem.Rows[0]["PCD"].ToString();
-                string qnt = selectDeleteItem.Rows[0]["QNT"].ToString();
-                string amt = selectDeleteItem.Rows[0]["AMT"].ToString();
-                string newAmt = (double.Parse(ucReturnPrice.Text) * double.Parse(qty)).ToString();
-                string fds = selectDeleteItem.Rows[0]["FDS"].ToString();
-                string ttm = selectDeleteItem.Rows[0]["TTM"].ToString();
-                string usr = selectDeleteItem.Rows[0]["USR"].ToString();
-                string egp = selectDeleteItem.Rows[0]["EGP"].ToString();
-                string stt = selectDeleteItem.Rows[0]["STT"].ToString();
-                string stv = selectDeleteItem.Rows[0]["STV"].ToString();
-                string reason = selectDeleteItem.Rows[0]["REASON_ID"].ToString();
-                string pdisc = selectDeleteItem.Rows[0]["PDISC"].ToString();
-                string discid = selectDeleteItem.Rows[0]["DISCID"].ToString();
-                string discamt = selectDeleteItem.Rows[0]["DISCAMT"].ToString();
-                string upc = selectDeleteItem.Rows[0]["UPC"].ToString();
-                string dty = selectDeleteItem.Rows[0]["DTY"].ToString();
+                DataRow dr = TEMPDLYPTRANSPARTIAL.Select("REF = '" + ProgramConfig.returnRefNo + "' and STCODE = '" + ProgramConfig.storeCode
+                + "' and ISNULL(STT, '') <> 'V' and VTY in ('0','1') and REC >= 0 and REC < 2000 and PCD = '" + code + "' and QNT = '" + qty + "' and AMT = '" + currentAmt+ "'").FirstOrDefault();
+                //process.selectReturnItemTempDlyptrans(ProgramConfig.returnRefNo, code, qty, currentAmt);
+                //string stcode = selectDeleteItem.Rows[0]["STCODE"].ToString();
+                //string refNo = selectDeleteItem.Rows[0]["REF"].ToString();
+                //string rec = selectDeleteItem.Rows[0]["REC"].ToString();
+                //string sty = selectDeleteItem.Rows[0]["STY"].ToString();
+                //string vty = selectDeleteItem.Rows[0]["VTY"].ToString();
+                //string pcd = selectDeleteItem.Rows[0]["PCD"].ToString();
+                //string qnt = selectDeleteItem.Rows[0]["QNT"].ToString();
+                //string amt = selectDeleteItem.Rows[0]["AMT"].ToString();
+                //string newAmt = (double.Parse(ucReturnPrice.Text) * double.Parse(qty)).ToString();
+                //string fds = selectDeleteItem.Rows[0]["FDS"].ToString();
+                //string ttm = selectDeleteItem.Rows[0]["TTM"].ToString();
+                //string usr = selectDeleteItem.Rows[0]["USR"].ToString();
+                //string egp = selectDeleteItem.Rows[0]["EGP"].ToString();
+                //string stt = selectDeleteItem.Rows[0]["STT"].ToString();
+                //string stv = selectDeleteItem.Rows[0]["STV"].ToString();
+                //string reason = selectDeleteItem.Rows[0]["REASON_ID"].ToString();
+                //string pdisc = selectDeleteItem.Rows[0]["PDISC"].ToString();
+                //string discid = selectDeleteItem.Rows[0]["DISCID"].ToString();
+                //string discamt = selectDeleteItem.Rows[0]["DISCAMT"].ToString();
+                //string upc = selectDeleteItem.Rows[0]["UPC"].ToString();
+                //string dty = selectDeleteItem.Rows[0]["DTY"].ToString();
 
-                StoreResult updateTemp = process.updateNewAmtQtyTempDlyptrans(ProgramConfig.returnRefNo, rec, newAmt, qnt);
-                if (updateTemp.response == ResponseCode.Error)
-                {
-                    frmNotify dialog = new frmNotify(ResponseCode.Error, updateTemp.responseMessage, updateTemp.helpMessage);
-                    dialog.ShowDialog(this);
-                    return;
+                //StoreResult updateTemp = process.updateNewAmtQtyTempDlyptrans(ProgramConfig.returnRefNo, rec, newAmt, qnt);
+                //if (updateTemp.response == ResponseCode.Error)
+                //{
+                //    frmNotify dialog = new frmNotify(ResponseCode.Error, updateTemp.responseMessage, updateTemp.helpMessage);
+                //    dialog.ShowDialog(this);
+                //    return;
+                //}
+
+                if (dr != null)
+                {               
+                    string total = (double.Parse(ucReturnPrice.Text) * double.Parse(qty)).ToString(displayAmt);
+                    dr["AMT"] = total;
+                    dr["UPC"] = ucReturnPrice.Text;
+                    dr.AcceptChanges();
+
+                    ucGV.lbReturnPrice.Text = double.Parse(ucReturnPrice.Text).ToString(displayAmt);
+                    ucGV.lbTotalPrice.Text = total;
+
+                    double totalOriAmt = 0.0;
+                    foreach (UCItemReturn item in pn_Item_Return.Controls)
+                    {
+                        totalOriAmt += Convert.ToDouble(item.lbPriceText) * Convert.ToDouble(item.lbQtyText);
+                    }
+
+                    double totalRetAmt = 0.0;
+                    foreach (DataRow dr2 in TEMPDLYPTRANSPARTIAL.Rows)
+                    {
+                        totalRetAmt += Convert.ToDouble(dr2["AMT"]);
+                    }
+
+                    lbTxtSubtotal.Text = totalOriAmt.ToString(displayAmt);
+                    lbTxtTotal.Text = totalRetAmt.ToString(displayAmt);
+
+                    frmMoCus.lbTxtSubTotalCash.Text = totalOriAmt.ToString(displayAmt);
+                    frmMoCus.lbTxtDiscount.Text = "0.00";
+                    frmMoCus.lbTxtTotalCash.Text = totalRetAmt.ToString(displayAmt);
+
+     
+
+                    this.Refresh();
+                    DisableControl();
+                    panelScanBarcode.BringToFront();
+                    ucTBScanBarcodeRet.Focus();
                 }
 
-                loadTempDLYPTRANS();
-                DisableControl();                
-                panelScanBarcode.BringToFront();
-                ucTBScanBarcode.Focus();
+                
+
+                //loadTempDLYPTRANS();
+
 
             }
         }
@@ -584,43 +706,49 @@ namespace BJCBCPOS
 
         }
 
-        private void ucHeader1_MemberClick(object sender, EventArgs e)
+        private void ClearMember()
         {
-            clickSearchMember();
+            ProgramConfig.memberId = "";
+            ProgramConfig.memberName = "";
+            ProgramConfig.memberCardNo = "";
+            ProgramConfig.memberProfileMMFormat.Clear();
+            ucHeader1.nameText = "";
+            ucHeader1.nameVisible = false;
+            ucHeader1.pnNameSize = new Size(50, 43);
         }
 
-        public void clickSearchMember()
-        {
-            Profile check = ProgramConfig.getProfile(FunctionID.Return_InputCustomer_ByMember);
-            if (check.policy == PolicyStatus.Work)
-            {
-                panelMember.BringToFront();
-                ucTBWI_Member.InitialTextBoxIcon(BJCBCPOS.Properties.Resources.icon_textbox_search, UCTextBoxIconType.SearchAndDelete, IconType.Search, "ກະລຸນາລະບຸສະມາຊິກ");
-                ucTBWI_Member.Focus();
-            }
-        }
+        //public void clickSearchMember()
+        //{
+        //    Profile check = ProgramConfig.getProfile(FunctionID.Return_InputCustomer_ByMember);
+        //    if (check.policy == PolicyStatus.Work)
+        //    {
+        //        panelMember.BringToFront();
+        //        ucTBWI_Member.InitialTextBoxIcon(BJCBCPOS.Properties.Resources.icon_textbox_search, UCTextBoxIconType.SearchAndDelete, IconType.Search, "ກະລຸນາລະບຸສະມາຊິກ");
+        //        ucTBWI_Member.Focus();
+        //    }
+        //}
 
-        private void ucTBWI_Member_IconClick(object sender, EventArgs e)
-        {
-            string eventName = "ReturnScan";
-            Profile check = ProgramConfig.getProfile(FunctionID.Return_InputCustomer_ByMember);
-            if (check.policy == PolicyStatus.Work)
-            {
-                frmSearchMember frm = new frmSearchMember((UCTextBoxWithIcon)sender, eventName);
-                frm.ShowDialog(this);
-            }
-            ucHeader1.nameText = ucTBWI_Member.Text;
-            ucHeader1.nameVisible = true;
-            Label newFont = new Label();
-            newFont.Font = new Font("Microsoft Sans Serif", 14);
-            int checkWidth = TextRenderer.MeasureText(ucTBWI_Member.Text, newFont.Font).Width;
-            ucHeader1.pnNameSize = new Size(40 + checkWidth, 45);
-            //DisableControl();
-            //panelScanBarcode.BringToFront();
-            //ucTBScanBarcode.Focus();
-            panelMember.SendToBack();
-            memberProcess();
-        }
+        //private void ucTBWI_Member_IconClick(object sender, EventArgs e)
+        //{
+        //    string eventName = "ReturnScan";
+        //    Profile check = ProgramConfig.getProfile(FunctionID.Return_InputCustomer_ByMember);
+        //    if (check.policy == PolicyStatus.Work)
+        //    {
+        //        frmSearchMember frm = new frmSearchMember((UCTextBoxWithIcon)sender, eventName);
+        //        frm.ShowDialog(this);
+        //    }
+        //    ucHeader1.nameText = ucTBWI_Member.Text;
+        //    ucHeader1.nameVisible = true;
+        //    Label newFont = new Label();
+        //    newFont.Font = new Font("Microsoft Sans Serif", 14);
+        //    int checkWidth = TextRenderer.MeasureText(ucTBWI_Member.Text, newFont.Font).Width;
+        //    ucHeader1.pnNameSize = new Size(40 + checkWidth, 45);
+        //    //DisableControl();
+        //    //panelScanBarcode.BringToFront();
+        //    //ucTBScanBarcode.Focus();
+        //    panelMember.SendToBack();
+        //    memberProcess();
+        //}
 
         public void frmSearchMemberData(string memberData, string memberDataName)
         {
@@ -643,33 +771,33 @@ namespace BJCBCPOS
         {
             DisableControl();
             panelScanBarcode.BringToFront();
-            ucTBScanBarcode.Focus();
+            ucTBScanBarcodeRet.Focus();
         }
 
-        private void btnOk_Click(object sender, EventArgs e)
-        {
-            string eventName = "ReturnScan";
-            Profile check = ProgramConfig.getProfile(FunctionID.Return_InputCustomer_ByMember);
-            if (check.policy == PolicyStatus.Work)
-            {
-                frmSearchMemberAuto frm = new frmSearchMemberAuto(ucTBWI_Member.Text, eventName);
-                frm.ShowDialog(this);
-            }
+        //private void btnOk_Click(object sender, EventArgs e)
+        //{
+        //    string eventName = "ReturnScan";
+        //    Profile check = ProgramConfig.getProfile(FunctionID.Return_InputCustomer_ByMember);
+        //    if (check.policy == PolicyStatus.Work)
+        //    {
+        //        frmSearchMemberAuto frm = new frmSearchMemberAuto(ucTBWI_Member.Text, eventName);
+        //        frm.ShowDialog(this);
+        //    }
 
-            ucHeader1.nameText = memberName;
-            ucHeader1.nameVisible = true;
-            //e.Graphics.MeasureString(ucTBWI_Member.Text, SystemFonts.DefaultFont).Width);
-            Label newFont = new Label();
-            newFont.Font = new Font("Microsoft Sans Serif", 14);
-            int checkWidth = TextRenderer.MeasureText(memberName, newFont.Font).Width;
-            //base {System.MarshalByRefObject} = {Name = "Microsoft Sans Serif" Size=8.25}
-            ucHeader1.pnNameSize = new Size(40 + checkWidth, 45);
-            panelMember.SendToBack();
-            //DisableControl();
-            //panelScanBarcode.BringToFront();
-            //ucTBScanBarcode.Focus();
-            memberProcess();
-        }
+        //    ucHeader1.nameText = memberName;
+        //    ucHeader1.nameVisible = true;
+        //    //e.Graphics.MeasureString(ucTBWI_Member.Text, SystemFonts.DefaultFont).Width);
+        //    Label newFont = new Label();
+        //    newFont.Font = new Font("Microsoft Sans Serif", 14);
+        //    int checkWidth = TextRenderer.MeasureText(memberName, newFont.Font).Width;
+        //    //base {System.MarshalByRefObject} = {Name = "Microsoft Sans Serif" Size=8.25}
+        //    ucHeader1.pnNameSize = new Size(40 + checkWidth, 45);
+        //    panelMember.SendToBack();
+        //    //DisableControl();
+        //    //panelScanBarcode.BringToFront();
+        //    //ucTBScanBarcode.Focus();
+        //    //memberProcess();
+        //}
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
@@ -678,8 +806,26 @@ namespace BJCBCPOS
             if (checkReturn.policy == PolicyStatus.Work)
             {
                 frmAllDisplayReason displayReason = new frmAllDisplayReason(eventName);
-                displayReason.ShowDialog(this);
+                var displayReason_res = displayReason.ShowDialog(this);
+
+                this._reasonId = displayReason._reasonID;
+                this._reasonTxt = displayReason._reasonTxt;
+
+                if (displayReason_res != DialogResult.Yes)
+                {
+                    if (displayReason_res != System.Windows.Forms.DialogResult.Retry)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        ucFooterTran1.IsStandAlone = true;
+                        frmReturnFromScanProduct_Load(null, null);
+                        return;
+                    }
+                } 
             }
+
 
             Profile chkDisplayReturnPayment = ProgramConfig.getProfile(FunctionID.Return_SuggestReturnPaymentType);
             if (chkDisplayReturnPayment.policy == PolicyStatus.Work)
@@ -689,23 +835,90 @@ namespace BJCBCPOS
 
             ucTxtPointReceive.Text = "0.00";
             ucTxtCashReceive.Text = lbTxtTotal.Text;
+            ucTxtCashReceive.EnabledUC = false;
             lbSummaryCash.Text = "มูลค่าสินค้ารวม " + lbTxtSubtotal.Text + " บาท";
 
             panelConfirm.BringToFront();
-            ucTxtCashReceive.Focus();
+            //ucTxtCashReceive.Focus();
         }
 
         private void picBack2_Click(object sender, EventArgs e)
         {
             panelScanBarcode.BringToFront();
-            ucTBScanBarcode.Focus();
+            ucTBScanBarcodeRet.Focus();
         }
 
         private void btnSubmit2_Click(object sender, EventArgs e)
         {
-            //frmReturnSuccess frmSuccess = new frmReturnSuccess(ProgramConfig.returnRefNo, ucTxtCashReceive.Text, reasonId, ProgramConfig.returnRefNo ,returnType, Text);
-            //frmSuccess.ShowDialog(this);
+            frmLoading.showLoading();
 
+            string maxRec = (TEMPDLYPTRANSPARTIAL.Rows[TEMPDLYPTRANSPARTIAL.Rows.Count - 1]["REC"]).ToString();
+            string qty = TEMPDLYPTRANSPARTIAL.AsEnumerable().Sum(s => Convert.ToDouble(s["QNT"])).ToString(); //(TEMPDLYPTRANSPARTIAL.Rows[TEMPDLYPTRANSPARTIAL.Rows.Count - 1]["QNT"]).ToString();
+            string newInstuRec = (double.Parse(maxRec) + 10).ToString();
+            string superId;
+            if (ProgramConfig.superUserId == "" || ProgramConfig.superUserId == null || ProgramConfig.superUserId == "N/A")
+            {
+                superId = "0";
+            }
+            else
+            {
+                superId = ProgramConfig.superUserId;
+            }
+
+            if (ProgramConfig.memberId != null && ProgramConfig.memberId.Trim() != "")
+            {
+                bool isMMFormat = ProgramConfig.memberFormat == MemberFormat.MegaMaket;
+                string memberID = isMMFormat ? ProgramConfig.memberCardNo : ProgramConfig.memberId;
+                string pdisc = isMMFormat ? ProgramConfig.memberProfileMMFormat.CreditCustomerNo : ""; // CreditCustomerNo
+                string discID = isMMFormat ? ProgramConfig.memberProfileMMFormat.CustomerCategory : ""; // CustomerCategory
+                string discAmt = isMMFormat ? ProgramConfig.memberProfileMMFormat.Customer_No : ucTxtPointReceive.Text; // Customer_No
+
+                pdisc = pdisc == "" ? "0" : pdisc;
+                string subMemberId = memberID.Substring(0, 2);
+
+                TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, "0", "3", "C", memberID, qty, ucTxtCashReceive.Text, "0.00", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff", cultureinfo), ProgramConfig.userId
+                                            , subMemberId, "", "", "0", pdisc, discID, discAmt, "0.00", "1");
+            }
+
+            //Pay
+            TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, newInstuRec, "3", "P", "RETN", "1.00", ucTxtCashReceive.Text, "0.00", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff", cultureinfo), ProgramConfig.userId
+                            , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1", "", "");
+
+
+            //Vat
+            string vatPercent = ProgramConfig.vatRate;
+            string vatAmt = ((Convert.ToDouble(ucTxtCashReceive.Text) * Convert.ToDouble(ProgramConfig.vatRate)) / (100 + Convert.ToDouble(ProgramConfig.vatRate))).ToString("N2");
+            newInstuRec = (double.Parse(newInstuRec) + 1).ToString();
+
+            TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, newInstuRec, "3", "V", "Vat Return", qty, vatAmt, ProgramConfig.vatRate, DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff", cultureinfo), ProgramConfig.userId
+                                            , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1");
+
+
+            //Final Rec
+            newInstuRec = (double.Parse(newInstuRec) + 1).ToString();
+            TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, newInstuRec, "3", "F", ProgramConfig.returnRefNo + " Return", qty, ucTxtCashReceive.Text, "0.00", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff", cultureinfo), ProgramConfig.userId
+                                , ProgramConfig.tillNo, "", "", _reasonId, superId, "", DateTime.Now.ToString("yyyyMMdd", cultureinfo), (ProgramConfig.IsStandAloneMode ? "1" : ""), "1");
+
+
+            frmLoading.closeLoading();
+
+            frmReturnSuccess frmSuccess = new frmReturnSuccess(ProgramConfig.returnRefNo, ucTxtCashReceive.Text, _reasonId, _reasonTxt, ProgramConfig.returnRefNo,
+                                            returnType, ProgramConfig.tillNo, ProgramConfig.userId, ProgramConfig.memberName, "-", null, TEMPDLYPTRANSPARTIAL, ProgramConfig.printInvoiceType, false, "-");
+            DialogResult frmSuccess_res = frmSuccess.ShowDialog(this);
+
+            if (frmSuccess_res != DialogResult.Yes)
+            {
+                TEMPDLYPTRANSPARTIAL.AcceptChanges();
+                foreach (DataRow row in TEMPDLYPTRANSPARTIAL.Rows)
+                {
+                    if (row["VTY"].ToString() == "V" || row["VTY"].ToString() == "P" || row["VTY"].ToString() == "F" || row["VTY"].ToString() == "C")
+                    {
+                        row.Delete();
+                    }
+
+                }
+                TEMPDLYPTRANSPARTIAL.AcceptChanges();
+            }
         }
 
         public void frmAllDisplayReasonData(string reasonData)
@@ -761,6 +974,105 @@ namespace BJCBCPOS
 
         }
 
-        
+        public void InitalDatatable()
+        {
+            TEMPDLYPTRANSPARTIAL.Columns.Add("STCODE", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("REF", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("REC", typeof(int));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("STY", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("VTY", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("PCD", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("QNT", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("AMT", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("FDS", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("TTM", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("USR", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("EGP", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("STT", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("STV", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("REASON_ID", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("PDISC", typeof(double));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("DISCID", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("DISCAMT", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("UPC", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("DTY", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("QNTMAX", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("PR_NAME", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("DISPQ", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("RTCPRICE", typeof(string));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("ISEDC", typeof(string));
+        }
+
+        private void ucHeader1_MemberEnterFromButton(object sender, EventArgs e)
+        {
+            panelScanBarcode.BringToFront();
+            ucTBScanBarcodeRet.Focus();
+        }
+
+        private void lbDelete_Click(object sender, EventArgs e)
+        {
+            //Fix language
+            if (Utility.AlertMessage(this, ResponseCode.Warning, "ต้องการลบรายการหรือไม่"))
+            {
+                DataRow dr = TEMPDLYPTRANSPARTIAL.AsEnumerable().Where(w => w["REC"].ToString() == ucGV.Rec).FirstOrDefault();
+                if (dr != null)
+                {
+                    TEMPDLYPTRANSPARTIAL.Rows.Remove(dr);
+                    pn_Item_Return.Controls.Remove(ucGV);
+                    RefreshGrid();
+                }
+                panelScanBarcode.BringToFront();
+            }
+
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            btnReturn.Enabled = true;
+            btnReturn.BackgroundImage = Properties.Resources.payment_enable;
+            btnReturn.BringToFront();
+            panelScanBarcode.BringToFront();
+        }
+
+        private void CheckItemSell()
+        {
+            if (pn_Item_Return.Controls.Count > 0)
+            {
+                setVisibleButtonConfirm(true);
+            }
+            else if (pn_Item_Return.Controls.Count == 0)
+            {
+                setVisibleButtonConfirm(false);
+            }
+        }
+
+        private void setVisibleButtonConfirm(bool val)
+        {
+            if (val)
+            {
+                if (!btnConfirm.Enabled)
+                {
+                    btnConfirm.Enabled = true;
+                    btnConfirm.BackgroundImage = Properties.Resources.Sale_btnConfirm;
+                }
+            }
+            else
+            {
+                if (btnConfirm.Enabled)
+                {
+                    btnConfirm.Enabled = false;
+                    btnConfirm.BackgroundImage = Properties.Resources.payment_disable;
+                }
+
+            }
+        }
+
+        private void ucTBScanBarcodeRet_Enter(object sender, EventArgs e)
+        {
+            btnReturn.Enabled = false;
+            CheckItemSell();
+            btnConfirm.BringToFront();
+
+        }
     }
 }

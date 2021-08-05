@@ -11,7 +11,6 @@ using System.IO;
 using System.Reflection;
 using MMFSAPI;
 using System.Threading;
-using ApiServices;
 
 namespace BJCBCPOS_Process
 {
@@ -337,6 +336,7 @@ namespace BJCBCPOS_Process
 
                     //************ check terminal not return column ***************
                     ProgramConfig.abbNo = result.otherData.Rows[0]["AbbNo"].ToString();
+                    ProgramConfig.tempFFTINo = result.otherData.Rows[0]["TempFFTIRef"].ToString();
                     ProgramConfig.cnNo = result.otherData.Rows[0]["CNNo"].ToString();
                     ProgramConfig.fftiNo = result.otherData.Rows[0]["FFTINo"].ToString();
 
@@ -350,7 +350,7 @@ namespace BJCBCPOS_Process
                     ProgramConfig.posrepRefNoIni = result.otherData.Rows[0]["PosRepRef"].ToString();
                     ProgramConfig.actionRefNoIni = result.otherData.Rows[0]["DelEditItemInternalRef"].ToString();
                     ProgramConfig.holdOrderRefNoIni = result.otherData.Rows[0]["HoldRef"].ToString();
-                    ProgramConfig.tempFFTINo = result.otherData.Rows[0]["TempFFTIRef"].ToString();
+                    
 
                     ProgramConfig.running.updateValue();
 

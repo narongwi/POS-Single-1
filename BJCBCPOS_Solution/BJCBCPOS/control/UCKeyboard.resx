@@ -118,6 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn83.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFEAAABFCAYAAAAyyAq7AAAABGdBTUEAALGPC/xhBQAAAVBJREFUeF7t
+        3C9OA0EcR/HVGATBkbRB4BA4QkJouALhJFg0B0BwDRQOjcTSA6BwhH9y+c3MTgpJQ9jZJ98n+Sad2ap3
+        gOmqvu+3Y5exh5jWe4xdxXaHbCtxuR97jul/XmOnQ74ccCf2kr5olM/YQY14na/U4q5GfCpnNfiqEd/K
+        WY22UkRNMzPidHtGnM6IACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCI
+        ACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgw
+        IsCIACMCjAgwIsCIgHmKmB4PU7v8uNCy/FaD9/rM1U05q8FtjTiLfeQrjXWYIyZxOC93GuFiyLcSlyex
+        +/xZf0nPxZ4N2daLP2zEjmIL92vHsc0h0w9d9w2S7BE/tQqSMgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btn85.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFEAAABFCAYAAAAyyAq7AAAABGdBTUEAALGPC/xhBQAAAVBJREFUeF7t
@@ -130,17 +141,6 @@
 </value>
   </data>
   <data name="btn84.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAFEAAABFCAYAAAAyyAq7AAAABGdBTUEAALGPC/xhBQAAAVBJREFUeF7t
-        3C9OA0EcR/HVGATBkbRB4BA4QkJouALhJFg0B0BwDRQOjcTSA6BwhH9y+c3MTgpJQ9jZJ98n+Sad2ap3
-        gOmqvu+3Y5exh5jWe4xdxXaHbCtxuR97jul/XmOnQ74ccCf2kr5olM/YQY14na/U4q5GfCpnNfiqEd/K
-        WY22UkRNMzPidHtGnM6IACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCI
-        ACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgwIsCIACMCjAgw
-        IsCIACMCjAgwIsCIgHmKmB4PU7v8uNCy/FaD9/rM1U05q8FtjTiLfeQrjXWYIyZxOC93GuFiyLcSlyex
-        +/xZf0nPxZ4N2daLP2zEjmIL92vHsc0h0w9d9w2S7BE/tQqSMgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btn83.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFEAAABFCAYAAAAyyAq7AAAABGdBTUEAALGPC/xhBQAAAVBJREFUeF7t
         3C9OA0EcR/HVGATBkbRB4BA4QkJouALhJFg0B0BwDRQOjcTSA6BwhH9y+c3MTgpJQ9jZJ98n+Sad2ap3

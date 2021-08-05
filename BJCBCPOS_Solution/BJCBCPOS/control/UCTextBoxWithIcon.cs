@@ -313,6 +313,11 @@ namespace BJCBCPOS
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string InputType { get; set; }
 
+        [Category("Custom Property")]
+        [Description("Set Keyboard for scan")]
+        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
+        public bool IsKeyBoardForScan { get; set; }
+
         #endregion
 
         #region EventHandler
@@ -418,10 +423,10 @@ namespace BJCBCPOS
 
             if (this.FindForm() != null)
             {
-                var frm = this.FindForm().Controls.Find("ucKeypad", true).FirstOrDefault() as UCKeypad;
-                if (frm != null)
+                var keypad = this.FindForm().Controls.Find("ucKeypad", true).FirstOrDefault() as UCKeypad;
+                if (keypad != null)
                 {
-                    frm.ucTBWI = this;
+                    keypad.ucTBWI = this;
                 }
                 else
                 {
@@ -429,12 +434,22 @@ namespace BJCBCPOS
                     Form owner = this.FindForm().Owner;
                     if (owner != null)
                     {
-                        frm = owner.Controls.Find("ucKeypad", true).FirstOrDefault() as UCKeypad;
-                        if (frm != null)
+                        keypad = owner.Controls.Find("ucKeypad", true).FirstOrDefault() as UCKeypad;
+                        if (keypad != null)
                         {
-                            frm.ucTBWI = this;
+                            keypad.ucTBWI = this;
                         }
                     }
+                }
+
+                if (IsKeyBoardForScan)
+                {
+                    var keyboard = this.FindForm().Controls.Find("ucKeyboard1", true).FirstOrDefault() as UCKeyboard;
+                    if (keyboard != null)
+                    {
+                        keyboard.updateLanguage(new Language(1));
+                    }
+                    KeyboardApi keyboardLang = new KeyboardApi(new System.Globalization.CultureInfo("en-US"));
                 }
 
                 if (!(this.FindForm().ActiveControl is UCKeyboard) && !(this.FindForm().ActiveControl is UCKeypad))
@@ -459,7 +474,10 @@ namespace BJCBCPOS
         {
             if (textBox1.Text.Length == 0)
             {
-                label1.Visible = true;
+                if (this.EnabledUC)
+                {
+                    label1.Visible = true;
+                }
             }
 
             if (IsLarge)
@@ -589,23 +607,25 @@ namespace BJCBCPOS
 
             if (textBox1.Text.Length > 0)
             {
-                if (textBox1.TextAlign == HorizontalAlignment.Right)
-                {
+                //if (textBox1.TextAlign == HorizontalAlignment.Right)
+                //{
+                //    InitialTextBoxIcon(this, BJCBCPOS.Properties.Resources.icon_textbox_delete, IconType.Delete, true);
+                //}
+                //else
+                //{
                     InitialTextBoxIcon(this, BJCBCPOS.Properties.Resources.icon_textbox_delete, IconType.Delete, true);
-                }
-                else
-                {
-                    InitialTextBoxIcon(this, BJCBCPOS.Properties.Resources.icon_textbox_delete, IconType.Delete, true);
-                }
+                //}
 
                 // For QTY
                 if (IsNumber)
                 {
                     //TO DO Set format QTY
+                    int select = textBox1.SelectionStart;
                     //textBox1.Text = textBox1.Text.Replace(".0000", "").Replace(".000", "").Replace(".00", "").Replace(".0","").Replace(".","");
                     textBox1.TextChanged -= textBox1_TextChanged;
                     textBox1.Text = textBox1.Text.Replace(".0000", "").Replace(".000", "").Replace(".00", "").Replace(".0", "").Replace(".", "");
                     textBox1.TextChanged += textBox1_TextChanged;
+                    textBox1.SelectionStart = select;
                 }
                 
                 if (IsSetFormat)
@@ -614,21 +634,12 @@ namespace BJCBCPOS
                     {
                         double temp = 0.0;
                         string amt = textBox1.Text.Replace(",", "");
-                        if (double.TryParse(amt, out temp))
-                        {
-                            //textBox1.TextChanged -= textBox1_TextChanged;
-                            //textBox1.Text = String.Format("{0:" + ProgramConfig.amountFormatString + "}", Convert.ToDouble(textBox1.Text.Replace(",", "")));
-                            //textBox1.TextChanged += textBox1_TextChanged;
-                            textBox1.SelectionStart = textBox1.Text.Length;
-                            
-                        }
-                        else
+                        if (!double.TryParse(amt, out temp))
                         {
                             textBox1.Text = "";
                         }
                     }
                 }
-                textBox1.Focus();
             }
             else
             {
@@ -639,10 +650,12 @@ namespace BJCBCPOS
                 else if ((UCTextBoxIconType)this.Tag == UCTextBoxIconType.ScanAndDelete)
                     InitialTextBoxIcon(this, BJCBCPOS.Properties.Resources.icon_textbox_scan, IconType.Scan);
 
-                label1.Visible = true;
+                if (this.EnabledUC)
+                {
+                    label1.Visible = true;
+                }       
             }
-
-
+            textBox1.Focus();
         }
 
         public void InitialTextBoxIcon(Image pic, UCTextBoxIconType textBoxType, IconType iconType, string placeHolder = "", bool NoCustomShowLine = true, bool isEnabelBtn = true)
@@ -714,6 +727,7 @@ namespace BJCBCPOS
                         //    }
                         //}
                         TextBoxKeydown(this, e);
+                        return;
                     }
                 }
             }

@@ -71,6 +71,7 @@
             this.btnReceivePayment.TabIndex = 34;
             this.btnReceivePayment.Text = "รับชำระ";
             this.btnReceivePayment.UseVisualStyleBackColor = true;
+            this.btnReceivePayment.Visible = false;
             this.btnReceivePayment.Click += new System.EventHandler(this.btnReceivePayment_Click);
             // 
             // button7

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BJCBCPOS_Model;
 using BJCBCPOS_Process;
+using System.Text.RegularExpressions;
 
 
 namespace BJCBCPOS
@@ -77,6 +78,10 @@ namespace BJCBCPOS
         public DataTable TEMPDLYPTRANSPARTIAL = new DataTable();
         private DataTable _dtDisplayPayment = new DataTable();
         private PrintInvoiceType _printType;
+        private bool IsEDC = false;
+        string _saleTime;
+
+        System.Globalization.CultureInfo cultureinfo = new System.Globalization.CultureInfo("en-US");
 
         public frmReturnFromInvoice()
         {
@@ -89,11 +94,10 @@ namespace BJCBCPOS
             try
             {
                 cnt = 1;
-                //btnSearch.BackgroundImage = Properties.Resources.change_enable;
-                //btnSearch.ForeColor = Color.White;
-                ucHeader1.alertFunctionID = FunctionID.Return_GetMessageCashier;
-                //Class1.InitialTextBoxIcon(ucTxtSearch, BJCBCPOS.Properties.Resources.icon_textbox_scan, Class1.UCTextBoxIconType.ScanAndDelete, Class1.IconType.Scan);
+                ucHeader1.alertFunctionID = FunctionID.Return_GetMessageCashier;              
                 StoreResult result = null;
+
+                Utility.GlobalClear();
 
                 Profile check = ProgramConfig.getProfile(FunctionID.Return_SelectReturnTypeMenu_ByReceipt);
                 if (check.profile == ProfileStatus.NotAuthorize)
@@ -370,7 +374,7 @@ namespace BJCBCPOS
             TEMPDLYPTRANSFULL.Columns.Add("STT", typeof(string));
             TEMPDLYPTRANSFULL.Columns.Add("STV", typeof(string));
             TEMPDLYPTRANSFULL.Columns.Add("REASON_ID", typeof(string));
-            TEMPDLYPTRANSFULL.Columns.Add("PDISC", typeof(float));
+            TEMPDLYPTRANSFULL.Columns.Add("PDISC", typeof(double));
             TEMPDLYPTRANSFULL.Columns.Add("DISCID", typeof(string));
             TEMPDLYPTRANSFULL.Columns.Add("DISCAMT", typeof(string));
             TEMPDLYPTRANSFULL.Columns.Add("UPC", typeof(string));
@@ -394,7 +398,7 @@ namespace BJCBCPOS
             TEMPDLYPTRANSPARTIAL.Columns.Add("STT", typeof(string));
             TEMPDLYPTRANSPARTIAL.Columns.Add("STV", typeof(string));
             TEMPDLYPTRANSPARTIAL.Columns.Add("REASON_ID", typeof(string));
-            TEMPDLYPTRANSPARTIAL.Columns.Add("PDISC", typeof(float));
+            TEMPDLYPTRANSPARTIAL.Columns.Add("PDISC", typeof(double));
             TEMPDLYPTRANSPARTIAL.Columns.Add("DISCID", typeof(string));
             TEMPDLYPTRANSPARTIAL.Columns.Add("DISCAMT", typeof(string));
             TEMPDLYPTRANSPARTIAL.Columns.Add("UPC", typeof(string));
@@ -566,9 +570,10 @@ namespace BJCBCPOS
                                 ucitmDetail.lbUC_ProductRec.Text = rec.ToString();
                                 ucitmDetail.lbUC_ProductCode.Text = codeOrName;
                                 qtyRes = (double.Parse(qty) - double.Parse(qtyReturn)).ToString();
-                                ucitmDetail.lbUC_Qty.Text = double.Parse(qty).ToString();
+                                //ucitmDetail.lbUC_Qty.Text = double.Parse(qty).ToString();
+                                ucitmDetail.lbUC_Qty.Text = double.Parse(qtyRes).ToString();
                                 ucitmDetail.lbUC_Price.Text = double.Parse(price).ToString(amtFormat);
-                                ucitmDetail.lbUC_QtyMax.Text = double.Parse(qtyRes).ToString(amtFormat);
+                                ucitmDetail.lbUC_QtyMax.Text = double.Parse(qtyRes).ToString();
                                 ucitmDetail.lbUC_Discount.Text = double.Parse(dis).ToString(amtFormat);
                                 ucitmDetail.lbUC_DisPQ.Text = discountPQ.ToString(amtFormat);
                                 ucitmDetail.lbUC_TotalPrice.Text = (double.Parse(amt)).ToString(amtFormat);
@@ -600,10 +605,14 @@ namespace BJCBCPOS
                                 }
                                 
                                 double currentAmtDis = double.Parse(qtyRes) * (double.Parse(price) - discountPQ);
-                                                                
-                                TEMPDLYPTRANSFULL.Rows.Add(ProgramConfig.storeCode,ProgramConfig.returnRefNo, rec, "3", vty, ucitmDetail.lbUC_ProductCode.Text
-                                    , ucitmDetail.lbUC_QtyMax.Text, currentAmt.ToString(amtFormat), currentDis.ToString(amtFormat), DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId, vatValue
-                                                , "", "", "0", "0.00", "0", "0.00", ucitmDetail.lbUC_Price.Text, dty, ucitmDetail.lbUC_ProductName.Text, discountPQ.ToString());
+
+                                if (double.Parse(qtyRes) > 0)
+                                {
+                                    TEMPDLYPTRANSFULL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, rec, "3", vty, ucitmDetail.lbUC_ProductCode.Text
+                                   , ucitmDetail.lbUC_QtyMax.Text, currentAmt.ToString(amtFormat), currentDis.ToString(amtFormat), DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId, vatValue
+                                               , "", "", "0", "0.00", "0", "0.00", ucitmDetail.lbUC_Price.Text, dty, ucitmDetail.lbUC_ProductName.Text, discountPQ.ToString());
+                                }
+                               
                                 TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, rec, "3", vty, ucitmDetail.lbUC_ProductCode.Text
                                                 , "0", "0", "0", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId, vatValue
                                                 , "", "", "0", "0.00", "0", "0.00", ucitmDetail.lbUC_Price.Text, dty, ucitmDetail.lbUC_QtyMax.Text, ucitmDetail.lbUC_ProductName.Text, discountPQ.ToString(), rtcPrice.ToString());
@@ -644,31 +653,53 @@ namespace BJCBCPOS
                         }
                         else if (dataType == "C")
                         {
-                            StoreResult result = process.getMemberProfile(displayReceiptDetail.otherData.Rows[i]["ProductDesc"].ToString().Replace(" ", ""));
-                            if (result.response.next)
+                            if (line == "1")
                             {
-                                string fName = "";
-                                string lName = "";
-
-                                memberID = result.otherData.Rows[0]["MEMBER_ID"].ToString();
-                                if (result.otherData.Rows[0]["TNAME"].ToString().Trim() == "")
+                                StoreResult result = process.findMember(0, displayReceiptDetail.otherData.Rows[i]["ProductDesc"].ToString().Replace(" ", ""));
+                                if (result.response.next)
                                 {
-                                    fName = result.otherData.Rows[0]["ENAME"].ToString();
-                                    lName = result.otherData.Rows[0]["ELNAME"].ToString();
+                                    string membercard = "";
+                                    string idCard = "";
+                                    string tel = "";
+                                    string tName = "";
+                                    string eName = "";
+
+                                    if (ProgramConfig.memberFormat == MemberFormat.BigC)
+                                    {
+                                        membercard = result.otherData.Rows[i]["cardnumber"].ToString();
+                                        memberID = result.otherData.Rows[i]["MemberId"].ToString();
+                                        idCard = result.otherData.Rows[i]["idcard"].ToString();
+                                        tel = result.otherData.Rows[i]["TELEPHONE"].ToString();
+                                        tName = result.otherData.Rows[i]["TName"].ToString();
+                                        eName = result.otherData.Rows[i]["EName"].ToString();
+                                    }
+                                    else
+                                    {
+                                        membercard = result.otherData.Rows[i]["CardHolderNumber"].ToString();
+                                        memberID = result.otherData.Rows[i]["CustId"].ToString();
+                                        idCard = result.otherData.Rows[i]["IDCard_No"].ToString();
+                                        tel = result.otherData.Rows[i]["Mobile"].ToString();
+                                        tName = result.otherData.Rows[i]["CustName"].ToString();
+                                        eName = result.otherData.Rows[i]["CustName"].ToString();
+                                    }
+
+                                    ProgramConfig.memberId = memberID;
+                                    ProgramConfig.memberCardNo = membercard;
+
+                                    memberName = tName == "" ? eName : tName;
+                                    VisibleMember(true);
                                 }
                                 else
                                 {
-                                    fName = result.otherData.Rows[0]["TNAME"].ToString();
-                                    lName = result.otherData.Rows[0]["TLNAME"].ToString();
+                                    VisibleMember(false);
                                 }
-
-                                memberName = String.Format("{0} {1}", fName, lName);
-                                VisibleMember(true);
+                                //memberName = displayReceiptDetail.otherData.Rows[i]["ProductDesc"].ToString();
                             }
-                            else
-                            {
-                                VisibleMember(false);
-                            }
+                            i++;
+                        }
+                        else if (dataType == "T")
+                        {
+                            _saleTime = Convert.ToDateTime(displayReceiptDetail.otherData.Rows[i]["ProductDesc"].ToString(), cultureinfo).ToString("dd/MM/yyyy HH:mm:ss", cultureinfo);
                             i++;
                         }
                         else
@@ -890,13 +921,13 @@ namespace BJCBCPOS
             newQty = ucTxtQty.Text;
             if (double.Parse(productRTCPrice) != 0)
             {
-                newAmt = (double.Parse(newQty) * double.Parse(productRTCPrice)).ToString();
+                newAmt = (double.Parse(newQty) * double.Parse(productRTCPrice)).ToString(amtFormat);
             }
             else
             {
-                newAmt = (double.Parse(newQty) * double.Parse(productPrice)).ToString();
-            }            
-            newDis = (double.Parse(newQty) * double.Parse(productDisPQ)).ToString();
+                newAmt = (double.Parse(newQty) * double.Parse(productPrice)).ToString(amtFormat);
+            }
+            newDis = (double.Parse(newQty) * double.Parse(productDisPQ)).ToString(amtFormat);
 
             if (double.Parse(newQty) > double.Parse(currentQty))
             {
@@ -1011,7 +1042,7 @@ namespace BJCBCPOS
                     ucitmDetail.lbUC_ProductCode.Text = pcd;
                     ucitmDetail.lbUC_Qty.Text = qnt.ToString();
                     ucitmDetail.lbUC_Price.Text = double.Parse(upc).ToString(amtFormat);
-                    ucitmDetail.lbUC_QtyMax.Text = double.Parse(qntMax).ToString(amtFormat);
+                    ucitmDetail.lbUC_QtyMax.Text = double.Parse(qntMax).ToString();
                     ucitmDetail.lbUC_Discount.Text = double.Parse(fds).ToString(amtFormat);
                     ucitmDetail.lbUC_DisPQ.Text = double.Parse(disPQ).ToString(amtFormat);
                     ucitmDetail.lbUC_TotalPrice.Text = (double.Parse(amt) - double.Parse(fds)).ToString(amtFormat);
@@ -1069,6 +1100,7 @@ namespace BJCBCPOS
 
         private void picBack1_Click(object sender, EventArgs e)
         {
+            picBack1.Focus();
             if (returnType == "F")
             {
                 pn_receript_information.BringToFront();
@@ -1076,6 +1108,8 @@ namespace BJCBCPOS
             }
             else if (returnType == "P")
             {
+                btnReturnPartial.Enabled = true;
+                btnReturnPartial.BackgroundImage = Properties.Resources.confirm_enable;
                 pnReturnPartial.BringToFront();
                 pn_select_product.BringToFront();
                 panelKeyNumber.BringToFront();
@@ -1107,12 +1141,11 @@ namespace BJCBCPOS
                 else
                 {
                     totalAmt = (amtPriceP - disPriceP).ToString(amtFormat);
-                }
-                
+                }               
             }
 
             double amtAuto = 0.0;
-
+            double amtNoAuto = 0.0;
             var res = process.displayReturnPayment(returnType, receiptNo, double.Parse(saleAmt), Convert.ToDouble(totalAmt));
             if (res.response.next)
             {
@@ -1120,7 +1153,7 @@ namespace BJCBCPOS
                 pn_PaymentReturn.Controls.Clear();
                 foreach (DataRow dr in res.otherData.Rows)
                 {
-                    if (dr["PaymentCode"].ToString() != "RETN" && dr["PaymentCode"].ToString() != "VISA" && dr["PaymentCode"].ToString() != "MAST")
+                    if (dr["FLAGDISPLAY_AUTO"].ToString() == "Y")
                     {
                         UCItemVoid ucitmListP = new UCItemVoid();
                         ucitmListP.lbUC_No.Text = dr["Seq"].ToString();
@@ -1132,6 +1165,10 @@ namespace BJCBCPOS
                         pn_PaymentReturn.Controls.Add(ucitmListP);
                         pn_PaymentReturn.Controls.SetChildIndex(ucitmListP, 0);
                     }
+                    else if (dr["FLAGDISPLAY_AUTO"].ToString() == "N")
+                    {
+                        amtNoAuto += Convert.ToDouble(dr["PaymentAmt"]);
+                    }
                 }
             }
             else
@@ -1140,7 +1177,7 @@ namespace BJCBCPOS
             }
 
 
-            ucTxtTotalReceive.Text = (Convert.ToDouble(totalAmt) - amtAuto).ToString(amtFormat);
+            ucTxtTotalReceive.Text = (amtNoAuto).ToString(amtFormat);
             lbDebtCash.Text = "ยอดเงินคงค้างลูกค้า"; //string.Format(AppMessage.getMessage(ProgramConfig.language, this.Name, "lbDebtCash"), totalAmt, ProgramConfig.currencyDefault);
             label1.Text = totalAmt;
             //lbDebtCash.Text = "ยอดเงินคงค้างลูกค้า " + amtPrice.ToString(amtFormat) + " บาท";                     
@@ -1223,7 +1260,8 @@ namespace BJCBCPOS
 
             saveReturnTempProcess();
             frmLoading.closeLoading();
-            frmReturnSuccess frmSuccess = new frmReturnSuccess(ProgramConfig.returnRefNo, totalAmt, _reasonId, _reasonTxt, receiptNo, returnType, ProgramConfig.tillNo, ProgramConfig.userId, memberName, saleDate, TEMPDLYPTRANSFULL, TEMPDLYPTRANSPARTIAL, _printType);
+            frmReturnSuccess frmSuccess = new frmReturnSuccess(ProgramConfig.returnRefNo, totalAmt, _reasonId, _reasonTxt, receiptNo, returnType
+                                            , ProgramConfig.tillNo, ProgramConfig.userId, memberName, saleDate, TEMPDLYPTRANSFULL, TEMPDLYPTRANSPARTIAL, _printType, IsEDC, _saleTime);
             DialogResult frmSuccess_res = frmSuccess.ShowDialog(this);
             if (frmSuccess_res != DialogResult.Yes)
             {
@@ -1336,22 +1374,44 @@ namespace BJCBCPOS
             //Member
             if (memberID != null && memberID.Trim() != "")
             {
+                bool isMMFormat = ProgramConfig.memberFormat == MemberFormat.MegaMaket;
+                string memberIDCust = isMMFormat ? ProgramConfig.memberCardNo : ProgramConfig.memberId;
+                string pdisc = isMMFormat ? ProgramConfig.memberProfileMMFormat.CreditCustomerNo : "0"; // CreditCustomerNo
+                string discID = isMMFormat ? ProgramConfig.memberProfileMMFormat.CustomerCategory : "0"; // CustomerCategory
+                string discAmt = isMMFormat ? ProgramConfig.memberProfileMMFormat.Customer_No : "0"; // Customer_No
+
+                pdisc = pdisc == "" ? "0" : pdisc;
+                string subMemberId = memberIDCust.Substring(0, 2);
+
                 if (returnType == "F")
                 {
-                    TEMPDLYPTRANSFULL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, "0", "3", "C", memberID, "1.00", totalAmt, upPrice, DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
-                                                    , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1");
+                    //TEMPDLYPTRANSFULL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, "0", "3", "C", memberID, "1.00", totalAmt, upPrice, DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
+                    //                                , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1");
+                    TEMPDLYPTRANSFULL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, "0", "3", "C", memberIDCust, "1.00", totalAmt, upPrice, DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
+                                                    , subMemberId, "", "", "0", pdisc, discID, discAmt, "0.00", "1");
                 }
                 else if (returnType == "P")
                 {
+                    //if (double.Parse(totalQty) == a)
+                    //{
+                    //    TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, "0", "3", "C", memberID, "1.00", totalAmt, upPrice, DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
+                    //                                , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1");
+                    //}
+                    //else
+                    //{
+                    //    TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, "0", "3", "C", memberID, "1.00", totalAmt, "0.00", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
+                    //                                , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1");
+                    //}
+
                     if (double.Parse(totalQty) == a)
                     {
-                        TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, "0", "3", "C", memberID, "1.00", totalAmt, upPrice, DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
-                                                    , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1");
+                        TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, "0", "3", "C", memberIDCust, "1.00", totalAmt, upPrice, DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
+                                                    , subMemberId, "", "", "0", pdisc, discID, discAmt, "0.00", "1");
                     }
                     else
                     {
-                        TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, "0", "3", "C", memberID, "1.00", totalAmt, "0.00", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
-                                                    , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1");
+                        TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, "0", "3", "C", memberIDCust, "1.00", totalAmt, "0.00", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
+                                                    , subMemberId, "", "", "0", pdisc, discID, discAmt, "0.00", "1");
                     }
                 }
             }
@@ -1390,37 +1450,65 @@ namespace BJCBCPOS
                 if (!pn_PaymentReturn.Controls.Cast<UCItemVoid>().ToList().Any(a => a.lbUC_Payment.Text == dr["PaymentCode"].ToString()))
                 {
                     double amt = 0.0;
-                    string isEDC = "";
-                    if (dr["PaymentCode"].ToString() != "RETN")
-                    {
-                        amt = Convert.ToDouble(dr["PaymentAmt"].ToString());
-                        isEDC = "Y";
-                    }
-                    else
-                    {
+                    //string isEDC = "";
+                    //if (dr["PaymentCode"].ToString() != "RETN")
+                    //{
+                    //    amt = Convert.ToDouble(dr["PaymentAmt"].ToString());
+                    //    isEDC = "Y";
+                    //}
+                    //else
+                    //{
                         amt = Convert.ToDouble(ucTxtTotalReceive.Text);
-                    }
+                    //}
 
                     newInstuRec = (Convert.ToInt32(newInstuRec) + 1).ToString();
                     if (returnType == "F")
                     {
                         TEMPDLYPTRANSFULL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, newInstuRec, "3", "P", dr["PaymentCode"].ToString(), "1.00", amt, upPrice, DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
-                                                        , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1", "", "", isEDC);
+                                                        , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1", "", "");
                     }
                     else if (returnType == "P")
                     {
                         if (double.Parse(totalQty) == a)
                         {
                             TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, newInstuRec, "3", "P", dr["PaymentCode"].ToString(), "1.00", amt, upPrice, DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
-                                                        , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1", "", "", isEDC);
+                                                        , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1", "", "");
                         }
                         else
                         {
                             TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, newInstuRec, "3", "P", dr["PaymentCode"].ToString(), "1.00", amt, "0.00", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
-                                                        , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1", "", "", isEDC);
+                                                        , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1", "", "");
                         }
                     }
                 }
+            }
+
+            if (amtEDC > 0)
+            {
+                IsEDC = true;
+                newInstuRec = (Convert.ToInt32(newInstuRec) + 1).ToString();
+                if (returnType == "F")
+                {
+                    TEMPDLYPTRANSFULL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, newInstuRec, "3", "P", "Credit", "1.00", amtEDC, upPrice, DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
+                                                    , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1", "", "");
+                }
+                else if (returnType == "P")
+                {
+                    if (double.Parse(totalQty) == a)
+                    {
+                        TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, newInstuRec, "3", "P", "Credit", "1.00", amtEDC, upPrice, DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
+                                                    , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1", "", "");
+                    }
+                    else
+                    {
+                        TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, newInstuRec, "3", "P", "Credit", "1.00", amtEDC, "0.00", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
+                                                    , "0.00", "", "", "0", "0.00", "0", "0.00", "0.00", "1", "", "");
+                    }
+                }
+            }
+            else
+            {
+                IsEDC = false;
             }
     
 
@@ -1519,14 +1607,14 @@ namespace BJCBCPOS
             if (returnType == "F")
             {
                 TEMPDLYPTRANSFULL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, finalRec, "3", "F", receiptNo + " Return", totalQnt, totalAmt, "0.00", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
-                                                , loc, "", "", _reasonId, superId, "", dateForm, upc, "1");
+                                                , loc, "", "", _reasonId, superId, "", dateForm, (ProgramConfig.IsStandAloneMode ? "1" : ""), "1");
 
 
             }
             else if (returnType == "P")
             {
                 TEMPDLYPTRANSPARTIAL.Rows.Add(ProgramConfig.storeCode, ProgramConfig.returnRefNo, finalRec, "3", "F", receiptNo + " Return", a, totalAmt, "0.00", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss.fff"), ProgramConfig.userId
-                                                , loc, "", "", _reasonId, superId, "", dateForm, upc, "1");
+                                                , loc, "", "", _reasonId, superId, "", dateForm, (ProgramConfig.IsStandAloneMode ? "1" : ""), "1");
             }
 
 
@@ -1647,7 +1735,7 @@ namespace BJCBCPOS
 
                 foreach (DataRow dr in dt.Rows)
                 {
-                    drItem.DisplayText = dr["PaymentDesc"].ToString();
+                    drItem.DisplayText = dr["PaymentCode"].ToString();
                     //drItem.ValueText = dr["ReasonID"].ToString();
                     lstStr.Add(drItem);
                 }
@@ -1694,7 +1782,7 @@ namespace BJCBCPOS
 
         private void btnReturnPartial_Click(object sender, EventArgs e)
         {
-            if (a <= 0)
+            if (a <= 0 || Convert.ToDouble(lbTxtDebtCustomer.Text) <= 0)
             {
                 frmNotify dialog = new frmNotify(ResponseCode.Error, lbReturnQty0.Text);
                 dialog.ShowDialog(this);
@@ -1702,6 +1790,8 @@ namespace BJCBCPOS
             }
             else
             {
+                btnReturnPartial.Enabled = false;
+                btnReturnPartial.BackgroundImage = Properties.Resources.confirm_disable;
                 pn_Payment.BringToFront();
                 ReturnFromInvoiceProcess();
                 panelKeyNumber.SendToBack();
@@ -1734,7 +1824,13 @@ namespace BJCBCPOS
                 if (item is UCItemInvoiceDetail)
                 {
                     UCItemInvoiceDetail uc = (UCItemInvoiceDetail)item;
-                    if (uc.lbUC_ProductCode.Text.Trim() == strSearch)
+
+                    Regex re = new Regex(@"(\d+)\s*([a-zA-Z]+)*");
+                    Match result = re.Match(uc.lbUC_ProductCode.Text);
+                    string alphaPart = result.Groups[1].ToString();
+                    string numberPart = result.Groups[2].ToString();
+
+                    if (alphaPart == strSearch)
                     {
                         UCGridViewItemSell_Click2(uc);
                         return;

@@ -73,7 +73,7 @@
             // 
             // lbHeader
             // 
-            this.lbHeader.Font = new System.Drawing.Font("Prompt", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeader.Location = new System.Drawing.Point(3, 3);
             this.lbHeader.Name = "lbHeader";
             this.lbHeader.Size = new System.Drawing.Size(554, 121);
@@ -100,6 +100,7 @@
             this.ucTxtInput2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtInput2.EnabledUC = true;
             this.ucTxtInput2.IsAmount = false;
+            this.ucTxtInput2.IsKeyBoardForScan = true;
             this.ucTxtInput2.IsLarge = true;
             this.ucTxtInput2.IsNumber = false;
             this.ucTxtInput2.IsSetFormat = false;
@@ -126,6 +127,7 @@
             this.ucTxtInput1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtInput1.EnabledUC = true;
             this.ucTxtInput1.IsAmount = false;
+            this.ucTxtInput1.IsKeyBoardForScan = true;
             this.ucTxtInput1.IsLarge = true;
             this.ucTxtInput1.IsNumber = false;
             this.ucTxtInput1.IsSetFormat = false;

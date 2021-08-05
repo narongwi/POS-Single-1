@@ -42,12 +42,12 @@
             // lbPrice
             // 
             this.lbPrice.BackColor = System.Drawing.Color.Transparent;
-            this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrice.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.ForeColor = System.Drawing.Color.Black;
-            this.lbPrice.Location = new System.Drawing.Point(305, 16);
+            this.lbPrice.Location = new System.Drawing.Point(305, 14);
             this.lbPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(88, 18);
+            this.lbPrice.Size = new System.Drawing.Size(103, 18);
             this.lbPrice.TabIndex = 58;
             this.lbPrice.Text = "1234567890";
             this.lbPrice.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -56,12 +56,12 @@
             // lbQty
             // 
             this.lbQty.BackColor = System.Drawing.Color.Transparent;
-            this.lbQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty.ForeColor = System.Drawing.Color.Black;
-            this.lbQty.Location = new System.Drawing.Point(205, 16);
+            this.lbQty.Location = new System.Drawing.Point(205, 14);
             this.lbQty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbQty.Name = "lbQty";
-            this.lbQty.Size = new System.Drawing.Size(64, 18);
+            this.lbQty.Size = new System.Drawing.Size(77, 18);
             this.lbQty.TabIndex = 57;
             this.lbQty.Text = "2323232";
             this.lbQty.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -70,9 +70,9 @@
             // lbProductCode
             // 
             this.lbProductCode.BackColor = System.Drawing.Color.Transparent;
-            this.lbProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProductCode.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProductCode.ForeColor = System.Drawing.Color.Black;
-            this.lbProductCode.Location = new System.Drawing.Point(40, 16);
+            this.lbProductCode.Location = new System.Drawing.Point(44, 14);
             this.lbProductCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbProductCode.Name = "lbProductCode";
             this.lbProductCode.Size = new System.Drawing.Size(144, 18);
@@ -84,12 +84,12 @@
             // 
             this.lbProductName.AutoSize = true;
             this.lbProductName.BackColor = System.Drawing.Color.Transparent;
-            this.lbProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProductName.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProductName.ForeColor = System.Drawing.Color.Black;
-            this.lbProductName.Location = new System.Drawing.Point(40, 43);
+            this.lbProductName.Location = new System.Drawing.Point(44, 41);
             this.lbProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbProductName.Name = "lbProductName";
-            this.lbProductName.Size = new System.Drawing.Size(75, 18);
+            this.lbProductName.Size = new System.Drawing.Size(86, 22);
             this.lbProductName.TabIndex = 55;
             this.lbProductName.Text = "โค้กกระป๋อง";
             this.lbProductName.Click += new System.EventHandler(this.lbProductName_Click);
@@ -97,12 +97,12 @@
             // lbNo
             // 
             this.lbNo.BackColor = System.Drawing.Color.Transparent;
-            this.lbNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNo.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNo.ForeColor = System.Drawing.Color.Black;
-            this.lbNo.Location = new System.Drawing.Point(2, 16);
+            this.lbNo.Location = new System.Drawing.Point(2, 14);
             this.lbNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbNo.Name = "lbNo";
-            this.lbNo.Size = new System.Drawing.Size(34, 18);
+            this.lbNo.Size = new System.Drawing.Size(37, 18);
             this.lbNo.TabIndex = 54;
             this.lbNo.Text = "999";
             this.lbNo.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -111,9 +111,9 @@
             // lbReturnPrice
             // 
             this.lbReturnPrice.BackColor = System.Drawing.Color.Transparent;
-            this.lbReturnPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbReturnPrice.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbReturnPrice.ForeColor = System.Drawing.Color.Black;
-            this.lbReturnPrice.Location = new System.Drawing.Point(434, 16);
+            this.lbReturnPrice.Location = new System.Drawing.Point(434, 14);
             this.lbReturnPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbReturnPrice.Name = "lbReturnPrice";
             this.lbReturnPrice.Size = new System.Drawing.Size(88, 18);
@@ -125,12 +125,12 @@
             // lbTotalPrice
             // 
             this.lbTotalPrice.BackColor = System.Drawing.Color.Transparent;
-            this.lbTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalPrice.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalPrice.ForeColor = System.Drawing.Color.Black;
-            this.lbTotalPrice.Location = new System.Drawing.Point(533, 16);
+            this.lbTotalPrice.Location = new System.Drawing.Point(533, 14);
             this.lbTotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTotalPrice.Name = "lbTotalPrice";
-            this.lbTotalPrice.Size = new System.Drawing.Size(102, 18);
+            this.lbTotalPrice.Size = new System.Drawing.Size(99, 18);
             this.lbTotalPrice.TabIndex = 60;
             this.lbTotalPrice.Text = "1234567890";
             this.lbTotalPrice.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -140,7 +140,7 @@
             // 
             this.lbPromo.AutoSize = true;
             this.lbPromo.ForeColor = System.Drawing.Color.Black;
-            this.lbPromo.Location = new System.Drawing.Point(393, 48);
+            this.lbPromo.Location = new System.Drawing.Point(393, 46);
             this.lbPromo.Name = "lbPromo";
             this.lbPromo.Size = new System.Drawing.Size(35, 13);
             this.lbPromo.TabIndex = 61;
@@ -151,7 +151,7 @@
             // 
             this.lbPromoPrice.AutoSize = true;
             this.lbPromoPrice.ForeColor = System.Drawing.Color.Black;
-            this.lbPromoPrice.Location = new System.Drawing.Point(434, 48);
+            this.lbPromoPrice.Location = new System.Drawing.Point(434, 46);
             this.lbPromoPrice.Name = "lbPromoPrice";
             this.lbPromoPrice.Size = new System.Drawing.Size(35, 13);
             this.lbPromoPrice.TabIndex = 62;

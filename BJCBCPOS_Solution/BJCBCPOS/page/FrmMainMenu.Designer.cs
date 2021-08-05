@@ -91,19 +91,19 @@
             // picLogo
             // 
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLogo.Image = global::BJCBCPOS.Properties.Resources.NoPath;
-            this.picLogo.Location = new System.Drawing.Point(21, 2);
+            this.picLogo.Image = global::BJCBCPOS.Properties.Resources.rsz_mm_food_service_logobo;
+            this.picLogo.Location = new System.Drawing.Point(2, 2);
             this.picLogo.Margin = new System.Windows.Forms.Padding(2);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(87, 120);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.Size = new System.Drawing.Size(106, 120);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
             // 
             // lbTextHeaderMain
             // 
             this.lbTextHeaderMain.BackColor = System.Drawing.Color.Transparent;
-            this.lbTextHeaderMain.Font = new System.Drawing.Font("Prompt", 45.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTextHeaderMain.Font = new System.Drawing.Font("Prompt", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTextHeaderMain.ForeColor = System.Drawing.Color.Black;
             this.lbTextHeaderMain.Location = new System.Drawing.Point(110, 2);
             this.lbTextHeaderMain.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -117,16 +117,16 @@
             // 
             this.pnMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(53)))));
             this.pnMainMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnMainMenu.Controls.Add(this.lbTextHeaderMain);
             this.pnMainMenu.Controls.Add(this.ucFooter1);
             this.pnMainMenu.Controls.Add(this.picLogo);
+            this.pnMainMenu.Controls.Add(this.panelMenu);
+            this.pnMainMenu.Controls.Add(this.panelOpenTransaction);
+            this.pnMainMenu.Controls.Add(this.panelOpenTranSuccess);
+            this.pnMainMenu.Controls.Add(this.lbTextHeaderMain);
             this.pnMainMenu.Controls.Add(this.ucHeader1);
             this.pnMainMenu.Controls.Add(this.lbOpentran);
             this.pnMainMenu.Controls.Add(this.lbCloseTran);
             this.pnMainMenu.Controls.Add(this.lbCloseCashier);
-            this.pnMainMenu.Controls.Add(this.panelMenu);
-            this.pnMainMenu.Controls.Add(this.panelOpenTransaction);
-            this.pnMainMenu.Controls.Add(this.panelOpenTranSuccess);
             this.pnMainMenu.Location = new System.Drawing.Point(0, 0);
             this.pnMainMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pnMainMenu.Name = "pnMainMenu";
@@ -161,12 +161,15 @@
             this.ucHeader1.showAlert = true;
             this.ucHeader1.showCalculator = true;
             this.ucHeader1.showCurrentMenuText = false;
+            this.ucHeader1.showHamberGetItm = true;
             this.ucHeader1.showLanguage = true;
             this.ucHeader1.showLine = false;
             this.ucHeader1.showLockScreen = true;
             this.ucHeader1.showLogout = true;
             this.ucHeader1.showMainMenu = false;
             this.ucHeader1.showMember = false;
+            this.ucHeader1.showMember_ButtonBack = true;
+            this.ucHeader1.showMember_IsSaveMember = true;
             this.ucHeader1.showScanner = true;
             this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
             this.ucHeader1.TabIndex = 19;
@@ -175,7 +178,7 @@
             // lbOpentran
             // 
             this.lbOpentran.BackColor = System.Drawing.Color.Transparent;
-            this.lbOpentran.Font = new System.Drawing.Font("Prompt", 45.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOpentran.Font = new System.Drawing.Font("Prompt", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOpentran.ForeColor = System.Drawing.Color.Black;
             this.lbOpentran.Location = new System.Drawing.Point(110, 2);
             this.lbOpentran.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -188,12 +191,12 @@
             // lbCloseTran
             // 
             this.lbCloseTran.BackColor = System.Drawing.Color.Transparent;
-            this.lbCloseTran.Font = new System.Drawing.Font("Prompt", 45.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCloseTran.Font = new System.Drawing.Font("Prompt", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCloseTran.ForeColor = System.Drawing.Color.Black;
             this.lbCloseTran.Location = new System.Drawing.Point(110, 2);
             this.lbCloseTran.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCloseTran.Name = "lbCloseTran";
-            this.lbCloseTran.Size = new System.Drawing.Size(495, 120);
+            this.lbCloseTran.Size = new System.Drawing.Size(458, 120);
             this.lbCloseTran.TabIndex = 21;
             this.lbCloseTran.Text = "ปิดงานประจำวัน";
             this.lbCloseTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,12 +204,12 @@
             // lbCloseCashier
             // 
             this.lbCloseCashier.BackColor = System.Drawing.Color.Transparent;
-            this.lbCloseCashier.Font = new System.Drawing.Font("Prompt", 45.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCloseCashier.Font = new System.Drawing.Font("Prompt", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCloseCashier.ForeColor = System.Drawing.Color.Black;
             this.lbCloseCashier.Location = new System.Drawing.Point(110, 2);
             this.lbCloseCashier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCloseCashier.Name = "lbCloseCashier";
-            this.lbCloseCashier.Size = new System.Drawing.Size(495, 120);
+            this.lbCloseCashier.Size = new System.Drawing.Size(458, 120);
             this.lbCloseCashier.TabIndex = 23;
             this.lbCloseCashier.Text = "ปิดงานแคชเชียร์";
             this.lbCloseCashier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

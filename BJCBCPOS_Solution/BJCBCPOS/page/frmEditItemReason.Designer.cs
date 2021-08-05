@@ -56,7 +56,7 @@
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnOk);
             this.panel1.Controls.Add(this.lbMenuName);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(223, 217);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(554, 305);
             this.panel1.TabIndex = 121;
@@ -136,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(580, 330);
+            this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_DropDown);
             this.Controls.Add(this.pictureBox1);

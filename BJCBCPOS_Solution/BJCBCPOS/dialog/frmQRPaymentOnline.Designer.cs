@@ -167,11 +167,11 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::BJCBCPOS.Properties.Resources.NoPath_3x;
-            this.pictureBox5.Location = new System.Drawing.Point(158, 11);
+            this.pictureBox5.Image = global::BJCBCPOS.Properties.Resources.rsz_mm_food_service_logobo;
+            this.pictureBox5.Location = new System.Drawing.Point(90, 11);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(77, 105);
+            this.pictureBox5.Size = new System.Drawing.Size(193, 105);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 221;
             this.pictureBox5.TabStop = false;
@@ -220,7 +220,7 @@
             // 
             this.Label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label3.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(427, 379);
+            this.Label3.Location = new System.Drawing.Point(427, 377);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(288, 25);
             this.Label3.TabIndex = 224;
@@ -286,11 +286,11 @@
             // 
             // picLogo
             // 
-            this.picLogo.Image = global::BJCBCPOS.Properties.Resources.NoPath_3x;
+            this.picLogo.Image = global::BJCBCPOS.Properties.Resources.rsz_mm_food_service_logobo;
             this.picLogo.Location = new System.Drawing.Point(12, 11);
             this.picLogo.Margin = new System.Windows.Forms.Padding(2);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(76, 105);
+            this.picLogo.Size = new System.Drawing.Size(113, 105);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 220;
             this.picLogo.TabStop = false;

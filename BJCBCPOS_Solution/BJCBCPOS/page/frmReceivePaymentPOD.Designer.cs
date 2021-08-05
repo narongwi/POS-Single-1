@@ -141,6 +141,7 @@
             this.ucTBScanBarcode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTBScanBarcode.EnabledUC = true;
             this.ucTBScanBarcode.IsAmount = false;
+            this.ucTBScanBarcode.IsKeyBoardForScan = true;
             this.ucTBScanBarcode.IsLarge = false;
             this.ucTBScanBarcode.IsNumber = false;
             this.ucTBScanBarcode.IsSetFormat = false;
@@ -150,14 +151,14 @@
             this.ucTBScanBarcode.MaxLength = 32767;
             this.ucTBScanBarcode.Name = "ucTBScanBarcode";
             this.ucTBScanBarcode.PasswordChar = false;
-            this.ucTBScanBarcode.placeHolder = "กรอกรหัสสินค้า";
+            this.ucTBScanBarcode.placeHolder = "กรอกเลขที่ใบเสร็จ";
             this.ucTBScanBarcode.Readonly = false;
             this.ucTBScanBarcode.ShortcutsEnabled = true;
             this.ucTBScanBarcode.Size = new System.Drawing.Size(297, 42);
             this.ucTBScanBarcode.TabIndex = 50;
             this.ucTBScanBarcode.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
             this.ucTBScanBarcode.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ucTBScanBarcode.TextBoxKeydown += new System.EventHandler(this.ucTBScanBarcode_TextBoxKeydown);
+            this.ucTBScanBarcode.TextBoxKeydown += new System.EventHandler(this.ucTBScanBarcode_EnterFromButton);
             this.ucTBScanBarcode.EnterFromButton += new System.EventHandler(this.ucTBScanBarcode_EnterFromButton);
             // 
             // lbScan
@@ -240,6 +241,7 @@
             this.ucHeader1.showMainMenu = true;
             this.ucHeader1.showMember = false;
             this.ucHeader1.showMember_ButtonBack = false;
+            this.ucHeader1.showMember_IsSaveMember = true;
             this.ucHeader1.showScanner = true;
             this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
             this.ucHeader1.TabIndex = 0;

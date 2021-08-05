@@ -100,7 +100,7 @@ namespace BJCBCPOS
 
         // change text and add event
         private void initialKeyboard()
-        {
+        {            
             key code;
             string keyValue;
             foreach (Control item in tableLayoutPanel1.Controls)
@@ -129,7 +129,11 @@ namespace BJCBCPOS
                     }
                     else if (code == key.CapsLock)
                     {
-                        item.Text = "CapsLock";
+                        item.Text = "CapsLock";                       
+                        if (keyboard.GetCapLockKeyIsActive())
+                        {
+                            keyboard.SendInput(key.CapsLock.scancode);
+                        }
                         item.Click += new EventHandler(caplockClick);
                     }
                     else if (code == key.Enter)
@@ -439,9 +443,9 @@ namespace BJCBCPOS
             }
             else
             {
-                ​​//setInputFocus();
+                //setInputFocus();
                 keyboard.SendInput(current_key.scancode);
-                
+
                 if (hold[LSHIFT])
                 {
                     keyboard.SendInputUnHold(key.LeftShift.scancode);
@@ -551,10 +555,11 @@ namespace BJCBCPOS
                         }
                         else
                         {
-                            currentInput.Text += value;
+                            ((UCTextBoxWithIcon)currentInput).TextBox.Paste(value);
+                            //currentInput.Text += value;
                         }
                         TextBox tbox = ((UCTextBoxWithIcon)currentInput).TextBox;
-                        tbox.SelectionStart = tbox.Text.Length;
+                        //tbox.SelectionStart = tbox.Text.Length;
                         tbox.SelectionLength = 0;
                     }
                 }
@@ -578,6 +583,7 @@ namespace BJCBCPOS
 
         private void hideKeyboard(object sender, EventArgs e)
         {
+            this.Visible = false;
             if (HideKeyboardClick != null)
             {
                 HideKeyboardClick(this, e);

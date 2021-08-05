@@ -115,7 +115,8 @@ namespace BJCBCPOS_Model
         SaveEDCTRANS = 5,
         pos_CheckCustomer = 6,
         pos_CheckValuePayment = 7,
-        pos_CheckDEPO = 8
+        pos_CheckDEPO = 8,
+        pos_GetRefQRPayment_Offline = 9
 
         //InterfaceEDC = "Interface_EDC";
         //GenQRCode = "Gen_QR_Code";
@@ -308,8 +309,8 @@ namespace BJCBCPOS_Model
 
     public struct PaymentStepDetail_DataType  
     {
-        public const string Money = "money";
-        public const string NVarchar = "nvarchar";
+        public const string Money = "MONEY";
+        public const string NVarchar = "NVARCHAR";
     }
 
     public struct VoidSaleType
@@ -354,6 +355,7 @@ namespace BJCBCPOS_Model
         public string Credit_InvoiceNo { get; set; }
         public string Credit_InvoiceDate { get; set; }
         public string Credit_Amount { get; set; }
+        public string Credit_AmountAPI { get; set; }
         public string Status { get; set; }
         public string TransDate { get; set; }
     }

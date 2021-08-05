@@ -38,43 +38,26 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pn_input_by_product = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbReceiptNo = new System.Windows.Forms.Label();
+            this.lbTxtRefNo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTotalCash1 = new System.Windows.Forms.Label();
             this.lbTxtTotal = new System.Windows.Forms.Label();
-            this.btnReturn = new System.Windows.Forms.Button();
             this.lbTxtSubtotal = new System.Windows.Forms.Label();
             this.lbTotalCash = new System.Windows.Forms.Label();
             this.pn_Item_Return = new System.Windows.Forms.Panel();
-            this.lbTxtRefNo = new System.Windows.Forms.Label();
-            this.lbReceiptNo = new System.Windows.Forms.Label();
             this.lbTotal = new System.Windows.Forms.Label();
             this.lbPriceReceive = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbReceiveItem = new System.Windows.Forms.Label();
             this.lbQty3 = new System.Windows.Forms.Label();
             this.lbListProduct = new System.Windows.Forms.Label();
-            this.shapeContainer4 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.panelScanBarcode = new System.Windows.Forms.Panel();
-            this.ucTxtQty = new BJCBCPOS.UCTextBoxWithIcon();
-            this.btnMultiplyItem = new System.Windows.Forms.Button();
-            this.lbQty = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.ucTBScanBarcode = new BJCBCPOS.UCTextBoxWithIcon();
-            this.lbScan = new System.Windows.Forms.Label();
-            this.panelConfirm = new System.Windows.Forms.Panel();
-            this.ucTxtCashReceive = new BJCBCPOS.UCTextBoxWithIcon();
-            this.ucTxtPointReceive = new BJCBCPOS.UCTextBoxWithIcon();
-            this.lbSummaryCash = new System.Windows.Forms.Label();
-            this.btnSubmit2 = new System.Windows.Forms.Button();
-            this.lbCashReceive = new System.Windows.Forms.Label();
-            this.lbFill = new System.Windows.Forms.Label();
-            this.picBack2 = new System.Windows.Forms.PictureBox();
-            this.shapeContainer5 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lbPointReceive = new System.Windows.Forms.Label();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.panelEditPrice = new System.Windows.Forms.Panel();
+            this.lbDelete = new System.Windows.Forms.Label();
             this.ucReturnPrice = new BJCBCPOS.UCTextBoxWithIcon();
             this.lbTxtDesc = new System.Windows.Forms.Label();
             this.lbNo = new System.Windows.Forms.Label();
@@ -85,19 +68,25 @@
             this.lbProductCode = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.lbEditPrice = new System.Windows.Forms.Label();
-            this.panelMember = new System.Windows.Forms.Panel();
-            this.ucTextBoxWithIcon3 = new BJCBCPOS.UCTextBoxWithIcon();
-            this.ucTextBoxWithIcon2 = new BJCBCPOS.UCTextBoxWithIcon();
-            this.ucTBWI_Member = new BJCBCPOS.UCTextBoxWithIcon();
-            this.picBtBack6 = new System.Windows.Forms.PictureBox();
-            this.btnOk = new System.Windows.Forms.Button();
-            this.lbEmp = new System.Windows.Forms.Label();
-            this.lbPcMan1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbMember = new System.Windows.Forms.Label();
-            this.lbMessage2 = new System.Windows.Forms.Label();
-            this.lbMemberCode = new System.Windows.Forms.Label();
-            this.lbMessage1 = new System.Windows.Forms.Label();
+            this.panelScanBarcode = new System.Windows.Forms.Panel();
+            this.ucTxtQty = new BJCBCPOS.UCTextBoxWithIcon();
+            this.btnMultiplyItem = new System.Windows.Forms.Button();
+            this.lbQty = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.ucTBScanBarcodeRet = new BJCBCPOS.UCTextBoxWithIcon();
+            this.lbScan = new System.Windows.Forms.Label();
+            this.panelConfirm = new System.Windows.Forms.Panel();
+            this.picBack2 = new System.Windows.Forms.PictureBox();
+            this.ucTxtCashReceive = new BJCBCPOS.UCTextBoxWithIcon();
+            this.ucTxtPointReceive = new BJCBCPOS.UCTextBoxWithIcon();
+            this.lbSummaryCash = new System.Windows.Forms.Label();
+            this.btnSubmit2 = new System.Windows.Forms.Button();
+            this.lbCashReceive = new System.Windows.Forms.Label();
+            this.lbFill = new System.Windows.Forms.Label();
+            this.lbPointReceive = new System.Windows.Forms.Label();
+            this.shapeContainer5 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pn_DropDown = new System.Windows.Forms.Panel();
             this.pnMainInput.SuspendLayout();
             this.panelKeyNumber.SuspendLayout();
@@ -105,17 +94,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pn_input_by_product.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelEditPrice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panelScanBarcode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelConfirm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBack2)).BeginInit();
-            this.panelEditPrice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.panelMember.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtBack6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnMainInput
@@ -131,7 +119,6 @@
             this.pnMainInput.Controls.Add(this.panelScanBarcode);
             this.pnMainInput.Controls.Add(this.panelConfirm);
             this.pnMainInput.Controls.Add(this.panelEditPrice);
-            this.pnMainInput.Controls.Add(this.panelMember);
             this.pnMainInput.Location = new System.Drawing.Point(0, 0);
             this.pnMainInput.Margin = new System.Windows.Forms.Padding(2);
             this.pnMainInput.Name = "pnMainInput";
@@ -184,17 +171,20 @@
             this.ucHeader1.showAlert = true;
             this.ucHeader1.showCalculator = true;
             this.ucHeader1.showCurrentMenuText = true;
+            this.ucHeader1.showHamberGetItm = true;
             this.ucHeader1.showLanguage = true;
             this.ucHeader1.showLine = true;
             this.ucHeader1.showLockScreen = true;
             this.ucHeader1.showLogout = false;
             this.ucHeader1.showMainMenu = true;
             this.ucHeader1.showMember = true;
+            this.ucHeader1.showMember_ButtonBack = false;
+            this.ucHeader1.showMember_IsSaveMember = false;
             this.ucHeader1.showScanner = true;
             this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
             this.ucHeader1.TabIndex = 0;
             this.ucHeader1.MainMenuClick += new System.EventHandler(this.ucHeader1_MainMenuClick);
-            this.ucHeader1.MemberClick += new System.EventHandler(this.ucHeader1_MemberClick);
+            this.ucHeader1.MemberEnterFromButton += new System.EventHandler(this.ucHeader1_MemberEnterFromButton);
             // 
             // ucFooterTran1
             // 
@@ -234,32 +224,78 @@
             // 
             this.pn_input_by_product.BackColor = System.Drawing.Color.White;
             this.pn_input_by_product.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pn_input_by_product.Controls.Add(this.pictureBox7);
+            this.pn_input_by_product.Controls.Add(this.panel2);
             this.pn_input_by_product.Controls.Add(this.panel1);
-            this.pn_input_by_product.Controls.Add(this.btnReturn);
             this.pn_input_by_product.Controls.Add(this.lbTxtSubtotal);
             this.pn_input_by_product.Controls.Add(this.lbTotalCash);
             this.pn_input_by_product.Controls.Add(this.pn_Item_Return);
-            this.pn_input_by_product.Controls.Add(this.lbTxtRefNo);
-            this.pn_input_by_product.Controls.Add(this.lbReceiptNo);
             this.pn_input_by_product.Controls.Add(this.lbTotal);
             this.pn_input_by_product.Controls.Add(this.lbPriceReceive);
             this.pn_input_by_product.Controls.Add(this.lbPrice);
             this.pn_input_by_product.Controls.Add(this.lbReceiveItem);
             this.pn_input_by_product.Controls.Add(this.lbQty3);
             this.pn_input_by_product.Controls.Add(this.lbListProduct);
-            this.pn_input_by_product.Controls.Add(this.shapeContainer4);
+            this.pn_input_by_product.Controls.Add(this.btnConfirm);
+            this.pn_input_by_product.Controls.Add(this.btnReturn);
             this.pn_input_by_product.Location = new System.Drawing.Point(0, 43);
             this.pn_input_by_product.Margin = new System.Windows.Forms.Padding(2);
             this.pn_input_by_product.Name = "pn_input_by_product";
-            this.pn_input_by_product.Size = new System.Drawing.Size(688, 680);
+            this.pn_input_by_product.Size = new System.Drawing.Size(688, 684);
             this.pn_input_by_product.TabIndex = 90;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox7.Location = new System.Drawing.Point(20, 93);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(650, 1);
+            this.pictureBox7.TabIndex = 112;
+            this.pictureBox7.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lbReceiptNo);
+            this.panel2.Controls.Add(this.lbTxtRefNo);
+            this.panel2.Location = new System.Drawing.Point(282, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(392, 31);
+            this.panel2.TabIndex = 111;
+            // 
+            // lbReceiptNo
+            // 
+            this.lbReceiptNo.AutoSize = true;
+            this.lbReceiptNo.BackColor = System.Drawing.Color.Transparent;
+            this.lbReceiptNo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbReceiptNo.Font = new System.Drawing.Font("Prompt", 14.25F);
+            this.lbReceiptNo.ForeColor = System.Drawing.Color.Black;
+            this.lbReceiptNo.Location = new System.Drawing.Point(158, 0);
+            this.lbReceiptNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbReceiptNo.Name = "lbReceiptNo";
+            this.lbReceiptNo.Size = new System.Drawing.Size(111, 29);
+            this.lbReceiptNo.TabIndex = 96;
+            this.lbReceiptNo.Text = "ใบเสร็จเลขที่";
+            // 
+            // lbTxtRefNo
+            // 
+            this.lbTxtRefNo.AutoSize = true;
+            this.lbTxtRefNo.BackColor = System.Drawing.Color.Transparent;
+            this.lbTxtRefNo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbTxtRefNo.Font = new System.Drawing.Font("Prompt", 14.25F);
+            this.lbTxtRefNo.ForeColor = System.Drawing.Color.Black;
+            this.lbTxtRefNo.Location = new System.Drawing.Point(269, 0);
+            this.lbTxtRefNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTxtRefNo.Name = "lbTxtRefNo";
+            this.lbTxtRefNo.Size = new System.Drawing.Size(123, 29);
+            this.lbTxtRefNo.TabIndex = 97;
+            this.lbTxtRefNo.Text = "CN0060582";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(248)))), ((int)(((byte)(240)))));
             this.panel1.Controls.Add(this.lbTotalCash1);
             this.panel1.Controls.Add(this.lbTxtTotal);
-            this.panel1.Location = new System.Drawing.Point(8, 488);
+            this.panel1.Location = new System.Drawing.Point(19, 499);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(652, 45);
             this.panel1.TabIndex = 104;
@@ -290,81 +326,39 @@
             this.lbTxtTotal.TabIndex = 102;
             this.lbTxtTotal.Text = "0.00";
             // 
-            // btnReturn
-            // 
-            this.btnReturn.BackColor = System.Drawing.Color.White;
-            this.btnReturn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReturn.BackgroundImage")));
-            this.btnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.ForeColor = System.Drawing.Color.White;
-            this.btnReturn.Location = new System.Drawing.Point(480, 542);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(180, 120);
-            this.btnReturn.TabIndex = 103;
-            this.btnReturn.Text = "รับคืน";
-            this.btnReturn.UseVisualStyleBackColor = false;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
-            // 
             // lbTxtSubtotal
             // 
             this.lbTxtSubtotal.BackColor = System.Drawing.Color.Transparent;
-            this.lbTxtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtSubtotal.ForeColor = System.Drawing.Color.Gray;
-            this.lbTxtSubtotal.Location = new System.Drawing.Point(443, 465);
+            this.lbTxtSubtotal.Location = new System.Drawing.Point(454, 463);
             this.lbTxtSubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTxtSubtotal.Name = "lbTxtSubtotal";
-            this.lbTxtSubtotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbTxtSubtotal.Size = new System.Drawing.Size(192, 20);
+            this.lbTxtSubtotal.Size = new System.Drawing.Size(192, 31);
             this.lbTxtSubtotal.TabIndex = 101;
             this.lbTxtSubtotal.Text = "0.00";
+            this.lbTxtSubtotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbTotalCash
             // 
             this.lbTotalCash.AutoSize = true;
             this.lbTotalCash.BackColor = System.Drawing.Color.Transparent;
-            this.lbTotalCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalCash.ForeColor = System.Drawing.Color.Gray;
-            this.lbTotalCash.Location = new System.Drawing.Point(12, 465);
+            this.lbTotalCash.Location = new System.Drawing.Point(23, 465);
             this.lbTotalCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTotalCash.Name = "lbTotalCash";
-            this.lbTotalCash.Size = new System.Drawing.Size(100, 20);
+            this.lbTotalCash.Size = new System.Drawing.Size(117, 24);
             this.lbTotalCash.TabIndex = 99;
             this.lbTotalCash.Text = "มูลค่าสินค้ารวม";
             // 
             // pn_Item_Return
             // 
-            this.pn_Item_Return.Location = new System.Drawing.Point(8, 100);
+            this.pn_Item_Return.AutoScroll = true;
+            this.pn_Item_Return.Location = new System.Drawing.Point(19, 100);
             this.pn_Item_Return.Name = "pn_Item_Return";
             this.pn_Item_Return.Size = new System.Drawing.Size(652, 358);
             this.pn_Item_Return.TabIndex = 98;
-            // 
-            // lbTxtRefNo
-            // 
-            this.lbTxtRefNo.AutoSize = true;
-            this.lbTxtRefNo.BackColor = System.Drawing.Color.Transparent;
-            this.lbTxtRefNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTxtRefNo.ForeColor = System.Drawing.Color.Gray;
-            this.lbTxtRefNo.Location = new System.Drawing.Point(530, 27);
-            this.lbTxtRefNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTxtRefNo.Name = "lbTxtRefNo";
-            this.lbTxtRefNo.Size = new System.Drawing.Size(94, 20);
-            this.lbTxtRefNo.TabIndex = 97;
-            this.lbTxtRefNo.Text = "CN0060582";
-            // 
-            // lbReceiptNo
-            // 
-            this.lbReceiptNo.AutoSize = true;
-            this.lbReceiptNo.BackColor = System.Drawing.Color.Transparent;
-            this.lbReceiptNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbReceiptNo.ForeColor = System.Drawing.Color.Gray;
-            this.lbReceiptNo.Location = new System.Drawing.Point(439, 27);
-            this.lbReceiptNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbReceiptNo.Name = "lbReceiptNo";
-            this.lbReceiptNo.Size = new System.Drawing.Size(87, 20);
-            this.lbReceiptNo.TabIndex = 96;
-            this.lbReceiptNo.Text = "ใบเสร็จเลขที่";
             // 
             // lbTotal
             // 
@@ -372,7 +366,7 @@
             this.lbTotal.BackColor = System.Drawing.Color.Transparent;
             this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotal.ForeColor = System.Drawing.Color.Gray;
-            this.lbTotal.Location = new System.Drawing.Point(600, 65);
+            this.lbTotal.Location = new System.Drawing.Point(611, 65);
             this.lbTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.Size = new System.Drawing.Size(33, 20);
@@ -385,7 +379,7 @@
             this.lbPriceReceive.BackColor = System.Drawing.Color.Transparent;
             this.lbPriceReceive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPriceReceive.ForeColor = System.Drawing.Color.Gray;
-            this.lbPriceReceive.Location = new System.Drawing.Point(445, 65);
+            this.lbPriceReceive.Location = new System.Drawing.Point(456, 65);
             this.lbPriceReceive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPriceReceive.Name = "lbPriceReceive";
             this.lbPriceReceive.Size = new System.Drawing.Size(73, 20);
@@ -398,7 +392,7 @@
             this.lbPrice.BackColor = System.Drawing.Color.Transparent;
             this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.ForeColor = System.Drawing.Color.Gray;
-            this.lbPrice.Location = new System.Drawing.Point(350, 65);
+            this.lbPrice.Location = new System.Drawing.Point(361, 65);
             this.lbPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(39, 20);
@@ -409,12 +403,12 @@
             // 
             this.lbReceiveItem.AutoSize = true;
             this.lbReceiveItem.BackColor = System.Drawing.Color.Transparent;
-            this.lbReceiveItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbReceiveItem.Font = new System.Drawing.Font("Prompt", 20.25F, System.Drawing.FontStyle.Bold);
             this.lbReceiveItem.ForeColor = System.Drawing.Color.Gray;
             this.lbReceiveItem.Location = new System.Drawing.Point(10, 17);
             this.lbReceiveItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbReceiveItem.Name = "lbReceiveItem";
-            this.lbReceiveItem.Size = new System.Drawing.Size(140, 31);
+            this.lbReceiveItem.Size = new System.Drawing.Size(147, 40);
             this.lbReceiveItem.TabIndex = 72;
             this.lbReceiveItem.Text = "รับคืนสินค้า";
             this.lbReceiveItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -425,7 +419,7 @@
             this.lbQty3.BackColor = System.Drawing.Color.Transparent;
             this.lbQty3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty3.ForeColor = System.Drawing.Color.Gray;
-            this.lbQty3.Location = new System.Drawing.Point(250, 65);
+            this.lbQty3.Location = new System.Drawing.Point(249, 65);
             this.lbQty3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbQty3.Name = "lbQty3";
             this.lbQty3.Size = new System.Drawing.Size(49, 20);
@@ -438,33 +432,218 @@
             this.lbListProduct.BackColor = System.Drawing.Color.Transparent;
             this.lbListProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbListProduct.ForeColor = System.Drawing.Color.Gray;
-            this.lbListProduct.Location = new System.Drawing.Point(12, 65);
+            this.lbListProduct.Location = new System.Drawing.Point(23, 65);
             this.lbListProduct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbListProduct.Name = "lbListProduct";
             this.lbListProduct.Size = new System.Drawing.Size(87, 20);
             this.lbListProduct.TabIndex = 58;
             this.lbListProduct.Text = "รายการสินค้า";
             // 
-            // shapeContainer4
+            // btnConfirm
             // 
-            this.shapeContainer4.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer4.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer4.Name = "shapeContainer4";
-            this.shapeContainer4.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape4});
-            this.shapeContainer4.Size = new System.Drawing.Size(688, 680);
-            this.shapeContainer4.TabIndex = 86;
-            this.shapeContainer4.TabStop = false;
+            this.btnConfirm.BackColor = System.Drawing.Color.White;
+            this.btnConfirm.BackgroundImage = global::BJCBCPOS.Properties.Resources.payment_disable;
+            this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConfirm.Enabled = false;
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Font = new System.Drawing.Font("Prompt", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
+            this.btnConfirm.Location = new System.Drawing.Point(490, 552);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(180, 120);
+            this.btnConfirm.TabIndex = 113;
+            this.btnConfirm.Text = "ยืนยัน";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // lineShape4
+            // btnReturn
             // 
-            this.lineShape4.BorderColor = System.Drawing.Color.Silver;
-            this.lineShape4.BorderWidth = 2;
-            this.lineShape4.Name = "lineShape1";
-            this.lineShape4.X1 = 9;
-            this.lineShape4.X2 = 659;
-            this.lineShape4.Y1 = 91;
-            this.lineShape4.Y2 = 91;
+            this.btnReturn.BackColor = System.Drawing.Color.White;
+            this.btnReturn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReturn.BackgroundImage")));
+            this.btnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Font = new System.Drawing.Font("Prompt", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.ForeColor = System.Drawing.Color.White;
+            this.btnReturn.Location = new System.Drawing.Point(490, 552);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(180, 120);
+            this.btnReturn.TabIndex = 103;
+            this.btnReturn.Text = "รับคืน";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // panelEditPrice
+            // 
+            this.panelEditPrice.Controls.Add(this.lbDelete);
+            this.panelEditPrice.Controls.Add(this.ucReturnPrice);
+            this.panelEditPrice.Controls.Add(this.lbTxtDesc);
+            this.panelEditPrice.Controls.Add(this.lbNo);
+            this.panelEditPrice.Controls.Add(this.lbCurrentPrice);
+            this.panelEditPrice.Controls.Add(this.lbTxtProductCode);
+            this.panelEditPrice.Controls.Add(this.lbQty1);
+            this.panelEditPrice.Controls.Add(this.lbDes);
+            this.panelEditPrice.Controls.Add(this.lbProductCode);
+            this.panelEditPrice.Controls.Add(this.pictureBox10);
+            this.panelEditPrice.Controls.Add(this.lbEditPrice);
+            this.panelEditPrice.Location = new System.Drawing.Point(690, 43);
+            this.panelEditPrice.Name = "panelEditPrice";
+            this.panelEditPrice.Size = new System.Drawing.Size(334, 427);
+            this.panelEditPrice.TabIndex = 92;
+            // 
+            // lbDelete
+            // 
+            this.lbDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDelete.ForeColor = System.Drawing.Color.Red;
+            this.lbDelete.Location = new System.Drawing.Point(238, 9);
+            this.lbDelete.Name = "lbDelete";
+            this.lbDelete.Size = new System.Drawing.Size(82, 28);
+            this.lbDelete.TabIndex = 106;
+            this.lbDelete.Text = "ลบรายการ";
+            this.lbDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbDelete.Click += new System.EventHandler(this.lbDelete_Click);
+            // 
+            // ucReturnPrice
+            // 
+            this.ucReturnPrice.BackColor = System.Drawing.Color.White;
+            this.ucReturnPrice.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucReturnPrice.BackgroundImage")));
+            this.ucReturnPrice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucReturnPrice.EnabledUC = true;
+            this.ucReturnPrice.IsAmount = false;
+            this.ucReturnPrice.IsKeyBoardForScan = false;
+            this.ucReturnPrice.IsLarge = false;
+            this.ucReturnPrice.IsNumber = false;
+            this.ucReturnPrice.IsSetFormat = false;
+            this.ucReturnPrice.IsValidateNumberZero = true;
+            this.ucReturnPrice.IsValidateTextEmpty = true;
+            this.ucReturnPrice.Location = new System.Drawing.Point(134, 198);
+            this.ucReturnPrice.MaxLength = 32767;
+            this.ucReturnPrice.Name = "ucReturnPrice";
+            this.ucReturnPrice.PasswordChar = false;
+            this.ucReturnPrice.placeHolder = "ระบุราคาต่อหน่วย";
+            this.ucReturnPrice.Readonly = false;
+            this.ucReturnPrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ucReturnPrice.ShortcutsEnabled = true;
+            this.ucReturnPrice.Size = new System.Drawing.Size(173, 42);
+            this.ucReturnPrice.TabIndex = 105;
+            this.ucReturnPrice.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
+            this.ucReturnPrice.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ucReturnPrice.EnterFromButton += new System.EventHandler(this.ucReturnPrice_EnterFromButton);
+            // 
+            // lbTxtDesc
+            // 
+            this.lbTxtDesc.BackColor = System.Drawing.Color.Transparent;
+            this.lbTxtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtDesc.ForeColor = System.Drawing.Color.Gray;
+            this.lbTxtDesc.Location = new System.Drawing.Point(121, 145);
+            this.lbTxtDesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTxtDesc.Name = "lbTxtDesc";
+            this.lbTxtDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbTxtDesc.Size = new System.Drawing.Size(190, 40);
+            this.lbTxtDesc.TabIndex = 104;
+            this.lbTxtDesc.Text = "โค้กกระป๋องรสออลิจินัล 325 มล.";
+            this.lbTxtDesc.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lbNo
+            // 
+            this.lbNo.AutoSize = true;
+            this.lbNo.Location = new System.Drawing.Point(80, 17);
+            this.lbNo.Name = "lbNo";
+            this.lbNo.Size = new System.Drawing.Size(35, 13);
+            this.lbNo.TabIndex = 103;
+            this.lbNo.Text = "label1";
+            this.lbNo.Visible = false;
+            // 
+            // lbCurrentPrice
+            // 
+            this.lbCurrentPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lbCurrentPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCurrentPrice.ForeColor = System.Drawing.Color.Gray;
+            this.lbCurrentPrice.Location = new System.Drawing.Point(125, 243);
+            this.lbCurrentPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCurrentPrice.Name = "lbCurrentPrice";
+            this.lbCurrentPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbCurrentPrice.Size = new System.Drawing.Size(186, 20);
+            this.lbCurrentPrice.TabIndex = 100;
+            this.lbCurrentPrice.Text = "ราคาเดิม 15.25 บาท";
+            // 
+            // lbTxtProductCode
+            // 
+            this.lbTxtProductCode.BackColor = System.Drawing.Color.Transparent;
+            this.lbTxtProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtProductCode.ForeColor = System.Drawing.Color.Gray;
+            this.lbTxtProductCode.Location = new System.Drawing.Point(97, 100);
+            this.lbTxtProductCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTxtProductCode.Name = "lbTxtProductCode";
+            this.lbTxtProductCode.Size = new System.Drawing.Size(210, 20);
+            this.lbTxtProductCode.TabIndex = 97;
+            this.lbTxtProductCode.Text = "892452188622";
+            this.lbTxtProductCode.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lbQty1
+            // 
+            this.lbQty1.AutoSize = true;
+            this.lbQty1.BackColor = System.Drawing.Color.Transparent;
+            this.lbQty1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty1.ForeColor = System.Drawing.Color.Gray;
+            this.lbQty1.Location = new System.Drawing.Point(11, 208);
+            this.lbQty1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbQty1.Name = "lbQty1";
+            this.lbQty1.Size = new System.Drawing.Size(89, 20);
+            this.lbQty1.TabIndex = 96;
+            this.lbQty1.Text = "ราคาต่อหน่วย";
+            // 
+            // lbDes
+            // 
+            this.lbDes.AutoSize = true;
+            this.lbDes.BackColor = System.Drawing.Color.Transparent;
+            this.lbDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDes.ForeColor = System.Drawing.Color.Gray;
+            this.lbDes.Location = new System.Drawing.Point(12, 145);
+            this.lbDes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbDes.Name = "lbDes";
+            this.lbDes.Size = new System.Drawing.Size(77, 20);
+            this.lbDes.TabIndex = 95;
+            this.lbDes.Text = "รายละเอียด";
+            // 
+            // lbProductCode
+            // 
+            this.lbProductCode.AutoSize = true;
+            this.lbProductCode.BackColor = System.Drawing.Color.Transparent;
+            this.lbProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProductCode.ForeColor = System.Drawing.Color.Gray;
+            this.lbProductCode.Location = new System.Drawing.Point(13, 100);
+            this.lbProductCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbProductCode.Name = "lbProductCode";
+            this.lbProductCode.Size = new System.Drawing.Size(66, 20);
+            this.lbProductCode.TabIndex = 94;
+            this.lbProductCode.Text = "รหัสสินค้า";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::BJCBCPOS.Properties.Resources.NoPath___Back_4_;
+            this.pictureBox10.Location = new System.Drawing.Point(10, 9);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(33, 30);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox10.TabIndex = 82;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
+            // lbEditPrice
+            // 
+            this.lbEditPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lbEditPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEditPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(186)))), ((int)(((byte)(109)))));
+            this.lbEditPrice.Location = new System.Drawing.Point(13, 44);
+            this.lbEditPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbEditPrice.Name = "lbEditPrice";
+            this.lbEditPrice.Size = new System.Drawing.Size(315, 50);
+            this.lbEditPrice.TabIndex = 102;
+            this.lbEditPrice.Text = "แก้ไขราคา/หน่วย";
+            this.lbEditPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelScanBarcode
             // 
@@ -475,7 +654,7 @@
             this.panelScanBarcode.Controls.Add(this.lbQty);
             this.panelScanBarcode.Controls.Add(this.pictureBox9);
             this.panelScanBarcode.Controls.Add(this.pictureBox5);
-            this.panelScanBarcode.Controls.Add(this.ucTBScanBarcode);
+            this.panelScanBarcode.Controls.Add(this.ucTBScanBarcodeRet);
             this.panelScanBarcode.Controls.Add(this.lbScan);
             this.panelScanBarcode.Location = new System.Drawing.Point(690, 43);
             this.panelScanBarcode.Margin = new System.Windows.Forms.Padding(0);
@@ -490,9 +669,12 @@
             this.ucTxtQty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtQty.EnabledUC = true;
             this.ucTxtQty.IsAmount = false;
+            this.ucTxtQty.IsKeyBoardForScan = false;
             this.ucTxtQty.IsLarge = false;
             this.ucTxtQty.IsNumber = false;
             this.ucTxtQty.IsSetFormat = false;
+            this.ucTxtQty.IsValidateNumberZero = true;
+            this.ucTxtQty.IsValidateTextEmpty = true;
             this.ucTxtQty.Location = new System.Drawing.Point(106, 375);
             this.ucTxtQty.MaxLength = 32767;
             this.ucTxtQty.Name = "ucTxtQty";
@@ -510,7 +692,7 @@
             // btnMultiplyItem
             // 
             this.btnMultiplyItem.BackColor = System.Drawing.Color.White;
-            this.btnMultiplyItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMultiplyItem.BackgroundImage")));
+            this.btnMultiplyItem.BackgroundImage = global::BJCBCPOS.Properties.Resources.multi_disable;
             this.btnMultiplyItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMultiplyItem.FlatAppearance.BorderSize = 0;
             this.btnMultiplyItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -519,7 +701,7 @@
             this.btnMultiplyItem.Location = new System.Drawing.Point(21, 227);
             this.btnMultiplyItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnMultiplyItem.Name = "btnMultiplyItem";
-            this.btnMultiplyItem.Size = new System.Drawing.Size(300, 137);
+            this.btnMultiplyItem.Size = new System.Drawing.Size(298, 137);
             this.btnMultiplyItem.TabIndex = 53;
             this.btnMultiplyItem.Text = "คูณสินค้า";
             this.btnMultiplyItem.UseVisualStyleBackColor = false;
@@ -557,7 +739,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(22, 219);
+            this.pictureBox5.Location = new System.Drawing.Point(22, 216);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(296, 2);
@@ -565,29 +747,33 @@
             this.pictureBox5.TabIndex = 40;
             this.pictureBox5.TabStop = false;
             // 
-            // ucTBScanBarcode
+            // ucTBScanBarcodeRet
             // 
-            this.ucTBScanBarcode.BackColor = System.Drawing.Color.White;
-            this.ucTBScanBarcode.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTBScanBarcode.BackgroundImage")));
-            this.ucTBScanBarcode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTBScanBarcode.EnabledUC = true;
-            this.ucTBScanBarcode.IsAmount = false;
-            this.ucTBScanBarcode.IsLarge = false;
-            this.ucTBScanBarcode.IsNumber = false;
-            this.ucTBScanBarcode.IsSetFormat = false;
-            this.ucTBScanBarcode.Location = new System.Drawing.Point(21, 164);
-            this.ucTBScanBarcode.MaxLength = 32767;
-            this.ucTBScanBarcode.Name = "ucTBScanBarcode";
-            this.ucTBScanBarcode.PasswordChar = false;
-            this.ucTBScanBarcode.placeHolder = "หรือกรอกรหัสสินค้า";
-            this.ucTBScanBarcode.Readonly = false;
-            this.ucTBScanBarcode.ShortcutsEnabled = true;
-            this.ucTBScanBarcode.Size = new System.Drawing.Size(298, 42);
-            this.ucTBScanBarcode.TabIndex = 50;
-            this.ucTBScanBarcode.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
-            this.ucTBScanBarcode.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ucTBScanBarcode.TextBoxKeydown += new System.EventHandler(this.ucTBScanBarcode_TextBoxKeydown);
-            this.ucTBScanBarcode.EnterFromButton += new System.EventHandler(this.ucTBScanBarcode_EnterFromButton);
+            this.ucTBScanBarcodeRet.BackColor = System.Drawing.Color.White;
+            this.ucTBScanBarcodeRet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTBScanBarcodeRet.BackgroundImage")));
+            this.ucTBScanBarcodeRet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucTBScanBarcodeRet.EnabledUC = true;
+            this.ucTBScanBarcodeRet.IsAmount = false;
+            this.ucTBScanBarcodeRet.IsKeyBoardForScan = true;
+            this.ucTBScanBarcodeRet.IsLarge = false;
+            this.ucTBScanBarcodeRet.IsNumber = false;
+            this.ucTBScanBarcodeRet.IsSetFormat = false;
+            this.ucTBScanBarcodeRet.IsValidateNumberZero = false;
+            this.ucTBScanBarcodeRet.IsValidateTextEmpty = false;
+            this.ucTBScanBarcodeRet.Location = new System.Drawing.Point(21, 164);
+            this.ucTBScanBarcodeRet.MaxLength = 32767;
+            this.ucTBScanBarcodeRet.Name = "ucTBScanBarcodeRet";
+            this.ucTBScanBarcodeRet.PasswordChar = false;
+            this.ucTBScanBarcodeRet.placeHolder = "หรือกรอกรหัสสินค้า";
+            this.ucTBScanBarcodeRet.Readonly = false;
+            this.ucTBScanBarcodeRet.ShortcutsEnabled = true;
+            this.ucTBScanBarcodeRet.Size = new System.Drawing.Size(298, 42);
+            this.ucTBScanBarcodeRet.TabIndex = 50;
+            this.ucTBScanBarcodeRet.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
+            this.ucTBScanBarcodeRet.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ucTBScanBarcodeRet.TextBoxKeydown += new System.EventHandler(this.ucTBScanBarcode_TextBoxKeydown);
+            this.ucTBScanBarcodeRet.EnterFromButton += new System.EventHandler(this.ucTBScanBarcode_EnterFromButton);
+            this.ucTBScanBarcodeRet.Enter += new System.EventHandler(this.ucTBScanBarcodeRet_Enter);
             // 
             // lbScan
             // 
@@ -604,19 +790,30 @@
             // 
             // panelConfirm
             // 
+            this.panelConfirm.Controls.Add(this.picBack2);
             this.panelConfirm.Controls.Add(this.ucTxtCashReceive);
             this.panelConfirm.Controls.Add(this.ucTxtPointReceive);
             this.panelConfirm.Controls.Add(this.lbSummaryCash);
             this.panelConfirm.Controls.Add(this.btnSubmit2);
             this.panelConfirm.Controls.Add(this.lbCashReceive);
             this.panelConfirm.Controls.Add(this.lbFill);
-            this.panelConfirm.Controls.Add(this.picBack2);
-            this.panelConfirm.Controls.Add(this.shapeContainer5);
             this.panelConfirm.Controls.Add(this.lbPointReceive);
+            this.panelConfirm.Controls.Add(this.shapeContainer5);
             this.panelConfirm.Location = new System.Drawing.Point(690, 43);
             this.panelConfirm.Name = "panelConfirm";
             this.panelConfirm.Size = new System.Drawing.Size(334, 427);
             this.panelConfirm.TabIndex = 93;
+            // 
+            // picBack2
+            // 
+            this.picBack2.Image = global::BJCBCPOS.Properties.Resources.NoPath___Back_4_;
+            this.picBack2.Location = new System.Drawing.Point(10, 9);
+            this.picBack2.Name = "picBack2";
+            this.picBack2.Size = new System.Drawing.Size(33, 30);
+            this.picBack2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picBack2.TabIndex = 82;
+            this.picBack2.TabStop = false;
+            this.picBack2.Click += new System.EventHandler(this.picBack2_Click);
             // 
             // ucTxtCashReceive
             // 
@@ -625,9 +822,12 @@
             this.ucTxtCashReceive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtCashReceive.EnabledUC = true;
             this.ucTxtCashReceive.IsAmount = false;
+            this.ucTxtCashReceive.IsKeyBoardForScan = false;
             this.ucTxtCashReceive.IsLarge = false;
             this.ucTxtCashReceive.IsNumber = false;
             this.ucTxtCashReceive.IsSetFormat = false;
+            this.ucTxtCashReceive.IsValidateNumberZero = false;
+            this.ucTxtCashReceive.IsValidateTextEmpty = false;
             this.ucTxtCashReceive.Location = new System.Drawing.Point(143, 136);
             this.ucTxtCashReceive.MaxLength = 32767;
             this.ucTxtCashReceive.Name = "ucTxtCashReceive";
@@ -647,9 +847,12 @@
             this.ucTxtPointReceive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtPointReceive.EnabledUC = true;
             this.ucTxtPointReceive.IsAmount = false;
+            this.ucTxtPointReceive.IsKeyBoardForScan = false;
             this.ucTxtPointReceive.IsLarge = false;
             this.ucTxtPointReceive.IsNumber = false;
             this.ucTxtPointReceive.IsSetFormat = false;
+            this.ucTxtPointReceive.IsValidateNumberZero = true;
+            this.ucTxtPointReceive.IsValidateTextEmpty = true;
             this.ucTxtPointReceive.Location = new System.Drawing.Point(143, 85);
             this.ucTxtPointReceive.MaxLength = 32767;
             this.ucTxtPointReceive.Name = "ucTxtPointReceive";
@@ -709,24 +912,26 @@
             this.lbFill.BackColor = System.Drawing.Color.Transparent;
             this.lbFill.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFill.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbFill.Location = new System.Drawing.Point(17, 39);
+            this.lbFill.Location = new System.Drawing.Point(17, 19);
             this.lbFill.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbFill.Name = "lbFill";
-            this.lbFill.Size = new System.Drawing.Size(290, 29);
+            this.lbFill.Size = new System.Drawing.Size(305, 51);
             this.lbFill.TabIndex = 83;
             this.lbFill.Text = "กรุณากรอกข้อมูล";
             this.lbFill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // picBack2
+            // lbPointReceive
             // 
-            this.picBack2.Image = global::BJCBCPOS.Properties.Resources.NoPath___Back_4_;
-            this.picBack2.Location = new System.Drawing.Point(13, 6);
-            this.picBack2.Name = "picBack2";
-            this.picBack2.Size = new System.Drawing.Size(33, 30);
-            this.picBack2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picBack2.TabIndex = 82;
-            this.picBack2.TabStop = false;
-            this.picBack2.Click += new System.EventHandler(this.picBack2_Click);
+            this.lbPointReceive.BackColor = System.Drawing.Color.Transparent;
+            this.lbPointReceive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPointReceive.ForeColor = System.Drawing.Color.Gray;
+            this.lbPointReceive.Location = new System.Drawing.Point(7, 95);
+            this.lbPointReceive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPointReceive.Name = "lbPointReceive";
+            this.lbPointReceive.Size = new System.Drawing.Size(131, 30);
+            this.lbPointReceive.TabIndex = 84;
+            this.lbPointReceive.Text = "แต้มจ่ายคืน";
+            this.lbPointReceive.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // shapeContainer5
             // 
@@ -747,381 +952,6 @@
             this.lineShape5.X2 = 321;
             this.lineShape5.Y1 = 230;
             this.lineShape5.Y2 = 230;
-            // 
-            // lbPointReceive
-            // 
-            this.lbPointReceive.BackColor = System.Drawing.Color.Transparent;
-            this.lbPointReceive.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPointReceive.ForeColor = System.Drawing.Color.Gray;
-            this.lbPointReceive.Location = new System.Drawing.Point(7, 95);
-            this.lbPointReceive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbPointReceive.Name = "lbPointReceive";
-            this.lbPointReceive.Size = new System.Drawing.Size(131, 30);
-            this.lbPointReceive.TabIndex = 84;
-            this.lbPointReceive.Text = "แต้มจ่ายคืน";
-            this.lbPointReceive.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // panelEditPrice
-            // 
-            this.panelEditPrice.Controls.Add(this.ucReturnPrice);
-            this.panelEditPrice.Controls.Add(this.lbTxtDesc);
-            this.panelEditPrice.Controls.Add(this.lbNo);
-            this.panelEditPrice.Controls.Add(this.lbCurrentPrice);
-            this.panelEditPrice.Controls.Add(this.lbTxtProductCode);
-            this.panelEditPrice.Controls.Add(this.lbQty1);
-            this.panelEditPrice.Controls.Add(this.lbDes);
-            this.panelEditPrice.Controls.Add(this.lbProductCode);
-            this.panelEditPrice.Controls.Add(this.pictureBox10);
-            this.panelEditPrice.Controls.Add(this.lbEditPrice);
-            this.panelEditPrice.Location = new System.Drawing.Point(690, 43);
-            this.panelEditPrice.Name = "panelEditPrice";
-            this.panelEditPrice.Size = new System.Drawing.Size(334, 427);
-            this.panelEditPrice.TabIndex = 92;
-            // 
-            // ucReturnPrice
-            // 
-            this.ucReturnPrice.BackColor = System.Drawing.Color.White;
-            this.ucReturnPrice.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucReturnPrice.BackgroundImage")));
-            this.ucReturnPrice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucReturnPrice.EnabledUC = true;
-            this.ucReturnPrice.IsAmount = false;
-            this.ucReturnPrice.IsLarge = false;
-            this.ucReturnPrice.IsNumber = false;
-            this.ucReturnPrice.IsSetFormat = false;
-            this.ucReturnPrice.Location = new System.Drawing.Point(134, 198);
-            this.ucReturnPrice.MaxLength = 32767;
-            this.ucReturnPrice.Name = "ucReturnPrice";
-            this.ucReturnPrice.PasswordChar = false;
-            this.ucReturnPrice.placeHolder = "ระบุราคาต่อหน่วย";
-            this.ucReturnPrice.Readonly = false;
-            this.ucReturnPrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ucReturnPrice.ShortcutsEnabled = true;
-            this.ucReturnPrice.Size = new System.Drawing.Size(173, 42);
-            this.ucReturnPrice.TabIndex = 105;
-            this.ucReturnPrice.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
-            this.ucReturnPrice.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.ucReturnPrice.EnterFromButton += new System.EventHandler(this.ucReturnPrice_EnterFromButton);
-            // 
-            // lbTxtDesc
-            // 
-            this.lbTxtDesc.BackColor = System.Drawing.Color.Transparent;
-            this.lbTxtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTxtDesc.ForeColor = System.Drawing.Color.Gray;
-            this.lbTxtDesc.Location = new System.Drawing.Point(121, 145);
-            this.lbTxtDesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTxtDesc.Name = "lbTxtDesc";
-            this.lbTxtDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbTxtDesc.Size = new System.Drawing.Size(190, 40);
-            this.lbTxtDesc.TabIndex = 104;
-            this.lbTxtDesc.Text = "โค้กกระป๋องรสออลิจินัล 325 มล.";
-            this.lbTxtDesc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbNo
-            // 
-            this.lbNo.AutoSize = true;
-            this.lbNo.Location = new System.Drawing.Point(80, 17);
-            this.lbNo.Name = "lbNo";
-            this.lbNo.Size = new System.Drawing.Size(35, 13);
-            this.lbNo.TabIndex = 103;
-            this.lbNo.Text = "label1";
-            this.lbNo.Visible = false;
-            // 
-            // lbCurrentPrice
-            // 
-            this.lbCurrentPrice.BackColor = System.Drawing.Color.Transparent;
-            this.lbCurrentPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCurrentPrice.ForeColor = System.Drawing.Color.Gray;
-            this.lbCurrentPrice.Location = new System.Drawing.Point(125, 243);
-            this.lbCurrentPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbCurrentPrice.Name = "lbCurrentPrice";
-            this.lbCurrentPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbCurrentPrice.Size = new System.Drawing.Size(186, 20);
-            this.lbCurrentPrice.TabIndex = 100;
-            this.lbCurrentPrice.Text = "ราคาเดิม 15.25 บาท";
-            // 
-            // lbTxtProductCode
-            // 
-            this.lbTxtProductCode.BackColor = System.Drawing.Color.Transparent;
-            this.lbTxtProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTxtProductCode.ForeColor = System.Drawing.Color.Gray;
-            this.lbTxtProductCode.Location = new System.Drawing.Point(97, 100);
-            this.lbTxtProductCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTxtProductCode.Name = "lbTxtProductCode";
-            this.lbTxtProductCode.Size = new System.Drawing.Size(210, 20);
-            this.lbTxtProductCode.TabIndex = 97;
-            this.lbTxtProductCode.Text = "892452188622";
-            this.lbTxtProductCode.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lbQty1
-            // 
-            this.lbQty1.AutoSize = true;
-            this.lbQty1.BackColor = System.Drawing.Color.Transparent;
-            this.lbQty1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQty1.ForeColor = System.Drawing.Color.Gray;
-            this.lbQty1.Location = new System.Drawing.Point(11, 208);
-            this.lbQty1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbQty1.Name = "lbQty1";
-            this.lbQty1.Size = new System.Drawing.Size(89, 20);
-            this.lbQty1.TabIndex = 96;
-            this.lbQty1.Text = "ราคาต่อหน่วย";
-            // 
-            // lbDes
-            // 
-            this.lbDes.AutoSize = true;
-            this.lbDes.BackColor = System.Drawing.Color.Transparent;
-            this.lbDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDes.ForeColor = System.Drawing.Color.Gray;
-            this.lbDes.Location = new System.Drawing.Point(12, 145);
-            this.lbDes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbDes.Name = "lbDes";
-            this.lbDes.Size = new System.Drawing.Size(77, 20);
-            this.lbDes.TabIndex = 95;
-            this.lbDes.Text = "รายละเอียด";
-            // 
-            // lbProductCode
-            // 
-            this.lbProductCode.AutoSize = true;
-            this.lbProductCode.BackColor = System.Drawing.Color.Transparent;
-            this.lbProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProductCode.ForeColor = System.Drawing.Color.Gray;
-            this.lbProductCode.Location = new System.Drawing.Point(13, 100);
-            this.lbProductCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbProductCode.Name = "lbProductCode";
-            this.lbProductCode.Size = new System.Drawing.Size(66, 20);
-            this.lbProductCode.TabIndex = 94;
-            this.lbProductCode.Text = "รหัสสินค้า";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::BJCBCPOS.Properties.Resources.NoPath___Back_4_;
-            this.pictureBox10.Location = new System.Drawing.Point(13, 6);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(33, 30);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox10.TabIndex = 82;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
-            // 
-            // lbEditPrice
-            // 
-            this.lbEditPrice.BackColor = System.Drawing.Color.Transparent;
-            this.lbEditPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEditPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(186)))), ((int)(((byte)(109)))));
-            this.lbEditPrice.Location = new System.Drawing.Point(13, 44);
-            this.lbEditPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbEditPrice.Name = "lbEditPrice";
-            this.lbEditPrice.Size = new System.Drawing.Size(315, 50);
-            this.lbEditPrice.TabIndex = 102;
-            this.lbEditPrice.Text = "แก้ไขราคา/หน่วย";
-            this.lbEditPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelMember
-            // 
-            this.panelMember.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMember.BackgroundImage")));
-            this.panelMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMember.Controls.Add(this.ucTextBoxWithIcon3);
-            this.panelMember.Controls.Add(this.ucTextBoxWithIcon2);
-            this.panelMember.Controls.Add(this.ucTBWI_Member);
-            this.panelMember.Controls.Add(this.picBtBack6);
-            this.panelMember.Controls.Add(this.btnOk);
-            this.panelMember.Controls.Add(this.lbEmp);
-            this.panelMember.Controls.Add(this.lbPcMan1);
-            this.panelMember.Controls.Add(this.pictureBox1);
-            this.panelMember.Controls.Add(this.lbMember);
-            this.panelMember.Controls.Add(this.lbMessage2);
-            this.panelMember.Controls.Add(this.lbMemberCode);
-            this.panelMember.Controls.Add(this.lbMessage1);
-            this.panelMember.Location = new System.Drawing.Point(690, 43);
-            this.panelMember.Margin = new System.Windows.Forms.Padding(2);
-            this.panelMember.Name = "panelMember";
-            this.panelMember.Size = new System.Drawing.Size(334, 427);
-            this.panelMember.TabIndex = 90;
-            // 
-            // ucTextBoxWithIcon3
-            // 
-            this.ucTextBoxWithIcon3.BackColor = System.Drawing.Color.White;
-            this.ucTextBoxWithIcon3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTextBoxWithIcon3.BackgroundImage")));
-            this.ucTextBoxWithIcon3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTextBoxWithIcon3.EnabledUC = true;
-            this.ucTextBoxWithIcon3.IsAmount = false;
-            this.ucTextBoxWithIcon3.IsLarge = false;
-            this.ucTextBoxWithIcon3.IsNumber = false;
-            this.ucTextBoxWithIcon3.IsSetFormat = false;
-            this.ucTextBoxWithIcon3.Location = new System.Drawing.Point(98, 324);
-            this.ucTextBoxWithIcon3.MaxLength = 32767;
-            this.ucTextBoxWithIcon3.Name = "ucTextBoxWithIcon3";
-            this.ucTextBoxWithIcon3.PasswordChar = false;
-            this.ucTextBoxWithIcon3.placeHolder = "ระบุรหัสพนักงาน";
-            this.ucTextBoxWithIcon3.Readonly = false;
-            this.ucTextBoxWithIcon3.ShortcutsEnabled = true;
-            this.ucTextBoxWithIcon3.Size = new System.Drawing.Size(221, 42);
-            this.ucTextBoxWithIcon3.TabIndex = 86;
-            this.ucTextBoxWithIcon3.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
-            this.ucTextBoxWithIcon3.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // ucTextBoxWithIcon2
-            // 
-            this.ucTextBoxWithIcon2.BackColor = System.Drawing.Color.White;
-            this.ucTextBoxWithIcon2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTextBoxWithIcon2.BackgroundImage")));
-            this.ucTextBoxWithIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTextBoxWithIcon2.EnabledUC = true;
-            this.ucTextBoxWithIcon2.IsAmount = false;
-            this.ucTextBoxWithIcon2.IsLarge = false;
-            this.ucTextBoxWithIcon2.IsNumber = false;
-            this.ucTextBoxWithIcon2.IsSetFormat = false;
-            this.ucTextBoxWithIcon2.Location = new System.Drawing.Point(98, 272);
-            this.ucTextBoxWithIcon2.MaxLength = 32767;
-            this.ucTextBoxWithIcon2.Name = "ucTextBoxWithIcon2";
-            this.ucTextBoxWithIcon2.PasswordChar = false;
-            this.ucTextBoxWithIcon2.placeHolder = "ระบุ PC-Man";
-            this.ucTextBoxWithIcon2.Readonly = false;
-            this.ucTextBoxWithIcon2.ShortcutsEnabled = true;
-            this.ucTextBoxWithIcon2.Size = new System.Drawing.Size(221, 42);
-            this.ucTextBoxWithIcon2.TabIndex = 85;
-            this.ucTextBoxWithIcon2.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
-            this.ucTextBoxWithIcon2.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // ucTBWI_Member
-            // 
-            this.ucTBWI_Member.BackColor = System.Drawing.Color.White;
-            this.ucTBWI_Member.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTBWI_Member.BackgroundImage")));
-            this.ucTBWI_Member.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTBWI_Member.EnabledUC = true;
-            this.ucTBWI_Member.IsAmount = false;
-            this.ucTBWI_Member.IsLarge = false;
-            this.ucTBWI_Member.IsNumber = false;
-            this.ucTBWI_Member.IsSetFormat = false;
-            this.ucTBWI_Member.Location = new System.Drawing.Point(98, 220);
-            this.ucTBWI_Member.MaxLength = 32767;
-            this.ucTBWI_Member.Name = "ucTBWI_Member";
-            this.ucTBWI_Member.PasswordChar = false;
-            this.ucTBWI_Member.placeHolder = "ระบุสมาชิก";
-            this.ucTBWI_Member.Readonly = false;
-            this.ucTBWI_Member.ShortcutsEnabled = true;
-            this.ucTBWI_Member.Size = new System.Drawing.Size(221, 42);
-            this.ucTBWI_Member.TabIndex = 84;
-            this.ucTBWI_Member.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
-            this.ucTBWI_Member.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ucTBWI_Member.IconClick += new System.EventHandler(this.ucTBWI_Member_IconClick);
-            // 
-            // picBtBack6
-            // 
-            this.picBtBack6.Image = ((System.Drawing.Image)(resources.GetObject("picBtBack6.Image")));
-            this.picBtBack6.Location = new System.Drawing.Point(14, 12);
-            this.picBtBack6.Name = "picBtBack6";
-            this.picBtBack6.Size = new System.Drawing.Size(33, 30);
-            this.picBtBack6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picBtBack6.TabIndex = 83;
-            this.picBtBack6.TabStop = false;
-            this.picBtBack6.Click += new System.EventHandler(this.picBtBack6_Click);
-            // 
-            // btnOk
-            // 
-            this.btnOk.BackColor = System.Drawing.Color.Transparent;
-            this.btnOk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOk.BackgroundImage")));
-            this.btnOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnOk.FlatAppearance.BorderSize = 0;
-            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnOk.ForeColor = System.Drawing.Color.White;
-            this.btnOk.Location = new System.Drawing.Point(13, 376);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(310, 43);
-            this.btnOk.TabIndex = 51;
-            this.btnOk.Text = "ตกลง";
-            this.btnOk.UseVisualStyleBackColor = false;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-            // 
-            // lbEmp
-            // 
-            this.lbEmp.BackColor = System.Drawing.Color.Transparent;
-            this.lbEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.lbEmp.Location = new System.Drawing.Point(4, 337);
-            this.lbEmp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbEmp.Name = "lbEmp";
-            this.lbEmp.Size = new System.Drawing.Size(87, 20);
-            this.lbEmp.TabIndex = 50;
-            this.lbEmp.Text = "พนักงาน";
-            this.lbEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbPcMan1
-            // 
-            this.lbPcMan1.BackColor = System.Drawing.Color.Transparent;
-            this.lbPcMan1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPcMan1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.lbPcMan1.Location = new System.Drawing.Point(4, 284);
-            this.lbPcMan1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbPcMan1.Name = "lbPcMan1";
-            this.lbPcMan1.Size = new System.Drawing.Size(87, 20);
-            this.lbPcMan1.TabIndex = 49;
-            this.lbPcMan1.Text = "PC-MAN";
-            this.lbPcMan1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(127, 58);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lbMember
-            // 
-            this.lbMember.BackColor = System.Drawing.Color.Transparent;
-            this.lbMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(186)))), ((int)(((byte)(109)))));
-            this.lbMember.Location = new System.Drawing.Point(64, 8);
-            this.lbMember.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbMember.Name = "lbMember";
-            this.lbMember.Size = new System.Drawing.Size(219, 45);
-            this.lbMember.TabIndex = 42;
-            this.lbMember.Text = "สมาชิก";
-            this.lbMember.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbMessage2
-            // 
-            this.lbMessage2.BackColor = System.Drawing.Color.Transparent;
-            this.lbMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMessage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.lbMessage2.Location = new System.Drawing.Point(8, 180);
-            this.lbMessage2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbMessage2.Name = "lbMessage2";
-            this.lbMessage2.Size = new System.Drawing.Size(319, 31);
-            this.lbMessage2.TabIndex = 53;
-            this.lbMessage2.Text = "กรอกเบอร์โทรศัพท์หรือบัตรประชาชน";
-            this.lbMessage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbMemberCode
-            // 
-            this.lbMemberCode.BackColor = System.Drawing.Color.Transparent;
-            this.lbMemberCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMemberCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.lbMemberCode.Location = new System.Drawing.Point(4, 231);
-            this.lbMemberCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbMemberCode.Name = "lbMemberCode";
-            this.lbMemberCode.Size = new System.Drawing.Size(87, 20);
-            this.lbMemberCode.TabIndex = 48;
-            this.lbMemberCode.Text = "สมาชิก";
-            this.lbMemberCode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbMessage1
-            // 
-            this.lbMessage1.BackColor = System.Drawing.Color.Transparent;
-            this.lbMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMessage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.lbMessage1.Location = new System.Drawing.Point(8, 150);
-            this.lbMessage1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbMessage1.Name = "lbMessage1";
-            this.lbMessage1.Size = new System.Drawing.Size(319, 31);
-            this.lbMessage1.TabIndex = 52;
-            this.lbMessage1.Text = "สแกนบัตร, กรอกสมาชิก";
-            this.lbMessage1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pn_DropDown
             // 
@@ -1155,21 +985,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pn_input_by_product.ResumeLayout(false);
             this.pn_input_by_product.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelEditPrice.ResumeLayout(false);
+            this.panelEditPrice.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panelScanBarcode.ResumeLayout(false);
             this.panelScanBarcode.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelConfirm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBack2)).EndInit();
-            this.panelEditPrice.ResumeLayout(false);
-            this.panelEditPrice.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.panelMember.ResumeLayout(false);
-            this.panelMember.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtBack6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1189,8 +1018,6 @@
         private System.Windows.Forms.Label lbReceiveItem;
         private System.Windows.Forms.Label lbQty3;
         private System.Windows.Forms.Label lbListProduct;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer4;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
         private System.Windows.Forms.Label lbTxtRefNo;
         private System.Windows.Forms.Label lbReceiptNo;
         private System.Windows.Forms.Panel pn_Item_Return;
@@ -1222,7 +1049,7 @@
         private System.Windows.Forms.Label lbQty;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private UCTextBoxWithIcon ucTBScanBarcode;
+        private UCTextBoxWithIcon ucTBScanBarcodeRet;
         private System.Windows.Forms.Label lbScan;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Panel panel1;
@@ -1230,21 +1057,12 @@
         private System.Windows.Forms.Label lbNo;
         private System.Windows.Forms.Label lbTxtDesc;
         private UCTextBoxWithIcon ucReturnPrice;
-        private System.Windows.Forms.Panel panelMember;
-        private UCTextBoxWithIcon ucTextBoxWithIcon3;
-        private UCTextBoxWithIcon ucTextBoxWithIcon2;
-        private UCTextBoxWithIcon ucTBWI_Member;
-        private System.Windows.Forms.PictureBox picBtBack6;
-        private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.Label lbEmp;
-        private System.Windows.Forms.Label lbPcMan1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbMember;
-        private System.Windows.Forms.Label lbMessage2;
-        private System.Windows.Forms.Label lbMemberCode;
-        private System.Windows.Forms.Label lbMessage1;
         private UCHeader ucHeader1;
         private UCTextBoxWithIcon ucTxtPointReceive;
         private UCTextBoxWithIcon ucTxtCashReceive;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label lbDelete;
+        private System.Windows.Forms.Button btnConfirm;
     }
 }

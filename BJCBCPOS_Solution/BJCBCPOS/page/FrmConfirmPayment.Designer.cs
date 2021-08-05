@@ -33,8 +33,9 @@
             this.lbText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTxtChange = new System.Windows.Forms.Label();
-            this.lbOldChange = new System.Windows.Forms.Label();
             this.lbChange = new System.Windows.Forms.Label();
+            this.ucTxtChange = new BJCBCPOS.UCTextBoxWithIcon();
+            this.lbOldChange = new System.Windows.Forms.Label();
             this.lbTxtPayment = new System.Windows.Forms.Label();
             this.lbPayment = new System.Windows.Forms.Label();
             this.lbTxtCash = new System.Windows.Forms.Label();
@@ -57,6 +58,8 @@
             this.pn_Currency = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbTxtChangeCurrency = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ucTxtChangeCurrency = new BJCBCPOS.UCTextBoxWithIcon();
             this.lbBalanceCurrency = new System.Windows.Forms.Label();
             this.lbPaymentCurrency = new System.Windows.Forms.Label();
             this.lbCashCurrency = new System.Windows.Forms.Label();
@@ -68,9 +71,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lb_messageCurrency = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ucTxtChange = new BJCBCPOS.UCTextBoxWithIcon();
-            this.ucTxtChangeCurrency = new BJCBCPOS.UCTextBoxWithIcon();
             this.ucKeypad1 = new BJCBCPOS.UCKeypad();
             this.pn_PaymentNormal.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -123,10 +123,10 @@
             // 
             this.panel1.BackgroundImage = global::BJCBCPOS.Properties.Resources.confirmPaymentChange;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.lbTxtChange);
             this.panel1.Controls.Add(this.lbChange);
             this.panel1.Controls.Add(this.ucTxtChange);
             this.panel1.Controls.Add(this.lbOldChange);
+            this.panel1.Controls.Add(this.lbTxtChange);
             this.panel1.Location = new System.Drawing.Point(52, 233);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(539, 77);
@@ -146,6 +146,47 @@
             this.lbTxtChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbTxtChange.FontChanged += new System.EventHandler(this.Control_FontChanged);
             // 
+            // lbChange
+            // 
+            this.lbChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(219)))), ((int)(((byte)(179)))));
+            this.lbChange.Font = new System.Drawing.Font("Prompt", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChange.ForeColor = System.Drawing.Color.Black;
+            this.lbChange.Location = new System.Drawing.Point(4, 1);
+            this.lbChange.Name = "lbChange";
+            this.lbChange.Size = new System.Drawing.Size(241, 73);
+            this.lbChange.TabIndex = 7;
+            this.lbChange.Text = "ยอดเงินทอน";
+            this.lbChange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbChange.TextChanged += new System.EventHandler(this.lbBalance_TextChanged);
+            // 
+            // ucTxtChange
+            // 
+            this.ucTxtChange.BackColor = System.Drawing.Color.Transparent;
+            this.ucTxtChange.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTxtChange.BackgroundImage")));
+            this.ucTxtChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucTxtChange.EnabledUC = true;
+            this.ucTxtChange.IsAmount = true;
+            this.ucTxtChange.IsKeyBoardForScan = false;
+            this.ucTxtChange.IsLarge = false;
+            this.ucTxtChange.IsNumber = false;
+            this.ucTxtChange.IsSetFormat = true;
+            this.ucTxtChange.IsValidateNumberZero = false;
+            this.ucTxtChange.IsValidateTextEmpty = true;
+            this.ucTxtChange.Location = new System.Drawing.Point(271, 31);
+            this.ucTxtChange.MaxLength = 11;
+            this.ucTxtChange.Name = "ucTxtChange";
+            this.ucTxtChange.PasswordChar = false;
+            this.ucTxtChange.placeHolder = "กรอกจำนวนเงิน";
+            this.ucTxtChange.Readonly = false;
+            this.ucTxtChange.ShortcutsEnabled = true;
+            this.ucTxtChange.Size = new System.Drawing.Size(263, 42);
+            this.ucTxtChange.TabIndex = 9;
+            this.ucTxtChange.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
+            this.ucTxtChange.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ucTxtChange.Visible = false;
+            this.ucTxtChange.EnterFromButton += new System.EventHandler(this.ucTxtChange_EnterFromButton);
+            this.ucTxtChange.VisibleChanged += new System.EventHandler(this.ucTxtChange_VisibleChanged);
+            // 
             // lbOldChange
             // 
             this.lbOldChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(219)))), ((int)(((byte)(179)))));
@@ -159,19 +200,6 @@
             this.lbOldChange.Text = "เงินทอนเดิม 4,000.00";
             this.lbOldChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbOldChange.Visible = false;
-            // 
-            // lbChange
-            // 
-            this.lbChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(219)))), ((int)(((byte)(179)))));
-            this.lbChange.Font = new System.Drawing.Font("Prompt", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChange.ForeColor = System.Drawing.Color.Black;
-            this.lbChange.Location = new System.Drawing.Point(4, 1);
-            this.lbChange.Name = "lbChange";
-            this.lbChange.Size = new System.Drawing.Size(241, 73);
-            this.lbChange.TabIndex = 7;
-            this.lbChange.Text = "ยอดเงินทอน";
-            this.lbChange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbChange.TextChanged += new System.EventHandler(this.lbBalance_TextChanged);
             // 
             // lbTxtPayment
             // 
@@ -365,7 +393,7 @@
             this.btnEditChangeCurrency.FlatAppearance.BorderSize = 0;
             this.btnEditChangeCurrency.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditChangeCurrency.ForeColor = System.Drawing.Color.White;
-            this.btnEditChangeCurrency.Location = new System.Drawing.Point(695, 233);
+            this.btnEditChangeCurrency.Location = new System.Drawing.Point(695, 254);
             this.btnEditChangeCurrency.Name = "btnEditChangeCurrency";
             this.btnEditChangeCurrency.Size = new System.Drawing.Size(41, 54);
             this.btnEditChangeCurrency.TabIndex = 143;
@@ -454,6 +482,46 @@
             this.lbTxtChangeCurrency.Text = "8,888,888.88";
             this.lbTxtChangeCurrency.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbTxtChangeCurrency.FontChanged += new System.EventHandler(this.Control_FontChanged);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(219)))), ((int)(((byte)(179)))));
+            this.label1.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(351, 3);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(283, 25);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "เงินทอนเดิม 4,000.00";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Visible = false;
+            // 
+            // ucTxtChangeCurrency
+            // 
+            this.ucTxtChangeCurrency.BackColor = System.Drawing.Color.Transparent;
+            this.ucTxtChangeCurrency.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTxtChangeCurrency.BackgroundImage")));
+            this.ucTxtChangeCurrency.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucTxtChangeCurrency.EnabledUC = true;
+            this.ucTxtChangeCurrency.IsAmount = true;
+            this.ucTxtChangeCurrency.IsKeyBoardForScan = false;
+            this.ucTxtChangeCurrency.IsLarge = false;
+            this.ucTxtChangeCurrency.IsNumber = false;
+            this.ucTxtChangeCurrency.IsSetFormat = true;
+            this.ucTxtChangeCurrency.IsValidateNumberZero = false;
+            this.ucTxtChangeCurrency.IsValidateTextEmpty = false;
+            this.ucTxtChangeCurrency.Location = new System.Drawing.Point(372, 26);
+            this.ucTxtChangeCurrency.MaxLength = 11;
+            this.ucTxtChangeCurrency.Name = "ucTxtChangeCurrency";
+            this.ucTxtChangeCurrency.PasswordChar = false;
+            this.ucTxtChangeCurrency.placeHolder = "กรอกจำนวนเงิน";
+            this.ucTxtChangeCurrency.Readonly = false;
+            this.ucTxtChangeCurrency.ShortcutsEnabled = true;
+            this.ucTxtChangeCurrency.Size = new System.Drawing.Size(263, 42);
+            this.ucTxtChangeCurrency.TabIndex = 10;
+            this.ucTxtChangeCurrency.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
+            this.ucTxtChangeCurrency.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ucTxtChangeCurrency.EnterFromButton += new System.EventHandler(this.ucTxtChange_EnterFromButton);
             // 
             // lbBalanceCurrency
             // 
@@ -597,72 +665,6 @@
             this.splitContainer1.SplitterDistance = 465;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(219)))), ((int)(((byte)(179)))));
-            this.label1.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(351, 3);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 25);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "เงินทอนเดิม 4,000.00";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Visible = false;
-            // 
-            // ucTxtChange
-            // 
-            this.ucTxtChange.BackColor = System.Drawing.Color.Transparent;
-            this.ucTxtChange.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTxtChange.BackgroundImage")));
-            this.ucTxtChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTxtChange.EnabledUC = true;
-            this.ucTxtChange.IsAmount = true;
-            this.ucTxtChange.IsLarge = false;
-            this.ucTxtChange.IsNumber = false;
-            this.ucTxtChange.IsSetFormat = true;
-            this.ucTxtChange.IsValidateNumberZero = false;
-            this.ucTxtChange.IsValidateTextEmpty = false;
-            this.ucTxtChange.Location = new System.Drawing.Point(271, 31);
-            this.ucTxtChange.MaxLength = 11;
-            this.ucTxtChange.Name = "ucTxtChange";
-            this.ucTxtChange.PasswordChar = false;
-            this.ucTxtChange.placeHolder = "กรอกจำนวนเงิน";
-            this.ucTxtChange.Readonly = false;
-            this.ucTxtChange.ShortcutsEnabled = true;
-            this.ucTxtChange.Size = new System.Drawing.Size(263, 42);
-            this.ucTxtChange.TabIndex = 9;
-            this.ucTxtChange.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
-            this.ucTxtChange.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.ucTxtChange.Visible = false;
-            this.ucTxtChange.EnterFromButton += new System.EventHandler(this.ucTxtChange_EnterFromButton);
-            this.ucTxtChange.VisibleChanged += new System.EventHandler(this.ucTxtChange_VisibleChanged);
-            // 
-            // ucTxtChangeCurrency
-            // 
-            this.ucTxtChangeCurrency.BackColor = System.Drawing.Color.Transparent;
-            this.ucTxtChangeCurrency.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTxtChangeCurrency.BackgroundImage")));
-            this.ucTxtChangeCurrency.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTxtChangeCurrency.EnabledUC = true;
-            this.ucTxtChangeCurrency.IsAmount = true;
-            this.ucTxtChangeCurrency.IsLarge = false;
-            this.ucTxtChangeCurrency.IsNumber = false;
-            this.ucTxtChangeCurrency.IsSetFormat = true;
-            this.ucTxtChangeCurrency.IsValidateNumberZero = false;
-            this.ucTxtChangeCurrency.IsValidateTextEmpty = false;
-            this.ucTxtChangeCurrency.Location = new System.Drawing.Point(372, 26);
-            this.ucTxtChangeCurrency.MaxLength = 11;
-            this.ucTxtChangeCurrency.Name = "ucTxtChangeCurrency";
-            this.ucTxtChangeCurrency.PasswordChar = false;
-            this.ucTxtChangeCurrency.placeHolder = "กรอกจำนวนเงิน";
-            this.ucTxtChangeCurrency.Readonly = false;
-            this.ucTxtChangeCurrency.ShortcutsEnabled = true;
-            this.ucTxtChangeCurrency.Size = new System.Drawing.Size(263, 42);
-            this.ucTxtChangeCurrency.TabIndex = 10;
-            this.ucTxtChangeCurrency.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
-            this.ucTxtChangeCurrency.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.ucTxtChangeCurrency.EnterFromButton += new System.EventHandler(this.ucTxtChange_EnterFromButton);
             // 
             // ucKeypad1
             // 

@@ -80,6 +80,23 @@ namespace BJCBCPOS
                 return;
             }
 
+            result = process.posDisplayContent();
+            if (result.response.next)
+            {
+                if (result.otherData.Rows.Count > 0)
+                {
+                    if (result.otherData.Columns.Contains("Content_Default"))
+                    {
+                        ucFooterTran1.mainContent = result.otherData.Rows[0]["Content_Default"].ToString();
+                    }
+                    if (result.otherData.Columns.Contains("Content_Detail"))
+                    {
+                        ucFooterTran1.fullContent = result.otherData.Rows[0]["Content_Detail"].ToString();
+                    }
+                    ucFooterTran1.functionId = FunctionID.Sale_PopupSaleProcessScreen_ContentonPOSScreen_StroeCode.formatValue;
+                }
+            }
+
             btnPayment.Visible = false;
         }
 
@@ -126,12 +143,6 @@ namespace BJCBCPOS
             ucTBScanBarcode.FocusTxt();
         }
 
-
-        private void ucTBScanBarcode_TextBoxKeydown(object sender, EventArgs e)
-        {
-
-        }
-
         private void ucHeader1_MainMenuClick(object sender, EventArgs e)
         {
             this.Dispose();
@@ -144,12 +155,12 @@ namespace BJCBCPOS
 
         private void ShowPayment()
         {
-
-
             ProgramConfig.disValue = lbTxtdiscount1.Text;
             ProgramConfig.amtValue = lbTxtSubtotal.Text;
             ProgramConfig.totalValue = lbTxtTotal.Text;
 
+            ProgramConfig.paymentOpenCashDrawer = FunctionID.ReceivePOD_OpenDrawerAndRecordTime;
+            ProgramConfig.paymentCloseCashDrawer = FunctionID.ReceivePOD_CloseDrawerAndRecordTime;
             ProgramConfig.paymentFunction = FunctionID.ReceivePOD_Payment;
             ProgramConfig.pageBackFromPayment = PageBackFormPayment.ReceivePOD;
             Program.control.CloseForm("frmPayment");

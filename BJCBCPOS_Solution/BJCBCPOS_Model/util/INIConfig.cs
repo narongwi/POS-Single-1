@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Data;
 
 namespace BJCBCPOS_Model
 {
@@ -13,7 +14,7 @@ namespace BJCBCPOS_Model
     public class INIConfig
     {
         private string fileName;
-        private Dictionary<ConfigKey, string> config;
+        private Dictionary<ConfigKey, string> config; 
 
         public INIConfig(string fileName)
         {
@@ -223,7 +224,7 @@ namespace BJCBCPOS_Model
             return updateValue(key.section, key.key, value);
         }
 
-        public static bool createConfigIni(string stroeCode, string tillNo, string ipServer, string dbServer, string ipServerBk, string dbServerBk, string ipServerTrain, string dbServerTrain)
+        public static bool createConfigIni(string stroeCode, string tillNo, string ipServer, string dbServer, string ipServerBk, string dbServerBk, string ipServerTrain, string dbServerTrain, string printerName, string comPort)
         {
             try
             {
@@ -248,6 +249,9 @@ printpreview = 0
 printwatermark = 0
 shutdown = 0
 userlog = 0
+printername = {8}
+comport = {9}
+
 
 [device]
 cashdrawer=10
@@ -261,7 +265,7 @@ magneticstripe=
 
 [macro_key]
 ";
-                File.AppendAllText(fileName, string.Format(config, ipServer, dbServer, ipServerBk, dbServerBk, ipServerTrain, dbServerTrain, stroeCode, tillNo), Encoding.Unicode);
+                File.AppendAllText(fileName, string.Format(config, ipServer, dbServer, ipServerBk, dbServerBk, ipServerTrain, dbServerTrain, stroeCode, tillNo, printerName, comPort), Encoding.Unicode);
                 return true;
             }
             catch (Exception ex)
@@ -275,17 +279,53 @@ magneticstripe=
         {
             try
             {
+                if (File.Exists(FixedData.running_name))
+                {
+                    File.Delete(FixedData.running_name);
+                }
+
                 string fileName = FixedData.running_name;
                 string config =
 @"abbno={0}
-cnno={1}
-fftino={2}
+tempFFTIno={1}
+cnno={2}
+fftino={3}
+signinoutno={4}
+opendayno={5}
+cashinoutno={6}
+saleno={7}
+returnno={8}
+voidno={9}
+actionno={10}
+posrepno={11}
+expermitno={12}
+holdsaleno={13}
+podno={14}
+creditsaleno={15}
 ";
-                string abbNo = tillNo + "00000" + 1;
-                string cnno = "CN" + tillNo + "000" + 1;
-                string fftino = storeCode + tillNo + "00000" + 1;
+                StoreResult res = new StoreResult(ResponseCode.Success, "");
 
-                File.AppendAllText(fileName, string.Format(config, abbNo, cnno, fftino), Encoding.Unicode);
+                DataRow dr = res.otherData.Rows[0];
+                string abbNo = dr["abbno"].ToString();
+                string tempFFTIno = dr["tempFFTIno"].ToString();
+                string cnno = dr["cnno"].ToString();
+                string fftino = dr["fftino"].ToString();
+
+                string signinoutno = dr["signinoutno"].ToString();
+                string opendayno = dr["opendayno"].ToString();
+                string cashinoutno = dr["cashinoutno"].ToString();
+                string saleno = dr["saleno"].ToString();
+                string returnno = dr["returnno"].ToString();
+                string voidno = dr["voidno"].ToString();
+                string actionno = dr["actionno"].ToString();
+                string posrepno = dr["posrepno"].ToString();
+                string expermitno = dr["expermitno"].ToString();
+                string holdsaleno = dr["holdsaleno"].ToString();
+                string podno = dr["podno"].ToString();
+                string creditsaleno = dr["creditsaleno"].ToString();
+
+                File.AppendAllText(fileName, string.Format(config, abbNo, tempFFTIno, cnno, fftino, signinoutno, opendayno,
+                                    cashinoutno, saleno, returnno, voidno, actionno, posrepno, expermitno, holdsaleno, podno, creditsaleno), Encoding.Unicode);
                 return true;
             }
             catch (Exception ex)

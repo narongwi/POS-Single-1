@@ -66,9 +66,6 @@
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ApiServices">
-      <HintPath>..\BJCBCPOS_Model\lib\ApiServices.dll</HintPath>
-    </Reference>
     <Reference Include="MMFSAPI">
       <HintPath>..\BJCBCPOS_Model\lib\MMFSAPI.dll</HintPath>
     </Reference>

@@ -428,6 +428,7 @@
             this.ucTextBoxWithIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTextBoxWithIcon1.EnabledUC = true;
             this.ucTextBoxWithIcon1.IsAmount = true;
+            this.ucTextBoxWithIcon1.IsKeyBoardForScan = false;
             this.ucTextBoxWithIcon1.IsLarge = false;
             this.ucTextBoxWithIcon1.IsNumber = false;
             this.ucTextBoxWithIcon1.IsSetFormat = true;
@@ -444,6 +445,7 @@
             this.ucTextBoxWithIcon1.TabIndex = 50;
             this.ucTextBoxWithIcon1.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
             this.ucTextBoxWithIcon1.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ucTextBoxWithIcon1.TextBoxKeydown += new System.EventHandler(this.ucTextBoxWithIcon1_EnterFromButton);
             this.ucTextBoxWithIcon1.EnterFromButton += new System.EventHandler(this.ucTextBoxWithIcon1_EnterFromButton);
             // 
             // lbScanQRCode
@@ -516,6 +518,7 @@
             this.ucHeader1.showMainMenu = true;
             this.ucHeader1.showMember = true;
             this.ucHeader1.showMember_ButtonBack = false;
+            this.ucHeader1.showMember_IsSaveMember = true;
             this.ucHeader1.showScanner = true;
             this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
             this.ucHeader1.TabIndex = 0;

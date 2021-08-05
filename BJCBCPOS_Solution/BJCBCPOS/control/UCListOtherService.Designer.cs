@@ -167,7 +167,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label3;

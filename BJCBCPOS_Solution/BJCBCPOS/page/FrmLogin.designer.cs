@@ -64,7 +64,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.splitContainer1.Panel1.Controls.Add(this.pnfrmLogin);
             this.splitContainer1.Panel1.Controls.Add(this.picLogo);
             this.splitContainer1.Panel1.Controls.Add(this.ucFooter1);
@@ -107,6 +107,7 @@
             this.ucTextBoxWithIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTextBoxWithIcon2.EnabledUC = true;
             this.ucTextBoxWithIcon2.IsAmount = false;
+            this.ucTextBoxWithIcon2.IsKeyBoardForScan = false;
             this.ucTextBoxWithIcon2.IsLarge = false;
             this.ucTextBoxWithIcon2.IsNumber = false;
             this.ucTextBoxWithIcon2.IsSetFormat = false;
@@ -133,6 +134,7 @@
             this.ucTextBoxWithIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTextBoxWithIcon1.EnabledUC = true;
             this.ucTextBoxWithIcon1.IsAmount = false;
+            this.ucTextBoxWithIcon1.IsKeyBoardForScan = false;
             this.ucTextBoxWithIcon1.IsLarge = false;
             this.ucTextBoxWithIcon1.IsNumber = false;
             this.ucTextBoxWithIcon1.IsSetFormat = false;
@@ -267,12 +269,13 @@
             // 
             // picLogo
             // 
-            this.picLogo.Image = global::BJCBCPOS.Properties.Resources.NoPath_3x;
-            this.picLogo.Location = new System.Drawing.Point(449, 62);
+            this.picLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(53)))));
+            this.picLogo.Image = global::BJCBCPOS.Properties.Resources.rsz_mm_food_service_logobo;
+            this.picLogo.Location = new System.Drawing.Point(398, 114);
             this.picLogo.Margin = new System.Windows.Forms.Padding(2);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(141, 187);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.Size = new System.Drawing.Size(235, 143);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 8;
             this.picLogo.TabStop = false;
             // 
@@ -313,6 +316,7 @@
             this.ucHeader1.showMainMenu = false;
             this.ucHeader1.showMember = false;
             this.ucHeader1.showMember_ButtonBack = true;
+            this.ucHeader1.showMember_IsSaveMember = true;
             this.ucHeader1.showScanner = false;
             this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
             this.ucHeader1.TabIndex = 6;

@@ -528,6 +528,7 @@ namespace BJCBCPOS
                 //var chk = false;
                 //Open Cash Drawer
                 Hardware.openDrawer();
+                process.SaveDrawerTrans(FunctionID.CashOut_NormalChange_OpenDrawerAndRecordTime);
                 if (Hardware.isDrawerOpen)
                 {
                     drawerOpenEvent();
@@ -961,6 +962,7 @@ namespace BJCBCPOS
                             }
                             //Hardware.addDrawerListeners(DrawerStatusOpen);
                             Hardware.openDrawer();
+                            process.SaveDrawerTrans(FunctionID.CashOut_Sale_OpenDrawerAndRecordTime);
                             if (Hardware.isDrawerOpen)
                             {
                                 drawerOpenEvent();
@@ -1046,6 +1048,7 @@ namespace BJCBCPOS
                             }
                             //Hardware.addDrawerListeners(DrawerStatusOpen);
                             Hardware.openDrawer();
+                            process.SaveDrawerTrans(FunctionID.CashOut_Sale_OpenDrawerAndRecordTime);
                             if (Hardware.isDrawerOpen)
                             {
                                 drawerOpenEvent();

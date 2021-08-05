@@ -45,8 +45,10 @@ namespace BJCBCPOS
         private frmReturnFromInvoice dataTable = new frmReturnFromInvoice();
         private bool submitFromEDC;
         private PrintInvoiceType _printType;
+        private bool _isEDC;
+        private string _saleTime;
 
-        public frmReturnSuccess(string refNo, string price, string reasonData, string reasonTxt ,string saleRefData, string reType, string lockNo, string userID, string member, string saleTime, DataTable tFull, DataTable tPartial, PrintInvoiceType printType)
+        public frmReturnSuccess(string refNo, string price, string reasonData, string reasonTxt ,string saleRefData, string reType, string lockNo, string userID, string member, string saleDate, DataTable tFull, DataTable tPartial, PrintInvoiceType printType, bool IsEDC, string saleTime)
         {
             InitializeComponent();
             returnRefNo = refNo;
@@ -61,6 +63,8 @@ namespace BJCBCPOS
             FULL = tFull;
             PARTIAL = tPartial;
             _printType = printType;
+            _isEDC = IsEDC;
+            _saleTime = saleTime;
         }
 
         protected override void OnPaintBackground(PaintEventArgs e)
@@ -90,7 +94,7 @@ namespace BJCBCPOS
             }
             Hardware.addDrawerListeners(DrawerStatus);
             //lbReceiptNo.Text = "(ด้วยยอดเงิน " + returnPrice +" " +ProgramConfig.currencyDefault+ ")";
-            lbRecepitNoVal.Text = returnRefNo;
+            lbRecepitNoVal.Text = saleRef;
             lbTotalVal.Text = string.Format(AppMessage.getMessage(ProgramConfig.language, this.Name, "lbReceiptNo"), returnPrice, ProgramConfig.currencyDefault);
 
             lbLockNoResult.Text = lockNo;
@@ -98,10 +102,13 @@ namespace BJCBCPOS
             lbMemberName.Text = member.Trim() == "" ? "-" : member; //TO DO
             lbTotalVal.Text = returnPrice;
             lbReasonVal.Text = reasonTxt;
-            lbReturnTimeVal.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-            lbSaleTimeVal.Text = "";
+            lbReturnTimeVal.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss", cultureinfo);
+            lbSaleTimeVal.Text = _saleTime;
 
             submitFromEDC = false;
+
+            btnEDCInterface.Visible = _isEDC;
+            lbEDCInterFace.Visible = _isEDC;
 
             panel_button.BringToFront();
         }
@@ -122,8 +129,6 @@ namespace BJCBCPOS
 
         public void returnSuccessProcess()
         {
-            //saveTempReturn();
-            //OpenCashDrawer();
             try
             {
                 frmLoading.showLoading();
@@ -256,7 +261,6 @@ namespace BJCBCPOS
                                             dialog.ShowDialog(this);
                                         }
                                     }
-
                                 }
 
                                 if (!printReceipt(CNNo))
@@ -317,186 +321,7 @@ namespace BJCBCPOS
 
             frmLoading.showLoading();
             returnSuccessProcess();
-            frmLoading.closeLoading();
-            //saveTempReturn();
-            //OpenCashDrawer();
-            //frmLoading.showLoading();
-            //btnDisable();
-            //process.newTransaction();            
-            //try
-            //{
-            //    ProgramConfig.seqOfProcess = 0;
-            //    if (ProgramConfig.hasDrawer)
-            //    {
-            //        if (saveTempReturn())
-            //        {
-            //            if (OpenCashDrawer())
-            //            {
-            //                StoreResult res = process.saveReturnTransaction(saleRef);
-            //                if (!res.response.next)
-            //                {
-            //                    process.rollback();
-            //                    btnEnable();
-            //                    frmLoading.closeLoading();
-            //                    frmNotify dialog = new frmNotify(ResponseCode.Error, res.responseMessage, res.helpMessage);
-            //                    dialog.ShowDialog(this);
-            //                    return;
-            //                }
-            //                else if (res.response == ResponseCode.Success)
-            //                {
-            //                    var dt = res.otherData;
-            //                    if (dt != null)
-            //                    {
-            //                        CNNo = dt.Rows[0]["CNNo"].ToString();
-            //                        Regex re = new Regex(@"([a-zA-Z]+)(\d+)");
-            //                        Match result = re.Match(CNNo);
-            //                        string alphaPart = result.Groups[1].ToString();
-            //                        string numberPart = result.Groups[2].ToString();
-            //                        nextCNNo = alphaPart + (Convert.ToInt32(numberPart) + 1).ToString("D7");
-            //                    }
-
-            //                    Profile checkPro = ProgramConfig.getProfile(FunctionID.Return_ProcessAfterReturnTransaction);
-            //                    if (checkPro.policy == PolicyStatus.Work)
-            //                    {
-            //                        StoreResult checkProcess = process.concludeReturn(ProgramConfig.cnNo);
-            //                        if (!checkProcess.response.next)
-            //                        {
-            //                            process.rollback();
-            //                            btnEnable();
-            //                            frmLoading.closeLoading();
-            //                            frmNotify dialog = new frmNotify(checkProcess.response, checkProcess.responseMessage, checkProcess.helpMessage);
-            //                            dialog.ShowDialog(this);
-            //                            return;
-            //                        }
-            //                        else
-            //                        {
-            //                            if (checkProcess.response == ResponseCode.Information)
-            //                            {
-            //                                frmNotify dialog = new frmNotify(checkProcess.response, checkProcess.responseMessage, checkProcess.helpMessage);
-            //                                dialog.ShowDialog(this);
-            //                            }
-            //                        }
-
-                                    
-            //                    }                                
-            //                    printReceipt();
-            //                    process.commit();
-            //                    frmLoading.closeLoading();
-            //                    ProgramConfig.seqOfProcess = 1;
-
-            //                    if (Hardware.isDrawerOpen)
-            //                    {
-            //                        panel_message.BringToFront();
-            //                        //frmNotify dialog = new frmNotify("ลิ้นชักเปิดอยู่ ปิดเสียก่อนทำการขายต่อ");
-            //                        //dialog.ShowDialog(this);
-            //                        //dialog.Refresh();
-            //                        //return;
-            //                    }
-            //                    else
-            //                    {
-            //                        chkSwClose = false;
-            //                        tranSuccess = true;
-            //                        frmLoading.showLoading();
-            //                        closeForm();
-            //                        frmLoading.closeLoading();
-            //                    }
-            //                }
-            //            }
-            //            frmLoading.closeLoading();
-            //        }
-            //    }
-            //    else
-            //    {
-            //        if (saveTempReturn())
-            //        {
-            //            if (OpenCashDrawer())
-            //            {
-            //                StoreResult res = process.saveReturnTransaction(saleRef);
-            //                if (!res.response.next)
-            //                {
-            //                    process.rollback();
-            //                    btnEnable();
-            //                    frmLoading.closeLoading();
-            //                    frmNotify dialog = new frmNotify(ResponseCode.Error, res.responseMessage, res.helpMessage);
-            //                    dialog.ShowDialog(this);
-            //                    return;
-            //                }
-            //                else if (res.response == ResponseCode.Success)
-            //                {
-            //                    var dt = res.otherData;
-            //                    if (dt != null)
-            //                    {
-            //                        CNNo = dt.Rows[0]["CNNo"].ToString();
-            //                        Regex re = new Regex(@"([a-zA-Z]+)(\d+)");
-            //                        Match result = re.Match(CNNo);
-            //                        string alphaPart = result.Groups[1].ToString();
-            //                        string numberPart = result.Groups[2].ToString();
-            //                        nextCNNo = alphaPart + (Convert.ToInt32(numberPart) + 1).ToString("D7");
-            //                    }
-
-            //                    Profile checkPro = ProgramConfig.getProfile(FunctionID.Return_ProcessAfterReturnTransaction);
-            //                    if (checkPro.policy == PolicyStatus.Work)
-            //                    {
-            //                        StoreResult checkProcess = process.concludeReturn(ProgramConfig.cnNo);
-            //                        if (!checkProcess.response.next)
-            //                        {
-            //                            process.rollback();
-            //                            btnEnable();
-            //                            frmLoading.closeLoading();
-            //                            frmNotify dialog = new frmNotify(checkProcess.response, checkProcess.responseMessage, checkProcess.helpMessage);
-            //                            dialog.ShowDialog(this);
-            //                            return;
-            //                        }
-            //                        else
-            //                        {
-            //                            if (checkProcess.response == ResponseCode.Information)
-            //                            {
-            //                                frmNotify dialog = new frmNotify(checkProcess.response, checkProcess.responseMessage, checkProcess.helpMessage);
-            //                                dialog.ShowDialog(this);
-            //                            }
-            //                        }
-                                    
-            //                    }
-            //                    printReceipt();
-            //                    process.commit();                                
-            //                    frmLoading.closeLoading();                                
-
-            //                    if (Hardware.isDrawerOpen)
-            //                    {
-            //                        panel_message.BringToFront();
-            //                        //frmNotify dialog = new frmNotify("ลิ้นชักเปิดอยู่ ปิดเสียก่อนทำการขายต่อ");
-            //                        //dialog.ShowDialog(this);
-            //                        //dialog.Refresh();
-            //                        //return;
-            //                    }
-            //                    else
-            //                    {
-            //                        chkSwClose = true;
-            //                        tranSuccess = true;
-            //                        frmLoading.showLoading();
-            //                        closeForm();
-            //                        frmLoading.closeLoading();
-            //                    }
-            //                }
-            //            }
-            //            frmLoading.closeLoading();
-            //        }
-            //    }
-            //}
-            //catch (NetworkConnectionException net)
-            //{
-            //    btnEnable();
-            //    frmLoading.closeLoading();
-            //    Program.control.RetryConnection(net.errorType);                
-            //}
-            //catch (Exception ex)
-            //{
-            //    process.rollback();
-            //    btnEnable();
-            //    frmLoading.closeLoading();
-            //    frmNotify dialog = new frmNotify(ResponseCode.Error, ex.Message, "");
-            //    dialog.ShowDialog(this);
-            //}
+            frmLoading.closeLoading();         
         }
 
         private void closeForm()
@@ -527,6 +352,7 @@ namespace BJCBCPOS
                                 }
                             }
                         }
+                        process.SaveDrawerTrans(FunctionID.Return_CloseDrawerAndRecordTime);
                     }
 
                     Profile checkDataT = ProgramConfig.getProfile(FunctionID.Return_SaveReturnTransaction_SynchSaleTransactiontoDataTank);
@@ -599,9 +425,18 @@ namespace BJCBCPOS
                             this.DialogResult = DialogResult.Yes;
                             //Program.control.ShowForm("frmMainMenu");
                         }
+
                     }
                     process.commit();
                     frmLoading.closeLoading();
+
+                    Form form = Application.OpenForms["frmMonitorCustomer"];
+                    frmMonitorCustomer mon = form as frmMonitorCustomer;
+                    mon.clearForm();
+
+                    Form form2 = Application.OpenForms["frmMonitor2Detail"];
+                    frmMonitor2Detail mon2 = form2 as frmMonitor2Detail;
+                    mon2.clearForm();
                 }
                 else
                 {
@@ -786,6 +621,7 @@ namespace BJCBCPOS
             if (ProgramConfig.hasDrawer)
             {
                 chkSwOpen = Hardware.openDrawer();
+                process.SaveDrawerTrans(FunctionID.Return_OpenDrawerAndRecordTime);
                 if (chkSwOpen == true)
                 {
                     openTime = DateTime.Now.ToString("HHmmss", cultureinfo);
@@ -886,7 +722,7 @@ namespace BJCBCPOS
 
                 if (!submitFromEDC)
                 {
-                    DataRow[] dr2 = saveTempTable.Select(" VTY = 'P' AND ISEDC = 'Y'");
+                    DataRow[] dr2 = saveTempTable.Select(" VTY = 'P' AND PCD = 'Credit'");
                     foreach (DataRow item in dr2)
                     {
                         saveTempTable.Rows.Remove(item);
@@ -1084,10 +920,10 @@ namespace BJCBCPOS
                 saveTempTable = PARTIAL;
             }
 
-            var res = process.selectDLYPTRANS(saleRef, sty: "P", vty: "O");
+            var res = process.selectDLYPTRANS(saleRef, vty: "P", dty: "O");
             if (res.response.next)
             {
-                var dr = saveTempTable.Select(" VTY = 'P' AND PCD = '" + res.otherData.Rows[0]["CARD_NO"].ToString().Substring(0, 4) + "'").FirstOrDefault();
+                var dr = saveTempTable.Select(" VTY = 'P' AND PCD = 'Credit'").FirstOrDefault();
 
                 frmEDCProcess fEDC = new frmEDCProcess(EventEDC.Return, dr["AMT"].ToString(), "", "");
                 fEDC.ShowDialog(this);
@@ -1108,12 +944,6 @@ namespace BJCBCPOS
                             saveTempTable.AcceptChanges();
                         }
 
-                        
-                        //creditCard = EDCResult.creditCard;
-                        //paymentCode = EDCResult.paymentCode;
-                        //ucTxtAmount.Text = EDCResult.edcAmount.ToString();
-                        //ucTxtApprove.Text = EDCResult.ApproveCode;
-                        //ucTxtApprove_EnterFromButton(sender, e);
                         fEDC.Dispose();
                         submitFromEDC = true;
                         btnOk_Click(null, null);

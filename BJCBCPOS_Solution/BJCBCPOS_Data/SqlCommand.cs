@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using BJCBCPOS_Model;
+using Newtonsoft.Json;
 
 namespace BJCBCPOS_Data
 {
@@ -396,8 +397,6 @@ namespace BJCBCPOS_Data
                 command.AddInputParameter("AppName", SqlDbType.NVarChar, ProgramConfig.appName);
                 command.AddInputParameter("AppVersion", SqlDbType.NVarChar, ProgramConfig.version);
                 command.AddInputParameter("IpAddress", SqlDbType.NVarChar, ProgramConfig.ipAddress);
-                //Fix Data
-                //command.AddInputParameter("IpAddress", SqlDbType.NVarChar, "172.16.152.109");
                 command.AddInputParameter("ComputerName", SqlDbType.NVarChar, ProgramConfig.computerName);
                 command.AddInputParameter("LastUser", SqlDbType.NVarChar, ProgramConfig.userId);
                 command.AddInputParameter("AbbNo", SqlDbType.NVarChar, ProgramConfig.abbNo);
@@ -1047,6 +1046,10 @@ namespace BJCBCPOS_Data
                 {
                     command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, ProgramConfig.saleRefNo);
                 }
+                else if (functionId == FunctionID.CreditSale_SearchMember)
+                {
+                    command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, ProgramConfig.creditSaleNo);
+                }
                 else if (functionId == FunctionID.Return_InputCustomer_ByMember)
                 {
                     command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, ProgramConfig.returnRefNo);
@@ -1693,10 +1696,20 @@ namespace BJCBCPOS_Data
                                             AND [VTY] = 'F' "
                                                 , refNo
                                                 , ProgramConfig.storeCode
-                                                , ProgramConfig.superUserId
+                                                , "999999"
                                                 ));
                 command.ExecuteNonQuery();
-                return new StoreResult(ResponseCode.Success, "Success");
+
+                command.SetCommandText(String.Format(@"SELECT * FROM [TEMPDLYPTRANS]  
+                                            WHERE [REF] = '{0}'
+                                            AND [STCODE] = '{1}'
+                                            AND [VTY] = 'F' "
+                    , refNo
+                    , ProgramConfig.storeCode));
+                    //ProgramConfig.superUserId
+                DataTable dt = command.ExecuteToDataTable();
+
+                return new StoreResult(ResponseCode.Success, "Success", data: dt);
             }
             catch (NetworkConnectionException ex)
             {
@@ -2051,33 +2064,35 @@ namespace BJCBCPOS_Data
             }
         }
 
+
+
         public bool saveTempDlyptrans(string refNo, string rec, string sty, string vty, string pcd, string qnt, string amt, string fds
             , string usr, string egp, string stt, string pdisc, string discid, string upc, string dty, string discamt, string reason, string stv)
         {
             try
             {
-                    command.SetCommandText(String.Format(@"INSERT INTO [tempDLYPTRANS] with(ROWLOCK) ([STCODE], [REF], [REC], [STY], [VTY], [PCD], [QNT], [AMT],[FDS], [TTM], [USR], [EGP], [STT], [PDISC], [DISCID], [UPC], [DTY], [DISCAMT], [REASON_ID], [STV]) 
+                command.SetCommandText(String.Format(@"INSERT INTO [tempDLYPTRANS] with(ROWLOCK) ([STCODE], [REF], [REC], [STY], [VTY], [PCD], [QNT], [AMT],[FDS], [TTM], [USR], [EGP], [STT], [PDISC], [DISCID], [UPC], [DTY], [DISCAMT], [REASON_ID], [STV]) 
                                                 values (N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', getdate(), N'{9}', N'{10}', N'{11}', N'{12}', N'{13}', N'{14}', N'{15}', N'{16}', N'{17}', N'{18}')"
-                                                     , ProgramConfig.storeCode
-                                                     , refNo
-                                                     , rec
-                                                     , sty
-                                                     , vty
-                                                     , pcd
-                                                     , qnt
-                                                     , amt
-                                                     , fds
-                                                     , usr
-                                                     , egp
-                                                     , stt
-                                                     , pdisc
-                                                     , discid
-                                                     , upc
-                                                     , dty
-                                                     , discamt
-                                                     , reason
-                                                     , stv));
-                    command.ExecuteNonQuery();          
+                                                 , ProgramConfig.storeCode
+                                                 , refNo
+                                                 , rec
+                                                 , sty
+                                                 , vty
+                                                 , pcd
+                                                 , qnt
+                                                 , amt
+                                                 , fds
+                                                 , usr
+                                                 , egp
+                                                 , stt
+                                                 , pdisc
+                                                 , discid
+                                                 , upc
+                                                 , dty
+                                                 , discamt
+                                                 , reason
+                                                 , stv));
+                command.ExecuteNonQuery();
                 return true;
             }
             catch (NetworkConnectionException ex)
@@ -2692,9 +2707,9 @@ namespace BJCBCPOS_Data
                 command.SetCommandText(String.Format(@" 
                                                     EXEC [dbo].[delRefRecDLYPTrans] @RefItem = '{0}', @RecItem = {3};
 
-                                                    DELETE TEMPPAY with(ROWLOCK) WHERE REF = '{0}' AND TYPE = 'P' AND PAY = '{1}' AND AMT = '{2}';
+                                                    DELETE TEMPPAY with(ROWLOCK) WHERE REF = '{0}' AND TYPE = 'P' AND PAY like '{1}%' AND AMT = '{2}';
 
-                                                    DELETE Temppay_detail with(ROWLOCK) WHERE REF = '{0}' AND PAY = '{1}' 
+                                                    DELETE Temppay_detail with(ROWLOCK) WHERE REF = '{0}' AND REC = '{3}' 
 
                                                     DELETE Tempdeposit_trans_history with(ROWLOCK) WHERE REF = '{0}' AND DEPOSIT_FFTI_NO = '{4}'
                                                    "
@@ -2880,7 +2895,7 @@ namespace BJCBCPOS_Data
                 }
                
                 command.SetCommandText(String.Format(
-                    @"DELETE FROM QRPAYTRANS WHERE OPERATE_DATE = '{0}' AND REF = '{1}' AND CHANNEL <> 'MN' " + where
+                    @"DELETE FROM QRPAYTRANS WHERE OPERATE_DATE = '{0}' AND REF = '{1}' AND CHANNEL = 'MN' " + where
                                 , ProgramConfig.operateDate
                                 , ProgramConfig.saleRefNo
                                 ));
@@ -2963,6 +2978,47 @@ namespace BJCBCPOS_Data
                 command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, ProgramConfig.pageBackFromPayment == PageBackFormPayment.ReceivePOD ? ProgramConfig.podRefNo : ProgramConfig.saleRefNo);
                 command.AddInputParameter("FunctionID", SqlDbType.Char, "N/A");
                 command.AddInputParameter("PaymentNumber", SqlDbType.VarChar, paymentNumber);
+
+                return new StoreResult(command.ExecuteToDataTable());
+            }
+            catch (NetworkConnectionException ex)
+            {
+                AppLog.writeLog(ex);
+                throw ex;
+            }
+        }
+
+        public StoreResult getPayment(string paymentNumber)
+        {
+            try
+            {
+                string refNo = "";
+                if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.NormalSale || ProgramConfig.pageBackFromPayment == PageBackFormPayment.Deposit)
+                {
+                    refNo = ProgramConfig.saleRefNo;
+                }
+                else if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.CreditSale)
+                {
+                    refNo = ProgramConfig.creditSaleNo;
+                }
+                else if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.ReceivePOD)
+                {
+                    refNo = ProgramConfig.podRefNo;
+                }
+                //exec wpos_GetPayment '004002073','QRPP','004',0,'300004','','CB' 
+                command.SetCommandStoredProcedure("pos_GetPayment");
+                command.AddInputParameter("LanguageID", SqlDbType.Int, ProgramConfig.language.ID);
+                command.AddInputParameter("OperateDate", SqlDbType.Char, ProgramConfig.operateDate);
+                command.AddInputParameter("StoreCode", SqlDbType.VarChar, ProgramConfig.storeCode);
+                command.AddInputParameter("TillNo", SqlDbType.VarChar, ProgramConfig.tillNo);
+                command.AddInputParameter("UserID", SqlDbType.VarChar, ProgramConfig.userId);
+                command.AddInputParameter("SuperUserID", SqlDbType.NVarChar, "N/A");
+                command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, refNo);
+                command.AddInputParameter("FunctionID", SqlDbType.Char, "N/A");
+                command.AddInputParameter("PaymentMainCode", SqlDbType.VarChar, paymentNumber);
+                command.AddInputParameter("cardno", SqlDbType.VarChar, paymentNumber);
+                command.AddInputParameter("MemberId", SqlDbType.VarChar, paymentNumber);
+                command.AddInputParameter("CardNoOrigi", SqlDbType.VarChar, paymentNumber);
 
                 return new StoreResult(command.ExecuteToDataTable());
             }
@@ -5379,6 +5435,10 @@ namespace BJCBCPOS_Data
                 {
                     command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, ProgramConfig.saleRefNo);
                 }
+                else if (functionId == FunctionID.CreditSale_SearchMember)
+                {
+                    command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, ProgramConfig.creditSaleNo);
+                }
                 else if (functionId == FunctionID.Return_InputCustomer_ByMember)
                 {
                     command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, ProgramConfig.returnRefNo);
@@ -5623,7 +5683,7 @@ namespace BJCBCPOS_Data
             }
         }
 
-        public bool insertTmpTrans()
+        public bool insertTmpTrans(string item)
         {
             try
             {
@@ -5633,7 +5693,7 @@ namespace BJCBCPOS_Data
                                                 , ProgramConfig.operateDate
                                                 , ProgramConfig.tillNo
                                                 , ProgramConfig.holdOrderRefNoIni
-                                                , ProgramConfig.qntValue
+                                                , item
                                                 , ProgramConfig.memberFormat == MemberFormat.MegaMaket ? ProgramConfig.memberCardNo : ProgramConfig.memberId
                                                 , ProgramConfig.employeeID
                                                 , ProgramConfig.saleRefNo
@@ -5901,12 +5961,12 @@ namespace BJCBCPOS_Data
             }
         }
 
-        public DataTable selectPAYMENT_PARAMETER(string buType, string pmCode)
+        public DataTable selectPAYMENT_PARAMETER(string pmCode)
         {
             try
             {
-                command.SetCommandText(String.Format(@"select * from PAYMENT_PARAMETER where BU_TYPE = '{0}' and PM_CODE = '{1}'", 
-                                                    buType,
+                command.SetCommandText(String.Format(@"select * from PAYMENT_PARAMETER where BU_TYPE = '{0}' and PM_CODE = '{1}'",
+                                                    ProgramConfig.buType,
                                                     pmCode
                                                     ));
 
@@ -6605,7 +6665,7 @@ namespace BJCBCPOS_Data
             }
         }
 
-        public StoreResult saveTemppayDetail(string pmCode,string paymentStepGroupID, string seq, string stepID, string dataType, string data_value)
+        public StoreResult saveTemppayDetail(string pmCode,string paymentStepGroupID, string seq, string stepID, string dataType, string data_value, string rec)
         {
             try
             {
@@ -6623,13 +6683,14 @@ namespace BJCBCPOS_Data
                     refNo = ProgramConfig.podRefNo;
                 }
 
-                command.SetCommandText(String.Format(@"INSERT INTO [Temppay_detail] with(ROWLOCK) (STORECODE, OPERATEDATE, TILLNO, REF, PAY, PAYMENTSTEPGROUPID, 
+                command.SetCommandText(String.Format(@"INSERT INTO [Temppay_detail] with(ROWLOCK) (STORECODE, OPERATEDATE, TILLNO, REF, REC, PAY, PAYMENTSTEPGROUPID, 
                                                             SEQ, STEPID, DATATYPE, DATA_VALUE, TRANSACTIONDATE) 
-                                                VALUES(N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', N'{9}', getdate())"
+                                                VALUES(N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', N'{9}' , N'{10}', getdate())"
                                                 , ProgramConfig.storeCode
                                                 , ProgramConfig.operateDate
                                                 , ProgramConfig.tillNo
                                                 , refNo
+                                                , rec
                                                 , pmCode
                                                 , paymentStepGroupID
                                                 , seq
@@ -6936,7 +6997,7 @@ namespace BJCBCPOS_Data
         }
 
         public StoreResult saveTEMP_PODTRANS_PAY(string pay, string payNum, string amt, string chg, string pdisc, string refID, string approveCode, string traceNo, 
-                                          string terminalID, string merchantID, string edc_date, string invoiceNo, string QRCode)
+                                          string terminalID, string merchantID, string edc_date, string invoiceNo, string QRCode, string rec)
         {
             try
             {
@@ -6950,7 +7011,7 @@ namespace BJCBCPOS_Data
                 command.SetCommandText(String.Format(@"INSERT INTO TEMP_PODTRANS_PAY with(ROWLOCK) (STCODE, ODATE, REF_POD, TYPE, REC, PAY, PAY_NUMBER, AMT, 
                                                             CHG, PDISC, REFERENCE_ID, APPROVE_CODE, TRACE_NO, TERMINAL_ID, MERCHANT_ID, EDC_DATE, INVOICENO, QRCODE)
                                                     values (N'{0}', N'{1}', N'{2}', N'{3}', 
-                                                        (select isnull(max(rec), 0) + 1 as REC from TEMP_PODTRANS_PAY where STCODE = '{0}' and REF_POD = '{2}')
+                                                        '{17}'
                                                     , N'{4}', N'{5}', '{6}', N'{7}', N'{8}', N'{9}', N'{10}', N'{11}', N'{12}', N'{13}', {14}, N'{15}', N'{16}') "
                                                 , ProgramConfig.storeCode
                                                 , ProgramConfig.operateDate
@@ -6968,7 +7029,8 @@ namespace BJCBCPOS_Data
                                                 , merchantID
                                                 , date
                                                 , invoiceNo
-                                                , QRCode));
+                                                , QRCode
+                                                , rec));
                 command.ExecuteNonQuery();
                 return new StoreResult(ResponseCode.Success, "Success");
             }
@@ -7377,8 +7439,8 @@ namespace BJCBCPOS_Data
                 command.SetCommandText(String.Format(@"INSERT INTO TempCREDPAY_TRANS with(ROWLOCK) 
                                                 (STORE_CODE, OPERATE_DATE, TILL_NO, Ref_CredPay, CUSTOMER_ID, CUSTOMER_NO, CARD_HOLDER_NUMBER, AMOUNT, STATUS,
                                                 CASHIER_ID, SUPER_CASHIER_ID, REASON_ID, TRANSACTION_DATE, LASTUPDATED_DATE,
-                                                SynchStatus, Trans_ID, Payment_ID)
-                                                values (N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}' , N'{9}', N'{10}', N'{11}', getdate(), getdate() ,  N'{12}', N'{13}', N'{14}')"
+                                                SynchStatus, Trans_ID, Payment_ID, CUSTOMER_CATEGORY)
+                                                values (N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}' , N'{9}', N'{10}', N'{11}', getdate(), getdate() ,  N'{12}', N'{13}', N'{14}', N'{15}')"
                                                 , ProgramConfig.storeCode
                                                 , ProgramConfig.operateDate
                                                 , ProgramConfig.tillNo
@@ -7394,7 +7456,7 @@ namespace BJCBCPOS_Data
                                                 , credit.SyncStatus
                                                 , credit.TransID
                                                 , credit.PaymentID
-                                                ));
+                                                , ProgramConfig.memberProfileMMFormat.CustomerCategory));
                 command.ExecuteNonQuery();
                 return new StoreResult(ResponseCode.Success, "Success");
             }
@@ -7424,7 +7486,7 @@ namespace BJCBCPOS_Data
                                                 , credit.Seq
                                                 , credit.Credit_InvoiceNo
                                                 , credit.Credit_InvoiceDate
-                                                , credit.Credit_Amount
+                                                , credit.Credit_AmountAPI
                                                 , "A"
                                                 , credit.TransDate
                                                 ));
@@ -7882,7 +7944,37 @@ namespace BJCBCPOS_Data
             }
         }
 
-        public StoreResult selectDLYPTRANS(string refNo, string vty = "", string dty = "")
+        public StoreResult selectTEMPDLYPTRANS_EDC(string refNo, string vty, string dty)
+        {
+            try
+            {
+                string condition = "";
+                if (vty != "")
+                {
+                    condition += " AND VTY = '" + vty + "'";
+                }
+                if (dty != "")
+                {
+                    condition += " AND DTY = '" + dty + "'";
+                }
+
+                command.SetCommandText(String.Format(@"SELECT * FROM [TEMPDLYPTRANS] with(NOLOCK)
+                                            WHERE [REF] = '{0}' {1}"
+                                , refNo
+                                , condition
+                                ));
+
+                DataTable dt = command.ExecuteToDataTable();
+                return new StoreResult(ResponseCode.Success, "Success", data: dt);
+            }
+            catch (NetworkConnectionException ex)
+            {
+                AppLog.writeLog(ex);
+                throw ex;
+            }
+        }
+
+        public StoreResult selectDLYPTRANS(string refNo, string vty, string dty)
         {
             try
             {
@@ -7912,15 +8004,26 @@ namespace BJCBCPOS_Data
             }
         }
 
-
-        public StoreResult selectEDCTrans(string refNo)
+        public StoreResult selectDLYTRANS(string refNo, string vty = "", string dty = "")
         {
             try
             {
-                command.SetCommandText(String.Format(@"SELECT * FROM [EDCTRANS] with(NOLOCK)
-                                            WHERE [REF] = '{0}' "
+                string condition = "";
+                if (vty != "")
+                {
+                    condition += " AND VTY = '" + vty + "'";
+                }
+                if (dty != "")
+                {
+                    condition += " AND DTY = '" + dty + "'";
+                }
+
+                command.SetCommandText(String.Format(@"SELECT * FROM STDBENGINE.dbo.[DLYTRANS] with(NOLOCK)
+                                            WHERE [REF] = '{0}' {1}"
                                 , refNo
+                                , condition
                                 ));
+
                 DataTable dt = command.ExecuteToDataTable();
                 return new StoreResult(ResponseCode.Success, "Success", data: dt);
             }
@@ -7931,7 +8034,34 @@ namespace BJCBCPOS_Data
             }
         }
 
-        public StoreResult validateFFTI(string fftiNo)
+
+
+        public StoreResult selectEDCTrans(string refNo, string cardNo, bool IsSTDBENGIN = false)
+        {
+            try
+            {
+                string table = "[EDCTRANS]";
+                if (IsSTDBENGIN)
+                {
+                    table = "STDBENGINE.dbo.[EDCTRANS]";
+                }
+
+                command.SetCommandText(String.Format(@"SELECT * FROM {1} with(NOLOCK)
+                                            WHERE REF = '{0}' AND CARD_NO = '{2}' "
+                                , refNo
+                                , table
+                                , cardNo));
+                DataTable dt = command.ExecuteToDataTable();
+                return new StoreResult(ResponseCode.Success, "Success", data: dt);
+            }
+            catch (NetworkConnectionException ex)
+            {
+                AppLog.writeLog(ex);
+                throw ex;
+            }
+        }
+
+        public StoreResult validateFFTI(string fftiNo, string abbNo)
         {
             try
             {
@@ -7942,7 +8072,7 @@ namespace BJCBCPOS_Data
                 command.AddInputParameter("TillNo", SqlDbType.VarChar, ProgramConfig.tillNo);
                 command.AddInputParameter("UserID", SqlDbType.VarChar, ProgramConfig.userId);
                 command.AddInputParameter("SuperUserID", SqlDbType.NVarChar, "N/A");
-                command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, "N/A");
+                command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, abbNo);
                 command.AddInputParameter("FunctionID", SqlDbType.Char, FunctionID.ValidFFTI.formatValue);
                 command.AddInputParameter("FFTI_NO", SqlDbType.VarChar, fftiNo);
 
@@ -7952,6 +8082,204 @@ namespace BJCBCPOS_Data
             {
                 AppLog.writeLog(ex);
                 throw ex;
+            }
+        }
+
+        public int selectMaxRecTEMP_PODTRANS_PAY(string refNo)
+        {
+            try
+            {
+                command.SetCommandText(String.Format(@"select isnull(max(rec), 0) + 1 as REC from TEMP_PODTRANS_PAY where STCODE = '{0}' and REF_POD = '{1}'"
+                                                , ProgramConfig.storeCode
+                                                , refNo
+                                                ));
+
+                DataTable dt = command.ExecuteToDataTable();
+                return int.Parse(dt.Rows[0][0].ToString());
+            }
+            catch (NetworkConnectionException ex)
+            {
+                AppLog.writeLog(ex);
+                throw ex;
+            }
+        }
+
+        public StoreResult saveAPILOG(APILog dataLog, string refNo, string apiName, string type)
+        {
+            try
+            {
+                string jsonStr = "";
+                jsonStr = JsonConvert.SerializeObject(dataLog);
+                command.SetCommandText(String.Format(@"INSERT INTO APILOG with(ROWLOCK) 
+                                                (STORE_CODE, LOC_NO, REF, APINAME, TYPE, MSG, TRANSACTION_DATE)
+                                                values (N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', getdate())"
+                                                , ProgramConfig.storeCode
+                                                , ProgramConfig.tillNo
+                                                , refNo
+                                                , apiName
+                                                , type
+                                                , jsonStr
+                                                ));
+                command.ExecuteNonQuery();
+                return new StoreResult(ResponseCode.Success, "Success");
+            }
+            catch (NetworkConnectionException ex)
+            {
+                AppLog.writeLog(ex);
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                AppLog.writeLog(ex);
+                return new StoreResult(ResponseCode.Error, ex.Message);
+            }
+        }
+
+        public StoreResult updateTemp_podtrans_pay(string pay, string chg)
+        {
+            try
+            {
+                command.SetCommandText(String.Format(
+                    @"UPDATE [Temp_podtrans_pay] SET CHG = {0} WHERE REF_POD = '{1}' AND pay = '{2}'",
+
+                    chg, ProgramConfig.podRefNo, pay));
+
+                command.ExecuteNonQuery();
+                return new StoreResult(ResponseCode.Success, "Success");
+            }
+            catch (NetworkConnectionException ex)
+            {
+                AppLog.writeLog(ex);
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                AppLog.writeLog(ex);
+                return new StoreResult(ResponseCode.Error, "");
+            }
+        }
+
+        public StoreResult updateCREDPAY_TRANS_PAY(string pay, string chg)
+        {
+            try
+            {
+                command.SetCommandText(String.Format(
+                    @"UPDATE [TempCREDPAY_TRANS_PAY] SET Payment_Change = {0} WHERE Ref_CredPay = '{1}' AND PaymentMainCode = '{2}'",
+
+                    chg, ProgramConfig.creditSaleNo, pay));
+
+                command.ExecuteNonQuery();
+                return new StoreResult(ResponseCode.Success, "Success");
+            }
+            catch (NetworkConnectionException ex)
+            {
+                AppLog.writeLog(ex);
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                AppLog.writeLog(ex);
+                return new StoreResult(ResponseCode.Error, "");
+            }
+        }
+
+        public StoreResult saveDrawerTrans(string refNo, FunctionID function, string openDrawerTime = "")
+        {
+            try
+            {
+                DateTime date;
+                if (openDrawerTime != "")
+                {
+                    date = DateTime.ParseExact(openDrawerTime, "HHmmss", new System.Globalization.CultureInfo("en-US"));
+                }
+                else
+                {
+                    date = DateTime.Now;
+                }
+
+                command.SetCommandStoredProcedure("pos_SaveDrawerTrans");
+                command.AddInputParameter("LanguageID", SqlDbType.Int, ProgramConfig.language.ID);
+                command.AddInputParameter("OperateDate", SqlDbType.Char, ProgramConfig.operateDate);
+                command.AddInputParameter("StoreCode", SqlDbType.VarChar, ProgramConfig.storeCode);
+                command.AddInputParameter("TillNo", SqlDbType.VarChar, ProgramConfig.tillNo);
+                command.AddInputParameter("UserID", SqlDbType.VarChar, ProgramConfig.userId);
+                command.AddInputParameter("SuperUserID", SqlDbType.NVarChar, "N/A");
+                command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, refNo);
+                command.AddInputParameter("FunctionID", SqlDbType.Char, function.formatValue);
+                command.AddInputParameter("DrawerTime", SqlDbType.VarChar, date);
+
+                return new StoreResult(command.ExecuteToDataTable());
+            }
+            catch (NetworkConnectionException ex)
+            {
+                AppLog.writeLog(ex);
+                throw ex;
+            }
+        }
+
+        public StoreResult GetRefQRPayment_Offline(string pmCode, string qrRef)
+        {
+            try
+            {
+                command.SetCommandStoredProcedure("pos_GetRefQRPayment_Offline");
+                command.AddInputParameter("LanguageID", SqlDbType.Int, ProgramConfig.language.ID);
+                command.AddInputParameter("OperateDate", SqlDbType.Char, ProgramConfig.operateDate);
+                command.AddInputParameter("StoreCode", SqlDbType.VarChar, ProgramConfig.storeCode);
+                command.AddInputParameter("TillNo", SqlDbType.VarChar, ProgramConfig.tillNo);
+                command.AddInputParameter("UserID", SqlDbType.NVarChar, ProgramConfig.userId);
+                command.AddInputParameter("SuperUserID", SqlDbType.NVarChar, "N/A");
+                command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, ProgramConfig.saleRefNo);
+                command.AddInputParameter("FunctionID", SqlDbType.Char, "N/A");
+                command.AddInputParameter("PaymentMainCode", SqlDbType.NVarChar, pmCode);
+                command.AddInputParameter("ReferenceQRPayment", SqlDbType.NVarChar, qrRef);
+
+                return new StoreResult(command.ExecuteToDataTable());
+            }
+            catch (NetworkConnectionException ex)
+            {
+                AppLog.writeLog(ex);
+                throw ex;
+            }
+        }
+
+        public bool saveTempdly_Authorize(string refNo, string rec, string sty, string vty, string pcd, string qnt, string amt, string fds
+            , string usr, string egp, string stt, string pdisc, string discid, string upc, string dty, string discamt, string reason, string stv)
+        {
+            try
+            {
+                command.SetCommandText(String.Format(@"INSERT INTO [Tempdly_Authorize] with(ROWLOCK) ([STCODE], [REF], [REC], [STY], [VTY], [PCD], [QNT], [AMT],[FDS], [TTM], [USR], [EGP], [STT], [PDISC], [DISCID], [UPC], [DTY], [DISCAMT], [REASON_ID], [STV]) 
+                                                values (N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', getdate(), N'{9}', N'{10}', N'{11}', N'{12}', N'{13}', N'{14}', N'{15}', N'{16}', N'{17}', N'{18}')"
+                                                 , ProgramConfig.storeCode
+                                                 , refNo
+                                                 , rec
+                                                 , sty
+                                                 , vty
+                                                 , pcd
+                                                 , qnt
+                                                 , amt
+                                                 , fds
+                                                 , usr
+                                                 , egp
+                                                 , stt
+                                                 , pdisc
+                                                 , discid
+                                                 , upc
+                                                 , dty
+                                                 , discamt
+                                                 , reason
+                                                 , stv));
+                command.ExecuteNonQuery();
+                return true;
+            }
+            catch (NetworkConnectionException ex)
+            {
+                AppLog.writeLog(ex);
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                AppLog.writeLog(ex);
+                return false;
             }
         }
     }

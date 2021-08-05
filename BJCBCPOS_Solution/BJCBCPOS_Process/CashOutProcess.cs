@@ -321,6 +321,7 @@ namespace BJCBCPOS_Process
                             // save drawer log
                             if (command.saveCloseDrawerCashoutBalance(openTime, closeTime)) //เงินทอน
                             {
+                                command.saveDrawerTrans(ProgramConfig.cashOutRefNo, FunctionID.CashOut_NormalChange_CloseDrawerAndRecordTime);
                                 int cashireId = command.getCashierID();
                                 if (cashireId > 0)
                                 {
@@ -355,6 +356,7 @@ namespace BJCBCPOS_Process
                             // save drawer log
                             if (command.saveCloseDrawerCashout(openTime, closeTime))
                             {
+                                command.saveDrawerTrans(ProgramConfig.cashOutRefNo, FunctionID.CashOut_Sale_CloseDrawerAndRecordTime);
                                 int cashireId = command.getCashierID();
                                 if (cashireId > 0)
                                 {
@@ -738,6 +740,23 @@ namespace BJCBCPOS_Process
                 return new StoreResult(ResponseCode.Error, ex.Message);
             }
             
+        }
+
+        public StoreResult SaveDrawerTrans(FunctionID function)
+        {
+            try
+            {
+                return command.saveDrawerTrans(ProgramConfig.cashOutRefNo, function);
+            }
+            catch (NetworkConnectionException)
+            {
+                AppLog.writeLog("connection to server lost at SaleProcess.CheckValuePayment");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new StoreResult(ResponseCode.Error, ex.Message, "", "");
+            }
         }
     }
 }

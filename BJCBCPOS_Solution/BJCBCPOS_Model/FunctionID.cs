@@ -610,6 +610,15 @@ namespace BJCBCPOS_Model
         public static FunctionID Return_GotoMainMenu { get { return new FunctionID("122-150-000-000-000"); } }
         public static FunctionID Void_SelectVoidMenu { get { return new FunctionID("123-010-000-000-000"); } }
         public static FunctionID Void_GetRunningNo { get { return new FunctionID("123-020-000-000-000"); } }
+        public static FunctionID Void_Deposit_OpenDrawerAndRecordTime { get { return new FunctionID("131-020-060-000-000"); } }
+        public static FunctionID Void_Deposit_CloseDrawerAndRecordTime { get { return new FunctionID("131-020-100-000-000"); } }
+
+        public static FunctionID Void_POD_OpenDrawerAndRecordTime { get { return new FunctionID("132-020-070-000-000"); } }
+        public static FunctionID Void_POD_CloseDrawerAndRecordTime { get { return new FunctionID("132-020-110-000-000"); } }
+
+        public static FunctionID Void_Credit_OpenDrawerAndRecordTime { get { return new FunctionID("133-020-070-000-000"); } }
+        public static FunctionID Void_Credit_CloseDrawerAndRecordTime { get { return new FunctionID("133-020-110-000-000"); } }
+
         public static FunctionID Void_CheckOpenDayofTillStatus { get { return new FunctionID("123-030-000-000-000"); } }
         public static FunctionID Void_GetMessageCashier { get { return new FunctionID("123-035-000-000-000"); } }
         public static FunctionID Void_InputReceiptNo { get { return new FunctionID("123-040-000-000-000"); } }
@@ -625,6 +634,7 @@ namespace BJCBCPOS_Model
         public static FunctionID Void_PrintVoidDocument { get { return new FunctionID("123-120-000-000-000"); } }
         public static FunctionID Void_CloseDrawerAndRecordTime { get { return new FunctionID("123-130-000-000-000"); } }
         public static FunctionID Void_GotoMainMenu { get { return new FunctionID("123-140-000-000-000"); } }
+
         public static FunctionID Void_SaveVoidDepositTransaction { get { return new FunctionID("131-020-070-000-000"); } }
 
 
@@ -654,9 +664,12 @@ namespace BJCBCPOS_Model
         public static FunctionID Deposit_SearchMember3_Search_MemberID { get { return new FunctionID("131-010-040-030-001"); } }
         public static FunctionID Deposit_SearchMember3_Search_PhoneNo { get { return new FunctionID("131-010-040-030-002"); } }
         public static FunctionID Deposit_SearchMember3_Search_TaxID { get { return new FunctionID("131-010-040-030-003"); } }
+        public static FunctionID Deposit_OpenDrawerAndRecordTime { get { return new FunctionID("131-010-100-000-000"); } }
+        public static FunctionID Deposit_CloseDrawerAndRecordTime { get { return new FunctionID("131-010-160-000-000"); } }
+
         public static FunctionID ValidFFTI { get { return new FunctionID("131-010-150-030-000"); } }
         //ReceivePayment
-        public static FunctionID ReceivePOD_Payment { get { return new FunctionID("132-010-060-001-000"); } }
+        public static FunctionID ReceivePOD_Payment { get { return new FunctionID("070-000-000-000-000"); } }
         public static FunctionID ReceivePOD_CheckAuthorize { get { return new FunctionID("132-010-010-000-000"); } }
         public static FunctionID ReceivePOD_CheckOpenDay { get { return new FunctionID("132-010-012-000-000"); } }
         public static FunctionID ReceivePOD_GetOrder { get { return new FunctionID("132-010-030-000-000"); } }
@@ -672,6 +685,8 @@ namespace BJCBCPOS_Model
         public static FunctionID ReceivePOD_InputVoid { get { return new FunctionID("132-020-040-000-000"); } }
         public static FunctionID ReceivePOD_RollBack { get { return new FunctionID("132-010-120-020-000"); } }
         public static FunctionID ReceivePOD_CancelVoid { get { return new FunctionID("132-020-080-020-000"); } }
+        public static FunctionID ReceivePOD_OpenDrawerAndRecordTime { get { return new FunctionID("132-010-090-000-000"); } }
+        public static FunctionID ReceivePOD_CloseDrawerAndRecordTime { get { return new FunctionID("132-010-130-011-000"); } }
 
         public static FunctionID CreditSale_Payment { get { return new FunctionID("133-010-060-001-000"); } }
         public static FunctionID CreditSale_CheckAuthorize { get { return new FunctionID("133-010-010-000-000"); } }
@@ -680,11 +695,14 @@ namespace BJCBCPOS_Model
         public static FunctionID CreditSale_GetMessageCashier { get { return new FunctionID("133-010-013-000-000"); } }
         public static FunctionID CreditSale_Print { get { return new FunctionID("133-010-130-020-000"); } }
         public static FunctionID CreditSale_APIAR { get { return new FunctionID("133-010-120-020-000"); } }
-
+        public static FunctionID CreditSale_SearchMember { get { return new FunctionID("133-010-020-000-000"); } }
+        public static FunctionID CreditSale_DisplayContent { get { return new FunctionID("133-020-010-000-000"); } }
         public static FunctionID CreditSale_GetRunningCallAPI { get { return new FunctionID("133-010-120-020-000"); } }
         public static FunctionID CreditSale_PrintVoidReceipt { get { return new FunctionID("133-020-100-000-000"); } }
         public static FunctionID CreditSale_CreditInputReason { get { return new FunctionID("133-020-040-000-000"); } }
         public static FunctionID CreditSale_CancelVoid { get { return new FunctionID("133-020-080-010-000"); } }
+        public static FunctionID CreditSale_OpenDrawerAndRecordTime { get { return new FunctionID("133-010-090-000-000"); } }
+        public static FunctionID CreditSale_CloseDrawerAndRecordTime { get { return new FunctionID("133-010-130-011-000"); } }
 
         public static FunctionID CashOut_SelectCashOutMenu { get { return new FunctionID("161-010-000-000-000"); } }
         public static FunctionID CashOut_GetRunningNo { get { return new FunctionID("161-011-000-000-000"); } }
@@ -701,7 +719,7 @@ namespace BJCBCPOS_Model
         public static FunctionID CashOut_NormalChange_DefaultAmount { get { return new FunctionID("161-060-040-000-000", "CashOutFloatAmtDefault"); } }
         public static FunctionID CashOut_NormalChange_DefaultAmount_Editable { get { return new FunctionID("161-060-040-001-000"); } }
 
-
+        public static FunctionID CashOut_NormalChange_OpenDrawerAndRecordTime { get { return new FunctionID("161-060-015-000-000"); } }
         public static FunctionID CashOut_NormalChange_CheckAmount_Minimum { get { return new FunctionID("161-060-050-001-000"); } }
         public static FunctionID CashOut_NormalChange_CheckAmount_Maximum { get { return new FunctionID("161-060-050-002-000"); } }
         public static FunctionID CashOut_NormalChange_PopupSummaryPage { get { return new FunctionID("161-060-060-000-000"); } }
@@ -726,6 +744,10 @@ namespace BJCBCPOS_Model
         public static FunctionID CashOut_AdditionalChange_PrintCashoutDocument { get { return new FunctionID("161-070-100-000-000"); } }
         public static FunctionID CashOut_Sale { get { return new FunctionID("161-080-000-000-000"); } }
         public static FunctionID CashOut_Sale_CheckData { get { return new FunctionID("161-080-010-000-000"); } }
+
+        public static FunctionID CashOut_Sale_OpenDrawerAndRecordTime { get { return new FunctionID("161-080-015-000-000"); } }
+        public static FunctionID CashOut_Sale_CloseDrawerAndRecordTime { get { return new FunctionID("161-080-090-000-000"); } }
+
         public static FunctionID CashOut_Sale_DisplayPaymentType { get { return new FunctionID("161-080-020-000-000"); } }
         public static FunctionID CashOut_Sale_InputCashMethod { get { return new FunctionID("161-080-030-000-000"); } }
         public static FunctionID CashOut_Sale_InputMoneyBag { get { return new FunctionID("161-080-040-000-000"); } }
@@ -734,7 +756,6 @@ namespace BJCBCPOS_Model
         public static FunctionID CashOut_Sale_ConfirmSaleAmount { get { return new FunctionID("161-080-060-000-000"); } }
         public static FunctionID CashOut_Sale_DisplaySummary { get { return new FunctionID("161-080-070-000-000"); } }
         public static FunctionID CashOut_Sale_Submit { get { return new FunctionID("161-080-080-000-000"); } }
-        public static FunctionID CashOut_Sale_CloseDrawerAndRecordTime { get { return new FunctionID("161-080-090-000-000"); } }
         public static FunctionID CashOut_Sale_SaveCashOutTransaction { get { return new FunctionID("161-080-100-000-000"); } }
         public static FunctionID CashOut_Sale_SaveCashOutTransaction_SynchSaleTransactiontoDataTank { get { return new FunctionID("161-080-100-001-000"); } }
         public static FunctionID CashOut_Sale_PrintCashoutDocument { get { return new FunctionID("161-080-110-000-000"); } }
@@ -742,6 +763,9 @@ namespace BJCBCPOS_Model
         public static FunctionID CancelCashOut { get { return new FunctionID("181-080-000-000-000"); } }
         public static FunctionID CancelCashOut_DisplayCashOut { get { return new FunctionID("181-080-010-000-000"); } }
         public static FunctionID CashOut_Sale_ConfirmCloseTill { get { return new FunctionID("161-080-120-000-000"); } }
+       
+
+
         public static FunctionID EndOfShift_SelectEndOfShiftMenu { get { return new FunctionID("162-010-000-000-000"); } }
         public static FunctionID EndOfShift_GetRunningNo { get { return new FunctionID("162-011-000-000-000"); } }
         public static FunctionID EndOfShift_CheckOpenDayofTillStatus { get { return new FunctionID("162-012-000-000-000"); } }

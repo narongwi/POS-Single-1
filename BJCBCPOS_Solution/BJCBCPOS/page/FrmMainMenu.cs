@@ -160,7 +160,7 @@ namespace BJCBCPOS
                                         {
                                             currentBtn.Location = new Point(x_location[(int)main["MenuNo"]], y_location[(int)menu["MenuSeq"]]);
                                             currentBtn.Text = subGroup.Rows[0]["MenuName"].ToString();
-                                            currentBtn.Enabled = true;//(menuStatus == 2);
+                                            currentBtn.Enabled = (menuStatus == 2);
                                             if (currentBtn.Enabled == true)
                                             {
                                                 currentBtn.BackgroundImage = Properties.Resources.payment_enable;
@@ -835,9 +835,9 @@ namespace BJCBCPOS
                         {
                             frmSale = (frmSale)item;
                             frmSale.BringToFront();
-                            frmSale.panelScanBarcode.BringToFront();
-                            frmSale.ucTBScanBarcode.Select();
-                            frmSale.ucTBScanBarcode.Focus();
+                            //frmSale.panelScanBarcode.BringToFront();
+                            //frmSale.ucTBScanBarcode.Select();
+                            //frmSale.ucTBScanBarcode.Focus();
                             break;
                         }
                     }
@@ -1208,7 +1208,6 @@ namespace BJCBCPOS
                     //    return false;
                     //}
 
-                    check.profile = ProfileStatus.NotAuthorize;
                     if (!Utility.CheckAuthPass(this, check, "CashOut"))
                     {
                         return false;
@@ -1248,7 +1247,8 @@ namespace BJCBCPOS
                         return;
                     }
                 }
-                Program.control.ShowForm("frmReturnFromInvoice");
+                //Program.control.ShowForm("frmReturnFromInvoice");
+                Program.control.ShowForm("frmSubMenuReturn");
                 frmLoading.closeLoading();
             }
             catch (NetworkConnectionException net)
@@ -1450,6 +1450,7 @@ namespace BJCBCPOS
             pnMainMenu.BringToFront();
             panelMenu.BringToFront();
             ucFooter1.lbFunction.Text = FunctionID.Login_DisplayMainMenu.formatValue;
+            picLogo.Image = Utility.GetLogoImage();
         }
 
         private void frmMainMenu_Activated(object sender, EventArgs e)

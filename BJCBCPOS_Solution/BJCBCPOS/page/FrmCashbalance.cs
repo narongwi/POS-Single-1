@@ -865,6 +865,8 @@ namespace BJCBCPOS
                     AppLog.writeLog("frmCashIn DrawerStatus = " + status.ToUpper());
                     //Save time Close Cash Drawer
                     closeTime = DateTime.Now;
+                    process.SaveDrawerTrans(FunctionID.CashIn_SaveCloseCashDrawer);
+
                     ConfirmChange();
                 }
             }
@@ -899,6 +901,8 @@ namespace BJCBCPOS
             ucFooterTran1.lbFunction.Text = FunctionID.CashIn_ConfirmCashIn.formatValue;
             Hardware.addDrawerListeners(DrawerStatus);    
             var chk = Hardware.openDrawer();
+            process.SaveDrawerTrans(FunctionID.CashIn_SaveOpenCashDrawer);
+
 
             //Open Cash Drawer
             AppLog.writeLog("frmCashIn Hardware.isDrawerOpen = " + Hardware.isDrawerOpen);

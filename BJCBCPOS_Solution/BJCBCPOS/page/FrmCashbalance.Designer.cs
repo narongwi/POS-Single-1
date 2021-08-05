@@ -170,9 +170,9 @@
             this.pnMainPayment.Controls.Add(this.pictureBox5);
             this.pnMainPayment.Controls.Add(this.panelMainSell);
             this.pnMainPayment.Controls.Add(this.panelHeader);
-            this.pnMainPayment.Controls.Add(this.pn_MainBankNote);
             this.pnMainPayment.Controls.Add(this.pn_MainChange);
             this.pnMainPayment.Controls.Add(this.panelPayment);
+            this.pnMainPayment.Controls.Add(this.pn_MainBankNote);
             this.pnMainPayment.Location = new System.Drawing.Point(0, 0);
             this.pnMainPayment.Margin = new System.Windows.Forms.Padding(2);
             this.pnMainPayment.Name = "pnMainPayment";
@@ -562,6 +562,7 @@
             this.ucHeader2.showMainMenu = true;
             this.ucHeader2.showMember = false;
             this.ucHeader2.showMember_ButtonBack = true;
+            this.ucHeader2.showMember_IsSaveMember = true;
             this.ucHeader2.showScanner = false;
             this.ucHeader2.Size = new System.Drawing.Size(1024, 43);
             this.ucHeader2.TabIndex = 0;
@@ -1296,6 +1297,7 @@
             this.ucTBWI_Amt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTBWI_Amt.EnabledUC = true;
             this.ucTBWI_Amt.IsAmount = true;
+            this.ucTBWI_Amt.IsKeyBoardForScan = false;
             this.ucTBWI_Amt.IsLarge = false;
             this.ucTBWI_Amt.IsNumber = false;
             this.ucTBWI_Amt.IsSetFormat = true;
@@ -1587,6 +1589,7 @@
             this.txtPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtPassword.EnabledUC = true;
             this.txtPassword.IsAmount = false;
+            this.txtPassword.IsKeyBoardForScan = false;
             this.txtPassword.IsLarge = false;
             this.txtPassword.IsNumber = false;
             this.txtPassword.IsSetFormat = false;
@@ -1612,6 +1615,7 @@
             this.txtEmpUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtEmpUser.EnabledUC = true;
             this.txtEmpUser.IsAmount = false;
+            this.txtEmpUser.IsKeyBoardForScan = false;
             this.txtEmpUser.IsLarge = false;
             this.txtEmpUser.IsNumber = false;
             this.txtEmpUser.IsSetFormat = false;

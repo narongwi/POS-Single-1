@@ -91,7 +91,7 @@ namespace BJCBCPOS
             lbMemberName.Text = member; //TO DO
             lbTotalVal.Text = total;
             lbReasonVal.Text = reasonTxt;
-            lbVoidVal.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            lbVoidVal.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss", cultureinfo);
             lbSaleTimeVal.Text = saleTime;
             chkProfile191 = ProgramConfig.getProfile(FunctionID.Void_OpenDrawerAndRecordTime);
             frmLoading.closeLoading();                  
@@ -353,9 +353,8 @@ namespace BJCBCPOS
         {
             try
             {
-                process.newTransaction();
-
-                var res = process.selectDLYPTRANS(voidReceiptNo, sty: "P", vty: "O");
+            
+                var res = process.selectDLYPTRANS(voidReceiptNo, vty: "P", dty: "O");
                 if (res.response.next)
                 {
                     frmEDCProcess fEDC = new frmEDCProcess(EventEDC.Void, "", "", ""
@@ -396,6 +395,8 @@ namespace BJCBCPOS
                     }
                 }
 
+
+
                 res = process.processCheckQRPayment(voidReceiptNo, AlertMessage: (resCode, resMsg, resHelpMsg) => 
                                                             Utility.AlertMessage(this, resCode, resMsg, resHelpMsg));
                 if (!res.response.next || res.response == ResponseCode.Ignore)
@@ -406,6 +407,7 @@ namespace BJCBCPOS
                     return;
                 }
 
+                process.newTransaction();
                 //DefaultStatus
                 statusCloseDrawer = false;
                 chkSwClose = false;
@@ -569,6 +571,7 @@ namespace BJCBCPOS
                                 }
                             }
                         }
+                        SaveDraweTrans(false);
                     }
     
                     Profile checkDataT = ProgramConfig.getProfile(FunctionID.Void_SaveVoidTransaction_SynchSaleTransactiontoDataTank);
@@ -667,6 +670,7 @@ namespace BJCBCPOS
                 if (ProgramConfig.hasDrawer && chkProfile191.policy == PolicyStatus.Work)
                 {
                     chkSwOpen = Hardware.openDrawer();
+                    SaveDraweTrans(true);
                     if (chkSwOpen == true)
                     {
                         openTime = DateTime.Now.ToString("HH:mm:ss", cultureinfo);
@@ -799,6 +803,52 @@ namespace BJCBCPOS
                 dialog.ShowDialog(this);
             }
             return true;
+        }
+
+        private void SaveDraweTrans(bool isOpen)
+        {
+            FunctionID fn = FunctionID.NoFunctionID;
+
+            if (isOpen)
+            {
+                if (saleType == VoidSaleType.NormalSale)
+                {
+                    fn = FunctionID.Void_OpenDrawerAndRecordTime;
+                }
+                else if (saleType == VoidSaleType.Deposit)
+                {
+                    fn = FunctionID.Void_Deposit_OpenDrawerAndRecordTime;
+                }
+                else if (saleType == VoidSaleType.POD)
+                {
+                    fn = FunctionID.Void_POD_OpenDrawerAndRecordTime;
+                }
+                else if (saleType == VoidSaleType.CreditSale)
+                {
+                    fn = FunctionID.Void_Credit_OpenDrawerAndRecordTime;
+                }
+            }
+            else
+            {
+                if (saleType == VoidSaleType.NormalSale)
+                {
+                    fn = FunctionID.Void_CloseDrawerAndRecordTime;
+                }
+                else if (saleType == VoidSaleType.Deposit)
+                {
+                    fn = FunctionID.Void_Deposit_CloseDrawerAndRecordTime;
+                }
+                else if (saleType == VoidSaleType.POD)
+                {
+                    fn = FunctionID.Void_POD_CloseDrawerAndRecordTime;
+                }
+                else if (saleType == VoidSaleType.CreditSale)
+                {
+                    fn = FunctionID.Void_Credit_CloseDrawerAndRecordTime;
+                }
+            }
+
+            process.SaveDrawerTrans(fn);
         }
 
         public void DrawerClose()

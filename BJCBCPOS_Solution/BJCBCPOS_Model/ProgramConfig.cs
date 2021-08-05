@@ -534,6 +534,7 @@ namespace BJCBCPOS_Model
         public static string qrPaymentMID { get; set; }
         public static MemberProfileMMFormat memberProfileMMFormat { get; set; }
         public static string multiStore { get; set; }
+        public static string buType { get; set; }
 
         // other global use variables
         public static string redeemRefNo { get; set; }
@@ -553,6 +554,7 @@ namespace BJCBCPOS_Model
         public static string podRefNo { get; set; }
         public static string creditSaleNo { get; set; }
 
+        public static int timeOutActionIdle { get; set; }
         public static string memberId { get; set; }
         public static string memberName { get; set; }
         public static string memberCardNo { get; set; }
@@ -568,7 +570,6 @@ namespace BJCBCPOS_Model
         public static string paymentDupType { get; set; }
         public static string paymentDupAmt { get; set; }
         public static string employeeID { get; set; }
-        //public static string printInvoiceType { get; set; }
         public static string loadHoldOrderReceipt { get; set; }
         public static string pcManID { get; set; }
         public static string printerName { get; set; }
@@ -594,10 +595,14 @@ namespace BJCBCPOS_Model
         public static string podRefID { get; set; }
         public static string podRefFFTI { get; set; }
 
-        public static PrintInvoiceType printInvoiceType { get; set; }
-        public static FunctionID paymentFunction { get; set; }
-        public static PageBackFormPayment pageBackFromPayment { get; set; }
 
+
+        //Send to frmPayment
+        public static FunctionID paymentFunction { get; set; }
+        public static FunctionID paymentOpenCashDrawer { get; set; }
+        public static FunctionID paymentCloseCashDrawer { get; set; }
+        public static PrintInvoiceType printInvoiceType { get; set; }
+        public static PageBackFormPayment pageBackFromPayment { get; set; }
 
         public static Panel pnLanguage { get; set; }
         public static Form formGlobal { get; set; }
@@ -746,6 +751,7 @@ namespace BJCBCPOS_Model
                     memberFormat = (MemberFormat)Convert.ToInt32(getPosConfig("MemberFormat"));
                     qrPaymentMID = getPosConfig("QRPAYMENT_MID").ToString();
                     multiStore = getPosConfig("MultiStore").ToString();
+                    buType = getPosConfig("BusinessType").ToString();
 
                     //saleMode เอาไว้ใช้สำหรับส่ง parameter ไปที่ stp pos_DisplayContent
                     if (saleMode != SaleMode.Standalone)
@@ -755,23 +761,14 @@ namespace BJCBCPOS_Model
                     //saleModePopUp เอาไว้ใช้สำหรับ check ว่าให้ใช้ Mode Stand Alone หรือไม่
                     saleModePopUp = (SaleMode)Convert.ToInt32(getPosConfig("TillSaleMode").ToString());
 
-
-                    //if (saleMode == SaleMode.Standalone)
-                    //{
-                    //    IsStandAloneMode = true;
-                    //}
+                    timeOutActionIdle = Convert.ToInt32(getPosConfig("TimeOutActionIdle").ToString());
 
                     connectionTimeout = Convert.ToInt32(getPosConfig("TimeOutApp").ToString());
                     commandTimeout = Convert.ToInt32(getPosConfig("TimeOutDB").ToString());
                     connectionRetry = Convert.ToInt32(getPosConfig("RetryTimes").ToString());
-                    //if (langaugeType == "Single")
-                    //{
-                    //    language = new Language("LAO");
-                    //}
-                    //else
-                    //{
+
                     language = new Language(getPosConfig("LanguageDefault").ToString()).ID == 0 ? new Language(1) : new Language(getPosConfig("LanguageDefault").ToString());
-                    //}
+
                     config.updateValue();
 
                     // TODO: change get value from db pos config
@@ -796,7 +793,7 @@ namespace BJCBCPOS_Model
 
                     currencyDefault = getPosConfig("CurrencyDefault").ToString();
                     //Fix Data Changelimit is missing
-                    changeLimit = "1000";//getPosConfig("ChangeLimit").ToString();
+                    changeLimit = getPosConfig("ChangeLimit").ToString();
 
                     int printer_brand_id = 0;
                     int.TryParse(getPosConfig("DevicePrinterABB").ToString(), out printer_brand_id);

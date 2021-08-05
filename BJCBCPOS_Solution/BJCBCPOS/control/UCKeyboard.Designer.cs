@@ -156,9 +156,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.216458F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.054688F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.371094F));
+            this.tableLayoutPanel1.Controls.Add(this.btn83, 32, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn85, 31, 4);
             this.tableLayoutPanel1.Controls.Add(this.btn84, 29, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btn83, 32, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn82, 31, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn81, 30, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn80, 29, 3);

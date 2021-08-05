@@ -299,6 +299,11 @@ namespace BJCBCPOS_Model
             return (((ushort)GetKeyState(0x90)) & 0xffff) != 0;
         }
 
+        public bool GetCapLockKeyIsActive()
+        {
+            return (((ushort)GetKeyState(0x14)) & 0xffff) != 0;
+        }
+
         /// <summary>
         /// send command simulate keyboard press and release key
         /// </summary>

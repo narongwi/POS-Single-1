@@ -20,8 +20,10 @@ namespace BJCBCPOS_Model
         public int? length { get; set; }
         public bool changeStatus { get; set; }
         public bool excessChangeStatus { get; set; }
+        public double changeLimit { get; set; }
+        public double maxsaleuserchange { get; set; }
 
-        public PaymentConfig(int saleType, int paymentTypeSeq, int paymentTypeId, string paymentTypeName, string paymentCode, string currencyCode, string paymentName, float exchangeRate, int? length, bool changeStatus, float maxCashOut, bool excessChangeStatus)
+        public PaymentConfig(int saleType, int paymentTypeSeq, int paymentTypeId, string paymentTypeName, string paymentCode, string currencyCode, string paymentName, float exchangeRate, int? length, bool changeStatus, float maxCashOut, bool excessChangeStatus, double changeLimit, double maxsaleuserchange)
         {
             this.saleType = saleType;
             this.paymentTypeSeq = paymentTypeSeq;
@@ -35,6 +37,8 @@ namespace BJCBCPOS_Model
             this.changeStatus = changeStatus;
             this.maxCashOut = maxCashOut;
             this.excessChangeStatus = excessChangeStatus;
+            this.changeLimit = changeLimit;
+            this.maxsaleuserchange = maxsaleuserchange;
         }
     }
 
@@ -57,7 +61,9 @@ namespace BJCBCPOS_Model
         private const string maxCashOut_paymentCode = "CASH";
         private const string MaxCashOut_Name = "MaxCashOut";
         private const string excessChangeStatus_Name = "ExcessChange";
-        
+        private const string changeLimit_Name = "ChangeLimit";
+        private const string maxsaleuserchange_Name = "maxsaleuserchange";
+
         public PaymentConfigCollections()
         {
             member = new PaymentConfig[0];
@@ -76,6 +82,7 @@ namespace BJCBCPOS_Model
             int index, saleType, paymentTypeSeq, paymentTypeId, length;
             float exchangeRate;
             float maxCashOut;
+            double maxsaleuserchange;
             bool changeStatus;
             bool excessChangeStatus;
             if (data != null)
@@ -90,8 +97,9 @@ namespace BJCBCPOS_Model
                     data.Columns.Contains(exchangeRate_Name) &&
                     data.Columns.Contains(length_Name) &&
                     data.Columns.Contains(changeStatus_Name) &&
-                    data.Columns.Contains(excessChangeStatus_Name))
-                    
+                    data.Columns.Contains(excessChangeStatus_Name) &&
+                    data.Columns.Contains(changeLimit_Name) &&
+                    data.Columns.Contains(maxsaleuserchange_Name))
                 {
                     size = data.Rows.Count;
                     member = new PaymentConfig[size];
@@ -106,9 +114,11 @@ namespace BJCBCPOS_Model
                         changeStatus = row[changeStatus_Name].ToString().Trim().ToUpper().Equals("Y");
                         excessChangeStatus = row[excessChangeStatus_Name].ToString().Trim().ToUpper().Equals("Y");
                         if (!float.TryParse(row[MaxCashOut_Name].ToString(), out maxCashOut)) exchangeRate = 0;
+                        if (!double.TryParse(row[maxsaleuserchange_Name].ToString(), out maxsaleuserchange)) maxsaleuserchange = 0;
 
                         item = new PaymentConfig(saleType, paymentTypeSeq, paymentTypeId,
-                            row[paymentTypeName_Name].ToString(), row[paymentCode_Name].ToString(), row[currencyCode_Name].ToString(), row[paymentName_Name].ToString(), exchangeRate, length == 0 ? null : (int?)length, changeStatus, maxCashOut, excessChangeStatus);
+                            row[paymentTypeName_Name].ToString(), row[paymentCode_Name].ToString(), row[currencyCode_Name].ToString(), row[paymentName_Name].ToString()
+                            , exchangeRate, length == 0 ? null : (int?)length, changeStatus, maxCashOut, excessChangeStatus, Convert.ToDouble(row[changeLimit_Name]), maxsaleuserchange);
                         member[index] = item;
                         index++;
                     }
@@ -355,6 +365,34 @@ namespace BJCBCPOS_Model
                 }
             }
             return -1;
+        }
+
+        public double getChangeLimit(string pm_code)
+        {
+            PaymentConfig item;
+            for (int i = 0; i < size; i++)
+            {
+                item = member[i];
+                if (item.paymentCode.Equals(pm_code))
+                {
+                    return item.changeLimit;
+                }
+            }
+            return 0;
+        }
+
+        public double getUserChangeLimit(string pm_code)
+        {
+            PaymentConfig item;
+            for (int i = 0; i < size; i++)
+            {
+                item = member[i];
+                if (item.paymentCode.Equals(pm_code))
+                {
+                    return item.maxsaleuserchange;
+                }
+            }
+            return 0;
         }
     }
 }

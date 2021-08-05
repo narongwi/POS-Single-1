@@ -580,14 +580,16 @@ namespace BJCBCPOS_Process
             }
         }
 
-        public StoreResult selectDLYPTRANS(string refNo, string sty = "", string vty = "")
+        public StoreResult selectDLYPTRANS(string refNo, string vty = "", string dty = "")
         {
             try
             {
-                var res = command.selectDLYPTRANS(refNo, sty, vty);
+                var res = command.selectDLYPTRANS(refNo, vty, dty);
                 if (res.otherData.Rows.Count > 0)
                 {
-                    res = command.selectEDCTrans(refNo);
+                    string cardNo = res.otherData.Rows[0]["PCD"].ToString();
+
+                    res = command.selectEDCTrans(refNo, cardNo);
                     if (res.otherData.Rows.Count > 0)
                     {
                         return new StoreResult(ResponseCode.Success, data: res.otherData);
@@ -615,6 +617,23 @@ namespace BJCBCPOS_Process
             catch (NetworkConnectionException)
             {
                 AppLog.writeLog("connection to server lost at VoidProcess.PrintVoidReceipt");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new StoreResult(ResponseCode.Error, ex.Message, "", "");
+            }
+        }
+
+        public StoreResult SaveDrawerTrans(FunctionID function)
+        {
+            try
+            {
+                return command.saveDrawerTrans(ProgramConfig.voidRefNo, function);
+            }
+            catch (NetworkConnectionException)
+            {
+                AppLog.writeLog("connection to server lost at SaleProcess.CheckValuePayment");
                 throw;
             }
             catch (Exception ex)

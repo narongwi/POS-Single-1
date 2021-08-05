@@ -70,13 +70,15 @@ namespace BJCBCPOS
                     this.Dispose();
                     return;
                 }
-                Program.control.ShowForm("frmReturnFromScanProduct");
                 Dispose();
+                Program.control.ShowForm("frmReturnFromScanProduct");
+                
             }
             else if (chkInvReport.profile == ProfileStatus.Authorize)
             {
-                Program.control.ShowForm("frmReturnFromScanProduct");
                 Dispose();
+                Program.control.ShowForm("frmReturnFromScanProduct");
+                
             }
             //else
             //{
@@ -192,6 +194,7 @@ namespace BJCBCPOS
                                     {
                                         currentBtn.Visible = false;
                                     }
+                                    //currentBtn.Visible = true; //Fix data
                                     break;
                             }
                             currentBtn.Text = dr["SubMenuName"] + "";

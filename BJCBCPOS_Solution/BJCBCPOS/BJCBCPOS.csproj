@@ -135,11 +135,11 @@
     <Compile Include="control\UCGeneralListItem.Designer.cs">
       <DependentUpon>UCGeneralListItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="control\UCHambergerSubMenu.cs">
+    <Compile Include="control\UCHamburgerSubMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="control\UCHambergerSubMenu.Designer.cs">
-      <DependentUpon>UCHambergerSubMenu.cs</DependentUpon>
+    <Compile Include="control\UCHamburgerSubMenu.Designer.cs">
+      <DependentUpon>UCHamburgerSubMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="control\UCButtonPayment.cs">
       <SubType>UserControl</SubType>
@@ -147,17 +147,17 @@
     <Compile Include="control\UCButtonPayment.Designer.cs">
       <DependentUpon>UCButtonPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="control\UCHamberger.cs">
+    <Compile Include="control\UCHamburger.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="control\UCHamberger.Designer.cs">
-      <DependentUpon>UCHamberger.cs</DependentUpon>
+    <Compile Include="control\UCHamburger.Designer.cs">
+      <DependentUpon>UCHamburger.cs</DependentUpon>
     </Compile>
-    <Compile Include="control\UCHambergerItem.cs">
+    <Compile Include="control\UCHamburgerItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="control\UCHambergerItem.Designer.cs">
-      <DependentUpon>UCHambergerItem.cs</DependentUpon>
+    <Compile Include="control\UCHamburgerItem.Designer.cs">
+      <DependentUpon>UCHamburgerItem.cs</DependentUpon>
     </Compile>
     <Compile Include="control\UCHirePurchase.cs">
       <SubType>UserControl</SubType>
@@ -182,6 +182,12 @@
     </Compile>
     <Compile Include="control\UCListItemPOD.Designer.cs">
       <DependentUpon>UCListItemPOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\frmAlertMsgCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog\frmAlertMsgCustomer.Designer.cs">
+      <DependentUpon>frmAlertMsgCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="dialog\frmPOD_QR.cs">
       <SubType>Form</SubType>
@@ -608,84 +614,181 @@
     <Compile Include="dialog\frmPopupInput.Designer.cs">
       <DependentUpon>frmPopupInput.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\CcosServices.cs" />
-    <Compile Include="page\frmMemberService.cs">
+    <!-- Deftsoft -->
+    <Compile Include="OtherServices\Classes\FontIconUtils.cs" />
+    <Compile Include="OtherServices\Fonts\MaterialDesignIcons.cs" />
+    <Compile Include="OtherServices\Fonts\FontIconHelper.cs" />
+    <Compile Include="OtherServices\Forms\BillPaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="page\frmMemberService.Designer.cs">
+    <Compile Include="OtherServices\Forms\BillPaymentForm.Designer.cs">
+      <DependentUpon>BillPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\PaymentServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\UIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmMemberService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmMemberServiceTerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmParcelKerry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmParcelService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmPaymentCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmPaymentDetailConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmPaymentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmPaymentTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmSIMPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmSIMRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmSIMRegisterConf1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmSIMRegisterConf2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmSIMService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupService2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupServiceCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupServicePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupSIMPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupSIMPromotion2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupSIMPromotionPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <!-- Deftsoft -->
+    <Compile Include="OtherServices\Forms\UIForm.Designer.cs">
+      <DependentUpon>UIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\PaymentServiceForm.Designer.cs">
+      <DependentUpon>PaymentServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmMemberService.Designer.cs">
       <DependentUpon>frmMemberService.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\frmMemberServiceTerm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmMemberServiceTerm.Designer.cs">
+    <Compile Include="OtherServices\Forms\frmMemberServiceTerm.Designer.cs">
       <DependentUpon>frmMemberServiceTerm.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\frmPaymentCancel.cs">
-      <SubType>Form</SubType>
+    <Compile Include="OtherServices\Forms\frmParcelKerry.Designer.cs">
+      <DependentUpon>frmParcelKerry.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\frmPaymentCancel.Designer.cs">
+    <Compile Include="OtherServices\Forms\frmParcelService.Designer.cs">
+      <DependentUpon>frmParcelService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmPaymentCancel.Designer.cs">
       <DependentUpon>frmPaymentCancel.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\frmSIMRegisterConf1.cs">
-      <SubType>Form</SubType>
+    <Compile Include="OtherServices\Forms\frmPaymentDetailConfirm.Designer.cs">
+      <DependentUpon>frmPaymentDetailConfirm.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\frmSIMRegisterConf1.Designer.cs">
+    <Compile Include="OtherServices\Forms\frmPaymentReport.Designer.cs">
+      <DependentUpon>frmPaymentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmPaymentTransaction.Designer.cs">
+      <DependentUpon>frmPaymentTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmSIMPromotion.Designer.cs">
+      <DependentUpon>frmSIMPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmSIMRegister.Designer.cs">
+      <DependentUpon>frmSIMRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmSIMRegisterConf1.Designer.cs">
       <DependentUpon>frmSIMRegisterConf1.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\frmSIMRegisterConf2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmSIMRegisterConf2.Designer.cs">
+    <Compile Include="OtherServices\Forms\frmSIMRegisterConf2.Designer.cs">
       <DependentUpon>frmSIMRegisterConf2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmSIMService.Designer.cs">
+      <DependentUpon>frmSIMService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupService.Designer.cs">
+      <DependentUpon>frmTopupService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupService2.Designer.cs">
+      <DependentUpon>frmTopupService2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupServiceCancel.Designer.cs">
+      <DependentUpon>frmTopupServiceCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupServicePrint.Designer.cs">
+      <DependentUpon>frmTopupServicePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupSIMPromotion.Designer.cs">
+      <DependentUpon>frmTopupSIMPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupSIMPromotion2.Designer.cs">
+      <DependentUpon>frmTopupSIMPromotion2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\frmTopupSIMPromotionPayment.Designer.cs">
+      <DependentUpon>frmTopupSIMPromotionPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\UserControls\DeftsfotToggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OtherServices\UserControls\DeftsoftButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OtherServices\UserControls\DeftsoftCircularPicture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OtherServices\UserControls\DeftsoftIcon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OtherServices\UserControls\DeftsoftPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OtherServices\UserControls\DeftsoftPictureIcon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OtherServices\UserControls\DeftsoftRadio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OtherServices\UserControls\DeftsoftTextbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OtherServices\UserControls\DeftsoftTextbox.Designer.cs">
+      <DependentUpon>DeftsoftTextbox.cs</DependentUpon>
     </Compile>
     <Compile Include="page\frmDeposit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="page\frmDeposit.Designer.cs">
       <DependentUpon>frmDeposit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmParcelKerry.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmParcelKerry.Designer.cs">
-      <DependentUpon>frmParcelKerry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmParcelService.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmParcelService.Designer.cs">
-      <DependentUpon>frmParcelService.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\FrmPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\FrmPayment.Designer.cs">
-      <DependentUpon>FrmPayment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmPaymentDetailConfirm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmPaymentDetailConfirm.Designer.cs">
-      <DependentUpon>frmPaymentDetailConfirm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmPaymentReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmPaymentReport.Designer.cs">
-      <DependentUpon>frmPaymentReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmPaymentService.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmPaymentService.Designer.cs">
-      <DependentUpon>frmPaymentService.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmPaymentTransaction.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmPaymentTransaction.Designer.cs">
-      <DependentUpon>frmPaymentTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="page\frmReceivePaymentPOD.cs">
       <SubType>Form</SubType>
@@ -719,6 +822,12 @@
     <Compile Include="page\FrmLogin.designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="page\FrmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page\FrmPayment.Designer.cs">
+      <DependentUpon>FrmPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="page\frmRedeem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -748,24 +857,6 @@
     </Compile>
     <Compile Include="page\frmSale.Designer.cs">
       <DependentUpon>frmSale.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmSIMPromotion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmSIMPromotion.Designer.cs">
-      <DependentUpon>frmSIMPromotion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmSIMRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmSIMRegister.Designer.cs">
-      <DependentUpon>frmSIMRegister.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmSIMService.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmSIMService.Designer.cs">
-      <DependentUpon>frmSIMService.cs</DependentUpon>
     </Compile>
     <Compile Include="page\frmSubMenuDeposit.cs">
       <SubType>Form</SubType>
@@ -947,48 +1038,6 @@
     <Compile Include="page\frmSubMenuTools.Designer.cs">
       <DependentUpon>frmSubMenuTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="page\frmTopupService.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmTopupService.Designer.cs">
-      <DependentUpon>frmTopupService.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmTopupService2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmTopupService2.Designer.cs">
-      <DependentUpon>frmTopupService2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmTopupServiceCancel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmTopupServiceCancel.Designer.cs">
-      <DependentUpon>frmTopupServiceCancel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmTopupServicePrint.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmTopupServicePrint.Designer.cs">
-      <DependentUpon>frmTopupServicePrint.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmTopupSIMPromotion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmTopupSIMPromotion.Designer.cs">
-      <DependentUpon>frmTopupSIMPromotion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmTopupSIMPromotion2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmTopupSIMPromotion2.Designer.cs">
-      <DependentUpon>frmTopupSIMPromotion2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="page\frmTopupSIMPromotionPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="page\frmTopupSIMPromotionPayment.Designer.cs">
-      <DependentUpon>frmTopupSIMPromotionPayment.cs</DependentUpon>
-    </Compile>
     <Compile Include="page\frmVDO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1015,6 +1064,7 @@
     </Compile>
     <Compile Include="processForm\frmBaseProcess.cs" />
     <Compile Include="processForm\frmSaleProcess.cs" />
+    <Compile Include="DeftsoftStart.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AppControl.cs" />
@@ -1024,17 +1074,17 @@
     <EmbeddedResource Include="control\UCGeneralListItem.resx">
       <DependentUpon>UCGeneralListItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="control\UCHambergerSubMenu.resx">
-      <DependentUpon>UCHambergerSubMenu.cs</DependentUpon>
+    <EmbeddedResource Include="control\UCHamburgerSubMenu.resx">
+      <DependentUpon>UCHamburgerSubMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\UCButtonPayment.resx">
       <DependentUpon>UCButtonPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="control\UCHamberger.resx">
-      <DependentUpon>UCHamberger.cs</DependentUpon>
+    <EmbeddedResource Include="control\UCHamburger.resx">
+      <DependentUpon>UCHamburger.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="control\UCHambergerItem.resx">
-      <DependentUpon>UCHambergerItem.cs</DependentUpon>
+    <EmbeddedResource Include="control\UCHamburgerItem.resx">
+      <DependentUpon>UCHamburgerItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="control\UCHirePurchase.resx">
       <DependentUpon>UCHirePurchase.cs</DependentUpon>
@@ -1227,6 +1277,9 @@
     <EmbeddedResource Include="dialog\frmMoneyBagInput.resx">
       <DependentUpon>frmMoneyBagInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dialog\frmAlertMsgCustomer.resx">
+      <DependentUpon>frmAlertMsgCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dialog\frmPOD_QR.resx">
       <DependentUpon>frmPOD_QR.cs</DependentUpon>
     </EmbeddedResource>
@@ -1260,44 +1313,82 @@
     <EmbeddedResource Include="dialog\frmPopupInput.resx">
       <DependentUpon>frmPopupInput.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="page\frmMemberService.resx">
-      <DependentUpon>frmMemberService.cs</DependentUpon>
+    <EmbeddedResource Include="OtherServices\Forms\BillPaymentForm.resx">
+      <DependentUpon>BillPaymentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="page\frmMemberServiceTerm.resx">
-      <DependentUpon>frmMemberServiceTerm.cs</DependentUpon>
+    <!-- Deftsoft Resx-->
+    <EmbeddedResource Include="OtherServices\Forms\UIForm.resx">
+      <DependentUpon>UIForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="page\frmPaymentCancel.resx">
-      <DependentUpon>frmPaymentCancel.cs</DependentUpon>
+    <EmbeddedResource Include="OtherServices\Forms\PaymentServiceForm.resx">
+      <DependentUpon>PaymentServiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="page\frmSIMRegisterConf1.resx">
-      <DependentUpon>frmSIMRegisterConf1.cs</DependentUpon>
+    <EmbeddedResource Include="OtherServices\Forms\frmMemberService.resx">
+      <DependentUpon>frmMemberService.Designer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="page\frmSIMRegisterConf2.resx">
-      <DependentUpon>frmSIMRegisterConf2.cs</DependentUpon>
+    <EmbeddedResource Include="OtherServices\Forms\frmMemberServiceTerm.resx">
+      <DependentUpon>frmMemberServiceTerm.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmParcelKerry.resx">
+      <DependentUpon>frmParcelKerry.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmParcelService.resx">
+      <DependentUpon>frmParcelService.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmPaymentCancel.resx">
+      <DependentUpon>frmPaymentCancel.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmPaymentDetailConfirm.resx">
+      <DependentUpon>frmPaymentDetailConfirm.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmPaymentReport.resx">
+      <DependentUpon>frmPaymentReport.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmPaymentTransaction.resx">
+      <DependentUpon>frmPaymentTransaction.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmSIMPromotion.resx">
+      <DependentUpon>frmSIMPromotion.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmSIMRegister.resx">
+      <DependentUpon>frmSIMRegister.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmSIMRegisterConf1.resx">
+      <DependentUpon>frmSIMRegisterConf1.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmSIMRegisterConf2.resx">
+      <DependentUpon>frmSIMRegisterConf2.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmSIMService.resx">
+      <DependentUpon>frmSIMService.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmTopupService.resx">
+      <DependentUpon>frmTopupService.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmTopupService2.resx">
+      <DependentUpon>frmTopupService2.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmTopupServiceCancel.resx">
+      <DependentUpon>frmTopupServiceCancel.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmTopupServicePrint.resx">
+      <DependentUpon>frmTopupServicePrint.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmTopupSIMPromotion.resx">
+      <DependentUpon>frmTopupSIMPromotion.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmTopupSIMPromotion2.resx">
+      <DependentUpon>frmTopupSIMPromotion2.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\frmTopupSIMPromotionPayment.resx">
+      <DependentUpon>frmTopupSIMPromotionPayment.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <!-- end deftsoft -->
+    <EmbeddedResource Include="OtherServices\UserControls\DeftsoftTextbox.resx">
+      <DependentUpon>DeftsoftTextbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="page\frmDeposit.resx">
       <DependentUpon>frmDeposit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmParcelKerry.resx">
-      <DependentUpon>frmParcelKerry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmParcelService.resx">
-      <DependentUpon>frmParcelService.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\FrmPayment.resx">
-      <DependentUpon>FrmPayment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmPaymentDetailConfirm.resx">
-      <DependentUpon>frmPaymentDetailConfirm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmPaymentReport.resx">
-      <DependentUpon>frmPaymentReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmPaymentService.resx">
-      <DependentUpon>frmPaymentService.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmPaymentTransaction.resx">
-      <DependentUpon>frmPaymentTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="page\frmReceivePaymentPOD.resx">
       <DependentUpon>frmReceivePaymentPOD.cs</DependentUpon>
@@ -1314,6 +1405,9 @@
     <EmbeddedResource Include="page\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="page\FrmPayment.resx">
+      <DependentUpon>FrmPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="page\frmRedeem.resx">
       <DependentUpon>frmRedeem.cs</DependentUpon>
     </EmbeddedResource>
@@ -1328,15 +1422,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="page\frmSale.resx">
       <DependentUpon>frmSale.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmSIMPromotion.resx">
-      <DependentUpon>frmSIMPromotion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmSIMRegister.resx">
-      <DependentUpon>frmSIMRegister.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmSIMService.resx">
-      <DependentUpon>frmSIMService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="page\frmSubMenuDeposit.resx">
       <DependentUpon>frmSubMenuDeposit.cs</DependentUpon>
@@ -1429,27 +1514,6 @@
     <EmbeddedResource Include="page\frmSubMenuTools.resx">
       <DependentUpon>frmSubMenuTools.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="page\frmTopupService.resx">
-      <DependentUpon>frmTopupService.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmTopupService2.resx">
-      <DependentUpon>frmTopupService2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmTopupServiceCancel.resx">
-      <DependentUpon>frmTopupServiceCancel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmTopupServicePrint.resx">
-      <DependentUpon>frmTopupServicePrint.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmTopupSIMPromotion.resx">
-      <DependentUpon>frmTopupSIMPromotion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmTopupSIMPromotion2.resx">
-      <DependentUpon>frmTopupSIMPromotion2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="page\frmTopupSIMPromotionPayment.resx">
-      <DependentUpon>frmTopupSIMPromotionPayment.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="page\frmVDO.resx">
       <DependentUpon>frmVDO.cs</DependentUpon>
     </EmbeddedResource>
@@ -1478,6 +1542,8 @@
     <None Include="config\Laos.csv" />
     <None Include="config\Thai.csv" />
     <None Include="config\~%24Form_Language.xlsx" />
+    <EmbeddedResource Include="OtherServices\Fonts\materialdesignicons.ttf" />
+    <None Include="OtherServices\Fonts\README.md" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1568,14 +1634,16 @@
     <Content Include="config\Laos.txt" />
     <Content Include="config\Thai.txt" />
     <Content Include="NoPath.ico" />
+    <Content Include="OtherServices\Readme.txt" />
     <None Include="Resources\MemberServiceTerm.jpg" />
-    <None Include="Resources\SCGExpress.jpg" />
-    <None Include="Resources\DHLExpress.jpeg" />
     <None Include="Resources\ThailandPost.png" />
-    <None Include="Resources\DHLExpress.png" />
-    <None Include="Resources\JnTExpress.png" />
     <None Include="Resources\FlashExpress.jpg" />
     <None Include="Resources\KerryExpress.png" />
+    <None Include="Resources\JnTExpress.png" />
+    <None Include="Resources\DHLExpress.png" />
+    <None Include="Resources\DHLExpress.jpeg" />
+    <None Include="Resources\SCGExpress.jpg" />
+    <None Include="Resources\rsz_mm_food_service_logobo.png" />
     <None Include="Resources\panel_item_credisale_disable.png" />
     <None Include="Resources\panel_item_credisale_enable.png" />
     <None Include="Resources\5cf6020c-2633-485b-9e90-1326561dbd44.png" />
@@ -1944,6 +2012,10 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OtherServices\Data\" />
+    <Folder Include="OtherServices\Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

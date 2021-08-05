@@ -128,6 +128,7 @@
             this.ucTBWI_Member.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTBWI_Member.EnabledUC = true;
             this.ucTBWI_Member.IsAmount = false;
+            this.ucTBWI_Member.IsKeyBoardForScan = false;
             this.ucTBWI_Member.IsLarge = false;
             this.ucTBWI_Member.IsNumber = false;
             this.ucTBWI_Member.IsSetFormat = false;

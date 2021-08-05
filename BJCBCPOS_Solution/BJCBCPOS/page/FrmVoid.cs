@@ -56,6 +56,8 @@ namespace BJCBCPOS
                 StoreResult result = null;
                 ucHeader1.alertFunctionID = FunctionID.Void_GetMessageCashier;
 
+                Utility.GlobalClear();
+
                 Profile check = ProgramConfig.getProfile(FunctionID.Void_SelectVoidMenu);
                 if (check.profile == ProfileStatus.NotAuthorize)
                 {
@@ -169,6 +171,7 @@ namespace BJCBCPOS
                 //{
                 //    ucTBScanBarcode.Text = ucTBScanBarcode.Text.PadLeft(13, '0');
                 //}
+                string memberName = "-";
                 defaultValue();
                 pn_Item.Controls.Clear();
                 pnTypePDetail.Controls.Clear();
@@ -344,6 +347,15 @@ namespace BJCBCPOS
                                 }
                                 else if (dataType == "C")
                                 {
+                                    if (line == "2")
+                                    {
+                                        memberName = displayReceipt.otherData.Rows[i]["ProductDesc"].ToString();
+                                    }
+                                    i++;
+                                }
+                                else if (dataType == "T")
+                                {
+                                    _saleTime = Convert.ToDateTime(displayReceipt.otherData.Rows[i]["ProductDesc"].ToString(), cultureinfo).ToString("dd/MM/yyyy HH:mm:ss", cultureinfo);
                                     i++;
                                 }
                                 else
@@ -366,11 +378,13 @@ namespace BJCBCPOS
                             lbReceiptNoResult.Text = ucTBScanBarcode.Text;
                             lbLockNoResult.Text = ProgramConfig.tillNo;
                             lbUserIdResult.Text = ProgramConfig.userId;
-                            lbDateResult.Text = DateTime.Now.ToString("MM'/'dd'/'yyyy HH:mm:ss");
-                            lbMemberName.Text = ProgramConfig.cashireAuthorizeResult.otherData.Rows[0]["UserNameLocal"].ToString();
+                            lbDateResult.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss", cultureinfo);
+                            lbMemberName.Text = memberName;//ProgramConfig.cashireAuthorizeResult.otherData.Rows[0]["UserNameLocal"].ToString();
                             lbCashBalanceResult.Text = changeValue.ToString(amtFormat);
                             lbTotalTaxResult.Text = (totalTax).ToString(amtFormat);
                             lbTaxResult.Text = double.Parse(vat).ToString(amtFormat);
+
+                            ucKeyboard1.Visible = false;
                         }
                     }
                     else
@@ -391,8 +405,9 @@ namespace BJCBCPOS
                     return;
                 }
 
-                ucTBScanBarcode.Text = "";
-                ucTBScanBarcode.Focus();
+                //ucTBScanBarcode.Text = "";
+                this.ActiveControl = btnCancelReceipt;
+                //ucTBScanBarcode.Focus();
             }
             catch (NetworkConnectionException net)
             {
@@ -577,8 +592,7 @@ namespace BJCBCPOS
         {
             frmLoading.showLoading();
             keyReceipt();
-            frmLoading.closeLoading();
-            
+            frmLoading.closeLoading();  
         }
 
         private void ucTBScanBarcode_TextBoxKeydown(object sender, EventArgs e)
@@ -672,6 +686,12 @@ namespace BJCBCPOS
         {
             defaultSetting();
         }
-        
+
+        private void ucTBScanBarcode_Enter(object sender, EventArgs e)
+        {
+            this.ucKeyboard1.Visible = true;
+            this.ucKeyboard1.BringToFront();
+            this.ucKeyboard1.currentInput = ucTBScanBarcode;
+        }       
     }
 }

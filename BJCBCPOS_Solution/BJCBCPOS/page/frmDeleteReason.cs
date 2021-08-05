@@ -155,6 +155,8 @@ namespace BJCBCPOS
                     dialog.ShowDialog(this);
                     return;
                 }
+
+                this.Dispose();
             }
             catch (NetworkConnectionException net)
             {
@@ -190,7 +192,7 @@ namespace BJCBCPOS
 
                 DataTable dt = result.otherData;
                 Hardware.printTermal(dt);
-                this.Dispose();
+          
 
                 //ProgramConfig.cnNo =  "CN" + (Convert.ToInt32(ProgramConfig.cnNo) + 1).ToString("D9");
                 //ProgramConfig.running.updateValue();
@@ -201,8 +203,6 @@ namespace BJCBCPOS
 
         private void closeForm()
         {
-            ProgramConfig.salePageState = 2;
-
             Program.control.CloseForm("frmPayment");
             Program.control.CloseForm("frmDeleteReason");
 
@@ -220,8 +220,22 @@ namespace BJCBCPOS
             frmMonitor2Detail mon2 = form2 as frmMonitor2Detail;
             mon2.clearForm();
 
-            //Program.control.ShowForm("frmSale");
-           
+
+            ProgramConfig.salePageState = 2;
+
+            if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.NormalSale)
+            {
+                Form form3 = Application.OpenForms["frmSale"];
+                frmSale fSale = form3 as frmSale;
+                fSale.afterNotify = false;
+                fSale.frmSale_Activated(null, null);
+            }
+            else if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.Deposit)
+            {
+                Form form3 = Application.OpenForms["frmDeposit"];
+                frmDeposit frmDepo = form3 as frmDeposit;
+                frmDepo.frmDeposit_Activated(null, null);
+            }           
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

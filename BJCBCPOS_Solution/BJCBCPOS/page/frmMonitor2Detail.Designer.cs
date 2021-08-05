@@ -45,10 +45,6 @@
             this.lbTotalCash = new System.Windows.Forms.Label();
             this.lbTxtReceive = new System.Windows.Forms.Label();
             this.lbReceive = new System.Windows.Forms.Label();
-            this.lbRateTotal = new System.Windows.Forms.Label();
-            this.lbRate = new System.Windows.Forms.Label();
-            this.lbCurrencyName = new System.Windows.Forms.Label();
-            this.panel_exchange = new System.Windows.Forms.Panel();
             this.panel_product = new System.Windows.Forms.Panel();
             this.panel_message = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,12 +54,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.lbRate = new System.Windows.Forms.Label();
+            this.lbRateTotal = new System.Windows.Forms.Label();
+            this.lbCurrencyName = new System.Windows.Forms.Label();
+            this.panel_exchange = new System.Windows.Forms.Panel();
             this.panel_payment.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel_exchange.SuspendLayout();
             this.panel_product.SuspendLayout();
             this.panel_message.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel_exchange.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -75,6 +75,7 @@
             this.label1.Size = new System.Drawing.Size(298, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -250,56 +251,6 @@
             this.lbReceive.TabIndex = 1;
             this.lbReceive.Text = "ยอดชำระ";
             // 
-            // lbRateTotal
-            // 
-            this.lbRateTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(152)))), ((int)(((byte)(69)))));
-            this.lbRateTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRateTotal.ForeColor = System.Drawing.Color.Black;
-            this.lbRateTotal.Location = new System.Drawing.Point(0, 0);
-            this.lbRateTotal.Name = "lbRateTotal";
-            this.lbRateTotal.Size = new System.Drawing.Size(150, 34);
-            this.lbRateTotal.TabIndex = 118;
-            this.lbRateTotal.Text = "Total";
-            this.lbRateTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbRateTotal.Visible = false;
-            // 
-            // lbRate
-            // 
-            this.lbRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(152)))), ((int)(((byte)(69)))));
-            this.lbRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRate.ForeColor = System.Drawing.Color.Black;
-            this.lbRate.Location = new System.Drawing.Point(0, 0);
-            this.lbRate.Name = "lbRate";
-            this.lbRate.Size = new System.Drawing.Size(147, 34);
-            this.lbRate.TabIndex = 117;
-            this.lbRate.Text = "Rate";
-            this.lbRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbRate.Visible = false;
-            // 
-            // lbCurrencyName
-            // 
-            this.lbCurrencyName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(152)))), ((int)(((byte)(69)))));
-            this.lbCurrencyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCurrencyName.ForeColor = System.Drawing.Color.Black;
-            this.lbCurrencyName.Location = new System.Drawing.Point(0, 0);
-            this.lbCurrencyName.Name = "lbCurrencyName";
-            this.lbCurrencyName.Size = new System.Drawing.Size(150, 34);
-            this.lbCurrencyName.TabIndex = 116;
-            this.lbCurrencyName.Text = "Currency";
-            this.lbCurrencyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbCurrencyName.Visible = false;
-            // 
-            // panel_exchange
-            // 
-            this.panel_exchange.Controls.Add(this.lbCurrencyName);
-            this.panel_exchange.Controls.Add(this.lbRateTotal);
-            this.panel_exchange.Controls.Add(this.lbRate);
-            this.panel_exchange.Location = new System.Drawing.Point(17, 18);
-            this.panel_exchange.Name = "panel_exchange";
-            this.panel_exchange.Size = new System.Drawing.Size(445, 90);
-            this.panel_exchange.TabIndex = 119;
-            this.panel_exchange.Visible = false;
-            // 
             // panel_product
             // 
             this.panel_product.Controls.Add(this.label1);
@@ -388,6 +339,56 @@
             this.label5.Text = "นางสาว ณฉัตรแก้ว";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbRate
+            // 
+            this.lbRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(152)))), ((int)(((byte)(69)))));
+            this.lbRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRate.ForeColor = System.Drawing.Color.Black;
+            this.lbRate.Location = new System.Drawing.Point(0, 0);
+            this.lbRate.Name = "lbRate";
+            this.lbRate.Size = new System.Drawing.Size(147, 34);
+            this.lbRate.TabIndex = 117;
+            this.lbRate.Text = "Rate";
+            this.lbRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbRate.Visible = false;
+            // 
+            // lbRateTotal
+            // 
+            this.lbRateTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(152)))), ((int)(((byte)(69)))));
+            this.lbRateTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRateTotal.ForeColor = System.Drawing.Color.Black;
+            this.lbRateTotal.Location = new System.Drawing.Point(0, 0);
+            this.lbRateTotal.Name = "lbRateTotal";
+            this.lbRateTotal.Size = new System.Drawing.Size(150, 34);
+            this.lbRateTotal.TabIndex = 118;
+            this.lbRateTotal.Text = "Total";
+            this.lbRateTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbRateTotal.Visible = false;
+            // 
+            // lbCurrencyName
+            // 
+            this.lbCurrencyName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(152)))), ((int)(((byte)(69)))));
+            this.lbCurrencyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCurrencyName.ForeColor = System.Drawing.Color.Black;
+            this.lbCurrencyName.Location = new System.Drawing.Point(0, 0);
+            this.lbCurrencyName.Name = "lbCurrencyName";
+            this.lbCurrencyName.Size = new System.Drawing.Size(150, 34);
+            this.lbCurrencyName.TabIndex = 116;
+            this.lbCurrencyName.Text = "Currency";
+            this.lbCurrencyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCurrencyName.Visible = false;
+            // 
+            // panel_exchange
+            // 
+            this.panel_exchange.Controls.Add(this.lbCurrencyName);
+            this.panel_exchange.Controls.Add(this.lbRateTotal);
+            this.panel_exchange.Controls.Add(this.lbRate);
+            this.panel_exchange.Location = new System.Drawing.Point(16, 18);
+            this.panel_exchange.Name = "panel_exchange";
+            this.panel_exchange.Size = new System.Drawing.Size(463, 90);
+            this.panel_exchange.TabIndex = 119;
+            this.panel_exchange.Visible = false;
+            // 
             // frmMonitor2Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,10 +396,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(495, 283);
             this.Controls.Add(this.panel_message);
-            this.Controls.Add(this.panel_payment);
             this.Controls.Add(this.panel_product);
-            this.Controls.Add(this.panel_list);
             this.Controls.Add(this.panel_exchange);
+            this.Controls.Add(this.panel_payment);
+            this.Controls.Add(this.panel_list);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMonitor2Detail";
@@ -406,10 +407,10 @@
             this.Load += new System.EventHandler(this.frmMonitor2Detail_Load);
             this.panel_payment.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel_exchange.ResumeLayout(false);
             this.panel_product.ResumeLayout(false);
             this.panel_message.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel_exchange.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -430,10 +431,6 @@
         public System.Windows.Forms.Panel panel_message;
         public System.Windows.Forms.Label lb_message;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.Label lbRateTotal;
-        public System.Windows.Forms.Label lbRate;
-        public System.Windows.Forms.Label lbCurrencyName;
-        public System.Windows.Forms.Panel panel_exchange;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label lbCurrencyRate1;
         public System.Windows.Forms.Label lbChangeCurrency1;
@@ -446,5 +443,9 @@
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label lbRate;
+        public System.Windows.Forms.Label lbRateTotal;
+        public System.Windows.Forms.Label lbCurrencyName;
+        public System.Windows.Forms.Panel panel_exchange;
     }
 }

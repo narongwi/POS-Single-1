@@ -168,12 +168,12 @@
             this.lbSaleTimeVal.BackColor = System.Drawing.Color.White;
             this.lbSaleTimeVal.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSaleTimeVal.ForeColor = System.Drawing.Color.Gray;
-            this.lbSaleTimeVal.Location = new System.Drawing.Point(279, 359);
+            this.lbSaleTimeVal.Location = new System.Drawing.Point(252, 359);
             this.lbSaleTimeVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSaleTimeVal.Name = "lbSaleTimeVal";
-            this.lbSaleTimeVal.Size = new System.Drawing.Size(227, 32);
+            this.lbSaleTimeVal.Size = new System.Drawing.Size(254, 32);
             this.lbSaleTimeVal.TabIndex = 133;
-            this.lbSaleTimeVal.Text = "10/10/21";
+            this.lbSaleTimeVal.Text = "10/10/2021 10:20:30";
             this.lbSaleTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbSaleTime
@@ -195,12 +195,12 @@
             this.lbReturnTimeVal.BackColor = System.Drawing.Color.White;
             this.lbReturnTimeVal.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbReturnTimeVal.ForeColor = System.Drawing.Color.Gray;
-            this.lbReturnTimeVal.Location = new System.Drawing.Point(304, 413);
+            this.lbReturnTimeVal.Location = new System.Drawing.Point(272, 413);
             this.lbReturnTimeVal.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
             this.lbReturnTimeVal.Name = "lbReturnTimeVal";
-            this.lbReturnTimeVal.Size = new System.Drawing.Size(236, 36);
+            this.lbReturnTimeVal.Size = new System.Drawing.Size(268, 36);
             this.lbReturnTimeVal.TabIndex = 131;
-            this.lbReturnTimeVal.Text = "10/10/21";
+            this.lbReturnTimeVal.Text = "10/10/2021 10:20:30";
             this.lbReturnTimeVal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbReturnTime
@@ -244,12 +244,12 @@
             this.lbRecepitNoVal.BackColor = System.Drawing.Color.White;
             this.lbRecepitNoVal.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRecepitNoVal.ForeColor = System.Drawing.Color.Gray;
-            this.lbRecepitNoVal.Location = new System.Drawing.Point(279, 211);
+            this.lbRecepitNoVal.Location = new System.Drawing.Point(246, 211);
             this.lbRecepitNoVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbRecepitNoVal.Name = "lbRecepitNoVal";
-            this.lbRecepitNoVal.Size = new System.Drawing.Size(227, 32);
+            this.lbRecepitNoVal.Size = new System.Drawing.Size(260, 32);
             this.lbRecepitNoVal.TabIndex = 129;
-            this.lbRecepitNoVal.Text = "V0000123";
+            this.lbRecepitNoVal.Text = "2117001RC0030145";
             this.lbRecepitNoVal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbReceiptNoTxt

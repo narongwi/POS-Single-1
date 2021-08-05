@@ -14,6 +14,16 @@ namespace BJCBCPOS
         private int _cntCount;
         private bool isLostFromUC = false;
 
+        [Category("Custom Property")]
+        [Description("Set stand alone flag")]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Always)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string Rec
+        {
+            get;
+            set;
+        }
+
         public UCItemReturn()
         {
             InitializeComponent();
@@ -37,6 +47,18 @@ namespace BJCBCPOS
             lbReturnPrice.LostFocus += lbDiscount_LostFocus;
             lbTotalPrice.LostFocus += lbTotalPrice_LostFocus;
             lbProductName.LostFocus += lbProductName_LostFocus;
+        }
+
+        public static void LostFocusItem(UCItemReturn ucIS)
+        {
+            if (Convert.ToInt32(ucIS.lbNoText) % 2 != 0)
+            {
+                ucIS.BackColor = Color.FromArgb(240, 240, 240);
+            }
+            else
+            {
+                ucIS.BackColor = Color.White;
+            }
         }
 
         private void lbNo_LostFocus(object sender, EventArgs e)
@@ -81,8 +103,8 @@ namespace BJCBCPOS
 
         private void UCGridViewItemSell_LostFocus(EventArgs e)
         {
-            this.BackColor = Color.Transparent;
-            isLostFromUC = false;
+            //this.BackColor = Color.Transparent;
+            //isLostFromUC = false;
         }
 
         [Category("Action")]
@@ -99,7 +121,8 @@ namespace BJCBCPOS
         {
             if (UCGridViewItemSellClick != null)
             {
-                this.BackColor = Color.FromArgb(235, 248, 240);
+                this.BackColor = Color.FromArgb(184, 251, 207);
+                this.Refresh();
                 UCGridViewItemSellClick(this, e);
             }
         }

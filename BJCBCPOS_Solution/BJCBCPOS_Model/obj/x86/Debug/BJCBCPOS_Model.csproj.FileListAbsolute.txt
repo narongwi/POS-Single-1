@@ -14,7 +14,36 @@ D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\
 D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\bin\x86\Debug\RestSharp.dll
 D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\bin\x86\Debug\Newtonsoft.Json.dll
 D:\BIG_C\BJCBCPOS_Source\BJCBCPOS-V2.03.00-Dev\BJCBCPOS_Solution\BJCBCPOS_Model\obj\x86\Debug\BJCBCPOS_Model.csprojResolveAssemblyReference.cache
-D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Model\obj\x86\Debug\BJCBCPOS_Model.csprojAssemblyReference.cache
-D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Model\obj\x86\Debug\BJCBCPOS_Model.csproj.CoreCompileInputs.cache
-D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Model\obj\x86\Debug\BJCBCPOS_Model.dll
-D:\MyOwner\Deftsoft\Project\BigC\POS\BigC Source Code\BJCBCPOS_Solution\BJCBCPOS_Model\obj\x86\Debug\BJCBCPOS_Model.pdb
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\BJCBCPOS_Model.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\BJCBCPOS_Model.pdb
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\BCOPOSEPSON.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\BCOPOSHP.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\BCOPOSTOSHIBA.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\BCOPOSWIN.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\BJCBCPRNFFTI.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\BouncyCastle.Crypto.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.Shared.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\MMFSAPI.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\Microsoft.PointOfService.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\MKTPOSDLL.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportSource.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\RestSharp.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\Newtonsoft.Json.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\bin\x86\Debug\stdole.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\obj\x86\Debug\BJCBCPOS_Model.csproj.CoreCompileInputs.cache
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\obj\x86\Debug\BJCBCPOS_Model.csproj.CopyComplete
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\obj\x86\Debug\BJCBCPOS_Model.dll
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Model\obj\x86\Debug\BJCBCPOS_Model.pdb

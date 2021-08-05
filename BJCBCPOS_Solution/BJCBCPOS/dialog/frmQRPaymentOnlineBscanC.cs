@@ -15,6 +15,7 @@ namespace BJCBCPOS
     {
         SaleProcess saleProcess = new SaleProcess();
         frmPayment fPayment;
+        private bool IsPaint = false;
 
         string _total;
         string _qrCode;
@@ -39,6 +40,18 @@ namespace BJCBCPOS
             _total = total;
             _qrCode = qrCode;
             _isEndReceipt = isEndReceipt;
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            if (!IsPaint)
+            {
+                using (SolidBrush brush = new SolidBrush(Color.FromArgb(150, 0, 0, 0)))
+                {
+                    e.Graphics.FillRectangle(brush, e.ClipRectangle);
+                    IsPaint = true;
+                }
+            }
         }
 
         private void frmQRPaymentOnlineBscanC_Shown(object sender, EventArgs e)
@@ -100,7 +113,7 @@ namespace BJCBCPOS
                         Program.control.CloseForm("frmQRPaymentOnlineBscanC");
                         if (_isEndReceipt)
                         {
-                            fPayment.ShowConfirmPayment(false);
+                            fPayment.ShowConfirmPayment("QRPP", false);
                         }                        
                         DialogResult = System.Windows.Forms.DialogResult.OK;
                         return;
@@ -158,7 +171,7 @@ namespace BJCBCPOS
                                             Program.control.CloseForm("frmQRPaymentOnlineBscanC");
                                             if (_isEndReceipt)
                                             {
-                                                fPayment.ShowConfirmPayment(false);
+                                                fPayment.ShowConfirmPayment("QRPP", false);
                                             }
                                             DialogResult = System.Windows.Forms.DialogResult.OK;
                                             return;
@@ -203,7 +216,7 @@ namespace BJCBCPOS
                                                             Program.control.CloseForm("frmQRPaymentOnlineBscanC");
                                                             if (_isEndReceipt)
                                                             {
-                                                                fPayment.ShowConfirmPayment(false);
+                                                                fPayment.ShowConfirmPayment("QRPP", false);
                                                             }
                                                             DialogResult = System.Windows.Forms.DialogResult.OK;
                                                             return;
@@ -409,17 +422,28 @@ namespace BJCBCPOS
 
         private void CloseForm(string whereCondition = " and stt = '' and Action_Type = 'SA' ")
         {
-            timer1.Stop();
-            timer1.Dispose();
-
-            var res = saleProcess.updateVoidQRPayTrans(whereCondition);
-            if (!res.response.next)
+            try
             {
-                Utility.AlertMessage(res);
-            }
 
-            this.Dispose();
-            DialogResult = System.Windows.Forms.DialogResult.Cancel;
+
+                timer1.Stop();
+                timer1.Dispose();
+
+                var res = saleProcess.updateVoidQRPayTrans(whereCondition);
+                if (!res.response.next)
+                {
+                    Utility.AlertMessage(res);
+                }
+
+                this.Dispose();
+                DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            }
+            catch (Exception ex)
+            {
+                frmNotify dialog = new frmNotify(ResponseCode.Error, ex.Message, "");
+                dialog.ShowDialog(this);
+                this.Dispose();
+            }
         }
 
 

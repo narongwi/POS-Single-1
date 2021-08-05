@@ -224,7 +224,7 @@ namespace BJCBCPOS
 
                 if (Convert.ToDouble(lbTxtBalance.Text) == 0)
                 {
-                    ShowConfirmPayment();
+                    ShowConfirmPayment("");
                 }
                
                 panelPayment.BringToFront();
@@ -282,34 +282,32 @@ namespace BJCBCPOS
 
         private void SetDefaultPayment(string defaultPayment)
         {
-            if (ProgramConfig.pageBackFromPayment != PageBackFormPayment.ReceivePOD)
+            DisablePaymentGroup();
+            bool hasCash = false;
+            foreach (Control ctrl in panelPayment.Controls)
             {
-                bool hasCash = false;
-                foreach (Control ctrl in panelPayment.Controls)
+                if (ctrl is Button)
                 {
-                    if (ctrl is Button)
+                    Button btn = (Button)ctrl;
+                    if (defaultPayment != "")
                     {
-                        Button btn = (Button)ctrl;
-                        if (defaultPayment != "")
+                        if (ctrl.Tag != null && ctrl.Tag.ToString() == ProgramConfig.payment.getPaymentTypeID(defaultPayment).ToString())
                         {
-                            if (ctrl.Tag != null && ctrl.Tag.ToString() == ProgramConfig.payment.getPaymentTypeID(defaultPayment).ToString())
-                            {
-                                btn.PerformClick();
-                                break;
-                            }
-
-                            if (ctrl.Tag != null && ctrl.Tag.ToString() == "6")
-                            {
-
-                            }
+                            btn.PerformClick();
+                            break;
                         }
-                        else
+
+                        if (ctrl.Tag != null && ctrl.Tag.ToString() == "6")
                         {
-                            if (ctrl.Tag != null && ctrl.Tag.ToString() == "1")
-                            {
-                                btnCash_Click(null, null);
-                                break;
-                            }
+
+                        }
+                    }
+                    else
+                    {
+                        if (ctrl.Tag != null && ctrl.Tag.ToString() == "1")
+                        {
+                            btnCash_Click(null, null);
+                            break;
                         }
                     }
                 }
@@ -373,18 +371,14 @@ namespace BJCBCPOS
                     {
                         btnPayment_Cash.BeginInvoke((MethodInvoker)delegate
                         {
-                            //btnPayment_Cash.BackgroundImage = BJCBCPOS.Properties.Resources.payment_top_left;
                             InitialImageButtonFromSEQ(btnPayment_Cash, btnPayment_Cash.Tag.ToString(), false);
                             btnPayment_Cash.Image = BJCBCPOS.Properties.Resources.payment_icon_cash_white;
-                            //btnPayment_Cash.ForeColor = Color.White;
                         });
                     }
                     else
                     {
-                        //btnPayment_Cash.BackgroundImage = BJCBCPOS.Properties.Resources.payment_top_left;
                         InitialImageButtonFromSEQ(btnPayment_Cash, btnPayment_Cash.Tag.ToString(), false);
                         btnPayment_Cash.Image = BJCBCPOS.Properties.Resources.payment_icon_cash_white;
-                        //btnPayment_Cash.ForeColor = Color.White;
                     }
 
                     ClearPaymentData();
@@ -395,31 +389,15 @@ namespace BJCBCPOS
 
                     double balance = GetTotalAmountDiff(lbTxtBalance.Text);
 
-                    //if (lbTxtBalance.InvokeRequired)
-                    //{
-                    //    lbTxtBalance.BeginInvoke((MethodInvoker)delegate
-                    //    {
-                    //        balance = double.Parse(lbTxtBalance.Text);
-                    //    });
-                    //}
-                    //else
-                    //{
-                    //    balance = double.Parse(lbTxtBalance.Text);
-                    //}
-
                     if (ucTxtAmountCash.InvokeRequired)
                     {
                         ucTxtAmountCash.BeginInvoke((MethodInvoker)delegate
                         {
-                            AppLog.writeLog("BeginInvoke ucTxtAmountCash.Text");
                             if (balance >= 0)
                             {
                                 ucTxtAmountCash.Text = balance.ToString(displayAmt);
                             }
-                            AppLog.writeLog("after BeginInvoke ucTxtAmountCash.Text");
-
                             ucTxtAmountCash.Focus();
-                            AppLog.writeLog("after BeginInvoke ucTxtAmountCash.Focus");
                         });
                     }
                     else
@@ -428,10 +406,7 @@ namespace BJCBCPOS
                         {
                             ucTxtAmountCash.Text = balance.ToString(displayAmt);
                         }
-                        AppLog.writeLog("after ucTxtAmountCash.Text");
-
                         ucTxtAmountCash.Focus();
-                        AppLog.writeLog("after ucTxtAmountCash.Focus");
                     }
                 }
                 else
@@ -476,7 +451,16 @@ namespace BJCBCPOS
 
         private bool Process_POD(string pmCode)
         {
-            var check = ProgramConfig.paymentPolicy.GetPaymentPolicyByFunctionPaymentCode(FunctionID.ReceivePOD_ShowQR, pmCode);
+            PaymentPolicy check = new PaymentPolicy();
+            if (pmCode == "")
+            {
+                check.policy = PolicyStatus.Work;
+            }
+            else
+            {
+                check = ProgramConfig.paymentPolicy.GetPaymentPolicyByFunctionPaymentCode(FunctionID.ReceivePOD_ShowQR, pmCode);
+            }
+            
             if (check.policy == PolicyStatus.Work)
             {
                 //Pop up QR
@@ -484,18 +468,18 @@ namespace BJCBCPOS
                 var resDialog = frmPOD.ShowDialog(this);
                 if (resDialog == System.Windows.Forms.DialogResult.Yes)
                 {
-                    ShowConfirmPaymentPOD(frmPOD.edcAmt);
-                    return false;
+                    ShowConfirmPayment(frmPOD.pmCodeRet);
                 }
                 else if (resDialog == System.Windows.Forms.DialogResult.Retry)
                 {
                     loadTempDLYForPayment();
-                    return false;
+                    SetDefaultPayment(_defaultPayment);
                 }
                 else if (resDialog == System.Windows.Forms.DialogResult.No)
                 {
-                    return false;
+                    SetDefaultPayment(_defaultPayment);
                 }
+                return false;
             }
             //else
             //{
@@ -629,18 +613,9 @@ namespace BJCBCPOS
         {
             if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.ReceivePOD)
             {
-                frmOtherPayment frmOtr = new frmOtherPayment(_paymentMenuIcon.ToList(), "Credit Card", 3);
-                var res = frmOtr.ShowDialog(this);
-
-                if (res != System.Windows.Forms.DialogResult.None)
+                if (!Process_POD(""))
                 {
-                    if (res == System.Windows.Forms.DialogResult.Yes)
-                    {
-                        if (!Process_POD(_OPpaymentCode))
-                        {
-                            return;
-                        }   
-                    }
+                    return;
                 }
             }
 
@@ -1689,7 +1664,7 @@ namespace BJCBCPOS
         {
             EventHandler eventRet = delegate { };
             string temp = template;
-            if (template != "1" && template != "2" && template != "3")
+            if (template != "1" && template != "3")
             {
                 var dr2 = dtStepDet.Select(" PaymentStepGroupID = '" + template + "'");
                 if (dr2.Length > 0)
@@ -1788,6 +1763,12 @@ namespace BJCBCPOS
                         btn.ForeColor = System.Drawing.Color.White;
                         btn.BackgroundImage = GetImageButtonGenFromTag(btn.Name, false);
                     }
+                    else if (template == "6")
+                    {
+                        InitialImageButtonFromSEQ(btnPayment_Other, btnPayment_Other.Tag.ToString(), false);
+                        btnPayment_Other.Image = BJCBCPOS.Properties.Resources.payment_icon_other_white;
+                    }
+
                     if (subMenuID == "Y")
                     {
                         DialogResult res = System.Windows.Forms.DialogResult.None;
@@ -1813,7 +1794,22 @@ namespace BJCBCPOS
                         {
                             if (res == System.Windows.Forms.DialogResult.Yes)
                             {
-                                //Panel pntemp = GetPanelTemplate(_OPtemplate);
+                                var dr2 = dtStepDet.Select(" PaymentStepGroupID = '" + _OPtemplate + "'");
+                                if (dr2.Length > 0)
+                                {
+                                    pn_payment_temp0.Visible = false;
+                                    pn_payment_temp4.Visible = false;
+                                    int cnt = dr2.AsEnumerable().Count(c => c["TextBoxType"].ToString() == PaymentStepDetail_TextBoxType.TextBox);
+                                    if (cnt > 2)
+                                    {
+                                        template = "0";
+                                    }
+                                    else
+                                    {
+                                        template = "4";
+                                    }
+                                }
+
                                 Panel pntemp = GetPanelTemplate(template);
                                 if (pntemp != null)
                                 {
@@ -1841,12 +1837,14 @@ namespace BJCBCPOS
                                 else
                                 {
                                     DisablePaymentGroup();
+                                    SetDefaultPayment(_defaultPayment);
                                     return;
                                 }
                             }
                             else
                             {
                                 DisablePaymentGroup();
+                                SetDefaultPayment(_defaultPayment);
                                 return;
                             }
                             dialogFromOther = res;
@@ -1855,7 +1853,7 @@ namespace BJCBCPOS
                     }                    
                     currentTemplate = template;
                     currentPanel = pn_payment_template;
-                    GenerateTextBoxLabel(template, pn_payment_template, header);
+                    GenerateTextBoxLabel(template, pn_payment_template, header, paymentCode);
                     Program.control.CloseForm("frmOtherPayment");
                 }
             }
@@ -1870,6 +1868,12 @@ namespace BJCBCPOS
                         btn.ForeColor = System.Drawing.Color.White;
                         btn.BackgroundImage = GetImageButtonGenFromTag(btn.Name, false);
                     }
+                    else if(template == "6")
+                    {
+                        InitialImageButtonFromSEQ(btnPayment_Other, btnPayment_Other.Tag.ToString(), false);
+                        btnPayment_Other.Image = BJCBCPOS.Properties.Resources.payment_icon_other_white;
+                    }
+
                     if (subMenuID == "Y")
                     {
                         DialogResult res = System.Windows.Forms.DialogResult.None;
@@ -1895,6 +1899,22 @@ namespace BJCBCPOS
                         {
                             if (res == System.Windows.Forms.DialogResult.Yes)
                             {
+                                var dr2 = dtStepDet.Select(" PaymentStepGroupID = '" + _OPtemplate + "'");
+                                if (dr2.Length > 0)
+                                {
+                                    pn_payment_temp0.Visible = false;
+                                    pn_payment_temp4.Visible = false;
+                                    int cnt = dr2.AsEnumerable().Count(c => c["TextBoxType"].ToString() == PaymentStepDetail_TextBoxType.TextBox);
+                                    if (cnt > 2)
+                                    {
+                                        template = "0";
+                                    }
+                                    else
+                                    {
+                                        template = "4";
+                                    }
+                                }
+
                                 Panel pntemp = GetPanelTemplate(template);
                                 if (pntemp != null)
                                 {
@@ -1923,12 +1943,14 @@ namespace BJCBCPOS
                                 else
                                 {
                                     DisablePaymentGroup();
+                                    SetDefaultPayment(_defaultPayment);
                                     return;
                                 }
                             }
                             else
                             {
                                 DisablePaymentGroup();
+                                SetDefaultPayment(_defaultPayment);
                                 return;
                             }
                         }
@@ -1936,7 +1958,7 @@ namespace BJCBCPOS
                     }
                     currentTemplate = template;
                     currentPanel = pn_payment_template;
-                    GenerateTextBoxLabel(template, pn_payment_template, header);
+                    GenerateTextBoxLabel(template, pn_payment_template, header, paymentCode);
                     Program.control.CloseForm("frmOtherPayment");
 
                     //if (template == "0")
@@ -1977,7 +1999,7 @@ namespace BJCBCPOS
             
         //}
 
-        private void GenerateTextBoxLabel(string template, Panel pn_payment_template, string header = "")
+        private void GenerateTextBoxLabel(string template, Panel pn_payment_template, string header, string pmCode)
         {
             var dr2 = dtStepDet.Select(" PaymentStepGroupID = '" + template + "'");
             string temp = "";
@@ -2025,7 +2047,7 @@ namespace BJCBCPOS
                         ucTxtPn0.placeHolder = drin["LabelTextInput"].ToString();// drin["LabelTextInput_Language"].ToString(); //TO DO Change
                                                                 
                         ucTxtPn0.IsValidateTextEmpty = true;
-                        if (drin["DataType"].ToString() == PaymentStepDetail_DataType.Money)
+                        if (drin["DataType"].ToString().ToUpper() == PaymentStepDetail_DataType.Money)
                         {
 
                             ucTxtPn0.IsValidateNumberZero = true;
@@ -2044,7 +2066,12 @@ namespace BJCBCPOS
                         {
                             if (drin["InputType"].ToString() != "AE")
                             {
-                                ucTxtPn0.InpTxt = lbTxtBalance.Text;
+                                string balance = lbTxtBalance.Text;
+                                if (ProgramConfig.payment.getChangeStatus(pmCode))
+                                {
+                                    balance = GetTotalAmountDiff(lbTxtBalance.Text).ToString(displayAmt);
+                                }
+                                ucTxtPn0.InpTxt = balance;
                             }                          
                         }
                         else
@@ -2135,13 +2162,15 @@ namespace BJCBCPOS
                         ucTxtPn4.placeHolder = drin["LabelTextInput"].ToString();// drin["LabelTextInput_Language"].ToString(); //TO DO Change
                         ucTxtPn4.StepID = (PaymentStepDetail_StepID)drin["StepID"];
                         ucTxtPn4.EnterFromButton -= btnOkPn0_Click;
+                        ucTxtPn4.TextBoxKeydown -= btnOkPn0_Click;
                         if (cnt == length)
                         {
                             ucTxtPn4.EnterFromButton += btnOkPn0_Click;
+                            ucTxtPn4.TextBoxKeydown += btnOkPn0_Click;
                         }
 
                         ucTxtPn4.IsValidateTextEmpty = true;
-                        if (drin["DataType"].ToString() == PaymentStepDetail_DataType.Money)
+                        if (drin["DataType"].ToString().ToUpper() == PaymentStepDetail_DataType.Money)
                         {
 
                             ucTxtPn4.IsValidateNumberZero = true;
@@ -2160,7 +2189,12 @@ namespace BJCBCPOS
                         {
                             if (drin["InputType"].ToString() != "AE")
                             {
-                                ucTxtPn4.InpTxt = lbTxtBalance.Text;
+                                string balance = lbTxtBalance.Text;
+                                if (ProgramConfig.payment.getChangeStatus(pmCode))
+                                {
+                                    balance = GetTotalAmountDiff(lbTxtBalance.Text).ToString(displayAmt);
+                                }
+                                ucTxtPn4.InpTxt = balance;
                             }       
                         }
                         else
@@ -2219,7 +2253,7 @@ namespace BJCBCPOS
                                     lst.Add(uc);
                                     uc.placeHolder = drin["LabelTextInput_Language"].ToString();
 
-                                    if (drin["DataType"].ToString() == PaymentStepDetail_DataType.Money)
+                                    if (drin["DataType"].ToString().ToUpper() == PaymentStepDetail_DataType.Money)
                                     {
                                         uc.IsAmount = true;
                                         uc.IsSetFormat = true;
@@ -2900,7 +2934,7 @@ namespace BJCBCPOS
             }
         }
 
-        public void clearAndConfirmVoucher()
+        public void clearAndConfirmVoucher(string pmCode)
         {
             ucTxtVoucherNo.Text = "";
             ucTxtVoucherAmt.Text = "";
@@ -2908,11 +2942,11 @@ namespace BJCBCPOS
 
             //loadTempDLYForPayment();
 
-            ShowConfirmPayment();
+            ShowConfirmPayment(pmCode);
 
         }
 
-        public void ShowConfirmPayment(bool isShowConfirm = true)      
+        public void ShowConfirmPayment(string pmCode, bool isShowConfirm = true)      
         {
             pn_CannotUseTicketCoupon.Visible = false;
 
@@ -2937,88 +2971,110 @@ namespace BJCBCPOS
                     }
                 }
 
-                var resChange = saleProcess.GetChange(lbTxtBalanceDiff.Text, lbTxtReceiveCash.Text);
+                string balanceDiff = lbTxtBalanceDiff.Text;
+                if (ProgramConfig.payment.getChangeStatus(pmCode))
+                {
+                    balanceDiff = GetTotalAmountDiff(lbTxtBalanceDiff.Text).ToString(displayAmt);
+                }
+                
+                var resChange = saleProcess.GetChange(balanceDiff, lbTxtReceiveCash.Text);
                 if (resChange.response.next)
                 {
-                    double balance = Convert.ToDouble(lbTxtReceiveCash.Text) - Convert.ToDouble(lbTxtBalanceDiff.Text);
-
-                    ProcessResult resDiff = saleProcess.beforePaymentProcessNew(lbTxtTotalCash.Text, balance.ToString(), resChange.otherData);
-
-                    if (resDiff.response.next)
+                    double change = Convert.ToDouble(resChange.otherData.AsEnumerable().Sum(s => Convert.ToDouble(s["EXCG_AMT_DISP"])).ToString(ProgramConfig.amountFormatString));
+                    if (change <= ProgramConfig.payment.getChangeLimit(pmCode))
                     {
-                        frmConfirmPayment frmConfirmPm = new frmConfirmPayment(isShowConfirm);
-                        frmConfirmPm.dtChange = resChange.otherData;
-                        //frmConfirmPm.lbConfirmCash = lbTxtTotalCash.Text;
-                        frmConfirmPm.lbConfirmCash = lbTxtBalanceDiff.Text;
-                        frmConfirmPm.lbConfirmPayment = lbTxtReceiveCash.Text;
 
-                        if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.ReceivePOD)
+                        double balance = Convert.ToDouble(lbTxtReceiveCash.Text) - Convert.ToDouble(lbTxtBalanceDiff.Text);
+
+                        ProcessResult resDiff = new ProcessResult(ResponseCode.Success, "");
+                        if (ProgramConfig.payment.getChangeStatus(pmCode))
                         {
-                            ProgramConfig.totalValue = lbTxtBalanceDiff.Text;
+                            resDiff = saleProcess.beforePaymentProcessNew(lbTxtTotalCash.Text, balance.ToString(), resChange.otherData);
                         }
+                        //ProcessResult resDiff = saleProcess.beforePaymentProcessNew(lbTxtBalanceDiff.Text, balance.ToString(), resChange.otherData);
 
-                        if (resChange.otherData != null && resChange.otherData.Rows.Count > 0)
+                        if (resDiff.response.next)
                         {
-                            if (resChange.otherData.AsEnumerable().Any(a => a["ChangeStatus"].ToString() == "Y"))
+                            frmConfirmPayment frmConfirmPm = new frmConfirmPayment(isShowConfirm);
+                            frmConfirmPm.dtChange = resChange.otherData;
+                            frmConfirmPm.lastPMCode = pmCode;
+                            //frmConfirmPm.lbConfirmCash = lbTxtTotalCash.Text;
+                            frmConfirmPm.lbConfirmCash = balanceDiff;//lbTxtBalanceDiff.Text;
+                            frmConfirmPm.lbConfirmPayment = lbTxtReceiveCash.Text;
+
+                            if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.ReceivePOD)
                             {
-                                frmConfirmPm.lbConfirmBalance = lbTxtBalance.Text;
+                                ProgramConfig.totalValue = lbTxtBalanceDiff.Text;
+                            }
+
+                            if (resChange.otherData != null && resChange.otherData.Rows.Count > 0)
+                            {
+                                if (resChange.otherData.AsEnumerable().Any(a => a["ChangeStatus"].ToString() == "Y"))
+                                {
+                                    frmConfirmPm.lbConfirmBalance = lbTxtBalance.Text;
+                                }
+                                else
+                                {
+                                    frmConfirmPm.lbConfirmBalance = "0";
+                                }
                             }
                             else
                             {
                                 frmConfirmPm.lbConfirmBalance = "0";
                             }
+
+                            frmConfirmPm.Show(this);
+                            frmConfirmPm.Refresh();
+                            if (!isShowConfirm)
+                            {
+                                frmConfirmPm.btnOk_Click(null, null);
+                            }
+
+                            //Program.control.ShowForm("frmConfirmPayment");
                         }
                         else
                         {
-                            frmConfirmPm.lbConfirmBalance = "0";
+                            saleProcess.deleteAllPayment(CheckAuth: (p, h) => Utility.CheckAuthPass(this, p, h));
+                            loadTempDLYForPayment();
+                            pn_payment_cash.Visible = false;
+                            btnCash_Click(null, null);
+                            frmNotify notify = new frmNotify(resDiff);
+                            notify.ShowDialog();
                         }
 
-                        frmConfirmPm.Show(this);
-
-                        if (!isShowConfirm)
-                        {
-                            frmConfirmPm.btnOk_Click(null, null);
-                        }
-
-                        //Program.control.ShowForm("frmConfirmPayment");
                     }
                     else
                     {
-                        saleProcess.deleteAllPayment(CheckAuth: (p, h) => Utility.CheckAuthPass(this, p, h));
-                        loadTempDLYForPayment();
-                        pn_payment_cash.Visible = false;
-                        btnCash_Click(null, null);
-                        frmNotify notify = new frmNotify(resDiff);
-                        notify.ShowDialog();
-
+                        string responseMessage = ProgramConfig.message.get("frmPayment", "IrregularChange").message;
+                        string helpMessage = ProgramConfig.message.get("frmPayment", "IrregularChange").help;
+                        ErrorShowConfirmPayment(new StoreResult(ResponseCode.Error, responseMessage, string.Format(helpMessage, double.Parse(ProgramConfig.changeLimit).ToString(displayAmt), ProgramConfig.currencyDefault)));
                     }
                 }
                 else
                 {
-                    saleProcess.deleteAllPayment(CheckAuth: (p, h) => Utility.CheckAuthPass(this, p, h));
-                    loadTempDLYForPayment();
-                    pn_payment_cash.Visible = false;
-                    btnCash_Click(null, null);
-                    Utility.AlertMessage(resChange);
+                    ErrorShowConfirmPayment(resChange);
                 }
             }
             else
             {
-                saleProcess.deleteAllPayment(CheckAuth: (p, h) => Utility.CheckAuthPass(this, p, h));
-                loadTempDLYForPayment();
-                pn_payment_cash.Visible = false;
-                btnCash_Click(null, null);
-                frmNotify notify = new frmNotify(res);
-                notify.ShowDialog();
+                ErrorShowConfirmPayment(res);
+                //saleProcess.deleteAllPayment(CheckAuth: (p, h) => Utility.CheckAuthPass(this, p, h));
+                //loadTempDLYForPayment();
+                //pn_payment_cash.Visible = false;
+                //btnCash_Click(null, null);
+                //frmNotify notify = new frmNotify(res);
+                //notify.ShowDialog();
             }
         }
 
-        public void clearAndConfirm()
+        private void ErrorShowConfirmPayment(StoreResult res)
         {
-            //ucTxtAmountCash.Text = "";
-            ucTxtAmountCash.Focus();
-
-            ShowConfirmPayment();
+            saleProcess.deleteAllPayment(CheckAuth: (p, h) => Utility.CheckAuthPass(this, p, h));
+            loadTempDLYForPayment();
+            pn_payment_cash.Visible = false;
+            SetDefaultPayment(_defaultPayment);
+            this.Refresh();
+            Utility.AlertMessage(res);
         }
 
         private bool SavePaymentLast(DataTable dt)
@@ -3160,7 +3216,7 @@ namespace BJCBCPOS
                     if (ucTxtAmountCash.Text == "" && double.Parse(lbTxtReceiveCash.Text) >= double.Parse(lbTxtBalanceDiff.Text))
                     {
                         loadTempDLYForPayment();
-                        ShowConfirmPayment();
+                        ShowConfirmPayment("CASH");
                         return;
                     }
                     //Case นี้ดักไวข้างบนแล้ว
@@ -3180,7 +3236,7 @@ namespace BJCBCPOS
                     else
                     {
                         ProgramConfig.paymentType = ProgramConfig.payment.getPCD(lbAmountCash.Text.Trim(), lbCurrency.Text);     
-                  
+                        
                         DataTable dt = saleProcess.selectDataToDeleteCashTempDLY();
                         if (dt.Rows.Count != 0)
                         {
@@ -3321,14 +3377,23 @@ namespace BJCBCPOS
                             balance = double.Parse(strTxtBalanceDiff) - receiveCash;
                         }
 
-                        AppLog.writeLog("before CalBalanceDiff");
-                        balance = saleProcess.CalBalanceDiff(balance, "FXCU", ProgramConfig.currencyDefault);
-
+                        if (ProgramConfig.payment.getChangeStatus("CASH"))
+                        {
+                            balance = saleProcess.CalBalanceDiff(balance, "FXCU", ProgramConfig.currencyDefault);
+                        }
+                        
                         //if (double.Parse(lbTxtBalance.Text) <= 0 || double.Parse(lbTxtReceiveCash.Text) >= double.Parse(lbTxtTotalCash.Text))
                         if (balance <= 0 || double.Parse(lbTxtReceiveCash.Text) >= double.Parse(lbTxtBalanceDiff.Text))
                         {
                             double cast = balance * -1;
                             lbTxtBalance.Text = cast.ToString(displayAmt);
+
+                            if (!ProgramConfig.payment.getExcessChange("CASH"))
+                            {
+                                Utility.AlertMessage(ResponseCode.Error, ProgramConfig.message.get("frmPayment", "AmtPaidMoreThanPayment").message, ProgramConfig.message.get("frmPayment", "AmtPaidMoreThanPayment").help);
+                                SetDefaultPayment(_defaultPayment);
+                                return;
+                            }
 
                             if (double.Parse(lbTxtBalance.Text) > double.Parse(ProgramConfig.changeLimit))
                             {
@@ -3357,7 +3422,8 @@ namespace BJCBCPOS
                             }
 
                             paymentCode = "CASH";
-                            clearAndConfirm();
+                            ShowConfirmPayment(paymentCode);
+                            return;
                         }
                         else
                         {
@@ -3380,14 +3446,12 @@ namespace BJCBCPOS
                                 return;
                             }
 
-                            SummaryCashIn();
-                            RefreshGrid();
-
-                            ucTxtAmountCash.Text = "";
-                            ucTxtAmountCash.Focus();
+                            loadTempDLYForPayment();
+                            SetDefaultPayment(_defaultPayment);
+                            frmLoading.closeLoading();
+                            return;
                         }
                     }
-                    loadTempDLYForPayment();
                 }         
             }
             frmLoading.closeLoading();
@@ -3753,7 +3817,7 @@ namespace BJCBCPOS
         {
             List<UCListPayment> lstCashIn = new List<UCListPayment>();
             lstCashIn = pn_list_payment.Controls.Cast<UCListPayment>().OrderByDescending(o => Convert.ToInt32(o.lbNoText)).ToList();
-            pn_list_payment.Controls.Clear();
+            //pn_list_payment.Controls.Clear();
             int num = lstCashIn.Count;
 
             foreach (UCListPayment item in lstCashIn)
@@ -3767,10 +3831,10 @@ namespace BJCBCPOS
                     item.BackColor = Color.White;
                 }
                 item.lbNoText = num.ToString();
-                pn_list_payment.Controls.Add(item);
+                //pn_list_payment.Controls.Add(item);
                 num--;
             }
-            ScrollToBottom(pn_list_payment);
+            //ScrollToBottom(pn_list_payment);
         }
 
         public void ScrollToBottom(Panel p)
@@ -4046,7 +4110,7 @@ namespace BJCBCPOS
             {
                 string valueReturn = "";
                 pn_drop_menu.Visible = false;
-                var ucIDDL = (UCHambergerItem)sender;
+                var ucIDDL = (UCHamburgerItem)sender;
                 if (ucIDDL.MenuID == MenuIdHamberger.CancelReceipt)
                 {
                     Profile check = ProgramConfig.getProfile(FunctionID.Sale_CancelWhileSale_CancelOrder);
@@ -4583,7 +4647,7 @@ namespace BJCBCPOS
                 SummaryCashIn();
                 frmLoading.closeLoading();
                 RefreshGrid();
-                ShowConfirmPayment();
+                ShowConfirmPayment(paymentCode);
             }
             else
             {
@@ -4670,6 +4734,7 @@ namespace BJCBCPOS
 
                 if (double.Parse(lbTxtBalance.Text) <= 0)
                 {
+                    double cashbalance = 0;
                     double cast = double.Parse(lbTxtBalance.Text) * -1;
                     lbTxtBalance.Text = cast.ToString(displayAmt);
 
@@ -4678,7 +4743,7 @@ namespace BJCBCPOS
                     {
                         this.ucKeyboard1.Visible = false;
                         this.Refresh();
-                        ShowConfirmPayment(dty == "F");
+                        ShowConfirmPayment(paymentCode, dty == "F");
                     }
                     else
                     {
@@ -4891,7 +4956,7 @@ namespace BJCBCPOS
             {
                 SummaryCashIn();
                 RefreshGrid();
-                ShowConfirmPayment();
+                ShowConfirmPayment(paymentCode);
 
                 //frmConfirmPayment frmConfirmPm = new frmConfirmPayment();
                 //frmConfirmPm.Show(this);
@@ -4957,7 +5022,7 @@ namespace BJCBCPOS
                     StoreResult result = saleProcess.savePaymentVoucherBalance(ucTxtVoucherNo.Text, paymentCode, amtPrice.ToString(displayAmt), cast.ToString(displayAmt), upc, lbTxtBalanceDiff.Text, amountPay.ToString());
                     if (result.response.next)
                     {
-                        clearAndConfirmVoucher();
+                        clearAndConfirmVoucher(paymentCode);
                         return;
                     }
                     else
@@ -5039,23 +5104,11 @@ namespace BJCBCPOS
                     return;
                 }
 
-                //if (ProgramConfig.memberId == null)
-                //{
-                //    ProgramConfig.memberId = "N/A";
-                //}
-
                 if (couponNo == "" && double.Parse(lbTxtBalance.Text) <= 0)
                 {
                     SummaryCashIn();
                     RefreshGrid();
-                    ShowConfirmPayment();
-                    //frmConfirmPayment frmConfirmPm = new frmConfirmPayment();
-                    //frmConfirmPm.Show(this);
-                    //frmConfirmPm.lbConfirmCash = lbTxtTotalCash.Text;
-                    //frmConfirmPm.lbConfirmPayment = lbTxtReceiveCash.Text;
-                    //frmConfirmPm.lbConfirmBalance = lbTxtBalance.Text;
-                    //Program.control.ShowForm("frmConfirmPayment");
-                    //frmConfirmPm.OpenCashDrawer();
+                    ShowConfirmPayment("");
                 }
                 else
                 { 
@@ -5063,18 +5116,6 @@ namespace BJCBCPOS
                     StoreResult read = saleProcess.checkCoupon(couponNo, Convert.ToInt32(ucTxtCouponQnt.Text), ProgramConfig.memberId);
                     if (read.response == ResponseCode.Success)
                     {
-               
-                        //Old Code
-                        //using (frmAddCoupon frm = new frmAddCoupon())
-                        //{
-                        //    // passing this in ShowDialog will set the .Owner 
-                        //    // property of the child form
-                        //    frm.couponNo = ucTxtCouponNo.Text;
-                        //    frm.couponQnt = ucTxtCouponQnt.Text;
-                        //    frm.loadAddCoupon();
-                        //    frm.ShowDialog(this);
-                        //}
-
                         string formatCash = "";
 
                         pn_page_coupon.Visible = true;
@@ -5509,6 +5550,7 @@ namespace BJCBCPOS
                     ucPayment.UCLP_lbAmount.Text = (Convert.ToDouble(dr["CPNVALUE"]) * Convert.ToDouble(dr["CPNQNT"])).ToString(ProgramConfig.amountFormatString);
                     ucPayment.btnDelete.Visible = false;
                     pn_list_payment.Controls.Add(ucPayment);
+                    pn_list_payment.Controls.SetChildIndex(ucPayment, 0);
                     numC++;
                 }
             }
@@ -5668,7 +5710,7 @@ namespace BJCBCPOS
                     ucList.PMNumber = paymentNum;
                     ucList.loadFromTable = loadFromTable;
                     pn_list_payment.Controls.Add(ucList);
-
+                    pn_list_payment.Controls.SetChildIndex(ucList, 0);
                 }
             }
 
@@ -5837,7 +5879,7 @@ namespace BJCBCPOS
                 {
                     double cashbalance = 0;
                     lbTxtBalance.Text = cashbalance.ToString(displayAmt);
-                    ShowConfirmPayment();
+                    ShowConfirmPayment("CPN1");
                 }
                 else
                 {             
@@ -6119,7 +6161,7 @@ namespace BJCBCPOS
                 //loadCoupon();
                 if (currentTemplate != null && currentPanel != null)
                 {
-                    GenerateTextBoxLabel(currentTemplate, currentPanel, currentTemplate);
+                    GenerateTextBoxLabel(currentTemplate, currentPanel, currentTemplate, paymentCode);
                 }
                 ChangeLanguageButtonMenu();
                 if (ProgramConfig.memberName != "")
@@ -6263,22 +6305,30 @@ namespace BJCBCPOS
         }
 
         private void lbTxtTotalCash_TextChanged(object sender, EventArgs e)
-        { 
+        {
             //ProcessResult res = saleProcess.beforePaymentProcess(lbTxtTotalCash.Text);
-            StoreResult res = saleProcess.getTotalAmtDiff(ProgramConfig.saleRefNo, lbTxtTotalCash.Text, "1", "");
-            if (res != null && res.response.next && res.otherData != null)
+            PolicyStatus chk = ProgramConfig.showPaymentAmount;
+            if (chk == PolicyStatus.Work)
             {
-                //lbTxtBalance.TextChanged -= lbTxtBalance_TextChanged;  
+                StoreResult res = saleProcess.getTotalAmtDiff(ProgramConfig.saleRefNo, lbTxtTotalCash.Text, "1", "");
+                if (res != null && res.response.next && res.otherData != null)
+                {
+                    //lbTxtBalance.TextChanged -= lbTxtBalance_TextChanged;  
 
-                double saleAmt = 0f, saleAmt_round = 0f;
-                double.TryParse(res.otherData.Rows[0]["SaleAMT"].ToString(), out saleAmt);
-                double.TryParse(res.otherData.Rows[0]["SaleAMT_Rounding"].ToString(), out saleAmt_round);
-                //double amountCash = double.Parse(res.data.ToString());
-                lbTxtBalanceDiff.Text = saleAmt_round.ToString(displayAmt);
+                    double saleAmt = 0f, saleAmt_round = 0f;
+                    double.TryParse(res.otherData.Rows[0]["SaleAMT"].ToString(), out saleAmt);
+                    double.TryParse(res.otherData.Rows[0]["SaleAMT_Rounding"].ToString(), out saleAmt_round);
+                    //double amountCash = double.Parse(res.data.ToString());
+                    lbTxtBalanceDiff.Text = saleAmt_round.ToString(displayAmt);
 
-                //amountCash - Convert.ToDouble(lbTxtReceiveCash.Text);
+                    //amountCash - Convert.ToDouble(lbTxtReceiveCash.Text);
 
-                //lbTxtBalance.TextChanged += lbTxtBalance_TextChanged;
+                    //lbTxtBalance.TextChanged += lbTxtBalance_TextChanged;
+                }
+                else
+                {
+                    lbTxtBalanceDiff.Text = lbTxtTotalCash.Text;
+                }
             }
             else
             {
@@ -6379,22 +6429,13 @@ namespace BJCBCPOS
         private void btnPayment_Other_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            //List<PaymentMenuIcon> lstPmMenuIcon = _paymentMenuIcon.GetDataByReferMenuID("6");
 
             frmOtherPayment frmOtPm = new frmOtherPayment(_paymentMenuIcon.ToList(), btn.Text, 6, true);
-            frmOtPm.Show(this);
-            //if (dialogFromOther == System.Windows.Forms.DialogResult.Yes)
-            //{
-            //    //SetVisibleByTemplate(_OPtemplate);
-            //    //btnPayment_Other.ForeColor = System.Drawing.Color.White;
-            //    InitialImageButtonFromSEQ(btnPayment_Other, btnPayment_Other.Tag.ToString(), false);
-            //    //btnPayment_Other.BackgroundImage = GetImageButtonGenFromTag(btn.Name, false);
-            //}
-            //else
-            //{
-            //    DisablePaymentGroup();
-            //    ClearPaymentData();
-            //}
+            var res = frmOtPm.ShowDialog(this);
+            if (res == System.Windows.Forms.DialogResult.No)
+            {
+                SetDefaultPayment(_defaultPayment);
+            }
         }
 
         private void SetVisibleByTemplate(string template)
@@ -6645,17 +6686,6 @@ namespace BJCBCPOS
                                             {
                                                 if (ucTxtPn4.SeqTextBox == seqTxtBox)
                                                 {
-                                                    //double amt = 0;
-
-                                                    //if (double.TryParse(res.otherData.Rows[0][referRetCol].ToString(), out amt))
-                                                    //{
-                                                    //    ucTxtPn4.Text = amt.ToString(ProgramConfig.amountFormatString);
-                                                    //}
-                                                    //else
-                                                    //{
-                                                    //    ucTxtPn4.Text = res.otherData.Rows[0][referRetCol].ToString();
-                                                    //}
-
                                                     if (pModule.pmCode == "DEPO")
                                                     {
                                                         double pay = 0.0;
@@ -6684,30 +6714,24 @@ namespace BJCBCPOS
                                     return false;
                                 }
                             }
-
-                            //var ary = dtPaymentStep.Select(" (StepID = '3' or StepID = '6') and ReferReturnModuleID = " + (PaymentStepDetail_ModuleID)dr["ModuleID"]  + "");
-                            //if (ary.Length > 0)
-                            //{
-                            //    string seqTxtBox = ary[0]["Seq"].ToString();
-                            //    for (int i = 1; i <= 10; i++)
-                            //    {
-                            //        UCTextBoxWithIcon ucTxtPn0 = pn_payment_temp0.Controls.Find("ucTxtPn0_" + i, true).FirstOrDefault() as UCTextBoxWithIcon;
-                            //        if (ucTxtPn0.SeqTextBox == seqTxtBox)
-                            //        {
-                            //            //ucTxtPn0.Text = 
-                            //        }
-                                    
-                            //    }
-                            //}
+                            else if ((PaymentStepDetail_ModuleID)dr["ModuleID"] == PaymentStepDetail_ModuleID.pos_GetRefQRPayment_Offline)
+                            {
+                                var res = RunCallProcess(() => saleProcess.GetRefQRPayment_Offline(pModule.pmCode, pModule.inpRef1), out ret);
+                                if (res.response.next)
+                                {
+                                    RefernceModule(res, dr["ModuleID"].ToString());
+                                }
+                                else
+                                {
+                                    return false;
+                                }
+                            }
                         }
                         else
                         {
                             //seqPaymentStep = seqPaymentStep - 1;
                             return false;
                         }
-
-
-
 
                     }
                     return true;
@@ -6726,6 +6750,87 @@ namespace BJCBCPOS
                 frmNotify dialog = new frmNotify(ResponseCode.Error, ex.Message, "");
                 dialog.ShowDialog(this);
                 return false;
+            }
+        }
+
+        private void RefernceModule(StoreResult res, string moduleID)
+        {
+            var ary = dtPaymentStep.Select(" (StepID = '3' or StepID = '6' or StepID = '2') and ReferReturnModuleID = '" + moduleID + "'");
+            if (ary.Length > 0)
+            {
+                string seqTxtBox = ary[0]["Seq"].ToString();
+                string referRetCol = ary[0]["ReferReturnColModuleName"].ToString();
+                for (int i = 1; i <= 10; i++)
+                {
+                    UCTextBoxWithIcon ucTxtPn0 = pn_payment_temp0.Controls.Find("ucTxtPn0_" + i, true).FirstOrDefault() as UCTextBoxWithIcon;
+                    if (ucTxtPn0 != null)
+                    {
+                        if (ucTxtPn0.SeqTextBox == seqTxtBox)
+                        {
+                            if (ary[0]["DataType"].ToString().ToUpper() == PaymentStepDetail_DataType.Money)
+                            {
+                                double amt = 0;
+                                if (double.TryParse(res.otherData.Rows[0][referRetCol].ToString(), out amt))
+                                {
+                                    ucTxtPn0.Text = amt.ToString(ProgramConfig.amountFormatString);
+                                }
+                                else
+                                {
+                                    ucTxtPn0.Text = res.otherData.Rows[0][referRetCol].ToString();
+                                }
+                            }
+                            else
+                            {
+                                ucTxtPn0.Text = res.otherData.Rows[0][referRetCol].ToString();
+                            }
+
+                            if (i < 10)
+                            {
+                                int seq = i + 1;
+                                ucTxtPn0 = pn_payment_temp4.Controls.Find("ucTxtPn0_" + seq, true).FirstOrDefault() as UCTextBoxWithIcon;
+                                ucTxtPn0.FocusTxt();
+                            }
+
+                            break;
+                        }
+                    }
+                }
+
+                for (int i = 1; i <= 2; i++)
+                {
+                    UCTextBoxWithIcon ucTxtPn4 = pn_payment_temp4.Controls.Find("ucTxtPn4_" + i, true).FirstOrDefault() as UCTextBoxWithIcon;
+                    if (ucTxtPn4 != null)
+                    {
+                        if (ucTxtPn4.SeqTextBox == seqTxtBox)
+                        {
+                            if (ary[0]["DataType"].ToString().ToUpper() == PaymentStepDetail_DataType.Money)
+                            {
+                                double amt = 0;
+                                if (double.TryParse(res.otherData.Rows[0][referRetCol].ToString(), out amt))
+                                {
+                                    ucTxtPn4.Text = amt.ToString(ProgramConfig.amountFormatString);
+                                }
+                                else
+                                {
+                                    ucTxtPn4.Text = res.otherData.Rows[0][referRetCol].ToString();
+                                }
+                            }
+                            else
+                            {
+                                ucTxtPn4.Text = res.otherData.Rows[0][referRetCol].ToString();
+                            }
+
+                            if (i < 2)
+                            {
+                                int seq = i + 1;
+                                ucTxtPn4 = pn_payment_temp4.Controls.Find("ucTxtPn4_" + seq, true).FirstOrDefault() as UCTextBoxWithIcon;
+                                ucTxtPn4.FocusTxt();
+                            }
+                            
+                            break;
+                        }
+                    }
+                }
             }
         }
         
@@ -6791,6 +6896,27 @@ namespace BJCBCPOS
             frmLoading.closeLoading();
             if (res.response.next)
             {
+                return res;
+            }
+            else
+            {
+                Utility.AlertMessage(res);
+                return res;
+            }
+        }
+
+        private StoreResult RunCallProcess(Func<StoreResult> process, out ReturnModuleParameter ret, string columnRet = "")
+        {
+            ret = new ReturnModuleParameter();
+            frmLoading.showLoading();
+            StoreResult res = process();
+            frmLoading.closeLoading();
+            if (res.response.next)
+            {
+                if (columnRet != "")
+                {
+                    ret.inpRef1 = res.otherData.Rows[0][columnRet].ToString();
+                }
                 return res;
             }
             else
@@ -7172,7 +7298,7 @@ namespace BJCBCPOS
                     {
                         ucTextBoxWithIcon1.Text = "";
                         ucTextBoxWithIcon2.Text = "";
-                        ShowConfirmPayment();
+                        ShowConfirmPayment(paymentCode);
                         return;
                     }
                     else
@@ -7260,7 +7386,7 @@ namespace BJCBCPOS
                     ucTxt1.Text = "";
                     ucTxt1.Focus();
                     action();
-                    ShowConfirmPayment();
+                    ShowConfirmPayment(paymentCode);
                     return;
                 }
                 else
@@ -7688,9 +7814,10 @@ namespace BJCBCPOS
                     ucTxtApprove_EnterFromButton(sender, e);
                     fEDCProcess.Dispose();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    //TO DO Void EDC
+                    Utility.AlertMessage(ResponseCode.Error, ex.Message);
+                    Utility.AutoVoidEDC(this, (vty, dty) => saleProcess.selectDLYPTRANS(ProgramConfig.saleRefNo, vty, dty));
                     fEDCProcess.Dispose();
                 }
             }
@@ -7703,6 +7830,7 @@ namespace BJCBCPOS
 
         private void btn_QRPayment_Click(object sender, EventArgs e)
         {
+            DisablePaymentGroup();
             if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.ReceivePOD)
             {
                 if (!Process_POD("QRPP"))
@@ -7711,7 +7839,6 @@ namespace BJCBCPOS
                 }   
             }
 
-            DisablePaymentGroup();
             InitialImageButtonFromSEQ(btnPayment_QRPayment, btnPayment_QRPayment.Tag.ToString(), false);
 
             frmPopupQRPaymentSubMenu fQRSubMenu = new frmPopupQRPaymentSubMenu();
@@ -7719,8 +7846,22 @@ namespace BJCBCPOS
 
             if (res == System.Windows.Forms.DialogResult.OK && fQRSubMenu.menu == QRPaymentOnlineMenu.QR_CscanB)
             {
+                //TO DO Change
+                var result = saleProcess.selectPAYMENT_PARAMETER("QRPP");
+                if (result.response.next)
+                {
+                    double limit = Convert.ToDouble(result.otherData.Rows[0]["QRPAYMENT_LIMIT_AMT"]);
+                    if (Convert.ToDouble(lbTxtBalance.Text) > limit)
+                    {
+                        //TO DO Change Language //Alert Message QR Payment ไม่สามารถชำระได้มากกว่า xx,xxx บาท!!!
+                        Utility.AlertMessage(ResponseCode.Error, "QR Payment ไม่สามารถชำระได้มากกว่า " + limit.ToString(displayAmt) + " บาท!!!");
+                        this.Dispose();
+                        return;
+                    }
+                }
                 frmQRPaymentOnline fQROnline = new frmQRPaymentOnline(lbTxtBalance.Text);
                 fQROnline.Show(this);
+                SetDefaultPayment(_defaultPayment);
             }
             else if (res == System.Windows.Forms.DialogResult.OK && fQRSubMenu.menu == QRPaymentOnlineMenu.QR_BscanC)
             {
@@ -7733,6 +7874,7 @@ namespace BJCBCPOS
             {
                 DisablePaymentGroup();
                 pn_payment_QRPPOnline.Visible = false;
+                SetDefaultPayment(_defaultPayment);
             }
         }
 
@@ -7756,7 +7898,7 @@ namespace BJCBCPOS
 
         private void ConfirmQRPM_CscanB(UCTextBoxWithIcon ucTxt)
         {
-            string total = ucTxt.InpTxt;
+            string qrCode = ucTxt.InpTxt;
             saleProcess.PaymentDiscount("QRPP", "");
             loadDiscount();
 
@@ -7766,25 +7908,24 @@ namespace BJCBCPOS
             //TO DO Call Procedure pos_CheckLastPayWithCoupon 
             //if ture Call TiketUseSum
 
-            //res = saleProcess.selectPAYMENT_PARAMETER("", "");
-            //if (res.response.next)
-            //{
-            //    if (_total > Convert.ToDouble(res.otherData.Rows[0]["QRPAYMENT_LIMIT_AMT"]))
-            //    {
-            //        //Alert Message QR Payment ไม่สามารถชำระได้มากกว่า xx,xxx บาท!!!
-            //        this.Dispose();
-            //        return;
-            //    }
-            //}
-
-
+            var result = saleProcess.selectPAYMENT_PARAMETER("QRPP");
+            if (result.response.next)
+            {
+                double limit = Convert.ToDouble(result.otherData.Rows[0]["QRPAYMENT_LIMIT_AMT"]);
+                if (Convert.ToDouble(pn_QRPM_ucTxt_Ref1.InpTxt) > limit)
+                {
+                    //TO DO Change Language //Alert Message QR Payment ไม่สามารถชำระได้มากกว่า xx,xxx บาท!!!
+                    Utility.AlertMessage(ResponseCode.Error, "QR Payment ไม่สามารถชำระได้มากกว่า "+ limit.ToString(displayAmt) +" บาท!!!");
+                    this.Dispose();
+                    return;
+                }
+            }
 
             if (!CheckChangeStatus(pn_QRPM_ucTxt_Ref1, pn_QRPM_ucTxt_Ref1.Text, true))
             {
                 pn_QRPM_ucTxt_Ref1.FocusTxt();
                 return;
             }
-
 
             double receiveCash = 0;
 
@@ -7808,7 +7949,7 @@ namespace BJCBCPOS
 
             bool IsEndReceipt = double.Parse(lbTxtBalance.Text) <= 0;
 
-            frmQRPaymentOnlineBscanC fBscanC = new frmQRPaymentOnlineBscanC(total, pn_QRPM_ucTxt_Ref1.InpTxt, IsEndReceipt);
+            frmQRPaymentOnlineBscanC fBscanC = new frmQRPaymentOnlineBscanC(qrCode, pn_QRPM_ucTxt_Ref1.InpTxt, IsEndReceipt);
             var res = fBscanC.ShowDialog(this);
 
             if (!IsEndReceipt)
@@ -7853,14 +7994,13 @@ namespace BJCBCPOS
                 {
                     UCTextBoxWithIcon ucTxtPn0 = pn_payment_temp0.Controls.Find("ucTxtPn0_" + i, true).FirstOrDefault() as UCTextBoxWithIcon;
 
-                    if (ucTxtPn0.Visible)
-                    {                 
+                    if (ucTxtPn0.Visible && ucTxtPn0.Text != "")
+                    {
                         if (!SubEnterFromButton(ucTxtPn0))
                         {
                             ucTxtPn0.FocusTxt();
                             return;
                         }
-
 
                         if (ucTxtPn0.StepID == PaymentStepDetail_StepID.Input_Main_Reference)
                         {
@@ -7980,7 +8120,7 @@ namespace BJCBCPOS
 
         private bool SubEnterFromButton(UCTextBoxWithIcon ucTxt)
         {
-            if (ucTxt.DataType == PaymentStepDetail_DataType.Money)
+            if (ucTxt.DataType.ToUpper() == PaymentStepDetail_DataType.Money)
             {
                 frmLoading.showLoading();
                 StoreResult chkMinCash = saleProcess.checkMinCashUnitAmount("CASH", ucTxt.Text, ProgramConfig.currencyDefault);
@@ -8007,79 +8147,61 @@ namespace BJCBCPOS
             {
                 string balance = lbTxtBalance.Text;
 
-                frmLoading.showLoading();
-                SummaryCashIn();
-                frmLoading.closeLoading();
-                RefreshGrid();
-
-                //double receiveCash = 0;
-                //receiveCash = double.Parse(amt);
-
-                //string formatCash = "";
-                //formatCash = receiveCash.ToString(displayAmt);
-
                 if (!CheckChangeStatus(ucTxt, amt))
                 {
                     ucTxt.FocusTxt();
                     return;
                 }
 
+                string remain = lbTxtBalance.Text;
+
+                frmLoading.showLoading();
+                string depoRef = "";
+                if (paymentCode == "DEPO")
+                {
+                    depoRef = depositRef;
+                    paymentCode = pcd;
+                }
+
+                DeleteTempPayment(paymentCode);
+                StoreResult result = saleProcess.savePaymentOffline(amt, pcd, lstPayDet, total: balance, depoRef: depoRef);
+                frmLoading.closeLoading();
+
+                if (!result.response.next)
+                {
+                    notify = new frmNotify(result);
+                    notify.ShowDialog(this);
+                    loadTempDLYForPayment();
+                    return;
+                }
+
+                loadTempDLYForPayment();
+
+                lbTxtBalance.Text = saleProcess.CalBalanceDiff(Convert.ToDouble(remain), "FXCU", ProgramConfig.currencyDefault).ToString(displayAmt);
+
                 if (double.Parse(lbTxtBalance.Text) <= 0)
                 {
-                    double cashbalance = 0;
+                    //double cashbalance = 0;
                     double cast = double.Parse(lbTxtBalance.Text) * -1;
-                    lbTxtBalance.Text = cashbalance.ToString(displayAmt);
+                    lbTxtBalance.Text = cast.ToString(displayAmt);
 
-                    frmLoading.showLoading();
-                    string depoRef = "";
-                    if (paymentCode == "DEPO")
-                    {
-                        depoRef = depositRef;
-                        paymentCode = pcd;
-                    }
-                    DeleteTempPayment(paymentCode);
-                    StoreResult result = saleProcess.savePaymentOffline(amt, pcd, lstPayDet, total: balance, depoRef: depoRef);
-                    frmLoading.closeLoading();
-
-                    if (result.response.next)
-                    {
-                        ShowConfirmPayment();
-                        return;
-                    }
-                    else
-                    {
-                        notify = new frmNotify(result);
-                        notify.ShowDialog(this);
-                        loadTempDLYForPayment();
-                        return;
-                    }
+                    //if (result.response.next)
+                    //{
+                    ShowConfirmPayment(paymentCode);
+                    //}
+                    //else
+                    //{
+                    //    notify = new frmNotify(result);
+                    //    notify.ShowDialog(this);
+                    //    loadTempDLYForPayment();
+                    //    return;
+                    //}
                     //loadTempDLYForPayment();
                 }
                 else
-                {
-                    frmLoading.showLoading();
-                    string depoRef = "";
-                    if (paymentCode == "DEPO")
-                    {
-                        depoRef = depositRef;
-                        paymentCode = pcd;
-                    }
-
-                    DeleteTempPayment(paymentCode);
-                    StoreResult result = saleProcess.savePaymentOffline(amt, pcd, lstPayDet, total: balance, depoRef: depoRef);
-                    frmLoading.closeLoading();
-
-                    if (!result.response.next)
-                    {
-                        notify = new frmNotify(result);
-                        notify.ShowDialog(this);
-                        return;
-                    }
-
-                    loadTempDLYForPayment();
+                {                  
                     //ucTextBoxWithIcon2.Focus();
                     SetDefaultPayment(_defaultPayment);
-
                 }
 
 

@@ -264,7 +264,7 @@ namespace BJCBCPOS
                                                                 edcControl1.OCard_Issuer_Name, vat_edc);
                             if (res.response.next)
                             {
-                                //Fix Data
+                                //Fix Data (Done)
                                 string creditCard = res.otherData.Rows[0][0].ToString().Replace(" ", "");//"VISACTB.438679XX9923";
                                 string paymentCode = "";//res.otherData.Rows[0][0].ToString().Replace(" ", "");
                                 if (creditCard.Length >= 4)
@@ -313,6 +313,15 @@ namespace BJCBCPOS
             edcControl1.EDCPort = ProgramConfig.comPort;
             edcControl1.EDCPortSetting = "9600,N,8,1";
             edcControl1.EDCTimeout = 90000;
+
+            if (lbEDCMessage.InvokeRequired)
+            {
+                lbEDCMessage.BeginInvoke((MethodInvoker)delegate { lbEDCMessage.Text = "กำลังทำการยกเลิกชำระจาก EDC"; this.Refresh(); });
+            }
+            else
+            {
+                lbEDCMessage.Text = "กำลังทำการยกเลิกชำระจาก EDC";
+            }
 
             if (edcControl1.IsProcess)
             {

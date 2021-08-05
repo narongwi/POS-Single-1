@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using BJCBCPOS_Model;
 using BJCBCPOS_Process;
-using BJCBCPOS.page;
 
 namespace BJCBCPOS
 {
@@ -61,6 +60,9 @@ namespace BJCBCPOS
 
         private void ucButtonPayment1_ButtonClick(object sender, EventArgs e)
         {
+            ProgramConfig.superUserId = "";
+            ProgramConfig.superUserName = "";
+            ProgramConfig.superUserAuthorizeResult = null;
             //#79
             Profile check = ProgramConfig.getProfile(FunctionID.Deposit_CheckAuthorize);
             if (!Utility.CheckAuthPass(this, check, "รับเงินมัดจำ"))
@@ -123,11 +125,6 @@ namespace BJCBCPOS
                 Program.control.CloseForm("frmSale");
                 this.Dispose();
             }
-        }
-
-        private void btnService_5_Click(object sender, EventArgs e)
-        {
-            new frmParcelService().Show();
         }
     }
 }

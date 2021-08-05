@@ -44,9 +44,9 @@
             this.lbUC_Payment.Location = new System.Drawing.Point(2, 4);
             this.lbUC_Payment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbUC_Payment.Name = "lbUC_Payment";
-            this.lbUC_Payment.Size = new System.Drawing.Size(180, 20);
+            this.lbUC_Payment.Size = new System.Drawing.Size(210, 20);
             this.lbUC_Payment.TabIndex = 56;
-            this.lbUC_Payment.Text = "HPAE0000000099999999";
+            this.lbUC_Payment.Text = "HPAEHPAE000000XX99987";
             this.lbUC_Payment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbUC_Payment.Click += new System.EventHandler(this.lbProductCode_Click);
             // 
@@ -70,12 +70,12 @@
             this.lbUC_Price.BackColor = System.Drawing.Color.Transparent;
             this.lbUC_Price.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUC_Price.ForeColor = System.Drawing.Color.Black;
-            this.lbUC_Price.Location = new System.Drawing.Point(190, 4);
+            this.lbUC_Price.Location = new System.Drawing.Point(218, 4);
             this.lbUC_Price.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbUC_Price.Name = "lbUC_Price";
-            this.lbUC_Price.Size = new System.Drawing.Size(112, 20);
+            this.lbUC_Price.Size = new System.Drawing.Size(92, 20);
             this.lbUC_Price.TabIndex = 58;
-            this.lbUC_Price.Text = "8,888,888.00";
+            this.lbUC_Price.Text = "998,888.00";
             this.lbUC_Price.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbUC_Price.Click += new System.EventHandler(this.lbPrice_Click);
             // 

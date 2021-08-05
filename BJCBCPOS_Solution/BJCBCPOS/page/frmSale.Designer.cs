@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSale));
             this.paneltemDetail = new System.Windows.Forms.Panel();
             this.picBtBack = new System.Windows.Forms.PictureBox();
@@ -113,6 +114,7 @@
             this.panelHeader = new System.Windows.Forms.Panel();
             this.ucHeader1 = new BJCBCPOS.UCHeader();
             this.panelMainSell = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbTxtTotal = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbRefNo = new System.Windows.Forms.Label();
@@ -143,8 +145,8 @@
             this.panel_list_promotion = new System.Windows.Forms.Panel();
             this.lbPricePromotion = new System.Windows.Forms.Label();
             this.lbPromotion = new System.Windows.Forms.Label();
-            this.btnPayment = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnPayment = new System.Windows.Forms.Button();
             this.pnSellScreen = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panelKeyNumber = new System.Windows.Forms.Panel();
@@ -173,6 +175,7 @@
             this.lbHeaderDiscount = new System.Windows.Forms.Label();
             this.pn_DropDown = new System.Windows.Forms.Panel();
             this.pn_drop_menu = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.paneltemDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBtBack)).BeginInit();
             this.panel1.SuspendLayout();
@@ -382,6 +385,7 @@
             this.ucTBDiscount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTBDiscount.EnabledUC = true;
             this.ucTBDiscount.IsAmount = false;
+            this.ucTBDiscount.IsKeyBoardForScan = false;
             this.ucTBDiscount.IsLarge = false;
             this.ucTBDiscount.IsNumber = false;
             this.ucTBDiscount.IsSetFormat = true;
@@ -407,6 +411,7 @@
             this.ucTBQty.Enabled = false;
             this.ucTBQty.EnabledUC = true;
             this.ucTBQty.IsAmount = false;
+            this.ucTBQty.IsKeyBoardForScan = false;
             this.ucTBQty.IsLarge = false;
             this.ucTBQty.IsNumber = false;
             this.ucTBQty.IsSetFormat = false;
@@ -527,6 +532,7 @@
             this.ucTBPrice.Enabled = false;
             this.ucTBPrice.EnabledUC = true;
             this.ucTBPrice.IsAmount = false;
+            this.ucTBPrice.IsKeyBoardForScan = false;
             this.ucTBPrice.IsLarge = false;
             this.ucTBPrice.IsNumber = false;
             this.ucTBPrice.IsSetFormat = true;
@@ -639,6 +645,7 @@
             this.ucTBWI_Qty2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTBWI_Qty2.EnabledUC = true;
             this.ucTBWI_Qty2.IsAmount = false;
+            this.ucTBWI_Qty2.IsKeyBoardForScan = false;
             this.ucTBWI_Qty2.IsLarge = false;
             this.ucTBWI_Qty2.IsNumber = false;
             this.ucTBWI_Qty2.IsSetFormat = false;
@@ -677,6 +684,7 @@
             this.ucTBWI_Price2.Enabled = false;
             this.ucTBWI_Price2.EnabledUC = true;
             this.ucTBWI_Price2.IsAmount = false;
+            this.ucTBWI_Price2.IsKeyBoardForScan = false;
             this.ucTBWI_Price2.IsLarge = false;
             this.ucTBWI_Price2.IsNumber = false;
             this.ucTBWI_Price2.IsSetFormat = true;
@@ -825,6 +833,7 @@
             this.ucTBWI_Qty1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTBWI_Qty1.EnabledUC = true;
             this.ucTBWI_Qty1.IsAmount = false;
+            this.ucTBWI_Qty1.IsKeyBoardForScan = false;
             this.ucTBWI_Qty1.IsLarge = false;
             this.ucTBWI_Qty1.IsNumber = false;
             this.ucTBWI_Qty1.IsSetFormat = false;
@@ -865,6 +874,7 @@
             this.ucTBWI_Price1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTBWI_Price1.EnabledUC = true;
             this.ucTBWI_Price1.IsAmount = false;
+            this.ucTBWI_Price1.IsKeyBoardForScan = false;
             this.ucTBWI_Price1.IsLarge = false;
             this.ucTBWI_Price1.IsNumber = false;
             this.ucTBWI_Price1.IsSetFormat = true;
@@ -1088,7 +1098,7 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(127, 91);
+            this.pictureBox11.Location = new System.Drawing.Point(127, 104);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(80, 80);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1098,15 +1108,14 @@
             // lbAddItemSpecial
             // 
             this.lbAddItemSpecial.BackColor = System.Drawing.Color.Transparent;
-            this.lbAddItemSpecial.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAddItemSpecial.Font = new System.Drawing.Font("Prompt", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAddItemSpecial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(186)))), ((int)(((byte)(109)))));
-            this.lbAddItemSpecial.Location = new System.Drawing.Point(10, 18);
+            this.lbAddItemSpecial.Location = new System.Drawing.Point(48, 5);
             this.lbAddItemSpecial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAddItemSpecial.Name = "lbAddItemSpecial";
-            this.lbAddItemSpecial.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.lbAddItemSpecial.Size = new System.Drawing.Size(315, 50);
+            this.lbAddItemSpecial.Size = new System.Drawing.Size(244, 91);
             this.lbAddItemSpecial.TabIndex = 83;
-            this.lbAddItemSpecial.Text = "เพิ่มสินค้าขายพิเศษ";
+            this.lbAddItemSpecial.Text = "เพิ่มรายละเอียดรายการขาย";
             this.lbAddItemSpecial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbProductCode
@@ -1268,6 +1277,7 @@
             this.ucTxtQty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtQty.EnabledUC = true;
             this.ucTxtQty.IsAmount = false;
+            this.ucTxtQty.IsKeyBoardForScan = false;
             this.ucTxtQty.IsLarge = false;
             this.ucTxtQty.IsNumber = true;
             this.ucTxtQty.IsSetFormat = true;
@@ -1395,6 +1405,7 @@
             this.ucTBScanBarcode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTBScanBarcode.EnabledUC = true;
             this.ucTBScanBarcode.IsAmount = false;
+            this.ucTBScanBarcode.IsKeyBoardForScan = false;
             this.ucTBScanBarcode.IsLarge = false;
             this.ucTBScanBarcode.IsNumber = false;
             this.ucTBScanBarcode.IsSetFormat = false;
@@ -1465,6 +1476,7 @@
             this.ucHeader1.showMainMenu = true;
             this.ucHeader1.showMember = true;
             this.ucHeader1.showMember_ButtonBack = false;
+            this.ucHeader1.showMember_IsSaveMember = true;
             this.ucHeader1.showScanner = true;
             this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
             this.ucHeader1.TabIndex = 0;
@@ -1474,11 +1486,13 @@
             this.ucHeader1.AlertClick += new System.EventHandler(this.ucHeader1_AlertClick);
             this.ucHeader1.HambergerItemClick += new System.EventHandler(this.ucHeader1_HambergerItemClick);
             this.ucHeader1.MemberClick += new System.EventHandler(this.ucHeader1_MemberClick);
+            this.ucHeader1.MemberEnterFromButton += new System.EventHandler(this.ucHeader1_MemberEnterFromButton);
             // 
             // panelMainSell
             // 
             this.panelMainSell.BackColor = System.Drawing.Color.White;
             this.panelMainSell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMainSell.Controls.Add(this.label1);
             this.panelMainSell.Controls.Add(this.lbTxtTotal);
             this.panelMainSell.Controls.Add(this.panel2);
             this.panelMainSell.Controls.Add(this.pictureBox3);
@@ -1499,13 +1513,23 @@
             this.panelMainSell.Controls.Add(this.panel_suggest);
             this.panelMainSell.Controls.Add(this.panel_discount);
             this.panelMainSell.Controls.Add(this.panel_promotion);
-            this.panelMainSell.Controls.Add(this.btnPayment);
             this.panelMainSell.Controls.Add(this.btnConfirm);
+            this.panelMainSell.Controls.Add(this.btnPayment);
             this.panelMainSell.Location = new System.Drawing.Point(0, 43);
             this.panelMainSell.Margin = new System.Windows.Forms.Padding(2);
             this.panelMainSell.Name = "panelMainSell";
             this.panelMainSell.Size = new System.Drawing.Size(688, 725);
             this.panelMainSell.TabIndex = 55;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(158, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 97;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // lbTxtTotal
             // 
@@ -1864,24 +1888,6 @@
             this.lbPromotion.Text = "โปรโมชั่น";
             this.lbPromotion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnPayment
-            // 
-            this.btnPayment.BackColor = System.Drawing.Color.White;
-            this.btnPayment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPayment.BackgroundImage")));
-            this.btnPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPayment.FlatAppearance.BorderSize = 0;
-            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment.Font = new System.Drawing.Font("Prompt Medium", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.ForeColor = System.Drawing.Color.White;
-            this.btnPayment.Location = new System.Drawing.Point(485, 544);
-            this.btnPayment.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(180, 135);
-            this.btnPayment.TabIndex = 72;
-            this.btnPayment.Text = "ชำระ";
-            this.btnPayment.UseVisualStyleBackColor = false;
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
-            // 
             // btnConfirm
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.White;
@@ -1900,6 +1906,24 @@
             this.btnConfirm.Text = "ยืนยัน";
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.BackColor = System.Drawing.Color.White;
+            this.btnPayment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPayment.BackgroundImage")));
+            this.btnPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPayment.FlatAppearance.BorderSize = 0;
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.Font = new System.Drawing.Font("Prompt Medium", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.ForeColor = System.Drawing.Color.White;
+            this.btnPayment.Location = new System.Drawing.Point(485, 544);
+            this.btnPayment.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(180, 135);
+            this.btnPayment.TabIndex = 72;
+            this.btnPayment.Text = "ชำระ";
+            this.btnPayment.UseVisualStyleBackColor = false;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // pnSellScreen
             // 
@@ -2000,6 +2024,7 @@
             this.ucTextBoxWithIcon3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTextBoxWithIcon3.EnabledUC = true;
             this.ucTextBoxWithIcon3.IsAmount = false;
+            this.ucTextBoxWithIcon3.IsKeyBoardForScan = false;
             this.ucTextBoxWithIcon3.IsLarge = false;
             this.ucTextBoxWithIcon3.IsNumber = false;
             this.ucTextBoxWithIcon3.IsSetFormat = false;
@@ -2025,6 +2050,7 @@
             this.ucTextBoxWithIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTextBoxWithIcon2.EnabledUC = true;
             this.ucTextBoxWithIcon2.IsAmount = false;
+            this.ucTextBoxWithIcon2.IsKeyBoardForScan = false;
             this.ucTextBoxWithIcon2.IsLarge = false;
             this.ucTextBoxWithIcon2.IsNumber = false;
             this.ucTextBoxWithIcon2.IsSetFormat = false;
@@ -2050,6 +2076,7 @@
             this.ucTBWI_Member.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTBWI_Member.EnabledUC = true;
             this.ucTBWI_Member.IsAmount = false;
+            this.ucTBWI_Member.IsKeyBoardForScan = false;
             this.ucTBWI_Member.IsLarge = false;
             this.ucTBWI_Member.IsNumber = false;
             this.ucTBWI_Member.IsSetFormat = false;
@@ -2215,6 +2242,7 @@
             this.ucTxtAmountDiscount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtAmountDiscount.EnabledUC = true;
             this.ucTxtAmountDiscount.IsAmount = false;
+            this.ucTxtAmountDiscount.IsKeyBoardForScan = false;
             this.ucTxtAmountDiscount.IsLarge = false;
             this.ucTxtAmountDiscount.IsNumber = true;
             this.ucTxtAmountDiscount.IsSetFormat = true;
@@ -2241,6 +2269,7 @@
             this.ucTxtCouponNo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtCouponNo.EnabledUC = true;
             this.ucTxtCouponNo.IsAmount = false;
+            this.ucTxtCouponNo.IsKeyBoardForScan = false;
             this.ucTxtCouponNo.IsLarge = false;
             this.ucTxtCouponNo.IsNumber = false;
             this.ucTxtCouponNo.IsSetFormat = false;
@@ -2336,6 +2365,11 @@
             this.pn_drop_menu.Visible = false;
             this.pn_drop_menu.Leave += new System.EventHandler(this.pn_drop_menu_Leave);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2374,6 +2408,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelMainSell.ResumeLayout(false);
+            this.panelMainSell.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -2540,6 +2575,8 @@
         private System.Windows.Forms.Label lbMemberCode;
         private System.Windows.Forms.Label lbMember;
         private System.Windows.Forms.Label lbMessage1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
         //private UCDropDownListCustom<UCItemDropDownListExtraProduct> ucDropDownListCustom1;
 
     }

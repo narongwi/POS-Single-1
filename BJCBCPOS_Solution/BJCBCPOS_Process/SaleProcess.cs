@@ -6,8 +6,8 @@ using BJCBCPOS_Data;
 using BJCBCPOS_Model;
 using System.Data;
 using MMFSAPI;
-using ApiServices;
 using System.Threading;
+using BJCBCPOS_Model.api.Request;
 
 namespace BJCBCPOS_Process
 {
@@ -341,8 +341,12 @@ namespace BJCBCPOS_Process
 
 
 
-        public ProcessResult scanSaleProduct(string scanProductCode, double inputQty, bool IsNoScanBarcode, int discountType, double discountValue,
-                        string couponNo, Func<Result_frmPopupInput> checkIME_Serial = null, Func<Profile, string, bool> CheckAuth = null, AlertMessage AlertMessage = null, string priceInp = "")
+        public ProcessResult scanSaleProduct(string scanProductCode, double inputQty, bool IsNoScanBarcode, int discountType, double discountValue, string couponNo, 
+                        Func<Result_frmPopupInput> checkIME_Serial = null, 
+                        Func<Profile, string, bool> CheckAuth = null, 
+                        AlertMessage AlertMessage = null,
+                        Action<ResponseCode, string> ShowAlertNoSale = null,
+                        string priceInp = "")
         {
             try
             {
@@ -397,11 +401,13 @@ namespace BJCBCPOS_Process
 
                             if (statusNoSale == "1")
                             {
-                                return new ProcessResult(ResponseCode.Error, msgNoSale);
+                                //return new ProcessResult(ResponseCode.Error, msgNoSale);
+                                ShowAlertNoSale(ResponseCode.Error, msgNoSale);
+                                return new ProcessResult(ResponseCode.Ignore, "");
                             }
                             else if (statusNoSale == "2")
                             {
-                                AlertMessage(ResponseCode.Information, msgNoSale);
+                                AlertMessage(ResponseCode.Information, msgNoSale);                               
                             }
                             else if (statusNoSale == "3")
                             {
@@ -514,9 +520,7 @@ namespace BJCBCPOS_Process
                                 }
                             }
 
-                            newData[i] = insertDtSaleMain(ProgramConfig.saleRefNo, rec.ToString(), sty, vty, barcode, qty.ToString(), amt.ToString(), "0.00", ProgramConfig.userId,
-                                "0", "", pdisc, discid, dbPrice.ToString(), dty, discamt, "0", stv, rec.ToString(), dbPrice.ToString(), amt.ToString(), (amt - double.Parse(discamt)).ToString(), data.Rows[i]["PR_NAME"].ToString(), data.Rows[i]["Promotion"].ToString(), data.Rows[i]["PricePromotion"].ToString(), isFFNRTC, product_type);
-                           
+
                             if (stv == "F")
                             {
                                 if (!command.saveBarcodeExtend(ProgramConfig.saleRefNo, rec.ToString(), barcodeExtend, product_type))
@@ -545,6 +549,11 @@ namespace BJCBCPOS_Process
                                 }
 
                             }
+
+                            newData[i] = insertDtSaleMain(ProgramConfig.saleRefNo, rec.ToString(), sty, vty, barcode, qty.ToString(), amt.ToString(), "0.00", ProgramConfig.userId,
+                                        "0", "", pdisc, discid, dbPrice.ToString(), dty, discamt, "0", stv, rec.ToString(), dbPrice.ToString(), amt.ToString(), (amt - double.Parse(discamt)).ToString(),
+                                        data.Rows[i]["PR_NAME"].ToString(), data.Rows[i]["Promotion"].ToString(), data.Rows[i]["PricePromotion"].ToString(), isFFNRTC, product_type);
+                           
 
                             if (!command.saveTempDlyptrans(ProgramConfig.saleRefNo, rec.ToString(), sty, vty, barcode, qty.ToString(), amt.ToString(), "0.00", ProgramConfig.userId,
                                     "0", "", pdisc, discid, dbPrice.ToString(), dty, discamt, "0", stv))
@@ -933,52 +942,74 @@ namespace BJCBCPOS_Process
                             }
                             else if (dr["PM_CODE"].ToString() == "CASH")
                             {
-                                int maxRecCHGD = command.selectMaxRecTempDlyptransForTypeP_FormPMCODE(ProgramConfig.payment.getPCD(dr["PM_CODE"].ToString(), dr["FXCU_CODE"].ToString()));
-
-                                if (maxRecCHGD > 0)
+                                if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.CreditSale)
                                 {
-                                    if (command.updateTempPay(ProgramConfig.payment.getPCD(dr["PM_CODE"].ToString(), dr["FXCU_CODE"].ToString()), dr["CHG"].ToString(), dr["EXCG_AMT"].ToString()))
-                                    {
-                                        if (!command.updateTempDlyptransFDS(maxRecCHGD.ToString(), dr["CHG"].ToString(), dr["EXCG_AMT"].ToString()))
-                                        {
-                                            _dtSaleMain.RejectChanges();
-                                            command.rollback();
-                                            string messageTEMP = ProgramConfig.message.get("SaleProcess", "SaveTEMPDLYPTRANSIncomplete").message;
-                                            throw new Exception(messageTEMP);
-                                        }
-                                    }
-                                    else
+                                    if (!command.updateCREDPAY_TRANS_PAY("CASH", dr["EXCG_AMT"].ToString()).response.next)
                                     {
                                         _dtSaleMain.RejectChanges();
                                         command.rollback();
-                                        string messageTEMP = ProgramConfig.message.get("SaleProcess", "SaveTEMPDLYPTRANSIncomplete").message;
+                                        string messageTEMP = "ไม่สามารถบันทึกข้อมูลลง TempCREDPAY_TRANS_PAY";//ProgramConfig.message.get("SaleProcess", "SaveTemp_podtrans_payIncomplete").message;
+                                        throw new Exception(messageTEMP);
+                                    }
+                                }
+                                else if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.ReceivePOD)
+                                {
+                                    if (!command.updateTemp_podtrans_pay("CASH", dr["EXCG_AMT"].ToString()).response.next)
+                                    {
+                                        _dtSaleMain.RejectChanges();
+                                        command.rollback();
+                                        string messageTEMP = "ไม่สามารถบันทึกข้อมูลลง TEMP_PODTRANS_PAY";//ProgramConfig.message.get("SaleProcess", "SaveTemp_podtrans_payIncomplete").message;
                                         throw new Exception(messageTEMP);
                                     }
                                 }
                                 else
                                 {
-                                    if (command.saveTempPay(ProgramConfig.saleRefNo, "P", ProgramConfig.payment.getPCD(dr["PM_CODE"].ToString(), dr["FXCU_CODE"].ToString()), "0", dr["CHG"].ToString(), "0", "0"))
+                                    int maxRecCHGD = command.selectMaxRecTempDlyptransForTypeP_FormPMCODE(ProgramConfig.payment.getPCD(dr["PM_CODE"].ToString(), dr["FXCU_CODE"].ToString()));
+                                    if (maxRecCHGD > 0)
                                     {
-                                        insertDtSaleMain(ProgramConfig.saleRefNo, maxRecInt.ToString(), sty, "P", ProgramConfig.payment.getPCD(dr["PM_CODE"].ToString(), dr["FXCU_CODE"].ToString()), maxRecQntInt.ToString(), "0", dr["CHG"].ToString(), ProgramConfig.userId, "0"
-                                        , "", dr["EXCG_AMT"].ToString(), "0", "0", "F", "0", "0", "0");
-                                        if (!command.saveTempDlyptrans(ProgramConfig.saleRefNo, maxRecInt.ToString(), sty, "P", ProgramConfig.payment.getPCD(dr["PM_CODE"].ToString(), dr["FXCU_CODE"].ToString()), maxRecQntInt.ToString(), "0", dr["CHG"].ToString(), ProgramConfig.userId, "0"
-                                        , "", dr["EXCG_AMT"].ToString(), "0", "0", "F", "0", "0", "0"))
+                                        if (command.updateTempPay(ProgramConfig.payment.getPCD(dr["PM_CODE"].ToString(), dr["FXCU_CODE"].ToString()), dr["CHG"].ToString(), dr["EXCG_AMT"].ToString()))
+                                        {
+                                            if (!command.updateTempDlyptransFDS(maxRecCHGD.ToString(), dr["CHG"].ToString(), dr["EXCG_AMT"].ToString()))
+                                            {
+                                                _dtSaleMain.RejectChanges();
+                                                command.rollback();
+                                                string messageTEMP = ProgramConfig.message.get("SaleProcess", "SaveTEMPDLYPTRANSIncomplete").message;
+                                                throw new Exception(messageTEMP);
+                                            }
+                                        }
+                                        else
                                         {
                                             _dtSaleMain.RejectChanges();
                                             command.rollback();
                                             string messageTEMP = ProgramConfig.message.get("SaleProcess", "SaveTEMPDLYPTRANSIncomplete").message;
                                             throw new Exception(messageTEMP);
                                         }
+
                                     }
                                     else
                                     {
-                                        _dtSaleMain.RejectChanges();
-                                        command.rollback();
-                                        string messageTEMPPAY = ProgramConfig.message.get("SaleProcess", "SaveTEMPPAYIncomplete").message;
-                                        throw new Exception(messageTEMPPAY);
+                                        if (command.saveTempPay(ProgramConfig.saleRefNo, "P", ProgramConfig.payment.getPCD(dr["PM_CODE"].ToString(), dr["FXCU_CODE"].ToString()), "0", dr["CHG"].ToString(), "0", "0"))
+                                        {
+                                            insertDtSaleMain(ProgramConfig.saleRefNo, maxRecInt.ToString(), sty, "P", ProgramConfig.payment.getPCD(dr["PM_CODE"].ToString(), dr["FXCU_CODE"].ToString()), maxRecQntInt.ToString(), "0", dr["CHG"].ToString(), ProgramConfig.userId, "0"
+                                            , "", dr["EXCG_AMT"].ToString(), "0", "0", "F", "0", "0", "0");
+                                            if (!command.saveTempDlyptrans(ProgramConfig.saleRefNo, maxRecInt.ToString(), sty, "P", ProgramConfig.payment.getPCD(dr["PM_CODE"].ToString(), dr["FXCU_CODE"].ToString()), maxRecQntInt.ToString(), "0", dr["CHG"].ToString(), ProgramConfig.userId, "0"
+                                            , "", dr["EXCG_AMT"].ToString(), "0", "0", "F", "0", "0", "0"))
+                                            {
+                                                _dtSaleMain.RejectChanges();
+                                                command.rollback();
+                                                string messageTEMP = ProgramConfig.message.get("SaleProcess", "SaveTEMPDLYPTRANSIncomplete").message;
+                                                throw new Exception(messageTEMP);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            _dtSaleMain.RejectChanges();
+                                            command.rollback();
+                                            string messageTEMPPAY = ProgramConfig.message.get("SaleProcess", "SaveTEMPPAYIncomplete").message;
+                                            throw new Exception(messageTEMPPAY);
+                                        }
                                     }
                                 }
-
                                 _dtSaleMain.AcceptChanges();
                             }
 
@@ -1012,8 +1043,7 @@ namespace BJCBCPOS_Process
                     maxRecInt = command.selectMaxRecTempDlyptrans(ProgramConfig.saleRefNo) + 1;
                     maxRec = maxRecInt.ToString();
 
-                    
-
+                   
                     insertDtSaleMain(ProgramConfig.saleRefNo, maxRec, sty, "P", "CHGD", maxRecQntInt.ToString(), amt, fds, ProgramConfig.userId, "0", "", "0", "0", "", "1", "0", "0", "0");
 
                     if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.CreditSale)
@@ -1032,7 +1062,8 @@ namespace BJCBCPOS_Process
                     }               
                     else if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.ReceivePOD)
                     {
-                       var res = savePaymentPOD("CHGD", "", amt, fds, "", "", "", "", "", "", "", "", "");
+                       int maxRecPOD = command.selectMaxRecTEMP_PODTRANS_PAY(ProgramConfig.podRefNo);
+                       var res = savePaymentPOD("CHGD", "", amt, fds, "", "", "", "", "", "", "", "", "", maxRecPOD.ToString());
                        if (!res.response.next)
                        {
                             _dtSaleMain.RejectChanges();
@@ -1108,17 +1139,23 @@ namespace BJCBCPOS_Process
             }
         }
 
-        public StoreResult searchMember(int searchType, string data)
+        public StoreResult searchMember(int searchType, string data, FunctionID function = null)
         {
             try
             {
+                FunctionID fn = function ?? FunctionID.Sale_Member_Search_Data;
+                if (fn == FunctionID.NoFunctionID)
+                {
+                    fn = FunctionID.Sale_Member_Search_Data;
+                }
+
                 if (ProgramConfig.memberFormat == MemberFormat.MegaMaket)
                 {
-                    return command.searchCustomer(FunctionID.Sale_Member_Search_Data, searchType, data);
+                    return command.searchCustomer(fn, searchType, data);
                 }
                 else
                 {
-                    return command.searchMember(FunctionID.Sale_Member_Search_Data, searchType, data);
+                    return command.searchMember(fn, searchType, data);
                 }            
             }
             catch (NetworkConnectionException)
@@ -1256,7 +1293,7 @@ namespace BJCBCPOS_Process
                     }
                     return res;
                 }
-                else if (searchType == SearchTypeCustomer.SearchCustomer)
+                else if (searchType == SearchTypeCustomer.SearchMember)
                 {
                     var res = command.getMemberProfile(FunctionID.Sale_Member_Display, memberId);
                     if (res.response.next)
@@ -1302,15 +1339,13 @@ namespace BJCBCPOS_Process
         {
             try
             {
-                PolicyStatus chk = ProgramConfig.showPaymentAmount;
-                if (chk == PolicyStatus.Work)
-                {
+
                     return command.getTotalAmtDiff(refNo, saleAmt, mode, pmCode);
-                }
-                else
-                {
-                    return new StoreResult(ResponseCode.Success, "Success");
-                }
+                //}
+                //else
+                //{
+                //    return new StoreResult(ResponseCode.Success, "Success");
+                //}
                 
             }
             catch (NetworkConnectionException)
@@ -1459,6 +1494,7 @@ namespace BJCBCPOS_Process
 
         public ProcessResult saveDeleteItem(string productCode, string qty, string price)
         {
+            command.newTransaction();
             try
             {
                 int newRec = selectMaxRecTempDlyptrans(ProgramConfig.saleRefNo) + 1;
@@ -1485,18 +1521,34 @@ namespace BJCBCPOS_Process
                 string upc = selectDeleteItem.Rows[0]["UPC"].ToString();
                 string dty = selectDeleteItem.Rows[0]["DTY"].ToString();
 
+                //string userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                string userauth = "999999";
+
                 DataRow newRow = insertDtSaleMain(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                    , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                   , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, reason, stv);
+                                   , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, reason, stv);
 
                 if (!command.saveTempDlyptrans(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                    , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                   , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, reason, stv))
+                                   , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, reason, stv))
                 {
                     string responseMessage = ProgramConfig.message.get("SaleProcess", "SaveTEMPDLYPTRANSIncomplete").message;
                     throw new Exception(responseMessage);
                     //throw new Exception("ไม่สามารถบันทึกข้อมูลลง TEMPDLYPTRANS");
                 }
+
+                userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                //TO DO Insert TempDLYPTRANS_AUTHORIZE
+                if (!command.saveTempdly_Authorize(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
+                                   , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
+                                   , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, reason, stv))
+                {
+                    //TO DO Chnage language
+                    string responseMessage = "ไม่สามารถบันทึกข้อมูลลง TEMPDLY_AUTHORIZE";
+                    throw new Exception(responseMessage);
+                    //throw new Exception("ไม่สามารถบันทึกข้อมูลลง TEMPDLYPTRANS");
+                }
+
 
                 if (!command.updateDeleteItemTempDlyptrans(ProgramConfig.saleRefNo, rec))
                 {
@@ -1524,6 +1576,7 @@ namespace BJCBCPOS_Process
             catch (Exception ex)
             {
                 _dtSaleMain.RejectChanges();
+                command.rollback();
                 AppLog.writeLog(ex);
                 return new ProcessResult(ResponseCode.Error, ex.Message);
             }
@@ -1569,31 +1622,42 @@ namespace BJCBCPOS_Process
                     string upc = selectDeleteItem.Rows[0]["UPC"].ToString();
                     string dty = selectDeleteItem.Rows[0]["DTY"].ToString();
 
+                    //string userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                    string userauth = "999999";
+
                     insertDtSaleMain(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                         , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                        , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv);
+                                        , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv);
 
                     if (command.saveTempDlyptrans(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                         , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                        , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
+                                        , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
                     {
-                        foreach (DataRow row in _dtSaleMain.Rows)
+
+                        userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                        //TO DO Insert TempDLYPTRANS_AUTHORIZE
+                        if (command.saveTempdly_Authorize(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
+                                        , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
+                                        , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
                         {
-                            if (row["REF"].ToString() == refNo && row["STCODE"].ToString() == ProgramConfig.storeCode && row["REC"].ToString() == rec)
+                            foreach (DataRow row in _dtSaleMain.Rows)
                             {
-                                row["STT"] = "V";
-                            }
-                        }
-                        if (command.updateDeleteItemTempDlyptrans(ProgramConfig.saleRefNo, rec))
-                        {
-                            if (command.saveEditItemTrans(refNo, aid.ToString(), aty, rec, sty, vty, pcd, qnt, amt, fds, usr, "V", "", reasonID, upc))
-                            {
-                                if (command.saveEditItemTrans(refNo, aid, aty, newRec.ToString(), sty, vty, pcd, (double.Parse(qnt) * -1).ToString()
-                                                                                                , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId, "V", rec, reasonID, upc))
+                                if (row["REF"].ToString() == refNo && row["STCODE"].ToString() == ProgramConfig.storeCode && row["REC"].ToString() == rec)
                                 {
-                                    _dtSaleMain.AcceptChanges();
-                                    command.commit();
-                                    return new StoreResult(ResponseCode.Success, "Success");
+                                    row["STT"] = "V";
+                                }
+                            }
+                            if (command.updateDeleteItemTempDlyptrans(ProgramConfig.saleRefNo, rec))
+                            {
+                                if (command.saveEditItemTrans(refNo, aid.ToString(), aty, rec, sty, vty, pcd, qnt, amt, fds, usr, "V", "", reasonID, upc))
+                                {
+                                    if (command.saveEditItemTrans(refNo, aid, aty, newRec.ToString(), sty, vty, pcd, (double.Parse(qnt) * -1).ToString()
+                                                                                                    , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId, "V", rec, reasonID, upc))
+                                    {
+                                        _dtSaleMain.AcceptChanges();
+                                        command.commit();
+                                        return new StoreResult(ResponseCode.Success, "Success");
+                                    }
                                 }
                             }
                         }
@@ -1666,14 +1730,32 @@ namespace BJCBCPOS_Process
                         upc = selectDeleteItem.Rows[i]["UPC"].ToString();
                         dty = selectDeleteItem.Rows[i]["DTY"].ToString();
 
+                        //string userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                        string userauth = "999999";
+
                         insertDtSaleMain(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                            , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                           , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv);
+                                           , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv);
 
                         if (command.saveTempDlyptrans(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                            , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                           , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
+                                           , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
                         {
+
+                            userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                            //TO DO Insert TempDLYPTRANS_AUTHORIZE
+                            if (!command.saveTempdly_Authorize(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
+                                               , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
+                                               , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
+                            {
+                                //TO DO Chnage language
+                                string responseMessage = "ไม่สามารถบันทึกข้อมูลลง TEMPDLY_AUTHORIZE";
+                                throw new Exception(responseMessage);
+                                //throw new Exception("ไม่สามารถบันทึกข้อมูลลง TEMPDLYPTRANS");
+                            }
+
+
+
                             foreach (DataRow row in _dtSaleMain.Rows)
                             {
                                 if (row["REF"].ToString() == refNo && row["STCODE"].ToString() == ProgramConfig.storeCode && row["REC"].ToString() == rec)
@@ -1800,18 +1882,34 @@ namespace BJCBCPOS_Process
                 string upc = selectDeleteItem.Rows[0]["UPC"].ToString();
                 string dty = selectDeleteItem.Rows[0]["DTY"].ToString();
 
+                //string userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                string userauth = "999999";
+
                 insertDtSaleMain(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                     , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                    , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv);
+                                    , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv);
 
                 if (!command.saveTempDlyptrans(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                     , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                    , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
+                                    , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
                 {
                     string responseMessage = ProgramConfig.message.get("SaleProcess", "SaveTEMPDLYPTRANSIncomplete").message;
                     throw new Exception(responseMessage);
                     //throw new Exception("ไม่สามารถบันทึกข้อมูลลง TEMPDLYPTRANS");
                 }
+
+                userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                //TO DO Insert TempDLYPTRANS_AUTHORIZE
+                if (!command.saveTempdly_Authorize(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
+                                    , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
+                                    , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
+                {
+                    //TO DO Chnage language
+                    string responseMessage = "ไม่สามารถบันทึกข้อมูลลง TEMPDLY_AUTHORIZE";
+                    throw new Exception(responseMessage);
+                    //throw new Exception("ไม่สามารถบันทึกข้อมูลลง TEMPDLYPTRANS");
+                }
+
 
                 foreach (DataRow row in _dtSaleMain.Rows)
                 {
@@ -1892,14 +1990,30 @@ namespace BJCBCPOS_Process
                 string upc = selectDeleteItem.Rows[0]["UPC"].ToString();
                 string dty = selectDeleteItem.Rows[0]["DTY"].ToString();
 
+
+                //string userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                string userauth = "999999";
+
                 insertDtSaleMain(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                        , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                       , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv, "", "", "", "", "", "", "", isFFNRTC, Product_type);
+                                       , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv, "", "", "", "", "", "", "", isFFNRTC, Product_type);
 
                 if (command.saveTempDlyptrans(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                        , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                       , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
+                                       , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
                 {
+                    userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                    //TO DO Insert TempDLYPTRANS_AUTHORIZE
+                    if (!command.saveTempdly_Authorize(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
+                                       , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
+                                       , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
+                    {
+                        //TO DO Chnage language
+                        string responseMessage = "ไม่สามารถบันทึกข้อมูลลง TEMPDLY_AUTHORIZE";
+                        throw new Exception(responseMessage);
+                        //throw new Exception("ไม่สามารถบันทึกข้อมูลลง TEMPDLYPTRANS");
+                    }
+
                     foreach (DataRow row in _dtSaleMain.Rows)
                     {
                         if (row["STCODE"].ToString() == ProgramConfig.storeCode && row["REF"].ToString() == ProgramConfig.saleRefNo && row["REC"].ToString() == rec)
@@ -2017,14 +2131,30 @@ namespace BJCBCPOS_Process
                     discamt = selectDeleteItem.Rows[i]["DISCAMT"].ToString();
                     upc = selectDeleteItem.Rows[i]["UPC"].ToString();
                     dty = selectDeleteItem.Rows[i]["DTY"].ToString();
+
+                    //string userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                    string userauth = "999999";
+
                     insertDtSaleMain(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                        , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                       , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv, "", "", "", "", "", "", "", isFFNRTC, Product_type);
+                                       , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv, "", "", "", "", "", "", "", isFFNRTC, Product_type);
 
                     if (command.saveTempDlyptrans(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
                                        , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
-                                       , "0", "V", ProgramConfig.userId, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
+                                       , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
                     {
+                        userauth = String.IsNullOrEmpty(ProgramConfig.superUserId.Trim()) || ProgramConfig.superUserId == "N/A" ? ProgramConfig.userId : ProgramConfig.superUserId;
+                        //TO DO Insert TempDLYPTRANS_AUTHORIZE
+                        if (!command.saveTempdly_Authorize(refNo, newRec.ToString(), "0", vty, pcd, (double.Parse(qnt) * -1).ToString()
+                                       , (double.Parse(amt) * -1).ToString(), (double.Parse(fds) * -1).ToString(), ProgramConfig.userId
+                                       , "0", "V", userauth, discid, (double.Parse(upc) * -1).ToString(), dty, discamt, rec, stv))
+                        {
+                            //TO DO Chnage language
+                            string responseMessage = "ไม่สามารถบันทึกข้อมูลลง TEMPDLY_AUTHORIZE";
+                            throw new Exception(responseMessage);
+                            //throw new Exception("ไม่สามารถบันทึกข้อมูลลง TEMPDLYPTRANS");
+                        }
+
                         foreach (DataRow row in _dtSaleMain.Rows)
                         {
                             if (row["STCODE"].ToString() == ProgramConfig.storeCode && row["REF"].ToString() == ProgramConfig.saleRefNo && row["REC"].ToString() == rec)
@@ -2910,7 +3040,7 @@ namespace BJCBCPOS_Process
         }
 
 
-        public ProcessResult saleAutoVoid(string refNo, string abb, string abb_ini, string openTime, Func<Profile, string, bool> CheckAuth)
+        public ProcessResult saleAutoVoid(string refNo, string abb, string abb_ini, string openTime, Func<Profile, string, bool> CheckAuth = null, Action AutoVoidEDC = null)
         {
             try
             {
@@ -2939,6 +3069,8 @@ namespace BJCBCPOS_Process
                         //Auto Void QR
                         //select * from QRPAYTRANS where STORE_CODE='00800' and LOCKNO='010' and REF='010001031' and ACTION_TYPE='SA' and CHANNEL='BC' and STT='A'
                         AutoVoidQR_BSC(refNo, CheckAuth);
+
+                        AutoVoidEDC();
 
                         if (res.otherData.Rows[0]["Action_Type"].ToString() == "V")
                         {
@@ -3498,7 +3630,8 @@ namespace BJCBCPOS_Process
                 }
                 else if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.ReceivePOD)
                 {
-                    var res = savePaymentPOD(ProgramConfig.payment.getPCD(pmCode, currency_code), "", amtPrice, chg, "", "", "", "", "", "", "", "", "");
+                    int maxRecPOD = command.selectMaxRecTEMP_PODTRANS_PAY(ProgramConfig.podRefNo);
+                    var res = savePaymentPOD(ProgramConfig.payment.getPCD(pmCode, currency_code), "", amtPrice, chg, "", "", "", "", "", "", "", "", "", maxRecPOD.ToString());
                     if (!res.response.next)
                     {
                         _dtSaleMain.RejectChanges();
@@ -3786,7 +3919,11 @@ namespace BJCBCPOS_Process
             try
             {
                 string sty = ProgramConfig.pageBackFromPayment == PageBackFormPayment.Deposit ? "2" : "0";
+
+                //ไว้กรณี จ่าย QR Payment offline ของลาว ต้อง sum amt ให้อยู่ใน record เดียว
                 string amtDupPrice = SumDupPaymentAmount(pcd, amtPrice, ProgramConfig.paymentDupAmt);
+
+                int maxRecInt = command.selectMaxRecTempDlyptrans(ProgramConfig.saleRefNo) + 1;
 
                 string chg = "";
                 if (Convert.ToDouble(total) > Convert.ToDouble(amtPrice))
@@ -3816,8 +3953,8 @@ namespace BJCBCPOS_Process
                     //Save TEMP_CREDPay_TRANS_PAY
                     string payNum = lstPayDet.Select(s => s.MainRef).FirstOrDefault();
                     string pmCode = lstPayDet.Select(s => s.PMCode).FirstOrDefault();
-                    double maxSeq = command.selectMaxSeqTempCREDPAY_TRANS_PAY(ProgramConfig.creditSaleNo) + 1;
-                    if (!command.saveTempCREDPAY_TRANS_PAY(maxSeq.ToString(), pmCode, payNum, amtPrice, chg))
+                    maxRecInt = command.selectMaxSeqTempCREDPAY_TRANS_PAY(ProgramConfig.creditSaleNo) + 1;
+                    if (!command.saveTempCREDPAY_TRANS_PAY(maxRecInt.ToString(), pmCode, payNum, amtPrice, chg))
                     {
                         _dtSaleMain.RejectChanges();
                         command.rollback();
@@ -3828,7 +3965,8 @@ namespace BJCBCPOS_Process
                 else if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.ReceivePOD)
                 {
                     string pmCode = pcd.Substring(0, 4);
-                    var res = savePaymentPOD(pmCode, "", amtDupPrice, chg, "", "", "", "", "", "", "", "", "");
+                    maxRecInt = command.selectMaxRecTEMP_PODTRANS_PAY(ProgramConfig.podRefNo);
+                    var res = savePaymentPOD(pmCode, "", amtDupPrice, chg, "", "", "", "", "", "", "", "", "", maxRecInt.ToString());
                     if (!res.response.next)
                     {
                         _dtSaleMain.RejectChanges();
@@ -3839,14 +3977,14 @@ namespace BJCBCPOS_Process
                 }
                 else
                 {
-                    if (command.saveTempPay(ProgramConfig.saleRefNo, "P", pcd, amtDupPrice, "0", "0", "0"))
+                    if (command.saveTempPay(ProgramConfig.saleRefNo, "P", pcd, amtDupPrice, chg, "0", "0"))
                     {
                         double maxRecQntInt = command.selectMaxRecTempDlyptransForTypeP(ProgramConfig.saleRefNo) + 1;
-                        int maxRecInt = command.selectMaxRecTempDlyptrans(ProgramConfig.saleRefNo) + 1;
+                        maxRecInt = command.selectMaxRecTempDlyptrans(ProgramConfig.saleRefNo) + 1;
 
-                        insertDtSaleMain(ProgramConfig.saleRefNo, maxRecInt.ToString(), sty, "P", pcd, maxRecQntInt.ToString(), amtDupPrice, "0", ProgramConfig.userId, "0"
+                        insertDtSaleMain(ProgramConfig.saleRefNo, maxRecInt.ToString(), sty, "P", pcd, maxRecQntInt.ToString(), amtDupPrice, chg, ProgramConfig.userId, "0"
                         , "", "0", "0", "0", "F", "0", "0", "0");
-                        if (!command.saveTempDlyptrans(ProgramConfig.saleRefNo, maxRecInt.ToString(), sty, "P", pcd, maxRecQntInt.ToString(), amtDupPrice, "0", ProgramConfig.userId, "0"
+                        if (!command.saveTempDlyptrans(ProgramConfig.saleRefNo, maxRecInt.ToString(), sty, "P", pcd, maxRecQntInt.ToString(), amtDupPrice, chg, ProgramConfig.userId, "0"
                         , "", "0", "0", "0", "F", "0", "0", "0"))
                         {
                             _dtSaleMain.RejectChanges();
@@ -3885,7 +4023,7 @@ namespace BJCBCPOS_Process
                     foreach (var item in lstPayDet)
                     {
                         //command.saveTemppayDetail(item.PMCode, item.PaymentGroupID, item.Seq, item.StepID, item.DataType, item.DataValue);
-                        var res = command.saveTemppayDetail(item.PMCode + item.MainRef, item.PaymentGroupID, item.Seq, item.StepID, item.DataType, item.DataValue);
+                        var res = command.saveTemppayDetail(item.PMCode + item.MainRef, item.PaymentGroupID, item.Seq, item.StepID, item.DataType, item.DataValue, maxRecInt.ToString());
                         if (!res.response.next)
                         {
                             _dtSaleMain.RejectChanges();
@@ -4511,7 +4649,6 @@ namespace BJCBCPOS_Process
 
         public StoreResult saveConfirmPayment(string openTime, double posChg, double cashierChg, AlertMessage AlertMessage = null)
         {
-            
             try
             {
                 bool hasDepo = false;
@@ -4568,22 +4705,49 @@ namespace BJCBCPOS_Process
                 }
 
                 List<DataTable> lstPrintDepo = new List<DataTable>();
+                string sty = ProgramConfig.pageBackFromPayment == PageBackFormPayment.Deposit ? "2" : "0";
+
+                bool isCreditSaleOrPOD = ProgramConfig.pageBackFromPayment == PageBackFormPayment.CreditSale || ProgramConfig.pageBackFromPayment == PageBackFormPayment.ReceivePOD;
+                string authDepo = "";
+                if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.Deposit)
+	            {
+                    if (ProgramConfig.superUserId != "")
+                    {
+                        authDepo = ProgramConfig.superUserId;
+                    }
+                    else
+                    {
+                        authDepo = ProgramConfig.userId;
+                    }
+                }
 
                 command.newTransaction();
 
-                string sty = ProgramConfig.pageBackFromPayment == PageBackFormPayment.Deposit ? "2" : "0";
-
                 insertDtSaleMain(ProgramConfig.saleRefNo, maxRec.ToString(), sty, "V", "Vat Value", "0", "0", ProgramConfig.vatRate, ProgramConfig.userId, ""
                 , "", "", "0", "0", "1", "0", "0", "0");
-                if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.CreditSale || command.saveTempDlyptrans(ProgramConfig.saleRefNo, maxRec.ToString(), sty, "V", "Vat Value", "0", "0", ProgramConfig.vatRate, ProgramConfig.userId, ""
+                if (isCreditSaleOrPOD || command.saveTempDlyptrans(ProgramConfig.saleRefNo, maxRec.ToString(), sty, "V", "Vat Value", "0", "0", ProgramConfig.vatRate, ProgramConfig.userId, ""
                 , "", "", "0", "0", "1", "0", "0", "0"))
                 {
                     maxRec++;
                     insertDtSaleMain(ProgramConfig.saleRefNo, maxRec.ToString(), sty, "F", "Final Value", ProgramConfig.qntValue, ProgramConfig.amtValue
                         , ProgramConfig.disValue, ProgramConfig.userId, "", "", "", "", (ProgramConfig.IsStandAloneMode ? "1" : "") , "1", "", "", "");
-                    if (ProgramConfig.pageBackFromPayment == PageBackFormPayment.CreditSale || command.saveTempDlyptrans(ProgramConfig.saleRefNo, maxRec.ToString(), sty, "F", "Final Value", ProgramConfig.qntValue, ProgramConfig.amtValue
-                        , ProgramConfig.disValue, ProgramConfig.userId, "", "", "", "", (ProgramConfig.IsStandAloneMode ? "1": "") , "1", "", "", ""))
+                    if (isCreditSaleOrPOD || command.saveTempDlyptrans(ProgramConfig.saleRefNo, maxRec.ToString(), sty, "F", "Final Value", ProgramConfig.qntValue, ProgramConfig.amtValue
+                        , ProgramConfig.disValue, ProgramConfig.userId, "", "", "999999", "", (ProgramConfig.IsStandAloneMode ? "1" : ""), "1", "", "", ""))
                     {
+                        if (authDepo != "")
+                        {
+                            //TO DO Insert TempDLYPTRANS_AUTHORIZE
+                            if (!command.saveTempdly_Authorize(ProgramConfig.saleRefNo, maxRec.ToString(), sty, "F", "Final Value", ProgramConfig.qntValue, ProgramConfig.amtValue
+                        , ProgramConfig.disValue, ProgramConfig.userId, "", "", authDepo, "", (ProgramConfig.IsStandAloneMode ? "1" : ""), "1", "", "", ""))
+                            {
+                                _dtSaleMain.RejectChanges();
+                                command.rollback();
+                                //TO DO Chnage language
+                                return new StoreResult(ResponseCode.Error, "ไม่สามารถบันทึกข้อมูลลง TEMPDLY_AUTHORIZE");
+                                //throw new Exception("ไม่สามารถบันทึกข้อมูลลง TEMPDLYPTRANS");
+                            }
+                        }
+
                         if (ProgramConfig.memberId != null && ProgramConfig.memberId != "" && ProgramConfig.memberId != "N/A")
                         {
                             bool isMMFormat = ProgramConfig.memberFormat == MemberFormat.MegaMaket;
@@ -4592,7 +4756,7 @@ namespace BJCBCPOS_Process
                             string discID = isMMFormat ? ProgramConfig.memberProfileMMFormat.CustomerCategory : ""; // CustomerCategory
                             string discAmt = isMMFormat ? ProgramConfig.memberProfileMMFormat.Customer_No : "0"; // Customer_No
 
-                            if (ProgramConfig.pageBackFromPayment != PageBackFormPayment.CreditSale)
+                            if (!isCreditSaleOrPOD)
                             {
                                 string subMemberId = memberID.Substring(0, 2);
                                 insertDtSaleMain(ProgramConfig.saleRefNo, "0", sty, "C", memberID, ProgramConfig.qntValue
@@ -4602,8 +4766,9 @@ namespace BJCBCPOS_Process
                                     , ProgramConfig.amtValue, ProgramConfig.disValue, ProgramConfig.userId, subMemberId
                                     , "", pdisc, discID, "", "", discAmt, "0", "0"))
                                 {
-                                    string messageMTEMP = ProgramConfig.message.get("SaleProcess", "SaveMTEMPDLYPTRANSIncomplete").message;
-                                    throw new Exception(messageMTEMP);
+                                    _dtSaleMain.RejectChanges();
+                                    command.rollback();
+                                    return new StoreResult(ResponseCode.Error, ProgramConfig.message.get("SaleProcess", "SaveMTEMPDLYPTRANSIncomplete").message);
                                     //throw new Exception("ไม่สามารถบันทึกข้อมูลสมาชิกใน TEMPDLYPTRANS");
                                 }
                             }
@@ -4693,24 +4858,41 @@ namespace BJCBCPOS_Process
                             string creditby2 = dtCred.Rows[0]["CASHIER_ID"].ToString();
                             string recepitNo2 = dtCred.Rows[0]["Ref_CredPay"].ToString();
 
+                            RequestPayInvoiceAR dataLog = new RequestPayInvoiceAR();
+                            dataLog.Trans_ID = transID2;
+                            dataLog.Payment_Amount = paymentAmount2;
+                            dataLog.Payment_Date = paydate2;
+                            dataLog.Pay_Store_Code = storeCode2;
+                            dataLog.Created_By = creditby2;
+                            dataLog.Receipt_No = recepitNo2;
+
                             int cnt = 0;
+
+                            dataLog.Invoice_list = new List<Invoice_List>();
                             clsMMFSAPI.invoice_list[] invList2 = new clsMMFSAPI.invoice_list[dtCredDetial.Rows.Count];
                             foreach (DataRow dr in dtCredDetial.Rows)
                             {
-                                invList2[cnt].invoice_no = dr["CRED_INVOICE_NO"].ToString();
-                                invList2[cnt].invoice_amount = Convert.ToDouble(dr["CRED_AMOUNT"]);
+                                Invoice_List inv = new Invoice_List();
+                                inv.Invoice_No = invList2[cnt].invoice_no = dr["CRED_INVOICE_NO"].ToString();
+                                inv.Apply_Amount = invList2[cnt].invoice_amount = Convert.ToDouble(dr["CRED_AMOUNT"]);
                                 cnt++;
+
+                                dataLog.Invoice_list.Add(inv);
                             }
 
+                            dataLog.Payment_list = new List<Payment_List>();
                             clsMMFSAPI.payment_list[] pmList2 = new clsMMFSAPI.payment_list[dtCredPay.Rows.Count];
                             cnt = 0;
                             foreach (DataRow dr in dtCredPay.Rows)
                             {
-                                pmList2[cnt].seq_no = (int)dr["SEQ"];
-                                pmList2[cnt].payment_method = dr["PaymentMainCode"].ToString().Trim();
-                                pmList2[cnt].apply_amount = Convert.ToDouble(dr["PAYMENT_AMOUNT"]) - Convert.ToDouble(dr["PAYMENT_CHANGE"]);
-                                pmList2[cnt].payment_no = dr["PAYMENT_NUMBER"].ToString().Trim();
+                                Payment_List paylst = new Payment_List();
+                                paylst.SEQ = pmList2[cnt].seq_no = (int)dr["SEQ"];
+                                paylst.Payment_Method = pmList2[cnt].payment_method = dr["PaymentMainCode"].ToString().Trim();
+                                paylst.Apply_Amount = pmList2[cnt].apply_amount = Convert.ToDouble(dr["PAYMENT_AMOUNT"]) - Convert.ToDouble(dr["PAYMENT_CHANGE"]);
+                                paylst.Payment_No = pmList2[cnt].payment_no = dr["PAYMENT_NUMBER"].ToString().Trim();
                                 cnt++;
+
+                                dataLog.Payment_list.Add(paylst);
                             }
 
                             clsMMFSAPI sv2 = new clsMMFSAPI();
@@ -4724,9 +4906,29 @@ namespace BJCBCPOS_Process
                                 defaultRetry = Convert.ToInt32(res.otherData.Rows[0]["NUMBER_RETRY"]);
                             }
 
+
+                            command.saveAPILOG(dataLog, ProgramConfig.creditSaleNo, "payInvoiceAR", "OUT");
+
                             int cnt3 = 0;
                         Retry:
-                            sv2.payInvoiceAR(ref rescode2, ref  resmsg_en2, ref  resmsg_th2, ref  transID2, ref paymentAmount2, ref  paydate2, ref  storeCode2, ref  creditby2, ref  recepitNo2, ref  pmList2, ref  invList2, ref  paymentID2);
+                            sv2.payInvoiceAR(ref rescode2, ref  resmsg_en2, ref  resmsg_th2, ref  transID2, ref paymentAmount2, ref  paydate2, ref  storeCode2, ref  creditby2
+                                , ref  recepitNo2, ref  pmList2, ref  invList2, ref  paymentID2);
+
+                            ResponsePayInvoiceAR dataLogRes = new ResponsePayInvoiceAR();
+                            dataLogRes.Result_Code = rescode2;
+                            dataLogRes.Result_Msg_EN = resmsg_en2;
+                            dataLogRes.Result_Msg_TH = resmsg_th2;
+                            dataLogRes.Api_Type = "";
+                            dataLogRes.Payment_ID = paymentID2;
+                            dataLogRes.Trans_ID = transID2;
+                            dataLogRes.Payment_Amount = paymentAmount2;
+                            dataLogRes.Payment_Date = paydate2;
+                            dataLogRes.Pay_Store_Code = storeCode2;
+                            dataLogRes.Created_By = creditby2;
+                            dataLogRes.Invoice_No = invoiceNo2;
+
+                            command.saveAPILOG(dataLogRes, ProgramConfig.creditSaleNo, "payInvoiceAR", "IN");
+
                             if (rescode2 == "0000")
                             {
                                 command.updateCreditPayTrans(_ObjPayInvoiceAR.ReceiptNo, false, transID: transID2, paymentID: paymentID2);
@@ -4842,7 +5044,7 @@ namespace BJCBCPOS_Process
                                     return new StoreResult(ResponseCode.Ignore, res.responseMessage);
                                 }
                             }
-                            
+
                             res = command.podPrintReceipt();
                             if (!res.response.next)
                             {
@@ -4909,7 +5111,6 @@ namespace BJCBCPOS_Process
                                     }
 
                                     //TO DO Recheck ลูกค้าต้องการใบเสร็จหรือไม่ Policy #143
-
                                     if (ProgramConfig.printInvoiceType == PrintInvoiceType.FULLTAX)
                                     {
                                         if (hasDepo)
@@ -4930,7 +5131,7 @@ namespace BJCBCPOS_Process
                                                 ProgramConfig.running.updateValue();
                                                 lstPrintDepo.Add(dtCN);
                                             }
-                                            
+
                                         }
 
                                         //Call RCV2FULLFROM
@@ -4946,7 +5147,7 @@ namespace BJCBCPOS_Process
                                         fftino = res.otherData.Rows[0]["FFTI_NO"].ToString();
                                         offtino = res.otherData.Rows[0]["OFFTI_NO"].ToString();
 
-                                        command.validateFFTI(fftino);
+                                        res = command.validateFFTI(fftino, abbNo);
                                         if (!res.response.next)
                                         {
                                             _dtSaleMain.RejectChanges();
@@ -5058,11 +5259,11 @@ namespace BJCBCPOS_Process
                         {
                             if (ProgramConfig.memberFormat == MemberFormat.MegaMaket)
                             {
-                                foreach (var item in lstPrintDepo)
+                                foreach (var dt in lstPrintDepo)
                                 {
-                                    if (dtCN.Rows.Count > 0)
+                                    if (dt.Rows.Count > 0)
                                     {
-                                        Hardware.printCN(dtCN.Rows[0]["CNNo"].ToString());
+                                        Hardware.printCN(dt.Rows[0]["CNNo"].ToString());
                                     }
                                 }
                             }
@@ -6307,12 +6508,11 @@ namespace BJCBCPOS_Process
                     ProgramConfig.holdOrderRefNoIni = result.otherData.Rows[0]["ReferenceNoINI"].ToString();
                 }
 
-                
-                if (command.insertTmpTrans())
-                {
-                    DataRow[] data = getTempSaleItem();
+                DataRow[] data = getTempSaleItem();
+                if (command.insertTmpTrans(data.Length.ToString()))
+                {                    
                     foreach (DataRow dr in data)
-                    {            
+                    {
                         string rec = dr["REC"].ToString();
                         string pcd = dr["PCD"].ToString();
                         string qnt = dr["QNT"].ToString();
@@ -6324,13 +6524,17 @@ namespace BJCBCPOS_Process
                         {
                             entryData = res.otherData.Rows[0]["PCD"].ToString();
                         }
-                        
+
                         string stt = dr["stt"].ToString();
 
                         command.insertTmpTransDetail(rec, pcd, qnt, amt, entryData, stt);
                     }
 
                     result = saveCancelSaleTransaction(FunctionID.Sale_CancelWhileSale_HoldOrder_SaveHoldTransaction, "0");
+                }
+                else
+                {
+                    return new StoreResult(ResponseCode.Error, "Cannot Insert TmpTrans");
                 }
 
                 return result;
@@ -6361,7 +6565,7 @@ namespace BJCBCPOS_Process
                         string amt = dr["AMT"].ToString();
                         string stt = dr["stt"].ToString();
 
-                        insertDtSaleMain(ProgramConfig.saleRefNo, rec, "", "0", pcd, qnt, amt, "", "", "", stt, "", "", "", "", "", "", "");
+                        insertDtSaleMain(ProgramConfig.saleRefNo, rec, "", "0", pcd, qnt, amt, "", "", "", stt, "", "", (Convert.ToDouble(amt) / Convert.ToDouble(qnt)).ToString(), "", "", "", "");
                     }
                     _dtSaleMain.AcceptChanges();
                     updateTempSaleItemLanguage();
@@ -6524,11 +6728,11 @@ namespace BJCBCPOS_Process
             }
         }
 
-        public StoreResult selectPAYMENT_PARAMETER(string buType, string pmCode)
+        public StoreResult selectPAYMENT_PARAMETER(string pmCode)
         {
             try
             {
-                DataTable dt = command.selectPAYMENT_PARAMETER(buType, pmCode);
+                DataTable dt = command.selectPAYMENT_PARAMETER(pmCode);
                 if (dt.Rows.Count > 0)
                 {
                     return new StoreResult(ResponseCode.Success, "Success", data: dt);
@@ -7002,9 +7206,8 @@ namespace BJCBCPOS_Process
         }
 
         public StoreResult savePaymentPOD(string pay, string payNum, string amt, string chg, string pdisc, string refID, string approveCode, string traceNo, 
-                                          string terminalID, string merchantID, string edc_date, string invoiceNo, string QRCode)
+                                          string terminalID, string merchantID, string edc_date, string invoiceNo, string QRCode, string rec)
         {
-            //command.newTransaction();
             try
             {
                 string pmCode = "";
@@ -7015,10 +7218,10 @@ namespace BJCBCPOS_Process
 
                 DataTable dt;
 
-                if (payNum != "" && !pay.StartsWith("QR"))
+                if (payNum != "")
                 {
                     dt = command.functionGetPaymentCode(payNum);
-                    if (dt.Rows.Count > 0)
+                    if (dt.Rows.Count > 0 && dt.Rows[0][0].ToString() != "XXXXXXXXXXXXXXXXXXXX")
                     {
                         pmCode = dt.Rows[0][0].ToString().Substring(0, 8);
                     }
@@ -7034,7 +7237,7 @@ namespace BJCBCPOS_Process
 
                 //string pmCode = res.otherData.Rows[0]["PAYMENTCODEDISPLAY"].ToString().Trim().Replace(" ", "");
                 command.DeleteTEMP_PODTRANS_PAY(pay: pmCode, payNumber: payNum, approveCode: approveCode);
-                var res = command.saveTEMP_PODTRANS_PAY(pmCode, payNum, amt, chg, pdisc, refID, approveCode, traceNo, terminalID, merchantID, edc_date, invoiceNo, QRCode);
+                var res = command.saveTEMP_PODTRANS_PAY(pmCode, payNum, amt, chg, pdisc, refID, approveCode, traceNo, terminalID, merchantID, edc_date, invoiceNo, QRCode, rec);
                 if (!res.response.next)
                 {
                     //Fix Language
@@ -7135,6 +7338,8 @@ namespace BJCBCPOS_Process
             DataTable dt2 = command.selectPODTRANS_PAY();
             var res = command.getRunning(FunctionID.ReceivePOD_GetRunning, RunningReceiptID.PODAPI);
 
+            RequestPayInvoicePOD dataLog = new RequestPayInvoicePOD();
+
             string rescode = "";
             string resmsg_en = "";
             string resmsg_th = "";
@@ -7151,27 +7356,34 @@ namespace BJCBCPOS_Process
             if (dt.Rows.Count > 0)
             {
                 DataRow dr = dt.Rows[0];
-                invoiceNo = dr["REF_FULLTAX"].ToString();
-                transID = res.otherData.Rows[0]["ReferenceNo"].ToString();
-                paymentAmount = Convert.ToDouble(dr["POD_AMT"].ToString());
+                dataLog.Invoice_No = invoiceNo = dr["REF_FULLTAX"].ToString();
+                dataLog.Trans_ID = transID = res.otherData.Rows[0]["ReferenceNo"].ToString();
+                dataLog.Payment_Amount = paymentAmount = Convert.ToDouble(dr["POD_AMT"].ToString());
                 DateTime date = DateTime.Parse(dr["TTM"].ToString());
-                paydate = date.ToString("yyyy-MM-dd HH:mm:ss");
-                storeCode = dr["STCODE"].ToString();
-                creditby = dr["CASHIER_ID"].ToString();
-                recepitNo = dr["REF_POD"].ToString();
+                dataLog.Payment_Date = paydate = date.ToString("yyyy-MM-dd HH:mm:ss");
+                dataLog.Pay_Store_Code =  storeCode = dr["STCODE"].ToString();
+                dataLog.Created_By = creditby = dr["CASHIER_ID"].ToString();
+                dataLog.Receipt_No = recepitNo = dr["REF_POD"].ToString();
+
             }
 
             clsMMFSAPI.payment_list[] lst = new clsMMFSAPI.payment_list[dt2.Rows.Count];
+            dataLog.Payment_list = new List<Payment_List>();
+
             if (dt2.Rows.Count > 0)
             {
                 int cnt = 0;
                 foreach (DataRow dr in dt2.Rows)
                 {
-                    lst[cnt].seq_no = (int)dr["REC"];
-                    lst[cnt].payment_method = dr["PAY"].ToString().Trim();
-                    lst[cnt].apply_amount = Convert.ToDouble(dr["AMT"]) - Convert.ToDouble(dr["CHG"]);
-                    lst[cnt].payment_no = dr["PAY_NUMBER"].ToString().Trim();
+                    var paylist = new Payment_List();
+
+                    paylist.SEQ = lst[cnt].seq_no = (int)dr["REC"];
+                    paylist.Payment_Method = lst[cnt].payment_method = dr["PAY"].ToString().Trim();
+                    paylist.Apply_Amount = lst[cnt].apply_amount = Convert.ToDouble(dr["AMT"]) - Convert.ToDouble(dr["CHG"]);
+                    paylist.Payment_No = lst[cnt].payment_no = dr["PAY_NUMBER"].ToString().Trim();
                     cnt++;
+
+                    dataLog.Payment_list.Add(paylist);
                 }
             }
 
@@ -7187,8 +7399,27 @@ namespace BJCBCPOS_Process
             }
 
             int cnt2 = 0;
+
+            //Save API log
+            command.saveAPILOG(dataLog, ProgramConfig.podRefNo, "payInvoicePOD", "OUT");
         Retry:
             sv.payInvoicePOD(ref rescode, ref resmsg_en, ref resmsg_th, ref paymentID, ref invoiceNo, ref transID, ref paymentAmount, ref paydate, ref storeCode, ref creditby, ref recepitNo, ref lst);
+
+            ResponsePayInvoicePOD dataLogRes = new ResponsePayInvoicePOD();
+            dataLogRes.Result_Code = rescode;
+            dataLogRes.Result_Msg_EN = resmsg_en;
+            dataLogRes.Result_Msg_TH = resmsg_th;
+            dataLogRes.Api_Type = "";
+            dataLogRes.Payment_ID = paymentID;
+            dataLogRes.Invoice_No = invoiceNo;
+            dataLogRes.Trans_ID = transID;
+            dataLogRes.Payment_Amount = paymentAmount;
+            dataLogRes.Payment_Date = paydate;
+            dataLogRes.Pay_Store_Code = storeCode;
+            dataLogRes.Created_By = creditby;
+            dataLogRes.Receipt_No = recepitNo;
+
+            command.saveAPILOG(dataLogRes, ProgramConfig.podRefNo, "payInvoicePOD", "IN");
 
             if (rescode == "0000")
             {
@@ -7217,6 +7448,93 @@ namespace BJCBCPOS_Process
             {
                 AppLog.writeLog("connection to server lost at SaleProcess.loadTEMP_PODTRANS_PAY");
                 throw;
+            }
+        }
+
+        public int selectMaxRecTEMP_PODTRANS_PAY(string refNo)
+        {
+            try
+            {
+                return command.selectMaxRecTEMP_PODTRANS_PAY(refNo);
+            }
+            catch (NetworkConnectionException)
+            {
+                AppLog.writeLog("connection to server lost at SaleProcess.loadTEMP_PODTRANS_PAY");
+                throw;
+            }
+        }
+
+        public StoreResult SaveDrawerTrans(FunctionID function)
+        {
+            try
+            {
+                return command.saveDrawerTrans(ProgramConfig.saleRefNo, function);
+            }
+            catch (NetworkConnectionException)
+            {
+                AppLog.writeLog("connection to server lost at SaleProcess.CheckValuePayment");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new StoreResult(ResponseCode.Error, ex.Message, "", "");
+            }
+        }
+
+        public StoreResult GetRefQRPayment_Offline(string pmCode, string qrRef)
+        {
+            try
+            {
+                return command.GetRefQRPayment_Offline(pmCode, qrRef);
+            }
+            catch (NetworkConnectionException)
+            {
+                AppLog.writeLog("connection to server lost at SaleProcess.CheckValuePayment");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new StoreResult(ResponseCode.Error, ex.Message, "", "");
+            }
+        }
+
+        public StoreResult selectDLYPTRANS(string refNo, string vty = "", string dty = "")
+        {
+            try
+            {
+                var res = command.selectTEMPDLYPTRANS_EDC(refNo, vty, dty);
+                if (res.otherData.Rows.Count > 0)
+                {
+                    string cardNo = res.otherData.Rows[0]["PCD"].ToString();
+
+                    res = command.selectEDCTrans(refNo, cardNo);
+                    if (res.otherData.Rows.Count > 0)
+                    {
+                        return new StoreResult(ResponseCode.Success, data: res.otherData);
+                    }
+                }
+
+                res = command.selectDLYPTRANS(refNo, vty, dty);
+                if (res.otherData.Rows.Count > 0)
+                {
+                    string cardNo = res.otherData.Rows[0]["PCD"].ToString();
+
+                    res = command.selectEDCTrans(refNo, cardNo);
+                    if (res.otherData.Rows.Count > 0)
+                    {
+                        return new StoreResult(ResponseCode.Success, data: res.otherData);
+                    }
+                }
+                return new StoreResult(ResponseCode.Error, "");
+            }
+            catch (NetworkConnectionException)
+            {
+                AppLog.writeLog("connection to server lost at VoidProcess.PrintVoidReceipt");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new StoreResult(ResponseCode.Error, ex.Message, "", "");
             }
         }
     }

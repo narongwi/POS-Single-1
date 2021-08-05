@@ -75,9 +75,12 @@ namespace BJCBCPOS
                         main = Screen.AllScreens[0];
                     }
 
-                    if (!File.Exists(FixedData.config_name) || !File.Exists(FixedData.running_name))
+                    bool hasConfigINI = File.Exists(FixedData.config_name);
+                    bool hasRunningINI = File.Exists(FixedData.running_name);
+
+                    if (!hasConfigINI || !hasRunningINI)
                     {
-                        frmSetupIni ini = new frmSetupIni();
+                        frmSetupIni ini = new frmSetupIni(hasConfigINI, hasRunningINI);
                         if (ini.ShowDialog() != DialogResult.OK)
                         {
                             timer.Interval = 1000;
@@ -113,7 +116,10 @@ namespace BJCBCPOS
                     }
 
                     // read .ini config
-                    ProgramConfig.config = new INIConfig(FixedData.config_name);
+                    if (ProgramConfig.config == null)
+                    {
+                        ProgramConfig.config = new INIConfig(FixedData.config_name);
+                    }
                     ProgramConfig.running = new INIConfig(FixedData.running_name);
 
                     // database connect

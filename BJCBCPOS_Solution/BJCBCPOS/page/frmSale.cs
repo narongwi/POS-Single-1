@@ -12,11 +12,15 @@ using System.Reflection;
 using System.Collections;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Security.Permissions;
+
 
 namespace BJCBCPOS
 {
-    public partial class frmSale : Form
+    [SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.UnmanagedCode)]
+    public partial class frmSale : Form, IMessageFilter
     {
+
         private frmNotify notify;
         public frmMainMenu frmMain;
         private bool chkOpenDrawer = false;
@@ -24,6 +28,8 @@ namespace BJCBCPOS
         public frmSaleProcess fSaleProcess = null;
         private UCItemSell lastUCIS = new UCItemSell();
         private string currentPanel = "";
+        private int cntTimeoutSale = 0;
+        private int timeOutSale = ProgramConfig.timeOutActionIdle;
 
         Sale_TypeCode saleTypeCode;
 
@@ -72,37 +78,38 @@ namespace BJCBCPOS
             fSaleProcess = new frmSaleProcess(this);
         }
 
-        public void DrawerStatus(string status)
-        {
-            //MessageBox.Show(status);
-            chkOpenDrawer = true;
-        }
+        //public void DrawerStatus(string status)
+        //{
+        //    chkOpenDrawer = true;
+        //}
 
         private void frmSale_Load(object sender, EventArgs e)
         {
             frmLoading.showLoading();
             try
             {
+                Application.AddMessageFilter(this);
                 ProgramConfig.pageBackFromPayment = PageBackFormPayment.NormalSale;
                 ucHeader1.alertFunctionID = FunctionID.Sale_GetMessageCashier;
                 afterNotify = false;
                 if (ProgramConfig.salePageState == 0)
                 {
+                    if (!timer1.Enabled)
+                    {
+                        timer1.Start();
+                    }
+                    cntTimeoutSale = 0;
                     // initial page load from main menu
-                    ucTBScanBarcode.Focus();
+                    //ucTBScanBarcode.Focus();
 
-                    ProgramConfig.memberId = "";
-                    ProgramConfig.memberName = "";
-                    ProgramConfig.memberCardNo = "";
-                    //ProgramConfig.printInvoiceType = "";
-                    ProgramConfig.memberProfileMMFormat.Clear();
+                    Utility.GlobalClear();
 
                     ProgramConfig.employeeID = "";
 
                     StoreResult result = null;
-                    panelScanBarcode.BringToFront();
-                    currentPanel = CurrentPanelSale.PanelScanBarcode;  //currentPanel = "panelScanBarcode";
-                    Hardware.addDrawerListeners(DrawerStatus);
+                    //panelScanBarcode.BringToFront();
+                    //currentPanel = CurrentPanelSale.PanelScanBarcode;  //currentPanel = "panelScanBarcode";
+                    //Hardware.addDrawerListeners(DrawerStatus);
 
                     if (ProgramConfig.saleNeedAuthorize)
                     {
@@ -230,7 +237,8 @@ namespace BJCBCPOS
                     }
                     else if (getConfig == 2) //Member
                     {
-                        clickSearchMember(sender, e);
+                        currentPanel = CurrentPanelSale.PanelMember; 
+                        clickSearchMember(sender, e);                  
                     }
                     else
                     {
@@ -382,6 +390,7 @@ namespace BJCBCPOS
 
         private void picBtBack4_Click(object sender, EventArgs e)
         {
+            picBtBack4.Focus();
             panelScanBarcode.BringToFront();
             currentPanel = CurrentPanelSale.PanelScanBarcode; //currentPanel = "panelScanBarcode";
             DisableControl();
@@ -417,6 +426,7 @@ namespace BJCBCPOS
 
         private void picBtBack_Click(object sender, EventArgs e)
         {
+            picBtBack.Focus();
             panelScanBarcode.BringToFront();
             currentPanel = CurrentPanelSale.PanelScanBarcode; //currentPanel = "panelScanBarcode";
             DisableControl();
@@ -427,6 +437,11 @@ namespace BJCBCPOS
             try
             {
                 double amountCash = double.Parse(lbTxtTotal.Text);
+                if (amountCash <= 0)
+                {
+                    process.savePaymentCashBalance("0.00", "0.00", "CASH", "0.00", "", "", "");
+                }
+              
                 ShowPayment(amountCash.ToString(displayAmt));
 
             }
@@ -462,6 +477,8 @@ namespace BJCBCPOS
             //Program.control.CloseForm("frmPayment");
             //Program.control.ShowForm("frmPayment");
 
+            ProgramConfig.paymentOpenCashDrawer = FunctionID.Sale_OpenDrawerAndRecordTime;
+            ProgramConfig.paymentCloseCashDrawer = FunctionID.Sale_CloseDrawerAndRecordTime;
             ProgramConfig.paymentFunction = FunctionID.Sale_DisplayPaymentMenu;
             ProgramConfig.pageBackFromPayment = PageBackFormPayment.NormalSale;
 
@@ -563,9 +580,14 @@ namespace BJCBCPOS
                     ucHeader1.showMember_ButtonBack = false;
                 }
                 ucHeader1.btnMember_Click(sender, e);
+                this.ActiveControl = ucKeypad.ucTBWI;
                 //panelMember.BringToFront();
                 //ucTBWI_Member.InitialTextBoxIcon(BJCBCPOS.Properties.Resources.icon_textbox_search, UCTextBoxIconType.SearchAndDelete, IconType.Search, "ກະລຸນາລະບຸສະມາຊິກ");
                 //ucTBWI_Member.Focus();
+            }
+            else
+            {
+                this.ActiveControl = ucTBScanBarcode;
             }
         }
 
@@ -597,6 +619,13 @@ namespace BJCBCPOS
             DisableControl();
             panelScanBarcode.BringToFront();
             currentPanel = CurrentPanelSale.PanelScanBarcode;  //currentPanel = "panelScanBarcode";
+            ucTBScanBarcode.Focus();
+        }
+
+        private void ucHeader1_MemberEnterFromButton(object sender, EventArgs e)
+        {
+            panelScanBarcode.BringToFront();
+            currentPanel = CurrentPanelSale.PanelScanBarcode;
             ucTBScanBarcode.Focus();
         }
 
@@ -1135,54 +1164,54 @@ namespace BJCBCPOS
                 #region CalDiscount
                 else if (pn_item_sell.Controls.Count > 0 && barcode == "")
                 {
-                    ucTBScanBarcode.EnabledUC = true;
-                    //CalDiscount
-                    double ind = 0;
-                    string discountDesc, saleAmt, discountAmt;
+                    //ucTBScanBarcode.EnabledUC = true;
+                    ////CalDiscount
+                    //double ind = 0;
+                    //string discountDesc, saleAmt, discountAmt;
+                    ////btnPayment.Enabled = true;
+                    ////btnPayment.BackgroundImage = Properties.Resources.payment_enable;
+
+                    ////เช็ค FunctionId ของDiscountอีกทีด้วย
+                    //frmLoading.showLoading();
+                    //ProcessResult result = process.calculateDiscount();
+                    //frmLoading.closeLoading();
+                    //if (result.response.next)
+                    //{
+                    //    panel_list_discount.Controls.Clear();
+                    //    DataRow[] data = (DataRow[])result.data;
+                    //    foreach (DataRow row in data)
+                    //    {
+                    //        discountDesc = row["ProductName"].ToString();
+                    //        saleAmt = (double.Parse(row["DisplayAmt"].ToString())).ToString(displayAmt);
+                    //        discountAmt = (double.Parse(row["AMT"].ToString())).ToString(displayAmt);
+
+                    //        UCListDiscount ucDis = new UCListDiscount((int)row["REC"]);
+                    //        ucDis.lbTxtName.Text = discountDesc;
+                    //        ucDis.lbTxtPrice.Text = saleAmt;
+                    //        ucDis.lbTxtAmt.Text = discountAmt;
+                    //        ucDis.lbTxtAmt.Visible = true;
+                    //        panel_discount.BringToFront();
+                    //        panel_list_discount.Controls.Add(ucDis);
+
+                    //        ind += double.Parse(row["AMT"].ToString());
+                    //    }
+                    //    lbTxtdiscount1.Text = ind.ToString(displayAmt);
+                    //    lbTxtTotal.Text = (double.Parse(lbTxtSubtotal.Text) - ind).ToString(displayAmt);
+
+                    //    frmMoCus.lbTxtDiscount.Text = lbTxtdiscount1.Text;
+                    //    frmMoCus.lbTxtTotalCash.Text = lbTxtTotal.Text;
+                    //}
+                    //else
+                    //{
+                    //    notify = new frmNotify(result.response, result.responseMessage, result.helpMessage);
+                    //    notify.ShowDialog(this);
+                    //}
+                    //DisableControl();
+
                     //btnPayment.Enabled = true;
                     //btnPayment.BackgroundImage = Properties.Resources.payment_enable;
 
-                    //เช็ค FunctionId ของDiscountอีกทีด้วย
-                    frmLoading.showLoading();
-                    ProcessResult result = process.calculateDiscount();
-                    frmLoading.closeLoading();
-                    if (result.response.next)
-                    {
-                        panel_list_discount.Controls.Clear();
-                        DataRow[] data = (DataRow[])result.data;
-                        foreach (DataRow row in data)
-                        {
-                            discountDesc = row["ProductName"].ToString();
-                            saleAmt = (double.Parse(row["DisplayAmt"].ToString())).ToString(displayAmt);
-                            discountAmt = (double.Parse(row["AMT"].ToString())).ToString(displayAmt);
-
-                            UCListDiscount ucDis = new UCListDiscount((int)row["REC"]);
-                            ucDis.lbTxtName.Text = discountDesc;
-                            ucDis.lbTxtPrice.Text = saleAmt;
-                            ucDis.lbTxtAmt.Text = discountAmt;
-                            ucDis.lbTxtAmt.Visible = true;
-                            panel_discount.BringToFront();
-                            panel_list_discount.Controls.Add(ucDis);
-
-                            ind += double.Parse(row["AMT"].ToString());
-                        }
-                        lbTxtdiscount1.Text = ind.ToString(displayAmt);
-                        lbTxtTotal.Text = (double.Parse(lbTxtSubtotal.Text) - ind).ToString(displayAmt);
-
-                        frmMoCus.lbTxtDiscount.Text = lbTxtdiscount1.Text;
-                        frmMoCus.lbTxtTotalCash.Text = lbTxtTotal.Text;
-                    }
-                    else
-                    {
-                        notify = new frmNotify(result.response, result.responseMessage, result.helpMessage);
-                        notify.ShowDialog(this);
-                    }
-                    DisableControl();
-
-                    btnPayment.Enabled = true;
-                    btnPayment.BackgroundImage = Properties.Resources.payment_enable;
-
-                    DisplayExchangeRate();
+                    //DisplayExchangeRate();
                 }
                 #endregion  
 
@@ -1203,7 +1232,8 @@ namespace BJCBCPOS
                     ProcessResult result = process.scanSaleProduct(barcode, double.Parse(qty), IsNoScanBarcode, discountType, discountValue, ucTxtCouponNo.Text,
                                                                     checkIME_Serial: () => CallPopupInput(), 
                                                                     CheckAuth: (p, h) => Utility.CheckAuthPass(this, p, h), 
-                                                                    AlertMessage: (resCode, resMsg, resHelpMsg) => Utility.AlertMessage(this, resCode, resMsg, resHelpMsg));
+                                                                    AlertMessage: (resCode, resMsg, resHelpMsg) => Utility.AlertMessage(this, resCode, resMsg, resHelpMsg),
+                                                                    ShowAlertNoSale: (resCode, resMsg) => ShowAlertNoSale(resCode, resMsg));
                     
                     frmLoading.closeLoading();
                     if (result.response.next)
@@ -1479,6 +1509,15 @@ namespace BJCBCPOS
             frmInp.ShowDialog(this);
 
             return frmInp.result;
+        }
+
+        private void ShowAlertNoSale(ResponseCode resCode, string resMsg)
+        {
+            frmLoading.closeLoading();
+            frmAlertMsgCustomer frm = new frmAlertMsgCustomer(resMsg);
+            frm.Show();
+            Utility.AlertMessage(resCode, resMsg);
+            frm.Dispose();
         }
 
 
@@ -1897,7 +1936,6 @@ namespace BJCBCPOS
                 {
                     ucTBScanBarcode.FocusTxt();
                 }
-                RefreshGrid2();
                 setFocus();
                 frmLoading.closeLoading();
             }
@@ -1915,7 +1953,7 @@ namespace BJCBCPOS
         private bool CheckProductRule(string stv, string discID, string productCode)
         {
             string barcodetype = "";
-            if (stv == "N" && discID != "10004")
+            if (stv == "Z" || (stv == "N" && discID != "10004"))
             {
                 barcodetype = "NOR";
             }
@@ -2284,7 +2322,7 @@ namespace BJCBCPOS
             {
                 string valueReturn = "";
                 pn_drop_menu.Visible = false;
-                var ucIDDL = (UCHambergerItem)sender;
+                var ucIDDL = (UCHamburgerItem)sender;
                 //Fix Test
                 #region Cancel Receipt
                 if (ucIDDL.MenuID == MenuIdHamberger.CancelReceipt)
@@ -2461,7 +2499,6 @@ namespace BJCBCPOS
                             var res = process.CheckOnhold();
                             if (res.response.next)
                             {
-                                currentPanel = CurrentPanelSale.PanelSaveTempSale;
                                 UCSaveTemp uc = new UCSaveTemp(res.otherData);
                                 uc.Location = new System.Drawing.Point(689, 43);
                                 uc.Name = "UCSaveTemp";
@@ -2472,7 +2509,18 @@ namespace BJCBCPOS
                                 uc.BackClick += (s, e) =>
                                 {
                                     panelMainSell.Enabled = true;
-                                    ClearValue();
+                                    if (ProgramConfig.memberId == "")
+                                    {
+                                        ClearValue();
+                                        clickSearchMember(s, e);                                       
+                                    }
+                                    else
+                                    {
+                                        ClearValue(false);
+                                        panelScanBarcode.BringToFront();
+                                        currentPanel = CurrentPanelSale.PanelScanBarcode;
+                                        ucTBScanBarcode.FocusTxt();
+                                    }
                                 };
                                 this.Controls.Add(uc);
                                 this.Controls.SetChildIndex(uc, 0);
@@ -2485,7 +2533,8 @@ namespace BJCBCPOS
                         }
                         else
                         {
-
+                            // Fix Language
+                            Utility.AlertMessage(ResponseCode.Information, "ไม่มีสิทธิเข้าใช้งานเมนูนี้");
                         }
                     }
                 }
@@ -2509,6 +2558,10 @@ namespace BJCBCPOS
                                 {
                                     process.syncToDataTank("Cancel", FunctionID.Sale_CancelWhileSale_HoldOrder_SaveHoldTransaction_SynchSaleTransactiontoDataTank, ProgramConfig.saleRefNo, "1");
                                 }
+                            }
+                            else
+                            {
+                                Utility.AlertMessage(res);
                             }
                             //}
                         }
@@ -2619,14 +2672,29 @@ namespace BJCBCPOS
                 ProgramConfig.loadHoldOrderReceipt = itm.lbRefVal.Text;
 
                 //Product
+                frmLoading.showLoading();
                 foreach (DataRow dr in res.otherData.Rows)
                 {
-                    frmLoading.showLoading();
+
                     ucTxtQty.Text = dr["Qnt"].ToString();
-                    keyProduct(false, dr["ProductCode"].ToString().Trim());
-                    frmLoading.closeLoading();
+
+                    Regex re = new Regex(@"(\d+)\s*([a-zA-Z]+)*");
+                    Match result = re.Match(dr["ProductCode"].ToString().Trim());
+                    string alphaPart = result.Groups[1].ToString();
+                    string numberPart = result.Groups[2].ToString();
+
+                    keyProduct(false, alphaPart);
+
+                    if (!String.IsNullOrEmpty(numberPart))
+                    {
+                        int rec = process.selectMaxRecTempDlyptrans(ProgramConfig.saleRefNo);
+                        StoreResult resUD = process.updatePCDSymbolTempDlyptrans(alphaPart, rec.ToString(), numberPart);
+                    }
+                    
+
                 }
 
+                loadTempDLYPTRANS();
                 //Member
                 string memID = res.otherData.Rows[0]["CustID"].ToString();
                 if (memID != "N/A" && memID.Trim() != "")
@@ -2649,6 +2717,11 @@ namespace BJCBCPOS
                         newFont.Font = new Font(ProgramConfig.language.FontName, 14);
                         int checkWidth = TextRenderer.MeasureText(memName, newFont.Font).Width;
                         ucHeader1.pnNameSize = new Size(50 + checkWidth, 43);
+
+                        ucHeader1.VisiblePanelMember = false;
+                        panelScanBarcode.BringToFront();
+                        currentPanel = CurrentPanelSale.PanelScanBarcode; //currentPanel = "panelScanBarcode";
+                        ucTBScanBarcode.FocusTxt();
                     }
                 }
               
@@ -2662,7 +2735,8 @@ namespace BJCBCPOS
                         ProgramConfig.employeeID = empID;
                     }
                 }
-            }       
+            }
+            frmLoading.closeLoading();
         }
 
         public void SetSaleTypeCode(Sale_TypeCode saleTypeCode)
@@ -2717,8 +2791,7 @@ namespace BJCBCPOS
                 }
                 else
                 {
-                    ProgramConfig.salePageState = 2;
-                    frmSale_Activated(null, null);
+                    ClearFormCancel();
                 }
             }
             else if (check.policy == PolicyStatus.Work) //2
@@ -2745,10 +2818,28 @@ namespace BJCBCPOS
                 }
                 else
                 {
-                    ProgramConfig.salePageState = 2;
-                    frmSale_Activated(null, null);
+                    ClearFormCancel();
                 }
             }
+        }
+
+        private void ClearFormCancel()
+        {
+            AppLog.writeLog("ClearFormCancel");
+            Program.control.CloseForm("frmPayment");
+            Program.control.CloseForm("frmDeleteReason");
+
+            Form form = Application.OpenForms["frmMonitorCustomer"];
+            frmMonitorCustomer mon = form as frmMonitorCustomer;
+            mon.clearForm();
+
+            Form form2 = Application.OpenForms["frmMonitor2Detail"];
+            frmMonitor2Detail mon2 = form2 as frmMonitor2Detail;
+            mon2.clearForm();
+
+            ProgramConfig.salePageState = 2;
+            this.afterNotify = false;
+            frmSale_Activated(null, null);
         }
 
         private void closeForm()
@@ -3304,7 +3395,7 @@ namespace BJCBCPOS
                         loadTempDLYPTRANS();
                         ucTBScanBarcode.Focus();
                     }
-                    ucTBScanBarcode.Focus();
+                    //ucTBScanBarcode.Focus();
                 }
                 else
                 {
@@ -4130,26 +4221,33 @@ namespace BJCBCPOS
             //}
         }
 
-        private void frmSale_Activated(object sender, EventArgs e)
+        public void frmSale_Activated(object sender, EventArgs e)
         {
             try
             {
+                cntTimeoutSale = 0;
+                AppLog.writeLog("frmSale_Activated afterNotify = " + afterNotify + "");
                 if (!afterNotify)
                 {
-                    AppLog.writeLog(" salePageState = " + ProgramConfig.salePageState.ToString());
+                    AppLog.writeLog("frmSale_Activated salePageState = " + ProgramConfig.salePageState.ToString());
                     if (ProgramConfig.salePageState == 2)
                     {
-                        
+                        if (!timer1.Enabled)
+                        {
+                            timer1.Start();
+                        }
+                        cntTimeoutSale = 0;
                         ProgramConfig.pageBackFromPayment = PageBackFormPayment.NormalSale;
                         ProgramConfig.salePageState = 3;
                         // end current sale prepare for new receipt
+                        AppLog.writeLog("frmSale_Activated pn_item_sell.Controls.Clear();");
                         pn_item_sell.Controls.Clear();
-                        ucTBScanBarcode.Focus();
+                        //ucTBScanBarcode.Focus();
 
                         StoreResult result = null;
-                        panelScanBarcode.BringToFront();
-                        currentPanel = CurrentPanelSale.PanelScanBarcode; //currentPanel = "panelScanBarcode";
-                        Hardware.addDrawerListeners(DrawerStatus);
+                        //panelScanBarcode.BringToFront();
+                        //currentPanel = CurrentPanelSale.PanelScanBarcode; //currentPanel = "panelScanBarcode";
+                        //Hardware.addDrawerListeners(DrawerStatus);
 
                         if (ProgramConfig.saleNeedAuthorize)
                         {
@@ -4287,7 +4385,7 @@ namespace BJCBCPOS
                         }
                         else if (getConfig == 2) //Member
                         {
-                            currentPanel = CurrentPanelSale.PanelMember; 
+                            currentPanel = CurrentPanelSale.PanelMember;
                             clickSearchMember(sender, e);
                         }
                         else
@@ -4329,7 +4427,7 @@ namespace BJCBCPOS
             }
         }
 
-        private void ClearValue()
+        private void ClearValue(bool IsClearMember = true)
         {
             _totalPriceChange = 0;
             amtPrice = 0;
@@ -4351,9 +4449,11 @@ namespace BJCBCPOS
             DisableControl();
             setVisibleButtonPayment();
             setVisibleButtonConfirm(false);
-            ClearMember();
             ProgramConfig.employeeID = "";
             ProgramConfig.loadHoldOrderReceipt = "";
+
+            if (IsClearMember)
+                    ClearMember();
         }
 
         private void ucTxtQty_TextBoxKeydown(object sender, EventArgs e)
@@ -4392,6 +4492,7 @@ namespace BJCBCPOS
 
         private void frmSale_Disposed(object sender, EventArgs e)
         {
+            Application.RemoveMessageFilter(this);
             Hardware.clearDrawerListeners();
         }
 
@@ -4621,49 +4722,38 @@ namespace BJCBCPOS
         }
 
         private void ucHeader1_HambergerItemClick(object sender, EventArgs e)
-        {
+        {          
             CancelSale(sender);
         }
 
-        //private void showLoadingProcess(string step, object[] param)
-        //{
-        //    loading = new frmLoading();
-        //    loading.Show();
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            cntTimeoutSale++;
+            label1.Text = cntTimeoutSale.ToString();
+            if (cntTimeoutSale == timeOutSale)
+            {
+                if (pn_item_sell.Controls.Count == 0)
+                {
+                    frm2Detail.panel_message.BringToFront();
+                    Program.control.ShowForm("frmMainMenu");
+                    Program.control.CloseForm("frmSale");
+                }
+                else
+                {
+                    cntTimeoutSale = 0;
+                }
+            }
+        }
 
-        //    if (step == "calculateDiscount")
-        //    {
-        //        Thread thread = new Thread(calculateDiscount);
-        //        thread.Start();
-        //        Thread.Sleep(100);
-        //    }
-        //    else if (step == "scanSaleProduct")
-        //    {
-        //        Thread thread = new Thread(new ParameterizedThreadStart(scanSaleProduct));
-        //        thread.Start(param);
-        //        Thread.Sleep(100);
-        //    }
+        public bool PreFilterMessage(ref Message m)
+        {
+            if (m.Msg >= 513 && m.Msg <= 515)
+            {
+                cntTimeoutSale = 0;
+                return false;
+            }
+            return false;
+        }
 
-        //    waitHandle.WaitOne();
-        //    loading.Dispose();
-        //}
-
-        //private void calculateDiscount()
-        //{
-        //    result = process.calculateDiscount();
-        //    waitHandle.Set();
-        //}
-
-        //private void scanSaleProduct(object param)
-        //{
-        //    object[] para = (object[])param;
-        //    string barcode = para[0].ToString();
-        //    double qty = double.Parse(para[1];
-        //    int discountType = (int)para[2];
-        //    double discountValue = double.Parse(para[3];
-        //    string couponNo = para[4].ToString();
-
-        //    result = process.scanSaleProduct(barcode, qty, discountType, discountValue, couponNo);
-        //    waitHandle.Set();
-        //}
     }
 }

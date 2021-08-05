@@ -31,6 +31,8 @@ namespace BJCBCPOS
         private ReturnProcess processRe = new ReturnProcess();
         StoreResult result = null;
         UserControl _uc;
+        public StoreResult resultSearch = null;
+        public StoreResult resultProfile = null;
 
         private UCGridViewSearchCustomer lastUCgvsc = new UCGridViewSearchCustomer();
 
@@ -139,26 +141,48 @@ namespace BJCBCPOS
                     searchType = 1;
                 }
 
-                if (eventName == "Sale")
-                {
-                    result = process.searchMember(searchType, ucTxtSearch.Text);
-                }
-                else if (eventName == "ReturnScan")
-                {
-                    result = processRe.searchMember(searchType, ucTxtSearch.Text);
-                }
-                else if (eventName == "ReturnInvoice")
-                {
-                    result = processRe.searchMember(searchType, ucTxtSearch.Text);
-                }
-                else if (eventName == "UCMember")
-                {
-                    result = process.searchMember(searchType, ucTxtSearch.Text);
-                }
-                else if (eventName == "Deposit")
-                {
+                //if (eventName == "Sale")
+                //{
+                //    result = process.searchMember(searchType, ucTxtSearch.Text);
+                //}
+                //else if (eventName == "ReturnScan")
+                //{
+                //    result = processRe.searchMember(searchType, ucTxtSearch.Text);
+                //}
+                //else if (eventName == "ReturnInvoice")
+                //{
+                //    result = processRe.searchMember(searchType, ucTxtSearch.Text);
+                //}
+                //else if (eventName == "UCMember")
+                //{
+                //    result = process.searchMember(searchType, ucTxtSearch.Text);
+                //}
+                //else if (eventName == "Deposit")
+                //{
                     
+                //}
+
+                if (eventName == "Deposit")
+                {
+                    if (_functionPolicy == FunctionID.Deposit_SearchMember1)
+                    {
+                        result = process.searchMemberByType(searchType, ucTxtSearch.Text, SearchTypeCustomer.SearchCustomerFullTax);
+                    }
+                    else if (_functionPolicy == FunctionID.Deposit_SearchMember2)
+                    {
+                        result = process.searchMemberByType(searchType, ucTxtSearch.Text, SearchTypeCustomer.SearchMember);
+                    }
+                    else if (_functionPolicy == FunctionID.Deposit_SearchMember3)
+                    {
+                        result = process.searchMemberByType(searchType, ucTxtSearch.Text, SearchTypeCustomer.SearchCustomer);
+                    }
                 }
+                else
+                {
+                    result = process.searchMember(searchType, ucTxtSearch.Text, _functionPolicy);
+                }
+
+                resultSearch = result;
 
                 if (result.response.next)
                 {
@@ -460,6 +484,23 @@ namespace BJCBCPOS
             {
                 result = process.getMemberProfile(memberInp);
             }
+            else if (eventName == "Deposit")
+            {
+                if (_functionPolicy == FunctionID.Deposit_SearchMember1)
+                {
+
+                }
+                else if (_functionPolicy == FunctionID.Deposit_SearchMember2)
+                {
+                    result = process.getMemberProfileByType(memberInp, SearchTypeCustomer.SearchMember);
+                }
+                else if (_functionPolicy == FunctionID.Deposit_SearchMember3)
+                {
+                    result = process.getMemberProfileByType(memberInp, SearchTypeCustomer.SearchCustomer);
+                }
+            }
+
+            resultProfile = result;
 
             if (result.response.next)
             {
@@ -471,11 +512,11 @@ namespace BJCBCPOS
                 {
                     txtName = eName;
                 }
+
                 if (_ctrl != null)
                 {
                     if (_ctrl is UCTextBoxWithIcon)
                         ((UCTextBoxWithIcon)_ctrl).TextBox.Text = membercard;
-
                     else
                         _ctrl.Text = tName;
                 }
@@ -495,12 +536,16 @@ namespace BJCBCPOS
                     frmReturnFromInvoice frmReturnFromInvoice = (frmReturnFromInvoice)this.Owner;
                     frmReturnFromInvoice.frmSearchMemberData(memberID, txtName);
                 }
-                else if (eventName == "UCMember")
+                else if (eventName == "UCMember" || eventName == "CreditSale")
                 {
                     UCMember ucMember = (UCMember)_uc;
                     ucMember.frmSearchMemberData(memberID, txtName, membercard);
                 }
-
+                else if (eventName == "Deposit")
+                {
+                    UCMember ucMember = (UCMember)_uc;
+                    ucMember.frmSearchMemberData(memberID, txtName, membercard);
+                }
                 Dispose();
             }
             else

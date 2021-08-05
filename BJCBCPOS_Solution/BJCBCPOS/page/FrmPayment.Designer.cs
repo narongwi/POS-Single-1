@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPayment));
+            this.pn_drop_menu = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.ucHeader1 = new BJCBCPOS.UCHeader();
             this.pnMainPayment = new System.Windows.Forms.Panel();
@@ -97,6 +98,7 @@
             this.btnPayment_6 = new System.Windows.Forms.Button();
             this.lbSelectPayment = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnPayment_HirePurchase = new System.Windows.Forms.Button();
             this.pn_payment_cash = new System.Windows.Forms.Panel();
             this.lbRateTotal = new System.Windows.Forms.Label();
             this.lbRate = new System.Windows.Forms.Label();
@@ -107,7 +109,6 @@
             this.btnNoteBank = new System.Windows.Forms.Button();
             this.lbAmountCash = new System.Windows.Forms.Label();
             this.ucTxtAmountCash = new BJCBCPOS.UCTextBoxWithIcon();
-            this.btnPayment_HirePurchase = new System.Windows.Forms.Button();
             this.pn_payment_credit_Mapping = new System.Windows.Forms.Panel();
             this.lbEDCInterFace = new System.Windows.Forms.Label();
             this.btn_edit_credit = new System.Windows.Forms.Button();
@@ -193,6 +194,7 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.lbInputCashout = new System.Windows.Forms.Label();
             this.pic_BlockPayment = new System.Windows.Forms.PictureBox();
+            this.pn_DropDown = new System.Windows.Forms.Panel();
             this.panel_assist_cash = new System.Windows.Forms.Panel();
             this.ucAdjustCash1 = new BJCBCPOS.UCAdjustCash();
             this.pn_page_coupon = new System.Windows.Forms.Panel();
@@ -225,6 +227,7 @@
             this.ucTxtPn0_3 = new BJCBCPOS.UCTextBoxWithIcon();
             this.lbPn0_1 = new System.Windows.Forms.Label();
             this.ucTxtPn0_1 = new BJCBCPOS.UCTextBoxWithIcon();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.edcControl1 = new EDCControl.EDCControl();
             this.panelHeader.SuspendLayout();
             this.pnMainPayment.SuspendLayout();
@@ -257,7 +260,19 @@
             this.panel_assist_cash.SuspendLayout();
             this.pn_page_coupon.SuspendLayout();
             this.pn_payment_temp0.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pn_drop_menu
+            // 
+            this.pn_drop_menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pn_drop_menu.ForeColor = System.Drawing.Color.Black;
+            this.pn_drop_menu.Location = new System.Drawing.Point(1015, 100);
+            this.pn_drop_menu.Name = "pn_drop_menu";
+            this.pn_drop_menu.Size = new System.Drawing.Size(198, 28);
+            this.pn_drop_menu.TabIndex = 102;
+            this.pn_drop_menu.Visible = false;
+            this.pn_drop_menu.Leave += new System.EventHandler(this.pn_drop_menu_Leave);
             // 
             // panelHeader
             // 
@@ -295,6 +310,7 @@
             this.ucHeader1.showMainMenu = true;
             this.ucHeader1.showMember = true;
             this.ucHeader1.showMember_ButtonBack = false;
+            this.ucHeader1.showMember_IsSaveMember = true;
             this.ucHeader1.showScanner = true;
             this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
             this.ucHeader1.TabIndex = 0;
@@ -381,12 +397,12 @@
             this.lbRefNo.AutoSize = true;
             this.lbRefNo.BackColor = System.Drawing.Color.Transparent;
             this.lbRefNo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbRefNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRefNo.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRefNo.ForeColor = System.Drawing.Color.Black;
-            this.lbRefNo.Location = new System.Drawing.Point(206, 0);
+            this.lbRefNo.Location = new System.Drawing.Point(168, 0);
             this.lbRefNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbRefNo.Name = "lbRefNo";
-            this.lbRefNo.Size = new System.Drawing.Size(86, 24);
+            this.lbRefNo.Size = new System.Drawing.Size(110, 29);
             this.lbRefNo.TabIndex = 64;
             this.lbRefNo.Text = "เลขที่อ้างอิง";
             this.lbRefNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -396,12 +412,12 @@
             this.lbTxtRefNo.AutoSize = true;
             this.lbTxtRefNo.BackColor = System.Drawing.Color.Transparent;
             this.lbTxtRefNo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbTxtRefNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtRefNo.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtRefNo.ForeColor = System.Drawing.Color.Black;
-            this.lbTxtRefNo.Location = new System.Drawing.Point(292, 0);
+            this.lbTxtRefNo.Location = new System.Drawing.Point(278, 0);
             this.lbTxtRefNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTxtRefNo.Name = "lbTxtRefNo";
-            this.lbTxtRefNo.Size = new System.Drawing.Size(100, 24);
+            this.lbTxtRefNo.Size = new System.Drawing.Size(114, 29);
             this.lbTxtRefNo.TabIndex = 65;
             this.lbTxtRefNo.Text = "103000041";
             this.lbTxtRefNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -422,7 +438,7 @@
             // lb_CannotUseTicketCoupon
             // 
             this.lb_CannotUseTicketCoupon.BackColor = System.Drawing.Color.Transparent;
-            this.lb_CannotUseTicketCoupon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_CannotUseTicketCoupon.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_CannotUseTicketCoupon.ForeColor = System.Drawing.Color.Red;
             this.lb_CannotUseTicketCoupon.Location = new System.Drawing.Point(4, 31);
             this.lb_CannotUseTicketCoupon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -434,7 +450,7 @@
             // lbCannotUseCoupon
             // 
             this.lbCannotUseCoupon.BackColor = System.Drawing.Color.Transparent;
-            this.lbCannotUseCoupon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCannotUseCoupon.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCannotUseCoupon.ForeColor = System.Drawing.Color.Black;
             this.lbCannotUseCoupon.Location = new System.Drawing.Point(8, 3);
             this.lbCannotUseCoupon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -781,7 +797,7 @@
             // lbPaymentAount_ManualChoise
             // 
             this.lbPaymentAount_ManualChoise.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(152)))), ((int)(((byte)(69)))));
-            this.lbPaymentAount_ManualChoise.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPaymentAount_ManualChoise.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPaymentAount_ManualChoise.ForeColor = System.Drawing.Color.Black;
             this.lbPaymentAount_ManualChoise.Location = new System.Drawing.Point(20, 12);
             this.lbPaymentAount_ManualChoise.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -807,7 +823,7 @@
             // lbDisplayCreditCard_ManualChoise
             // 
             this.lbDisplayCreditCard_ManualChoise.BackColor = System.Drawing.Color.White;
-            this.lbDisplayCreditCard_ManualChoise.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDisplayCreditCard_ManualChoise.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDisplayCreditCard_ManualChoise.ForeColor = System.Drawing.Color.Gray;
             this.lbDisplayCreditCard_ManualChoise.Location = new System.Drawing.Point(315, 59);
             this.lbDisplayCreditCard_ManualChoise.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -819,7 +835,7 @@
             // lbCardType_ManualChoise
             // 
             this.lbCardType_ManualChoise.BackColor = System.Drawing.Color.White;
-            this.lbCardType_ManualChoise.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.lbCardType_ManualChoise.Font = new System.Drawing.Font("Prompt", 18F);
             this.lbCardType_ManualChoise.ForeColor = System.Drawing.Color.Gray;
             this.lbCardType_ManualChoise.Location = new System.Drawing.Point(312, 13);
             this.lbCardType_ManualChoise.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -835,6 +851,7 @@
             this.ucTxtCardNo_ManualChoise.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtCardNo_ManualChoise.EnabledUC = true;
             this.ucTxtCardNo_ManualChoise.IsAmount = false;
+            this.ucTxtCardNo_ManualChoise.IsKeyBoardForScan = false;
             this.ucTxtCardNo_ManualChoise.IsLarge = false;
             this.ucTxtCardNo_ManualChoise.IsNumber = false;
             this.ucTxtCardNo_ManualChoise.IsSetFormat = false;
@@ -858,7 +875,7 @@
             // 
             this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
             this.label26.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Prompt", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
             this.label26.Location = new System.Drawing.Point(0, 0);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -898,7 +915,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button3.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(3, 3);
             this.button3.Name = "button3";
@@ -1007,6 +1024,7 @@
             this.pn_QRPM_ucTxt_Ref1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pn_QRPM_ucTxt_Ref1.EnabledUC = true;
             this.pn_QRPM_ucTxt_Ref1.IsAmount = true;
+            this.pn_QRPM_ucTxt_Ref1.IsKeyBoardForScan = false;
             this.pn_QRPM_ucTxt_Ref1.IsLarge = false;
             this.pn_QRPM_ucTxt_Ref1.IsNumber = false;
             this.pn_QRPM_ucTxt_Ref1.IsSetFormat = true;
@@ -1063,8 +1081,8 @@
             this.panelPayment.Controls.Add(this.btnPayment_6);
             this.panelPayment.Controls.Add(this.lbSelectPayment);
             this.panelPayment.Controls.Add(this.pictureBox3);
-            this.panelPayment.Controls.Add(this.pn_payment_cash);
             this.panelPayment.Controls.Add(this.btnPayment_HirePurchase);
+            this.panelPayment.Controls.Add(this.pn_payment_cash);
             this.panelPayment.Controls.Add(this.pn_payment_credit_Mapping);
             this.panelPayment.Controls.Add(this.pn_payment_temp4);
             this.panelPayment.Controls.Add(this.pn_payment_temp1);
@@ -1084,7 +1102,7 @@
             this.btnPayment_QRPayment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPayment_QRPayment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPayment_QRPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment_QRPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPayment_QRPayment.Font = new System.Drawing.Font("Prompt", 12F);
             this.btnPayment_QRPayment.ForeColor = System.Drawing.Color.Gray;
             this.btnPayment_QRPayment.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPayment_QRPayment.Location = new System.Drawing.Point(113, 129);
@@ -1107,7 +1125,7 @@
             this.btnPayment_Credit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPayment_Credit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPayment_Credit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment_Credit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment_Credit.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment_Credit.ForeColor = System.Drawing.Color.Gray;
             this.btnPayment_Credit.Image = global::BJCBCPOS.Properties.Resources.payment_icon_credit_white;
             this.btnPayment_Credit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1131,7 +1149,7 @@
             this.btnPayment_Other.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPayment_Other.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPayment_Other.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment_Other.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment_Other.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment_Other.ForeColor = System.Drawing.Color.Gray;
             this.btnPayment_Other.Image = global::BJCBCPOS.Properties.Resources.payment_icon_other;
             this.btnPayment_Other.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1154,7 +1172,7 @@
             this.btnPayment_GiftVoucher.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPayment_GiftVoucher.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPayment_GiftVoucher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment_GiftVoucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment_GiftVoucher.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment_GiftVoucher.ForeColor = System.Drawing.Color.Gray;
             this.btnPayment_GiftVoucher.Image = global::BJCBCPOS.Properties.Resources.payment_icon_giftvoucher;
             this.btnPayment_GiftVoucher.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1210,7 +1228,7 @@
             this.btnPayment_Cash.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPayment_Cash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPayment_Cash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment_Cash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment_Cash.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment_Cash.ForeColor = System.Drawing.Color.White;
             this.btnPayment_Cash.Image = global::BJCBCPOS.Properties.Resources.payment_icon_cash_white;
             this.btnPayment_Cash.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1266,6 +1284,28 @@
             this.pictureBox3.Size = new System.Drawing.Size(320, 170);
             this.pictureBox3.TabIndex = 108;
             this.pictureBox3.TabStop = false;
+            // 
+            // btnPayment_HirePurchase
+            // 
+            this.btnPayment_HirePurchase.BackColor = System.Drawing.Color.White;
+            this.btnPayment_HirePurchase.BackgroundImage = global::BJCBCPOS.Properties.Resources.payment_btm_right_white;
+            this.btnPayment_HirePurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPayment_HirePurchase.FlatAppearance.BorderSize = 0;
+            this.btnPayment_HirePurchase.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPayment_HirePurchase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPayment_HirePurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment_HirePurchase.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment_HirePurchase.ForeColor = System.Drawing.Color.Gray;
+            this.btnPayment_HirePurchase.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPayment_HirePurchase.Location = new System.Drawing.Point(219, 129);
+            this.btnPayment_HirePurchase.Name = "btnPayment_HirePurchase";
+            this.btnPayment_HirePurchase.Padding = new System.Windows.Forms.Padding(0, 10, 0, 5);
+            this.btnPayment_HirePurchase.Size = new System.Drawing.Size(108, 86);
+            this.btnPayment_HirePurchase.TabIndex = 144;
+            this.btnPayment_HirePurchase.Text = "Hire Purchase";
+            this.btnPayment_HirePurchase.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPayment_HirePurchase.UseVisualStyleBackColor = false;
+            this.btnPayment_HirePurchase.Click += new System.EventHandler(this.btnPayment_HirePurchase_Click);
             // 
             // pn_payment_cash
             // 
@@ -1340,12 +1380,12 @@
             // 
             this.lbCurrency.AutoSize = true;
             this.lbCurrency.BackColor = System.Drawing.Color.Transparent;
-            this.lbCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCurrency.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCurrency.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbCurrency.Location = new System.Drawing.Point(251, 7);
             this.lbCurrency.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCurrency.Name = "lbCurrency";
-            this.lbCurrency.Size = new System.Drawing.Size(51, 29);
+            this.lbCurrency.Size = new System.Drawing.Size(55, 36);
             this.lbCurrency.TabIndex = 110;
             this.lbCurrency.Text = "บาท";
             this.lbCurrency.FontChanged += new System.EventHandler(this.lbCurrency_FontChanged);
@@ -1369,7 +1409,7 @@
             // lbAmountCash
             // 
             this.lbAmountCash.BackColor = System.Drawing.Color.Transparent;
-            this.lbAmountCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmountCash.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmountCash.ForeColor = System.Drawing.Color.Gray;
             this.lbAmountCash.Location = new System.Drawing.Point(6, 8);
             this.lbAmountCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1386,6 +1426,7 @@
             this.ucTxtAmountCash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtAmountCash.EnabledUC = true;
             this.ucTxtAmountCash.IsAmount = true;
+            this.ucTxtAmountCash.IsKeyBoardForScan = false;
             this.ucTxtAmountCash.IsLarge = false;
             this.ucTxtAmountCash.IsNumber = false;
             this.ucTxtAmountCash.IsSetFormat = true;
@@ -1404,28 +1445,6 @@
             this.ucTxtAmountCash.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.ucTxtAmountCash.TextBoxKeydown += new System.EventHandler(this.ucTxtAmountCash_TextBoxKeydown);
             this.ucTxtAmountCash.EnterFromButton += new System.EventHandler(this.ucTxtAmountCash_EnterFromButton);
-            // 
-            // btnPayment_HirePurchase
-            // 
-            this.btnPayment_HirePurchase.BackColor = System.Drawing.Color.White;
-            this.btnPayment_HirePurchase.BackgroundImage = global::BJCBCPOS.Properties.Resources.payment_btm_right_white;
-            this.btnPayment_HirePurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPayment_HirePurchase.FlatAppearance.BorderSize = 0;
-            this.btnPayment_HirePurchase.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnPayment_HirePurchase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPayment_HirePurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment_HirePurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment_HirePurchase.ForeColor = System.Drawing.Color.Gray;
-            this.btnPayment_HirePurchase.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPayment_HirePurchase.Location = new System.Drawing.Point(219, 129);
-            this.btnPayment_HirePurchase.Name = "btnPayment_HirePurchase";
-            this.btnPayment_HirePurchase.Padding = new System.Windows.Forms.Padding(0, 10, 0, 5);
-            this.btnPayment_HirePurchase.Size = new System.Drawing.Size(108, 86);
-            this.btnPayment_HirePurchase.TabIndex = 144;
-            this.btnPayment_HirePurchase.Text = "Hire Purchase";
-            this.btnPayment_HirePurchase.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPayment_HirePurchase.UseVisualStyleBackColor = false;
-            this.btnPayment_HirePurchase.Click += new System.EventHandler(this.btnPayment_HirePurchase_Click);
             // 
             // pn_payment_credit_Mapping
             // 
@@ -1447,7 +1466,7 @@
             // lbEDCInterFace
             // 
             this.lbEDCInterFace.BackColor = System.Drawing.Color.Transparent;
-            this.lbEDCInterFace.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbEDCInterFace.Font = new System.Drawing.Font("Prompt", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbEDCInterFace.ForeColor = System.Drawing.Color.Gray;
             this.lbEDCInterFace.Location = new System.Drawing.Point(19, 110);
             this.lbEDCInterFace.Name = "lbEDCInterFace";
@@ -1474,7 +1493,7 @@
             // lbDisplayCreditCard_remove
             // 
             this.lbDisplayCreditCard_remove.BackColor = System.Drawing.Color.White;
-            this.lbDisplayCreditCard_remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDisplayCreditCard_remove.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDisplayCreditCard_remove.ForeColor = System.Drawing.Color.Gray;
             this.lbDisplayCreditCard_remove.Location = new System.Drawing.Point(3, 60);
             this.lbDisplayCreditCard_remove.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1507,6 +1526,7 @@
             this.ucTxtApprove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtApprove.EnabledUC = true;
             this.ucTxtApprove.IsAmount = false;
+            this.ucTxtApprove.IsKeyBoardForScan = false;
             this.ucTxtApprove.IsLarge = false;
             this.ucTxtApprove.IsNumber = false;
             this.ucTxtApprove.IsSetFormat = false;
@@ -1537,6 +1557,7 @@
             this.ucTxtAmount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtAmount.EnabledUC = true;
             this.ucTxtAmount.IsAmount = false;
+            this.ucTxtAmount.IsKeyBoardForScan = false;
             this.ucTxtAmount.IsLarge = false;
             this.ucTxtAmount.IsNumber = false;
             this.ucTxtAmount.IsSetFormat = true;
@@ -1563,6 +1584,7 @@
             this.ucTxtCardNo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtCardNo.EnabledUC = true;
             this.ucTxtCardNo.IsAmount = false;
+            this.ucTxtCardNo.IsKeyBoardForScan = false;
             this.ucTxtCardNo.IsLarge = false;
             this.ucTxtCardNo.IsNumber = false;
             this.ucTxtCardNo.IsSetFormat = false;
@@ -1586,7 +1608,7 @@
             // lbCardType_remove
             // 
             this.lbCardType_remove.BackColor = System.Drawing.Color.White;
-            this.lbCardType_remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.lbCardType_remove.Font = new System.Drawing.Font("Prompt", 18F);
             this.lbCardType_remove.ForeColor = System.Drawing.Color.Gray;
             this.lbCardType_remove.Location = new System.Drawing.Point(7, 7);
             this.lbCardType_remove.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1629,7 +1651,7 @@
             // lbPn4_2
             // 
             this.lbPn4_2.BackColor = System.Drawing.Color.White;
-            this.lbPn4_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn4_2.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn4_2.ForeColor = System.Drawing.Color.Gray;
             this.lbPn4_2.Location = new System.Drawing.Point(11, 119);
             this.lbPn4_2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1648,6 +1670,7 @@
             this.ucTxtPn4_2.EnabledUC = true;
             this.ucTxtPn4_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn4_2.IsAmount = false;
+            this.ucTxtPn4_2.IsKeyBoardForScan = false;
             this.ucTxtPn4_2.IsLarge = false;
             this.ucTxtPn4_2.IsNumber = false;
             this.ucTxtPn4_2.IsSetFormat = false;
@@ -1664,6 +1687,7 @@
             this.ucTxtPn4_2.TabIndex = 106;
             this.ucTxtPn4_2.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
             this.ucTxtPn4_2.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ucTxtPn4_2.TextBoxKeydown += new System.EventHandler(this.ucTxtPn0_EnterFromButton);
             this.ucTxtPn4_2.EnterFromButton += new System.EventHandler(this.ucTxtPn0_EnterFromButton);
             // 
             // ucTxtPn4_1
@@ -1674,6 +1698,7 @@
             this.ucTxtPn4_1.EnabledUC = true;
             this.ucTxtPn4_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn4_1.IsAmount = false;
+            this.ucTxtPn4_1.IsKeyBoardForScan = false;
             this.ucTxtPn4_1.IsLarge = false;
             this.ucTxtPn4_1.IsNumber = false;
             this.ucTxtPn4_1.IsSetFormat = false;
@@ -1690,12 +1715,13 @@
             this.ucTxtPn4_1.TabIndex = 105;
             this.ucTxtPn4_1.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
             this.ucTxtPn4_1.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ucTxtPn4_1.TextBoxKeydown += new System.EventHandler(this.ucTxtPn0_EnterFromButton);
             this.ucTxtPn4_1.EnterFromButton += new System.EventHandler(this.ucTxtPn0_EnterFromButton);
             // 
             // lbPn4_1
             // 
             this.lbPn4_1.BackColor = System.Drawing.Color.White;
-            this.lbPn4_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn4_1.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn4_1.ForeColor = System.Drawing.Color.Gray;
             this.lbPn4_1.Location = new System.Drawing.Point(11, 46);
             this.lbPn4_1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1709,7 +1735,7 @@
             // lbHeaderPn4
             // 
             this.lbHeaderPn4.BackColor = System.Drawing.Color.White;
-            this.lbHeaderPn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeaderPn4.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeaderPn4.ForeColor = System.Drawing.Color.Gray;
             this.lbHeaderPn4.Location = new System.Drawing.Point(5, 4);
             this.lbHeaderPn4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1734,7 +1760,7 @@
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
             this.label9.Location = new System.Drawing.Point(11, 119);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1753,6 +1779,7 @@
             this.ucTextBoxWithIcon1.EnabledUC = true;
             this.ucTextBoxWithIcon1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTextBoxWithIcon1.IsAmount = false;
+            this.ucTextBoxWithIcon1.IsKeyBoardForScan = false;
             this.ucTextBoxWithIcon1.IsLarge = false;
             this.ucTextBoxWithIcon1.IsNumber = false;
             this.ucTextBoxWithIcon1.IsSetFormat = false;
@@ -1780,6 +1807,7 @@
             this.ucTextBoxWithIcon2.EnabledUC = true;
             this.ucTextBoxWithIcon2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTextBoxWithIcon2.IsAmount = false;
+            this.ucTextBoxWithIcon2.IsKeyBoardForScan = false;
             this.ucTextBoxWithIcon2.IsLarge = false;
             this.ucTextBoxWithIcon2.IsNumber = false;
             this.ucTextBoxWithIcon2.IsSetFormat = false;
@@ -1804,7 +1832,7 @@
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Gray;
             this.label10.Location = new System.Drawing.Point(11, 46);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1818,7 +1846,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
             this.label1.Location = new System.Drawing.Point(5, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1848,6 +1876,7 @@
             this.pn_QRPM_ucTxt_Ref2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pn_QRPM_ucTxt_Ref2.EnabledUC = true;
             this.pn_QRPM_ucTxt_Ref2.IsAmount = false;
+            this.pn_QRPM_ucTxt_Ref2.IsKeyBoardForScan = false;
             this.pn_QRPM_ucTxt_Ref2.IsLarge = false;
             this.pn_QRPM_ucTxt_Ref2.IsNumber = false;
             this.pn_QRPM_ucTxt_Ref2.IsSetFormat = false;
@@ -1870,7 +1899,7 @@
             // pn_QRPM_lbRef2
             // 
             this.pn_QRPM_lbRef2.BackColor = System.Drawing.Color.White;
-            this.pn_QRPM_lbRef2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pn_QRPM_lbRef2.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pn_QRPM_lbRef2.ForeColor = System.Drawing.Color.Gray;
             this.pn_QRPM_lbRef2.Location = new System.Drawing.Point(11, 119);
             this.pn_QRPM_lbRef2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1884,7 +1913,7 @@
             // pn_QRPM_lbRef1
             // 
             this.pn_QRPM_lbRef1.BackColor = System.Drawing.Color.White;
-            this.pn_QRPM_lbRef1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pn_QRPM_lbRef1.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pn_QRPM_lbRef1.ForeColor = System.Drawing.Color.Gray;
             this.pn_QRPM_lbRef1.Location = new System.Drawing.Point(11, 46);
             this.pn_QRPM_lbRef1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1898,7 +1927,7 @@
             // pn_QRPM_lbHeader
             // 
             this.pn_QRPM_lbHeader.BackColor = System.Drawing.Color.White;
-            this.pn_QRPM_lbHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pn_QRPM_lbHeader.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pn_QRPM_lbHeader.ForeColor = System.Drawing.Color.Gray;
             this.pn_QRPM_lbHeader.Location = new System.Drawing.Point(5, 4);
             this.pn_QRPM_lbHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1944,6 +1973,7 @@
             this.ucTxtCouponQnt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTxtCouponQnt.EnabledUC = true;
             this.ucTxtCouponQnt.IsAmount = false;
+            this.ucTxtCouponQnt.IsKeyBoardForScan = false;
             this.ucTxtCouponQnt.IsLarge = false;
             this.ucTxtCouponQnt.IsNumber = true;
             this.ucTxtCouponQnt.IsSetFormat = false;
@@ -1971,6 +2001,7 @@
             this.ucTxtCouponNo.EnabledUC = true;
             this.ucTxtCouponNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtCouponNo.IsAmount = false;
+            this.ucTxtCouponNo.IsKeyBoardForScan = false;
             this.ucTxtCouponNo.IsLarge = false;
             this.ucTxtCouponNo.IsNumber = false;
             this.ucTxtCouponNo.IsSetFormat = false;
@@ -1993,7 +2024,7 @@
             // lbCouponAmt
             // 
             this.lbCouponAmt.BackColor = System.Drawing.Color.White;
-            this.lbCouponAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCouponAmt.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCouponAmt.ForeColor = System.Drawing.Color.Gray;
             this.lbCouponAmt.Location = new System.Drawing.Point(4, 116);
             this.lbCouponAmt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2032,7 +2063,7 @@
             // lbVoucher
             // 
             this.lbVoucher.BackColor = System.Drawing.Color.Transparent;
-            this.lbVoucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVoucher.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbVoucher.ForeColor = System.Drawing.Color.Gray;
             this.lbVoucher.Location = new System.Drawing.Point(8, 7);
             this.lbVoucher.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2050,6 +2081,7 @@
             this.ucTxtVoucherAmt.Enabled = false;
             this.ucTxtVoucherAmt.EnabledUC = true;
             this.ucTxtVoucherAmt.IsAmount = false;
+            this.ucTxtVoucherAmt.IsKeyBoardForScan = false;
             this.ucTxtVoucherAmt.IsLarge = false;
             this.ucTxtVoucherAmt.IsNumber = false;
             this.ucTxtVoucherAmt.IsSetFormat = true;
@@ -2077,6 +2109,7 @@
             this.ucTxtVoucherNo.EnabledUC = true;
             this.ucTxtVoucherNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtVoucherNo.IsAmount = false;
+            this.ucTxtVoucherNo.IsKeyBoardForScan = false;
             this.ucTxtVoucherNo.IsLarge = false;
             this.ucTxtVoucherNo.IsNumber = false;
             this.ucTxtVoucherNo.IsSetFormat = false;
@@ -2113,7 +2146,7 @@
             // lbAmount
             // 
             this.lbAmount.BackColor = System.Drawing.Color.Transparent;
-            this.lbAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount.Location = new System.Drawing.Point(7, 157);
             this.lbAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2175,7 +2208,7 @@
             // lbQty12
             // 
             this.lbQty12.BackColor = System.Drawing.Color.White;
-            this.lbQty12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty12.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty12.ForeColor = System.Drawing.Color.Gray;
             this.lbQty12.Location = new System.Drawing.Point(161, 360);
             this.lbQty12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2188,7 +2221,7 @@
             // lbAmount12
             // 
             this.lbAmount12.BackColor = System.Drawing.Color.White;
-            this.lbAmount12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount12.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount12.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount12.Location = new System.Drawing.Point(218, 360);
             this.lbAmount12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2202,7 +2235,7 @@
             // lbBankNote12
             // 
             this.lbBankNote12.BackColor = System.Drawing.Color.White;
-            this.lbBankNote12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote12.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote12.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote12.Location = new System.Drawing.Point(9, 360);
             this.lbBankNote12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2216,7 +2249,7 @@
             // lbQty11
             // 
             this.lbQty11.BackColor = System.Drawing.Color.White;
-            this.lbQty11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty11.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty11.ForeColor = System.Drawing.Color.Gray;
             this.lbQty11.Location = new System.Drawing.Point(161, 336);
             this.lbQty11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2229,7 +2262,7 @@
             // lbAmount11
             // 
             this.lbAmount11.BackColor = System.Drawing.Color.White;
-            this.lbAmount11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount11.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount11.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount11.Location = new System.Drawing.Point(218, 336);
             this.lbAmount11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2243,7 +2276,7 @@
             // lbBankNote11
             // 
             this.lbBankNote11.BackColor = System.Drawing.Color.White;
-            this.lbBankNote11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote11.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote11.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote11.Location = new System.Drawing.Point(9, 336);
             this.lbBankNote11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2257,7 +2290,7 @@
             // lbQty10
             // 
             this.lbQty10.BackColor = System.Drawing.Color.White;
-            this.lbQty10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty10.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty10.ForeColor = System.Drawing.Color.Gray;
             this.lbQty10.Location = new System.Drawing.Point(161, 311);
             this.lbQty10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2270,7 +2303,7 @@
             // lbQty9
             // 
             this.lbQty9.BackColor = System.Drawing.Color.White;
-            this.lbQty9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty9.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty9.ForeColor = System.Drawing.Color.Gray;
             this.lbQty9.Location = new System.Drawing.Point(161, 285);
             this.lbQty9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2283,7 +2316,7 @@
             // lbQty8
             // 
             this.lbQty8.BackColor = System.Drawing.Color.White;
-            this.lbQty8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty8.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty8.ForeColor = System.Drawing.Color.Gray;
             this.lbQty8.Location = new System.Drawing.Point(161, 259);
             this.lbQty8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2296,7 +2329,7 @@
             // lbQty7
             // 
             this.lbQty7.BackColor = System.Drawing.Color.White;
-            this.lbQty7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty7.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty7.ForeColor = System.Drawing.Color.Gray;
             this.lbQty7.Location = new System.Drawing.Point(161, 233);
             this.lbQty7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2309,7 +2342,7 @@
             // lbQty6
             // 
             this.lbQty6.BackColor = System.Drawing.Color.White;
-            this.lbQty6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty6.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty6.ForeColor = System.Drawing.Color.Gray;
             this.lbQty6.Location = new System.Drawing.Point(161, 207);
             this.lbQty6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2322,7 +2355,7 @@
             // lbQty5
             // 
             this.lbQty5.BackColor = System.Drawing.Color.White;
-            this.lbQty5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty5.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty5.ForeColor = System.Drawing.Color.Gray;
             this.lbQty5.Location = new System.Drawing.Point(161, 181);
             this.lbQty5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2335,7 +2368,7 @@
             // lbQty4
             // 
             this.lbQty4.BackColor = System.Drawing.Color.White;
-            this.lbQty4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty4.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty4.ForeColor = System.Drawing.Color.Gray;
             this.lbQty4.Location = new System.Drawing.Point(161, 155);
             this.lbQty4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2348,7 +2381,7 @@
             // lbQty3
             // 
             this.lbQty3.BackColor = System.Drawing.Color.White;
-            this.lbQty3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty3.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty3.ForeColor = System.Drawing.Color.Gray;
             this.lbQty3.Location = new System.Drawing.Point(161, 129);
             this.lbQty3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2361,7 +2394,7 @@
             // lbQty2
             // 
             this.lbQty2.BackColor = System.Drawing.Color.White;
-            this.lbQty2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty2.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty2.ForeColor = System.Drawing.Color.Gray;
             this.lbQty2.Location = new System.Drawing.Point(161, 103);
             this.lbQty2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2374,7 +2407,7 @@
             // lbQty1
             // 
             this.lbQty1.BackColor = System.Drawing.Color.White;
-            this.lbQty1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty1.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty1.ForeColor = System.Drawing.Color.Gray;
             this.lbQty1.Location = new System.Drawing.Point(161, 77);
             this.lbQty1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2387,7 +2420,7 @@
             // lbBNQty
             // 
             this.lbBNQty.BackColor = System.Drawing.Color.White;
-            this.lbBNQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBNQty.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBNQty.ForeColor = System.Drawing.Color.Gray;
             this.lbBNQty.Location = new System.Drawing.Point(139, 44);
             this.lbBNQty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2400,7 +2433,7 @@
             // lbAmount10
             // 
             this.lbAmount10.BackColor = System.Drawing.Color.White;
-            this.lbAmount10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount10.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount10.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount10.Location = new System.Drawing.Point(218, 311);
             this.lbAmount10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2414,7 +2447,7 @@
             // lbAmount9
             // 
             this.lbAmount9.BackColor = System.Drawing.Color.White;
-            this.lbAmount9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount9.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount9.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount9.Location = new System.Drawing.Point(218, 285);
             this.lbAmount9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2428,7 +2461,7 @@
             // lbAmount8
             // 
             this.lbAmount8.BackColor = System.Drawing.Color.White;
-            this.lbAmount8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount8.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount8.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount8.Location = new System.Drawing.Point(218, 259);
             this.lbAmount8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2442,7 +2475,7 @@
             // lbAmount7
             // 
             this.lbAmount7.BackColor = System.Drawing.Color.White;
-            this.lbAmount7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount7.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount7.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount7.Location = new System.Drawing.Point(218, 233);
             this.lbAmount7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2456,7 +2489,7 @@
             // lbAmount6
             // 
             this.lbAmount6.BackColor = System.Drawing.Color.White;
-            this.lbAmount6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount6.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount6.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount6.Location = new System.Drawing.Point(218, 207);
             this.lbAmount6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2470,7 +2503,7 @@
             // lbAmount5
             // 
             this.lbAmount5.BackColor = System.Drawing.Color.White;
-            this.lbAmount5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount5.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount5.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount5.Location = new System.Drawing.Point(218, 181);
             this.lbAmount5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2484,7 +2517,7 @@
             // lbAmount4
             // 
             this.lbAmount4.BackColor = System.Drawing.Color.White;
-            this.lbAmount4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount4.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount4.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount4.Location = new System.Drawing.Point(218, 155);
             this.lbAmount4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2509,7 +2542,7 @@
             // lbAmtCash
             // 
             this.lbAmtCash.BackColor = System.Drawing.Color.Transparent;
-            this.lbAmtCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmtCash.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmtCash.ForeColor = System.Drawing.Color.Black;
             this.lbAmtCash.Location = new System.Drawing.Point(133, 3);
             this.lbAmtCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2522,7 +2555,7 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
             this.label3.Location = new System.Drawing.Point(4, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2535,7 +2568,7 @@
             // lbBankNote10
             // 
             this.lbBankNote10.BackColor = System.Drawing.Color.White;
-            this.lbBankNote10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote10.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote10.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote10.Location = new System.Drawing.Point(9, 311);
             this.lbBankNote10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2549,7 +2582,7 @@
             // lbBankNote9
             // 
             this.lbBankNote9.BackColor = System.Drawing.Color.White;
-            this.lbBankNote9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote9.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote9.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote9.Location = new System.Drawing.Point(9, 285);
             this.lbBankNote9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2563,7 +2596,7 @@
             // lbBankNote8
             // 
             this.lbBankNote8.BackColor = System.Drawing.Color.White;
-            this.lbBankNote8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote8.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote8.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote8.Location = new System.Drawing.Point(9, 259);
             this.lbBankNote8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2577,7 +2610,7 @@
             // lbBankNote7
             // 
             this.lbBankNote7.BackColor = System.Drawing.Color.White;
-            this.lbBankNote7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote7.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote7.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote7.Location = new System.Drawing.Point(9, 233);
             this.lbBankNote7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2591,7 +2624,7 @@
             // lbBankNote6
             // 
             this.lbBankNote6.BackColor = System.Drawing.Color.White;
-            this.lbBankNote6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote6.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote6.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote6.Location = new System.Drawing.Point(9, 207);
             this.lbBankNote6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2605,7 +2638,7 @@
             // lbBankNote5
             // 
             this.lbBankNote5.BackColor = System.Drawing.Color.White;
-            this.lbBankNote5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote5.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote5.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote5.Location = new System.Drawing.Point(9, 181);
             this.lbBankNote5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2619,7 +2652,7 @@
             // lbBankNote4
             // 
             this.lbBankNote4.BackColor = System.Drawing.Color.White;
-            this.lbBankNote4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote4.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote4.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote4.Location = new System.Drawing.Point(9, 155);
             this.lbBankNote4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2633,7 +2666,7 @@
             // lbAmount3
             // 
             this.lbAmount3.BackColor = System.Drawing.Color.White;
-            this.lbAmount3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount3.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount3.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount3.Location = new System.Drawing.Point(218, 129);
             this.lbAmount3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2647,7 +2680,7 @@
             // lbBankNote3
             // 
             this.lbBankNote3.BackColor = System.Drawing.Color.White;
-            this.lbBankNote3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote3.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote3.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote3.Location = new System.Drawing.Point(9, 129);
             this.lbBankNote3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2661,7 +2694,7 @@
             // lbAmount2
             // 
             this.lbAmount2.BackColor = System.Drawing.Color.White;
-            this.lbAmount2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount2.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount2.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount2.Location = new System.Drawing.Point(218, 103);
             this.lbAmount2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2675,7 +2708,7 @@
             // lbBankNote2
             // 
             this.lbBankNote2.BackColor = System.Drawing.Color.White;
-            this.lbBankNote2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote2.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote2.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote2.Location = new System.Drawing.Point(9, 103);
             this.lbBankNote2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2689,7 +2722,7 @@
             // lbAmount1
             // 
             this.lbAmount1.BackColor = System.Drawing.Color.White;
-            this.lbAmount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount1.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount1.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount1.Location = new System.Drawing.Point(218, 77);
             this.lbAmount1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2703,7 +2736,7 @@
             // lbBankNote1
             // 
             this.lbBankNote1.BackColor = System.Drawing.Color.White;
-            this.lbBankNote1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote1.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote1.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote1.Location = new System.Drawing.Point(9, 77);
             this.lbBankNote1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2716,7 +2749,7 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
             this.label5.Location = new System.Drawing.Point(240, 44);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2729,7 +2762,7 @@
             // lbTypeCash
             // 
             this.lbTypeCash.BackColor = System.Drawing.Color.White;
-            this.lbTypeCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTypeCash.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTypeCash.ForeColor = System.Drawing.Color.Gray;
             this.lbTypeCash.Location = new System.Drawing.Point(7, 44);
             this.lbTypeCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2753,7 +2786,7 @@
             // lbInputCashout
             // 
             this.lbInputCashout.BackColor = System.Drawing.Color.White;
-            this.lbInputCashout.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInputCashout.Font = new System.Drawing.Font("Prompt", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInputCashout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(186)))), ((int)(((byte)(109)))));
             this.lbInputCashout.Location = new System.Drawing.Point(49, 3);
             this.lbInputCashout.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2770,6 +2803,16 @@
             this.pic_BlockPayment.Size = new System.Drawing.Size(334, 427);
             this.pic_BlockPayment.TabIndex = 1;
             this.pic_BlockPayment.TabStop = false;
+            // 
+            // pn_DropDown
+            // 
+            this.pn_DropDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pn_DropDown.ForeColor = System.Drawing.Color.Black;
+            this.pn_DropDown.Location = new System.Drawing.Point(1015, 52);
+            this.pn_DropDown.Name = "pn_DropDown";
+            this.pn_DropDown.Size = new System.Drawing.Size(198, 28);
+            this.pn_DropDown.TabIndex = 101;
+            this.pn_DropDown.Visible = false;
             // 
             // panel_assist_cash
             // 
@@ -2918,7 +2961,7 @@
             this.btnOkPn0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOkPn0.FlatAppearance.BorderSize = 0;
             this.btnOkPn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOkPn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOkPn0.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOkPn0.ForeColor = System.Drawing.Color.White;
             this.btnOkPn0.Location = new System.Drawing.Point(488, 516);
             this.btnOkPn0.Name = "btnOkPn0";
@@ -2944,7 +2987,7 @@
             // lbPn0_10
             // 
             this.lbPn0_10.BackColor = System.Drawing.Color.Transparent;
-            this.lbPn0_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn0_10.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn0_10.ForeColor = System.Drawing.Color.Gray;
             this.lbPn0_10.Location = new System.Drawing.Point(342, 430);
             this.lbPn0_10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2962,6 +3005,7 @@
             this.ucTxtPn0_10.EnabledUC = true;
             this.ucTxtPn0_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn0_10.IsAmount = false;
+            this.ucTxtPn0_10.IsKeyBoardForScan = false;
             this.ucTxtPn0_10.IsLarge = false;
             this.ucTxtPn0_10.IsNumber = false;
             this.ucTxtPn0_10.IsSetFormat = false;
@@ -2983,7 +3027,7 @@
             // lbPn0_8
             // 
             this.lbPn0_8.BackColor = System.Drawing.Color.Transparent;
-            this.lbPn0_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn0_8.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn0_8.ForeColor = System.Drawing.Color.Gray;
             this.lbPn0_8.Location = new System.Drawing.Point(342, 336);
             this.lbPn0_8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -3001,6 +3045,7 @@
             this.ucTxtPn0_8.EnabledUC = true;
             this.ucTxtPn0_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn0_8.IsAmount = false;
+            this.ucTxtPn0_8.IsKeyBoardForScan = false;
             this.ucTxtPn0_8.IsLarge = false;
             this.ucTxtPn0_8.IsNumber = false;
             this.ucTxtPn0_8.IsSetFormat = false;
@@ -3022,7 +3067,7 @@
             // lbPn0_6
             // 
             this.lbPn0_6.BackColor = System.Drawing.Color.Transparent;
-            this.lbPn0_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn0_6.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn0_6.ForeColor = System.Drawing.Color.Gray;
             this.lbPn0_6.Location = new System.Drawing.Point(342, 243);
             this.lbPn0_6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -3040,6 +3085,7 @@
             this.ucTxtPn0_6.EnabledUC = true;
             this.ucTxtPn0_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn0_6.IsAmount = false;
+            this.ucTxtPn0_6.IsKeyBoardForScan = false;
             this.ucTxtPn0_6.IsLarge = false;
             this.ucTxtPn0_6.IsNumber = false;
             this.ucTxtPn0_6.IsSetFormat = false;
@@ -3061,7 +3107,7 @@
             // lbPn0_4
             // 
             this.lbPn0_4.BackColor = System.Drawing.Color.Transparent;
-            this.lbPn0_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn0_4.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn0_4.ForeColor = System.Drawing.Color.Gray;
             this.lbPn0_4.Location = new System.Drawing.Point(342, 153);
             this.lbPn0_4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -3079,6 +3125,7 @@
             this.ucTxtPn0_4.EnabledUC = true;
             this.ucTxtPn0_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn0_4.IsAmount = false;
+            this.ucTxtPn0_4.IsKeyBoardForScan = false;
             this.ucTxtPn0_4.IsLarge = false;
             this.ucTxtPn0_4.IsNumber = false;
             this.ucTxtPn0_4.IsSetFormat = false;
@@ -3100,7 +3147,7 @@
             // lbPn0_2
             // 
             this.lbPn0_2.BackColor = System.Drawing.Color.Transparent;
-            this.lbPn0_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn0_2.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn0_2.ForeColor = System.Drawing.Color.Gray;
             this.lbPn0_2.Location = new System.Drawing.Point(342, 66);
             this.lbPn0_2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -3118,6 +3165,7 @@
             this.ucTxtPn0_2.EnabledUC = true;
             this.ucTxtPn0_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn0_2.IsAmount = false;
+            this.ucTxtPn0_2.IsKeyBoardForScan = false;
             this.ucTxtPn0_2.IsLarge = false;
             this.ucTxtPn0_2.IsNumber = false;
             this.ucTxtPn0_2.IsSetFormat = false;
@@ -3139,7 +3187,7 @@
             // lbPn0_9
             // 
             this.lbPn0_9.BackColor = System.Drawing.Color.Transparent;
-            this.lbPn0_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn0_9.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn0_9.ForeColor = System.Drawing.Color.Gray;
             this.lbPn0_9.Location = new System.Drawing.Point(17, 430);
             this.lbPn0_9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -3157,6 +3205,7 @@
             this.ucTxtPn0_9.EnabledUC = true;
             this.ucTxtPn0_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn0_9.IsAmount = false;
+            this.ucTxtPn0_9.IsKeyBoardForScan = false;
             this.ucTxtPn0_9.IsLarge = false;
             this.ucTxtPn0_9.IsNumber = false;
             this.ucTxtPn0_9.IsSetFormat = false;
@@ -3178,7 +3227,7 @@
             // lbPn0_7
             // 
             this.lbPn0_7.BackColor = System.Drawing.Color.Transparent;
-            this.lbPn0_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn0_7.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn0_7.ForeColor = System.Drawing.Color.Gray;
             this.lbPn0_7.Location = new System.Drawing.Point(17, 336);
             this.lbPn0_7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -3196,6 +3245,7 @@
             this.ucTxtPn0_7.EnabledUC = true;
             this.ucTxtPn0_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn0_7.IsAmount = false;
+            this.ucTxtPn0_7.IsKeyBoardForScan = false;
             this.ucTxtPn0_7.IsLarge = false;
             this.ucTxtPn0_7.IsNumber = false;
             this.ucTxtPn0_7.IsSetFormat = false;
@@ -3217,7 +3267,7 @@
             // lbPn0_5
             // 
             this.lbPn0_5.BackColor = System.Drawing.Color.Transparent;
-            this.lbPn0_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn0_5.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn0_5.ForeColor = System.Drawing.Color.Gray;
             this.lbPn0_5.Location = new System.Drawing.Point(17, 243);
             this.lbPn0_5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -3235,6 +3285,7 @@
             this.ucTxtPn0_5.EnabledUC = true;
             this.ucTxtPn0_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn0_5.IsAmount = false;
+            this.ucTxtPn0_5.IsKeyBoardForScan = false;
             this.ucTxtPn0_5.IsLarge = false;
             this.ucTxtPn0_5.IsNumber = false;
             this.ucTxtPn0_5.IsSetFormat = false;
@@ -3256,7 +3307,7 @@
             // lbPn0_3
             // 
             this.lbPn0_3.BackColor = System.Drawing.Color.Transparent;
-            this.lbPn0_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn0_3.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn0_3.ForeColor = System.Drawing.Color.Gray;
             this.lbPn0_3.Location = new System.Drawing.Point(17, 153);
             this.lbPn0_3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -3274,6 +3325,7 @@
             this.ucTxtPn0_3.EnabledUC = true;
             this.ucTxtPn0_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn0_3.IsAmount = false;
+            this.ucTxtPn0_3.IsKeyBoardForScan = false;
             this.ucTxtPn0_3.IsLarge = false;
             this.ucTxtPn0_3.IsNumber = false;
             this.ucTxtPn0_3.IsSetFormat = false;
@@ -3295,7 +3347,7 @@
             // lbPn0_1
             // 
             this.lbPn0_1.BackColor = System.Drawing.Color.Transparent;
-            this.lbPn0_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPn0_1.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPn0_1.ForeColor = System.Drawing.Color.Gray;
             this.lbPn0_1.Location = new System.Drawing.Point(17, 66);
             this.lbPn0_1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -3313,6 +3365,7 @@
             this.ucTxtPn0_1.EnabledUC = true;
             this.ucTxtPn0_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTxtPn0_1.IsAmount = false;
+            this.ucTxtPn0_1.IsKeyBoardForScan = false;
             this.ucTxtPn0_1.IsLarge = false;
             this.ucTxtPn0_1.IsNumber = false;
             this.ucTxtPn0_1.IsSetFormat = false;
@@ -3330,6 +3383,18 @@
             this.ucTxtPn0_1.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
             this.ucTxtPn0_1.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ucTxtPn0_1.EnterFromButton += new System.EventHandler(this.ucTxtPn0_EnterFromButton);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::BJCBCPOS.Properties.Resources.left_arrow;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox5.Location = new System.Drawing.Point(1010, 27);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(17, 40);
+            this.pictureBox5.TabIndex = 92;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
             // 
             // edcControl1
             // 
@@ -3352,7 +3417,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1029, 768);
+            this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.Controls.Add(this.pn_drop_menu);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pn_DropDown);
             this.Controls.Add(this.pnMainPayment);
             this.Controls.Add(this.panel_assist_cash);
             this.Controls.Add(this.pn_page_coupon);
@@ -3401,6 +3469,7 @@
             this.panel_assist_cash.ResumeLayout(false);
             this.pn_page_coupon.ResumeLayout(false);
             this.pn_payment_temp0.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3435,6 +3504,7 @@
         private System.Windows.Forms.Label lbSelectPayment;
         private System.Windows.Forms.PictureBox picBtBack;
         public System.Windows.Forms.Panel pn_payment_cash;
+        private System.Windows.Forms.Panel pn_DropDown;
         private System.Windows.Forms.Label lbAmountCash;
         private System.Windows.Forms.Panel pn_payment_credit_Mapping;
         private System.Windows.Forms.Label lbCardType_remove;
@@ -3457,8 +3527,10 @@
         private UCTextBoxWithIcon ucTxtApprove;
         private System.Windows.Forms.Label lbVoucher;
         private UCTextBoxWithIcon ucTxtVoucherNo;
+        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private UCAdjustCash ucAdjustCash1;
+        private System.Windows.Forms.Panel pn_drop_menu;
         private System.Windows.Forms.Panel pn_payment_coupon;
         private UCTextBoxWithIcon ucTxtCouponQnt;
         private UCTextBoxWithIcon ucTxtCouponNo;

@@ -310,9 +310,11 @@ namespace BJCBCPOS_Model
             try
             {
                 //DataTable dt = fftiPrint.StartPreview(saleRef, ProgramConfig.userId, "BJCBCPOS");
+                
                 DataTable dt = fftiPrint.DocumentPreview(refNo, fftiNo, offtiNo, "TAXINV", ProgramConfig.userId, "BJCBCPOS");
                 if (dt != null && dt.Rows.Count > 0)
                 {
+                    
                     ReportDocument cr = new ReportDocument();
                     string appPath = Path.GetDirectoryName(Application.ExecutablePath);
                     string fullPath = String.Format(@"{0}\Fulltax.rpt", appPath);
@@ -320,12 +322,15 @@ namespace BJCBCPOS_Model
                     cr.SetDataSource(dt);
                     cr.PrintOptions.PrinterName = String.IsNullOrEmpty(ProgramConfig.printerName) ? "PrimoPDF" : ProgramConfig.printerName;                   
                     cr.PrintToPrinter(1, false, 0, 0);
+                    AppLog.writeSqlCommand("PrintFullTax Success!! Parameter REF = " + refNo + ", FFTINO = " + fftiNo + ", OFFTINO = " + offtiNo + "");
                     return true;
                 }
+                AppLog.writeSqlCommand("PrintFullTax PrintFail!! Parameter REF = " + refNo + ", FFTINO = " + fftiNo + ", OFFTINO = " + offtiNo + "");
                 return false;
             }
             catch (Exception ex)
             {
+                AppLog.writeSqlCommand("PrintFullTax PrintFail!! Parameter REF = " + refNo + ", FFTINO = " + fftiNo + ", OFFTINO = " + offtiNo + "");
                 AppLog.writeLog(ex);
                 return false;
             }
@@ -345,6 +350,7 @@ namespace BJCBCPOS_Model
                 DataTable dt = fftiPrint.DocumentPreview_RET(refCN, "RET", ProgramConfig.userId, "BJCBCPOS");
                 if (dt != null && dt.Rows.Count > 0)
                 {
+                    AppLog.writeSqlCommand("PrintFullTax Success!! Parameter CNREF = " + refCN + "");
                     ReportDocument cr = new ReportDocument();
                     string appPath = Path.GetDirectoryName(Application.ExecutablePath);
                     string fullPath = String.Format(@"{0}\Return.rpt", appPath);
@@ -354,6 +360,7 @@ namespace BJCBCPOS_Model
                     cr.PrintToPrinter(1, false, 0, 0);
                     return true;
                 }
+                AppLog.writeSqlCommand("PrintFullTax PrintFail!! Parameter CNREF = " + refCN + "");
                 return false;
             }
             catch (Exception ex)

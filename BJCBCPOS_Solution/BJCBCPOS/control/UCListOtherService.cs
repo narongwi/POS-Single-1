@@ -44,6 +44,12 @@ namespace BJCBCPOS
         [Description("Set stand alone flag")]
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Always)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string InvoiceAmountAPI { get; set; }
+
+        [Category("Custom Property")]
+        [Description("Set stand alone flag")]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Always)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string TransDate { get; set; }
      
         public UCListOtherService()

@@ -1,0 +1,76 @@
+ Volume in drive D is DATA
+ Volume Serial Number is EA69-7F50
+
+ Directory of D:\Repository\Deftsoft\POS-Single\BJCBCPOS\OtherServices\Forms
+
+08/04/2021  11:00 AM    <DIR>          .
+08/04/2021  11:00 AM    <DIR>          ..
+08/04/2021  11:00 AM                 0 fileName.txt
+07/19/2021  09:42 AM               366 frmMemberService.cs
+07/19/2021  09:42 AM            20,011 frmMemberService.Designer.cs
+07/19/2021  09:42 AM             5,698 frmMemberService.resx
+07/19/2021  09:42 AM               374 frmMemberServiceTerm.cs
+07/19/2021  09:42 AM             6,426 frmMemberServiceTerm.Designer.cs
+07/19/2021  09:42 AM             5,698 frmMemberServiceTerm.resx
+07/19/2021  09:42 AM               362 frmParcelKerry.cs
+07/19/2021  09:42 AM            23,900 frmParcelKerry.Designer.cs
+07/19/2021  09:42 AM             5,698 frmParcelKerry.resx
+07/19/2021  09:42 AM               492 frmParcelService.cs
+07/19/2021  09:42 AM            18,048 frmParcelService.Designer.cs
+07/19/2021  09:42 AM            15,120 frmParcelService.resx
+07/19/2021  09:42 AM               459 frmPaymentCancel.cs
+07/19/2021  09:42 AM            21,718 frmPaymentCancel.Designer.cs
+07/19/2021  09:42 AM             5,698 frmPaymentCancel.resx
+07/19/2021  09:42 AM               380 frmPaymentDetailConfirm.cs
+07/19/2021  09:42 AM             9,431 frmPaymentDetailConfirm.Designer.cs
+07/19/2021  09:42 AM             5,698 frmPaymentDetailConfirm.resx
+07/19/2021  09:42 AM               366 frmPaymentReport.cs
+07/19/2021  09:42 AM            13,642 frmPaymentReport.Designer.cs
+07/19/2021  09:42 AM             7,536 frmPaymentReport.resx
+07/19/2021  09:42 AM               368 frmPaymentService.cs
+07/19/2021  09:42 AM            34,157 frmPaymentService.Designer.cs
+07/19/2021  09:42 AM             7,882 frmPaymentService.resx
+07/19/2021  09:42 AM               376 frmPaymentTransaction.cs
+07/19/2021  09:42 AM            16,538 frmPaymentTransaction.Designer.cs
+07/19/2021  09:42 AM             5,698 frmPaymentTransaction.resx
+07/19/2021  09:42 AM               364 frmSIMPromotion.cs
+07/19/2021  09:42 AM            14,553 frmSIMPromotion.Designer.cs
+07/19/2021  09:42 AM           248,807 frmSIMPromotion.resx
+07/19/2021  09:42 AM               362 frmSIMRegister.cs
+07/19/2021  09:42 AM            12,424 frmSIMRegister.Designer.cs
+07/19/2021  09:42 AM             5,698 frmSIMRegister.resx
+07/19/2021  09:42 AM               372 frmSIMRegisterConf1.cs
+07/19/2021  09:42 AM            10,410 frmSIMRegisterConf1.Designer.cs
+07/19/2021  09:42 AM             5,698 frmSIMRegisterConf1.resx
+07/19/2021  09:42 AM               456 frmSIMRegisterConf2.cs
+07/19/2021  09:42 AM            12,316 frmSIMRegisterConf2.Designer.cs
+07/19/2021  09:42 AM             5,698 frmSIMRegisterConf2.resx
+07/19/2021  09:42 AM               360 frmSIMService.cs
+07/19/2021  09:42 AM            29,505 frmSIMService.Designer.cs
+07/19/2021  09:42 AM             6,778 frmSIMService.resx
+07/19/2021  09:42 AM               364 frmTopupService.cs
+07/19/2021  09:42 AM            26,497 frmTopupService.Designer.cs
+07/19/2021  09:42 AM             6,609 frmTopupService.resx
+07/19/2021  09:42 AM               366 frmTopupService2.cs
+07/19/2021  09:42 AM            10,146 frmTopupService2.Designer.cs
+07/19/2021  09:42 AM             5,698 frmTopupService2.resx
+07/19/2021  09:42 AM               376 frmTopupServiceCancel.cs
+07/19/2021  09:42 AM            23,640 frmTopupServiceCancel.Designer.cs
+07/19/2021  09:42 AM             7,158 frmTopupServiceCancel.resx
+07/19/2021  09:42 AM               374 frmTopupServicePrint.cs
+07/19/2021  09:42 AM            13,875 frmTopupServicePrint.Designer.cs
+07/19/2021  09:42 AM             6,794 frmTopupServicePrint.resx
+07/19/2021  09:42 AM               374 frmTopupSIMPromotion.cs
+07/19/2021  09:42 AM            21,743 frmTopupSIMPromotion.Designer.cs
+07/19/2021  09:42 AM             5,698 frmTopupSIMPromotion.resx
+07/19/2021  09:42 AM               376 frmTopupSIMPromotion2.cs
+07/19/2021  09:42 AM             4,960 frmTopupSIMPromotion2.Designer.cs
+07/19/2021  09:42 AM             5,698 frmTopupSIMPromotion2.resx
+07/19/2021  09:42 AM               388 frmTopupSIMPromotionPayment.cs
+07/19/2021  09:42 AM            24,104 frmTopupSIMPromotionPayment.Designer.cs
+07/19/2021  09:42 AM             6,790 frmTopupSIMPromotionPayment.resx
+08/04/2021  09:58 AM               920 UIForm.cs
+08/04/2021  09:58 AM            19,487 UIForm.Designer.cs
+08/04/2021  09:48 AM             5,817 UIForm.resx
+              67 File(s)        784,193 bytes
+               2 Dir(s)  263,162,335,232 bytes free

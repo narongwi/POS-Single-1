@@ -123,15 +123,87 @@ namespace BJCBCPOS_Process
             }
         }
 
+        //public StoreResult searchMember(int searchType, string data)
+        //{
+        //    try
+        //    {
+        //        return command.searchMember(FunctionID.Return_InputCustomer_ByMember, searchType, data);
+        //    }
+        //    catch (NetworkConnectionException)
+        //    {
+        //        AppLog.writeLog("connection to server lost at ReturnProcess.searchMember");
+        //        throw;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return new StoreResult(ResponseCode.Error, ex.Message, "", "");
+        //    }
+        //}
+
         public StoreResult searchMember(int searchType, string data)
         {
             try
             {
-                return command.searchMember(FunctionID.Return_InputCustomer_ByMember, searchType, data);
+                if (ProgramConfig.memberFormat == MemberFormat.MegaMaket)
+                {
+                    return command.searchCustomer(FunctionID.Return_InputCustomer_ByMember, searchType, data);
+                }
+                else
+                {
+                    return command.searchMember(FunctionID.Return_InputCustomer_ByMember, searchType, data);
+                }
             }
             catch (NetworkConnectionException)
             {
-                AppLog.writeLog("connection to server lost at ReturnProcess.searchMember");
+                AppLog.writeLog("connection to server lost at SaleProcess.searchMember");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new StoreResult(ResponseCode.Error, ex.Message, "", "");
+            }
+        }
+
+        public StoreResult getMemberProfile(string memberId)
+        {
+            try
+            {
+                if (ProgramConfig.memberFormat == MemberFormat.MegaMaket)
+                {
+                    var res = command.CheckCustomer(FunctionID.Sale_Member_Display, memberId);
+                    if (res.response.next)
+                    {
+                        ProgramConfig.printInvoiceType = (PrintInvoiceType)Enum.Parse(typeof(PrintInvoiceType), res.otherData.Rows[0]["PrintInvoiceType"].ToString().ToUpper(), true);
+                        ProgramConfig.memberProfileMMFormat.CreditCustomerNo = res.otherData.Rows[0]["CreditCustomerNo"].ToString().ToUpper();
+                        ProgramConfig.memberProfileMMFormat.CustomerCategory = res.otherData.Rows[0]["CustomerCategory"].ToString().ToUpper();
+                        ProgramConfig.memberProfileMMFormat.Customer_No = res.otherData.Rows[0]["Customer_No"].ToString().ToUpper();
+                        ProgramConfig.memberProfileMMFormat.Customer_IDCard = res.otherData.Rows[0]["IDCardNo"].ToString().ToUpper();
+                        ProgramConfig.memberProfileMMFormat.CustomerID = res.otherData.Rows[0]["CustID"].ToString().ToUpper();
+                        ProgramConfig.memberProfileMMFormat.Address = res.otherData.Rows[0]["InvoiceAddress"].ToString().ToUpper();
+                        //res = command.selectCustomer_FFTI(ProgramConfig.memberProfileMMFormat.Customer_IDCard);
+                        //if (res.response.next)
+                        //{
+                        //    if (res.otherData.Rows.Count > 0)
+                        //    {
+                        //        ProgramConfig.memberProfileMMFormat.CustomerIDFFTI = res.otherData.Rows[0]["CUSTOMERID"].ToString().ToUpper();
+                        //    }                           
+                        //}
+                    }
+                    return res;
+                }
+                else
+                {
+                    var res = command.getMemberProfile(FunctionID.Sale_Member_Display, memberId);
+                    if (res.response.next)
+                    {
+                        ProgramConfig.printInvoiceType = (PrintInvoiceType)Enum.Parse(typeof(PrintInvoiceType), res.otherData.Rows[0]["PrintInvoiceType"].ToString().ToUpper(), true);
+                    }
+                    return res;
+                }
+            }
+            catch (NetworkConnectionException)
+            {
+                AppLog.writeLog("connection to server lost at SaleProcess.getMemberProfile");
                 throw;
             }
             catch (Exception ex)
@@ -419,22 +491,22 @@ namespace BJCBCPOS_Process
             }
         }
 
-        public StoreResult getMemberProfile(string memberID)
-        {
-            try
-            {
-                return command.getMemberProfile(FunctionID.Return_InputCustomer_Display, memberID);
-            }
-            catch (NetworkConnectionException)
-            {
-                AppLog.writeLog("connection to server lost at ReturnProcess.getMemberProfile");
-                throw;
-            }
-            catch (Exception ex)
-            {
-                return new StoreResult(ResponseCode.Error, ex.Message, "", "");
-            }
-        }
+        //public StoreResult getMemberProfile(string memberID)
+        //{
+        //    try
+        //    {
+        //        return command.getMemberProfile(FunctionID.Return_InputCustomer_Display, memberID);
+        //    }
+        //    catch (NetworkConnectionException)
+        //    {
+        //        AppLog.writeLog("connection to server lost at ReturnProcess.getMemberProfile");
+        //        throw;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return new StoreResult(ResponseCode.Error, ex.Message, "", "");
+        //    }
+        //}
 
         public StoreResult getCustomerFFTI(string taxId)
         {
@@ -509,7 +581,18 @@ namespace BJCBCPOS_Process
         {
             try
             {
-                return command.updateSuperuserIdTempF(ProgramConfig.returnRefNo);
+                var res = command.updateSuperuserIdTempF(ProgramConfig.returnRefNo);
+                if (res.response.next)
+	            {
+                    DataRow row = res.otherData.Rows[0];
+                    if (command.saveTempDlyptrans(row["REF"] + "", row["REC"] + "", row["STY"] + "", row["VTY"] + "", row["PCD"] + "", row["QNT"] + "", row["AMT"] + "", row["FDS"] + "",
+                            row["USR"] + "", row["EGP"] + "", row["STT"] + "", row["PDISC"] + "", row["DISCID"] + "", row["UPC"] + "", row["DTY"] + "", row["DISCAMT"] + "", row["REASON_ID"] + "", row["STV"] + ""))
+                    {
+                        return new StoreResult(ResponseCode.Success, "Success");
+                    }
+                }
+
+                return new StoreResult(ResponseCode.Error, "Cannot Update TEMPDLYPTRANS", "");
             }
             catch (NetworkConnectionException)
             {
@@ -599,24 +682,79 @@ namespace BJCBCPOS_Process
             }
         }
 
-        public StoreResult selectDLYPTRANS(string refNo, string sty = "", string vty = "")
+        public StoreResult selectDLYPTRANS(string refNo, string vty = "", string dty = "")
         {
             try
             {
-                var res = command.selectDLYPTRANS(refNo, sty, vty);
+                var res = command.selectDLYPTRANS(refNo, vty, dty);
                 if (res.otherData.Rows.Count > 0)
                 {
-                    res = command.selectEDCTrans(refNo);
+                    string cardNo = res.otherData.Rows[0]["PCD"].ToString();
+
+                    res = command.selectEDCTrans(refNo, cardNo);
                     if (res.otherData.Rows.Count > 0)
                     {
                         return new StoreResult(ResponseCode.Success, data: res.otherData);
                     }
                 }
+
+                res = command.selectDLYTRANS(refNo, vty, dty);
+                if (res.otherData.Rows.Count > 0)
+                {
+                    string cardNo = res.otherData.Rows[0]["PCD"].ToString();
+
+                    res = command.selectEDCTrans(refNo, cardNo, true);
+                    if (res.otherData.Rows.Count > 0)
+                    {
+                        return new StoreResult(ResponseCode.Success, data: res.otherData);
+                    }
+                }
+
                 return new StoreResult(ResponseCode.Error, "");
             }
             catch (NetworkConnectionException)
             {
                 AppLog.writeLog("connection to server lost at VoidProcess.PrintVoidReceipt");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new StoreResult(ResponseCode.Error, ex.Message, "", "");
+            }
+        }
+
+        public StoreResult findMember(int searchType, string data)
+        {
+            try
+            {
+                var res = searchMember(searchType, data);
+                if (res.response.next)
+                {
+                    string memberID = data;//res.otherData.Rows[0]["MemberID"].ToString();
+                    var res2 = getMemberProfile(memberID);
+                }
+                return res;
+            }
+            catch (NetworkConnectionException)
+            {
+                AppLog.writeLog("connection to server lost at SaleProcess.findMember");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new StoreResult(ResponseCode.Error, ex.Message, "", "");
+            }
+        }
+
+        public StoreResult SaveDrawerTrans(FunctionID function)
+        {
+            try
+            {
+                return command.saveDrawerTrans(ProgramConfig.returnRefNo, function);
+            }
+            catch (NetworkConnectionException)
+            {
+                AppLog.writeLog("connection to server lost at SaleProcess.CheckValuePayment");
                 throw;
             }
             catch (Exception ex)

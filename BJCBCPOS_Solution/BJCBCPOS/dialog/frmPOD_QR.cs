@@ -19,8 +19,10 @@ namespace BJCBCPOS
         private Point defalutLocation = new Point();
         private Point keyboardLocation = new Point();
         frmPayment fPayment;
+        int cntTimeQR = 0;
 
         public string edcAmt;
+        public string pmCodeRet;
 
         string pmType;
         string pmNumber;
@@ -34,6 +36,7 @@ namespace BJCBCPOS
         string qrCodeFull;
         string total;
         string pmCode;
+        
 
         public frmPOD_QR()
         {
@@ -58,10 +61,7 @@ namespace BJCBCPOS
         {
             fPayment = (frmPayment)this.Owner;
 
-            btn_edit_credit.Visible = false;
-            btnCancelChange.Visible = false;
-            btnConfirmChange.Visible = false;
-            ucTextBoxWithIcon1.Visible = false;
+
 
             if (this.Owner != null)
             {
@@ -84,6 +84,10 @@ namespace BJCBCPOS
                 keyboardLocation = new Point(pnMain.Location.X, -127);
                 this.Location = new Point(0, 0);
             }
+
+            btnClear_Click(null, null);
+
+
         }
 
         protected override void OnPaintBackground(PaintEventArgs e)
@@ -101,9 +105,91 @@ namespace BJCBCPOS
         private void ucTBScanBarcode_TextBoxKeydown(object sender, EventArgs e)
         {
             //ucTBScanBarcode.Text
+            if (timer1.Enabled == false)
+            {
+                timer1.Start();
+            }
+            cntTimeQR = 0;
             _qrcode.Add(ucTBScanBarcode.InpTxt.Trim());
+            if (_qrcode.Count == 1)
+            {
+                lbPaymentTypeVal.Text = _qrcode[_qrcode.Count - 1];
+            }
+            else if (_qrcode.Count == 2)
+            {
+                lbPaymentNumberVal.Text = _qrcode[_qrcode.Count - 1];
+            }
+            else if (_qrcode.Count == 3)
+            {
+                lbRefIDVal.Text = _qrcode[_qrcode.Count - 1];
+            }
+            else if (_qrcode.Count == 4)
+            {
+                lbApproveCodeVal.Text = _qrcode[_qrcode.Count - 1];
+            }
+            else if (_qrcode.Count == 5)
+            {
+                lbTraceNoVal.Text = _qrcode[_qrcode.Count - 1];
+            }
+            else if (_qrcode.Count == 6)
+            {
+                lbTerminalIDVal.Text = _qrcode[_qrcode.Count - 1];
+            }
+            else if (_qrcode.Count == 7)
+            {
+                lbMerchantIDVal.Text = _qrcode[_qrcode.Count - 1];
+            }
+            else if (_qrcode.Count == 8)
+            {
+                lbEDCDateVal.Text = _qrcode[_qrcode.Count - 1];
+            }
+            else if (_qrcode.Count == 9)
+            {
+                lbEDCAmtVal.Text = _qrcode[_qrcode.Count - 1];
+            }
+            else if (_qrcode.Count == 10)
+            {
+                lbInvoiceNoVal.Text = _qrcode[_qrcode.Count - 1];
+            }
+
             if (_qrcode.Count == 10)
             {
+                timer1.Stop();
+                bool isCredit = false;
+                string pmCodeCredit = "";
+
+                DataTable dt = process.functionGetPaymentCode(_qrcode[1]);
+                if (dt.Rows.Count > 0 && dt.Rows[0][0].ToString() != "XXXXXXXXXXXXXXXXXXXX")
+                {
+                    pmCodeCredit = dt.Rows[0][0].ToString().Substring(0, 8);
+                    isCredit = true;
+                }
+
+                //กด credit scan qr
+                if (pmCode == "" && !isCredit)
+                {
+                    Utility.AlertMessage(ResponseCode.Error, "ไม่พบตราสาร กรุณาแสกนใหม่อีกครั้ง");
+                    btnClear_Click(null, null);
+                    return;
+                }
+
+                ////กด qr scan credit
+                if (pmCode.StartsWith("QRPP") && isCredit)
+                {
+                    Utility.AlertMessage(ResponseCode.Error, "ไม่พบตราสาร กรุณาแสกนใหม่อีกครั้ง");
+                    btnClear_Click(null, null);
+                    return;
+                }
+
+                if (pmCode == "")
+                {
+                    pmCodeRet = pmCodeCredit;
+                }
+                else
+                {
+                    pmCodeRet = pmCode;
+                }
+
                 pmType = _qrcode[0];
                 pmNumber = _qrcode[1];
                 refID = _qrcode[2];
@@ -115,16 +201,6 @@ namespace BJCBCPOS
                 edcAmt = _qrcode[8];
                 invoiceNo = _qrcode[9];
 
-                lbPaymentTypeVal.Text = pmType;
-                lbPaymentNumberVal.Text = pmNumber;
-                lbRefIDVal.Text = refID;
-                lbApproveCodeVal.Text = approveCode;
-                lbTraceNoVal.Text = traceNo;
-                lbTerminalIDVal.Text = terminalID;
-                lbMerchantIDVal.Text = merchantID;
-                lbEDCDateVal.Text = edcDate;
-                lbEDCAmtVal.Text = edcAmt;
-                lbInvoiceNoVal.Text = invoiceNo;
                 qrCodeFull = String.Join("|", _qrcode);
 
                 if (lbInvoiceNoVal.Text == "")
@@ -160,12 +236,12 @@ namespace BJCBCPOS
             btn_edit_credit.Visible = false;
             btnConfirmChange.Visible = false;
             btnCancelChange.Visible = false;
-
             ucTextBoxWithIcon1.Text = "";
             ucTextBoxWithIcon1.Visible = false;
            
             ucTBScanBarcode.InpTxt = "";
             ucTBScanBarcode.FocusTxt();
+            this.ActiveControl = ucTBScanBarcode;
         }
 
         private void btn_edit_credit_Click(object sender, EventArgs e)
@@ -199,6 +275,20 @@ namespace BJCBCPOS
                 return;
             }
 
+            if (invoiceNo.Trim() == "")
+            {
+                Utility.AlertMessage(ResponseCode.Error, "กรุณาระบุหมายเลข invoice");
+                return;
+            }
+
+            double chkAmt = 0.0;
+            if (!double.TryParse(edcAmt, out chkAmt))
+            {
+                Utility.AlertMessage(ResponseCode.Error, "จำนวนเงินไม่ถูกต้อง กรุณาสแกนอีกครั้ง");
+                return;
+            }
+
+
             if (!fPayment.CheckChangeStatus(ucTBScanBarcode, edcAmt, true))
             {
                 return;
@@ -214,7 +304,8 @@ namespace BJCBCPOS
                 chg = (Convert.ToDouble(edcAmt) - Convert.ToDouble(total)).ToString(ProgramConfig.amountFormatString);
             }
 
-            var res = process.savePaymentPOD(pmCode, pmNumber, edcAmt, chg, "", refID, approveCode, traceNo, terminalID, merchantID, edcDate, invoiceNo, qrCodeFull);
+            int maxRecPOD = process.selectMaxRecTEMP_PODTRANS_PAY(ProgramConfig.podRefNo);
+            var res = process.savePaymentPOD(pmCode, pmNumber, edcAmt, chg, "", refID, approveCode, traceNo, terminalID, merchantID, edcDate, invoiceNo, qrCodeFull, maxRecPOD.ToString());
             if (res.response.next)
             {
                 ProgramConfig.podRefID = refID;
@@ -280,6 +371,18 @@ namespace BJCBCPOS
         private void btnNo_Click(object sender, EventArgs e)
         {
             DialogResult = System.Windows.Forms.DialogResult.No;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (cntTimeQR >= 1 && _qrcode.Count < 10)
+            {
+                timer1.Stop();
+                //TO DO Change Language
+                Utility.AlertMessage(ResponseCode.Error, "ข้อมูล QR ผิดปกติ กรุณากรอกข้อมูลอีกครั้ง");
+                btnClear_Click(null, null);
+            }
+            cntTimeQR++;
         }
     }
 }

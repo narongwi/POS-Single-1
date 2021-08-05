@@ -25,8 +25,7 @@ namespace BJCBCPOS
         public string memberID = "";
         public string memberCardNo = "";
         public string eventName = "";
-        public bool IsShowButtonBack;
-        public FunctionID functionID;
+        public FunctionID functionID = FunctionID.NoFunctionID;
         public CheckPolicyShowDetailHandler CheckPolicyShowDetail;
         public InsertTempCustomerFullTaxHandler InsertTempCustomerFullTax;
 
@@ -84,6 +83,16 @@ namespace BJCBCPOS
                 picBtnBack.Visible = value;
             }
         }
+
+
+        [Category("Custom Property")]
+        [Description("Set visible button back")]
+        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
+        public bool IsSaveMember
+        {
+            get;
+            set;
+        }
       
         #endregion
 
@@ -110,8 +119,9 @@ namespace BJCBCPOS
             ucHeader = this.FindForm().Controls.Find("ucHeader1", true).FirstOrDefault() as UCHeader;
             ucTBWI_Member.TextBoxIconType = UCTextBoxIconType.SearchAndDelete;
 
-            picBtnBack.Visible = IsShowButtonBack;
+            picBtnBack.Visible = VisibleBtnBack;
 
+            
 
 
             //if (ucHeader.nameText.Trim() == "")
@@ -162,6 +172,10 @@ namespace BJCBCPOS
 
                     if (ucTBWI_Member.Text.Trim() != "")
                     {
+                        string tmpMemberID = ProgramConfig.memberId;
+                        string tmpMemberName = ProgramConfig.memberName;
+                        string tmpMemberCardNo = ProgramConfig.memberCardNo;
+
                         frmSearchMemberAuto frm = null;
                         Profile check = ProgramConfig.getProfile(FunctionID.Sale_Member_Search);
                         if (check.policy == PolicyStatus.Work)
@@ -199,32 +213,33 @@ namespace BJCBCPOS
                                         }                                       
                                     }
                                 }
+                                mon.panel2.Visible = false;
                             }
-
-                            saleProcess.SaveMember();
-
+                          
                             if (res != DialogResult.No)
                             {
-                                ucHeader.nameText = memberName;
-                                ucHeader.nameVisible = true;
-                                Label newFont = new Label();
-                                newFont.Font = new Font(ProgramConfig.language.FontName, 14);
-                                int checkWidth = TextRenderer.MeasureText(memberName, newFont.Font).Width;
-                                ucHeader.pnNameSize = new Size(50 + checkWidth, 43);
-                                this.Visible = false;                              
+                                SaveMember();
                             }
                             else
                             {
-                                ClearMember();
+                                this.memberID = tmpMemberID;
+                                ProgramConfig.memberId = memberID;
+                                this.memberName = tmpMemberName;
+                                ProgramConfig.memberName = memberName;
+                                this.memberCardNo = tmpMemberCardNo;
+                                ProgramConfig.memberCardNo = memberCardNo;
+                                //ClearMember();
                                 ucTBWI_Member.Text = "";
                                 ucTBWI_Member.Focus();
+                                return;
                             }
                         }
                         else if (resDialog == System.Windows.Forms.DialogResult.No)
                         {
-                            ClearMember();
+                            //ClearMember();
                             ucTBWI_Member.Text = "";
                             ucTBWI_Member.Focus();
+                            return;
                         }
                         else if (resDialog == System.Windows.Forms.DialogResult.Abort)
                         {
@@ -235,19 +250,19 @@ namespace BJCBCPOS
                     {
                         //TO DO Change Language
                         Utility.AlertMessage(ResponseCode.Error, "กรุณาใส่สมาชิก");
-                        ClearMember();
+                        //ClearMember();
                         ucTBWI_Member.Text = "";
                         ucTBWI_Member.Focus();
                     }
 
                     if (resDialog == System.Windows.Forms.DialogResult.Yes)
-                    {
-                        mon.panel2.Visible = false;
+                    {                  
                         if (MemberEnterFromButton != null)
                         {
                             MemberEnterFromButton(this, e);
                         }   
                     }
+                    mon.panel2.Visible = false;
                 }
                 else
                 {
@@ -295,29 +310,87 @@ namespace BJCBCPOS
                     MemberIconClick(this, e);
                 }
 
+                Form form = Application.OpenForms["frmMonitor2Detail"];
+                frmMonitor2Detail mon = form as frmMonitor2Detail;
+
+                string tmpMemberID = ProgramConfig.memberId;
+                string tmpMemberName = ProgramConfig.memberName;
+                string tmpMemberCardNo = ProgramConfig.memberCardNo;
+
+                frmSearchMember frm = null;
+
                 eventName = eventName == "" ? "UCMember" : eventName;
                 Profile check = ProgramConfig.getProfile(FunctionID.Sale_Member_Search);
                 if (check.policy == PolicyStatus.Work)
                 {
                     frmLoading.showLoading();
-                    frmSearchMember frm = new frmSearchMember((UCTextBoxWithIcon)sender, eventName, this, functionID);
+                    frm = new frmSearchMember((UCTextBoxWithIcon)sender, eventName, this, functionID);
                     frm.ShowDialog(this);
                     frmLoading.closeLoading();
                 }
 
                 if (ucTBWI_Member.Text != "")
                 {
-                    ucHeader.nameText = memberName;
-                    ucHeader.nameVisible = true;
-                    Label newFont = new Label();
-                    newFont.Font = new Font(ProgramConfig.language.FontName, 14);
-                    int checkWidth = TextRenderer.MeasureText(ucHeader.nameText, newFont.Font).Width;
-                    ucHeader.pnNameSize = new Size(50 + checkWidth, 43);
-                    this.Visible = false;
+                    DialogResult res = DialogResult.None;
+                    if (ProgramConfig.printInvoiceType == PrintInvoiceType.FULLTAX)
+                    {
+                        if (CheckPolicyShowDetail == null || CheckPolicyShowDetail())
+                        {
+                            mon.panel2.Visible = true;
+                            mon.panel2.BringToFront();
+
+                            //TO DO Change Language
+                            mon.label5.Text = memberName;
+                            mon.label7.Text = "หมายเลขประจำตัวผู้เสียภาษี " + ProgramConfig.memberProfileMMFormat.Customer_IDCard;
+                            mon.label6.Text = ProgramConfig.memberProfileMMFormat.Address;
+
+                            frmShowInfoCustFullTax frmShowFFTI = new frmShowInfoCustFullTax(memberName);
+                            res = frmShowFFTI.ShowDialog(this.FindForm());
+                        }
+
+                        if (frm != null)
+                        {
+                            if (frm.resultSearch.response.next)
+                            {
+                                if (InsertTempCustomerFullTax != null)
+                                {
+                                    InsertTempCustomerFullTax(frm.resultSearch);
+                                }
+                            }
+                        }
+                        mon.panel2.Visible = false;
+                    }
+
+                    if (res != DialogResult.No)
+                    {
+                        SaveMember();
+                    }
+                    else
+                    {
+                        this.memberID = tmpMemberID;
+                        ProgramConfig.memberId = memberID;
+                        this.memberName = tmpMemberName;
+                        ProgramConfig.memberName = memberName;
+                        this.memberCardNo = tmpMemberCardNo;
+                        ProgramConfig.memberCardNo = memberCardNo;
+
+                        ucTBWI_Member.Text = "";
+                        ucTBWI_Member.FocusTxt();
+                        return;
+                    }               
                 }
                 else
                 {
-                    ClearMember();
+                    this.memberID = tmpMemberID;
+                    ProgramConfig.memberId = memberID;
+                    this.memberName = tmpMemberName;
+                    ProgramConfig.memberName = memberName;
+                    this.memberCardNo = tmpMemberCardNo;
+                    ProgramConfig.memberCardNo = memberCardNo;
+
+                    ucTBWI_Member.Text = "";
+                    ucTBWI_Member.FocusTxt();
+                    return;
                 }
             }
             else
@@ -334,6 +407,22 @@ namespace BJCBCPOS
         private void ucTBWI_Member_TextBoxFocus(object sender, EventArgs e)
         {
             KeyboardApi keyboard = new KeyboardApi(CultureInfo.GetCultureInfo(new Language(1).culture));
+        }
+
+        private void SaveMember()
+        {
+            ucHeader.nameText = memberName;
+            ucHeader.nameVisible = true;
+            Label newFont = new Label();
+            newFont.Font = new Font(ProgramConfig.language.FontName, 14);
+            int checkWidth = TextRenderer.MeasureText(memberName, newFont.Font).Width;
+            ucHeader.pnNameSize = new Size(50 + checkWidth, 43);
+            this.Visible = false;
+
+            if (IsSaveMember)
+            {
+                saleProcess.SaveMember();
+            }
         }
     }
 }

@@ -37,9 +37,9 @@
             this.lbMessage = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnLeft = new System.Windows.Forms.Button();
-            this.btnRight = new System.Windows.Forms.Button();
             this.lbMessage2 = new System.Windows.Forms.Label();
+            this.btnRight = new System.Windows.Forms.Button();
+            this.btnLeft = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.helpIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,10 +63,10 @@
             // lbFunction
             // 
             this.lbFunction.AutoSize = true;
-            this.lbFunction.Font = new System.Drawing.Font("MM Mega Market Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbFunction.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbFunction.Location = new System.Drawing.Point(5, 363);
             this.lbFunction.Name = "lbFunction";
-            this.lbFunction.Size = new System.Drawing.Size(78, 25);
+            this.lbFunction.Size = new System.Drawing.Size(86, 24);
             this.lbFunction.TabIndex = 12;
             this.lbFunction.Text = "Function :";
             this.lbFunction.Visible = false;
@@ -166,22 +166,16 @@
             this.panel2.TabIndex = 7;
             this.panel2.Visible = false;
             // 
-            // btnLeft
+            // lbMessage2
             // 
-            this.btnLeft.BackgroundImage = global::BJCBCPOS.Properties.Resources.Rectangle_260;
-            this.btnLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLeft.FlatAppearance.BorderSize = 0;
-            this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeft.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLeft.ForeColor = System.Drawing.Color.Black;
-            this.btnLeft.Location = new System.Drawing.Point(45, 150);
-            this.btnLeft.Margin = new System.Windows.Forms.Padding(5);
-            this.btnLeft.Name = "btnLeft";
-            this.btnLeft.Size = new System.Drawing.Size(230, 115);
-            this.btnLeft.TabIndex = 17;
-            this.btnLeft.Text = "BTNLeft";
-            this.btnLeft.UseVisualStyleBackColor = true;
-            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
+            this.lbMessage2.Font = new System.Drawing.Font("Prompt", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMessage2.Location = new System.Drawing.Point(45, 11);
+            this.lbMessage2.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.lbMessage2.Name = "lbMessage2";
+            this.lbMessage2.Size = new System.Drawing.Size(503, 125);
+            this.lbMessage2.TabIndex = 19;
+            this.lbMessage2.Text = "label1";
+            this.lbMessage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnRight
             // 
@@ -200,16 +194,22 @@
             this.btnRight.UseVisualStyleBackColor = true;
             this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
-            // lbMessage2
+            // btnLeft
             // 
-            this.lbMessage2.Font = new System.Drawing.Font("Prompt", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMessage2.Location = new System.Drawing.Point(45, 11);
-            this.lbMessage2.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
-            this.lbMessage2.Name = "lbMessage2";
-            this.lbMessage2.Size = new System.Drawing.Size(503, 125);
-            this.lbMessage2.TabIndex = 19;
-            this.lbMessage2.Text = "label1";
-            this.lbMessage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLeft.BackgroundImage = global::BJCBCPOS.Properties.Resources.Rectangle_260;
+            this.btnLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLeft.FlatAppearance.BorderSize = 0;
+            this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLeft.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLeft.ForeColor = System.Drawing.Color.Black;
+            this.btnLeft.Location = new System.Drawing.Point(45, 150);
+            this.btnLeft.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.Size = new System.Drawing.Size(230, 115);
+            this.btnLeft.TabIndex = 17;
+            this.btnLeft.Text = "BTNLeft";
+            this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
             // frmNotify
             // 

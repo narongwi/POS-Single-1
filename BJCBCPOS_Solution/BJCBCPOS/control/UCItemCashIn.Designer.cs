@@ -68,9 +68,9 @@
             this.lbUCChangeType.Font = new System.Drawing.Font("Prompt", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUCChangeType.Location = new System.Drawing.Point(185, 8);
             this.lbUCChangeType.Name = "lbUCChangeType";
-            this.lbUCChangeType.Size = new System.Drawing.Size(47, 23);
+            this.lbUCChangeType.Size = new System.Drawing.Size(52, 23);
             this.lbUCChangeType.TabIndex = 2;
-            this.lbUCChangeType.Text = "FXCU";
+            this.lbUCChangeType.Text = "EWGO";
             this.lbUCChangeType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbUCChangeType.FontChanged += new System.EventHandler(this.Control_FontChanged);
             // 

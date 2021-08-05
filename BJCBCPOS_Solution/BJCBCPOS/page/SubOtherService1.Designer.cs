@@ -42,7 +42,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.ucTBScanBarcode = new BJCBCPOS.UCTextBoxWithIcon();
             this.lbAction = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbRefNo = new System.Windows.Forms.Label();
@@ -58,8 +57,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbSumPay = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.ucFooterTran1 = new BJCBCPOS.UCFooterTran();
             this.ucKeypad = new BJCBCPOS.UCKeypad();
             this.ucHeader1 = new BJCBCPOS.UCHeader();
+            this.ucTBScanBarcode = new BJCBCPOS.UCTextBoxWithIcon();
             this.pn_Detail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panelScanBarcode.SuspendLayout();
@@ -164,13 +165,13 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Prompt", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label5.Location = new System.Drawing.Point(20, 87);
+            this.label5.Location = new System.Drawing.Point(20, 76);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(649, 56);
+            this.label5.Size = new System.Drawing.Size(664, 36);
             this.label5.TabIndex = 118;
             this.label5.Text = "Invoice List";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panelScanBarcode
             // 
@@ -244,32 +245,6 @@
             this.pictureBox5.TabIndex = 40;
             this.pictureBox5.TabStop = false;
             // 
-            // ucTBScanBarcode
-            // 
-            this.ucTBScanBarcode.BackColor = System.Drawing.Color.White;
-            this.ucTBScanBarcode.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTBScanBarcode.BackgroundImage")));
-            this.ucTBScanBarcode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTBScanBarcode.EnabledUC = true;
-            this.ucTBScanBarcode.IsAmount = false;
-            this.ucTBScanBarcode.IsLarge = false;
-            this.ucTBScanBarcode.IsNumber = false;
-            this.ucTBScanBarcode.IsSetFormat = false;
-            this.ucTBScanBarcode.IsValidateNumberZero = false;
-            this.ucTBScanBarcode.IsValidateTextEmpty = false;
-            this.ucTBScanBarcode.Location = new System.Drawing.Point(20, 184);
-            this.ucTBScanBarcode.MaxLength = 32767;
-            this.ucTBScanBarcode.Name = "ucTBScanBarcode";
-            this.ucTBScanBarcode.PasswordChar = false;
-            this.ucTBScanBarcode.placeHolder = "Input invoice no";
-            this.ucTBScanBarcode.Readonly = false;
-            this.ucTBScanBarcode.ShortcutsEnabled = true;
-            this.ucTBScanBarcode.Size = new System.Drawing.Size(297, 42);
-            this.ucTBScanBarcode.TabIndex = 50;
-            this.ucTBScanBarcode.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
-            this.ucTBScanBarcode.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ucTBScanBarcode.TextBoxKeydown += new System.EventHandler(this.ucTBScanBarcode_EnterFromButton);
-            this.ucTBScanBarcode.EnterFromButton += new System.EventHandler(this.ucTBScanBarcode_EnterFromButton);
-            // 
             // lbAction
             // 
             this.lbAction.BackColor = System.Drawing.Color.White;
@@ -287,7 +262,7 @@
             // 
             this.panel2.Controls.Add(this.lbRefNo);
             this.panel2.Controls.Add(this.lbTxtRefNo);
-            this.panel2.Location = new System.Drawing.Point(352, 49);
+            this.panel2.Location = new System.Drawing.Point(352, 46);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(334, 31);
             this.panel2.TabIndex = 121;
@@ -331,7 +306,7 @@
             this.pn_Order.Controls.Add(this.label1);
             this.pn_Order.Controls.Add(this.label7);
             this.pn_Order.Controls.Add(this.panel5);
-            this.pn_Order.Location = new System.Drawing.Point(18, 152);
+            this.pn_Order.Location = new System.Drawing.Point(18, 123);
             this.pn_Order.Name = "pn_Order";
             this.pn_Order.Size = new System.Drawing.Size(318, 601);
             this.pn_Order.TabIndex = 119;
@@ -397,7 +372,7 @@
             this.pn_Pay.Controls.Add(this.label6);
             this.pn_Pay.Controls.Add(this.panel1);
             this.pn_Pay.Controls.Add(this.lbSumPay);
-            this.pn_Pay.Location = new System.Drawing.Point(352, 152);
+            this.pn_Pay.Location = new System.Drawing.Point(352, 123);
             this.pn_Pay.Name = "pn_Pay";
             this.pn_Pay.Size = new System.Drawing.Size(318, 601);
             this.pn_Pay.TabIndex = 100;
@@ -432,6 +407,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Location = new System.Drawing.Point(4, 47);
             this.panel1.Name = "panel1";
@@ -464,6 +440,17 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 98;
             this.pictureBox7.TabStop = false;
+            // 
+            // ucFooterTran1
+            // 
+            this.ucFooterTran1.BackColor = System.Drawing.Color.White;
+            this.ucFooterTran1.fullContent = null;
+            this.ucFooterTran1.functionId = null;
+            this.ucFooterTran1.Location = new System.Drawing.Point(0, 728);
+            this.ucFooterTran1.mainContent = null;
+            this.ucFooterTran1.Name = "ucFooterTran1";
+            this.ucFooterTran1.Size = new System.Drawing.Size(688, 40);
+            this.ucFooterTran1.TabIndex = 122;
             // 
             // ucKeypad
             // 
@@ -501,6 +488,7 @@
             this.ucHeader1.showMainMenu = true;
             this.ucHeader1.showMember = true;
             this.ucHeader1.showMember_ButtonBack = false;
+            this.ucHeader1.showMember_IsSaveMember = true;
             this.ucHeader1.showScanner = true;
             this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
             this.ucHeader1.TabIndex = 95;
@@ -509,6 +497,33 @@
             this.ucHeader1.MemberEnterFromButton += new System.EventHandler(this.ucMember1_EnterFromButton);
             this.ucHeader1.MemberIconClick += new System.EventHandler(this.ucMember1_IconClick);
             // 
+            // ucTBScanBarcode
+            // 
+            this.ucTBScanBarcode.BackColor = System.Drawing.Color.White;
+            this.ucTBScanBarcode.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTBScanBarcode.BackgroundImage")));
+            this.ucTBScanBarcode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucTBScanBarcode.EnabledUC = true;
+            this.ucTBScanBarcode.IsAmount = false;
+            this.ucTBScanBarcode.IsKeyBoardForScan = true;
+            this.ucTBScanBarcode.IsLarge = false;
+            this.ucTBScanBarcode.IsNumber = false;
+            this.ucTBScanBarcode.IsSetFormat = false;
+            this.ucTBScanBarcode.IsValidateNumberZero = false;
+            this.ucTBScanBarcode.IsValidateTextEmpty = false;
+            this.ucTBScanBarcode.Location = new System.Drawing.Point(20, 184);
+            this.ucTBScanBarcode.MaxLength = 32767;
+            this.ucTBScanBarcode.Name = "ucTBScanBarcode";
+            this.ucTBScanBarcode.PasswordChar = false;
+            this.ucTBScanBarcode.placeHolder = "Input invoice no";
+            this.ucTBScanBarcode.Readonly = false;
+            this.ucTBScanBarcode.ShortcutsEnabled = true;
+            this.ucTBScanBarcode.Size = new System.Drawing.Size(297, 42);
+            this.ucTBScanBarcode.TabIndex = 50;
+            this.ucTBScanBarcode.Tag = BJCBCPOS_Model.UCTextBoxIconType.NoneAndDelete;
+            this.ucTBScanBarcode.TextBoxAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ucTBScanBarcode.TextBoxKeydown += new System.EventHandler(this.ucTBScanBarcode_EnterFromButton);
+            this.ucTBScanBarcode.EnterFromButton += new System.EventHandler(this.ucTBScanBarcode_EnterFromButton);
+            // 
             // SubOtherService1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -516,6 +531,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.ucFooterTran1);
             this.Controls.Add(this.pn_Order);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pn_Pay);
@@ -579,5 +595,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbRefNo;
         private System.Windows.Forms.Label lbTxtRefNo;
+        private UCFooterTran ucFooterTran1;
     }
 }

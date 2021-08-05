@@ -29,13 +29,14 @@ namespace BJCBCPOS
         private bool _nameVisible = false;
         private bool _showHamberGetItem = true;
         private bool _isMemberShowButtonBack = true;
+        private bool _isSavememberMember = true;
         private bool memberActivate = false;
         private FunctionID _alertFunctionId;
         private MenuProcess process;
         private Language curLang;
         private frmMonitorCustomer frmMon;
         private string _hambergerName = "MenuHamberger";
-        private UCHamberger _ucHamb = null;
+        private UCHamburger _ucHamb = null;
         private UCMember _ucMember = null;
         private UCPCMan _ucPCMan = null;
         private UCEmployeeDiscount _ucEmployee = null;
@@ -243,18 +244,7 @@ namespace BJCBCPOS
             }
         }
 
-        [Category("Custom Property")]
-        [Description("display member button.")]
-        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
-        public bool showMember
-        {
-            get { return this._showMember; }
-            set
-            {
-                this._showMember = value;
-                pnMember.Visible = value;
-            }
-        }
+
 
         [Category("Custom Property")]
         [Description("display calculator button.")]
@@ -397,6 +387,20 @@ namespace BJCBCPOS
             }
         }
 
+        #region Member
+        [Category("Custom Property")]
+        [Description("display member button.")]
+        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
+        public bool showMember
+        {
+            get { return this._showMember; }
+            set
+            {
+                this._showMember = value;
+                pnMember.Visible = value;
+            }
+        }
+
         [Category("Custom Property")]
         [Description("display current menu text.")]
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
@@ -408,6 +412,33 @@ namespace BJCBCPOS
                 this._isMemberShowButtonBack = value;
             }
         }
+
+        [Category("Custom Property")]
+        [Description("display current menu text.")]
+        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
+        public bool showMember_IsSaveMember
+        {
+            get { return this._isSavememberMember; }
+            set
+            {
+                this._isSavememberMember = value;
+            }
+        }
+
+        [Category("Custom Property")]
+        [Description("Set visible panel member")]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Always)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public bool VisiblePanelMember
+        {
+            get { return this._ucMember.Visible; }
+            set
+            {
+                this._ucMember.Visible = value;
+            }
+        }
+
+        #endregion
 
         #endregion
 
@@ -647,31 +678,31 @@ namespace BJCBCPOS
                     dr = dt.NewRow();
                     dr["MenuId"] = "7";
                     dr["ReferMenuId"] = "0";
-                    dr["MenuName"] = "SAVE HOLD ORDER";
+                    dr["MenuName"] = "พักบิล";
                     dt.Rows.Add(dr);
 
                     dr = dt.NewRow();
                     dr["MenuId"] = "8";
                     dr["ReferMenuId"] = "0";
-                    dr["MenuName"] = "LOAD HOLD ORDER";
+                    dr["MenuName"] = "เรียกบิล";
                     dt.Rows.Add(dr);
 
                     dr = dt.NewRow();
                     dr["MenuId"] = "6";
                     dr["ReferMenuId"] = "0";
-                    dr["MenuName"] = "ORDER TYPE";
+                    dr["MenuName"] = "ประเภทคำสั่งซื้อ";
                     dt.Rows.Add(dr);
 
                     dr = dt.NewRow();
                     dr["MenuId"] = "2";
                     dr["ReferMenuId"] = "0";
-                    dr["MenuName"] = "CANCEL";
+                    dr["MenuName"] = "ยกเลิกบิล/กลับเมนูหลัก";
                     dt.Rows.Add(dr);
 
                     dr = dt.NewRow();
                     dr["MenuId"] = "3";
                     dr["ReferMenuId"] = "1";
-                    dr["MenuName"] = "MEMBER";
+                    dr["MenuName"] = "สมาชิก";
                     dt.Rows.Add(dr);
 
                     //dr = dt.NewRow();
@@ -680,11 +711,11 @@ namespace BJCBCPOS
                     //dr["MenuName"] = "PC MAN";
                     //dt.Rows.Add(dr);
 
-                    //dr = dt.NewRow();
-                    //dr["MenuId"] = "5";
-                    //dr["ReferMenuId"] = "1";
-                    //dr["MenuName"] = "EMPLOYEE";
-                    //dt.Rows.Add(dr);
+                    dr = dt.NewRow();
+                    dr["MenuId"] = "5";
+                    dr["ReferMenuId"] = "1";
+                    dr["MenuName"] = "พนักงาน";
+                    dt.Rows.Add(dr);
 
                     dr = dt.NewRow();
                     dr["MenuId"] = "7";
@@ -739,13 +770,13 @@ namespace BJCBCPOS
                     dr = dt.NewRow();
                     dr["MenuId"] = "3";
                     dr["ReferMenuId"] = "1";
-                    dr["MenuName"] = "MEMBER";
+                    dr["MenuName"] = "สมาชิก";
                     dt.Rows.Add(dr);
 
                     dr = dt.NewRow();
                     dr["MenuId"] = "2";
                     dr["ReferMenuId"] = "0";
-                    dr["MenuName"] = "CANCEL";
+                    dr["MenuName"] = "ยกเลิกบิล/กลับเมนูหลัก";
                     dt.Rows.Add(dr);
 
                 }
@@ -754,13 +785,13 @@ namespace BJCBCPOS
 
 
 
-                _ucHamb = new UCHamberger(dt);
+                _ucHamb = new UCHamburger(dt);
                 _ucHamb.Name = _hambergerName;
                 _ucHamb.Leave += (s, e) =>
                     {
                         if (this.FindForm().ActiveControl is UCHeader)
                         {
-                            ((UCHamberger)s).Dispose();
+                            ((UCHamburger)s).Dispose();
                         }
                     };
                 _ucHamb.BackClick += (s, e) =>
@@ -776,18 +807,18 @@ namespace BJCBCPOS
             }
         }
 
-        private void ucHamb_HambergerItemClick(object sender, EventArgs e, UCHamberger pUcHamb)
+        private void ucHamb_HambergerItemClick(object sender, EventArgs e, UCHamburger pUcHamb)
         {
-            UCHambergerItem hamItm = (UCHambergerItem)sender;
+            UCHamburgerItem hamItm = (UCHamburgerItem)sender;
             if (hamItm.MenuID == MenuIdHamberger.Member)
             {
-                DisableMember_Employee_PCMan();
+                DisableMember_Employee_PCMan(hamItm);
                 Member_Click(sender, e);
             }
 
             if (hamItm.MenuID == MenuIdHamberger.PC_Man)
             {
-                DisableMember_Employee_PCMan();
+                DisableMember_Employee_PCMan(hamItm);
                 if (_ucPCMan == null)
                 {
                     _ucPCMan = InitialUCPCMan();
@@ -804,7 +835,7 @@ namespace BJCBCPOS
 
             if (hamItm.MenuID == MenuIdHamberger.Employee)
             {
-                DisableMember_Employee_PCMan();
+                DisableMember_Employee_PCMan(hamItm);
                 if (_ucEmployee == null)
                 {
                     _ucEmployee = InitialUCEmployee();
@@ -829,18 +860,24 @@ namespace BJCBCPOS
             }
         }
 
-        private void DisableMember_Employee_PCMan()
+        private void DisableMember_Employee_PCMan(UCHamburgerItem hamItm)
         {
             if (_ucMember != null)
             {
-                _ucMember.Dispose();
+                if (hamItm.MenuID != MenuIdHamberger.Member)
+                {
+                    _ucMember.Dispose();
+                }
             }
 
             if (_ucPCMan != null)
             {
                 if (String.IsNullOrEmpty(ProgramConfig.pcManID))
                 {
-                    _ucPCMan.Dispose();
+                    if (hamItm.MenuID != MenuIdHamberger.PC_Man)
+                    {
+                        _ucPCMan.Dispose();
+                    }
                 }
                 else
                 {
@@ -852,7 +889,10 @@ namespace BJCBCPOS
             {
                 if (String.IsNullOrEmpty(ProgramConfig.employeeID))
                 {
-                    _ucEmployee.Dispose();
+                    if (hamItm.MenuID != MenuIdHamberger.Employee)
+                    {
+                        _ucEmployee.Dispose();
+                    }
                 }
                 else
                 {
@@ -865,7 +905,7 @@ namespace BJCBCPOS
         {
             if (this.FindForm().ActiveControl is UCHeader)
             {
-                ((UCHambergerSubMenu)sender).Dispose();
+                ((UCHamburgerSubMenu)sender).Dispose();
             }
         }
 
@@ -1122,7 +1162,8 @@ namespace BJCBCPOS
         private UCMember InitialUCMember()
         {
             UCMember ucMember = BaseInitialUCRightSide<UCMember>();
-            ucMember.IsShowButtonBack = showMember_ButtonBack;
+            ucMember.VisibleBtnBack = showMember_ButtonBack;
+            ucMember.IsSaveMember = showMember_IsSaveMember;
             ucMember.Disposed += new EventHandler(delegate(Object o, EventArgs a)
             {
                 _ucMember = null;

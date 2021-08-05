@@ -98,7 +98,7 @@ namespace BJCBCPOS
                 }
                 else
                 {
-                    result = process.searchMember(searchType, searchData);
+                    result = process.searchMember(searchType, searchData, _functionPolicy);
                 }
 
                 resultSearch = result;
@@ -127,8 +127,6 @@ namespace BJCBCPOS
                             tName = result.otherData.Rows[i]["CustName"].ToString();
                             eName = result.otherData.Rows[i]["CustName"].ToString();
                         }
-
-
 
                         UCGridViewSearchCustomer uc = new UCGridViewSearchCustomer();
                         uc.UCGridViewSearchCustomerClick += UCGridViewSearchCustomerClick;
@@ -190,6 +188,7 @@ namespace BJCBCPOS
                         DialogResult = System.Windows.Forms.DialogResult.Yes;
                     }
 
+                    btnDisable();
                     AppMessage.fillForm(ProgramConfig.language, this);
                 }
                 else
@@ -218,28 +217,16 @@ namespace BJCBCPOS
             }
         }
 
-        private void RefreshGrid()
+        public void btnEnable()
         {
-            List<UCItemSell> lstItemSell = new List<UCItemSell>();
-            lstItemSell = pn_MemberList.Controls.Cast<UCItemSell>().OrderByDescending(o => Convert.ToInt32(o.lbNoText)).ToList();
-            pn_MemberList.Controls.Clear();
-            int num = lstItemSell.Count;
+            btnOk.Enabled = true;
+            btnOk.BackgroundImage = Properties.Resources.button_ok;
+        }
 
-            foreach (UCItemSell item in lstItemSell)
-            {
-                if (num % 2 != 0)
-                {
-                    item.BackColor = Color.FromArgb(240, 240, 240);
-                }
-                else
-                {
-                    item.BackColor = Color.White;
-                }
-                item.lbNoText = num.ToString();
-                pn_MemberList.Controls.Add(item);
-                num--;
-            }
-            ScrollToBottom(pn_MemberList);
+        public void btnDisable()
+        {
+            btnOk.Enabled = false;
+            btnOk.BackgroundImage = Properties.Resources.confirm_disable;
         }
 
         public void ScrollToBottom(Panel p)
@@ -255,9 +242,10 @@ namespace BJCBCPOS
         {
             UCGridViewSearchCustomer ucGV = (UCGridViewSearchCustomer)sender;
             memberID = ucGV.lb_MemberID.Text;
-            txtName = ucGV.lb_TempName.Text;
+            tName = ucGV.lb_TempName.Text;
             membercard = ucGV.lb_MemberCard.Text;
-            
+
+            btnEnable();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -284,7 +272,7 @@ namespace BJCBCPOS
             //    ucMember.frmSearchMemberData(memberID, txtName, membercard);
             //}
             SearchProcess();
-            ProgramConfig.memberName = txtName;
+            //ProgramConfig.memberName = txtName;
 
             Dispose();
             DialogResult = System.Windows.Forms.DialogResult.Yes;
@@ -320,7 +308,7 @@ namespace BJCBCPOS
             {
                 result = processRe.getMemberProfile(memberInp);
             }
-            else if (eventName == "UCMember")
+            else if (eventName == "UCMember" || eventName == "CreditSale")
             {
                 result = process.getMemberProfile(memberInp);
             }
@@ -344,7 +332,6 @@ namespace BJCBCPOS
 
             if (result.response.next)
             {
-                
                 if (tName.Trim() != "")
                 {
                     txtName = tName;
@@ -377,7 +364,7 @@ namespace BJCBCPOS
                     frmReturnFromInvoice frmReturnFromInvoice = (frmReturnFromInvoice)this.Owner;
                     frmReturnFromInvoice.frmSearchMemberData(memberID, txtName);
                 }
-                else if (eventName == "UCMember")
+                else if (eventName == "UCMember" || eventName == "CreditSale")
                 {
                     UCMember ucMember = (UCMember)_uc;
                     ucMember.frmSearchMemberData(memberID, txtName, membercard);

@@ -19,7 +19,6 @@ namespace BJCBCPOS
         SaleProcess saleProcess = new SaleProcess();
         frmPayment fPayment;
 
-        Process proc;
         string filePNG;
         string _requestTranID;
 
@@ -45,6 +44,7 @@ namespace BJCBCPOS
 
         private void frmQRPaymentOnline_Shown(object sender, EventArgs e)
         {
+            this.Refresh();
             Screen second = Screen.AllScreens[0];
             if (Screen.AllScreens.Length > 1 && second.Primary)
             {
@@ -53,6 +53,7 @@ namespace BJCBCPOS
                 this.Location = new Point(screen_location.X - 375, screen_location.Y);
             }
 
+            pictureBox5.Image = Utility.GetLogoImage();
             picLogo.Image = Utility.GetLogoImage();
             lb_Amt.Text = _total;
             label5.Text = _total;
@@ -73,19 +74,6 @@ namespace BJCBCPOS
             saleProcess.PaymentDiscount("QRPP", "");
             fPayment.loadDiscount();
 
-
-            //TO DO Change
-            //res = saleProcess.selectPAYMENT_PARAMETER("", "");
-            //if (res.response.next)
-            //{
-            //    if (_total > Convert.ToDouble(res.otherData.Rows[0]["QRPAYMENT_LIMIT_AMT"]))
-            //    {
-            //        //Alert Message QR Payment ไม่สามารถชำระได้มากกว่า xx,xxx บาท!!!
-            //        this.Dispose();
-            //        return;
-            //    }
-            //}
-
             res = saleProcess.selectParameterForQR("RQ", "CB", "");
             if (res.response.next)
             {
@@ -93,8 +81,10 @@ namespace BJCBCPOS
 
                 res = saleProcess.QRRequest(dr["TranID"].ToString(), dr["TranTime"].ToString(), ProgramConfig.qrPaymentMID, _total.ToString());
                 if (res.response.next)
-                {
+                {                
                     DataRow dr2 = res.otherData.Rows[0];
+                    label7.Text = label2.Text = "บัญชี : " + dr2["ACCOUNT_NAME"].ToString();
+
                     _requestTranID = dr2["TranID"].ToString();
 
                     res = saleProcess.saveQRPayTransOnline("SA", dr["Seq"].ToString(), dr2["TranID"].ToString(), dr2["Account_name"].ToString(), dr2["QR_Code"].ToString(), dr2["STATUS_CODE"].ToString(),
@@ -130,6 +120,7 @@ namespace BJCBCPOS
 
         private bool GenQRCode(string data)
         {
+            Process proc = null;
             try
             {
                 AppLog.writeLog("Start GenQR");
@@ -150,11 +141,13 @@ namespace BJCBCPOS
                 if (!File.Exists(qrPath))
                 {
                     //Alert not found QRCode.exe
+                    //Change language
+                    Utility.AlertMessage(ResponseCode.Error, "ไม่พบ path qrcode.exe");
                 }
 
                 string argument = String.Format(@"-o {0} -s 5 -l H ""{1}""", filePNG, data);
 
-                Process proc = new Process
+                proc = new Process
                 {
                     StartInfo = new ProcessStartInfo
                     {
@@ -207,20 +200,17 @@ namespace BJCBCPOS
             }
             catch(Exception ex)
             {
+                if (proc != null)
+                {
+                    proc.Close();
+                }
                 AppLog.writeLog("[Error] : " + ex.Message);
                 return false;
             }
-         
-
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (proc != null)
-            {
-                proc.Close();
-            }
             CloseForm();
         }
 
@@ -261,7 +251,7 @@ Retry:
                                 if (res.response.next)
                                 {
                                     Program.control.CloseForm("frmQRPaymentOnline");
-                                    fPayment.ShowConfirmPayment(false);
+                                    fPayment.ShowConfirmPayment("QRPP", false);
                                     this.Dispose();
                                     return;
                                 }
@@ -349,7 +339,7 @@ Retry:
                         if (res.response.next)
                         {
                             Program.control.CloseForm("frmQRPaymentOnline");
-                            fPayment.ShowConfirmPayment(false);
+                            fPayment.ShowConfirmPayment("QRPP", false);
                         }
                     }
                 }

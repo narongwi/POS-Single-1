@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOD_QR));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTerminalIDVal = new System.Windows.Forms.Label();
@@ -63,6 +64,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.ucTBScanBarcode = new BJCBCPOS.UCTextBoxWithIcon();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ucKeyboard1 = new BJCBCPOS.UCKeyboard();
             this.panel1.SuspendLayout();
             this.pnMain.SuspendLayout();
@@ -346,6 +348,7 @@
             this.ucTextBoxWithIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTextBoxWithIcon1.EnabledUC = true;
             this.ucTextBoxWithIcon1.IsAmount = false;
+            this.ucTextBoxWithIcon1.IsKeyBoardForScan = true;
             this.ucTextBoxWithIcon1.IsLarge = false;
             this.ucTextBoxWithIcon1.IsNumber = false;
             this.ucTextBoxWithIcon1.IsSetFormat = false;
@@ -531,6 +534,7 @@
             this.ucTBScanBarcode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTBScanBarcode.EnabledUC = true;
             this.ucTBScanBarcode.IsAmount = false;
+            this.ucTBScanBarcode.IsKeyBoardForScan = true;
             this.ucTBScanBarcode.IsLarge = false;
             this.ucTBScanBarcode.IsNumber = false;
             this.ucTBScanBarcode.IsSetFormat = false;
@@ -557,6 +561,11 @@
             this.pictureBox1.TabIndex = 141;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ucKeyboard1
             // 
@@ -630,5 +639,6 @@
         private UCKeyboard ucKeyboard1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnYes;
+        private System.Windows.Forms.Timer timer1;
     }
 }

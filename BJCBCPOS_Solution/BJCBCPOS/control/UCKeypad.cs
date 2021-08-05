@@ -51,14 +51,20 @@ namespace BJCBCPOS
                     //ucTBWI.TextBox.SelectedText
                     if (!String.IsNullOrEmpty(ucTBWI.TextBox.SelectedText))
                     {
-                        ucTBWI.TextBox.Text = ucTBWI.TextBox.Text.Remove(ucTBWI.TextBox.SelectionStart, ucTBWI.TextBox.SelectionLength);
+                        ucTBWI.TextBox.Text = ""; // ucTBWI.TextBox.Text.Remove(ucTBWI.TextBox.SelectionStart, ucTBWI.TextBox.SelectionLength);
                     }
 
                     if (ucTBWI.Text.Length != ucTBWI.TextBox.MaxLength)
                     {
-                        ucTBWI.TextBox.Text += num;
-                        ucTBWI.TextBox.SelectionStart = ucTBWI.Text.Length;
-                        ucTBWI.TextBox.Focus();
+                        if (ucTBWI.TextBox.SelectionStart != ucTBWI.Text.Length)
+                        {
+                            ucTBWI.TextBox.Paste(num);
+                        }
+                        else
+                        {
+                            ucTBWI.TextBox.Text += num;
+                            ucTBWI.TextBox.SelectionStart = ucTBWI.Text.Length;
+                        }                      
                     }
                     else
                     {
@@ -80,9 +86,10 @@ namespace BJCBCPOS
                 {
                     if (ucTBS.TextBox.Text.Length < ucTBS.TextBox.MaxLength)
                     {
-                        ucTBS.TextBox.Text += num;
+                        ucTBS.TextBox.Paste(num);
+                        //ucTBS.TextBox.Text += num;
                     }
-                    ucTBS.TextBox.SelectionStart = ucTBS.Text.Length;
+                    //ucTBS.TextBox.SelectionStart = ucTBS.Text.Length;
                     ucTBS.TextBox.Focus();
                 }
             }

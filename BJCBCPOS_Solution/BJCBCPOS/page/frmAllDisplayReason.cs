@@ -57,8 +57,7 @@ namespace BJCBCPOS
         }
 
         private List<BJCBCPOS.UCDropDownList.Dropdown> SetDataucDropDownList2()
-        {
-            
+        {           
             List<BJCBCPOS.UCDropDownList.Dropdown> lstStr = new List<BJCBCPOS.UCDropDownList.Dropdown>();
             BJCBCPOS.UCDropDownList.Dropdown drItem = new UCDropDownList.Dropdown();
                         
@@ -268,6 +267,12 @@ namespace BJCBCPOS
         private void ucDDReasonToEdit_UCDropDownGetItemClick(object sender, EventArgs e)
         {
             SubmitReason();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Ignore;
+            this.Dispose();
         }
 
     }

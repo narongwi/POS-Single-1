@@ -55,6 +55,8 @@ namespace BJCBCPOS
 
         private void FormLoad()
         {
+            ProgramConfig.pageBackFromPayment = PageBackFormPayment.CreditSale;
+
             var result = process.getRunning(FunctionID.CreditSale_GetRunning, RunningReceiptID.CreditSale);
             if (result.response.next)
             {
@@ -62,6 +64,27 @@ namespace BJCBCPOS
                 ProgramConfig.creditSaleRefNoIni = result.otherData.Rows[0]["ReferenceNoINI"].ToString();
                 lbTxtRefNo.Text = ProgramConfig.creditSaleNo;
             }
+
+
+            result = process.posDisplayContent();
+            if (result.response.next)
+            {
+                if (result.otherData.Rows.Count > 0)
+                {
+                    if (result.otherData.Columns.Contains("Content_Default"))
+                    {
+                        ucFooterTran1.mainContent = result.otherData.Rows[0]["Content_Default"].ToString();
+                    }
+                    if (result.otherData.Columns.Contains("Content_Detail"))
+                    {
+                        ucFooterTran1.fullContent = result.otherData.Rows[0]["Content_Detail"].ToString();
+                    }
+                    ucFooterTran1.functionId = FunctionID.Sale_PopupSaleProcessScreen_ContentonPOSScreen_StroeCode.formatValue;
+                }
+            }
+
+            btnPay.BackgroundImage = Properties.Resources.btn_payment_disable;
+            btnPay.Enabled = false;
 
             pn_Pay.Enabled = false;
             pn_Order.Enabled = false;
@@ -76,6 +99,8 @@ namespace BJCBCPOS
             lbSumPay.Text = "0.00";
             pn_Pay.BackgroundImage = Properties.Resources.panel_item_credisale_disable;
             pn_Order.BackgroundImage = Properties.Resources.panel_item_credisale_disable;
+            pn_Pay.Enabled = false;
+            pn_Order.Enabled = false;
         }
 
         private void ItemLeftClick(object sender, EventArgs e)
@@ -182,7 +207,9 @@ namespace BJCBCPOS
 
         private void ucHeader1_MemberClick(object sender, EventArgs e)
         {
-
+            var ucMem = (UCMember)sender;
+            ucMem.eventName = "CreditSale";
+            ucMem.functionID = FunctionID.CreditSale_SearchMember;
         }
 
         private void ucMember1_EnterFromButton(object sender, EventArgs e)
@@ -215,15 +242,36 @@ namespace BJCBCPOS
                 UCListOtherService ucLst = new UCListOtherService();
                 ucLst.label3.Text = item.invoice_no;
                 ucLst.label2.Text = item.Invoice_date;
-                ucLst.label1.Text = item.invoice_amount.ToString(displayAmt);
+                
                 ucLst.ItemClick += ItemLeftClick;
                 ucLst.StoreCode = item.store_code;
                 ucLst.InvoiceNo = item.invoice_no;
+                ucLst.InvoiceAmountAPI = item.invoice_amount.ToString(displayAmt);
                 ucLst.InvoiceDate = item.Invoice_date;
-                ucLst.InvoiceAmount = item.invoice_amount.ToString(displayAmt);
                 ucLst.TransDate = item.due_date;
 
-                amt += item.invoice_amount;
+                if (item.trans_type == "CN" && item.invoice_amount > 0)
+                {
+                    double amtCN = item.invoice_amount * -1;
+                    ucLst.label1.Text = amtCN.ToString(displayAmt);
+                    ucLst.InvoiceAmount = amtCN.ToString(displayAmt);
+                    amt += amtCN;
+                }
+                else
+                {
+                    ucLst.label1.Text = item.invoice_amount.ToString(displayAmt);
+                    ucLst.InvoiceAmount = item.invoice_amount.ToString(displayAmt);
+                    amt += item.invoice_amount;
+                }
+
+                if (item.trans_type == "CN")
+                {
+                    ucLst.panel2.BackColor = Color.Red;
+                }
+                else
+                {
+                    ucLst.panel2.BackColor = Color.FromArgb(63, 184, 105);
+                }
 
                 panel5.Controls.Add(ucLst);
                 panel5.Controls.SetChildIndex(ucLst, 0);
@@ -256,6 +304,12 @@ namespace BJCBCPOS
             //    return;
             //}
 
+            if (list.Length == 0)
+            {
+                Utility.AlertMessage(ResponseCode.Error, "ไม่พบรายการชำระคงค้าง");
+                return;
+            }
+
             pn_Order.Enabled = true;
             pn_Pay.Enabled = true;
 
@@ -269,7 +323,7 @@ namespace BJCBCPOS
 
         private void CheckEnableButtonPay()
         {
-            if (panel1.Controls.Count > 0)
+            if (panel1.Controls.Count > 0 && Convert.ToDouble(lbSumPay.Text) >= 0)
             {
                 btnPay.BackgroundImage = Properties.Resources.btn_Search_ReturnFromInvoice;
                 btnPay.Enabled = true;
@@ -313,6 +367,7 @@ namespace BJCBCPOS
                detail.Credit_InvoiceNo = item.InvoiceNo;
                detail.Credit_InvoiceDate = item.InvoiceDate;
                detail.Credit_Amount = item.InvoiceAmount;
+               detail.Credit_AmountAPI = item.InvoiceAmountAPI;
                detail.Status = "A";
                detail.TransDate = item.TransDate;
                credit.ListCreditSaleDetail.Add(detail);
@@ -334,12 +389,23 @@ namespace BJCBCPOS
             ProgramConfig.disValue = "0.00";
             ProgramConfig.totalValue = lbSumPay.Text;
 
-            //saleProcess.SaveMember();
-
+            ProgramConfig.paymentOpenCashDrawer = FunctionID.CreditSale_OpenDrawerAndRecordTime;
+            ProgramConfig.paymentCloseCashDrawer = FunctionID.CreditSale_CloseDrawerAndRecordTime;
             ProgramConfig.paymentFunction = FunctionID.CreditSale_Payment;
             ProgramConfig.pageBackFromPayment = PageBackFormPayment.CreditSale;
-            Program.control.CloseForm("frmPayment");
-            Program.control.ShowForm("frmPayment");
+
+
+            if (Convert.ToDouble(lbSumPay.Text) == 0)
+            {
+                saleProcess.savePaymentCashBalance("0.00", "0.00", "CASH", "0.00", "", "", "");
+                Program.control.CloseForm("frmPayment");
+                Program.control.ShowForm("frmPayment");
+            }
+            else
+            {
+                Program.control.CloseForm("frmPayment");
+                Program.control.ShowForm("frmPayment");
+            }
         }
 
         public void FocusPanalOrder()
