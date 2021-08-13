@@ -29,214 +29,32 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductAndService));
-            this.btnService_6 = new System.Windows.Forms.Button();
-            this.btnService_5 = new System.Windows.Forms.Button();
-            this.btnService_4 = new System.Windows.Forms.Button();
-            this.btnService_3 = new System.Windows.Forms.Button();
-            this.btnService_2 = new System.Windows.Forms.Button();
-            this.btnService_1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.lbProductAndServices = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.ucButtonPayment4 = new BJCBCPOS.UCButtonPayment();
             this.ucButtonPayment3 = new BJCBCPOS.UCButtonPayment();
             this.ucButtonPayment1 = new BJCBCPOS.UCButtonPayment();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lbProductAndServices = new System.Windows.Forms.Label();
+            this.ucButtonPayment2 = new BJCBCPOS.UCButtonPayment();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnService_6
-            // 
-            this.btnService_6.BackColor = System.Drawing.Color.White;
-            this.btnService_6.BackgroundImage = global::BJCBCPOS.Properties.Resources.Flight_Ticket;
-            this.btnService_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnService_6.FlatAppearance.BorderSize = 0;
-            this.btnService_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnService_6.ForeColor = System.Drawing.Color.Gray;
-            this.btnService_6.Location = new System.Drawing.Point(340, 318);
-            this.btnService_6.Name = "btnService_6";
-            this.btnService_6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 35);
-            this.btnService_6.Size = new System.Drawing.Size(265, 200);
-            this.btnService_6.TabIndex = 6;
-            this.btnService_6.Text = "ตั๋วเครื่องยิน";
-            this.btnService_6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnService_6.UseVisualStyleBackColor = false;
-            this.btnService_6.Visible = false;
-            // 
-            // btnService_5
-            // 
-            this.btnService_5.BackColor = System.Drawing.Color.White;
-            this.btnService_5.BackgroundImage = global::BJCBCPOS.Properties.Resources.Receive_Supplies;
-            this.btnService_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnService_5.FlatAppearance.BorderSize = 0;
-            this.btnService_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnService_5.ForeColor = System.Drawing.Color.Gray;
-            this.btnService_5.Location = new System.Drawing.Point(611, 318);
-            this.btnService_5.Name = "btnService_5";
-            this.btnService_5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 35);
-            this.btnService_5.Size = new System.Drawing.Size(265, 200);
-            this.btnService_5.TabIndex = 5;
-            this.btnService_5.Text = "พัสดุ";
-            this.btnService_5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnService_5.UseVisualStyleBackColor = false;
-            this.btnService_5.Visible = false;
-            // 
-            // btnService_4
-            // 
-            this.btnService_4.BackColor = System.Drawing.Color.White;
-            this.btnService_4.BackgroundImage = global::BJCBCPOS.Properties.Resources.Deposit_Money;
-            this.btnService_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnService_4.FlatAppearance.BorderSize = 0;
-            this.btnService_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnService_4.ForeColor = System.Drawing.Color.Gray;
-            this.btnService_4.Location = new System.Drawing.Point(611, 318);
-            this.btnService_4.Name = "btnService_4";
-            this.btnService_4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 35);
-            this.btnService_4.Size = new System.Drawing.Size(265, 200);
-            this.btnService_4.TabIndex = 4;
-            this.btnService_4.Text = "ตู้เงินฝาก";
-            this.btnService_4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnService_4.UseVisualStyleBackColor = false;
-            this.btnService_4.Visible = false;
-            // 
-            // btnService_3
-            // 
-            this.btnService_3.BackColor = System.Drawing.Color.White;
-            this.btnService_3.BackgroundImage = global::BJCBCPOS.Properties.Resources.SimCard;
-            this.btnService_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnService_3.FlatAppearance.BorderSize = 0;
-            this.btnService_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnService_3.ForeColor = System.Drawing.Color.Gray;
-            this.btnService_3.Location = new System.Drawing.Point(611, 318);
-            this.btnService_3.Name = "btnService_3";
-            this.btnService_3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 35);
-            this.btnService_3.Size = new System.Drawing.Size(265, 200);
-            this.btnService_3.TabIndex = 3;
-            this.btnService_3.Text = "Sim Card";
-            this.btnService_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnService_3.UseVisualStyleBackColor = false;
-            this.btnService_3.Visible = false;
-            // 
-            // btnService_2
-            // 
-            this.btnService_2.BackColor = System.Drawing.Color.White;
-            this.btnService_2.BackgroundImage = global::BJCBCPOS.Properties.Resources.TopUp_Service;
-            this.btnService_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnService_2.FlatAppearance.BorderSize = 0;
-            this.btnService_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnService_2.ForeColor = System.Drawing.Color.Gray;
-            this.btnService_2.Location = new System.Drawing.Point(611, 318);
-            this.btnService_2.Name = "btnService_2";
-            this.btnService_2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 35);
-            this.btnService_2.Size = new System.Drawing.Size(265, 200);
-            this.btnService_2.TabIndex = 2;
-            this.btnService_2.Text = "Top Up Service";
-            this.btnService_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnService_2.UseVisualStyleBackColor = false;
-            this.btnService_2.Visible = false;
-            // 
-            // btnService_1
-            // 
-            this.btnService_1.BackColor = System.Drawing.Color.White;
-            this.btnService_1.BackgroundImage = global::BJCBCPOS.Properties.Resources.Group_668;
-            this.btnService_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnService_1.FlatAppearance.BorderSize = 0;
-            this.btnService_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnService_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnService_1.ForeColor = System.Drawing.Color.Gray;
-            this.btnService_1.Location = new System.Drawing.Point(28, 318);
-            this.btnService_1.Name = "btnService_1";
-            this.btnService_1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 35);
-            this.btnService_1.Size = new System.Drawing.Size(265, 200);
-            this.btnService_1.TabIndex = 1;
-            this.btnService_1.Text = "Credit Sale";
-            this.btnService_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnService_1.UseVisualStyleBackColor = false;
-            this.btnService_1.Visible = false;
-            this.btnService_1.Click += new System.EventHandler(this.btnService_1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
-            this.panel1.BackgroundImage = global::BJCBCPOS.Properties.Resources.Rectangle_260_3x;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Controls.Add(this.lbProductAndServices);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(901, 75);
-            this.panel1.TabIndex = 0;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::BJCBCPOS.Properties.Resources.arrow_white_left;
-            this.btnBack.Location = new System.Drawing.Point(10, 9);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(53, 56);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // lbProductAndServices
-            // 
-            this.lbProductAndServices.BackColor = System.Drawing.Color.Transparent;
-            this.lbProductAndServices.Font = new System.Drawing.Font("Prompt", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProductAndServices.ForeColor = System.Drawing.Color.White;
-            this.lbProductAndServices.Location = new System.Drawing.Point(3, 5);
-            this.lbProductAndServices.Name = "lbProductAndServices";
-            this.lbProductAndServices.Size = new System.Drawing.Size(895, 65);
-            this.lbProductAndServices.TabIndex = 2;
-            this.lbProductAndServices.Text = "สินค้าและบริการอื่นๆ";
-            this.lbProductAndServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.pictureBox7);
+            this.panel2.Controls.Add(this.ucButtonPayment2);
             this.panel2.Controls.Add(this.ucButtonPayment4);
             this.panel2.Controls.Add(this.ucButtonPayment3);
             this.panel2.Controls.Add(this.ucButtonPayment1);
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.btnService_6);
-            this.panel2.Controls.Add(this.btnService_1);
-            this.panel2.Controls.Add(this.btnService_5);
-            this.panel2.Controls.Add(this.btnService_2);
-            this.panel2.Controls.Add(this.btnService_4);
-            this.panel2.Controls.Add(this.btnService_3);
             this.panel2.Location = new System.Drawing.Point(55, 106);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(901, 540);
             this.panel2.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = global::BJCBCPOS.Properties.Resources.Flight_Ticket;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gray;
-            this.button1.Location = new System.Drawing.Point(356, 318);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 35);
-            this.button1.Size = new System.Drawing.Size(265, 200);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "ตั๋วเครื่องยิน";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
             // 
             // ucButtonPayment4
             // 
@@ -271,6 +89,65 @@
             this.ucButtonPayment1.TextButton = "รับเงินมัดจำ";
             this.ucButtonPayment1.ButtonClick += new System.EventHandler(this.ucButtonPayment1_ButtonClick);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
+            this.panel1.BackgroundImage = global::BJCBCPOS.Properties.Resources.Rectangle_260_3x;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Controls.Add(this.lbProductAndServices);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(901, 75);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Image = global::BJCBCPOS.Properties.Resources.arrow_white_left;
+            this.btnBack.Location = new System.Drawing.Point(10, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(53, 56);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lbProductAndServices
+            // 
+            this.lbProductAndServices.BackColor = System.Drawing.Color.Transparent;
+            this.lbProductAndServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProductAndServices.ForeColor = System.Drawing.Color.White;
+            this.lbProductAndServices.Location = new System.Drawing.Point(3, 5);
+            this.lbProductAndServices.Name = "lbProductAndServices";
+            this.lbProductAndServices.Size = new System.Drawing.Size(895, 65);
+            this.lbProductAndServices.TabIndex = 2;
+            this.lbProductAndServices.Text = "สินค้าและบริการอื่นๆ";
+            this.lbProductAndServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ucButtonPayment2
+            // 
+            this.ucButtonPayment2.BackColor = System.Drawing.Color.White;
+            this.ucButtonPayment2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucButtonPayment2.BackgroundImage")));
+            this.ucButtonPayment2.Location = new System.Drawing.Point(320, 321);
+            this.ucButtonPayment2.Name = "ucButtonPayment2";
+            this.ucButtonPayment2.Size = new System.Drawing.Size(265, 200);
+            this.ucButtonPayment2.TabIndex = 12;
+            this.ucButtonPayment2.TextButton = "Big Service";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::BJCBCPOS.Properties.Resources.BigService;
+            this.pictureBox7.Location = new System.Drawing.Point(337, 334);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(230, 127);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 24;
+            this.pictureBox7.TabStop = false;
+            // 
             // frmProductAndService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,8 +160,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmProductAndService";
             this.Load += new System.EventHandler(this.frmProductAndService_Load);
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,18 +170,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnService_1;
-        private System.Windows.Forms.Button btnService_2;
-        private System.Windows.Forms.Button btnService_3;
-        private System.Windows.Forms.Button btnService_4;
-        private System.Windows.Forms.Button btnService_5;
-        private System.Windows.Forms.Button btnService_6;
         private System.Windows.Forms.Label lbProductAndServices;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
         private UCButtonPayment ucButtonPayment4;
         private UCButtonPayment ucButtonPayment3;
         private UCButtonPayment ucButtonPayment1;
+        private UCButtonPayment ucButtonPayment2;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

@@ -93,6 +93,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap AEON {
+            get {
+                object obj = ResourceManager.GetObject("AEON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap alarm__1_ {
             get {
                 object obj = ResourceManager.GetObject("alarm (1)", resourceCulture);
@@ -201,6 +211,16 @@ namespace BJCBCPOS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BangkokBank {
+            get {
+                object obj = ResourceManager.GetObject("BangkokBank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         public static System.IO.UnmanagedMemoryStream beep_07 {
@@ -215,6 +235,16 @@ namespace BJCBCPOS.Properties {
         public static System.Drawing.Bitmap BigC_AEON {
             get {
                 object obj = ResourceManager.GetObject("BigC_AEON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap BigService {
+            get {
+                object obj = ResourceManager.GetObject("BigService", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -782,6 +812,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap credit_card {
+            get {
+                object obj = ResourceManager.GetObject("credit-card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap credit_disable {
             get {
                 object obj = ResourceManager.GetObject("credit_disable", resourceCulture);
@@ -832,6 +872,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap donation {
+            get {
+                object obj = ResourceManager.GetObject("donation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap dropdown_disable {
             get {
                 object obj = ResourceManager.GetObject("dropdown_disable", resourceCulture);
@@ -865,6 +915,16 @@ namespace BJCBCPOS.Properties {
         public static System.Drawing.Bitmap DropDownListLarge_enable {
             get {
                 object obj = ResourceManager.GetObject("DropDownListLarge_enable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap enterprise {
+            get {
+                object obj = ResourceManager.GetObject("enterprise", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -915,6 +975,16 @@ namespace BJCBCPOS.Properties {
         public static System.Drawing.Bitmap frame_Redeem_Red {
             get {
                 object obj = ResourceManager.GetObject("frame_Redeem_Red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap GHBank {
+            get {
+                object obj = ResourceManager.GetObject("GHBank", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1042,9 +1112,49 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap GSB {
+            get {
+                object obj = ResourceManager.GetObject("GSB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap healthcare {
+            get {
+                object obj = ResourceManager.GetObject("healthcare", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap hide_keyboard {
             get {
                 object obj = ResourceManager.GetObject("hide_keyboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap home_black {
+            get {
+                object obj = ResourceManager.GetObject("home_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap house {
+            get {
+                object obj = ResourceManager.GetObject("house", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1682,9 +1792,59 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap KasikornBank {
+            get {
+                object obj = ResourceManager.GetObject("KasikornBank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KerryCOD {
+            get {
+                object obj = ResourceManager.GetObject("KerryCOD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KerryDropOff {
+            get {
+                object obj = ResourceManager.GetObject("KerryDropOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap KerryExpress {
             get {
                 object obj = ResourceManager.GetObject("KerryExpress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KerryExpress1 {
+            get {
+                object obj = ResourceManager.GetObject("KerryExpress1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KerrySCL {
+            get {
+                object obj = ResourceManager.GetObject("KerrySCL", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1882,9 +2042,39 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap KrungsriBank {
+            get {
+                object obj = ResourceManager.GetObject("KrungsriBank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KrungthaiBank {
+            get {
+                object obj = ResourceManager.GetObject("KrungthaiBank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Laos {
             get {
                 object obj = ResourceManager.GetObject("Laos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap lease {
+            get {
+                object obj = ResourceManager.GetObject("lease", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2322,6 +2512,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap NoPath1 {
+            get {
+                object obj = ResourceManager.GetObject("NoPath1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap normal_change_disable {
             get {
                 object obj = ResourceManager.GetObject("normal_change_disable", resourceCulture);
@@ -2335,6 +2535,16 @@ namespace BJCBCPOS.Properties {
         public static System.Drawing.Bitmap normal_change_enable {
             get {
                 object obj = ResourceManager.GetObject("normal_change_enable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap other {
+            get {
+                object obj = ResourceManager.GetObject("other", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3122,6 +3332,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap SCB {
+            get {
+                object obj = ResourceManager.GetObject("SCB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap SCGExpress {
             get {
                 object obj = ResourceManager.GetObject("SCGExpress", resourceCulture);
@@ -3215,6 +3435,16 @@ namespace BJCBCPOS.Properties {
         public static System.Drawing.Bitmap Spinner_1s_250px {
             get {
                 object obj = ResourceManager.GetObject("Spinner_1s_250px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Telecom {
+            get {
+                object obj = ResourceManager.GetObject("Telecom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3372,6 +3602,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap UOB {
+            get {
+                object obj = ResourceManager.GetObject("UOB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap usa {
             get {
                 object obj = ResourceManager.GetObject("usa", resourceCulture);
@@ -3395,6 +3635,16 @@ namespace BJCBCPOS.Properties {
         public static System.Drawing.Bitmap v4 {
             get {
                 object obj = ResourceManager.GetObject("v4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wallet {
+            get {
+                object obj = ResourceManager.GetObject("wallet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

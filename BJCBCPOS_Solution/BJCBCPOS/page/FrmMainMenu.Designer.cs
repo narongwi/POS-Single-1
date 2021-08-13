@@ -33,10 +33,6 @@
             this.lbTextHeaderMain = new System.Windows.Forms.Label();
             this.pnMainMenu = new System.Windows.Forms.Panel();
             this.ucFooter1 = new BJCBCPOS.UCFooter();
-            this.ucHeader1 = new BJCBCPOS.UCHeader();
-            this.lbOpentran = new System.Windows.Forms.Label();
-            this.lbCloseTran = new System.Windows.Forms.Label();
-            this.lbCloseCashier = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnTool = new System.Windows.Forms.Button();
@@ -73,6 +69,10 @@
             this.lbTxtCloseTranSuccess = new System.Windows.Forms.Label();
             this.lbTxtTranSuccess = new System.Windows.Forms.Label();
             this.lblSuccessCloseCash = new System.Windows.Forms.Label();
+            this.ucHeader1 = new BJCBCPOS.UCHeader();
+            this.lbOpentran = new System.Windows.Forms.Label();
+            this.lbCloseTran = new System.Windows.Forms.Label();
+            this.lbCloseCashier = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnMainMenu.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -91,7 +91,7 @@
             // picLogo
             // 
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLogo.Image = global::BJCBCPOS.Properties.Resources.rsz_mm_food_service_logobo;
+            this.picLogo.Image = global::BJCBCPOS.Properties.Resources.NoPath1;
             this.picLogo.Location = new System.Drawing.Point(2, 2);
             this.picLogo.Margin = new System.Windows.Forms.Padding(2);
             this.picLogo.Name = "picLogo";
@@ -103,7 +103,7 @@
             // lbTextHeaderMain
             // 
             this.lbTextHeaderMain.BackColor = System.Drawing.Color.Transparent;
-            this.lbTextHeaderMain.Font = new System.Drawing.Font("Prompt", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTextHeaderMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTextHeaderMain.ForeColor = System.Drawing.Color.Black;
             this.lbTextHeaderMain.Location = new System.Drawing.Point(110, 2);
             this.lbTextHeaderMain.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -140,79 +140,6 @@
             this.ucFooter1.Name = "ucFooter1";
             this.ucFooter1.Size = new System.Drawing.Size(1024, 40);
             this.ucFooter1.TabIndex = 20;
-            // 
-            // ucHeader1
-            // 
-            this.ucHeader1.alertEnabled = true;
-            this.ucHeader1.alertFunctionID = null;
-            this.ucHeader1.alertStatus = false;
-            this.ucHeader1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(53)))));
-            this.ucHeader1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucHeader1.currentMenuTitle1 = "Title1";
-            this.ucHeader1.currentMenuTitle2 = "Title2";
-            this.ucHeader1.currentMenuTitle3 = "Title3";
-            this.ucHeader1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucHeader1.ForeColor = System.Drawing.Color.White;
-            this.ucHeader1.Location = new System.Drawing.Point(0, 0);
-            this.ucHeader1.logoutText = "ออกจากระบบ";
-            this.ucHeader1.Name = "ucHeader1";
-            this.ucHeader1.nameText = "ชื่อสมาชิก";
-            this.ucHeader1.nameVisible = false;
-            this.ucHeader1.showAlert = true;
-            this.ucHeader1.showCalculator = true;
-            this.ucHeader1.showCurrentMenuText = false;
-            this.ucHeader1.showHamberGetItm = true;
-            this.ucHeader1.showLanguage = true;
-            this.ucHeader1.showLine = false;
-            this.ucHeader1.showLockScreen = true;
-            this.ucHeader1.showLogout = true;
-            this.ucHeader1.showMainMenu = false;
-            this.ucHeader1.showMember = false;
-            this.ucHeader1.showMember_ButtonBack = true;
-            this.ucHeader1.showMember_IsSaveMember = true;
-            this.ucHeader1.showScanner = true;
-            this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
-            this.ucHeader1.TabIndex = 19;
-            this.ucHeader1.LanguageClick += new System.EventHandler(this.ucHeader1_LanguageClick);
-            // 
-            // lbOpentran
-            // 
-            this.lbOpentran.BackColor = System.Drawing.Color.Transparent;
-            this.lbOpentran.Font = new System.Drawing.Font("Prompt", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOpentran.ForeColor = System.Drawing.Color.Black;
-            this.lbOpentran.Location = new System.Drawing.Point(110, 2);
-            this.lbOpentran.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbOpentran.Name = "lbOpentran";
-            this.lbOpentran.Size = new System.Drawing.Size(458, 120);
-            this.lbOpentran.TabIndex = 22;
-            this.lbOpentran.Text = "เปิดงานประจำวัน";
-            this.lbOpentran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbCloseTran
-            // 
-            this.lbCloseTran.BackColor = System.Drawing.Color.Transparent;
-            this.lbCloseTran.Font = new System.Drawing.Font("Prompt", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCloseTran.ForeColor = System.Drawing.Color.Black;
-            this.lbCloseTran.Location = new System.Drawing.Point(110, 2);
-            this.lbCloseTran.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbCloseTran.Name = "lbCloseTran";
-            this.lbCloseTran.Size = new System.Drawing.Size(458, 120);
-            this.lbCloseTran.TabIndex = 21;
-            this.lbCloseTran.Text = "ปิดงานประจำวัน";
-            this.lbCloseTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbCloseCashier
-            // 
-            this.lbCloseCashier.BackColor = System.Drawing.Color.Transparent;
-            this.lbCloseCashier.Font = new System.Drawing.Font("Prompt", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCloseCashier.ForeColor = System.Drawing.Color.Black;
-            this.lbCloseCashier.Location = new System.Drawing.Point(110, 2);
-            this.lbCloseCashier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbCloseCashier.Name = "lbCloseCashier";
-            this.lbCloseCashier.Size = new System.Drawing.Size(458, 120);
-            this.lbCloseCashier.TabIndex = 23;
-            this.lbCloseCashier.Text = "ปิดงานแคชเชียร์";
-            this.lbCloseCashier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panelMenu
             // 
@@ -251,7 +178,7 @@
             this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReport.FlatAppearance.BorderSize = 0;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.Color.Black;
             this.btnReport.Location = new System.Drawing.Point(783, 336);
             this.btnReport.Margin = new System.Windows.Forms.Padding(5);
@@ -268,7 +195,7 @@
             this.btnTool.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTool.FlatAppearance.BorderSize = 0;
             this.btnTool.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTool.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTool.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTool.ForeColor = System.Drawing.Color.Black;
             this.btnTool.Location = new System.Drawing.Point(783, 214);
             this.btnTool.Margin = new System.Windows.Forms.Padding(5);
@@ -285,7 +212,7 @@
             this.btnCloseTransaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCloseTransaction.FlatAppearance.BorderSize = 0;
             this.btnCloseTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseTransaction.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseTransaction.ForeColor = System.Drawing.Color.Black;
             this.btnCloseTransaction.Location = new System.Drawing.Point(526, 456);
             this.btnCloseTransaction.Margin = new System.Windows.Forms.Padding(5);
@@ -302,7 +229,7 @@
             this.btnCloseCashier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCloseCashier.FlatAppearance.BorderSize = 0;
             this.btnCloseCashier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseCashier.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseCashier.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseCashier.ForeColor = System.Drawing.Color.Black;
             this.btnCloseCashier.Location = new System.Drawing.Point(525, 336);
             this.btnCloseCashier.Margin = new System.Windows.Forms.Padding(5);
@@ -319,7 +246,7 @@
             this.btnCashOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCashOut.FlatAppearance.BorderSize = 0;
             this.btnCashOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCashOut.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCashOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCashOut.ForeColor = System.Drawing.Color.Black;
             this.btnCashOut.Location = new System.Drawing.Point(525, 214);
             this.btnCashOut.Margin = new System.Windows.Forms.Padding(5);
@@ -336,7 +263,7 @@
             this.btnVoid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVoid.FlatAppearance.BorderSize = 0;
             this.btnVoid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoid.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoid.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoid.ForeColor = System.Drawing.Color.Black;
             this.btnVoid.Location = new System.Drawing.Point(270, 456);
             this.btnVoid.Margin = new System.Windows.Forms.Padding(5);
@@ -353,7 +280,7 @@
             this.btnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReturn.FlatAppearance.BorderSize = 0;
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.Color.Black;
             this.btnReturn.Location = new System.Drawing.Point(270, 336);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(5);
@@ -370,7 +297,7 @@
             this.btnSell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSell.FlatAppearance.BorderSize = 0;
             this.btnSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSell.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSell.ForeColor = System.Drawing.Color.Black;
             this.btnSell.Location = new System.Drawing.Point(270, 214);
             this.btnSell.Margin = new System.Windows.Forms.Padding(5);
@@ -387,7 +314,7 @@
             this.btnCashBalance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCashBalance.FlatAppearance.BorderSize = 0;
             this.btnCashBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCashBalance.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCashBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCashBalance.ForeColor = System.Drawing.Color.Black;
             this.btnCashBalance.Location = new System.Drawing.Point(12, 336);
             this.btnCashBalance.Margin = new System.Windows.Forms.Padding(5);
@@ -404,7 +331,7 @@
             this.btnOpenTransaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOpenTransaction.FlatAppearance.BorderSize = 0;
             this.btnOpenTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenTransaction.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenTransaction.ForeColor = System.Drawing.Color.Black;
             this.btnOpenTransaction.Location = new System.Drawing.Point(12, 214);
             this.btnOpenTransaction.Margin = new System.Windows.Forms.Padding(5);
@@ -418,7 +345,7 @@
             // lbHeadMenu4
             // 
             this.lbHeadMenu4.BackColor = System.Drawing.Color.Transparent;
-            this.lbHeadMenu4.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeadMenu4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeadMenu4.ForeColor = System.Drawing.Color.YellowGreen;
             this.lbHeadMenu4.Location = new System.Drawing.Point(774, 153);
             this.lbHeadMenu4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -431,7 +358,7 @@
             // lbHeadMenu3
             // 
             this.lbHeadMenu3.BackColor = System.Drawing.Color.Transparent;
-            this.lbHeadMenu3.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeadMenu3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeadMenu3.ForeColor = System.Drawing.Color.YellowGreen;
             this.lbHeadMenu3.Location = new System.Drawing.Point(518, 153);
             this.lbHeadMenu3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -444,7 +371,7 @@
             // lbHeadMenu2
             // 
             this.lbHeadMenu2.BackColor = System.Drawing.Color.Transparent;
-            this.lbHeadMenu2.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeadMenu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeadMenu2.ForeColor = System.Drawing.Color.YellowGreen;
             this.lbHeadMenu2.Location = new System.Drawing.Point(262, 153);
             this.lbHeadMenu2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -457,7 +384,7 @@
             // lbHeadMenu1
             // 
             this.lbHeadMenu1.BackColor = System.Drawing.Color.Transparent;
-            this.lbHeadMenu1.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeadMenu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeadMenu1.ForeColor = System.Drawing.Color.YellowGreen;
             this.lbHeadMenu1.Location = new System.Drawing.Point(3, 153);
             this.lbHeadMenu1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -575,7 +502,7 @@
             this.btnOpenTran.BackgroundImage = global::BJCBCPOS.Properties.Resources.Rectangle_260_3x;
             this.btnOpenTran.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOpenTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenTran.Font = new System.Drawing.Font("Prompt", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenTran.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenTran.ForeColor = System.Drawing.Color.White;
             this.btnOpenTran.Location = new System.Drawing.Point(563, 351);
             this.btnOpenTran.Margin = new System.Windows.Forms.Padding(2);
@@ -592,7 +519,7 @@
             this.btnCancelOpenTran.BackColor = System.Drawing.Color.White;
             this.btnCancelOpenTran.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelOpenTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelOpenTran.Font = new System.Drawing.Font("Prompt", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelOpenTran.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelOpenTran.ForeColor = System.Drawing.Color.ForestGreen;
             this.btnCancelOpenTran.Location = new System.Drawing.Point(348, 351);
             this.btnCancelOpenTran.Margin = new System.Windows.Forms.Padding(2);
@@ -618,7 +545,7 @@
             // 
             // lbConfirmClose
             // 
-            this.lbConfirmClose.Font = new System.Drawing.Font("Prompt", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbConfirmClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbConfirmClose.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbConfirmClose.Location = new System.Drawing.Point(123, 198);
             this.lbConfirmClose.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -630,7 +557,7 @@
             // 
             // lbCloseCash
             // 
-            this.lbCloseCash.Font = new System.Drawing.Font("Prompt", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCloseCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCloseCash.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbCloseCash.Location = new System.Drawing.Point(123, 198);
             this.lbCloseCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -642,7 +569,7 @@
             // 
             // lbConfirmOpen
             // 
-            this.lbConfirmOpen.Font = new System.Drawing.Font("Prompt", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbConfirmOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbConfirmOpen.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbConfirmOpen.Location = new System.Drawing.Point(123, 198);
             this.lbConfirmOpen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -654,7 +581,7 @@
             // 
             // lbConfirmOpenTran
             // 
-            this.lbConfirmOpenTran.Font = new System.Drawing.Font("Prompt", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbConfirmOpenTran.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbConfirmOpenTran.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbConfirmOpenTran.Location = new System.Drawing.Point(107, 274);
             this.lbConfirmOpenTran.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -666,7 +593,7 @@
             // 
             // lbCloseCashtxt
             // 
-            this.lbCloseCashtxt.Font = new System.Drawing.Font("Prompt", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCloseCashtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCloseCashtxt.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbCloseCashtxt.Location = new System.Drawing.Point(107, 274);
             this.lbCloseCashtxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -696,7 +623,7 @@
             this.btnOpenTranSuccess.BackgroundImage = global::BJCBCPOS.Properties.Resources.button_search;
             this.btnOpenTranSuccess.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOpenTranSuccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenTranSuccess.Font = new System.Drawing.Font("Prompt", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenTranSuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenTranSuccess.ForeColor = System.Drawing.Color.White;
             this.btnOpenTranSuccess.Location = new System.Drawing.Point(440, 258);
             this.btnOpenTranSuccess.Margin = new System.Windows.Forms.Padding(2);
@@ -709,7 +636,7 @@
             // 
             // lbTxtCloseTranSuccess
             // 
-            this.lbTxtCloseTranSuccess.Font = new System.Drawing.Font("Prompt", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtCloseTranSuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtCloseTranSuccess.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbTxtCloseTranSuccess.Location = new System.Drawing.Point(48, 104);
             this.lbTxtCloseTranSuccess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -721,7 +648,7 @@
             // 
             // lbTxtTranSuccess
             // 
-            this.lbTxtTranSuccess.Font = new System.Drawing.Font("Prompt", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtTranSuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtTranSuccess.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbTxtTranSuccess.Location = new System.Drawing.Point(48, 104);
             this.lbTxtTranSuccess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -733,7 +660,7 @@
             // 
             // lblSuccessCloseCash
             // 
-            this.lblSuccessCloseCash.Font = new System.Drawing.Font("Prompt", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSuccessCloseCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSuccessCloseCash.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblSuccessCloseCash.Location = new System.Drawing.Point(48, 104);
             this.lblSuccessCloseCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -742,6 +669,79 @@
             this.lblSuccessCloseCash.TabIndex = 6;
             this.lblSuccessCloseCash.Text = "บันทึกปิดงานแคชเชียร์เรียบร้อยแล้ว";
             this.lblSuccessCloseCash.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // ucHeader1
+            // 
+            this.ucHeader1.alertEnabled = true;
+            this.ucHeader1.alertFunctionID = null;
+            this.ucHeader1.alertStatus = false;
+            this.ucHeader1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(53)))));
+            this.ucHeader1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucHeader1.currentMenuTitle1 = "Title1";
+            this.ucHeader1.currentMenuTitle2 = "Title2";
+            this.ucHeader1.currentMenuTitle3 = "Title3";
+            this.ucHeader1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ucHeader1.ForeColor = System.Drawing.Color.White;
+            this.ucHeader1.Location = new System.Drawing.Point(0, 0);
+            this.ucHeader1.logoutText = "ออกจากระบบ";
+            this.ucHeader1.Name = "ucHeader1";
+            this.ucHeader1.nameText = "ชื่อสมาชิก";
+            this.ucHeader1.nameVisible = false;
+            this.ucHeader1.showAlert = true;
+            this.ucHeader1.showCalculator = true;
+            this.ucHeader1.showCurrentMenuText = false;
+            this.ucHeader1.showHamberGetItm = true;
+            this.ucHeader1.showLanguage = true;
+            this.ucHeader1.showLine = false;
+            this.ucHeader1.showLockScreen = true;
+            this.ucHeader1.showLogout = true;
+            this.ucHeader1.showMainMenu = false;
+            this.ucHeader1.showMember = false;
+            this.ucHeader1.showMember_ButtonBack = true;
+            this.ucHeader1.showMember_IsSaveMember = true;
+            this.ucHeader1.showScanner = true;
+            this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
+            this.ucHeader1.TabIndex = 19;
+            this.ucHeader1.LanguageClick += new System.EventHandler(this.ucHeader1_LanguageClick);
+            // 
+            // lbOpentran
+            // 
+            this.lbOpentran.BackColor = System.Drawing.Color.Transparent;
+            this.lbOpentran.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOpentran.ForeColor = System.Drawing.Color.Black;
+            this.lbOpentran.Location = new System.Drawing.Point(110, 2);
+            this.lbOpentran.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbOpentran.Name = "lbOpentran";
+            this.lbOpentran.Size = new System.Drawing.Size(458, 120);
+            this.lbOpentran.TabIndex = 22;
+            this.lbOpentran.Text = "เปิดงานประจำวัน";
+            this.lbOpentran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbCloseTran
+            // 
+            this.lbCloseTran.BackColor = System.Drawing.Color.Transparent;
+            this.lbCloseTran.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCloseTran.ForeColor = System.Drawing.Color.Black;
+            this.lbCloseTran.Location = new System.Drawing.Point(110, 2);
+            this.lbCloseTran.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCloseTran.Name = "lbCloseTran";
+            this.lbCloseTran.Size = new System.Drawing.Size(458, 120);
+            this.lbCloseTran.TabIndex = 21;
+            this.lbCloseTran.Text = "ปิดงานประจำวัน";
+            this.lbCloseTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbCloseCashier
+            // 
+            this.lbCloseCashier.BackColor = System.Drawing.Color.Transparent;
+            this.lbCloseCashier.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCloseCashier.ForeColor = System.Drawing.Color.Black;
+            this.lbCloseCashier.Location = new System.Drawing.Point(110, 2);
+            this.lbCloseCashier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCloseCashier.Name = "lbCloseCashier";
+            this.lbCloseCashier.Size = new System.Drawing.Size(458, 120);
+            this.lbCloseCashier.TabIndex = 23;
+            this.lbCloseCashier.Text = "ปิดงานแคชเชียร์";
+            this.lbCloseCashier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmMainMenu
             // 

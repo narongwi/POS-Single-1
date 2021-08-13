@@ -618,11 +618,29 @@
     <Compile Include="OtherServices\Classes\FontIconUtils.cs" />
     <Compile Include="OtherServices\Fonts\MaterialDesignIcons.cs" />
     <Compile Include="OtherServices\Fonts\FontIconHelper.cs" />
+    <Compile Include="OtherServices\Forms\BillCreditCardMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\BillCreditCardMenu.Designer.cs">
+      <DependentUpon>BillCreditCardMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherServices\Forms\BillPaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OtherServices\Forms\BillPaymentForm.Designer.cs">
       <DependentUpon>BillPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\BillPaymentMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\BillPaymentMenu.Designer.cs">
+      <DependentUpon>BillPaymentMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\KerryMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\KerryMenu.Designer.cs">
+      <DependentUpon>KerryMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="OtherServices\Forms\PaymentServiceForm.cs">
       <SubType>Form</SubType>
@@ -639,7 +657,7 @@
     <Compile Include="OtherServices\Forms\frmParcelKerry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OtherServices\Forms\frmParcelService.cs">
+    <Compile Include="OtherServices\Forms\ParcelServiceMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OtherServices\Forms\frmPaymentCancel.cs">
@@ -706,8 +724,8 @@
     <Compile Include="OtherServices\Forms\frmParcelKerry.Designer.cs">
       <DependentUpon>frmParcelKerry.cs</DependentUpon>
     </Compile>
-    <Compile Include="OtherServices\Forms\frmParcelService.Designer.cs">
-      <DependentUpon>frmParcelService.cs</DependentUpon>
+    <Compile Include="OtherServices\Forms\ParcelServiceMenu.Designer.cs">
+      <DependentUpon>ParcelServiceMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="OtherServices\Forms\frmPaymentCancel.Designer.cs">
       <DependentUpon>frmPaymentCancel.cs</DependentUpon>
@@ -1313,8 +1331,20 @@
     <EmbeddedResource Include="dialog\frmPopupInput.resx">
       <DependentUpon>frmPopupInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\BillCreditCardMenu.resx">
+      <DependentUpon>BillCreditCardMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\Forms\BillPaymentForm.resx">
       <DependentUpon>BillPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\BillPaymentMenu.resx">
+      <DependentUpon>BillPaymentMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\KerryMenu.resx">
+      <DependentUpon>KerryMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\ParcelServiceMenu.resx">
+      <DependentUpon>ParcelServiceMenu.cs</DependentUpon>
     </EmbeddedResource>
     <!-- Deftsoft Resx-->
     <EmbeddedResource Include="OtherServices\Forms\UIForm.resx">
@@ -1333,7 +1363,7 @@
       <DependentUpon>frmParcelKerry.Designer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\Forms\frmParcelService.resx">
-      <DependentUpon>frmParcelService.Designer.cs</DependentUpon>
+      <DependentUpon>ParcelServiceMenu.Designer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\Forms\frmPaymentCancel.resx">
       <DependentUpon>frmPaymentCancel.Designer.cs</DependentUpon>
@@ -1635,6 +1665,31 @@
     <Content Include="config\Thai.txt" />
     <Content Include="NoPath.ico" />
     <Content Include="OtherServices\Readme.txt" />
+    <None Include="Resources\GHBank.png" />
+    <None Include="Resources\UOB.jpg" />
+    <None Include="Resources\AEON.png" />
+    <None Include="Resources\GSB.jpg" />
+    <None Include="Resources\KrungthaiBank.png" />
+    <None Include="Resources\KrungsriBank.jpg" />
+    <None Include="Resources\BangkokBank.jpeg" />
+    <None Include="Resources\SCB.jpeg" />
+    <None Include="Resources\KasikornBank.png" />
+    <None Include="Resources\other.png" />
+    <None Include="Resources\wallet.png" />
+    <None Include="Resources\enterprise.png" />
+    <None Include="Resources\donation.png" />
+    <None Include="Resources\lease.png" />
+    <None Include="Resources\healthcare.png" />
+    <None Include="Resources\credit-card.png" />
+    <None Include="Resources\Telecom.png" />
+    <None Include="Resources\house.png" />
+    <None Include="Resources\home_black.png" />
+    <None Include="Resources\KerryDropOff1.jpg" />
+    <None Include="Resources\KerrySCL1.jpg" />
+    <None Include="Resources\KerryCOD1.jpg" />
+    <None Include="Resources\KerryExpress1.jpeg" />
+    <None Include="Resources\BigService1.png" />
+    <None Include="Resources\NoPath1.png" />
     <None Include="Resources\MemberServiceTerm.jpg" />
     <None Include="Resources\ThailandPost.png" />
     <None Include="Resources\FlashExpress.jpg" />

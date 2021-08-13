@@ -1,5 +1,5 @@
 ﻿namespace BJCBCPOS.OtherServices.Forms {
-    partial class frmParcelService
+    partial class ParcelServiceMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -27,8 +27,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmParcelService));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParcelServiceMenu));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.ucButtonPayment6 = new BJCBCPOS.UCButtonPayment();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -42,18 +43,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.lbProductAndServices = new System.Windows.Forms.Label();
-            this.ucHeader1 = new BJCBCPOS.UCHeader();
-            this.ucFooter1 = new BJCBCPOS.UCFooter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.ucButtonPayment1 = new BJCBCPOS.UCButtonPayment();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -61,7 +59,6 @@
             this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.ucButtonPayment6);
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.ucButtonPayment4);
             this.panel2.Controls.Add(this.pictureBox4);
@@ -71,10 +68,21 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.ucButtonPayment2);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Location = new System.Drawing.Point(59, 94);
+            this.panel2.Controls.Add(this.ucButtonPayment1);
+            this.panel2.Location = new System.Drawing.Point(56, 92);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(901, 540);
-            this.panel2.TabIndex = 8;
+            this.panel2.TabIndex = 14;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::BJCBCPOS.Properties.Resources.KerryExpress;
+            this.pictureBox7.Location = new System.Drawing.Point(46, 115);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(230, 106);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 23;
+            this.pictureBox7.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -211,103 +219,45 @@
             this.lbProductAndServices.Name = "lbProductAndServices";
             this.lbProductAndServices.Size = new System.Drawing.Size(895, 65);
             this.lbProductAndServices.TabIndex = 2;
-            this.lbProductAndServices.Text = "ฝากส่งพัสดุ";
+            this.lbProductAndServices.Text = "รับ - ส่ง พัสดุ";
             this.lbProductAndServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ucHeader1
+            // ucButtonPayment1
             // 
-            this.ucHeader1.alertEnabled = true;
-            this.ucHeader1.alertFunctionID = null;
-            this.ucHeader1.alertStatus = false;
-            this.ucHeader1.BackColor = System.Drawing.Color.Transparent;
-            this.ucHeader1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucHeader1.currentMenuTitle1 = "ฝากส่งพัสดุ";
-            this.ucHeader1.currentMenuTitle2 = "";
-            this.ucHeader1.currentMenuTitle3 = "";
-            this.ucHeader1.Location = new System.Drawing.Point(-1, 3);
-            this.ucHeader1.logoutText = "ออกจากระบบ";
-            this.ucHeader1.Name = "ucHeader1";
-            this.ucHeader1.nameText = "ชื่อสมาชิก";
-            this.ucHeader1.nameVisible = false;
-            this.ucHeader1.showAlert = true;
-            this.ucHeader1.showCalculator = true;
-            this.ucHeader1.showCurrentMenuText = true;
-            this.ucHeader1.showHamberGetItm = false;
-            this.ucHeader1.showLanguage = true;
-            this.ucHeader1.showLine = true;
-            this.ucHeader1.showLockScreen = true;
-            this.ucHeader1.showLogout = false;
-            this.ucHeader1.showMainMenu = true;
-            this.ucHeader1.showMember = true;
-            this.ucHeader1.showMember_ButtonBack = false;
-            this.ucHeader1.showScanner = true;
-            this.ucHeader1.Size = new System.Drawing.Size(1038, 43);
-            this.ucHeader1.TabIndex = 9;
+            this.ucButtonPayment1.BackColor = System.Drawing.Color.White;
+            this.ucButtonPayment1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucButtonPayment1.BackgroundImage")));
+            this.ucButtonPayment1.Location = new System.Drawing.Point(28, 98);
+            this.ucButtonPayment1.Name = "ucButtonPayment1";
+            this.ucButtonPayment1.Size = new System.Drawing.Size(265, 200);
+            this.ucButtonPayment1.TabIndex = 24;
+            this.ucButtonPayment1.TextButton = "เคอรี่ เอ็กซ์เพลส";
             // 
-            // ucFooter1
-            // 
-            this.ucFooter1.BackColor = System.Drawing.Color.Transparent;
-            this.ucFooter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucFooter1.Location = new System.Drawing.Point(0, 689);
-            this.ucFooter1.Name = "ucFooter1";
-            this.ucFooter1.Size = new System.Drawing.Size(1037, 40);
-            this.ucFooter1.TabIndex = 10;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.button1.Location = new System.Drawing.Point(28, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 200);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "เคอรี่ เอ็กซ์เพลส";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::BJCBCPOS.Properties.Resources.KerryExpress;
-            this.pictureBox7.Location = new System.Drawing.Point(46, 115);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(230, 106);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 23;
-            this.pictureBox7.TabStop = false;
-            // 
-            // frmParcelService
+            // ParcelServiceMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1037, 729);
-            this.Controls.Add(this.ucFooter1);
-            this.Controls.Add(this.ucHeader1);
+            this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmParcelService";
+            this.Name = "ParcelServiceMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmParcelService";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label lbProductAndServices;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private UCButtonPayment ucButtonPayment6;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -318,9 +268,9 @@
         private UCButtonPayment ucButtonPayment5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private UCButtonPayment ucButtonPayment2;
-        private UCHeader ucHeader1;
-        private UCFooter ucFooter1;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lbProductAndServices;
+        private UCButtonPayment ucButtonPayment1;
     }
 }

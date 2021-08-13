@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ucButtonPayment2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ucButtonPayment6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQkAAADICAYAAAD7qxTBAAAABGdBTUEAALGPC/xhBQAABBtJREFUeF7t
         1tFt1FAARNEthVIogVLTQOLtyHQQ1pBFlwwd5BxpJPvZ31fvdjmO48fb29vx2PnYu5l96V0deGTh+N5A
@@ -165,6 +165,52 @@
 </value>
   </data>
   <data name="ucButtonPayment3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQkAAADICAYAAAD7qxTBAAAABGdBTUEAALGPC/xhBQAABBtJREFUeF7t
+        1tFt1FAARNEthVIogVLTQOLtyHQQ1pBFlwwd5BxpJPvZ31fvdjmO48fb29vx2PnYu5l96V0deGTh+N5A
+        /O9HM/vi+x2Kx8P98wczs4/dr0j8PTjP8x342q4OpAvnP5EAuLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLA
+        aBdEAhjtgkgAo10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA
+        0S6IBDDaBZEARrsgEsBoF0QCGO2CSACjXRAJYLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLAaBdEAhjtgkgA
+        o10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA0S6IBDDaBZEA
+        RrsgEsBoF0QCGO2CSACjXRAJYLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLAaBdEAhjtgkgAo10QCWC0CyIB
+        jHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA0S6IBDDaBZEARrsgEsBoF0QC
+        GO2CSACjXRAJYLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLAaBdEAhjtgkgAo10QCWC0CyIBjHZBJIDRLogE
+        MNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA0S6IBDDaBZEARrsgEsBoF0QCGO2CSACjXRAJ
+        YLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLAaBdEAhjtgkgAo10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyAS
+        wGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA0S6IBDDaBZEARrsgEsBoF0QCGO2CSACjXRAJYLQLIgGMdkEk
+        gNEuiAQw2gWRAEa7IBLAaBdEAhjtgkgAo10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJI
+        AKNdEAlgtAsiAYx2QSSA0S6IBDDaBZEARrsgEsBoF0QCGO2CSACjXRAJYLQLIgGMdkEkgNEuiAQw2gWR
+        AEa7IBLAaBdEAhjtgkgAo10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsi
+        AYx2QSSA0S6IBDDaBZEARrsgEsBoF0QCGO2CSACjXRAJYLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLAaBdE
+        AhjtgkgAo10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA0S6I
+        BDDaBZEARrsgEsBoF0QCGO2CSACjXbi9vr7+fL6c5/nxC/BVXR14NuHqw3WTeHkemJl92v12HMe33ibM
+        zJ579OH77XKF4nHwIhZm9rH7n0Dcbr8AYG/LtfjAm7cAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="ucButtonPayment5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQkAAADICAYAAAD7qxTBAAAABGdBTUEAALGPC/xhBQAABBtJREFUeF7t
+        1tFt1FAARNEthVIogVLTQOLtyHQQ1pBFlwwd5BxpJPvZ31fvdjmO48fb29vx2PnYu5l96V0deGTh+N5A
+        /O9HM/vi+x2Kx8P98wczs4/dr0j8PTjP8x342q4OpAvnP5EAuLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLA
+        aBdEAhjtgkgAo10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA
+        0S6IBDDaBZEARrsgEsBoF0QCGO2CSACjXRAJYLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLAaBdEAhjtgkgA
+        o10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA0S6IBDDaBZEA
+        RrsgEsBoF0QCGO2CSACjXRAJYLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLAaBdEAhjtgkgAo10QCWC0CyIB
+        jHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA0S6IBDDaBZEARrsgEsBoF0QC
+        GO2CSACjXRAJYLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLAaBdEAhjtgkgAo10QCWC0CyIBjHZBJIDRLogE
+        MNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA0S6IBDDaBZEARrsgEsBoF0QCGO2CSACjXRAJ
+        YLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLAaBdEAhjtgkgAo10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyAS
+        wGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA0S6IBDDaBZEARrsgEsBoF0QCGO2CSACjXRAJYLQLIgGMdkEk
+        gNEuiAQw2gWRAEa7IBLAaBdEAhjtgkgAo10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJI
+        AKNdEAlgtAsiAYx2QSSA0S6IBDDaBZEARrsgEsBoF0QCGO2CSACjXRAJYLQLIgGMdkEkgNEuiAQw2gWR
+        AEa7IBLAaBdEAhjtgkgAo10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsi
+        AYx2QSSA0S6IBDDaBZEARrsgEsBoF0QCGO2CSACjXRAJYLQLIgGMdkEkgNEuiAQw2gWRAEa7IBLAaBdE
+        AhjtgkgAo10QCWC0CyIBjHZBJIDRLogEMNoFkQBGuyASwGgXRAIY7YJIAKNdEAlgtAsiAYx2QSSA0S6I
+        BDDaBZEARrsgEsBoF0QCGO2CSACjXbi9vr7+fL6c5/nxC/BVXR14NuHqw3WTeHkemJl92v12HMe33ibM
+        zJ579OH77XKF4nHwIhZm9rH7n0Dcbr8AYG/LtfjAm7cAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="ucButtonPayment2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQkAAADICAYAAAD7qxTBAAAABGdBTUEAALGPC/xhBQAABBtJREFUeF7t
         1tFt1FAARNEthVIogVLTQOLtyHQQ1pBFlwwd5BxpJPvZ31fvdjmO48fb29vx2PnYu5l96V0deGTh+N5A

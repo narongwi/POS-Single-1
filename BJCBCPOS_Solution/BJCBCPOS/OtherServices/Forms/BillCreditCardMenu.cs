@@ -7,18 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BJCBCPOS.OtherServices.Forms {
-    public partial class frmParcelService : Form
+namespace BJCBCPOS.OtherServices.Forms
+{
+    public partial class BillCreditCardMenu : Form
     {
-        public frmParcelService()
+        public BillCreditCardMenu()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new frmParcelKerry().Show();
-
         }
     }
 }

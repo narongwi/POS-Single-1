@@ -55,7 +55,7 @@
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(613, 530);
+            this.panel1.Size = new System.Drawing.Size(860, 530);
             this.panel1.TabIndex = 26;
             // 
             // btnReceivePayment
@@ -69,7 +69,7 @@
             this.btnReceivePayment.Name = "btnReceivePayment";
             this.btnReceivePayment.Size = new System.Drawing.Size(176, 130);
             this.btnReceivePayment.TabIndex = 34;
-            this.btnReceivePayment.Text = "รับชำระ";
+            this.btnReceivePayment.Text = "สินค้าและบริการอื่นๆ";
             this.btnReceivePayment.UseVisualStyleBackColor = true;
             this.btnReceivePayment.Visible = false;
             this.btnReceivePayment.Click += new System.EventHandler(this.btnReceivePayment_Click);
