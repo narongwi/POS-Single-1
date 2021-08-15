@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BJCBCPOS.page
+namespace BJCBCPOS.OtherServices.Forms
 {
-    public partial class frmSIMPromotion : Form
+    public partial class BigServiceMenu : Form
     {
-        public frmSIMPromotion()
+        public BigServiceMenu()
         {
             InitializeComponent();
         }

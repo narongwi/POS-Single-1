@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BJCBCPOS.page
+namespace BJCBCPOS.OtherServices.Forms
 {
-    public partial class frmTopupServiceCancel : Form
+    public partial class BillCreditAeonForm : Form
     {
-        public frmTopupServiceCancel()
+        public BillCreditAeonForm()
         {
             InitializeComponent();
         }

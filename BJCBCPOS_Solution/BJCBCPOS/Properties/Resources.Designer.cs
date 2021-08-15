@@ -2982,6 +2982,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap QR_Code1 {
+            get {
+                object obj = ResourceManager.GetObject("QR_Code1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap QRPayment_BscanC {
             get {
                 object obj = ResourceManager.GetObject("QRPayment_BscanC", resourceCulture);

@@ -618,6 +618,18 @@
     <Compile Include="OtherServices\Classes\FontIconUtils.cs" />
     <Compile Include="OtherServices\Fonts\MaterialDesignIcons.cs" />
     <Compile Include="OtherServices\Fonts\FontIconHelper.cs" />
+    <Compile Include="OtherServices\Forms\BigServiceMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\BigServiceMenu.Designer.cs">
+      <DependentUpon>BigServiceMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\BillCreditAeonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\BillCreditAeonForm.Designer.cs">
+      <DependentUpon>BillCreditAeonForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherServices\Forms\BillCreditCardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1367,6 +1379,12 @@
     <EmbeddedResource Include="dialog\frmPopupInput.resx">
       <DependentUpon>frmPopupInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\BigServiceMenu.resx">
+      <DependentUpon>BigServiceMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\BillCreditAeonForm.resx">
+      <DependentUpon>BillCreditAeonForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\Forms\BillCreditCardForm.resx">
       <DependentUpon>BillCreditCardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1719,6 +1737,7 @@
     <Content Include="config\Thai.txt" />
     <Content Include="NoPath.ico" />
     <Content Include="OtherServices\Readme.txt" />
+    <None Include="Resources\QR_Code1.png" />
     <None Include="Resources\GHBank.png" />
     <None Include="Resources\UOB.jpg" />
     <None Include="Resources\AEON.png" />
