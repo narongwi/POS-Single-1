@@ -642,6 +642,30 @@
     <Compile Include="OtherServices\Forms\KerryMenu.Designer.cs">
       <DependentUpon>KerryMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtherServices\Forms\ParcelCODForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\ParcelCODForm.Designer.cs">
+      <DependentUpon>ParcelCODForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\ParcelDropoffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\ParcelDropoffForm.Designer.cs">
+      <DependentUpon>ParcelDropoffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\ParcelNormalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\ParcelNormalForm.Designer.cs">
+      <DependentUpon>ParcelNormalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\ParcelSCLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\ParcelSCLForm.Designer.cs">
+      <DependentUpon>ParcelSCLForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherServices\Forms\PaymentServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1342,6 +1366,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\Forms\KerryMenu.resx">
       <DependentUpon>KerryMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\ParcelCODForm.resx">
+      <DependentUpon>ParcelCODForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\ParcelDropoffForm.resx">
+      <DependentUpon>ParcelDropoffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\ParcelNormalForm.resx">
+      <DependentUpon>ParcelNormalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\ParcelSCLForm.resx">
+      <DependentUpon>ParcelSCLForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\Forms\ParcelServiceMenu.resx">
       <DependentUpon>ParcelServiceMenu.cs</DependentUpon>
