@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.lbBigServices = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.btnService_2 = new System.Windows.Forms.Button();
             this.btnService_4 = new System.Windows.Forms.Button();
             this.btnService_3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(901, 540);
             this.panel2.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = global::BJCBCPOS.Properties.Resources.QR_Code1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Gray;
+            this.button1.Location = new System.Drawing.Point(32, 101);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 35);
+            this.button1.Size = new System.Drawing.Size(265, 200);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Bill Payment";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             // 
             // panel1
             // 
@@ -76,7 +95,7 @@
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Image = global::BJCBCPOS.Properties.Resources.arrow_white_left;
-            this.btnBack.Location = new System.Drawing.Point(10, 9);
+            this.btnBack.Location = new System.Drawing.Point(4, 9);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(53, 56);
             this.btnBack.TabIndex = 3;
@@ -165,7 +184,7 @@
             this.btnService_4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 35);
             this.btnService_4.Size = new System.Drawing.Size(265, 200);
             this.btnService_4.TabIndex = 4;
-            this.btnService_4.Text = "ตู้เงินฝาก";
+            this.btnService_4.Text = "ตู้ฝาก-ถอนเงิน";
             this.btnService_4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnService_4.UseVisualStyleBackColor = false;
             this.btnService_4.Visible = false;
@@ -188,25 +207,6 @@
             this.btnService_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnService_3.UseVisualStyleBackColor = false;
             this.btnService_3.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = global::BJCBCPOS.Properties.Resources.QR_Code1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gray;
-            this.button1.Location = new System.Drawing.Point(32, 101);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 35);
-            this.button1.Size = new System.Drawing.Size(265, 200);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Bill Payment";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
             // 
             // BigServiceMenu
             // 

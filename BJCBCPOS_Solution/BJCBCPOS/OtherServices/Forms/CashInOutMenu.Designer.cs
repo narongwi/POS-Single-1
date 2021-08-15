@@ -1,6 +1,6 @@
 ﻿namespace BJCBCPOS.OtherServices.Forms
 {
-    partial class BillCreditCardMenu
+    partial class CashInOutMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillCreditCardMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashInOutMenu));
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -88,11 +88,11 @@
             this.panel2.Location = new System.Drawing.Point(62, 8);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(901, 753);
-            this.panel2.TabIndex = 12;
+            this.panel2.TabIndex = 13;
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::BJCBCPOS.Properties.Resources.GHBank;
+            this.pictureBox9.Image = global::BJCBCPOS.Properties.Resources.BACC;
             this.pictureBox9.Location = new System.Drawing.Point(641, 558);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(205, 124);
@@ -295,7 +295,7 @@
             this.lbProductAndServices.Name = "lbProductAndServices";
             this.lbProductAndServices.Size = new System.Drawing.Size(895, 65);
             this.lbProductAndServices.TabIndex = 2;
-            this.lbProductAndServices.Text = "บัตรเครดิต/สินเชื่อ";
+            this.lbProductAndServices.Text = "ฝาก - ถอนเงิน / Cash IN-OUT";
             this.lbProductAndServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ucButtonPayment1
@@ -308,7 +308,7 @@
             this.ucButtonPayment1.TabIndex = 24;
             this.ucButtonPayment1.TextButton = "ธนาคารกสิกรไทย";
             // 
-            // BillCreditCardMenu
+            // CashInOutMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -316,9 +316,9 @@
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "BillCreditCardMenu";
+            this.Name = "CashInOutMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "BillCreditCardMenu";
+            this.Text = "CashInOutMenu";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -335,6 +335,15 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private UCButtonPayment ucButtonPayment9;
         private System.Windows.Forms.Button btnBack;
         private UCButtonPayment ucButtonPayment8;
@@ -349,13 +358,5 @@
         private System.Windows.Forms.Label lbProductAndServices;
         private UCButtonPayment ucButtonPayment1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -56,27 +56,27 @@
             this.label6 = new System.Windows.Forms.Label();
             this.deftsoftTextbox1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.deftsoftButton4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
-            this.deftsoftButton2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.deftsoftButton1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.lbProductAndServices = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.deftsoftButton4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
+            this.deftsoftButton2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.deftsoftButton1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -497,6 +497,55 @@
             this.label1.Text = "Booking No";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
+            this.panel1.BackgroundImage = global::BJCBCPOS.Properties.Resources.Rectangle_260_3x;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pictureBox7);
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Controls.Add(this.lbProductAndServices);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(669, 75);
+            this.panel1.TabIndex = 0;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::BJCBCPOS.Properties.Resources.KerryExpress1;
+            this.pictureBox7.Location = new System.Drawing.Point(507, 0);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(162, 75);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 24;
+            this.pictureBox7.TabStop = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Image = global::BJCBCPOS.Properties.Resources.arrow_white_left;
+            this.btnBack.Location = new System.Drawing.Point(4, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(53, 56);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.UseVisualStyleBackColor = false;
+            // 
+            // lbProductAndServices
+            // 
+            this.lbProductAndServices.BackColor = System.Drawing.Color.Transparent;
+            this.lbProductAndServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProductAndServices.ForeColor = System.Drawing.Color.White;
+            this.lbProductAndServices.Location = new System.Drawing.Point(3, 5);
+            this.lbProductAndServices.Name = "lbProductAndServices";
+            this.lbProductAndServices.Size = new System.Drawing.Size(507, 65);
+            this.lbProductAndServices.TabIndex = 2;
+            this.lbProductAndServices.Text = "Kerry พัสดุปกติ";
+            this.lbProductAndServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label17);
@@ -522,18 +571,6 @@
             this.label17.TabIndex = 42;
             this.label17.Text = "บัตรประชาชน";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(112, 491);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(125, 29);
-            this.label16.TabIndex = 29;
-            this.label16.Text = "Keyboard";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // deftsoftButton4
             // 
@@ -579,6 +616,18 @@
             this.deftsoftButton2.TextColor = System.Drawing.Color.White;
             this.deftsoftButton2.UseVisualStyleBackColor = false;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label16.Location = new System.Drawing.Point(112, 491);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(125, 29);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "Keyboard";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Location = new System.Drawing.Point(3, 383);
@@ -619,55 +668,6 @@
             this.deftsoftButton1.TextColor = System.Drawing.Color.White;
             this.deftsoftButton1.UseVisualStyleBackColor = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
-            this.panel1.BackgroundImage = global::BJCBCPOS.Properties.Resources.Rectangle_260_3x;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Controls.Add(this.lbProductAndServices);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(669, 75);
-            this.panel1.TabIndex = 0;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::BJCBCPOS.Properties.Resources.KerryExpress1;
-            this.pictureBox7.Location = new System.Drawing.Point(507, 0);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(162, 75);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 24;
-            this.pictureBox7.TabStop = false;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = global::BJCBCPOS.Properties.Resources.arrow_white_left;
-            this.btnBack.Location = new System.Drawing.Point(10, 9);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(53, 56);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.UseVisualStyleBackColor = false;
-            // 
-            // lbProductAndServices
-            // 
-            this.lbProductAndServices.BackColor = System.Drawing.Color.Transparent;
-            this.lbProductAndServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProductAndServices.ForeColor = System.Drawing.Color.White;
-            this.lbProductAndServices.Location = new System.Drawing.Point(3, 5);
-            this.lbProductAndServices.Name = "lbProductAndServices";
-            this.lbProductAndServices.Size = new System.Drawing.Size(507, 65);
-            this.lbProductAndServices.TabIndex = 2;
-            this.lbProductAndServices.Text = "Kerry พัสดุปกติ";
-            this.lbProductAndServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ParcelNormalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -688,12 +688,12 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }

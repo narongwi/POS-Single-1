@@ -163,6 +163,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap BACC {
+            get {
+                object obj = ResourceManager.GetObject("BACC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap background_btn_other_payment {
             get {
                 object obj = ResourceManager.GetObject("background_btn_other_payment", resourceCulture);

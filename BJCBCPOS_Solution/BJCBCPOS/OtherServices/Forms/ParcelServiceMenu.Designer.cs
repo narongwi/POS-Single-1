@@ -204,7 +204,7 @@
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Image = global::BJCBCPOS.Properties.Resources.arrow_white_left;
-            this.btnBack.Location = new System.Drawing.Point(10, 9);
+            this.btnBack.Location = new System.Drawing.Point(4, 9);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(53, 56);
             this.btnBack.TabIndex = 3;

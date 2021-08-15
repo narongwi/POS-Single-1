@@ -660,6 +660,24 @@
     <Compile Include="OtherServices\Forms\BillPaymentMenu.Designer.cs">
       <DependentUpon>BillPaymentMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtherServices\Forms\CashInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\CashInForm.Designer.cs">
+      <DependentUpon>CashInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\CashInOutMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\CashInOutMenu.Designer.cs">
+      <DependentUpon>CashInOutMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\CashOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\CashOutForm.Designer.cs">
+      <DependentUpon>CashOutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherServices\Forms\KerryMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1400,6 +1418,15 @@
     <EmbeddedResource Include="OtherServices\Forms\BillPaymentMenu.resx">
       <DependentUpon>BillPaymentMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\CashInForm.resx">
+      <DependentUpon>CashInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\CashInOutMenu.resx">
+      <DependentUpon>CashInOutMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\CashOutForm.resx">
+      <DependentUpon>CashOutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\Forms\KerryMenu.resx">
       <DependentUpon>KerryMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -1737,6 +1764,7 @@
     <Content Include="config\Thai.txt" />
     <Content Include="NoPath.ico" />
     <Content Include="OtherServices\Readme.txt" />
+    <None Include="Resources\BACC.jpg" />
     <None Include="Resources\QR_Code1.png" />
     <None Include="Resources\GHBank.png" />
     <None Include="Resources\UOB.jpg" />

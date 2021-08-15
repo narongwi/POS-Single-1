@@ -64,13 +64,13 @@
             this.bill_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fee_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bill_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deftsoftButton1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.deftsoftButton3 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.deftsoftButton2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.deftsoftButton4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.lbProductAndServices = new System.Windows.Forms.Label();
-            this.deftsoftButton1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -158,6 +158,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.deftsoftButton1);
             this.panel2.Controls.Add(this.deftsoftButton3);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.label18);
@@ -171,7 +172,6 @@
             this.panel2.Controls.Add(this.deftsoftTextbox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.deftsoftButton1);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(12, 59);
             this.panel2.Name = "panel2";
@@ -196,7 +196,7 @@
             this.label18.ForeColor = System.Drawing.Color.DarkRed;
             this.label18.Location = new System.Drawing.Point(455, 97);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(374, 35);
+            this.label18.Size = new System.Drawing.Size(374, 39);
             this.label18.TabIndex = 51;
             // 
             // deftsoftTextbox7
@@ -535,6 +535,31 @@
             this.bill_status.Name = "bill_status";
             this.bill_status.Width = 180;
             // 
+            // deftsoftButton1
+            // 
+            this.deftsoftButton1.BackColor = System.Drawing.Color.DarkOrange;
+            this.deftsoftButton1.BackgroundColor = System.Drawing.Color.DarkOrange;
+            this.deftsoftButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.deftsoftButton1.BorderRadius = 8;
+            this.deftsoftButton1.BorderSize = 0;
+            this.deftsoftButton1.FlatAppearance.BorderSize = 0;
+            this.deftsoftButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deftsoftButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deftsoftButton1.ForeColor = System.Drawing.Color.White;
+            this.deftsoftButton1.IconColor = System.Drawing.Color.Snow;
+            this.deftsoftButton1.IconSize = 50;
+            this.deftsoftButton1.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.TextSearch;
+            this.deftsoftButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deftsoftButton1.Location = new System.Drawing.Point(841, 82);
+            this.deftsoftButton1.Name = "deftsoftButton1";
+            this.deftsoftButton1.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.deftsoftButton1.Size = new System.Drawing.Size(152, 66);
+            this.deftsoftButton1.TabIndex = 55;
+            this.deftsoftButton1.Text = "ค้นหา";
+            this.deftsoftButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.deftsoftButton1.TextColor = System.Drawing.Color.White;
+            this.deftsoftButton1.UseVisualStyleBackColor = false;
+            // 
             // deftsoftButton3
             // 
             this.deftsoftButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -622,7 +647,7 @@
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Image = global::BJCBCPOS.Properties.Resources.arrow_white_left;
-            this.btnBack.Location = new System.Drawing.Point(10, 9);
+            this.btnBack.Location = new System.Drawing.Point(5, 9);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(53, 56);
             this.btnBack.TabIndex = 3;
@@ -639,30 +664,6 @@
             this.lbProductAndServices.TabIndex = 2;
             this.lbProductAndServices.Text = "บัตรเครดิต/สินเชื่อ";
             this.lbProductAndServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // deftsoftButton1
-            // 
-            this.deftsoftButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.deftsoftButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.deftsoftButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.deftsoftButton1.BorderRadius = 8;
-            this.deftsoftButton1.BorderSize = 0;
-            this.deftsoftButton1.FlatAppearance.BorderSize = 0;
-            this.deftsoftButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deftsoftButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deftsoftButton1.ForeColor = System.Drawing.Color.White;
-            this.deftsoftButton1.IconColor = System.Drawing.Color.Snow;
-            this.deftsoftButton1.IconSize = 24;
-            this.deftsoftButton1.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.SearchWeb;
-            this.deftsoftButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deftsoftButton1.Location = new System.Drawing.Point(835, 89);
-            this.deftsoftButton1.Name = "deftsoftButton1";
-            this.deftsoftButton1.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.deftsoftButton1.Size = new System.Drawing.Size(152, 41);
-            this.deftsoftButton1.TabIndex = 9;
-            this.deftsoftButton1.Text = "ค้นหา";
-            this.deftsoftButton1.TextColor = System.Drawing.Color.White;
-            this.deftsoftButton1.UseVisualStyleBackColor = false;
             // 
             // BillCreditCardForm
             // 
@@ -693,7 +694,6 @@
         private System.Windows.Forms.Button btnBack;
         private UserControls.DeftsoftButton deftsoftButton4;
         private UserControls.DeftsoftButton deftsoftButton2;
-        private UserControls.DeftsoftButton deftsoftButton1;
         private UserControls.DeftsoftTextbox deftsoftTextbox1;
         private System.Windows.Forms.Label label1;
         private UserControls.DeftsoftTextbox deftsoftTextbox4;
@@ -730,5 +730,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bill_amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn fee_amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn bill_status;
+        private UserControls.DeftsoftButton deftsoftButton1;
     }
 }

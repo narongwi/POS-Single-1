@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -51,11 +51,11 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.deftsoftButton2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.deftsoftButton4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
-            this.deftsoftButton1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.deftsoftButton3 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.deftsoftTextbox1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.deftsoftButton1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.label19 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.vendor_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,7 +96,7 @@
             this.label18.ForeColor = System.Drawing.Color.DarkRed;
             this.label18.Location = new System.Drawing.Point(455, 97);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(374, 35);
+            this.label18.Size = new System.Drawing.Size(374, 39);
             this.label18.TabIndex = 51;
             // 
             // panel3
@@ -313,7 +313,7 @@
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Image = global::BJCBCPOS.Properties.Resources.arrow_white_left;
-            this.btnBack.Location = new System.Drawing.Point(10, 9);
+            this.btnBack.Location = new System.Drawing.Point(4, 9);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(53, 56);
             this.btnBack.TabIndex = 3;
@@ -362,30 +362,6 @@
             this.deftsoftButton4.Text = "เพิ่มรายการ";
             this.deftsoftButton4.TextColor = System.Drawing.Color.White;
             this.deftsoftButton4.UseVisualStyleBackColor = false;
-            // 
-            // deftsoftButton1
-            // 
-            this.deftsoftButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.deftsoftButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.deftsoftButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.deftsoftButton1.BorderRadius = 8;
-            this.deftsoftButton1.BorderSize = 0;
-            this.deftsoftButton1.FlatAppearance.BorderSize = 0;
-            this.deftsoftButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deftsoftButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deftsoftButton1.ForeColor = System.Drawing.Color.White;
-            this.deftsoftButton1.IconColor = System.Drawing.Color.Snow;
-            this.deftsoftButton1.IconSize = 24;
-            this.deftsoftButton1.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.SearchWeb;
-            this.deftsoftButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deftsoftButton1.Location = new System.Drawing.Point(835, 89);
-            this.deftsoftButton1.Name = "deftsoftButton1";
-            this.deftsoftButton1.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.deftsoftButton1.Size = new System.Drawing.Size(152, 41);
-            this.deftsoftButton1.TabIndex = 9;
-            this.deftsoftButton1.Text = "ค้นหา";
-            this.deftsoftButton1.TextColor = System.Drawing.Color.White;
-            this.deftsoftButton1.UseVisualStyleBackColor = false;
             // 
             // deftsoftButton3
             // 
@@ -446,6 +422,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.deftsoftButton1);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.deftsoftButton3);
@@ -458,11 +435,35 @@
             this.panel2.Controls.Add(this.deftsoftTextbox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.deftsoftButton1);
             this.panel2.Location = new System.Drawing.Point(12, 61);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1000, 695);
             this.panel2.TabIndex = 18;
+            // 
+            // deftsoftButton1
+            // 
+            this.deftsoftButton1.BackColor = System.Drawing.Color.DarkOrange;
+            this.deftsoftButton1.BackgroundColor = System.Drawing.Color.DarkOrange;
+            this.deftsoftButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.deftsoftButton1.BorderRadius = 8;
+            this.deftsoftButton1.BorderSize = 0;
+            this.deftsoftButton1.FlatAppearance.BorderSize = 0;
+            this.deftsoftButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deftsoftButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deftsoftButton1.ForeColor = System.Drawing.Color.White;
+            this.deftsoftButton1.IconColor = System.Drawing.Color.Snow;
+            this.deftsoftButton1.IconSize = 50;
+            this.deftsoftButton1.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.TextSearch;
+            this.deftsoftButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deftsoftButton1.Location = new System.Drawing.Point(835, 82);
+            this.deftsoftButton1.Name = "deftsoftButton1";
+            this.deftsoftButton1.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.deftsoftButton1.Size = new System.Drawing.Size(152, 66);
+            this.deftsoftButton1.TabIndex = 56;
+            this.deftsoftButton1.Text = "ค้นหา";
+            this.deftsoftButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.deftsoftButton1.TextColor = System.Drawing.Color.White;
+            this.deftsoftButton1.UseVisualStyleBackColor = false;
             // 
             // label19
             // 
@@ -482,14 +483,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.YellowGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.YellowGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.vendor_name,
@@ -737,7 +738,6 @@
         private System.Windows.Forms.Button btnBack;
         private UserControls.DeftsoftButton deftsoftButton2;
         private UserControls.DeftsoftButton deftsoftButton4;
-        private UserControls.DeftsoftButton deftsoftButton1;
         private UserControls.DeftsoftButton deftsoftButton3;
         private UserControls.DeftsoftTextbox deftsoftTextbox1;
         private System.Windows.Forms.Label label1;
@@ -759,5 +759,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fee_amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn bill_status;
         private System.Windows.Forms.Label label19;
+        private UserControls.DeftsoftButton deftsoftButton1;
     }
 }
