@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -147,7 +147,7 @@
             this.deftsoftTextbox7.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox7.PasswordChar = false;
             this.deftsoftTextbox7.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox7.PlaceholderText = "เบอร์โทรศัพท์ติดต่อ";
+            this.deftsoftTextbox7.PlaceholderText = "ใส่เบอร์โทรศัพท์ติดต่อ";
             this.deftsoftTextbox7.Size = new System.Drawing.Size(215, 41);
             this.deftsoftTextbox7.TabIndex = 49;
             this.deftsoftTextbox7.Texts = "";
@@ -188,7 +188,7 @@
             this.deftsoftTextbox6.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox6.PasswordChar = false;
             this.deftsoftTextbox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox6.PlaceholderText = "จำนวนเงินที่รับชำระ";
+            this.deftsoftTextbox6.PlaceholderText = "ใส่จำนวนเงินที่รับชำระ";
             this.deftsoftTextbox6.Size = new System.Drawing.Size(215, 41);
             this.deftsoftTextbox6.TabIndex = 39;
             this.deftsoftTextbox6.Texts = "";
@@ -426,7 +426,7 @@
             this.deftsoftTextbox1.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox1.PasswordChar = false;
             this.deftsoftTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox1.PlaceholderText = "หมายเลขสมาชิก/เบอร์โทรศัพท์";
+            this.deftsoftTextbox1.PlaceholderText = "ใส่หมายเลขสมาชิก/เบอร์โทรศัพท์";
             this.deftsoftTextbox1.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox1.TabIndex = 7;
             this.deftsoftTextbox1.Texts = "";
@@ -482,14 +482,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.YellowGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.YellowGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.vendor_name,
@@ -606,7 +606,7 @@
             this.deftsoftTextbox5.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox5.PasswordChar = false;
             this.deftsoftTextbox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox5.PlaceholderText = "Ref. 1";
+            this.deftsoftTextbox5.PlaceholderText = "ใส่หมายเลข Ref. 1";
             this.deftsoftTextbox5.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox5.TabIndex = 35;
             this.deftsoftTextbox5.Texts = "";
@@ -639,7 +639,7 @@
             this.deftsoftTextbox4.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox4.PasswordChar = false;
             this.deftsoftTextbox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox4.PlaceholderText = "Ref. 4";
+            this.deftsoftTextbox4.PlaceholderText = "ใส่หมายเลข Ref. 4";
             this.deftsoftTextbox4.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox4.TabIndex = 33;
             this.deftsoftTextbox4.Texts = "";
@@ -661,7 +661,7 @@
             this.deftsoftTextbox3.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox3.PasswordChar = false;
             this.deftsoftTextbox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox3.PlaceholderText = "Ref. 3";
+            this.deftsoftTextbox3.PlaceholderText = "ใส่หมายเลข Ref. 3";
             this.deftsoftTextbox3.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox3.TabIndex = 31;
             this.deftsoftTextbox3.Texts = "";
@@ -683,7 +683,7 @@
             this.deftsoftTextbox2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox2.PasswordChar = false;
             this.deftsoftTextbox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox2.PlaceholderText = "Ref. 2";
+            this.deftsoftTextbox2.PlaceholderText = "ใส่หมายเลข Ref. 2";
             this.deftsoftTextbox2.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox2.TabIndex = 29;
             this.deftsoftTextbox2.Texts = "";

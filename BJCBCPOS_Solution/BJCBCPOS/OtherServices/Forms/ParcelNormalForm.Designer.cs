@@ -57,7 +57,10 @@
             this.deftsoftTextbox1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.deftsoftButton4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
+            this.deftsoftButton2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.deftsoftButton1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
@@ -65,9 +68,6 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.lbProductAndServices = new System.Windows.Forms.Label();
-            this.deftsoftButton4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
-            this.deftsoftButton2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -123,7 +123,7 @@
             this.deftsoftTextbox7.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox7.PasswordChar = false;
             this.deftsoftTextbox7.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox7.PlaceholderText = "Tracking No";
+            this.deftsoftTextbox7.PlaceholderText = "ใส่หมายเลข Tracking No";
             this.deftsoftTextbox7.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox7.TabIndex = 39;
             this.deftsoftTextbox7.Texts = "";
@@ -210,7 +210,7 @@
             this.deftsoftTextbox6.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox6.PasswordChar = false;
             this.deftsoftTextbox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox6.PlaceholderText = "รหัสไปรษณีย์ของผู้รับ";
+            this.deftsoftTextbox6.PlaceholderText = "ใส่รหัสไปรษณีย์ของผู้รับ";
             this.deftsoftTextbox6.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox6.TabIndex = 37;
             this.deftsoftTextbox6.Texts = "";
@@ -244,7 +244,7 @@
             this.deftsoftTextbox5.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox5.PasswordChar = false;
             this.deftsoftTextbox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox5.PlaceholderText = "เบอร์โทรศัพท์สำหรับติดต่อ";
+            this.deftsoftTextbox5.PlaceholderText = "ใส่เบอร์โทรศัพท์สำหรับติดต่อของผู้รับ";
             this.deftsoftTextbox5.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox5.TabIndex = 35;
             this.deftsoftTextbox5.Texts = "";
@@ -321,7 +321,7 @@
             this.deftsoftTextbox4.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox4.PasswordChar = false;
             this.deftsoftTextbox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox4.PlaceholderText = "รหัสไปรษณีย์ผู้ส่ง";
+            this.deftsoftTextbox4.PlaceholderText = "ใส่รหัสไปรษณีย์ของผู้ส่ง";
             this.deftsoftTextbox4.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox4.TabIndex = 33;
             this.deftsoftTextbox4.Texts = "";
@@ -355,7 +355,7 @@
             this.deftsoftTextbox3.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox3.PasswordChar = false;
             this.deftsoftTextbox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox3.PlaceholderText = "เบอร์โทรศัพท์สำหรับติดต่อ";
+            this.deftsoftTextbox3.PlaceholderText = "ใส่เบอร์โทรศัพท์สำหรับติดต่อของผู้ส่ง";
             this.deftsoftTextbox3.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox3.TabIndex = 31;
             this.deftsoftTextbox3.Texts = "";
@@ -389,7 +389,7 @@
             this.deftsoftTextbox2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox2.PasswordChar = false;
             this.deftsoftTextbox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox2.PlaceholderText = "หมายเลขบัตรประชาชน";
+            this.deftsoftTextbox2.PlaceholderText = "ใส่หมายเลขบัตรประชาชนของผู้ส่ง";
             this.deftsoftTextbox2.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox2.TabIndex = 29;
             this.deftsoftTextbox2.Texts = "";
@@ -479,7 +479,7 @@
             this.deftsoftTextbox1.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox1.PasswordChar = false;
             this.deftsoftTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox1.PlaceholderText = "Booking No";
+            this.deftsoftTextbox1.PlaceholderText = "ใส่หมายเลข Booking No";
             this.deftsoftTextbox1.Size = new System.Drawing.Size(392, 41);
             this.deftsoftTextbox1.TabIndex = 7;
             this.deftsoftTextbox1.Texts = "";
@@ -511,6 +511,18 @@
             this.panel5.Size = new System.Drawing.Size(325, 688);
             this.panel5.TabIndex = 11;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label17.Location = new System.Drawing.Point(84, 70);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(152, 29);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "บัตรประชาชน";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -522,6 +534,50 @@
             this.label16.TabIndex = 29;
             this.label16.Text = "Keyboard";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // deftsoftButton4
+            // 
+            this.deftsoftButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(192)))), ((int)(((byte)(100)))));
+            this.deftsoftButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(192)))), ((int)(((byte)(100)))));
+            this.deftsoftButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.deftsoftButton4.BorderRadius = 8;
+            this.deftsoftButton4.BorderSize = 0;
+            this.deftsoftButton4.FlatAppearance.BorderSize = 0;
+            this.deftsoftButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deftsoftButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deftsoftButton4.ForeColor = System.Drawing.Color.White;
+            this.deftsoftButton4.IconColor = System.Drawing.Color.White;
+            this.deftsoftButton4.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.PlusBoxMultipleOutline;
+            this.deftsoftButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deftsoftButton4.Location = new System.Drawing.Point(3, 299);
+            this.deftsoftButton4.Name = "deftsoftButton4";
+            this.deftsoftButton4.Size = new System.Drawing.Size(156, 60);
+            this.deftsoftButton4.TabIndex = 41;
+            this.deftsoftButton4.Text = "ตกลง";
+            this.deftsoftButton4.TextColor = System.Drawing.Color.White;
+            this.deftsoftButton4.UseVisualStyleBackColor = false;
+            // 
+            // deftsoftButton2
+            // 
+            this.deftsoftButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.deftsoftButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.deftsoftButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.deftsoftButton2.BorderRadius = 8;
+            this.deftsoftButton2.BorderSize = 0;
+            this.deftsoftButton2.FlatAppearance.BorderSize = 0;
+            this.deftsoftButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deftsoftButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deftsoftButton2.ForeColor = System.Drawing.Color.White;
+            this.deftsoftButton2.IconColor = System.Drawing.Color.White;
+            this.deftsoftButton2.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.StopCircle;
+            this.deftsoftButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deftsoftButton2.Location = new System.Drawing.Point(164, 299);
+            this.deftsoftButton2.Name = "deftsoftButton2";
+            this.deftsoftButton2.Size = new System.Drawing.Size(156, 60);
+            this.deftsoftButton2.TabIndex = 40;
+            this.deftsoftButton2.Text = "ยกเลิก";
+            this.deftsoftButton2.TextColor = System.Drawing.Color.White;
+            this.deftsoftButton2.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
@@ -611,62 +667,6 @@
             this.lbProductAndServices.TabIndex = 2;
             this.lbProductAndServices.Text = "Kerry พัสดุปกติ";
             this.lbProductAndServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // deftsoftButton4
-            // 
-            this.deftsoftButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(192)))), ((int)(((byte)(100)))));
-            this.deftsoftButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(192)))), ((int)(((byte)(100)))));
-            this.deftsoftButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.deftsoftButton4.BorderRadius = 8;
-            this.deftsoftButton4.BorderSize = 0;
-            this.deftsoftButton4.FlatAppearance.BorderSize = 0;
-            this.deftsoftButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deftsoftButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deftsoftButton4.ForeColor = System.Drawing.Color.White;
-            this.deftsoftButton4.IconColor = System.Drawing.Color.White;
-            this.deftsoftButton4.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.PlusBoxMultipleOutline;
-            this.deftsoftButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deftsoftButton4.Location = new System.Drawing.Point(3, 299);
-            this.deftsoftButton4.Name = "deftsoftButton4";
-            this.deftsoftButton4.Size = new System.Drawing.Size(156, 60);
-            this.deftsoftButton4.TabIndex = 41;
-            this.deftsoftButton4.Text = "ตกลง";
-            this.deftsoftButton4.TextColor = System.Drawing.Color.White;
-            this.deftsoftButton4.UseVisualStyleBackColor = false;
-            // 
-            // deftsoftButton2
-            // 
-            this.deftsoftButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.deftsoftButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.deftsoftButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.deftsoftButton2.BorderRadius = 8;
-            this.deftsoftButton2.BorderSize = 0;
-            this.deftsoftButton2.FlatAppearance.BorderSize = 0;
-            this.deftsoftButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deftsoftButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deftsoftButton2.ForeColor = System.Drawing.Color.White;
-            this.deftsoftButton2.IconColor = System.Drawing.Color.White;
-            this.deftsoftButton2.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.StopCircle;
-            this.deftsoftButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deftsoftButton2.Location = new System.Drawing.Point(164, 299);
-            this.deftsoftButton2.Name = "deftsoftButton2";
-            this.deftsoftButton2.Size = new System.Drawing.Size(156, 60);
-            this.deftsoftButton2.TabIndex = 40;
-            this.deftsoftButton2.Text = "ยกเลิก";
-            this.deftsoftButton2.TextColor = System.Drawing.Color.White;
-            this.deftsoftButton2.UseVisualStyleBackColor = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(84, 70);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(152, 29);
-            this.label17.TabIndex = 42;
-            this.label17.Text = "บัตรประชาชน";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ParcelNormalForm
             // 

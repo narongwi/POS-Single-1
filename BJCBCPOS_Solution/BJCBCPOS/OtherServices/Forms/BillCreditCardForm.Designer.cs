@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.deftsoftTextbox1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.deftsoftTextbox4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.deftsoftTextbox3 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.deftsoftButton3 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.deftsoftTextbox7 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
@@ -50,7 +49,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.deftsoftButton2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.deftsoftTextbox6 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,11 +57,6 @@
             this.deftsoftTextbox5 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.deftsoftTextbox2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
-            this.deftsoftButton4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.lbProductAndServices = new System.Windows.Forms.Label();
-            this.deftsoftButton1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.vendor_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.service_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,11 +64,18 @@
             this.bill_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fee_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bill_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deftsoftButton3 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
+            this.deftsoftButton2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
+            this.deftsoftButton4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lbProductAndServices = new System.Windows.Forms.Label();
+            this.deftsoftButton1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // deftsoftTextbox1
@@ -94,7 +94,7 @@
             this.deftsoftTextbox1.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox1.PasswordChar = false;
             this.deftsoftTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox1.PlaceholderText = "หมายเลขสมาชิก/เบอร์โทรศัพท์";
+            this.deftsoftTextbox1.PlaceholderText = "ใส่หมายเลขสมาชิก/เบอร์โทรศัพท์";
             this.deftsoftTextbox1.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox1.TabIndex = 7;
             this.deftsoftTextbox1.Texts = "";
@@ -128,7 +128,7 @@
             this.deftsoftTextbox4.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox4.PasswordChar = false;
             this.deftsoftTextbox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox4.PlaceholderText = "Ref. 4";
+            this.deftsoftTextbox4.PlaceholderText = "ใส่หมายเลข Ref. 4";
             this.deftsoftTextbox4.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox4.TabIndex = 33;
             this.deftsoftTextbox4.Texts = "";
@@ -150,7 +150,7 @@
             this.deftsoftTextbox3.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox3.PasswordChar = false;
             this.deftsoftTextbox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox3.PlaceholderText = "Ref. 3";
+            this.deftsoftTextbox3.PlaceholderText = "ใส่หมายเลข Ref. 3";
             this.deftsoftTextbox3.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox3.TabIndex = 31;
             this.deftsoftTextbox3.Texts = "";
@@ -177,29 +177,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1000, 695);
             this.panel2.TabIndex = 17;
-            // 
-            // deftsoftButton3
-            // 
-            this.deftsoftButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.deftsoftButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.deftsoftButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.deftsoftButton3.BorderRadius = 8;
-            this.deftsoftButton3.BorderSize = 0;
-            this.deftsoftButton3.FlatAppearance.BorderSize = 0;
-            this.deftsoftButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deftsoftButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deftsoftButton3.ForeColor = System.Drawing.Color.White;
-            this.deftsoftButton3.IconColor = System.Drawing.Color.White;
-            this.deftsoftButton3.IconSize = 50;
-            this.deftsoftButton3.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.CheckboxMarkedCircleOutline;
-            this.deftsoftButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deftsoftButton3.Location = new System.Drawing.Point(746, 370);
-            this.deftsoftButton3.Name = "deftsoftButton3";
-            this.deftsoftButton3.Size = new System.Drawing.Size(247, 100);
-            this.deftsoftButton3.TabIndex = 54;
-            this.deftsoftButton3.Text = "ชำระเงิน";
-            this.deftsoftButton3.TextColor = System.Drawing.Color.White;
-            this.deftsoftButton3.UseVisualStyleBackColor = false;
             // 
             // label17
             // 
@@ -238,7 +215,7 @@
             this.deftsoftTextbox7.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox7.PasswordChar = false;
             this.deftsoftTextbox7.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox7.PlaceholderText = "เบอร์โทรศัพท์ติดต่อ";
+            this.deftsoftTextbox7.PlaceholderText = "ใส่เบอร์โทรศัพท์ติดต่อ";
             this.deftsoftTextbox7.Size = new System.Drawing.Size(215, 45);
             this.deftsoftTextbox7.TabIndex = 49;
             this.deftsoftTextbox7.Texts = "";
@@ -367,28 +344,6 @@
             this.label12.Size = new System.Drawing.Size(404, 28);
             this.label12.TabIndex = 42;
             // 
-            // deftsoftButton2
-            // 
-            this.deftsoftButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.deftsoftButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.deftsoftButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.deftsoftButton2.BorderRadius = 8;
-            this.deftsoftButton2.BorderSize = 0;
-            this.deftsoftButton2.FlatAppearance.BorderSize = 0;
-            this.deftsoftButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deftsoftButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deftsoftButton2.ForeColor = System.Drawing.Color.White;
-            this.deftsoftButton2.IconColor = System.Drawing.Color.White;
-            this.deftsoftButton2.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.StopCircle;
-            this.deftsoftButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deftsoftButton2.Location = new System.Drawing.Point(440, 432);
-            this.deftsoftButton2.Name = "deftsoftButton2";
-            this.deftsoftButton2.Size = new System.Drawing.Size(211, 36);
-            this.deftsoftButton2.TabIndex = 40;
-            this.deftsoftButton2.Text = "ยกเลิก";
-            this.deftsoftButton2.TextColor = System.Drawing.Color.White;
-            this.deftsoftButton2.UseVisualStyleBackColor = false;
-            // 
             // deftsoftTextbox6
             // 
             this.deftsoftTextbox6.BackColor = System.Drawing.SystemColors.Window;
@@ -405,7 +360,7 @@
             this.deftsoftTextbox6.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox6.PasswordChar = false;
             this.deftsoftTextbox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox6.PlaceholderText = "จำนวนเงินที่รับชำระ";
+            this.deftsoftTextbox6.PlaceholderText = "ใส่จำนวนเงินที่รับชำระ";
             this.deftsoftTextbox6.Size = new System.Drawing.Size(215, 45);
             this.deftsoftTextbox6.TabIndex = 39;
             this.deftsoftTextbox6.Texts = "";
@@ -478,7 +433,7 @@
             this.deftsoftTextbox5.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox5.PasswordChar = false;
             this.deftsoftTextbox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox5.PlaceholderText = "Ref. 1";
+            this.deftsoftTextbox5.PlaceholderText = "ใส่หมายเลข Ref. 1";
             this.deftsoftTextbox5.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox5.TabIndex = 35;
             this.deftsoftTextbox5.Texts = "";
@@ -511,11 +466,119 @@
             this.deftsoftTextbox2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox2.PasswordChar = false;
             this.deftsoftTextbox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox2.PlaceholderText = "Ref. 2";
+            this.deftsoftTextbox2.PlaceholderText = "ใส่หมายเลข Ref. 2";
             this.deftsoftTextbox2.Size = new System.Drawing.Size(317, 41);
             this.deftsoftTextbox2.TabIndex = 29;
             this.deftsoftTextbox2.Texts = "";
             this.deftsoftTextbox2.UnderlinedStyle = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.YellowGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.vendor_name,
+            this.service_name,
+            this.reference_no,
+            this.bill_amount,
+            this.fee_amount,
+            this.bill_status});
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView1.Location = new System.Drawing.Point(10, 474);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(983, 218);
+            this.dataGridView1.TabIndex = 28;
+            // 
+            // vendor_name
+            // 
+            this.vendor_name.HeaderText = "Vendor";
+            this.vendor_name.Name = "vendor_name";
+            this.vendor_name.Width = 200;
+            // 
+            // service_name
+            // 
+            this.service_name.HeaderText = "Service";
+            this.service_name.Name = "service_name";
+            this.service_name.Width = 200;
+            // 
+            // reference_no
+            // 
+            this.reference_no.HeaderText = "เลขที่อ้างอิง";
+            this.reference_no.Name = "reference_no";
+            this.reference_no.Width = 200;
+            // 
+            // bill_amount
+            // 
+            this.bill_amount.HeaderText = "จำนวนเงิน";
+            this.bill_amount.Name = "bill_amount";
+            // 
+            // fee_amount
+            // 
+            this.fee_amount.HeaderText = "ค่าบริการ";
+            this.fee_amount.Name = "fee_amount";
+            // 
+            // bill_status
+            // 
+            this.bill_status.HeaderText = "สถานะ";
+            this.bill_status.Name = "bill_status";
+            this.bill_status.Width = 180;
+            // 
+            // deftsoftButton3
+            // 
+            this.deftsoftButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.deftsoftButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.deftsoftButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.deftsoftButton3.BorderRadius = 8;
+            this.deftsoftButton3.BorderSize = 0;
+            this.deftsoftButton3.FlatAppearance.BorderSize = 0;
+            this.deftsoftButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deftsoftButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deftsoftButton3.ForeColor = System.Drawing.Color.White;
+            this.deftsoftButton3.IconColor = System.Drawing.Color.White;
+            this.deftsoftButton3.IconSize = 50;
+            this.deftsoftButton3.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.CheckboxMarkedCircleOutline;
+            this.deftsoftButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deftsoftButton3.Location = new System.Drawing.Point(746, 370);
+            this.deftsoftButton3.Name = "deftsoftButton3";
+            this.deftsoftButton3.Size = new System.Drawing.Size(247, 100);
+            this.deftsoftButton3.TabIndex = 54;
+            this.deftsoftButton3.Text = "ชำระเงิน";
+            this.deftsoftButton3.TextColor = System.Drawing.Color.White;
+            this.deftsoftButton3.UseVisualStyleBackColor = false;
+            // 
+            // deftsoftButton2
+            // 
+            this.deftsoftButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.deftsoftButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.deftsoftButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.deftsoftButton2.BorderRadius = 8;
+            this.deftsoftButton2.BorderSize = 0;
+            this.deftsoftButton2.FlatAppearance.BorderSize = 0;
+            this.deftsoftButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deftsoftButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deftsoftButton2.ForeColor = System.Drawing.Color.White;
+            this.deftsoftButton2.IconColor = System.Drawing.Color.White;
+            this.deftsoftButton2.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.StopCircle;
+            this.deftsoftButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deftsoftButton2.Location = new System.Drawing.Point(440, 432);
+            this.deftsoftButton2.Name = "deftsoftButton2";
+            this.deftsoftButton2.Size = new System.Drawing.Size(211, 36);
+            this.deftsoftButton2.TabIndex = 40;
+            this.deftsoftButton2.Text = "ยกเลิก";
+            this.deftsoftButton2.TextColor = System.Drawing.Color.White;
+            this.deftsoftButton2.UseVisualStyleBackColor = false;
             // 
             // deftsoftButton4
             // 
@@ -601,69 +664,6 @@
             this.deftsoftButton1.TextColor = System.Drawing.Color.White;
             this.deftsoftButton1.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.YellowGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.vendor_name,
-            this.service_name,
-            this.reference_no,
-            this.bill_amount,
-            this.fee_amount,
-            this.bill_status});
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 474);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(983, 218);
-            this.dataGridView1.TabIndex = 28;
-            // 
-            // vendor_name
-            // 
-            this.vendor_name.HeaderText = "Vendor";
-            this.vendor_name.Name = "vendor_name";
-            this.vendor_name.Width = 200;
-            // 
-            // service_name
-            // 
-            this.service_name.HeaderText = "Service";
-            this.service_name.Name = "service_name";
-            this.service_name.Width = 200;
-            // 
-            // reference_no
-            // 
-            this.reference_no.HeaderText = "เลขที่อ้างอิง";
-            this.reference_no.Name = "reference_no";
-            this.reference_no.Width = 200;
-            // 
-            // bill_amount
-            // 
-            this.bill_amount.HeaderText = "จำนวนเงิน";
-            this.bill_amount.Name = "bill_amount";
-            // 
-            // fee_amount
-            // 
-            this.fee_amount.HeaderText = "ค่าบริการ";
-            this.fee_amount.Name = "fee_amount";
-            // 
-            // bill_status
-            // 
-            this.bill_status.HeaderText = "สถานะ";
-            this.bill_status.Name = "bill_status";
-            this.bill_status.Width = 180;
-            // 
             // BillCreditCardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -681,8 +681,8 @@
             this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

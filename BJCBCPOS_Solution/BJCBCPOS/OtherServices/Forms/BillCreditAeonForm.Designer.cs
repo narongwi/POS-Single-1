@@ -370,7 +370,7 @@
             this.deftsoftTextbox1.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox1.PasswordChar = false;
             this.deftsoftTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox1.PlaceholderText = "หมายเลขสมาชิก/เบอร์โทรศัพท์";
+            this.deftsoftTextbox1.PlaceholderText = "ใส่หมายเลขสมาชิก/เบอร์โทรศัพท์";
             this.deftsoftTextbox1.Size = new System.Drawing.Size(359, 41);
             this.deftsoftTextbox1.TabIndex = 52;
             this.deftsoftTextbox1.Texts = "";
@@ -453,7 +453,7 @@
             this.deftsoftTextbox2.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
             this.deftsoftTextbox2.PasswordChar = false;
             this.deftsoftTextbox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox2.PlaceholderText = "หมายเลขบัตรประชาชน";
+            this.deftsoftTextbox2.PlaceholderText = "ใส่หมายเลขบัตรประชาชนผู้ชำระ";
             this.deftsoftTextbox2.Size = new System.Drawing.Size(387, 41);
             this.deftsoftTextbox2.TabIndex = 35;
             this.deftsoftTextbox2.Texts = "";
