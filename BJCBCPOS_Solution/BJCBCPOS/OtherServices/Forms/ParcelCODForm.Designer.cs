@@ -67,6 +67,7 @@
             this.lbProductAndServices = new System.Windows.Forms.Label();
             this.deftsoftButton4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
             this.deftsoftButton2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftButton();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -182,6 +183,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.deftsoftButton4);
             this.panel5.Controls.Add(this.deftsoftButton2);
             this.panel5.Controls.Add(this.label16);
@@ -646,13 +648,25 @@
             this.deftsoftButton2.IconColor = System.Drawing.Color.White;
             this.deftsoftButton2.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.StopCircle;
             this.deftsoftButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deftsoftButton2.Location = new System.Drawing.Point(166, 299);
+            this.deftsoftButton2.Location = new System.Drawing.Point(164, 299);
             this.deftsoftButton2.Name = "deftsoftButton2";
             this.deftsoftButton2.Size = new System.Drawing.Size(156, 60);
             this.deftsoftButton2.TabIndex = 40;
             this.deftsoftButton2.Text = "ยกเลิก";
             this.deftsoftButton2.TextColor = System.Drawing.Color.White;
             this.deftsoftButton2.UseVisualStyleBackColor = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label17.Location = new System.Drawing.Point(85, 79);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(152, 29);
+            this.label17.TabIndex = 43;
+            this.label17.Text = "บัตรประชาชน";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ParcelCODForm
             // 
@@ -725,5 +739,6 @@
         private System.Windows.Forms.Label label6;
         private UserControls.DeftsoftButton deftsoftButton4;
         private UserControls.DeftsoftButton deftsoftButton2;
+        private System.Windows.Forms.Label label17;
     }
 }

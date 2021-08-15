@@ -618,6 +618,18 @@
     <Compile Include="OtherServices\Classes\FontIconUtils.cs" />
     <Compile Include="OtherServices\Fonts\MaterialDesignIcons.cs" />
     <Compile Include="OtherServices\Fonts\FontIconHelper.cs" />
+    <Compile Include="OtherServices\Forms\BillCreditCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\BillCreditCardForm.Designer.cs">
+      <DependentUpon>BillCreditCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\BillCreditCardForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\BillCreditCardForm2.Designer.cs">
+      <DependentUpon>BillCreditCardForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherServices\Forms\BillCreditCardMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1354,6 +1366,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dialog\frmPopupInput.resx">
       <DependentUpon>frmPopupInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\BillCreditCardForm.resx">
+      <DependentUpon>BillCreditCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\BillCreditCardForm2.resx">
+      <DependentUpon>BillCreditCardForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\Forms\BillCreditCardMenu.resx">
       <DependentUpon>BillCreditCardMenu.cs</DependentUpon>

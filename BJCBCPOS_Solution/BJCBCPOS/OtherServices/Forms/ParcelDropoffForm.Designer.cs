@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.deftsoftTextbox2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -63,6 +63,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.lbProductAndServices = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,6 +110,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.deftsoftButton4);
             this.panel5.Controls.Add(this.deftsoftButton2);
             this.panel5.Controls.Add(this.label16);
@@ -156,7 +158,7 @@
             this.deftsoftButton2.IconColor = System.Drawing.Color.White;
             this.deftsoftButton2.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.StopCircle;
             this.deftsoftButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deftsoftButton2.Location = new System.Drawing.Point(166, 301);
+            this.deftsoftButton2.Location = new System.Drawing.Point(164, 301);
             this.deftsoftButton2.Name = "deftsoftButton2";
             this.deftsoftButton2.Size = new System.Drawing.Size(156, 60);
             this.deftsoftButton2.TabIndex = 38;
@@ -216,17 +218,18 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.YellowGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.YellowGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.consignment_no,
@@ -234,6 +237,7 @@
             this.receiver,
             this.receiver_tel,
             this.card_id});
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.Location = new System.Drawing.Point(26, 419);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
@@ -546,6 +550,18 @@
             this.lbProductAndServices.Text = "Kerry Drop Off";
             this.lbProductAndServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label17.Location = new System.Drawing.Point(94, 79);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(152, 29);
+            this.label17.TabIndex = 43;
+            this.label17.Text = "บัตรประชาชน";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // ParcelDropoffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -608,5 +624,6 @@
         private UserControls.DeftsoftButton deftsoftButton3;
         private UserControls.DeftsoftButton deftsoftButton2;
         private UserControls.DeftsoftButton deftsoftButton4;
+        private System.Windows.Forms.Label label17;
     }
 }

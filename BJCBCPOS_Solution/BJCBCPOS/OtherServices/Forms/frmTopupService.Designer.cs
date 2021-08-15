@@ -53,8 +53,8 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.ucFooter1 = new BJCBCPOS.UCFooter();
-            this.ucHeader1 = new BJCBCPOS.UCHeader();
+            //this.ucFooter1 = new BJCBCPOS.UCFooter();
+            //this.ucHeader1 = new BJCBCPOS.UCHeader();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -345,42 +345,42 @@
             // 
             // ucFooter1
             // 
-            this.ucFooter1.BackColor = System.Drawing.Color.Transparent;
-            this.ucFooter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucFooter1.Location = new System.Drawing.Point(0, 689);
-            this.ucFooter1.Name = "ucFooter1";
-            this.ucFooter1.Size = new System.Drawing.Size(1037, 40);
-            this.ucFooter1.TabIndex = 39;
+            //this.ucFooter1.BackColor = System.Drawing.Color.Transparent;
+            //this.ucFooter1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            //this.ucFooter1.Location = new System.Drawing.Point(0, 689);
+            //this.ucFooter1.Name = "ucFooter1";
+            //this.ucFooter1.Size = new System.Drawing.Size(1037, 40);
+            //this.ucFooter1.TabIndex = 39;
             // 
             // ucHeader1
             // 
-            this.ucHeader1.alertEnabled = true;
-            this.ucHeader1.alertFunctionID = null;
-            this.ucHeader1.alertStatus = false;
-            this.ucHeader1.BackColor = System.Drawing.Color.Transparent;
-            this.ucHeader1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucHeader1.currentMenuTitle1 = "เติมเงิน";
-            this.ucHeader1.currentMenuTitle2 = "";
-            this.ucHeader1.currentMenuTitle3 = "";
-            this.ucHeader1.Location = new System.Drawing.Point(1, 1);
-            this.ucHeader1.logoutText = "ออกจากระบบ";
-            this.ucHeader1.Name = "ucHeader1";
-            this.ucHeader1.nameText = "ชื่อสมาชิก";
-            this.ucHeader1.nameVisible = false;
-            this.ucHeader1.showAlert = true;
-            this.ucHeader1.showCalculator = true;
-            this.ucHeader1.showCurrentMenuText = true;
-            this.ucHeader1.showHamberGetItm = false;
-            this.ucHeader1.showLanguage = true;
-            this.ucHeader1.showLine = true;
-            this.ucHeader1.showLockScreen = true;
-            this.ucHeader1.showLogout = false;
-            this.ucHeader1.showMainMenu = true;
-            this.ucHeader1.showMember = true;
-            this.ucHeader1.showMember_ButtonBack = false;
-            this.ucHeader1.showScanner = true;
-            this.ucHeader1.Size = new System.Drawing.Size(1038, 43);
-            this.ucHeader1.TabIndex = 38;
+            //this.ucHeader1.alertEnabled = true;
+            //this.ucHeader1.alertFunctionID = null;
+            //this.ucHeader1.alertStatus = false;
+            //this.ucHeader1.BackColor = System.Drawing.Color.Transparent;
+            //this.ucHeader1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            //this.ucHeader1.currentMenuTitle1 = "เติมเงิน";
+            //this.ucHeader1.currentMenuTitle2 = "";
+            //this.ucHeader1.currentMenuTitle3 = "";
+            //this.ucHeader1.Location = new System.Drawing.Point(1, 1);
+            //this.ucHeader1.logoutText = "ออกจากระบบ";
+            //this.ucHeader1.Name = "ucHeader1";
+            //this.ucHeader1.nameText = "ชื่อสมาชิก";
+            //this.ucHeader1.nameVisible = false;
+            //this.ucHeader1.showAlert = true;
+            //this.ucHeader1.showCalculator = true;
+            //this.ucHeader1.showCurrentMenuText = true;
+            //this.ucHeader1.showHamberGetItm = false;
+            //this.ucHeader1.showLanguage = true;
+            //this.ucHeader1.showLine = true;
+            //this.ucHeader1.showLockScreen = true;
+            //this.ucHeader1.showLogout = false;
+            //this.ucHeader1.showMainMenu = true;
+            //this.ucHeader1.showMember = true;
+            //this.ucHeader1.showMember_ButtonBack = false;
+            //this.ucHeader1.showScanner = true;
+            //this.ucHeader1.Size = new System.Drawing.Size(1038, 43);
+            //this.ucHeader1.TabIndex = 38;
             // 
             // groupBox1
             // 
@@ -437,8 +437,8 @@
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.ucFooter1);
-            this.Controls.Add(this.ucHeader1);
+            //this.Controls.Add(this.ucFooter1);
+            //this.Controls.Add(this.ucHeader1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTopupService";
@@ -478,8 +478,8 @@
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private UCFooter ucFooter1;
-        private UCHeader ucHeader1;
+        //private UCFooter ucFooter1;
+        //private UCHeader ucHeader1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ComboBox comboBox2;
