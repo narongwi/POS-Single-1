@@ -711,6 +711,30 @@
     <Compile Include="OtherServices\Forms\PaymentServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OtherServices\Forms\TopupGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\TopupGameForm.Designer.cs">
+      <DependentUpon>TopupGameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\TopupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\TopupMenu.Designer.cs">
+      <DependentUpon>TopupMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\TopupMobileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\TopupMobileForm.Designer.cs">
+      <DependentUpon>TopupMobileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\Forms\TopupWiFiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\Forms\TopupWiFiForm.Designer.cs">
+      <DependentUpon>TopupWiFiForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherServices\Forms\UIForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1445,6 +1469,18 @@
     <EmbeddedResource Include="OtherServices\Forms\ParcelServiceMenu.resx">
       <DependentUpon>ParcelServiceMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\TopupGameForm.resx">
+      <DependentUpon>TopupGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\TopupMenu.resx">
+      <DependentUpon>TopupMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\TopupMobileForm.resx">
+      <DependentUpon>TopupMobileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\Forms\TopupWiFiForm.resx">
+      <DependentUpon>TopupWiFiForm.cs</DependentUpon>
+    </EmbeddedResource>
     <!-- Deftsoft Resx-->
     <EmbeddedResource Include="OtherServices\Forms\UIForm.resx">
       <DependentUpon>UIForm.cs</DependentUpon>
@@ -1764,6 +1800,31 @@
     <Content Include="config\Thai.txt" />
     <Content Include="NoPath.ico" />
     <Content Include="OtherServices\Readme.txt" />
+    <None Include="Resources\Game-CallOfDuty.jpg" />
+    <None Include="Resources\Game-LOL.png" />
+    <None Include="Resources\Game-Roblox.jpg" />
+    <None Include="Resources\Game-FreeFire.jpg" />
+    <None Include="Resources\Game-PUBG.jpg" />
+    <None Include="Resources\Game-ROV2.jpg" />
+    <None Include="Resources\Game-ROV.jpg" />
+    <None Include="Resources\wifi-CAT.jpg" />
+    <None Include="Resources\wifi-TOT.jpg" />
+    <None Include="Resources\wifi-3BB.jpg" />
+    <None Include="Resources\wifi-DTAC.png" />
+    <None Include="Resources\wifi-AIS.png" />
+    <None Include="Resources\wifi-truemove.jpg" />
+    <None Include="Resources\Penguin2.png" />
+    <None Include="Resources\TOT-Prepaid.png" />
+    <None Include="Resources\MybyCAT.jpg" />
+    <None Include="Resources\TRUE Brand.jpg" />
+    <None Include="Resources\DTAC Brand.jpg" />
+    <None Include="Resources\AIS12call.png" />
+    <None Include="Resources\digital-wallet3.png" />
+    <None Include="Resources\digital-wallet1.png" />
+    <None Include="Resources\international-call.png" />
+    <None Include="Resources\game-controller.png" />
+    <None Include="Resources\wifi1.png" />
+    <None Include="Resources\smartphone.png" />
     <None Include="Resources\BACC.jpg" />
     <None Include="Resources\QR_Code1.png" />
     <None Include="Resources\GHBank.png" />

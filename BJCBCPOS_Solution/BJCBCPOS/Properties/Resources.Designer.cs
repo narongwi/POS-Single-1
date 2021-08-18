@@ -103,6 +103,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap AIS12call {
+            get {
+                object obj = ResourceManager.GetObject("AIS12call", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap alarm__1_ {
             get {
                 object obj = ResourceManager.GetObject("alarm (1)", resourceCulture);
@@ -882,6 +892,26 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap digital_wallet1 {
+            get {
+                object obj = ResourceManager.GetObject("digital-wallet1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap digital_wallet3 {
+            get {
+                object obj = ResourceManager.GetObject("digital-wallet3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap donation {
             get {
                 object obj = ResourceManager.GetObject("donation", resourceCulture);
@@ -925,6 +955,16 @@ namespace BJCBCPOS.Properties {
         public static System.Drawing.Bitmap DropDownListLarge_enable {
             get {
                 object obj = ResourceManager.GetObject("DropDownListLarge_enable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap DTAC_Brand {
+            get {
+                object obj = ResourceManager.GetObject("DTAC Brand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -985,6 +1025,86 @@ namespace BJCBCPOS.Properties {
         public static System.Drawing.Bitmap frame_Redeem_Red {
             get {
                 object obj = ResourceManager.GetObject("frame_Redeem_Red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Game_CallOfDuty {
+            get {
+                object obj = ResourceManager.GetObject("Game-CallOfDuty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap game_controller {
+            get {
+                object obj = ResourceManager.GetObject("game-controller", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Game_FreeFire {
+            get {
+                object obj = ResourceManager.GetObject("Game-FreeFire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Game_LOL {
+            get {
+                object obj = ResourceManager.GetObject("Game-LOL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Game_PUBG {
+            get {
+                object obj = ResourceManager.GetObject("Game-PUBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Game_Roblox {
+            get {
+                object obj = ResourceManager.GetObject("Game-Roblox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Game_ROV {
+            get {
+                object obj = ResourceManager.GetObject("Game-ROV", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Game_ROV2 {
+            get {
+                object obj = ResourceManager.GetObject("Game-ROV2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1782,6 +1902,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap international_call {
+            get {
+                object obj = ResourceManager.GetObject("international-call", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap item {
             get {
                 object obj = ResourceManager.GetObject("item", resourceCulture);
@@ -2332,6 +2462,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap MybyCAT {
+            get {
+                object obj = ResourceManager.GetObject("MybyCAT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap non_check_box {
             get {
                 object obj = ResourceManager.GetObject("non-check-box", resourceCulture);
@@ -2865,6 +3005,16 @@ namespace BJCBCPOS.Properties {
         public static System.Drawing.Bitmap payment_top_right_white {
             get {
                 object obj = ResourceManager.GetObject("payment_top_right_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Penguin2 {
+            get {
+                object obj = ResourceManager.GetObject("Penguin2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3432,6 +3582,16 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap smartphone {
+            get {
+                object obj = ResourceManager.GetObject("smartphone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Spin_0_8s_197px {
             get {
                 object obj = ResourceManager.GetObject("Spin_0_8s_197px", resourceCulture);
@@ -3542,9 +3702,29 @@ namespace BJCBCPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap TOT_Prepaid {
+            get {
+                object obj = ResourceManager.GetObject("TOT-Prepaid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap total_right {
             get {
                 object obj = ResourceManager.GetObject("total_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap TRUE_Brand {
+            get {
+                object obj = ResourceManager.GetObject("TRUE Brand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3675,6 +3855,76 @@ namespace BJCBCPOS.Properties {
         public static System.Drawing.Bitmap WeChat {
             get {
                 object obj = ResourceManager.GetObject("WeChat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wifi_3BB {
+            get {
+                object obj = ResourceManager.GetObject("wifi-3BB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wifi_AIS {
+            get {
+                object obj = ResourceManager.GetObject("wifi-AIS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wifi_CAT {
+            get {
+                object obj = ResourceManager.GetObject("wifi-CAT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wifi_DTAC {
+            get {
+                object obj = ResourceManager.GetObject("wifi-DTAC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wifi_TOT {
+            get {
+                object obj = ResourceManager.GetObject("wifi-TOT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wifi_truemove {
+            get {
+                object obj = ResourceManager.GetObject("wifi-truemove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wifi1 {
+            get {
+                object obj = ResourceManager.GetObject("wifi1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

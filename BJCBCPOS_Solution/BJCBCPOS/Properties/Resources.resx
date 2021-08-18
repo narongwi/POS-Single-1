@@ -136,6 +136,9 @@
   <data name="txtboxWIC_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\txtboxWIC_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="confirmPaymentChange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\confirmPaymentChange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="remove_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,17 +151,17 @@
   <data name="JnTExpress" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\JnTExpress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wifi-truemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wifi-truemove.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="KerrySCL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KerrySCL1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="QR_Code" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\QR_Code.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coupon_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coupon_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="payment_icon_cash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment_icon_cash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="keyboard_tab" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\keyboard_tab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,17 +184,20 @@
   <data name="Rectangle 257" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 257.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="member_activate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\member activate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="digital-wallet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\digital-wallet1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="total_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\total_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_checked_1001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-checked-1001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_PrintNoExportProduct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_PrintNoExportProduct.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="radio_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\radio_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="payment_btm_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\payment_btm_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="txtboxWIC_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\txtboxWIC_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -201,6 +207,9 @@
   </data>
   <data name="payment_btm_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment_btm_right1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TOT-Prepaid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TOT-Prepaid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rectangle_258_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\login\Rectangle 258@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,6 +280,9 @@
   <data name="keyboard_bottomline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\keyboard_bottomline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="NoPath_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\login\NoPath@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cash_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cash_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -286,8 +298,8 @@
   <data name="DropDownListLarge_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DropDownListLarge_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DHLExpress1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DHLExpress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_error_126px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_error_126px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -322,23 +334,35 @@
   <data name="green_button_panel_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\green_button_panel_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_textbox_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_textbox_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="panel_message_cashier" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panel_message_cashier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="payment_icon_credit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\payment_icon_credit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="payment_btm_left_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\payment_btm_left_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_cancel_126px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_cancel_126px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_cancel_126px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_cancel_126px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="consent_btn_enableconfirm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\consent_btn_enableconfirm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_qr_code_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_qr_code_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="confirm_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\confirm_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="background_lockno_asdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background_lockno_asdate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="international-call" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\international-call.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Penguin2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Penguin2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_box_important_126px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_box_important_126px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -352,8 +376,11 @@
   <data name="QRPayment_icon_QRKbank" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QRPayment_icon_QRKbank.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_qr_code_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_qr_code_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Game-Roblox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game-Roblox.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_lockno_asdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background_lockno_asdate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sale_btnOtherPayment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sale_btnOtherPayment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -364,6 +391,9 @@
   <data name="normal_change_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\normal_change_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wifi-3BB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wifi-3BB.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Group_643" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 643.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -373,14 +403,14 @@
   <data name="NoPath_Copy__6__2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NoPath_Copy (6)@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="payment_icon_cash_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\payment_icon_cash_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DHLExpress1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DHLExpress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cambodia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cambodia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="left_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\left_arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wifi-AIS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wifi-AIS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_info_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_info_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -390,6 +420,9 @@
   </data>
   <data name="icons8_external_100_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\mainmenu\icons8-external-100@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_OK_Reason" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_OK_Reason.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MenuHamberger_arrow_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuHamberger_arrow_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -409,6 +442,9 @@
   <data name="favorit_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\favorit_btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ListBox_Disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ListBox_Disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrow_white_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_white_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -418,8 +454,8 @@
   <data name="icon_credit_inactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_credit_inactive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="change_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\change_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TRUE Brand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TRUE Brand.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_multiply_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-multiply-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -460,6 +496,9 @@
   <data name="multi_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\multi_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="confirm_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\confirm_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pn_Credit_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pn_Credit_Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -487,20 +526,14 @@
   <data name="btn_Cancel_Confirmpayment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_Cancel_Confirmpayment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_print_filled_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-print-filled-100 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NoPath_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon\login\NoPath@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Rectangle_257_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon\login\Rectangle 257@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_services_100_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\mainmenu\icons8-services-100@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NoPath___Copy__4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NoPath - Copy (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pn_Language_3R" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pn_Language_3R.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_print_filled_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-print-filled-100 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="item" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\item.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -520,20 +553,17 @@
   <data name="consent_btn_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\consent_btn_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_PrintNoExportProduct" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_PrintNoExportProduct.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pn_Language_2R" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pn_Language_2R.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="payment_icon_giftvoucher_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment_icon_giftvoucher_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="payment_top_right_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\payment_top_right_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="scroll-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scroll-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cashin_btm_left_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cashin_btm_left_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_star_special" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_star_special.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -550,14 +580,23 @@
   <data name="NoPath - Copy (15)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NoPath - Copy (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pn_Language_3R" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pn_Language_3R.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_error_126px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_error_126px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="credit_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\credit_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="smartphone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\smartphone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Rectangle_260_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\mainmenu\Rectangle 260@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Game-LOL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game-LOL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="payment_icon_other" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment_icon_other.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -577,8 +616,14 @@
   <data name="pn_ListCouponCannotUse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pn_ListCouponCannotUse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_trash_can_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-trash-can-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="button_char" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_char.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuHamberger_arrow_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuHamberger_arrow_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sale" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -628,6 +673,9 @@
   <data name="remove_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btn_Cancel_Reason" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_Cancel_Reason.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Rectangle_244" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 244.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -640,8 +688,8 @@
   <data name="Rectangle_224" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 224.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonvoid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buttonvoid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="payment_top_right_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\payment_top_right_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_info_126px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_info_126px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -667,6 +715,9 @@
   <data name="Group_587" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 587.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_checked_1001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-checked-1001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MenuHamberger_Order" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuHamberger_Order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -675,6 +726,9 @@
   </data>
   <data name="icons8_checked_126px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_checked_126px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wifi-DTAC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wifi-DTAC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Spinner_1s_250px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Spinner-1s-250px.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -691,8 +745,14 @@
   <data name="KerryExpress1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KerryExpress1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Game-ROV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game-ROV.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="healthcare" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\healthcare.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DTAC Brand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DTAC Brand.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BigWallet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BigWallet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -700,8 +760,14 @@
   <data name="SCB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SCB.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Game-PUBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game-PUBG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="button_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="payment_icon_cash_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\payment_icon_cash_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MenuHamberger_dot_subitem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuHamberger_dot_subitem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -721,6 +787,9 @@
   <data name="Spinner_0_8s_341px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Spinner-0.8s-341px.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="member_activate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\member activate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="uc_btn_payment1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uc_btn_payment1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -729,9 +798,6 @@
   </data>
   <data name="QR_Code1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QR_Code1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MemberServiceTerm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MemberServiceTerm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NoPath___Copy__6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NoPath - Copy (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -742,6 +808,9 @@
   <data name="icons8_box_important_126px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_box_important_126px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="game-controller" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\game-controller.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="usa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -751,17 +820,23 @@
   <data name="icons8-services-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-services-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wifi-CAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wifi-CAT.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="textbox_unit_price_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\textbox_unit_price_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="confirmPaymentChange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\confirmPaymentChange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NoPath___Copy__2__3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NoPath - Copy (2)@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usa_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usa_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="keyboard_enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\keyboard_enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_banknote_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_banknote_enable1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_alert_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_alert_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -796,9 +871,6 @@
   <data name="panel_item_credisale_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panel_item_credisale_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="payment_icon_other_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\payment_icon_other_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="keyboard_capslock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\keyboard_capslock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -807,6 +879,9 @@
   </data>
   <data name="hide_keyboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hide_keyboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BACC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BACC.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="payment_top_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment_top_left1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -847,9 +922,6 @@
   <data name="payment_icon_credit_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment_icon_credit_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="payment_btm_right_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\payment_btm_right_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-checked-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-checked-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -874,8 +946,8 @@
   <data name="payment_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NoPath___Copy__2__3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NoPath - Copy (2)@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MybyCAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MybyCAT.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="payment_middle_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment_middle_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -898,17 +970,17 @@
   <data name="panel_consent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panel_consent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_Cancel_Reason" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_Cancel_Reason.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="payment_icon_credit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\payment_icon_credit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QR_Code" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QR_Code.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_ProductAndOtherService" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_ProductAndOtherService.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sale_btnConfirm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sale_btnConfirm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_services_100_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon\mainmenu\icons8-services-100@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -922,17 +994,14 @@
   <data name="btn_OK_Confirmpayment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_OK_Confirmpayment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cashin_btm_left_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cashin_btm_left_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wifi-TOT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wifi-TOT.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="uc_btn_payment_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uc_btn_payment_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frame_Redeem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frame_Redeem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="green_total1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\green_total1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-cash-register-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-cash-register-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -958,11 +1027,8 @@
   <data name="picBoxCash_InOut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\picBoxCash_InOut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="confirm_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\confirm_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="payment_btm_left_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\payment_btm_left_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="payment_icon_other_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\payment_icon_other_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="consent_btn_disableconfirm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\consent_btn_disableconfirm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -973,8 +1039,8 @@
   <data name="popup_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\popup_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Line_117_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon\mainmenu\Line 117@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Game-FreeFire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game-FreeFire.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="textboxLarge_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\textboxLarge_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -985,8 +1051,11 @@
   <data name="Cash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coupon_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coupon_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Game-ROV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game-ROV2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rectangle_257_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\login\Rectangle 257@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="other" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\other.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -999,6 +1068,9 @@
   </data>
   <data name="icon_header_scan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_header_scan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonvoid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonvoid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lock_screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock_screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1026,9 +1098,6 @@
   </data>
   <data name="btn_payment_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_payment_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_info_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_info_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="remove_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove_btn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1060,17 +1129,14 @@
   <data name="icons8-external-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-external-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Rectangle_319" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Rectangle 319.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="payment_giftvoucher" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment_giftvoucher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="radio_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\radio_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_banknote_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_banknote_enable1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="left_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\left_arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="adjust_change_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adjust_change_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1078,8 +1144,8 @@
   <data name="icons8_box_important_126px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_box_important_126px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_cancel_126px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_cancel_126px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="payment_btm_right_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\payment_btm_right_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="keyboard_arrow_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\keyboard_arrow_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1089,6 +1155,9 @@
   </data>
   <data name="btnPaymentHirePerchase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnPaymentHirePerchase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="digital-wallet3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\digital-wallet3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group_646" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 646.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1105,9 +1174,6 @@
   <data name="NoPath___Back_4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NoPath - Back(4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="background_QRPaymentOnline1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background_QRPaymentOnline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="payment_icon_giftvoucher" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment_icon_giftvoucher1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1116,6 +1182,9 @@
   </data>
   <data name="background_QRPaymentOnline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background_QRPaymentOnline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AIS12call" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AIS12call.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1138,14 +1207,17 @@
   <data name="adjust_change_disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adjust_change_disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wifi1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wifi1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="scroll-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scroll-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="keyboard_arrow_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\keyboard_arrow_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_textbox_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_textbox_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Rectangle_319" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rectangle 319.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Line_65_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\beginofday\Line 65@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1153,14 +1225,14 @@
   <data name="icon_textbox_scan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_textbox_scan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ListBox_Disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ListBox_Disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background_QRPaymentOnline1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background_QRPaymentOnline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="credit-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\credit-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_trash_can_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-trash-can-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="change_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\change_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mask_Group_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mask Group 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1171,8 +1243,11 @@
   <data name="BigC_AEON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BigC_AEON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn_OK_Reason" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_OK_Reason.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Line_117_3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\mainmenu\Line 117@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_total1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_total1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Flight_Ticket" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Flight_Ticket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1180,11 +1255,11 @@
   <data name="Mask_Group_2_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mask Group 2@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MenuHamberger_arrow_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuHamberger_arrow_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MemberServiceTerm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MemberServiceTerm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="payment_btm_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\payment_btm_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_info_enable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_info_enable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_Credit_Disable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_Credit_Disable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1201,7 +1276,7 @@
   <data name="icon_CannotScan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_CannotScan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BACC" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BACC.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Game-CallOfDuty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game-CallOfDuty.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
