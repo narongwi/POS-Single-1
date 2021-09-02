@@ -26,7 +26,7 @@ namespace BJCBCPOS
             //AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
             // for deftsoft development
-            Application.Run(new OtherServices.Forms.BillPaymentForm());
+            Application.Run(new OtherServices.frmBigService());
 
 
             //try
