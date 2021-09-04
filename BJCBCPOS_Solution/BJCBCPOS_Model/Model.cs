@@ -16,13 +16,16 @@ namespace BJCBCPOS_Model
         public const string config_name = "BJCBCPOS_Config.ini";
         public const string running_name = "BJCBCPOS_Running.ini";
         public const string db_name = "STDBENGINE";
-        public const string db_user = "LOWAPP";
-        public const string db_pass = "W0L@Pp";
+        //public const string db_user = "LOWAPP";
+        //public const string db_pass = "W0L@Pp";
+        public const string db_user = "SnapsMe";
+        public const string db_pass = "Snaps@BGC.THx#1WMS>18Dev";
         //public const string db_user_local = "LTRANS";
         //public const string db_pass_local = "lp#2020J@NCNBCbJC";
-        public const string db_user_local = "XTRANS";
-        public const string db_pass_local = "x1#2020J@NCNBCbJC";
-
+        //public const string db_user_local = "XTRANS";
+        //public const string db_pass_local = "x1#2020J@NCNBCbJC";
+        public const string db_user_local = "SnapsMe";
+        public const string db_pass_local = "Snaps@BGC.THx#1WMS>18Dev";
         public const string appName = "BJCBCPOS_Till000";
         public const int db_command_timeout = 10;
         public const int db_connect_timeout = 15;

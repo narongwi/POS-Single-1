@@ -67,7 +67,7 @@ namespace BJCBCPOS.OtherServices {
                     }
                     catch (Exception ex)
                     {
-                        imageListM.Images.Add(Image.FromFile(Application.StartupPath+"images/DefaultImage.png"));
+                        imageListM.Images.Add(Image.FromFile(Application.StartupPath+"\\images\\DefaultImage.png"));
                     }
                 }
 

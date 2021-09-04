@@ -353,7 +353,7 @@ namespace BJCBCPOS_Model
 
         public static void fillForm(Language lang, Control form)
         {
-            if (!lang.Equals(null) && contains.Length > (lang == null?0: lang.ID))
+            if (!lang.Equals(null) && contains.Length > (lang.Equals(null)?0: lang.ID))
             {
                 string control_str, control_name, control_prop;
                 string[] spl;
