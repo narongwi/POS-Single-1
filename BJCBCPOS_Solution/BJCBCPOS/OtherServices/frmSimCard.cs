@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -201,6 +203,32 @@ namespace BJCBCPOS.OtherServices {
             this.Close();
             Form BigService = new frmBigService();
             BigService.ShowDialog();
+        }
+
+        private void textMember_Enter(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Cursor is here", "Info");
+            Process.Start(@"c:\Windows\Sysnative\cmd.exe", "/c osk.exe");  /// OK
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deftsoftTextbox4__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTakePhoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deftsoftButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
