@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BJCBCPOS.OtherServices.Classes;
+using BJCBCPOS.OtherServices.Services;
 
 namespace BJCBCPOS.OtherServices {
 
@@ -42,13 +43,22 @@ namespace BJCBCPOS.OtherServices {
             }
 
             listView1.LargeImageList = imageListM;
-            for(int i = 0 ; i < imageListM.Images.Count ; i++) {
-                this.listView1.Items.Add("test",i);
-            }
+            //for(int i = 0 ; i < imageListM.Images.Count ; i++) {
+            //    this.listView1.Items.Add("test",i);
+            //}
         }
 
         private void BigService_Load(object sender,EventArgs e) {
             iconList();
+
+            BillPaymentService sv = new BillPaymentService();
+            var serviceType = sv.GetServiceType();
+            var imgIndex = 0;
+            foreach(var item in serviceType.ServiceTypeList.ServiceType) {
+                Console.WriteLine(item.Name);
+                listView1.Items.Add(item.Name,imgIndex);
+                imgIndex++;
+            }
 
             //Array.Clear(imgfileM,0,imgfileM.Length);
             //Array.Clear(menuNameM,0,menuNameM.Length);
