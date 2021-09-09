@@ -1,0 +1,61 @@
+<validateBillReq>
+    <txNo>CPS00899008210819171606</txNo>
+    <needQuery>N</needQuery>
+    <billFields>
+        <entry>
+            <key>Ref1</key>
+            <value receiptDisplayFlag="Y" posDisplayFlag="Y" isOverride="N" isRequired="Y" val="20012120026" label="Ref.No.1" type="STR" id="Ref1" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+        </entry>
+        <entry>
+            <key>Ref2</key>
+            <value receiptDisplayFlag="Y" posDisplayFlag="Y" isOverride="N" isRequired="Y" val="5400999010201" label="Ref.No.2" type="STR" id="Ref2" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+        </entry>
+        <entry>
+            <key>PayAmount</key>
+            <value receiptDisplayFlag="Y" posDisplayFlag="Y" format="##,##0.00" max="49,000.00" min="1.00" isOverride="Y" isRequired="Y" val="6,319.99" label="จำนวนเงินที่รับชำระ" type="NUM" id="PayAmount" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+        </entry>
+        <entry>
+            <key>MobileNo</key>
+            <value regExpr="^[0-9]{1,10}$" receiptDisplayFlag="Y" posDisplayFlag="Y" isOverride="Y" isRequired="Y" val="0901078889" label="เบอร์ติดต่อ" type="STR" id="MobileNo" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+        </entry>
+        <entry>
+            <key>IDCard</key>
+            <value regExpr="^[0-9]{13,13}$" receiptDisplayFlag="N" posDisplayFlag="Y" isOverride="Y" isRequired="N" val="1111111111111" label="เลขบัตรประชาชนผู้ชำระ" type="STR" id="IDCard" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+        </entry>
+    </billFields>
+    <projOwner>CPS</projOwner>
+</validateBillReq>
+<!-- Readme -->
+<!-- กรอกรายละเอียด Bill Payment และกดตกลง -->
+<!-- 2 argument parameter -->
+<!-- 
+    exec BPS_WebService 
+        'validateBill',
+        '<validateBillReq>
+        <txNo>CPS00899008210819171606</txNo>
+        <needQuery>N</needQuery>
+        <billFields>
+            <entry>
+                <key>Ref1</key>
+                <value receiptDisplayFlag="Y" posDisplayFlag="Y" isOverride="N" isRequired="Y" val="20012120026" label="Ref.No.1" type="STR" id="Ref1" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+            </entry>
+            <entry>
+                <key>Ref2</key>
+                <value receiptDisplayFlag="Y" posDisplayFlag="Y" isOverride="N" isRequired="Y" val="5400999010201" label="Ref.No.2" type="STR" id="Ref2" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+            </entry>
+            <entry>
+                <key>PayAmount</key>
+                <value receiptDisplayFlag="Y" posDisplayFlag="Y" format="##,##0.00" max="49,000.00" min="1.00" isOverride="Y" isRequired="Y" val="6,319.99" label="จำนวนเงินที่รับชำระ" type="NUM" id="PayAmount" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+            </entry>
+            <entry>
+                <key>MobileNo</key>
+                <value regExpr="^[0-9]{1,10}$" receiptDisplayFlag="Y" posDisplayFlag="Y" isOverride="Y" isRequired="Y" val="0901078889" label="เบอร์ติดต่อ" type="STR" id="MobileNo" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+            </entry>
+            <entry>
+                <key>IDCard</key>
+                <value regExpr="^[0-9]{13,13}$" receiptDisplayFlag="N" posDisplayFlag="Y" isOverride="Y" isRequired="N" val="1111111111111" label="เลขบัตรประชาชนผู้ชำระ" type="STR" id="IDCard" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+            </entry>
+        </billFields>
+        <projOwner>CPS</projOwner>
+    </validateBillReq>' 
+-->

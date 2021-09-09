@@ -1,0 +1,21 @@
+<confirmBillReq>
+    <txNo>CPS00899008210819173036</txNo>
+    <projOwner>CPS</projOwner>
+    <change>670.25</change>
+    <paymentList>
+        <payment paymentId="9" pmCode="CASH" payAmt="7000" billAmt="6319.99" feeAmt="9.76" reference="CASH" />
+    </paymentList>
+</confirmBillReq>
+<!-- readme -->
+<!-- 
+    exec BPS_WebService 
+    'confirmBillStep2',
+    '<confirmBillReq>
+        <txNo>CPS00899008210819173036</txNo>
+        <projOwner>CPS</projOwner>
+        <change>670.25</change>
+        <paymentList>
+            <payment paymentId="9" pmCode="CASH" payAmt="7000" billAmt="6319.99" feeAmt="9.76" reference="CASH" />
+        </paymentList>
+    </confirmBillReq>' 
+-->

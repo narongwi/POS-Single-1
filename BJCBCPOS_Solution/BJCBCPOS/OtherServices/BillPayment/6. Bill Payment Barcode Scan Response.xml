@@ -1,0 +1,58 @@
+<?xml version="1.0" standalone="yes"?>
+<newBillResp>
+    <result>
+        <code>0000</code>
+        <msg>สำเร็จ</msg>
+        <msgEn>Success</msgEn>
+    </result>
+    <txNo>CPS00899008210819171648</txNo>
+    <billerId>66</billerId>
+    <billerName>บริษัท เจเอ็มที เน็ทเวอร์ค เซอร์วิสเซส จำกัด (มหาชน)</billerName>
+    <billerShortName>JMT</billerShortName>
+    <needQuery>N</needQuery>
+    <btype>I</btype>
+    <serviceId>1110</serviceId>
+    <serviceName>ค่างวดสินเชื่อ</serviceName>
+    <billerTaxId>0107555000074</billerTaxId>
+    <billerAddr1>187 อาคารเจมาร์ท ชั้น 4-6</billerAddr1>
+    <billerAddr2>ถ.รามคำแหง แขวงราษฎร์พัฒนา</billerAddr2>
+    <billerAddr3>เขตสะพานสูง กทม. 10240</billerAddr3>
+    <billerPhoneNo>02-308-9847</billerPhoneNo>
+    <isTopup>N</isTopup>
+    <topupSalePrice>0</topupSalePrice>
+    <formId>166</formId>
+    <subAccountCode>21930255-100069</subAccountCode>
+    <accountCode>21930255</accountCode>
+    <subAccount>100069</subAccount>
+    <interBranch>999999</interBranch>
+    <vendorCode>M8008573</vendorCode>
+    <allowVoidBill>Y</allowVoidBill>
+    <allowVoidFee>Y</allowVoidFee>
+    <serviceGroupId>4</serviceGroupId>
+    <serviceGroupName>ค่างวดรถ (ลีสซิ่ง)</serviceGroupName>
+    <billFields>
+        <entry>
+            <key>Ref1</key>
+            <value receiptDisplayFlag="Y" posDisplayFlag="Y" isOverride="N" isRequired="Y" val="20012120026" label="Ref.No.1" type="STR" id="Ref1" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+        </entry>
+        <entry>
+            <key>Ref2</key>
+            <value receiptDisplayFlag="Y" posDisplayFlag="Y" isOverride="N" isRequired="Y" val="5400999010201" label="Ref.No.2" type="STR" id="Ref2" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+        </entry>
+        <entry>
+            <key>PayAmount</key>
+            <value receiptDisplayFlag="Y" posDisplayFlag="Y" format="##,##0.00" max="49,000.00" min="1.00" isOverride="Y" isRequired="Y" val="6,319.99" label="จำนวนเงินที่รับชำระ" type="NUM" id="PayAmount" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+        </entry>
+        <entry>
+            <key>MobileNo</key>
+            <value regExpr="^[0-9]{1,10}$" receiptDisplayFlag="Y" posDisplayFlag="Y" isOverride="Y" isRequired="Y" val="" label="เบอร์ติดต่อ" type="STR" id="MobileNo" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+        </entry>
+        <entry>
+            <key>IDCard</key>
+            <value regExpr="^[0-9]{13,13}$" receiptDisplayFlag="N" posDisplayFlag="Y" isOverride="Y" isRequired="N" val="" label="เลขบัตรประชาชนผู้ชำระ" type="STR" id="IDCard" custIsRequired="N" custIsOverride="N" custPosDisplayFlag="N" custFormat="N" />
+        </entry>
+    </billFields>
+    <appServerSdate>2021-08-19T17:16:48.922+07:00</appServerSdate>
+    <appServerEdate>2021-08-19T17:16:49.075+07:00</appServerEdate>
+    <projOwner>CPS</projOwner>
+</newBillResp>

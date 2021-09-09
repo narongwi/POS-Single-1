@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<messageGuideResp>
+    <result>
+        <code>E-1014</code>
+        <msg>ไม่พบข้อมูล</msg>
+        <msgEn>Data not found</msgEn>
+        <desc>FIND B_SERVICE_FORM_HELP NOT FOUND</desc>
+    </result>
+</messageGuideResp>
+
+<!-- Readme -->
+<!-- Result messageGuide -->

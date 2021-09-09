@@ -1,0 +1,18 @@
+<serviceGroupReq>
+    <storeCode>00899</storeCode>
+    <locNo>008</locNo>
+    <controlRef>F00800002</controlRef>
+    <cashierId>300008</cashierId>
+    <serviceType>1</serviceType>
+</serviceGroupReq>
+<!-- readme -->
+<!-- call sample 2 argument parameter-->
+<!-- exec BPS_WebService 
+    'queryServiceGroup',
+    '<serviceGroupReq>
+        <storeCode>00899</storeCode>
+        <locNo>008</locNo>
+        <controlRef>F00800002</controlRef>
+        <cashierId>300008</cashierId>
+        <serviceType>1</serviceType>
+    </serviceGroupReq>' -->

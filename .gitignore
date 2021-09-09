@@ -390,3 +390,15 @@ FodyWeavers.xsd
 # BJCBCPOS
 BJCBCPOS/obj/*
 *.suo
+*.dll
+*.exe
+*.cache
+*.vs
+BJCBCPOS_Solution/BJCBCPOS/obj/*
+BJCBCPOS_Solution/BJCBCPOS_Data/obj/*
+BJCBCPOS_Solution/BJCBCPOS_Model/obj/*
+BJCBCPOS_Solution/BJCBCPOS_Process/obj/*
+BJCBCPOS_Solution/BJCBCPOS/bin/*
+BJCBCPOS_Solution/BJCBCPOS_Data/bin/*
+BJCBCPOS_Solution/BJCBCPOS_Model/bin/*
+BJCBCPOS_Solution/BJCBCPOS_Process/bin/*

@@ -1,0 +1,9 @@
+<!-- 'messageGuide' -->
+<messageGuideReq>
+    <storeCode>00899</storeCode>
+    <locNo>008</locNo>
+    <controlRef>F00800002</controlRef>
+    <cashierId>300008</cashierId>
+    <formId>166</formId>
+    <formId>166</formId>
+</messageGuideReq>

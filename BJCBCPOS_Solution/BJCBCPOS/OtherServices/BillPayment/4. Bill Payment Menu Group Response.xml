@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<serviceGroupResp>
+    <result>
+        <code>0000</code>
+        <msg>สำเร็จ</msg>
+        <msgEn>Success</msgEn>
+    </result>
+    <serviceGroupList>
+        <serviceGroup id="1" name="สาธารณูปโภค (ค่าน้ำ,ค่าไฟ)" seq="1" custPosDisplayFlag="N" />
+        <serviceGroup id="2" name="เทเลคอม (ค่าโทรศัพท์รายเดือน/อินเตอร์เน็ต)" seq="2" custPosDisplayFlag="Y" />
+        <serviceGroup id="3" name="บัตรเครดิต/สินเชื่อ" seq="3" custPosDisplayFlag="Y" />
+        <serviceGroup id="7" name="อื่นๆ" seq="4" custPosDisplayFlag="N" />
+        <serviceGroup id="11" name="บริจาค" seq="5" custPosDisplayFlag="N" />
+        <serviceGroup id="12" name="กลุ่มราชการ/รัฐวิสาหกิจ" seq="6" custPosDisplayFlag="Y" />
+        <serviceGroup id="14" name="เติมวอลเลต" seq="7" custPosDisplayFlag="N" />
+        <serviceGroup id="4" name="ค่างวดรถ (ลีสซิ่ง)" seq="8" custPosDisplayFlag="N" />
+    </serviceGroupList>
+</serviceGroupResp> 

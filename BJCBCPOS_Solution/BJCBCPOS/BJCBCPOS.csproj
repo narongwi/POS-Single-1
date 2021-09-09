@@ -614,11 +614,33 @@
     <Compile Include="dialog\frmPopupInput.Designer.cs">
       <DependentUpon>frmPopupInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtherServices\BillPayment\ConfirmBillStep1Resp.cs" />
+    <Compile Include="OtherServices\BillPayment\ConfirmBillStep1Req.cs" />
+    <Compile Include="OtherServices\BillPayment\ConfirmBillStep2Req.cs" />
+    <Compile Include="OtherServices\BillPayment\ConfirmBillStep2Resp.cs" />
+    <Compile Include="OtherServices\BillPayment\ConfirmPayReq.cs" />
+    <Compile Include="OtherServices\BillPayment\ConfirmPayResp.cs" />
+    <Compile Include="OtherServices\BillPayment\MessageGuideReq.cs" />
+    <Compile Include="OtherServices\BillPayment\MessageGuideResp.cs" />
+    <Compile Include="OtherServices\BillPayment\NewBillReq.cs" />
+    <Compile Include="OtherServices\BillPayment\NewBillResp.cs" />
+    <Compile Include="OtherServices\BillPayment\ServiceGroupReq.cs" />
+    <Compile Include="OtherServices\BillPayment\ServiceGroupResp.cs" />
+    <Compile Include="OtherServices\BillPayment\ServiceTypeReq.cs" />
+    <Compile Include="OtherServices\BillPayment\ServiceTypeResp.cs" />
+    <Compile Include="OtherServices\BillPayment\ValidateBillReq.cs" />
+    <Compile Include="OtherServices\BillPayment\ValidateBillResp.cs" />
     <!-- Deftsoft -->
     <Compile Include="OtherServices\Classes\FontIconUtils.cs" />
     <Compile Include="OtherServices\Fonts\MaterialDesignIcons.cs" />
     <Compile Include="OtherServices\Fonts\FontIconHelper.cs" />
     <Compile Include="OtherServices\Classes\Database.cs" />
+    <Compile Include="OtherServices\frmBillPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\frmBillPayments.Designer.cs">
+      <DependentUpon>frmBillPayments.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherServices\frmCashInOut.Designer.cs">
       <DependentUpon>frmCashInOut.cs</DependentUpon>
     </Compile>
@@ -633,6 +655,9 @@
     <Compile Include="OtherServices\UserControls\DeftsoftTextbox.Designer.cs">
       <DependentUpon>DeftsoftTextbox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OtherServices\frmBillPayments.resx">
+      <DependentUpon>frmBillPayments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\UserControls\DeftsoftTextbox.resx">
       <DependentUpon>DeftsoftTextbox.cs</DependentUpon>
     </EmbeddedResource>
@@ -1496,6 +1521,22 @@
     <Content Include="config\Laos.txt" />
     <Content Include="config\Thai.txt" />
     <Content Include="NoPath.ico" />
+    <Content Include="OtherServices\BillPayment\1. Bill Payment List Menu Request.xml" />
+    <Content Include="OtherServices\BillPayment\10. Bill Payment Validate Bill  Response.xml" />
+    <Content Include="OtherServices\BillPayment\11. Bill Payment Confirm Request step 1.xml" />
+    <Content Include="OtherServices\BillPayment\12. Bill Payment Confirm Response step 1.xml" />
+    <Content Include="OtherServices\BillPayment\13. Bill Payment Confirm Request step 2.xml" />
+    <Content Include="OtherServices\BillPayment\14. Bill Payment Confirm Response step 2.xml" />
+    <Content Include="OtherServices\BillPayment\15. Bill Payment Confirm PAY Request.xml" />
+    <Content Include="OtherServices\BillPayment\16. Bill Payment Confirm PAY Response.xml" />
+    <Content Include="OtherServices\BillPayment\2. Bill Payment List Menu Response.xml" />
+    <Content Include="OtherServices\BillPayment\3. Bill Payment Menu Group Request.xml" />
+    <Content Include="OtherServices\BillPayment\4. Bill Payment Menu Group Response.xml" />
+    <Content Include="OtherServices\BillPayment\5. Bill Payment Barcode Scan Request.xml" />
+    <Content Include="OtherServices\BillPayment\6. Bill Payment Barcode Scan Response.xml" />
+    <Content Include="OtherServices\BillPayment\7. Bill Payment Message Guide Request.xml" />
+    <Content Include="OtherServices\BillPayment\8. Bill Payment Message Guide Response.xml" />
+    <Content Include="OtherServices\BillPayment\9. Bill Payment Validate Bill Request.xml" />
     <Content Include="OtherServices\images\AIR\AirAsia.png" />
     <Content Include="OtherServices\images\AIR\BangkokAirway.png" />
     <Content Include="OtherServices\images\AIR\Emirates.png" />

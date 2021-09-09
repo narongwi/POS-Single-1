@@ -26,18 +26,75 @@ namespace BJCBCPOS.OtherServices {
     /// </summary>
     private void InitializeComponent()
     {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBigService));
-            this.ucHeader1 = new BJCBCPOS.UCHeader();
             this.ucFooter1 = new BJCBCPOS.UCFooter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textMenuID = new System.Windows.Forms.TextBox();
-            this.textMenuName = new System.Windows.Forms.TextBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.ucHeader1 = new BJCBCPOS.UCHeader();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // ucFooter1
+            // 
+            this.ucFooter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(53)))));
+            this.ucFooter1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ucFooter1.Location = new System.Drawing.Point(0, 728);
+            this.ucFooter1.Name = "ucFooter1";
+            this.ucFooter1.Size = new System.Drawing.Size(1024, 40);
+            this.ucFooter1.TabIndex = 21;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.ForeColor = System.Drawing.Color.Coral;
+            this.panel1.Location = new System.Drawing.Point(-2, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1024, 685);
+            this.panel1.TabIndex = 74;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(74)))));
+            this.label1.Location = new System.Drawing.Point(435, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 20);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "Select a service item";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(140)))), ((int)(((byte)(70)))));
+            this.lblTitle.Location = new System.Drawing.Point(383, 38);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lblTitle.Size = new System.Drawing.Size(255, 51);
+            this.lblTitle.TabIndex = 80;
+            this.lblTitle.Text = "Big Services";
+            // 
+            // listView1
+            // 
+            this.listView1.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
+            this.listView1.BackColor = System.Drawing.Color.White;
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(141)))), ((int)(((byte)(71)))));
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(271, 146);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(539, 514);
+            this.listView1.TabIndex = 79;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
             // ucHeader1
             // 
@@ -47,7 +104,7 @@ namespace BJCBCPOS.OtherServices {
             this.ucHeader1.BackColor = System.Drawing.Color.Transparent;
             this.ucHeader1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucHeader1.currentMenuTitle1 = "เมนูหลัก";
-            this.ucHeader1.currentMenuTitle2 = "ยอดขายประจำวัน";
+            this.ucHeader1.currentMenuTitle2 = "Big Service";
             this.ucHeader1.currentMenuTitle3 = "";
             this.ucHeader1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ucHeader1.Location = new System.Drawing.Point(0, 0);
@@ -71,109 +128,16 @@ namespace BJCBCPOS.OtherServices {
             this.ucHeader1.Size = new System.Drawing.Size(1024, 43);
             this.ucHeader1.TabIndex = 73;
             // 
-            // ucFooter1
-            // 
-            this.ucFooter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(53)))));
-            this.ucFooter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucFooter1.Location = new System.Drawing.Point(0, 728);
-            this.ucFooter1.Name = "ucFooter1";
-            this.ucFooter1.Size = new System.Drawing.Size(1024, 40);
-            this.ucFooter1.TabIndex = 21;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.listView1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textMenuID);
-            this.panel1.Controls.Add(this.textMenuName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 43);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 685);
-            this.panel1.TabIndex = 74;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(113, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 28);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "button";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(54, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 28);
-            this.label1.TabIndex = 77;
-            this.label1.Text = "button";
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(334, 68);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 33);
-            this.button1.TabIndex = 76;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textMenuID
-            // 
-            this.textMenuID.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textMenuID.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.textMenuID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textMenuID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMenuID.Location = new System.Drawing.Point(319, 557);
-            this.textMenuID.Name = "textMenuID";
-            this.textMenuID.Size = new System.Drawing.Size(61, 19);
-            this.textMenuID.TabIndex = 74;
-            // 
-            // textMenuName
-            // 
-            this.textMenuName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textMenuName.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.textMenuName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textMenuName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMenuName.Location = new System.Drawing.Point(386, 557);
-            this.textMenuName.Name = "textMenuName";
-            this.textMenuName.Size = new System.Drawing.Size(232, 19);
-            this.textMenuName.TabIndex = 75;
-            // 
-            // listView1
-            // 
-            this.listView1.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.BackColor = System.Drawing.Color.White;
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(101, 130);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(575, 345);
-            this.listView1.TabIndex = 79;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // frmBigService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(231)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ucFooter1);
             this.Controls.Add(this.ucHeader1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmBigService";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BigService";
@@ -185,14 +149,11 @@ namespace BJCBCPOS.OtherServices {
     }
 
     #endregion
-        private UCHeader ucHeader1;
         private UCFooter ucFooter1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textMenuID;
-        private System.Windows.Forms.TextBox textMenuName;
         private System.Windows.Forms.ListView listView1;
+        private UCHeader ucHeader1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

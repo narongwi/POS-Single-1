@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<confirmBillResp>
+    <result>
+        <code>0000</code>
+        <msg>สำเร็จ</msg>
+        <msgEn>Success</msgEn>
+    </result>
+    <txNo>CPS00899008210819173036</txNo>
+    <billReceiptList receiptNo="00899-20210819-008000002" vatAmt="0.00" receiptAmt="6319.99">
+        <billReceipt id="CompanyProfile" seq="001" label="          C Payment           " />
+        <billReceipt id="CompanyProfile" seq="002" label="        ราชดำริ (00899)        " />
+        <billReceipt id="CompanyTaxId" seq="003" label="    TAX ID# 0105562104309     " />
+        <billReceipt id="TerminalID" seq="004" label="  POS ID# B02021000202863008  " />
+        <billReceipt id="ReceiptTypeName" seq="005" label="&lt;B&gt;         ใบรับฝากชำระ          " />
+        <billReceipt id="ReceiptNumber" seq="006" label="&lt;B&gt;Rcpt# 00899-20210819-008000002" />
+        <billReceipt id="VendorRollingNo" seq="007" label="&lt;B&gt;Ref# 06600002                 " />
+        <billReceipt id="ReceiptDate" seq="008" label="19/08/2021 17:32:22           " />
+        <billReceipt id="ServiceName" seq="009" label="&lt;B&gt;รหัสตัวการ 066                  " />
+        <billReceipt id="VendorName" seq="010" label="&lt;B&gt;บริษัท เจเอ็มที เน็ทเวอร์ค เซอร์วิสเซส" />
+        <billReceipt id="VendorName" seq="011" label="&lt;B&gt; จำกัด (มหาชน)                 " />
+        <billReceipt id="VendorName" seq="012" label="&lt;B&gt;สำนักงานใหญ่                    " />
+        <billReceipt id="VendorAddress" seq="013" label="187 อาคารเจมาร์ท ชั้น 4-6        " />
+        <billReceipt id="VendorAddress" seq="014" label="ถ.รามคำแหง แขวงราษฎร์พัฒนา      " />
+        <billReceipt id="VendorAddress" seq="015" label="เขตสะพานสูง กทม. 10240         " />
+        <billReceipt id="VendorAddress" seq="016" label="TAX ID :0107555000074         " />
+        <billReceipt id="Constant" seq="017" label=" " />
+        <billReceipt id="ReceiptItemLine" seq="018" label="ค่างวดสินเชื่อ            6,319.99" />
+        <billReceipt id="TotalAmount" seq="019" label="&lt;B&gt;   Grand Total ****   6,319.99" />
+        <billReceipt id="PmCode" seq="020" label="CASH                  6,319.99" />
+        <billReceipt id="CashierID" seq="021" label="                  User# 300008" />
+        <billReceipt id="RefLine" seq="022" label="Ref.No.1 20012120026          " />
+        <billReceipt id="RefLine" seq="023" label="Ref.No.2 5400999010201        " />
+        <billReceipt id="VendorMsg" seq="024" label="บมจ. เจเอ็มที เน็ทเวอร์ค เซอร์วิสเซส" />
+        <billReceipt id="VendorMsg" seq="025" label=" 02-308-9999                  " />
+    </billReceiptList>
+    <feeReceiptList receiptNo="008913167" vatAmt="0.00" receiptAmt="9.76">
+        <feeReceipt id="CompanyProfile" seq="001" label="          C Payment           " />
+        <feeReceipt id="CompanyProfile" seq="002" label="        ราชดำริ (00899)        " />
+        <feeReceipt id="CompanyTaxId" seq="003" label="    TAX ID# 0105562104309     " />
+        <feeReceipt id="TerminalID" seq="004" label="  POS ID# B02021000202863008  " />
+        <feeReceipt id="ReceiptTypeName" seq="005" label="   RECEIPT/TAX INVOICE(ABB)   " />
+        <feeReceipt id="ReceiptItemLine" seq="006" label="ค่าธรรมเนียม               10.00" />
+        <feeReceipt id="ReceiptItemLine" seq="007" label="ส่วนลดค่าธรรมเนียม          -0.24" />
+        <feeReceipt id="TotalAmount" seq="008" label="&lt;B&gt;    Grand Total ****      9.76" />
+        <feeReceipt id="PmCode" seq="009" label="CASH                  7,000.00" />
+        <feeReceipt id="Constant" seq="010" label="Change                  670.25" />
+        <feeReceipt id="Constant" seq="011" label="Vatable                   9.76" />
+        <feeReceipt id="Constant" seq="012" label="Vat                       0.64" />
+        <feeReceipt id="Constant" seq="013" label="*VAT INCLUDED*" />
+        <feeReceipt id="CashierID" seq="014" label="                  User# 300008" />
+        <feeReceipt id="ReceiptDate" seq="015" label="19/08/2021 17:32:22           " />
+        <feeReceipt id="ReceiptNumber" seq="016" label="Rcpt# 008913167               " />
+    </feeReceiptList>
+    <ref1>20012120026</ref1>
+    <ref2>5400999010201</ref2>
+</confirmBillResp>  

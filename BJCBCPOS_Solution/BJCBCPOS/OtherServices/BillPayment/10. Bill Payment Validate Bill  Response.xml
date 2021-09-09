@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<validateBillResp>
+    <result>
+        <code>0000</code>
+        <msg>สำเร็จ</msg>
+        <msgEn>Success</msgEn>
+    </result>
+    <txNo>CPS00899008210819171606</txNo>
+    <broker>BIGC</broker>
+    <barCode>2000004303822</barCode>
+    <articleCode>2001022194928</articleCode>
+    <receiptFlag>P</receiptFlag>
+    <templateId>99</templateId>
+    <hasVat>Y</hasVat>
+    <feeVatRate>7</feeVatRate>
+    <billVatRate>7</billVatRate>
+    <custFeeAmt>10</custFeeAmt>
+    <brokerFeeAmt>0</brokerFeeAmt>
+    <billAmt>6319.99</billAmt>
+    <paymentList>
+        <payment paymentId="2" pmCode="AMEX" />
+        <payment paymentId="9" pmCode="CASH" />
+        <payment paymentId="12" pmCode="CPN1" />
+        <payment paymentId="43" pmCode="VISA" />
+        <payment paymentId="53" pmCode="LTYP" />
+    </paymentList>
+    <needQuery>N</needQuery>
+    <ref1>20012120026</ref1>
+    <appServerSdate>2021-08-19T17:20:35.577+07:00</appServerSdate>
+    <appServerEdate>2021-08-19T17:20:35.726+07:00</appServerEdate>
+    <partnerFeeFlag>N</partnerFeeFlag>
+    <partnerFeeAmt>0</partnerFeeAmt>
+    <custConfirmFlag>N</custConfirmFlag>
+    <authenCashier2Flag>N</authenCashier2Flag>
+</validateBillResp><!-- Readme -->
+<!-- Result validateBill -->

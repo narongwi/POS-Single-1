@@ -1,0 +1,19 @@
+<serviceTypeReq>
+    <storeCode>00899</storeCode>
+    <locNo>008</locNo>
+    <controlRef>F00800002</controlRef>
+    <cashierId>300008</cashierId>
+</serviceTypeReq>
+<!-- readme -->
+<!-- เลือกเมนู Bill Payment จะเรียก queryServiceType และ queryServiceGroup -->
+<!-- call api sample -->
+<!-- exec BPS_WebService 
+    'queryServiceType',
+    '<serviceTypeReq>
+        <storeCode>00899</storeCode>
+        <locNo>008</locNo>
+        <controlRef>F00800002</controlRef>
+        <cashierId>300008</cashierId>
+    </serviceTypeReq>'
+-->
+ 

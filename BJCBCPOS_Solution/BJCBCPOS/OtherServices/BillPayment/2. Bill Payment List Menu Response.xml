@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<serviceTypeResp>
+    <result>
+        <code>0000</code>
+        <msg>สำเร็จ</msg>
+        <msgEn>Success</msgEn>
+    </result>
+    <serviceTypeList>
+        <serviceType id="1" name="Bill Payment" seq="1" />
+        <serviceType id="2" name="Top up" seq="2" />
+        <serviceType id="3" name="Cash In" seq="3" />
+        <serviceType id="4" name="Cash Out" seq="4" />
+    </serviceTypeList>
+</serviceTypeResp>  

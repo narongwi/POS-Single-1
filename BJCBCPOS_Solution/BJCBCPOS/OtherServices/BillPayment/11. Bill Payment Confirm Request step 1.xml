@@ -1,0 +1,21 @@
+<confirmBillReq>
+    <txNo>CPS00899008210819173036</txNo>
+    <operateDate>20210819</operateDate>
+    <transactionDate>20210819173222</transactionDate>
+    <projOwner>CPS</projOwner>
+    <paymentList billAmt="6319.99" billDiscAmt="0.00" discRoundDown="0.24" feeAmt="9.76" feeVatAmt="0.64" payAmt="6319.99" billReceiptNo="" feeReceiptNo="008913167" posReference="C00801482" billRollingNo="06600002" posControlRef="1"></paymentList>
+</confirmBillReq>
+
+<!-- Readme -->
+<!-- ทำการบันทึกตราสารตามขั้นตอน และยืนยันการชำระเงิน -->
+<!-- 
+    exec BPS_WebService 
+    'confirmBillStep1',
+    '<confirmBillReq>
+        <txNo>CPS00899008210819173036</txNo>
+        <operateDate>20210819</operateDate>
+        <transactionDate>20210819173222</transactionDate>
+        <projOwner>CPS</projOwner>
+        <paymentList billAmt="6319.99" billDiscAmt="0.00" discRoundDown="0.24" feeAmt="9.76" feeVatAmt="0.64" payAmt="6319.99" billReceiptNo="" feeReceiptNo="008913167" posReference="C00801482" billRollingNo="06600002" posControlRef="1"></paymentList>
+    </confirmBillReq>' 
+-->

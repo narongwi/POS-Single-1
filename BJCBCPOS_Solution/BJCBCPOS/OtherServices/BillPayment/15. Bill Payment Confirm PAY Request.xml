@@ -1,0 +1,26 @@
+<confirmPayReq>
+    <storeCode>00899</storeCode>
+    <locNo>008</locNo>
+    <controlRef>F00800003</controlRef>
+    <txNo>CPS00899008210819173036</txNo>
+    <operateDate>20210819</operateDate>
+    <paymentList>
+        <payment paymentId="9" pmCode="CASH" payAmt="7000" billAmt="6319.99" feeAmt="9.76" reference="CASH                " />
+    </paymentList>
+</confirmPayReq>
+
+<!-- readme -->
+<!-- 
+    exec BPS_WebService 
+    'confirmPay',
+    '<confirmPayReq>
+        <storeCode>00899</storeCode>
+        <locNo>008</locNo>
+        <controlRef>F00800003</controlRef>
+        <txNo>CPS00899008210819173036</txNo>
+        <operateDate>20210819</operateDate>
+        <paymentList>
+            <payment paymentId="9" pmCode="CASH" payAmt="7000" billAmt="6319.99" feeAmt="9.76" reference="CASH                " />
+        </paymentList>
+    </confirmPayReq>' 
+-->
