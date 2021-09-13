@@ -1,6 +1,5 @@
 namespace BJCBCPOS.OtherServices {
-  partial class frmBillPayment
-  {
+  partial class frmBillPayment{
     /// <summary>
     /// Required designer variable.
     /// </summary>

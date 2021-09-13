@@ -724,3 +724,4 @@ D:\GitHub\POS-Single\POS-Single\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPO
 D:\GitHub\POS-Single\POS-Single\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.pdb
 D:\GitHub\POS-Single\POS-Single\BJCBCPOS_Solution\BJCBCPOS\bin\Debug\OtherServices\images\DefaultImage.png
 D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.OtherServices.frmBillPayments.resources
+D:\Repository\Deftsoft\POS-Single\BJCBCPOS_Solution\BJCBCPOS\obj\x86\Debug\BJCBCPOS.OtherServices.frmBills.resources

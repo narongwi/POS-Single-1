@@ -641,6 +641,12 @@
     <Compile Include="OtherServices\frmBillPayments.Designer.cs">
       <DependentUpon>frmBillPayments.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtherServices\frmBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\frmBills.Designer.cs">
+      <DependentUpon>frmBills.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherServices\frmCashInOut.Designer.cs">
       <DependentUpon>frmCashInOut.cs</DependentUpon>
     </Compile>
@@ -659,6 +665,9 @@
     </Compile>
     <EmbeddedResource Include="OtherServices\frmBillPayments.resx">
       <DependentUpon>frmBillPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\frmBills.resx">
+      <DependentUpon>frmBills.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\UserControls\DeftsoftTextbox.resx">
       <DependentUpon>DeftsoftTextbox.cs</DependentUpon>

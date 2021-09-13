@@ -18,6 +18,7 @@ namespace BJCBCPOS.OtherServices.Services {
                 // response
                 var serviceType = new BillPayment.ServiceType.ServiceTypeResp();
                 return serviceType.DeserializeFromFile(Path.Combine(basePath,"2. Bill Payment List Menu Response.xml"));
+
             } catch(Exception ex) {
 
                 throw ex;
