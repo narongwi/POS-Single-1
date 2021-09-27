@@ -43,7 +43,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.deftsoftTextbox1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
-            this.deftsoftPictureIcon2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftPictureIcon();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.deftsoftPanel3 = new BJCBCPOS.OtherServices.UserControls.DeftsoftPanel();
@@ -78,10 +77,10 @@
             this.cust_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fee_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deftsoftPictureIcon2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftPictureIcon();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deftsoftPictureIcon2)).BeginInit();
             this.deftsoftPanel3.SuspendLayout();
             this.deftsoftPanel2.SuspendLayout();
             this.deftsoftPanel1.SuspendLayout();
@@ -91,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdBillDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deftsoftPictureIcon2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -301,20 +301,6 @@
             this.deftsoftTextbox1.TabIndex = 96;
             this.deftsoftTextbox1.Texts = "";
             this.deftsoftTextbox1.UnderlinedStyle = false;
-            // 
-            // deftsoftPictureIcon2
-            // 
-            this.deftsoftPictureIcon2.BackColor = System.Drawing.Color.Transparent;
-            this.deftsoftPictureIcon2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(53)))));
-            this.deftsoftPictureIcon2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(53)))));
-            this.deftsoftPictureIcon2.IconSize = 26;
-            this.deftsoftPictureIcon2.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.Account;
-            this.deftsoftPictureIcon2.Location = new System.Drawing.Point(14, 11);
-            this.deftsoftPictureIcon2.Name = "deftsoftPictureIcon2";
-            this.deftsoftPictureIcon2.Size = new System.Drawing.Size(26, 26);
-            this.deftsoftPictureIcon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.deftsoftPictureIcon2.TabIndex = 91;
-            this.deftsoftPictureIcon2.TabStop = false;
             // 
             // label11
             // 
@@ -782,6 +768,20 @@
             this.amount.HeaderText = "ยอดชำระ";
             this.amount.Name = "amount";
             // 
+            // deftsoftPictureIcon2
+            // 
+            this.deftsoftPictureIcon2.BackColor = System.Drawing.Color.Transparent;
+            this.deftsoftPictureIcon2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(53)))));
+            this.deftsoftPictureIcon2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(53)))));
+            this.deftsoftPictureIcon2.IconSize = 26;
+            this.deftsoftPictureIcon2.IconType = BJCBCPOS.OtherServices.Fonts.MaterialDesignIcons.Account;
+            this.deftsoftPictureIcon2.Location = new System.Drawing.Point(14, 11);
+            this.deftsoftPictureIcon2.Name = "deftsoftPictureIcon2";
+            this.deftsoftPictureIcon2.Size = new System.Drawing.Size(26, 26);
+            this.deftsoftPictureIcon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.deftsoftPictureIcon2.TabIndex = 91;
+            this.deftsoftPictureIcon2.TabStop = false;
+            // 
             // frmSimCards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -799,7 +799,6 @@
             this.panel7.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deftsoftPictureIcon2)).EndInit();
             this.deftsoftPanel3.ResumeLayout(false);
             this.deftsoftPanel2.ResumeLayout(false);
             this.deftsoftPanel1.ResumeLayout(false);
@@ -809,6 +808,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdBillDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deftsoftPictureIcon2)).EndInit();
             this.ResumeLayout(false);
 
         }
