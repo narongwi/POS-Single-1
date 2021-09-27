@@ -650,9 +650,27 @@
     <Compile Include="OtherServices\frmCashInOut.Designer.cs">
       <DependentUpon>frmCashInOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtherServices\frmMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\frmMembers.Designer.cs">
+      <DependentUpon>frmMembers.cs</DependentUpon>
+    </Compile>
     <!--Deftsoft New Form-->
     <Compile Include="OtherServices\frmParcel.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\frmParcels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\frmParcels.Designer.cs">
+      <DependentUpon>frmParcels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherServices\frmSimCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherServices\frmSimCards.Designer.cs">
+      <DependentUpon>frmSimCards.cs</DependentUpon>
     </Compile>
     <Compile Include="OtherServices\Services\BillPaymentService.cs" />
     <Compile Include="OtherServices\Helpers\XmlHelper.cs" />
@@ -668,6 +686,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\frmBills.resx">
       <DependentUpon>frmBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\frmMembers.resx">
+      <DependentUpon>frmMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\frmParcels.resx">
+      <DependentUpon>frmParcels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherServices\frmSimCards.resx">
+      <DependentUpon>frmSimCards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherServices\UserControls\DeftsoftTextbox.resx">
       <DependentUpon>DeftsoftTextbox.cs</DependentUpon>

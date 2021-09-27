@@ -506,8 +506,8 @@
             this.ucHeader1.alertStatus = false;
             this.ucHeader1.BackColor = System.Drawing.Color.Transparent;
             this.ucHeader1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucHeader1.currentMenuTitle1 = "Main Menu";
-            this.ucHeader1.currentMenuTitle2 = "Member";
+            this.ucHeader1.currentMenuTitle1 = "เมนูหลัก";
+            this.ucHeader1.currentMenuTitle2 = "สมาชิก";
             this.ucHeader1.currentMenuTitle3 = "";
             this.ucHeader1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ucHeader1.Location = new System.Drawing.Point(0, 0);

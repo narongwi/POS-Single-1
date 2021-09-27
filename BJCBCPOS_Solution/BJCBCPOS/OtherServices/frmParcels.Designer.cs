@@ -136,7 +136,7 @@
             this.label5.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.label5.Size = new System.Drawing.Size(579, 33);
             this.label5.TabIndex = 16;
-            this.label5.Text = "ผู้ให้บริการ รับ - ส่งพัสดุ";
+            this.label5.Text = "ผู้ให้บริการ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel3
