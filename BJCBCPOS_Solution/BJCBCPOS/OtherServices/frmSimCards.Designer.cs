@@ -713,9 +713,9 @@
             // 
             this.listView3.FullRowSelect = true;
             this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(-1, 23);
+            this.listView3.Location = new System.Drawing.Point(-1, 29);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(404, 230);
+            this.listView3.Size = new System.Drawing.Size(404, 224);
             this.listView3.TabIndex = 109;
             this.listView3.UseCompatibleStateImageBehavior = false;
             // 
