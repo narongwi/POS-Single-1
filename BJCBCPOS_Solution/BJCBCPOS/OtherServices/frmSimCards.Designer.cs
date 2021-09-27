@@ -72,6 +72,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.listView3 = new System.Windows.Forms.ListView();
+            this.grdBillDetail = new System.Windows.Forms.DataGridView();
+            this.serviceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.servicename = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cust_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fee_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,11 +90,13 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdBillDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.grdBillDetail);
             this.panel2.Controls.Add(this.lsvService);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.panel7);
@@ -149,7 +157,7 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(428, 85);
+            this.button1.Location = new System.Drawing.Point(425, 96);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 52);
             this.button1.TabIndex = 88;
@@ -163,7 +171,7 @@
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(120, 49);
+            this.label13.Location = new System.Drawing.Point(120, 57);
             this.label13.Name = "label13";
             this.label13.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.label13.Size = new System.Drawing.Size(241, 34);
@@ -175,7 +183,7 @@
             // 
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label16.Location = new System.Drawing.Point(3, 57);
+            this.label16.Location = new System.Drawing.Point(3, 65);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(111, 18);
             this.label16.TabIndex = 9;
@@ -188,7 +196,7 @@
             this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label17.ForeColor = System.Drawing.Color.Gray;
-            this.label17.Location = new System.Drawing.Point(120, 14);
+            this.label17.Location = new System.Drawing.Point(120, 21);
             this.label17.Name = "label17";
             this.label17.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.label17.Size = new System.Drawing.Size(241, 32);
@@ -204,7 +212,7 @@
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(120, 85);
+            this.label15.Location = new System.Drawing.Point(120, 96);
             this.label15.Name = "label15";
             this.label15.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.label15.Size = new System.Drawing.Size(241, 51);
@@ -216,7 +224,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label8.Location = new System.Drawing.Point(3, 85);
+            this.label8.Location = new System.Drawing.Point(3, 112);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 18);
             this.label8.TabIndex = 5;
@@ -226,7 +234,7 @@
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label14.Location = new System.Drawing.Point(3, 21);
+            this.label14.Location = new System.Drawing.Point(3, 28);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(111, 18);
             this.label14.TabIndex = 3;
@@ -327,12 +335,12 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(77)))));
-            this.label7.Location = new System.Drawing.Point(3, 209);
+            this.label7.Location = new System.Drawing.Point(1, 3);
             this.label7.Name = "label7";
             this.label7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.label7.Size = new System.Drawing.Size(220, 27);
+            this.label7.Size = new System.Drawing.Size(402, 39);
             this.label7.TabIndex = 106;
-            this.label7.Text = "ผู้ให้บริการ";
+            this.label7.Text = "รายละเอียดการลงทะเบียน";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // deftsoftPanel3
@@ -345,7 +353,7 @@
             this.deftsoftPanel3.Controls.Add(this.label4);
             this.deftsoftPanel3.Fill = true;
             this.deftsoftPanel3.FillColor = System.Drawing.Color.White;
-            this.deftsoftPanel3.Location = new System.Drawing.Point(1, 111);
+            this.deftsoftPanel3.Location = new System.Drawing.Point(1, 127);
             this.deftsoftPanel3.Name = "deftsoftPanel3";
             this.deftsoftPanel3.Radius = 1;
             this.deftsoftPanel3.Size = new System.Drawing.Size(402, 35);
@@ -397,7 +405,7 @@
             this.deftsoftPanel2.Controls.Add(this.label2);
             this.deftsoftPanel2.Fill = true;
             this.deftsoftPanel2.FillColor = System.Drawing.Color.White;
-            this.deftsoftPanel2.Location = new System.Drawing.Point(1, 70);
+            this.deftsoftPanel2.Location = new System.Drawing.Point(1, 86);
             this.deftsoftPanel2.Name = "deftsoftPanel2";
             this.deftsoftPanel2.Radius = 1;
             this.deftsoftPanel2.Size = new System.Drawing.Size(402, 35);
@@ -449,7 +457,7 @@
             this.deftsoftPanel1.Controls.Add(this.label1);
             this.deftsoftPanel1.Fill = true;
             this.deftsoftPanel1.FillColor = System.Drawing.Color.White;
-            this.deftsoftPanel1.Location = new System.Drawing.Point(1, 29);
+            this.deftsoftPanel1.Location = new System.Drawing.Point(1, 45);
             this.deftsoftPanel1.Name = "deftsoftPanel1";
             this.deftsoftPanel1.Radius = 1;
             this.deftsoftPanel1.Size = new System.Drawing.Size(402, 35);
@@ -501,7 +509,7 @@
             this.deftsoftPanel4.Controls.Add(this.label3);
             this.deftsoftPanel4.Fill = true;
             this.deftsoftPanel4.FillColor = System.Drawing.Color.White;
-            this.deftsoftPanel4.Location = new System.Drawing.Point(1, 152);
+            this.deftsoftPanel4.Location = new System.Drawing.Point(1, 168);
             this.deftsoftPanel4.Name = "deftsoftPanel4";
             this.deftsoftPanel4.Radius = 1;
             this.deftsoftPanel4.Size = new System.Drawing.Size(402, 35);
@@ -554,15 +562,15 @@
             this.label9.Padding = new System.Windows.Forms.Padding(5, 5, 0, 5);
             this.label9.Size = new System.Drawing.Size(404, 28);
             this.label9.TabIndex = 98;
-            this.label9.Text = "รายละเอียดการลงทะเบียน";
+            this.label9.Text = "ผู้ให้บริการ";
             // 
             // btnOk
             // 
             this.btnOk.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnOk.Location = new System.Drawing.Point(229, 196);
+            this.btnOk.Location = new System.Drawing.Point(262, 220);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(174, 40);
+            this.btnOk.Size = new System.Drawing.Size(140, 50);
             this.btnOk.TabIndex = 87;
             this.btnOk.Text = "ลงทะเบียน";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -581,25 +589,31 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.listView3);
+            this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.deftsoftPanel3);
+            this.panel4.Controls.Add(this.btnOk);
             this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.deftsoftPanel2);
             this.panel4.Controls.Add(this.listView2);
+            this.panel4.Controls.Add(this.deftsoftPanel1);
+            this.panel4.Controls.Add(this.deftsoftPanel4);
             this.panel4.Controls.Add(this.listView1);
             this.panel4.Controls.Add(this.dgvService);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(5, 247);
+            this.panel4.Location = new System.Drawing.Point(5, 258);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(404, 397);
+            this.panel4.Size = new System.Drawing.Size(404, 386);
             this.panel4.TabIndex = 97;
             // 
             // listView1
             // 
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(404, 397);
+            this.listView1.Size = new System.Drawing.Size(404, 386);
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -610,22 +624,17 @@
             this.dgvService.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvService.Location = new System.Drawing.Point(0, 0);
             this.dgvService.Name = "dgvService";
-            this.dgvService.Size = new System.Drawing.Size(404, 397);
+            this.dgvService.Size = new System.Drawing.Size(404, 386);
             this.dgvService.TabIndex = 8;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.deftsoftPanel3);
-            this.panel1.Controls.Add(this.deftsoftPanel2);
-            this.panel1.Controls.Add(this.deftsoftPanel1);
-            this.panel1.Controls.Add(this.deftsoftPanel4);
+            this.panel1.Controls.Add(this.listView3);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.btnOk);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(5, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(404, 242);
+            this.panel1.Size = new System.Drawing.Size(404, 253);
             this.panel1.TabIndex = 96;
             // 
             // label6
@@ -686,9 +695,9 @@
             // 
             this.listView2.FullRowSelect = true;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(4, 245);
+            this.listView2.Location = new System.Drawing.Point(3, 220);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(242, 149);
+            this.listView2.Size = new System.Drawing.Size(253, 160);
             this.listView2.TabIndex = 11;
             this.listView2.UseCompatibleStateImageBehavior = false;
             // 
@@ -696,9 +705,9 @@
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button3.Location = new System.Drawing.Point(252, 356);
+            this.button3.Location = new System.Drawing.Point(262, 329);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 40);
+            this.button3.Size = new System.Drawing.Size(140, 50);
             this.button3.TabIndex = 107;
             this.button3.Text = "ถ่ายรูป";
             this.button3.UseVisualStyleBackColor = true;
@@ -707,9 +716,9 @@
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button4.Location = new System.Drawing.Point(252, 310);
+            this.button4.Location = new System.Drawing.Point(262, 274);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 40);
+            this.button4.Size = new System.Drawing.Size(140, 50);
             this.button4.TabIndex = 108;
             this.button4.Text = "เลือกเอกสารอื่น";
             this.button4.UseVisualStyleBackColor = true;
@@ -718,11 +727,60 @@
             // 
             this.listView3.FullRowSelect = true;
             this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(0, 0);
+            this.listView3.Location = new System.Drawing.Point(-1, 23);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(404, 242);
+            this.listView3.Size = new System.Drawing.Size(404, 230);
             this.listView3.TabIndex = 109;
             this.listView3.UseCompatibleStateImageBehavior = false;
+            // 
+            // grdBillDetail
+            // 
+            this.grdBillDetail.AllowUserToAddRows = false;
+            this.grdBillDetail.AllowUserToDeleteRows = false;
+            this.grdBillDetail.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.grdBillDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdBillDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.serviceno,
+            this.servicename,
+            this.cust_name,
+            this.fee_amount,
+            this.amount});
+            this.grdBillDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdBillDetail.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.grdBillDetail.Location = new System.Drawing.Point(5, 113);
+            this.grdBillDetail.Name = "grdBillDetail";
+            this.grdBillDetail.RowHeadersVisible = false;
+            this.grdBillDetail.Size = new System.Drawing.Size(579, 376);
+            this.grdBillDetail.TabIndex = 227;
+            // 
+            // serviceno
+            // 
+            this.serviceno.HeaderText = "ลำดับที่";
+            this.serviceno.Name = "serviceno";
+            this.serviceno.Width = 70;
+            // 
+            // servicename
+            // 
+            this.servicename.HeaderText = "บริการ";
+            this.servicename.Name = "servicename";
+            this.servicename.Width = 160;
+            // 
+            // cust_name
+            // 
+            this.cust_name.HeaderText = "ชื่อ";
+            this.cust_name.Name = "cust_name";
+            this.cust_name.Width = 165;
+            // 
+            // fee_amount
+            // 
+            this.fee_amount.HeaderText = "ค่าบริการ";
+            this.fee_amount.Name = "fee_amount";
+            this.fee_amount.Width = 80;
+            // 
+            // amount
+            // 
+            this.amount.HeaderText = "ยอดชำระ";
+            this.amount.Name = "amount";
             // 
             // frmSimCards
             // 
@@ -750,6 +808,7 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdBillDetail)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -800,5 +859,11 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.DataGridView grdBillDetail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serviceno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn servicename;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cust_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fee_amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amount;
     }
 }
