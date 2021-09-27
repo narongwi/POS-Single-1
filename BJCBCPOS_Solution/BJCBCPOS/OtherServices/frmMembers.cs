@@ -9,19 +9,14 @@ using System.Windows.Forms;
 
 namespace BJCBCPOS.OtherServices
 {
-    public partial class frmMember : Form
+    public partial class frmMembers : Form
     {
-        public frmMember()
+        public frmMembers()
         {
             InitializeComponent();
         }
 
-        private void frmMember_Load(object sender, EventArgs e)
-        {
-           // ClearAllData();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
