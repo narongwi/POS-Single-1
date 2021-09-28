@@ -26,11 +26,11 @@ namespace BJCBCPOS.OtherServices {
         private void InitializeComponent() {
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnOk = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.dgvService = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.deftsoftPanel3 = new BJCBCPOS.OtherServices.UserControls.DeftsoftPanel();
             this.deftsoftTextbox4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,32 +44,32 @@ namespace BJCBCPOS.OtherServices {
             this.deftsoftPanel4 = new BJCBCPOS.OtherServices.UserControls.DeftsoftPanel();
             this.deftsoftTextbox5 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.ucFooter1 = new BJCBCPOS.UCFooter();
             this.ucHeader1 = new BJCBCPOS.UCHeader();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lsvService = new System.Windows.Forms.ListView();
             this.label5 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.deftsoftTextbox1 = new BJCBCPOS.OtherServices.UserControls.DeftsoftTextbox();
             this.deftsoftPictureIcon2 = new BJCBCPOS.OtherServices.UserControls.DeftsoftPictureIcon();
             this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).BeginInit();
+            this.panel1.SuspendLayout();
             this.deftsoftPanel3.SuspendLayout();
             this.deftsoftPanel2.SuspendLayout();
             this.deftsoftPanel1.SuspendLayout();
@@ -104,6 +104,41 @@ namespace BJCBCPOS.OtherServices {
             this.panel4.Size = new System.Drawing.Size(404, 397);
             this.panel4.TabIndex = 97;
             // 
+            // listView1
+            // 
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.FullRowSelect = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(404, 371);
+            this.listView1.TabIndex = 10;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // dgvService
+            // 
+            this.dgvService.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvService.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvService.Location = new System.Drawing.Point(0, 0);
+            this.dgvService.Name = "dgvService";
+            this.dgvService.Size = new System.Drawing.Size(404, 371);
+            this.dgvService.TabIndex = 8;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(77)))));
+            this.label12.Location = new System.Drawing.Point(0, 371);
+            this.label12.Name = "label12";
+            this.label12.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.label12.Size = new System.Drawing.Size(404, 26);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "8 rows";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label7);
@@ -119,51 +154,18 @@ namespace BJCBCPOS.OtherServices {
             this.panel1.Size = new System.Drawing.Size(404, 242);
             this.panel1.TabIndex = 96;
             // 
-            // label9
+            // label7
             // 
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(77)))));
-            this.label9.Location = new System.Drawing.Point(0, 0);
-            this.label9.Name = "label9";
-            this.label9.Padding = new System.Windows.Forms.Padding(5, 5, 0, 5);
-            this.label9.Size = new System.Drawing.Size(404, 28);
-            this.label9.TabIndex = 98;
-            this.label9.Text = "Bill Information && Scan Barcode ";
-            // 
-            // btnOk
-            // 
-            this.btnOk.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnOk.Location = new System.Drawing.Point(295, 196);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(108, 40);
-            this.btnOk.TabIndex = 87;
-            this.btnOk.Text = "ตกลง";
-            this.btnOk.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label6.Location = new System.Drawing.Point(414, 40);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.label6.Size = new System.Drawing.Size(5, 649);
-            this.label6.TabIndex = 99;
-            // 
-            // dgvService
-            // 
-            this.dgvService.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvService.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvService.Location = new System.Drawing.Point(0, 0);
-            this.dgvService.Name = "dgvService";
-            this.dgvService.Size = new System.Drawing.Size(404, 371);
-            this.dgvService.TabIndex = 8;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(77)))));
+            this.label7.Location = new System.Drawing.Point(3, 209);
+            this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.label7.Size = new System.Drawing.Size(281, 27);
+            this.label7.TabIndex = 106;
+            this.label7.Text = "ผู้ให้บริการ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // deftsoftPanel3
             // 
@@ -190,15 +192,15 @@ namespace BJCBCPOS.OtherServices {
             this.deftsoftTextbox4.BorderSize = 1;
             this.deftsoftTextbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deftsoftTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(93)))), ((int)(((byte)(95)))));
-            this.deftsoftTextbox4.Location = new System.Drawing.Point(107, 4);
+            this.deftsoftTextbox4.Location = new System.Drawing.Point(127, 4);
             this.deftsoftTextbox4.Margin = new System.Windows.Forms.Padding(4);
             this.deftsoftTextbox4.Multiline = false;
             this.deftsoftTextbox4.Name = "deftsoftTextbox4";
             this.deftsoftTextbox4.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.deftsoftTextbox4.PasswordChar = false;
             this.deftsoftTextbox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox4.PlaceholderText = "Ref 3";
-            this.deftsoftTextbox4.Size = new System.Drawing.Size(284, 27);
+            this.deftsoftTextbox4.PlaceholderText = "หมายเลขอ้างอิง 3";
+            this.deftsoftTextbox4.Size = new System.Drawing.Size(264, 27);
             this.deftsoftTextbox4.TabIndex = 99;
             this.deftsoftTextbox4.Texts = "";
             this.deftsoftTextbox4.UnderlinedStyle = false;
@@ -212,9 +214,9 @@ namespace BJCBCPOS.OtherServices {
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(100, 35);
+            this.label4.Size = new System.Drawing.Size(120, 35);
             this.label4.TabIndex = 83;
-            this.label4.Text = "Reference 3 :";
+            this.label4.Text = "หมายเลขอ้างอิง 3 :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // deftsoftPanel2
@@ -242,15 +244,15 @@ namespace BJCBCPOS.OtherServices {
             this.deftsoftTextbox3.BorderSize = 1;
             this.deftsoftTextbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deftsoftTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(93)))), ((int)(((byte)(95)))));
-            this.deftsoftTextbox3.Location = new System.Drawing.Point(107, 4);
+            this.deftsoftTextbox3.Location = new System.Drawing.Point(127, 4);
             this.deftsoftTextbox3.Margin = new System.Windows.Forms.Padding(4);
             this.deftsoftTextbox3.Multiline = false;
             this.deftsoftTextbox3.Name = "deftsoftTextbox3";
             this.deftsoftTextbox3.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.deftsoftTextbox3.PasswordChar = false;
             this.deftsoftTextbox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox3.PlaceholderText = "Ref 2";
-            this.deftsoftTextbox3.Size = new System.Drawing.Size(284, 27);
+            this.deftsoftTextbox3.PlaceholderText = "หมายเลขอ้างอิง 2";
+            this.deftsoftTextbox3.Size = new System.Drawing.Size(264, 27);
             this.deftsoftTextbox3.TabIndex = 99;
             this.deftsoftTextbox3.Texts = "";
             this.deftsoftTextbox3.UnderlinedStyle = false;
@@ -264,9 +266,9 @@ namespace BJCBCPOS.OtherServices {
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(100, 35);
+            this.label2.Size = new System.Drawing.Size(120, 35);
             this.label2.TabIndex = 83;
-            this.label2.Text = "Reference 2 :";
+            this.label2.Text = "หมายเลขอ้างอิง 2 :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // deftsoftPanel1
@@ -295,15 +297,15 @@ namespace BJCBCPOS.OtherServices {
             this.deftsoftTextbox2.BorderSize = 1;
             this.deftsoftTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deftsoftTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(93)))), ((int)(((byte)(95)))));
-            this.deftsoftTextbox2.Location = new System.Drawing.Point(107, 4);
+            this.deftsoftTextbox2.Location = new System.Drawing.Point(127, 4);
             this.deftsoftTextbox2.Margin = new System.Windows.Forms.Padding(4);
             this.deftsoftTextbox2.Multiline = false;
             this.deftsoftTextbox2.Name = "deftsoftTextbox2";
             this.deftsoftTextbox2.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.deftsoftTextbox2.PasswordChar = false;
             this.deftsoftTextbox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox2.PlaceholderText = "Ref 1";
-            this.deftsoftTextbox2.Size = new System.Drawing.Size(246, 27);
+            this.deftsoftTextbox2.PlaceholderText = "หมายเลขอ้างอิง 1";
+            this.deftsoftTextbox2.Size = new System.Drawing.Size(226, 27);
             this.deftsoftTextbox2.TabIndex = 99;
             this.deftsoftTextbox2.Texts = "";
             this.deftsoftTextbox2.UnderlinedStyle = false;
@@ -317,9 +319,9 @@ namespace BJCBCPOS.OtherServices {
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(100, 35);
+            this.label1.Size = new System.Drawing.Size(120, 35);
             this.label1.TabIndex = 83;
-            this.label1.Text = "Reference 1 :";
+            this.label1.Text = "หมายเลขอ้างอิง 1 :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // deftsoftPictureIcon3
@@ -362,15 +364,15 @@ namespace BJCBCPOS.OtherServices {
             this.deftsoftTextbox5.BorderSize = 1;
             this.deftsoftTextbox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deftsoftTextbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(93)))), ((int)(((byte)(95)))));
-            this.deftsoftTextbox5.Location = new System.Drawing.Point(107, 4);
+            this.deftsoftTextbox5.Location = new System.Drawing.Point(127, 4);
             this.deftsoftTextbox5.Margin = new System.Windows.Forms.Padding(4);
             this.deftsoftTextbox5.Multiline = false;
             this.deftsoftTextbox5.Name = "deftsoftTextbox5";
             this.deftsoftTextbox5.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.deftsoftTextbox5.PasswordChar = false;
             this.deftsoftTextbox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox5.PlaceholderText = "Ref 4";
-            this.deftsoftTextbox5.Size = new System.Drawing.Size(284, 27);
+            this.deftsoftTextbox5.PlaceholderText = "หมายเลขอ้างอิง 4";
+            this.deftsoftTextbox5.Size = new System.Drawing.Size(264, 27);
             this.deftsoftTextbox5.TabIndex = 99;
             this.deftsoftTextbox5.Texts = "";
             this.deftsoftTextbox5.UnderlinedStyle = false;
@@ -384,10 +386,46 @@ namespace BJCBCPOS.OtherServices {
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(100, 35);
+            this.label3.Size = new System.Drawing.Size(120, 35);
             this.label3.TabIndex = 83;
-            this.label3.Text = "Reference 4 :";
+            this.label3.Text = "หมายเลขอ้างอิง 4 :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(77)))));
+            this.label9.Location = new System.Drawing.Point(0, 0);
+            this.label9.Name = "label9";
+            this.label9.Padding = new System.Windows.Forms.Padding(5, 5, 0, 5);
+            this.label9.Size = new System.Drawing.Size(404, 28);
+            this.label9.TabIndex = 98;
+            this.label9.Text = "รายละเอียดบิล && สแกนบาร์โค๊ด";
+            // 
+            // btnOk
+            // 
+            this.btnOk.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnOk.Location = new System.Drawing.Point(295, 196);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(108, 40);
+            this.btnOk.TabIndex = 87;
+            this.btnOk.Text = "ตกลง";
+            this.btnOk.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label6.Location = new System.Drawing.Point(414, 40);
+            this.label6.Name = "label6";
+            this.label6.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.label6.Size = new System.Drawing.Size(5, 649);
+            this.label6.TabIndex = 99;
             // 
             // ucFooter1
             // 
@@ -431,17 +469,6 @@ namespace BJCBCPOS.OtherServices {
             this.ucHeader1.Size = new System.Drawing.Size(1008, 40);
             this.ucHeader1.TabIndex = 77;
             // 
-            // listView1
-            // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(404, 371);
-            this.listView1.TabIndex = 10;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
@@ -474,14 +501,14 @@ namespace BJCBCPOS.OtherServices {
             // 
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(77)))));
             this.label5.Location = new System.Drawing.Point(5, 80);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.label5.Size = new System.Drawing.Size(579, 33);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Member Information";
+            this.label5.Text = "ข้อมูลสมาชิก";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel7
@@ -511,6 +538,85 @@ namespace BJCBCPOS.OtherServices {
             this.button1.TabIndex = 88;
             this.button1.Text = "ชำระเงิน";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label13.ForeColor = System.Drawing.Color.Gray;
+            this.label13.Location = new System.Drawing.Point(120, 49);
+            this.label13.Name = "label13";
+            this.label13.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label13.Size = new System.Drawing.Size(241, 34);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "0.00";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label16.Location = new System.Drawing.Point(11, 57);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 18);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "ภาษี :";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.BackColor = System.Drawing.Color.White;
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label17.ForeColor = System.Drawing.Color.Gray;
+            this.label17.Location = new System.Drawing.Point(120, 14);
+            this.label17.Name = "label17";
+            this.label17.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label17.Size = new System.Drawing.Size(241, 32);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "0.00";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(120, 85);
+            this.label15.Name = "label15";
+            this.label15.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label15.Size = new System.Drawing.Size(241, 51);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "0.00";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label8.Location = new System.Drawing.Point(11, 101);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 18);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "ยอดสุทธิ :";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label14.Location = new System.Drawing.Point(11, 21);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(80, 18);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "ส่วนลดสุทธิ :";
             // 
             // panel3
             // 
@@ -551,6 +657,7 @@ namespace BJCBCPOS.OtherServices {
             this.button2.TabIndex = 97;
             this.button2.Text = "ค้นหา";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // deftsoftTextbox1
             // 
@@ -568,7 +675,7 @@ namespace BJCBCPOS.OtherServices {
             this.deftsoftTextbox1.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.deftsoftTextbox1.PasswordChar = false;
             this.deftsoftTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.deftsoftTextbox1.PlaceholderText = "Enter Member Id";
+            this.deftsoftTextbox1.PlaceholderText = "หมายเลขสมาชิก/เบอร์โทรศัพท์";
             this.deftsoftTextbox1.Size = new System.Drawing.Size(192, 27);
             this.deftsoftTextbox1.TabIndex = 96;
             this.deftsoftTextbox1.Texts = "";
@@ -592,121 +699,15 @@ namespace BJCBCPOS.OtherServices {
             // 
             this.label11.BackColor = System.Drawing.SystemColors.Control;
             this.label11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(77)))));
             this.label11.Location = new System.Drawing.Point(5, 5);
             this.label11.Name = "label11";
             this.label11.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.label11.Size = new System.Drawing.Size(579, 28);
             this.label11.TabIndex = 2;
-            this.label11.Text = "Member Information";
+            this.label11.Text = "สมาชิก";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(77)))));
-            this.label7.Location = new System.Drawing.Point(3, 209);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.label7.Size = new System.Drawing.Size(281, 27);
-            this.label7.TabIndex = 106;
-            this.label7.Text = "Bill Payment Services";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label8.Location = new System.Drawing.Point(0, 85);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 18);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "ยอดสุทธิ :";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label14.Location = new System.Drawing.Point(0, 21);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 18);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "ส่วนลดสุทธิ :";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.BackColor = System.Drawing.Color.White;
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(120, 85);
-            this.label15.Name = "label15";
-            this.label15.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label15.Size = new System.Drawing.Size(241, 51);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "0.00";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.BackColor = System.Drawing.Color.White;
-            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label17.ForeColor = System.Drawing.Color.Gray;
-            this.label17.Location = new System.Drawing.Point(120, 14);
-            this.label17.Name = "label17";
-            this.label17.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label17.Size = new System.Drawing.Size(241, 32);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "0.00";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(120, 49);
-            this.label13.Name = "label13";
-            this.label13.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label13.Size = new System.Drawing.Size(241, 34);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "0.00";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label16.Location = new System.Drawing.Point(0, 57);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 18);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "ภาษี :";
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(74)))), ((int)(((byte)(77)))));
-            this.label12.Location = new System.Drawing.Point(0, 371);
-            this.label12.Name = "label12";
-            this.label12.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.label12.Size = new System.Drawing.Size(404, 26);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "8 row";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmBills
             // 
@@ -724,8 +725,8 @@ namespace BJCBCPOS.OtherServices {
             this.Load += new System.EventHandler(this.frmBills_Load);
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.deftsoftPanel3.ResumeLayout(false);
             this.deftsoftPanel2.ResumeLayout(false);
             this.deftsoftPanel1.ResumeLayout(false);

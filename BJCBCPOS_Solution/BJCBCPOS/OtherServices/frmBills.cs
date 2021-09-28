@@ -44,5 +44,10 @@ namespace BJCBCPOS.OtherServices {
             //    dgvService.Rows.Add("",lstImages.Images[i],"test");
             //}
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
