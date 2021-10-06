@@ -228,10 +228,10 @@
             // lbPayCash
             // 
             this.lbPayCash.AutoSize = true;
-            this.lbPayCash.Font = new System.Drawing.Font("Prompt", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPayCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPayCash.Location = new System.Drawing.Point(215, 222);
             this.lbPayCash.Name = "lbPayCash";
-            this.lbPayCash.Size = new System.Drawing.Size(93, 17);
+            this.lbPayCash.Size = new System.Drawing.Size(90, 13);
             this.lbPayCash.TabIndex = 103;
             this.lbPayCash.Text = "ส่งเงินจากการขาย";
             this.lbPayCash.Visible = false;
@@ -244,7 +244,7 @@
             this.button2.Enabled = false;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button2.ForeColor = System.Drawing.Color.Gray;
             this.button2.Location = new System.Drawing.Point(165, 131);
             this.button2.Name = "button2";
@@ -258,7 +258,7 @@
             this.btnPayCash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPayCash.FlatAppearance.BorderSize = 0;
             this.btnPayCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayCash.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnPayCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnPayCash.ForeColor = System.Drawing.Color.Gray;
             this.btnPayCash.Location = new System.Drawing.Point(7, 131);
             this.btnPayCash.Name = "btnPayCash";
@@ -271,10 +271,10 @@
             // lbAdjustChange
             // 
             this.lbAdjustChange.AutoSize = true;
-            this.lbAdjustChange.Font = new System.Drawing.Font("Prompt", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAdjustChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAdjustChange.Location = new System.Drawing.Point(174, 222);
             this.lbAdjustChange.Name = "lbAdjustChange";
-            this.lbAdjustChange.Size = new System.Drawing.Size(40, 17);
+            this.lbAdjustChange.Size = new System.Drawing.Size(35, 13);
             this.lbAdjustChange.TabIndex = 100;
             this.lbAdjustChange.Text = "label5";
             this.lbAdjustChange.Visible = false;
@@ -283,10 +283,10 @@
             // lbNormalChange
             // 
             this.lbNormalChange.AutoSize = true;
-            this.lbNormalChange.Font = new System.Drawing.Font("Prompt", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNormalChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNormalChange.Location = new System.Drawing.Point(133, 222);
             this.lbNormalChange.Name = "lbNormalChange";
-            this.lbNormalChange.Size = new System.Drawing.Size(40, 17);
+            this.lbNormalChange.Size = new System.Drawing.Size(35, 13);
             this.lbNormalChange.TabIndex = 99;
             this.lbNormalChange.Text = "label3";
             this.lbNormalChange.Visible = false;
@@ -295,7 +295,7 @@
             // lbAddCashout
             // 
             this.lbAddCashout.BackColor = System.Drawing.Color.White;
-            this.lbAddCashout.Font = new System.Drawing.Font("Prompt", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAddCashout.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAddCashout.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbAddCashout.Location = new System.Drawing.Point(30, 39);
             this.lbAddCashout.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -312,7 +312,7 @@
             this.btnAdjustChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdjustChange.FlatAppearance.BorderSize = 0;
             this.btnAdjustChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdjustChange.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnAdjustChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnAdjustChange.ForeColor = System.Drawing.Color.Gray;
             this.btnAdjustChange.Location = new System.Drawing.Point(165, 60);
             this.btnAdjustChange.Name = "btnAdjustChange";
@@ -328,7 +328,7 @@
             this.btnNormalChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNormalChange.FlatAppearance.BorderSize = 0;
             this.btnNormalChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNormalChange.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnNormalChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnNormalChange.ForeColor = System.Drawing.Color.Gray;
             this.btnNormalChange.Location = new System.Drawing.Point(7, 60);
             this.btnNormalChange.Name = "btnNormalChange";
@@ -353,7 +353,7 @@
             // lbHeaderChange
             // 
             this.lbHeaderChange.BackColor = System.Drawing.Color.Transparent;
-            this.lbHeaderChange.Font = new System.Drawing.Font("Prompt", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeaderChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeaderChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(186)))), ((int)(((byte)(109)))));
             this.lbHeaderChange.Location = new System.Drawing.Point(61, 5);
             this.lbHeaderChange.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -366,11 +366,11 @@
             // lbChange
             // 
             this.lbChange.AutoSize = true;
-            this.lbChange.Font = new System.Drawing.Font("Prompt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(187)))), ((int)(((byte)(102)))));
             this.lbChange.Location = new System.Drawing.Point(5, 214);
             this.lbChange.Name = "lbChange";
-            this.lbChange.Size = new System.Drawing.Size(105, 32);
+            this.lbChange.Size = new System.Drawing.Size(100, 25);
             this.lbChange.TabIndex = 98;
             this.lbChange.Text = "lbDisplay";
             // 
@@ -410,7 +410,7 @@
             this.btnNoteBank.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnNoteBank.FlatAppearance.BorderSize = 0;
             this.btnNoteBank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNoteBank.Font = new System.Drawing.Font("Prompt", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNoteBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNoteBank.Location = new System.Drawing.Point(105, 8);
             this.btnNoteBank.Name = "btnNoteBank";
             this.btnNoteBank.Size = new System.Drawing.Size(50, 41);
@@ -447,7 +447,7 @@
             // 
             // lbQty
             // 
-            this.lbQty.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbQty.ForeColor = System.Drawing.Color.Gray;
             this.lbQty.Location = new System.Drawing.Point(0, 17);
             this.lbQty.Name = "lbQty";
@@ -474,7 +474,7 @@
             this.btnOther.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOther.FlatAppearance.BorderSize = 0;
             this.btnOther.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOther.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOther.ForeColor = System.Drawing.Color.White;
             this.btnOther.Location = new System.Drawing.Point(9, 48);
             this.btnOther.Name = "btnOther";
@@ -497,10 +497,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label2.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(106, 0);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label2.Location = new System.Drawing.Point(127, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 24);
+            this.label2.Size = new System.Drawing.Size(131, 20);
             this.label2.TabIndex = 94;
             this.label2.Text = "Exchange Rate : ";
             // 
@@ -508,16 +508,16 @@
             // 
             this.lb_ExchangeRate.AutoSize = true;
             this.lb_ExchangeRate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lb_ExchangeRate.Font = new System.Drawing.Font("Prompt", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lb_ExchangeRate.Location = new System.Drawing.Point(248, 0);
+            this.lb_ExchangeRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lb_ExchangeRate.Location = new System.Drawing.Point(258, 0);
             this.lb_ExchangeRate.Name = "lb_ExchangeRate";
-            this.lb_ExchangeRate.Size = new System.Drawing.Size(68, 24);
+            this.lb_ExchangeRate.Size = new System.Drawing.Size(58, 20);
             this.lb_ExchangeRate.TabIndex = 93;
             this.lb_ExchangeRate.Text = "0.0000";
             // 
             // lbCurrency1
             // 
-            this.lbCurrency1.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbCurrency1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbCurrency1.ForeColor = System.Drawing.Color.Gray;
             this.lbCurrency1.Location = new System.Drawing.Point(4, 17);
             this.lbCurrency1.Name = "lbCurrency1";
@@ -596,7 +596,7 @@
             // lbQty12
             // 
             this.lbQty12.BackColor = System.Drawing.Color.White;
-            this.lbQty12.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty12.ForeColor = System.Drawing.Color.Gray;
             this.lbQty12.Location = new System.Drawing.Point(161, 363);
             this.lbQty12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -609,7 +609,7 @@
             // lbAmount12
             // 
             this.lbAmount12.BackColor = System.Drawing.Color.White;
-            this.lbAmount12.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount12.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount12.Location = new System.Drawing.Point(218, 363);
             this.lbAmount12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -623,7 +623,7 @@
             // lbBankNote12
             // 
             this.lbBankNote12.BackColor = System.Drawing.Color.White;
-            this.lbBankNote12.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote12.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote12.Location = new System.Drawing.Point(9, 363);
             this.lbBankNote12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -637,7 +637,7 @@
             // lbQty11
             // 
             this.lbQty11.BackColor = System.Drawing.Color.White;
-            this.lbQty11.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty11.ForeColor = System.Drawing.Color.Gray;
             this.lbQty11.Location = new System.Drawing.Point(161, 337);
             this.lbQty11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -650,7 +650,7 @@
             // lbAmount11
             // 
             this.lbAmount11.BackColor = System.Drawing.Color.White;
-            this.lbAmount11.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount11.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount11.Location = new System.Drawing.Point(218, 337);
             this.lbAmount11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -664,7 +664,7 @@
             // lbBankNote11
             // 
             this.lbBankNote11.BackColor = System.Drawing.Color.White;
-            this.lbBankNote11.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote11.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote11.Location = new System.Drawing.Point(9, 337);
             this.lbBankNote11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -678,7 +678,7 @@
             // lbQty10
             // 
             this.lbQty10.BackColor = System.Drawing.Color.White;
-            this.lbQty10.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty10.ForeColor = System.Drawing.Color.Gray;
             this.lbQty10.Location = new System.Drawing.Point(161, 311);
             this.lbQty10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -691,7 +691,7 @@
             // lbQty9
             // 
             this.lbQty9.BackColor = System.Drawing.Color.White;
-            this.lbQty9.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty9.ForeColor = System.Drawing.Color.Gray;
             this.lbQty9.Location = new System.Drawing.Point(161, 285);
             this.lbQty9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -704,7 +704,7 @@
             // lbQty8
             // 
             this.lbQty8.BackColor = System.Drawing.Color.White;
-            this.lbQty8.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty8.ForeColor = System.Drawing.Color.Gray;
             this.lbQty8.Location = new System.Drawing.Point(161, 259);
             this.lbQty8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -717,7 +717,7 @@
             // lbQty7
             // 
             this.lbQty7.BackColor = System.Drawing.Color.White;
-            this.lbQty7.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty7.ForeColor = System.Drawing.Color.Gray;
             this.lbQty7.Location = new System.Drawing.Point(161, 233);
             this.lbQty7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -730,7 +730,7 @@
             // lbQty6
             // 
             this.lbQty6.BackColor = System.Drawing.Color.White;
-            this.lbQty6.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty6.ForeColor = System.Drawing.Color.Gray;
             this.lbQty6.Location = new System.Drawing.Point(161, 207);
             this.lbQty6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -743,7 +743,7 @@
             // lbQty5
             // 
             this.lbQty5.BackColor = System.Drawing.Color.White;
-            this.lbQty5.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty5.ForeColor = System.Drawing.Color.Gray;
             this.lbQty5.Location = new System.Drawing.Point(161, 181);
             this.lbQty5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -756,7 +756,7 @@
             // lbQty4
             // 
             this.lbQty4.BackColor = System.Drawing.Color.White;
-            this.lbQty4.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty4.ForeColor = System.Drawing.Color.Gray;
             this.lbQty4.Location = new System.Drawing.Point(161, 155);
             this.lbQty4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -769,7 +769,7 @@
             // lbQty3
             // 
             this.lbQty3.BackColor = System.Drawing.Color.White;
-            this.lbQty3.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty3.ForeColor = System.Drawing.Color.Gray;
             this.lbQty3.Location = new System.Drawing.Point(161, 129);
             this.lbQty3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -782,7 +782,7 @@
             // lbQty2
             // 
             this.lbQty2.BackColor = System.Drawing.Color.White;
-            this.lbQty2.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty2.ForeColor = System.Drawing.Color.Gray;
             this.lbQty2.Location = new System.Drawing.Point(161, 103);
             this.lbQty2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -795,7 +795,7 @@
             // lbQty1
             // 
             this.lbQty1.BackColor = System.Drawing.Color.White;
-            this.lbQty1.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQty1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQty1.ForeColor = System.Drawing.Color.Gray;
             this.lbQty1.Location = new System.Drawing.Point(161, 77);
             this.lbQty1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -808,7 +808,7 @@
             // lbBNQty
             // 
             this.lbBNQty.BackColor = System.Drawing.Color.White;
-            this.lbBNQty.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBNQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBNQty.ForeColor = System.Drawing.Color.Gray;
             this.lbBNQty.Location = new System.Drawing.Point(139, 44);
             this.lbBNQty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -821,7 +821,7 @@
             // lbAmount10
             // 
             this.lbAmount10.BackColor = System.Drawing.Color.White;
-            this.lbAmount10.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount10.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount10.Location = new System.Drawing.Point(218, 311);
             this.lbAmount10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -835,7 +835,7 @@
             // lbAmount9
             // 
             this.lbAmount9.BackColor = System.Drawing.Color.White;
-            this.lbAmount9.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount9.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount9.Location = new System.Drawing.Point(218, 285);
             this.lbAmount9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -849,7 +849,7 @@
             // lbAmount8
             // 
             this.lbAmount8.BackColor = System.Drawing.Color.White;
-            this.lbAmount8.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount8.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount8.Location = new System.Drawing.Point(218, 259);
             this.lbAmount8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -863,7 +863,7 @@
             // lbAmount7
             // 
             this.lbAmount7.BackColor = System.Drawing.Color.White;
-            this.lbAmount7.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount7.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount7.Location = new System.Drawing.Point(218, 233);
             this.lbAmount7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -877,7 +877,7 @@
             // lbAmount6
             // 
             this.lbAmount6.BackColor = System.Drawing.Color.White;
-            this.lbAmount6.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount6.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount6.Location = new System.Drawing.Point(218, 207);
             this.lbAmount6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -891,7 +891,7 @@
             // lbAmount5
             // 
             this.lbAmount5.BackColor = System.Drawing.Color.White;
-            this.lbAmount5.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount5.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount5.Location = new System.Drawing.Point(218, 181);
             this.lbAmount5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -905,7 +905,7 @@
             // lbAmount4
             // 
             this.lbAmount4.BackColor = System.Drawing.Color.White;
-            this.lbAmount4.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount4.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount4.Location = new System.Drawing.Point(218, 155);
             this.lbAmount4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -930,7 +930,7 @@
             // lbTxtTotalCash
             // 
             this.lbTxtTotalCash.BackColor = System.Drawing.Color.Transparent;
-            this.lbTxtTotalCash.Font = new System.Drawing.Font("Prompt", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtTotalCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtTotalCash.ForeColor = System.Drawing.Color.Black;
             this.lbTxtTotalCash.Location = new System.Drawing.Point(133, 3);
             this.lbTxtTotalCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -943,7 +943,7 @@
             // lbTotalCash
             // 
             this.lbTotalCash.BackColor = System.Drawing.Color.Transparent;
-            this.lbTotalCash.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalCash.ForeColor = System.Drawing.Color.Gray;
             this.lbTotalCash.Location = new System.Drawing.Point(4, 3);
             this.lbTotalCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -956,7 +956,7 @@
             // lbBankNote10
             // 
             this.lbBankNote10.BackColor = System.Drawing.Color.White;
-            this.lbBankNote10.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote10.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote10.Location = new System.Drawing.Point(9, 311);
             this.lbBankNote10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -970,7 +970,7 @@
             // lbBankNote9
             // 
             this.lbBankNote9.BackColor = System.Drawing.Color.White;
-            this.lbBankNote9.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote9.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote9.Location = new System.Drawing.Point(9, 285);
             this.lbBankNote9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -984,7 +984,7 @@
             // lbBankNote8
             // 
             this.lbBankNote8.BackColor = System.Drawing.Color.White;
-            this.lbBankNote8.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote8.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote8.Location = new System.Drawing.Point(9, 259);
             this.lbBankNote8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -998,7 +998,7 @@
             // lbBankNote7
             // 
             this.lbBankNote7.BackColor = System.Drawing.Color.White;
-            this.lbBankNote7.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote7.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote7.Location = new System.Drawing.Point(9, 233);
             this.lbBankNote7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1012,7 +1012,7 @@
             // lbBankNote6
             // 
             this.lbBankNote6.BackColor = System.Drawing.Color.White;
-            this.lbBankNote6.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote6.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote6.Location = new System.Drawing.Point(9, 207);
             this.lbBankNote6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1026,7 +1026,7 @@
             // lbBankNote5
             // 
             this.lbBankNote5.BackColor = System.Drawing.Color.White;
-            this.lbBankNote5.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote5.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote5.Location = new System.Drawing.Point(9, 181);
             this.lbBankNote5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1040,7 +1040,7 @@
             // lbBankNote4
             // 
             this.lbBankNote4.BackColor = System.Drawing.Color.White;
-            this.lbBankNote4.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote4.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote4.Location = new System.Drawing.Point(9, 155);
             this.lbBankNote4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1054,7 +1054,7 @@
             // lbAmount3
             // 
             this.lbAmount3.BackColor = System.Drawing.Color.White;
-            this.lbAmount3.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount3.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount3.Location = new System.Drawing.Point(218, 129);
             this.lbAmount3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1068,7 +1068,7 @@
             // lbBankNote3
             // 
             this.lbBankNote3.BackColor = System.Drawing.Color.White;
-            this.lbBankNote3.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote3.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote3.Location = new System.Drawing.Point(9, 129);
             this.lbBankNote3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1082,7 +1082,7 @@
             // lbAmount2
             // 
             this.lbAmount2.BackColor = System.Drawing.Color.White;
-            this.lbAmount2.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount2.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount2.Location = new System.Drawing.Point(218, 103);
             this.lbAmount2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1096,7 +1096,7 @@
             // lbBankNote2
             // 
             this.lbBankNote2.BackColor = System.Drawing.Color.White;
-            this.lbBankNote2.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote2.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote2.Location = new System.Drawing.Point(9, 103);
             this.lbBankNote2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1110,7 +1110,7 @@
             // lbAmount1
             // 
             this.lbAmount1.BackColor = System.Drawing.Color.White;
-            this.lbAmount1.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmount1.ForeColor = System.Drawing.Color.Gray;
             this.lbAmount1.Location = new System.Drawing.Point(218, 77);
             this.lbAmount1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1124,7 +1124,7 @@
             // lbBankNote1
             // 
             this.lbBankNote1.BackColor = System.Drawing.Color.White;
-            this.lbBankNote1.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBankNote1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBankNote1.ForeColor = System.Drawing.Color.Gray;
             this.lbBankNote1.Location = new System.Drawing.Point(9, 77);
             this.lbBankNote1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1137,7 +1137,7 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
             this.label4.Location = new System.Drawing.Point(240, 44);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1150,7 +1150,7 @@
             // lbTypeCash
             // 
             this.lbTypeCash.BackColor = System.Drawing.Color.White;
-            this.lbTypeCash.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTypeCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTypeCash.ForeColor = System.Drawing.Color.Gray;
             this.lbTypeCash.Location = new System.Drawing.Point(7, 45);
             this.lbTypeCash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1163,7 +1163,7 @@
             // lbInputCashout
             // 
             this.lbInputCashout.BackColor = System.Drawing.Color.White;
-            this.lbInputCashout.Font = new System.Drawing.Font("Prompt", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInputCashout.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInputCashout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(186)))), ((int)(((byte)(109)))));
             this.lbInputCashout.Location = new System.Drawing.Point(44, 4);
             this.lbInputCashout.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1254,7 +1254,7 @@
             // lbHDAmt
             // 
             this.lbHDAmt.BackColor = System.Drawing.Color.White;
-            this.lbHDAmt.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHDAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHDAmt.ForeColor = System.Drawing.Color.DimGray;
             this.lbHDAmt.Location = new System.Drawing.Point(459, 140);
             this.lbHDAmt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1267,7 +1267,7 @@
             // lbMoneyBag
             // 
             this.lbMoneyBag.BackColor = System.Drawing.Color.White;
-            this.lbMoneyBag.Font = new System.Drawing.Font("Prompt", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMoneyBag.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMoneyBag.ForeColor = System.Drawing.Color.Black;
             this.lbMoneyBag.Location = new System.Drawing.Point(307, 4);
             this.lbMoneyBag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1315,7 +1315,7 @@
             // lbTxtLockNo
             // 
             this.lbTxtLockNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.lbTxtLockNo.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtLockNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtLockNo.ForeColor = System.Drawing.Color.DimGray;
             this.lbTxtLockNo.Location = new System.Drawing.Point(533, 4);
             this.lbTxtLockNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1328,7 +1328,7 @@
             // lbLockNo
             // 
             this.lbLockNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.lbLockNo.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLockNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLockNo.ForeColor = System.Drawing.Color.DimGray;
             this.lbLockNo.Location = new System.Drawing.Point(11, 4);
             this.lbLockNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1340,7 +1340,7 @@
             // lbAsOfDate
             // 
             this.lbAsOfDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.lbAsOfDate.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAsOfDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAsOfDate.ForeColor = System.Drawing.Color.DimGray;
             this.lbAsOfDate.Location = new System.Drawing.Point(12, 31);
             this.lbAsOfDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1352,7 +1352,7 @@
             // lbTxtAsOfDate
             // 
             this.lbTxtAsOfDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.lbTxtAsOfDate.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtAsOfDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtAsOfDate.ForeColor = System.Drawing.Color.DimGray;
             this.lbTxtAsOfDate.Location = new System.Drawing.Point(400, 31);
             this.lbTxtAsOfDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1388,7 +1388,7 @@
             // lbTxtSubtotal
             // 
             this.lbTxtSubtotal.BackColor = System.Drawing.Color.Transparent;
-            this.lbTxtSubtotal.Font = new System.Drawing.Font("Prompt", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtSubtotal.ForeColor = System.Drawing.Color.Black;
             this.lbTxtSubtotal.Location = new System.Drawing.Point(439, 4);
             this.lbTxtSubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1401,7 +1401,7 @@
             // lbSubtotal
             // 
             this.lbSubtotal.BackColor = System.Drawing.Color.Transparent;
-            this.lbSubtotal.Font = new System.Drawing.Font("Prompt", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSubtotal.ForeColor = System.Drawing.Color.Black;
             this.lbSubtotal.Location = new System.Drawing.Point(8, 3);
             this.lbSubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1416,7 +1416,7 @@
             this.btnSubmit.BackgroundImage = global::BJCBCPOS.Properties.Resources.confirm_enable;
             this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Prompt", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.Location = new System.Drawing.Point(503, 559);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
@@ -1439,7 +1439,7 @@
             // lbCurrency
             // 
             this.lbCurrency.BackColor = System.Drawing.Color.White;
-            this.lbCurrency.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCurrency.ForeColor = System.Drawing.Color.DimGray;
             this.lbCurrency.Location = new System.Drawing.Point(244, 140);
             this.lbCurrency.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1452,7 +1452,7 @@
             // lbRate
             // 
             this.lbRate.BackColor = System.Drawing.Color.White;
-            this.lbRate.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRate.ForeColor = System.Drawing.Color.DimGray;
             this.lbRate.Location = new System.Drawing.Point(325, 140);
             this.lbRate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1465,7 +1465,7 @@
             // lbTotal
             // 
             this.lbTotal.BackColor = System.Drawing.Color.White;
-            this.lbTotal.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotal.ForeColor = System.Drawing.Color.DimGray;
             this.lbTotal.Location = new System.Drawing.Point(559, 140);
             this.lbTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1478,7 +1478,7 @@
             // lbType
             // 
             this.lbType.BackColor = System.Drawing.Color.White;
-            this.lbType.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbType.ForeColor = System.Drawing.Color.DimGray;
             this.lbType.Location = new System.Drawing.Point(186, 140);
             this.lbType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1491,7 +1491,7 @@
             // lbCashOut
             // 
             this.lbCashOut.BackColor = System.Drawing.Color.White;
-            this.lbCashOut.Font = new System.Drawing.Font("Prompt", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCashOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCashOut.ForeColor = System.Drawing.Color.DimGray;
             this.lbCashOut.Location = new System.Drawing.Point(40, 140);
             this.lbCashOut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1504,7 +1504,7 @@
             // lbSummaryCashout
             // 
             this.lbSummaryCashout.BackColor = System.Drawing.Color.White;
-            this.lbSummaryCashout.Font = new System.Drawing.Font("Prompt", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSummaryCashout.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSummaryCashout.ForeColor = System.Drawing.Color.Black;
             this.lbSummaryCashout.Location = new System.Drawing.Point(9, 4);
             this.lbSummaryCashout.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);

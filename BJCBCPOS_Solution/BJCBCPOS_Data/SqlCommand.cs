@@ -300,7 +300,8 @@ namespace BJCBCPOS_Data
                 command.AddInputParameter("SuperUserID", SqlDbType.NVarChar, "N/A");
                 command.AddInputParameter("ReferenceNo", SqlDbType.NVarChar, "N/A");
                 command.AddInputParameter("FunctionID", SqlDbType.NVarChar, FunctionID.Login_LoadLanguage.formatValue);
-                return new StoreResult(command.ExecuteToDataTable());
+                var dataTable = command.ExecuteToDataTable();
+                return new StoreResult(dataTable);
             }
             catch (NetworkConnectionException ex)
             {
@@ -8234,7 +8235,7 @@ namespace BJCBCPOS_Data
                 command.AddInputParameter("ReferenceQRPayment", SqlDbType.NVarChar, qrRef);
 
                 return new StoreResult(command.ExecuteToDataTable());
-            }
+            }   
             catch (NetworkConnectionException ex)
             {
                 AppLog.writeLog(ex);

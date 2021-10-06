@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="BigServices.cs" />
     <Compile Include="SqlCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

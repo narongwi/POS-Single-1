@@ -1108,7 +1108,7 @@
             // lbAddItemSpecial
             // 
             this.lbAddItemSpecial.BackColor = System.Drawing.Color.Transparent;
-            this.lbAddItemSpecial.Font = new System.Drawing.Font("Prompt", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAddItemSpecial.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAddItemSpecial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(186)))), ((int)(((byte)(109)))));
             this.lbAddItemSpecial.Location = new System.Drawing.Point(48, 5);
             this.lbAddItemSpecial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1534,7 +1534,7 @@
             // lbTxtTotal
             // 
             this.lbTxtTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(172)))));
-            this.lbTxtTotal.Font = new System.Drawing.Font("Prompt", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtTotal.ForeColor = System.Drawing.Color.Black;
             this.lbTxtTotal.Location = new System.Drawing.Point(425, 492);
             this.lbTxtTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1558,12 +1558,12 @@
             this.lbRefNo.AutoSize = true;
             this.lbRefNo.BackColor = System.Drawing.Color.White;
             this.lbRefNo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbRefNo.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRefNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRefNo.ForeColor = System.Drawing.Color.Black;
-            this.lbRefNo.Location = new System.Drawing.Point(110, 0);
+            this.lbRefNo.Location = new System.Drawing.Point(148, 0);
             this.lbRefNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbRefNo.Name = "lbRefNo";
-            this.lbRefNo.Size = new System.Drawing.Size(110, 29);
+            this.lbRefNo.Size = new System.Drawing.Size(86, 24);
             this.lbRefNo.TabIndex = 64;
             this.lbRefNo.Text = "เลขที่อ้างอิง";
             this.lbRefNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1573,12 +1573,12 @@
             this.lbTxtRefNo.AutoSize = true;
             this.lbTxtRefNo.BackColor = System.Drawing.Color.White;
             this.lbTxtRefNo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbTxtRefNo.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtRefNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtRefNo.ForeColor = System.Drawing.Color.Black;
-            this.lbTxtRefNo.Location = new System.Drawing.Point(220, 0);
+            this.lbTxtRefNo.Location = new System.Drawing.Point(234, 0);
             this.lbTxtRefNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTxtRefNo.Name = "lbTxtRefNo";
-            this.lbTxtRefNo.Size = new System.Drawing.Size(114, 29);
+            this.lbTxtRefNo.Size = new System.Drawing.Size(100, 24);
             this.lbTxtRefNo.TabIndex = 65;
             this.lbTxtRefNo.Text = "103000041";
             this.lbTxtRefNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1698,7 +1698,7 @@
             // lbTxtdiscount1
             // 
             this.lbTxtdiscount1.BackColor = System.Drawing.Color.White;
-            this.lbTxtdiscount1.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtdiscount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtdiscount1.ForeColor = System.Drawing.Color.Black;
             this.lbTxtdiscount1.Location = new System.Drawing.Point(406, 461);
             this.lbTxtdiscount1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1711,7 +1711,7 @@
             // lbTotal
             // 
             this.lbTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(172)))));
-            this.lbTotal.Font = new System.Drawing.Font("Prompt", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotal.ForeColor = System.Drawing.Color.Black;
             this.lbTotal.Location = new System.Drawing.Point(25, 492);
             this.lbTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1724,7 +1724,7 @@
             // lbTxtSubtotal
             // 
             this.lbTxtSubtotal.BackColor = System.Drawing.Color.White;
-            this.lbTxtSubtotal.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTxtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTxtSubtotal.ForeColor = System.Drawing.Color.Black;
             this.lbTxtSubtotal.Location = new System.Drawing.Point(406, 431);
             this.lbTxtSubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1737,7 +1737,7 @@
             // lbdiscount1
             // 
             this.lbdiscount1.BackColor = System.Drawing.Color.White;
-            this.lbdiscount1.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbdiscount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbdiscount1.ForeColor = System.Drawing.Color.Black;
             this.lbdiscount1.Location = new System.Drawing.Point(27, 461);
             this.lbdiscount1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1750,7 +1750,7 @@
             // lbSubtotal
             // 
             this.lbSubtotal.BackColor = System.Drawing.Color.White;
-            this.lbSubtotal.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSubtotal.ForeColor = System.Drawing.Color.Black;
             this.lbSubtotal.Location = new System.Drawing.Point(27, 431);
             this.lbSubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1767,7 +1767,7 @@
             this.btnOtherService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOtherService.FlatAppearance.BorderSize = 0;
             this.btnOtherService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOtherService.Font = new System.Drawing.Font("Prompt", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnOtherService.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnOtherService.ForeColor = System.Drawing.Color.White;
             this.btnOtherService.Location = new System.Drawing.Point(25, 544);
             this.btnOtherService.Name = "btnOtherService";
@@ -1896,7 +1896,7 @@
             this.btnConfirm.Enabled = false;
             this.btnConfirm.FlatAppearance.BorderSize = 0;
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm.Font = new System.Drawing.Font("Prompt", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(184)))), ((int)(((byte)(105)))));
             this.btnConfirm.Location = new System.Drawing.Point(485, 544);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
@@ -1914,7 +1914,7 @@
             this.btnPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPayment.FlatAppearance.BorderSize = 0;
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment.Font = new System.Drawing.Font("Prompt Medium", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.ForeColor = System.Drawing.Color.White;
             this.btnPayment.Location = new System.Drawing.Point(485, 544);
             this.btnPayment.Margin = new System.Windows.Forms.Padding(2);
@@ -2495,7 +2495,6 @@
         private System.Windows.Forms.Label lbSubtotal;
         private UCSaveTemp ucSaveTemp1;
         private System.Windows.Forms.Panel pnSellScreen;
-        private UCFooterTran ucFooterTran1;
         public UCTextBoxWithIcon ucTBScanBarcode;
         private System.Windows.Forms.Button btnEditItem;
         private System.Windows.Forms.Button btnDeleteItem;
@@ -2577,6 +2576,7 @@
         private System.Windows.Forms.Label lbMessage1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
+        private UCFooterTran ucFooterTran1;
         //private UCDropDownListCustom<UCItemDropDownListExtraProduct> ucDropDownListCustom1;
 
     }

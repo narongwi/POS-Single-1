@@ -272,7 +272,7 @@
             // lbLogout
             // 
             this.lbLogout.BackColor = System.Drawing.Color.Transparent;
-            this.lbLogout.Font = new System.Drawing.Font("Prompt", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLogout.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbLogout.Location = new System.Drawing.Point(4, 6);
             this.lbLogout.Margin = new System.Windows.Forms.Padding(0);

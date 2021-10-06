@@ -84,6 +84,7 @@
     <Compile Include="CashInProcess.cs" />
     <Compile Include="CashOutProcess.cs" />
     <Compile Include="MenuProcess.cs" />
+    <Compile Include="BigServiceProcess.cs" />
     <Compile Include="ProductAndServiceProcess.cs" />
     <Compile Include="ReportProcess.cs" />
     <Compile Include="ReturnProcess.cs" />

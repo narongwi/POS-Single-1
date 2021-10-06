@@ -149,15 +149,17 @@ namespace BJCBCPOS {
                         frmNotify dialog = new frmNotify(result);
                         dialog.ShowDialog();
                     }
-                    // show login form
+                    //show login form
                     //ShowForm("frmMonitorCustomer");
                     //ShowForm("frmMonitorCustomerFooter");
                     //ShowForm("frmMonitor2Detail");
-                    ////ShowForm("frmVDO");
+                    //ShowForm("frmVDO");
                     //ShowForm("frmLogin");
 
                     // test form
-                    ShowForm("OtherServices.frmBills");
+                    //ShowForm("Services.Forms.frmBigService");
+                    ShowForm("Services.Forms.frmBillPayment");
+
                     //ShowForm("OtherServices.frmBillPayments");
                 } else {
                     frmNotify dialog = new frmNotify(result);

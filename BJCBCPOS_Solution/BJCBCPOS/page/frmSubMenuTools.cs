@@ -290,5 +290,16 @@ namespace BJCBCPOS
             ////if()
             //Program.control.ShowForm("frmSubMenu");
         }
+
+        private void button8_Click(object sender,EventArgs e) {
+            Profile chkPf = ProgramConfig.getProfile(FunctionID.Sale_InputSaleItem_InputProduct_BillPayment);
+            if(chkPf.profile == ProfileStatus.Authorize) {
+                frmLoading.showLoading();
+                Program.control.ShowForm("BJCBCPOS.Services.Forms.frmBigService");
+            }
+         
+            frmLoading.closeLoading();
+            this.Dispose();
+        }
     }
 }

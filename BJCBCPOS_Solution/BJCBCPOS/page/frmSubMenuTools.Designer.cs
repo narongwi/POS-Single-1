@@ -39,11 +39,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.btnReceivePayment);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
@@ -196,6 +198,22 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // button8
+            // 
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(416, 380);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(176, 130);
+            this.button8.TabIndex = 35;
+            this.button8.Text = "Big Services";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // frmSubMenuTools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,7 +243,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnReceivePayment;
-
-
+        private System.Windows.Forms.Button button8;
     }
 }

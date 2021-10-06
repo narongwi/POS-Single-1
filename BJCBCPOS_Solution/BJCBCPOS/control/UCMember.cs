@@ -183,7 +183,6 @@ namespace BJCBCPOS
                             frm = new frmSearchMemberAuto(ucTBWI_Member.Text, eventName, this, functionID);
                             resDialog = frm.ShowDialog(this);
                         }
-
                         if (resDialog == System.Windows.Forms.DialogResult.Yes)
                         {
                             DialogResult res = DialogResult.None;
